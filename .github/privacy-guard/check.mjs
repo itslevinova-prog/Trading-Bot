@@ -115,6 +115,7 @@ function scanText() {
 }
 
 const mode = process.env.PG_MODE ?? 'full';
+if (mode === 'selftest') { /* nur violations() exportieren */ } else {
 if (!blocked.size) console.warn('⚠️ Secret PRIVACY_BLOCKLIST fehlt oder ist leer: nur allgemeine Regeln aktiv.');
 if (mode === 'diff') scanDiff(process.env.PG_BASE, process.env.PG_HEAD);
 else if (mode === 'text') scanText();
@@ -127,3 +128,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log(`✅ Datenschutz-Wächter (${mode}): keine privaten Daten gefunden.`);
+}

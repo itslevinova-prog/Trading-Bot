@@ -16,6 +16,7 @@ on:
     types: [submitted, edited]
   pull_request_review_comment:
     types: [created, edited]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -57,7 +58,7 @@ jobs:
         run: node .github/privacy-guard/check.mjs
 
   text:
-    if: github.event_name != 'pull_request' && github.event_name != 'push'
+    if: github.event_name != 'pull_request' && github.event_name != 'push' && github.event_name != 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -74,3 +75,28 @@ jobs:
           PG_TEXT_COMMENT: ${{ github.event.comment.body }}
           PG_TEXT_REVIEW: ${{ github.event.review.body }}
         run: node .github/privacy-guard/check.mjs
+
+  selftest:
+    # Manuell: prüft, dass das Secret gesetzt ist und jedes Wort darin blockiert
+    # wird. Gibt nur die Anzahl aus, nie ein Wort.
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github/privacy-guard
+          persist-credentials: false
+      - name: Selbsttest
+        env:
+          PRIVACY_BLOCKLIST: ${{ secrets.PRIVACY_BLOCKLIST }}
+        run: |
+          node --input-type=module -e '
+            const words = (process.env.PRIVACY_BLOCKLIST ?? "").split(/[\n,;]+/).map((w) => w.trim()).filter(Boolean);
+            if (!words.length) { console.error("❌ Secret PRIVACY_BLOCKLIST fehlt oder ist leer."); process.exit(1); }
+            process.env.PG_MODE = "selftest";
+            const { violations } = await import("./.github/privacy-guard/check.mjs");
+            const missed = words.filter((w) => violations(`Test ${w} Test`).length === 0).length;
+            if (missed) { console.error(`❌ ${missed} von ${words.length} Wörtern werden nicht erkannt.`); process.exit(1); }
+            console.log(`✅ Secret gesetzt: ${words.length} Wörter, alle werden blockiert.`);
+          '
