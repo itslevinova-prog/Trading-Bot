@@ -418,7 +418,7 @@
     "successThreshold": "Robustere risikoadjustierte Kennzahlen als BTC Buy & Hold, Top-10 Equal Weight, 60/40 BTC/Cash und bestehende Regeln unter vollständiger Kostenrechnung; Parameterumgebung stabil.",
     "killCriterion": "Kein überprüfbarer Nettovorteil nach Kosten oder starke Parameterempfindlichkeit; historische Datenlücken oder aktuelle Qualitätslabels statt Point-in-Time-Daten.",
     "status": "open",
-    "variantsTested": 1,
+    "variantsTested": 2,
     "result": "Ein Forschungslauf mit Annahmen wurde technisch erfolgreich ausgeführt, jedoch nur auf BTC/ETH: GitHub ersetzte leere Symbols durch den alten Standard. Kein vollständiger USDT-Test, keine Pipeline-/Paper-Freigabe. Universum wird vor Wiederholung korrigiert; unveränderte Strategie und Annahmen.",
     "evidence": [
       "docs/TREND-VOL-TARGET-V1.md",
@@ -453,6 +453,21 @@
         "outcome": "scope-invalid-for-all-coins-request",
         "pipelineEligible": false,
         "summaryComment": "https://github.com/itslevinova-prog/Trading/issues/4#issuecomment-6723727769"
+      }
+    ],
+    "forwardVariants": [
+      {
+        "version": "trend-vol-target-v1-binance-lots-v2",
+        "issue": 32,
+        "registeredAt": "2026-11-11",
+        "status": "registered-offline-tests-only",
+        "change": "LOT_SIZE stepSize/minQty und MIN_NOTIONAL/NOTIONAL aus exchangeInfo statt synthetischer ganzer Coin-Einheiten. Neue getrennte Serie; v1 unverändert.",
+        "dataSource": "https://data-api.binance.vision",
+        "evidence": [
+          "docs/PAPER-FORWARD.md",
+          "apps/server/src/forward/engine-v2.ts"
+        ],
+        "pipelineEligible": false
       }
     ]
   },
