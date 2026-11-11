@@ -94,7 +94,9 @@ function scanDiff(base, head) {
     const [sha, an, ae, cn, ce, msg] = entry.trim().split('\x1f');
     if (!sha) continue;
     const at = `Commit ${sha.slice(0, 7)}`;
-    if (!ALLOWED_COMMIT_NAMES.has(an) || !ALLOWED_COMMIT_NAMES.has(cn)) report(at, ['Autor-/Committer-Name nicht erlaubt (itslevinova-prog verwenden)']);
+    // Namen werden gegen die geheime Wortliste und die allgemeinen Regeln geprüft (z. B. der
+    // öffentliche GitHub-Anzeigename bei Merge-Commits ist erlaubt, echte Namen nicht).
+    for (const n of [an, cn]) if (!ALLOWED_COMMIT_NAMES.has(n)) report(at, violations(n).map((r) => `Autor-/Committer-Name: ${r}`));
     if (![ae, ce].every((e) => ALLOWED_EMAIL.some((re) => re.test(e)))) report(at, ['Autor-/Committer-E-Mail nicht erlaubt (Noreply-Adresse verwenden)']);
     (msg ?? '').split('\n').forEach((l, i) => report(`${at} Nachricht Zeile ${i + 1}`, violations(l)));
   }
