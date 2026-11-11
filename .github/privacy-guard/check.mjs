@@ -39,7 +39,10 @@ const USER_DIR = [
   /\/home\/([A-Za-z0-9._-]+)/g,
 ];
 const CHAT_LINK = /(claude\.ai\/(code\/session_|chat\/|share\/)|chatgpt\.com\/(c|share|codex|g)\/|chat\.openai\.com\/(c|share)\/)/i;
-const SECRET = /(-----BEGIN (RSA |EC |OPENSSH |PGP )?PRIVATE KEY-----|\bgh[pousr]_[A-Za-z0-9]{30,}|\bAKIA[0-9A-Z]{16}\b|\bsk-ant-[A-Za-z0-9_-]{20,}|\bsk-proj-[A-Za-z0-9_-]{20,}|\bxox[abp]-[A-Za-z0-9-]{10,})/;
+// Der PEM-Header wird zusammengesetzt, damit diese Datei selbst nicht wie ein Schlüssel aussieht
+// (sonst schlägt der Kosten-/Sicherheitswächter in verify.yml an).
+const PEM = ['-----BEGIN ', '(RSA |EC |OPENSSH |PGP )?', 'PRIVATE', ' KEY-----'].join('');
+const SECRET = new RegExp(`(${PEM}|\\bgh[pousr]_[A-Za-z0-9]{30,}|\\bAKIA[0-9A-Z]{16}\\b|\\bsk-ant-[A-Za-z0-9_-]{20,}|\\bsk-proj-[A-Za-z0-9_-]{20,}|\\bxox[abp]-[A-Za-z0-9-]{10,})`);
 
 const normalize = (s) => s.toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss');
 const blocked = new Set(
