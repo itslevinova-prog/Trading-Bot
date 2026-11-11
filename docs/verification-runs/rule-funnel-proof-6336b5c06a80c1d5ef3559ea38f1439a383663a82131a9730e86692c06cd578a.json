@@ -1,0 +1,19 @@
+{
+  "verifiedAt": "2026-10-30T17:02:54.462Z",
+  "verifierHash": "0e036ac40f5eacf26aecfd2422d7ba846c50b3cbb5261075a91c9f5cf223c7d7",
+  "status": "passed",
+  "buildId": "b6a32c2fd030579d1c3c429c131bc6bc3b3852eae044e6065ea275424f638817",
+  "reportHash": "f9c4a191fd8c93935c7f8cfb5e5e1480dedf1f13ceb500139546679197364b7c",
+  "datasetId": "d0066ea5e97b107a22c148dbfcfcd245a2ea37e555684a5af36a382134b14926",
+  "dataHash": "fa60e70db8f4343e6d6121c674ad32cc71754851982432227a8ea749c9cf4a67",
+  "optionsHash": "a24c2c6f037f819d808f1627e00bcde2237e9cda88b1e79040e5b8f8c1d0be83",
+  "baseHash": "c643b595b11eee0fb035daa126eb3e7182d02fde5b08164a3e904e5b0d5bcd47",
+  "stressHash": "db98fce27804e44b2e3bf4889cf428ca7c395003d517d1eea8b963bba0365563",
+  "baselineBuildId": "319b229e1e0f42a1131f7035b079aeab270a4fa1072be9b47cdd002d2228daec",
+  "diagnosticsDoNotChangeFrozenReplay": true,
+  "defaultDatasetUnchanged": true,
+  "profitabilityEstablished": false,
+  "privateExchangeCalls": 0,
+  "paidCalls": 0,
+  "realOrders": 0
+}

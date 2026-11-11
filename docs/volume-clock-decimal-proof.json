@@ -1,0 +1,15 @@
+{
+  "version": "volume-clock-decimal-proof-v1",
+  "reportHash": "10fb98c4bf506856a670113f36cd36398f5fc952439cba290efa23eebdd99acc",
+  "reportFileSha256": "70aa2f3151ef3650088c1f2f4664c88970e033d643bda4c7c4710215c173e933",
+  "rawVerifierSha256": "3993a1d1f6a70c7909fe2692e6fd5812f7a44d358d7d0ddaa908344e8d051cab",
+  "referenceScriptSha256": "6d077d0898fd2c8c78108185600f84525dc325ec755d16c72b8e840313a5895e",
+  "precisionDigits": 60,
+  "knownRatiosChecked": 7276,
+  "explicitUndefinedReferences": 4,
+  "maximumAbsoluteDifference": 2.2737367544323206e-13,
+  "relativeTolerance": 1e-12,
+  "absoluteTolerance": 1e-12,
+  "newModelFitted": false,
+  "profitabilityEstablished": false
+}

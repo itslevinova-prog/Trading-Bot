@@ -1,0 +1,90 @@
+{
+  "verifiedAt": "2026-11-02T16:56:24.110Z",
+  "factsHash": "5097bdc64f688d20b4a6e563a09f11596ecf12850de3e387611b368401d27f44",
+  "modelsTrainScopeVerified": 41,
+  "treeStagesTrainResidualsVerified": 4100,
+  "leafResidualMeansVerified": 14423,
+  "nativeRawPredictionsVerified": 13120,
+  "guardedNativePredictionsVerified": 12897,
+  "testPredictionRowsVerified": 6560,
+  "maxNativeError": 0,
+  "selectedCounts": {
+    "zero": 8,
+    "mean": 21,
+    "ridge": 6,
+    "tree": 6
+  },
+  "aggregate": {
+    "zero": {
+      "rows": 6560,
+      "knownLabels": 6559,
+      "unknownLabels": 1,
+      "mae": 0.015381640349558799,
+      "rmse": 0.018491895440564607,
+      "coverage": 1,
+      "rankingKnownWinners": 0,
+      "rankingUnknownWinners": 0,
+      "rankingKnownMeanLabel": null
+    },
+    "mean": {
+      "rows": 6560,
+      "knownLabels": 6559,
+      "unknownLabels": 1,
+      "mae": 0.014350822607371427,
+      "rmse": 0.017969805487786074,
+      "coverage": 1,
+      "rankingKnownWinners": 0,
+      "rankingUnknownWinners": 0,
+      "rankingKnownMeanLabel": null
+    },
+    "ridge": {
+      "rows": 6560,
+      "knownLabels": 6559,
+      "unknownLabels": 1,
+      "mae": 0.014676210501317951,
+      "rmse": 0.01855752495906572,
+      "coverage": 0.9824695121951219,
+      "rankingKnownWinners": 50,
+      "rankingUnknownWinners": 0,
+      "rankingKnownMeanLabel": -0.005717407835070123
+    },
+    "tree": {
+      "rows": 6560,
+      "knownLabels": 6559,
+      "unknownLabels": 1,
+      "mae": 0.014975803492722704,
+      "rmse": 0.018784382627608547,
+      "coverage": 0.9824695121951219,
+      "rankingKnownWinners": 121,
+      "rankingUnknownWinners": 0,
+      "rankingKnownMeanLabel": -0.0038740937862227743
+    },
+    "prior-selected": {
+      "rows": 6560,
+      "knownLabels": 6559,
+      "unknownLabels": 1,
+      "mae": 0.0147416063388946,
+      "rmse": 0.0183965194656837,
+      "coverage": 0.9954268292682927,
+      "rankingKnownWinners": 11,
+      "rankingUnknownWinners": 0,
+      "rankingKnownMeanLabel": -0.004427206417030649
+    },
+    "extended-selected": {
+      "rows": 6560,
+      "knownLabels": 6559,
+      "unknownLabels": 1,
+      "mae": 0.014701014358601043,
+      "rmse": 0.01835571179800064,
+      "coverage": 0.9926829268292683,
+      "rankingKnownWinners": 24,
+      "rankingUnknownWinners": 0,
+      "rankingKnownMeanLabel": 0.0020585429419359563
+    }
+  },
+  "modelActivated": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "portfolioReturn": null
+}

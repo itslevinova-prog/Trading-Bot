@@ -1,0 +1,49 @@
+{
+  "version": "fixed-target-walkforward-v1",
+  "registeredAt": "2026-11-01T13:09:20.029939+00:00",
+  "runnerHash": "4a416102feec7fd3f327f55de99a268b9792e731b1c3b1087844846d6cb53e67",
+  "sources": {
+    "apps/server/src/research/fixed-target-learning.ts": "b1167a6e55258a134f4acbfa1c9a6bbc53dc113686cc6a49f1f40b57df581fbb",
+    "apps/server/src/research/fixed-target-diagnostic.ts": "be71e682c6e26a34996cd01ff0e66729d86c18d988500a6bb96150c623c3b020",
+    "apps/server/src/research/local-learning.ts": "5a127d54bdf3faa0f8628bb6baecebc6947af1709c0353693c51e54793fef690"
+  },
+  "corpus": "docs/fixed-target-observations-ba81ecdea43bae6d.json",
+  "corpusHash": "ba81ecdea43bae6db3a5d31a941b8782e5fdacb9c1ec85f9d5db75d0befd03ee",
+  "costs": {
+    "feeRate": 0.001,
+    "spreadBps": 10,
+    "slippageBps": 8
+  },
+  "stressCosts": {
+    "feeRate": 0.002,
+    "spreadBps": 20,
+    "slippageBps": 16
+  },
+  "lambda": 10,
+  "minTrainRows": 200,
+  "minValidationRows": 40,
+  "folds": {
+    "trainDays": 14,
+    "validationDays": 4,
+    "testDays": 4,
+    "stepDays": 4,
+    "purge": "labelEnd strictly before next phase start"
+  },
+  "models": [
+    "zero",
+    "mean",
+    "ridge"
+  ],
+  "selection": "Fixed original validation MAE/95percentcoverage conservative zero ties; no test labels for selection.",
+  "horizonBars": 32,
+  "strideBars": 48,
+  "capitalDiagnostic": {
+    "allocationPct": 0.1,
+    "maxPositionsPerClock": 3,
+    "forecastMargin": 0.005
+  },
+  "noParameterOrHorizonSearch": true,
+  "julyLoaded": false,
+  "modelActivated": false,
+  "outcomesNotYetEvaluated": true
+}

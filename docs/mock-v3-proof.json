@@ -1,0 +1,87 @@
+{
+  "verifiedAt": "2026-10-31T18:24:24.714292+00:00",
+  "fullTests": 888,
+  "offlineTests": 15,
+  "newTests": 5,
+  "typechecksBuildPassed": true,
+  "buildId": "cc12379e164c46d708a93bf730899eca00cbdc8378051ff580b05f49f03fc210",
+  "newStudyId": "2026-10-31T18-04-59.890Z-cc12379e164c",
+  "registeredExperimentId": "e6349285072901ca91f9260144452d71af2ffcc0faa79fb4e123f8ba834d90df",
+  "registeredAt": 1793470079478,
+  "root": "C:\\Users\\user\\Documents\\Projekte\\Buisness\\New_Trading_AI\\kraken-paper-bot\\data\\paper-experiments\\2026-10-31T18-04-59.890Z-cc12379e164c",
+  "mainProcess": {
+    "pid": 6708,
+    "startedAtApprox": "2026-10-31T18:04:22.697Z",
+    "stdout": "data/server-2026-10-31T18-04-22.688Z.stdout.log",
+    "stderr": "data/server-2026-10-31T18-04-22.688Z.stderr.log",
+    "mode": "paper",
+    "experimentMode": "off",
+    "freeProfile": true,
+    "previousRunId": "ce835d90-87de-4a94-9acb-fde0c7950ccd",
+    "startedAt": "2026-10-31T18:04:22.6932421Z"
+  },
+  "experimentProcess": {
+    "pid": 28888,
+    "startedAtApprox": "2026-10-31T18:13:44.845Z",
+    "root": "C:\\Users\\user\\Documents\\Projekte\\Buisness\\New_Trading_AI\\kraken-paper-bot\\data\\paper-experiments\\2026-10-31T18-04-59.890Z-cc12379e164c",
+    "port": 3200,
+    "mode": "paper",
+    "simulation": "mock",
+    "resumedFromRunId": "61bf3f02-298f-43f2-8b46-7e215beb9ec4",
+    "runId": "197a613c-3df9-4789-aa1c-424c3176bfc0",
+    "startedAt": "2026-10-31T18:13:44.8412327Z"
+  },
+  "sourceTreeIndependent": true,
+  "dependencyPackages": 114,
+  "publicSeedCounts": {
+    "pairs": 26,
+    "candles": 290879
+  },
+  "accountHistoryCopied": false,
+  "sameBaselineAfterTechnicalResume": true,
+  "registeredRuns": 2,
+  "benchmarkHoldFillCount": 1,
+  "actualScheduledMockDecision": [
+    {
+      "id": "c31191d8-b8a8-415a-89e0-ab873ef6a8e3",
+      "ts": 1793470505934,
+      "provider": "mock:structure-exit-v1",
+      "status": "hold",
+      "actions": [
+        {
+          "type": "hold"
+        }
+      ],
+      "contextAsOf": 1793470505277,
+      "requiredReturns": 192,
+      "completeAssets": 20,
+      "contextHash": "1f97b131f2154eb7c8eed89cfe489d83e25cf4cfa1513d383de1a88c44eb7033",
+      "evidenceVersion": "structure-exit-paper-v1"
+    }
+  ],
+  "originalMemoryRowsPreserved": 2518,
+  "mainRuntimeProofRunId": "dbfa0a99-94df-4b6c-881c-32fae792d7b2",
+  "mainHistoricalReportMatchesNewRuntime": false,
+  "newPerformanceEstablished": false,
+  "realModelTested": false,
+  "privateExchangeCalls": 0,
+  "realOrders": 0,
+  "paidCalls": 0,
+  "files": {
+    "scripts/mock-experiment-files.mjs": "a9f5ccd64ddd11ac9fec0bff95476561399c085b80510b70d8ad3c951782e33c",
+    "scripts/prepare-mock-experiment.mjs": "c2945fd0e2564c6a6041052e10e19b2b137e6d090771672fe0475dd165de1261",
+    "scripts/start-mock-experiment.mjs": "34625f4eed35e0164f684374b238b9aad1c1dcdaf7df1d86c22f3c8ace557d30",
+    "apps/server/test/experiment-tools.test.ts": "e75910e0d8a029487889de5a2f9cd8bb1c9bb4586e86d36ce6e8520026468e46",
+    "docs/mock-forward-protocol-v3.json": "26eb004a6887157ad5f31bd003771df257095818e35a489593dcc5ba30398781",
+    "docs/mock-v3-activation-proof.json": "c4bd027b5ab73f7e57343a1d6c3b7c9e1cc163fa6a69ffcc91ebbf9834c13483",
+    "docs/mock-v3-resume-proof.json": "2c22249e633d610f31283ba0f79c660f0d1a5d75f60f4cae796daf43b0519468",
+    "data/verify-prospective-v3-2026-10-31.log": "93191942f4b52d0e8146fbd980b6abeba409db2f071c427c783615f3fe329c34",
+    "data/parity-prospective-v3-2026-10-31.log": "f2812808a3ae4dfc01d7c2e481891123bb136f291ce358348688b6ac184b8081",
+    "data/prepare-mock-v3-2026-10-31.log": "c6d16f780e9925d769120b700dd6d4721c89165ac7cdb8399176d3d2a5d08579",
+    "data/start-mock-v3-2026-10-31.log": "c72593ab4b5d6b912458233900408ee4b8c81521f39d3faace0dcb99e641ff71",
+    "data/resume-mock-v3-2026-10-31.log": "d00d896ae8ad5eeaa0d0707bf66c280fb13efec9a9844fb1e16bdc13286b20e5",
+    "data/runtime-main-v3-2026-10-31.log": "7f791f53c1f487735ccc4e420bf6fbb4fa51d3faa49698aaac05f052fc453912",
+    "data/memory-main-v3-2026-10-31.log": "f8c41d1c1cb152dbe564bca9ab9beb850f82ecb6e10755ba845bed08fad8debd",
+    "docs/MOCK-FORWARD-V3.md": "e6b8866341e0c5b84afebb20344518926e4edf56433990178e5309c11fb39888"
+  }
+}

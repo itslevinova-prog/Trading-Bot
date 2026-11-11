@@ -1,0 +1,172 @@
+{
+  "verifiedAt": "2026-10-31T23:09:30.774Z",
+  "verifierHash": "f692e2b98f5a4ea497bf024da14ca001873aee40f1601b76011456b552cda24a",
+  "report": "docs/breakout-entry-study-ad773aa0759f0716.json",
+  "reportHash": "ad773aa0759f0716b70ac0b2da8c95aa97a1ad247118c37c0322317845371734",
+  "buildId": "d1956e35d7a4e9a5babb294176e60903eb50560375ce3bbf8103c02510b1ee00",
+  "scenarioCount": 14,
+  "allPaidFillLedgersValid": true,
+  "allCandidateBuyClosedBreakoutsIndependentlyVerified": true,
+  "candidateBuysVerified": 155,
+  "summary": [
+    {
+      "period": "2025-10",
+      "fee": 0.001,
+      "baselineReturnPct": -3.2801199382230917,
+      "candidateReturnPct": -2.6046039516000152,
+      "deltaReturnPct": 0.6755159866230764,
+      "baselineTrades": 33,
+      "candidateTrades": 25,
+      "candidateBeatsCash": false,
+      "previousFullBaselineVerified": true
+    },
+    {
+      "period": "2025-10",
+      "fee": 0.002,
+      "baselineReturnPct": 0,
+      "candidateReturnPct": 0,
+      "deltaReturnPct": 0,
+      "baselineTrades": 0,
+      "candidateTrades": 0,
+      "candidateBeatsCash": false,
+      "previousFullBaselineVerified": false
+    },
+    {
+      "period": "2025-11",
+      "fee": 0.001,
+      "baselineReturnPct": -4.787414526429757,
+      "candidateReturnPct": -1.9689145517893802,
+      "deltaReturnPct": 2.8184999746403765,
+      "baselineTrades": 38,
+      "candidateTrades": 25,
+      "candidateBeatsCash": false,
+      "previousFullBaselineVerified": true
+    },
+    {
+      "period": "2025-11",
+      "fee": 0.002,
+      "baselineReturnPct": 0.8361239336697412,
+      "candidateReturnPct": 0.9415450207048703,
+      "deltaReturnPct": 0.10542108703512909,
+      "baselineTrades": 4,
+      "candidateTrades": 1,
+      "candidateBeatsCash": true,
+      "previousFullBaselineVerified": false
+    },
+    {
+      "period": "2025-12",
+      "fee": 0.001,
+      "baselineReturnPct": -3.0908539604405094,
+      "candidateReturnPct": -1.6142513109889567,
+      "deltaReturnPct": 1.4766026494515527,
+      "baselineTrades": 29,
+      "candidateTrades": 19,
+      "candidateBeatsCash": false,
+      "previousFullBaselineVerified": true
+    },
+    {
+      "period": "2025-12",
+      "fee": 0.002,
+      "baselineReturnPct": -1.4032198745491886,
+      "candidateReturnPct": -0.7394302218940552,
+      "deltaReturnPct": 0.6637896526551335,
+      "baselineTrades": 2,
+      "candidateTrades": 1,
+      "candidateBeatsCash": false,
+      "previousFullBaselineVerified": false
+    },
+    {
+      "period": "2026-01",
+      "fee": 0.001,
+      "baselineReturnPct": -3.0733853928499144,
+      "candidateReturnPct": -1.7165677161658843,
+      "deltaReturnPct": 1.35681767668403,
+      "baselineTrades": 44,
+      "candidateTrades": 30,
+      "candidateBeatsCash": false,
+      "previousFullBaselineVerified": true
+    },
+    {
+      "period": "2026-01",
+      "fee": 0.002,
+      "baselineReturnPct": -0.7061905858313344,
+      "candidateReturnPct": 0,
+      "deltaReturnPct": 0.7061905858313344,
+      "baselineTrades": 2,
+      "candidateTrades": 0,
+      "candidateBeatsCash": false,
+      "previousFullBaselineVerified": true
+    },
+    {
+      "period": "2026-02",
+      "fee": 0.001,
+      "baselineReturnPct": -3.5165163607449257,
+      "candidateReturnPct": -1.4738353175593022,
+      "deltaReturnPct": 2.0426810431856235,
+      "baselineTrades": 26,
+      "candidateTrades": 12,
+      "candidateBeatsCash": false,
+      "previousFullBaselineVerified": true
+    },
+    {
+      "period": "2026-02",
+      "fee": 0.002,
+      "baselineReturnPct": -1.1322523354463265,
+      "candidateReturnPct": 0,
+      "deltaReturnPct": 1.1322523354463265,
+      "baselineTrades": 3,
+      "candidateTrades": 0,
+      "candidateBeatsCash": false,
+      "previousFullBaselineVerified": false
+    },
+    {
+      "period": "2026-03",
+      "fee": 0.001,
+      "baselineReturnPct": -0.633919600973798,
+      "candidateReturnPct": -1.48072385859922,
+      "deltaReturnPct": -0.846804257625422,
+      "baselineTrades": 28,
+      "candidateTrades": 17,
+      "candidateBeatsCash": false,
+      "previousFullBaselineVerified": true
+    },
+    {
+      "period": "2026-03",
+      "fee": 0.002,
+      "baselineReturnPct": -0.8275904163135395,
+      "candidateReturnPct": 0,
+      "deltaReturnPct": 0.8275904163135395,
+      "baselineTrades": 2,
+      "candidateTrades": 0,
+      "candidateBeatsCash": false,
+      "previousFullBaselineVerified": false
+    },
+    {
+      "period": "2026-04",
+      "fee": 0.001,
+      "baselineReturnPct": -2.860116100401,
+      "candidateReturnPct": -2.7174997030816828,
+      "deltaReturnPct": 0.1426163973193173,
+      "baselineTrades": 45,
+      "candidateTrades": 25,
+      "candidateBeatsCash": false,
+      "previousFullBaselineVerified": true
+    },
+    {
+      "period": "2026-04",
+      "fee": 0.002,
+      "baselineReturnPct": 0,
+      "candidateReturnPct": 0,
+      "deltaReturnPct": 0,
+      "baselineTrades": 0,
+      "candidateTrades": 0,
+      "candidateBeatsCash": false,
+      "previousFullBaselineVerified": true
+    }
+  ],
+  "modelTrained": false,
+  "julyLoaded": false,
+  "activated": false,
+  "profitabilityEstablished": false,
+  "independentOutOfSample": false
+}

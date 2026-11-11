@@ -1,0 +1,21 @@
+# Second chronological May validation: refit and calendar weighting
+
+The next unused window was fixed before its target labels were evaluated: train strictly before11May00:00UTC, validate11May00:00 through21May00:00exclusive,20shared12hour clocks/400pair slots. Fixed candidates were zero, retrained mean/ridge(lambda10), and calendar-weighted mean/ridge with one fixed30dayhalf-life. Existing costs/geometry,10daymodel-age, z6support,95%forecast coverage,40known-label gate,0.005ranking margin and stable MAE comparison stayed unchanged. This is one forward chronological follow-up after a known negative early-May result, not an independent random experiment.
+
+The400already-consumed early-May target rows became known past for the later11Maytraining cutoff. This explicit role transition is recorded in the new protocol and per-row source-artifact/old-target/old-feature hashes. The original negative validation and source-only registration remain intact. A new source scope/feature contract/target hash was created with unchanged target geometry and unchanged raw-backed values. Old targets were not silently overwritten. Training has8,880rows at444shared clocks,8,879knownlabels and1ambiguous label. All labels mature before the new cutoff. Both weighted and unweighted models were frozen before new validation labels; the unweighted refit is the control for retraining, so weighting is not credited with its effect.
+
+Independent80digitDecimal checks verified all8,879calendar weights, weighted scaling/intercept/normal equations, and exact source-value preservation from the two old artifacts. Forecasts for all400slots were saved before the label stage. Independent original raw-page/Decimal reconstruction then checked400new labels (124stop/262timeout/14target),2,000candidate forecast slots, missing/age/support handling, metrics, selection and fixed-margin ranking. These are fixed idealized net barrier targets; no actual trades or portfolio PNL were simulated by this test.
+
+| Candidate | MAE(return fraction) | RMSE(return fraction) | Coverage | Above0.005margin | Ranked opportunities |
+|---|---:|---:|---:|---:|---:|
+| Zero |0.0132688280|0.0161959324|100%|0|0|
+| Unweighted mean |0.0117997039|0.0148234334|100%|0|0|
+| Unweighted ridge |0.0117320333|0.0147694370|99.75%|0|0|
+| Clock-weighted mean30 |0.0120550962|0.0150512039|100%|0|0|
+| Clock-weighted ridge30 |0.0118920969|0.0149446341|99.75%|0|0|
+
+The fixed error selector chooses **unweighted ridge**. Its target prediction error is lower than zero in this window; the calendar weighting is worse than its same-cutoff unweighted control. The unweighted model has no positive forecast; the weighted ridge has7positive forecasts, all below the predeclared margin. Both ridge variants have one null forecast, preserved in the full denominator and charged the explicit zero-abstention loss. Every candidate still has20NO-TRADEclocks. No profitable entry policy or prediction probability is established. Selection on this validation window does not authorize deployment or establish independent statistical significance.
+
+Evidence pointers: `docs/later-may-frozen-models-latest.json`, `docs/later-may-weighted-fit-independent-latest.json`, `docs/later-may-validation-latest.json`, `docs/later-may-validation-independent-latest.json`. The model artifact references the protocol and new training-source corpus; the validation references frozen forecasts and scoring registration.60existing learning/clock-weighting/ranking/validation tests pass. No active provider, account, runtime, frozen reference, original historical data or old model artifact changed. No extra market request, key, external model or paid service was used.
+
+Both early-May and11–20Mayvalidation windows are now consumed evidence. Keep the new result, including weighting's failure to beat its control. Do not tune half-life/margin after seeing it and call the same days a new holdout. Outcomes from21Mayonward, June and lockedJuly remain unconsumed. Further work should use the observed limitation—no sufficiently positive entry forecasts despite some downside prediction accuracy—to motivate a specific market/decision investigation before another candidate. Avoid serial model/window fishing.

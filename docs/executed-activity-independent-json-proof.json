@@ -1,0 +1,23 @@
+{
+  "version": "executed-activity-independent-json-proof-v1",
+  "witnessHash": "dbd4ad52e42325f594689d89fb8b416b3bdb1227e9140036f7faf3c5d36c2cec",
+  "verifierHash": "1d3c72ac47973ad2d19022af4f5f83194cadb38ff38e246935c6e6fa20aa1ff0",
+  "cases": [
+    {
+      "name": "unknown20",
+      "entireJsonEqual": true,
+      "markets": 20,
+      "fullDigestReferencesDecoded": 106
+    },
+    {
+      "name": "transport-only-two-retained-records",
+      "entireJsonEqual": true,
+      "markets": 20,
+      "fullDigestReferencesDecoded": 106
+    }
+  ],
+  "method": "Independent Python decoder restores exact complete pre-packing JSON, including every key/value and source clock; no app import",
+  "modelCalls": 0,
+  "newNetworkRequests": 0,
+  "profitabilityEstablished": false
+}

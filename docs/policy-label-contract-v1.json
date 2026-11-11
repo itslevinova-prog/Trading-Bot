@@ -1,0 +1,15 @@
+{
+  "version": "policy-labels-v1",
+  "registeredAt": "2026-10-31T11:55:58.328499+00:00",
+  "target": "Net realised return of a completed full simulated position under exact policy/execution/cost scope; not future close direction",
+  "scopeKeys": [
+    "datasetId",
+    "replayBuildId",
+    "decisionModuleHash",
+    "scenarioHash"
+  ],
+  "timing": "entryFeatureClosedAt<=entryBarTs; modeledAvailableAt=exitBarTs+900000+5000. MaterializedAt actual artifact creation separately recorded. Historical first receipt is unknown: this is a simulation availability assumption, never live verified memory.",
+  "censoring": "Open/unliquidated trades and artificial evaluation-end liquidation have no trainable binary/return label. Scale-ins, partial closes or contradictory ledger arithmetic rejected rather than guessed.",
+  "learning": "Eligibility strictly per scope/asOf; duplicates same event count once, contradictory same ID rejected; no probability, model fit, strategy activation or inferred independent samples.",
+  "history": "Derive labels from immutable already consumed study7e873da8; retrospective development evidence only."
+}

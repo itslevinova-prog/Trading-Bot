@@ -1,0 +1,49 @@
+{
+  "verifiedAt": "2026-10-30T16:15:37.446Z",
+  "verifierHash": "29881aa6019e5abb261a139335fa718f28088d171f38b8922cd5d7a95cf3ff32",
+  "buildId": "7d339fc68efd0acfb5377bab2c8a5299375e2b3864e8f0e4cbe1b1df6de5da89",
+  "probeOnly": true,
+  "network": "live",
+  "quote": "EUR",
+  "markets": 20,
+  "features": 20,
+  "freshBooks": 20,
+  "m15BarsRange": [
+    8641,
+    8641
+  ],
+  "h1BarsRange": [
+    2161,
+    2161
+  ],
+  "unavailableMarkets": [],
+  "historyRepair": {
+    "mode": "public-cache-90d",
+    "targetDays": 90,
+    "reports": 40,
+    "completeReports": 40,
+    "errorReports": 0,
+    "missingBars": 0,
+    "requests": 40
+  },
+  "collectionDurationMs": 9747,
+  "publicRequests": 63,
+  "actualAccountAudited": false,
+  "modelInvoked": false,
+  "actualTradingReady": false,
+  "privateExchangeCalls": 0,
+  "realOrders": 0,
+  "paidCalls": 0,
+  "captureHash": "2543bc6dd972e1cde867c3699ef207aa93e5752041d580142bbe282cf658d006",
+  "artifact": "docs/verification-runs/native-public-context-2026-10-30T16-15-37.446Z-2543bc6dd972e1cde867c3699ef207aa93e5752041d580142bbe282cf658d006.json.gz",
+  "artifactEncoding": "gzip",
+  "artifactHash": "9d58838dd4ec60aa6048d58bb1440b538e44d1a053a27935a7d7e8658b7de559",
+  "artifactBytes": 3370078,
+  "uncompressedBytes": 27019529,
+  "limitations": [
+    "No private account, protection, fills or commissions verified.",
+    "No actual model or profit claim.",
+    "90-day repair target; gaps and shorter listings remain explicitly incomplete. No production/testnet history mixing.",
+    "Order-book ages use conservative local request start, not an attested exchange event time."
+  ]
+}

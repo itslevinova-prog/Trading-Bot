@@ -1,0 +1,107 @@
+name: Verify
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Node.js 22 einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      # setup-node benötigt ein bereits ausführbares pnpm für den pnpm-Cache.
+      - name: pnpm 11.25.0 mit Corepack aktivieren
+        run: corepack enable && corepack prepare pnpm@11.25.0 --activate
+      - name: pnpm-Cache einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - name: Abhängigkeiten installieren
+        run: pnpm install --frozen-lockfile
+      - name: Typecheck, Tests, Offline-Tests und Build
+        run: pnpm verify
+
+  cost-guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Kosten- und Sicherheitsregeln prüfen
+        shell: bash
+        run: |
+          set -euo pipefail
+          errors=0
+          fail() {
+            printf '::error::%s\n' "$1"
+            errors=1
+          }
+
+          if git ls-files | grep -Eq '(^|/)\.env$'; then
+            fail 'Eine .env-Datei ist versioniert. Das kann geheime Schlüssel offenlegen und verstößt gegen die Sicherheitsregel.'
+          fi
+
+          if [[ ! -f .env.example ]]; then
+            fail 'Die .env.example fehlt. Sichere Standardwerte müssen prüfbar bleiben.'
+          else
+            for key in LIVE_ENABLED AI_ALLOW_REMOTE; do
+              if grep -Eiq "^[[:space:]]*(export[[:space:]]+)?${key}[[:space:]]*=[[:space:]]*['\"]?true['\"]?([[:space:]]*(#.*)?)?$" .env.example; then
+                fail "${key}=true in .env.example erlaubt teuren Remote-Betrieb oder Live-Handel und ist verboten."
+              fi
+              if ! grep -Eq "^[[:space:]]*${key}[[:space:]]*=[[:space:]]*false([[:space:]]*(#.*)?)?$" .env.example; then
+                fail "${key} muss in .env.example ausdrücklich auf false stehen (sicherer Standard)."
+              fi
+            done
+            if grep -Eq "^[[:space:]]*(export[[:space:]]+)?LIVE_ACK[[:space:]]*=[[:space:]]*['\"]?[^[:space:]#'\"]+" .env.example; then
+              fail 'LIVE_ACK ist in .env.example gesetzt. Eine Live-Bestätigung darf niemals vorausgefüllt werden.'
+            fi
+          fi
+
+          if [[ ! -f apps/server/src/config.ts ]]; then
+            fail 'apps/server/src/config.ts fehlt: Sichere Config-Standards können nicht geprüft werden.'
+          else
+            if ! grep -Fq "AI_ALLOW_REMOTE:z.enum(['true','false']).default('false')" apps/server/src/config.ts; then
+              fail 'Der Standard für AI_ALLOW_REMOTE in config.ts ist nicht nachweisbar false. Bitte Zod-Definition prüfen.'
+            fi
+            if grep -Eq 'LIVE_ENABLED[[:space:]]*:' apps/server/src/config.ts; then
+              if ! grep -Fq "LIVE_ENABLED:z.enum(['true','false']).default('false')" apps/server/src/config.ts; then
+                fail 'LIVE_ENABLED in config.ts muss standardmäßig false sein; unbekannte Formatierung wird sicherheitshalber abgelehnt.'
+              fi
+            else
+              echo 'Hinweis: LIVE_ENABLED wird derzeit nicht in config.ts definiert; .env.example wird kontrolliert.'
+            fi
+          fi
+
+          private_start='-----BEGIN '
+          private_end='PRIVATE KEY-----'
+          if git grep -nEI -- "${private_start}.*${private_end}" >/dev/null; then
+            fail 'Ein PEM-Private-Key-Header ist in versionierten Dateien enthalten. Geheimnisse dürfen nicht ins Repository.'
+          fi
+          if git grep -nEI -- "^[[:space:]]*['\"]?(export[[:space:]]+)?[A-Z][A-Z0-9_]*(API_KEY|SECRET)[A-Z0-9_]*['\"]?[[:space:]]*[:=][[:space:]]*['\"]?[A-Za-z0-9_+/-]{32,}" >/dev/null; then
+            fail 'Ein langer Schlüsselwert neben API_KEY/SECRET wurde gefunden. Keine API-Schlüssel oder Secrets committen.'
+          fi
+
+          if [[ "$errors" -ne 0 ]]; then
+            echo 'Kosten-/Sicherheitsprüfung fehlgeschlagen. Fundstellen absichtlich nicht im Log ausgegeben.'
+            exit 1
+          fi
+          echo 'Kosten-/Sicherheitsprüfung bestanden.'

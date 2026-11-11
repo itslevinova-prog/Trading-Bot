@@ -1,0 +1,1116 @@
+{
+  "version": "consumed-momentum-attribution-v1",
+  "generatedAt": "2026-11-04T15:42:00.359422+00:00",
+  "sources": {
+    "may": [
+      "docs/may-frozen-portfolio-f53b0d90fa77fffc.json",
+      "f53b0d90fa77fffc406b9e0399c8c3920958cdf7bda42311cd51a5a71122878d"
+    ],
+    "june": [
+      "docs/june-frozen-portfolio-13ca4ea0ac9938e5.json",
+      "13ca4ea0ac9938e59717972a4fae74a4fd7ca37d311f815ff9d15c3793f23b77"
+    ]
+  },
+  "runnerSha256": "9c7fc796185aa1ea5e907d30e418c7601b338992545bf1930b21ca4eae681fe4",
+  "periods": {
+    "may": {
+      "summary": {
+        "trades": 20,
+        "wins": 10,
+        "grossEur": "2.171622444597248574437",
+        "feesEur": "0.603163067899477651",
+        "netEur": "1.568459376697770923437",
+        "meanNetPctOfEntry": "0.5259678127309699938251366795"
+      },
+      "byExit": {
+        "stop": {
+          "trades": 6,
+          "wins": 0,
+          "grossEur": "-2.007113617620010180",
+          "feesEur": "0.178623973990979972",
+          "netEur": "-2.185737591610990152",
+          "meanNetPctOfEntry": "-2.417082068352730554251278685"
+        },
+        "target": {
+          "trades": 6,
+          "wins": 6,
+          "grossEur": "3.474328288972553537",
+          "feesEur": "0.183265825512172531",
+          "netEur": "3.291062463460381006",
+          "meanNetPctOfEntry": "3.657319438961055379160559033"
+        },
+        "timeout": {
+          "trades": 8,
+          "wins": 4,
+          "grossEur": "0.704407773244705217437",
+          "feesEur": "0.241273268396325148",
+          "netEur": "0.463134504848380069437",
+          "meanNetPctOfEntry": "0.3847415038711813658808814375"
+        }
+      },
+      "byPair": {
+        "APT/EUR": {
+          "trades": 1,
+          "wins": 0,
+          "grossEur": "-0.480636280799996464",
+          "feesEur": "0.029720666488031998",
+          "netEur": "-0.510356947288028462",
+          "meanNetPctOfEntry": "-3.376325214116307608302853172"
+        },
+        "BCH/EUR": {
+          "trades": 2,
+          "wins": 0,
+          "grossEur": "-0.3365034406117679",
+          "feesEur": "0.060023486752028227",
+          "netEur": "-0.396526927363796127",
+          "meanNetPctOfEntry": "-1.311675795767214111315188812"
+        },
+        "DOT/EUR": {
+          "trades": 1,
+          "wins": 0,
+          "grossEur": "-0.305807522802875456",
+          "feesEur": "0.029830610980109125",
+          "netEur": "-0.335638133782984581",
+          "meanNetPctOfEntry": "-2.225233439200037320803704051"
+        },
+        "ETH/EUR": {
+          "trades": 2,
+          "wins": 0,
+          "grossEur": "-0.31930710320052892",
+          "feesEur": "0.059539580301658666",
+          "netEur": "-0.378846683502187586",
+          "meanNetPctOfEntry": "-1.263940873495197364831007514"
+        },
+        "ICP/EUR": {
+          "trades": 2,
+          "wins": 2,
+          "grossEur": "1.159826360845072037",
+          "feesEur": "0.061179174157405068",
+          "netEur": "1.098647186687666969",
+          "meanNetPctOfEntry": "3.657319438961055608064282591"
+        },
+        "SUI/EUR": {
+          "trades": 2,
+          "wins": 1,
+          "grossEur": "0.27258285708113795",
+          "feesEur": "0.060272405295841127",
+          "netEur": "0.212310451785296823",
+          "meanNetPctOfEntry": "0.716042999880524013459778978"
+        },
+        "TRX/EUR": {
+          "trades": 1,
+          "wins": 1,
+          "grossEur": "0.10352393712000153",
+          "feesEur": "0.030212226444959997",
+          "netEur": "0.073311710675041533",
+          "meanNetPctOfEntry": "0.4864937118015507688482390901"
+        },
+        "WIN/EUR": {
+          "trades": 4,
+          "wins": 2,
+          "grossEur": "0.143091433943897447437",
+          "feesEur": "0.120554193835941150",
+          "netEur": "0.022537240107956297437",
+          "meanNetPctOfEntry": "0.03572081729784250518967481868"
+        },
+        "XLM/EUR": {
+          "trades": 5,
+          "wins": 4,
+          "grossEur": "1.93485220302230835",
+          "feesEur": "0.151830723643502293",
+          "netEur": "1.783021479378806057",
+          "meanNetPctOfEntry": "2.379209277556897545049324392"
+        }
+      },
+      "trades": [
+        {
+          "pair": "SUI/EUR",
+          "entryAt": 1779322500000,
+          "exitAt": 1779329700000,
+          "exitClass": "target",
+          "reason": "gap target (conservative target fill)",
+          "grossEur": "0.5779414829618480",
+          "feesEur": "0.030485582870481842",
+          "netEur": "0.547455900091366158",
+          "entryBasisEur": "14.968774514453756797"
+        },
+        {
+          "pair": "WIN/EUR",
+          "entryAt": 1779365700000,
+          "exitAt": 1779394500000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "0.166127333059153787112",
+          "feesEur": "0.030300228906949586",
+          "netEur": "0.135827104152204201112",
+          "entryBasisEur": "15.082117837732161216"
+        },
+        {
+          "pair": "BCH/EUR",
+          "entryAt": 1779408900000,
+          "exitAt": 1779437700000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.0299570363199954",
+          "feesEur": "0.030120800088319997",
+          "netEur": "-0.060077836408315397",
+          "entryBasisEur": "15.090453940882315397"
+        },
+        {
+          "pair": "DOT/EUR",
+          "entryAt": 1779452100000,
+          "exitAt": 1779462000000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.305807522802875456",
+          "feesEur": "0.029830610980109125",
+          "netEur": "-0.335638133782984581",
+          "entryBasisEur": "15.083277460707456"
+        },
+        {
+          "pair": "ETH/EUR",
+          "entryAt": 1779495300000,
+          "exitAt": 1779522300000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.30389488458133056",
+          "feesEur": "0.029644038831034665",
+          "netEur": "-0.333538923412365225",
+          "entryBasisEur": "14.988940824665806318"
+        },
+        {
+          "pair": "ICP/EUR",
+          "entryAt": 1779538500000,
+          "exitAt": 1779548400000,
+          "exitClass": "target",
+          "reason": "intrabar target",
+          "grossEur": "0.578116013983390519",
+          "feesEur": "0.03049478913111139",
+          "netEur": "0.547621224852279129",
+          "entryBasisEur": "14.973294895122562586"
+        },
+        {
+          "pair": "ETH/EUR",
+          "entryAt": 1779581700000,
+          "exitAt": 1779610500000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.01541221861919836",
+          "feesEur": "0.029895541470624001",
+          "netEur": "-0.045307760089822361",
+          "entryBasisEur": "14.970432321466219959"
+        },
+        {
+          "pair": "SUI/EUR",
+          "entryAt": 1779624900000,
+          "exitAt": 1779631200000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.30535862588071005",
+          "feesEur": "0.029786822425359285",
+          "netEur": "-0.335145448306069335",
+          "entryBasisEur": "15.061136616145618347"
+        },
+        {
+          "pair": "XLM/EUR",
+          "entryAt": 1779668100000,
+          "exitAt": 1779696900000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "0.50316165712",
+          "feesEur": "0.030490506556480003",
+          "netEur": "0.472671150563519997",
+          "entryBasisEur": "15.008666122129680003"
+        },
+        {
+          "pair": "ICP/EUR",
+          "entryAt": 1779711300000,
+          "exitAt": 1779727500000,
+          "exitClass": "target",
+          "reason": "intrabar target",
+          "grossEur": "0.581710346861681518",
+          "feesEur": "0.030684385026293678",
+          "netEur": "0.551025961835387840",
+          "entryBasisEur": "15.066388677055714680"
+        },
+        {
+          "pair": "BCH/EUR",
+          "entryAt": 1779754500000,
+          "exitAt": 1779764400000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.3065464042917725",
+          "feesEur": "0.02990268666370823",
+          "netEur": "-0.33644909095548073",
+          "entryBasisEur": "15.119721150534"
+        },
+        {
+          "pair": "APT/EUR",
+          "entryAt": 1779797700000,
+          "exitAt": 1779816600000,
+          "exitClass": "stop",
+          "reason": "gap stop",
+          "grossEur": "-0.480636280799996464",
+          "feesEur": "0.029720666488031998",
+          "netEur": "-0.510356947288028462",
+          "entryBasisEur": "15.115752035800414229"
+        },
+        {
+          "pair": "WIN/EUR",
+          "entryAt": 1779840900000,
+          "exitAt": 1779869700000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.170523344222217366639",
+          "feesEur": "0.029888830473923939",
+          "netEur": "-0.200412174696141305639",
+          "entryBasisEur": "15.044706585982150446639"
+        },
+        {
+          "pair": "WIN/EUR",
+          "entryAt": 1779884100000,
+          "exitAt": 1779912900000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.003808801145854240732",
+          "feesEur": "0.029995485657239760",
+          "netEur": "-0.033804286803094000732",
+          "entryBasisEur": "15.014646876422000807"
+        },
+        {
+          "pair": "XLM/EUR",
+          "entryAt": 1779927300000,
+          "exitAt": 1779930000000,
+          "exitClass": "target",
+          "reason": "intrabar target",
+          "grossEur": "0.57914888160313392",
+          "feesEur": "0.030549271414083128",
+          "netEur": "0.548599610189050792",
+          "entryBasisEur": "15.000046327506236878"
+        },
+        {
+          "pair": "XLM/EUR",
+          "entryAt": 1779970500000,
+          "exitAt": 1779971400000,
+          "exitClass": "target",
+          "reason": "intrabar target",
+          "grossEur": "0.58145919246482260",
+          "feesEur": "0.030671136992704821",
+          "netEur": "0.550788055472117779",
+          "entryBasisEur": "15.059883739020118059"
+        },
+        {
+          "pair": "XLM/EUR",
+          "entryAt": 1780013700000,
+          "exitAt": 1780013700000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.30486989926332515",
+          "feesEur": "0.029739148602736669",
+          "netEur": "-0.334609047866061819",
+          "entryBasisEur": "15.037031260250997446"
+        },
+        {
+          "pair": "WIN/EUR",
+          "entryAt": 1780056900000,
+          "exitAt": 1780085700000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "0.151296246252815267696",
+          "feesEur": "0.030369648797827865",
+          "netEur": "0.120926597454987402696",
+          "entryBasisEur": "15.124285452063311891152"
+        },
+        {
+          "pair": "XLM/EUR",
+          "entryAt": 1780100100000,
+          "exitAt": 1780103700000,
+          "exitClass": "target",
+          "reason": "intrabar target",
+          "grossEur": "0.57595237109767698",
+          "feesEur": "0.030380660077497672",
+          "netEur": "0.545571711020179308",
+          "entryBasisEur": "14.917256207053198019"
+        },
+        {
+          "pair": "TRX/EUR",
+          "entryAt": 1780143300000,
+          "exitAt": 1780172100000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "0.10352393712000153",
+          "feesEur": "0.030212226444959997",
+          "netEur": "0.073311710675041533",
+          "entryBasisEur": "15.069405605173916937"
+        }
+      ]
+    },
+    "june": {
+      "summary": {
+        "trades": 55,
+        "wins": 13,
+        "grossEur": "-6.0869098744533120032873",
+        "feesEur": "1.581820304840009248",
+        "netEur": "-7.6687301792933212512873",
+        "meanNetPctOfEntry": "-0.9680483405480677459796004676"
+      },
+      "byExit": {
+        "stop": {
+          "trades": 26,
+          "wins": 0,
+          "grossEur": "-7.8408055525705443955265",
+          "feesEur": "0.745404381374904960",
+          "netEur": "-8.5862099339454493555265",
+          "meanNetPctOfEntry": "-2.277290822702617161892251397"
+        },
+        "target": {
+          "trades": 3,
+          "wins": 3,
+          "grossEur": "1.706976469546934411",
+          "feesEur": "0.090040556275090926",
+          "netEur": "1.616935913271843485",
+          "meanNetPctOfEntry": "3.657319438961045561597080433"
+        },
+        "timeout": {
+          "trades": 26,
+          "wins": 10,
+          "grossEur": "0.0469192085702979812392",
+          "feesEur": "0.746375367190013362",
+          "netEur": "-0.6994561586197153807608",
+          "meanNetPctOfEntry": "-0.1925021406445698655565665650"
+        }
+      },
+      "byPair": {
+        "ADA/EUR": {
+          "trades": 2,
+          "wins": 0,
+          "grossEur": "-0.594467142536632286",
+          "feesEur": "0.057988495204215358",
+          "netEur": "-0.652455637740847644",
+          "meanNetPctOfEntry": "-2.225233439200018990141377210"
+        },
+        "APT/EUR": {
+          "trades": 3,
+          "wins": 1,
+          "grossEur": "-0.613217352999524958",
+          "feesEur": "0.088135481572376457",
+          "netEur": "-0.701352834571901415",
+          "meanNetPctOfEntry": "-1.576250345476784720705187909"
+        },
+        "AVAX/EUR": {
+          "trades": 5,
+          "wins": 2,
+          "grossEur": "-0.130446613429403745",
+          "feesEur": "0.140934075455098579",
+          "netEur": "-0.271380688884502324",
+          "meanNetPctOfEntry": "-0.3799882384537863211486443504"
+        },
+        "BCH/EUR": {
+          "trades": 6,
+          "wins": 1,
+          "grossEur": "-1.28428317314651283",
+          "feesEur": "0.172094886288453468",
+          "netEur": "-1.456378059434966298",
+          "meanNetPctOfEntry": "-1.69129548726994759049635629"
+        },
+        "BNB/EUR": {
+          "trades": 1,
+          "wins": 0,
+          "grossEur": "-0.29226461357673916",
+          "feesEur": "0.028509540612183257",
+          "netEur": "-0.320774154188922417",
+          "meanNetPctOfEntry": "-2.225233439200012215307556858"
+        },
+        "ETH/EUR": {
+          "trades": 1,
+          "wins": 0,
+          "grossEur": "-0.297151879750567",
+          "feesEur": "0.028986278838409435",
+          "netEur": "-0.326138158588976435",
+          "meanNetPctOfEntry": "-2.225233439200021772171245781"
+        },
+        "ICP/EUR": {
+          "trades": 5,
+          "wins": 2,
+          "grossEur": "-0.060638276950724524",
+          "feesEur": "0.145068001907113263",
+          "netEur": "-0.205706278857837787",
+          "meanNetPctOfEntry": "-0.3149057539022687138775085612"
+        },
+        "LINK/EUR": {
+          "trades": 2,
+          "wins": 0,
+          "grossEur": "-0.596173316623762396",
+          "feesEur": "0.058154927393296228",
+          "netEur": "-0.654328244017058624",
+          "meanNetPctOfEntry": "-2.225233439200023573748647648"
+        },
+        "LTC/EUR": {
+          "trades": 5,
+          "wins": 2,
+          "grossEur": "-0.166478555475813797",
+          "feesEur": "0.144024864350156161",
+          "netEur": "-0.310503419825969958",
+          "meanNetPctOfEntry": "-0.445744357309365037726458283"
+        },
+        "SHIB/EUR": {
+          "trades": 3,
+          "wins": 1,
+          "grossEur": "-0.1235031062936748446153",
+          "feesEur": "0.088190790351855792",
+          "netEur": "-0.2116938966455306366153",
+          "meanNetPctOfEntry": "-0.4812131495806428069893373403"
+        },
+        "SUI/EUR": {
+          "trades": 3,
+          "wins": 0,
+          "grossEur": "-0.67061858574356850",
+          "feesEur": "0.084957187200896425",
+          "netEur": "-0.755575772944464925",
+          "meanNetPctOfEntry": "-1.760337772366021231036566064"
+        },
+        "TRX/EUR": {
+          "trades": 4,
+          "wins": 0,
+          "grossEur": "-0.41668978767998962",
+          "feesEur": "0.113453995341439986",
+          "netEur": "-0.530143783021429606",
+          "meanNetPctOfEntry": "-0.9285146118782647185272165918"
+        },
+        "WIN/EUR": {
+          "trades": 6,
+          "wins": 2,
+          "grossEur": "-0.190404564781789162672",
+          "feesEur": "0.171993415683459475",
+          "netEur": "-0.362397980465248637672",
+          "meanNetPctOfEntry": "-0.423334785830148170451649670"
+        },
+        "XLM/EUR": {
+          "trades": 8,
+          "wins": 2,
+          "grossEur": "-0.36852684405214700",
+          "feesEur": "0.231815613288987827",
+          "netEur": "-0.600342457341134827",
+          "meanNetPctOfEntry": "-0.513448627379064417334692700"
+        },
+        "XRP/EUR": {
+          "trades": 1,
+          "wins": 0,
+          "grossEur": "-0.28204606141246218",
+          "feesEur": "0.027512751352067537",
+          "netEur": "-0.309558812764529717",
+          "meanNetPctOfEntry": "-2.225233439200011495188399720"
+        }
+      },
+      "trades": [
+        {
+          "pair": "XLM/EUR",
+          "entryAt": 1780272900000,
+          "exitAt": 1780277400000,
+          "exitClass": "target",
+          "reason": "intrabar target",
+          "grossEur": "0.57404839631718962",
+          "feesEur": "0.030280228143357189",
+          "netEur": "0.543768168173832431",
+          "entryBasisEur": "14.86794296339351866"
+        },
+        {
+          "pair": "ICP/EUR",
+          "entryAt": 1780316100000,
+          "exitAt": 1780327800000,
+          "exitClass": "target",
+          "reason": "intrabar target",
+          "grossEur": "0.581518401436650951",
+          "feesEur": "0.030674260180900648",
+          "netEur": "0.550844141255750303",
+          "entryBasisEur": "15.061417260621730087"
+        },
+        {
+          "pair": "BCH/EUR",
+          "entryAt": 1780359300000,
+          "exitAt": 1780365600000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.3065260830186996",
+          "feesEur": "0.029900704384181297",
+          "netEur": "-0.336426787402880897",
+          "entryBasisEur": "15.118718848833598198"
+        },
+        {
+          "pair": "ICP/EUR",
+          "entryAt": 1780402500000,
+          "exitAt": 1780412400000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.306074137905576488",
+          "feesEur": "0.029856618487502425",
+          "netEur": "-0.335930756393078913",
+          "entryBasisEur": "15.096427659016704"
+        },
+        {
+          "pair": "XLM/EUR",
+          "entryAt": 1780445700000,
+          "exitAt": 1780451100000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.3046544937687636",
+          "feesEur": "0.029718136439751236",
+          "netEur": "-0.334372630208514836",
+          "entryBasisEur": "15.02640686222676"
+        },
+        {
+          "pair": "APT/EUR",
+          "entryAt": 1780488900000,
+          "exitAt": 1780496100000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.304346016843530013",
+          "feesEur": "0.029688045436532461",
+          "netEur": "-0.334034062280062474",
+          "entryBasisEur": "15.011191922414683969"
+        },
+        {
+          "pair": "LINK/EUR",
+          "entryAt": 1780532100000,
+          "exitAt": 1780533000000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.302116773187528366",
+          "feesEur": "0.029470589372428467",
+          "netEur": "-0.331587362559956833",
+          "entryBasisEur": "14.901239425880804907"
+        },
+        {
+          "pair": "BCH/EUR",
+          "entryAt": 1780575300000,
+          "exitAt": 1780604100000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "0.2553615176000035",
+          "feesEur": "0.029721629688800005",
+          "netEur": "0.225639887911203495",
+          "entryBasisEur": "14.7478672196855986"
+        },
+        {
+          "pair": "XLM/EUR",
+          "entryAt": 1780704900000,
+          "exitAt": 1780708500000,
+          "exitClass": "stop",
+          "reason": "gap stop",
+          "grossEur": "-0.32022407287999668",
+          "feesEur": "0.029249578559679996",
+          "netEur": "-0.349473651439676676",
+          "entryBasisEur": "14.799686217596276677"
+        },
+        {
+          "pair": "SHIB/EUR",
+          "entryAt": 1780748100000,
+          "exitAt": 1780776900000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.0386374541280007581918",
+          "feesEur": "0.029721130448447422",
+          "netEur": "-0.0683585845764481801918",
+          "entryBasisEur": "14.8947638352389981936164"
+        },
+        {
+          "pair": "XLM/EUR",
+          "entryAt": 1780791300000,
+          "exitAt": 1780793100000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.30026713091250800",
+          "feesEur": "0.029290162289887487",
+          "netEur": "-0.329557293202395487",
+          "entryBasisEur": "14.810009925110397598"
+        },
+        {
+          "pair": "ADA/EUR",
+          "entryAt": 1780834500000,
+          "exitAt": 1780859700000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.300560570095670786",
+          "feesEur": "0.029318786406256322",
+          "netEur": "-0.329879356501927108",
+          "entryBasisEur": "14.824483161664171813"
+        },
+        {
+          "pair": "BCH/EUR",
+          "entryAt": 1780877700000,
+          "exitAt": 1780881300000,
+          "exitClass": "stop",
+          "reason": "gap stop",
+          "grossEur": "-0.35149001555999854",
+          "feesEur": "0.028915719636119997",
+          "netEur": "-0.380405735196118537",
+          "entryBasisEur": "14.648238430665838537"
+        },
+        {
+          "pair": "APT/EUR",
+          "entryAt": 1780920900000,
+          "exitAt": 1780949700000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "0.086582902980002499",
+          "feesEur": "0.029513039370275997",
+          "netEur": "0.057069863609726502",
+          "entryBasisEur": "14.727941461881645498"
+        },
+        {
+          "pair": "ETH/EUR",
+          "entryAt": 1780964100000,
+          "exitAt": 1780972200000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.297151879750567",
+          "feesEur": "0.028986278838409435",
+          "netEur": "-0.326138158588976435",
+          "entryBasisEur": "14.65635707443908"
+        },
+        {
+          "pair": "WIN/EUR",
+          "entryAt": 1781050500000,
+          "exitAt": 1781079300000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.096996511268638034280",
+          "feesEur": "0.029250001963045439",
+          "netEur": "-0.126246513231683473280",
+          "entryBasisEur": "14.688172736394195072280"
+        },
+        {
+          "pair": "TRX/EUR",
+          "entryAt": 1781093700000,
+          "exitAt": 1781122500000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.0793208166399948",
+          "feesEur": "0.029016065686399994",
+          "netEur": "-0.108336882326394794",
+          "entryBasisEur": "14.562240944771514794"
+        },
+        {
+          "pair": "LTC/EUR",
+          "entryAt": 1781136900000,
+          "exitAt": 1781165700000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "0.215000555304005628",
+          "feesEur": "0.029430102534168002",
+          "netEur": "0.185570452769837626",
+          "entryBasisEur": "14.622158540421427979"
+        },
+        {
+          "pair": "SHIB/EUR",
+          "entryAt": 1781180100000,
+          "exitAt": 1781208900000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "0.211665078814023572465",
+          "feesEur": "0.029543972273399217",
+          "netEur": "0.182121106540624355465",
+          "entryBasisEur": "14.680819750889889024535"
+        },
+        {
+          "pair": "TRX/EUR",
+          "entryAt": 1781223300000,
+          "exitAt": 1781252100000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.15406786664000212",
+          "feesEur": "0.028821563108559999",
+          "netEur": "-0.182889429748562119",
+          "entryBasisEur": "14.502303303087600001"
+        },
+        {
+          "pair": "APT/EUR",
+          "entryAt": 1781266500000,
+          "exitAt": 1781271000000,
+          "exitClass": "stop",
+          "reason": "gap stop",
+          "grossEur": "-0.395454239135997444",
+          "feesEur": "0.028934396765567999",
+          "netEur": "-0.424388635901565443",
+          "entryBasisEur": "14.679590427854349441"
+        },
+        {
+          "pair": "LTC/EUR",
+          "entryAt": 1781309700000,
+          "exitAt": 1781338500000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "0.087089044048",
+          "feesEur": "0.029254469045847998",
+          "netEur": "0.057834575002152002",
+          "entryBasisEur": "14.598273690900899999"
+        },
+        {
+          "pair": "SHIB/EUR",
+          "entryAt": 1781352900000,
+          "exitAt": 1781361000000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.2965307309796976588885",
+          "feesEur": "0.028925687630009153",
+          "netEur": "-0.3254564186097068118885",
+          "entryBasisEur": "14.625720289674919086839"
+        },
+        {
+          "pair": "LTC/EUR",
+          "entryAt": 1781396100000,
+          "exitAt": 1781424900000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.15067111123999623",
+          "feesEur": "0.028900978590327997",
+          "netEur": "-0.179572089830324227",
+          "entryBasisEur": "14.540350675634780227"
+        },
+        {
+          "pair": "LINK/EUR",
+          "entryAt": 1781439300000,
+          "exitAt": 1781460900000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.29405654343623403",
+          "feesEur": "0.028684338020867761",
+          "netEur": "-0.322740881457101791",
+          "entryBasisEur": "14.503686479434149887"
+        },
+        {
+          "pair": "ADA/EUR",
+          "entryAt": 1781482500000,
+          "exitAt": 1781482500000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.29390657244096150",
+          "feesEur": "0.028669708797959036",
+          "netEur": "-0.322576281238920536",
+          "entryBasisEur": "14.496289492885198198"
+        },
+        {
+          "pair": "BCH/EUR",
+          "entryAt": 1781525700000,
+          "exitAt": 1781550000000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.29075677511479212",
+          "feesEur": "0.028362455471285200",
+          "netEur": "-0.319119230586077320",
+          "entryBasisEur": "14.340932729323197806"
+        },
+        {
+          "pair": "LTC/EUR",
+          "entryAt": 1781568900000,
+          "exitAt": 1781597700000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.03370200754799637",
+          "feesEur": "0.028716936767771995",
+          "netEur": "-0.062418944315768365",
+          "entryBasisEur": "14.389694707047656365"
+        },
+        {
+          "pair": "XLM/EUR",
+          "entryAt": 1781612100000,
+          "exitAt": 1781614800000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.28984638208116600",
+          "feesEur": "0.028273649348478831",
+          "netEur": "-0.318120031429644831",
+          "entryBasisEur": "14.296029613145278558"
+        },
+        {
+          "pair": "WIN/EUR",
+          "entryAt": 1781655300000,
+          "exitAt": 1781684100000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "0.176828956030877320910",
+          "feesEur": "0.028844601912587595",
+          "netEur": "0.147984354118289725910",
+          "entryBasisEur": "14.348220364756638358"
+        },
+        {
+          "pair": "XLM/EUR",
+          "entryAt": 1781698500000,
+          "exitAt": 1781727300000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.11707378211999708",
+          "feesEur": "0.028287615704999999",
+          "netEur": "-0.145361397824997079",
+          "entryBasisEur": "14.216547088303557079"
+        },
+        {
+          "pair": "XLM/EUR",
+          "entryAt": 1781741700000,
+          "exitAt": 1781744400000,
+          "exitClass": "target",
+          "reason": "intrabar target",
+          "grossEur": "0.55140967179309384",
+          "feesEur": "0.029086067950833089",
+          "netEur": "0.522323603842260751",
+          "entryBasisEur": "14.281596468659517838"
+        },
+        {
+          "pair": "BNB/EUR",
+          "entryAt": 1781784900000,
+          "exitAt": 1781796600000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.29226461357673916",
+          "feesEur": "0.028509540612183257",
+          "netEur": "-0.320774154188922417",
+          "entryBasisEur": "14.415303515492877199"
+        },
+        {
+          "pair": "SUI/EUR",
+          "entryAt": 1781828100000,
+          "exitAt": 1781838900000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.29079741766093650",
+          "feesEur": "0.028366420030339057",
+          "netEur": "-0.319163837691275557",
+          "entryBasisEur": "14.342937332723997747"
+        },
+        {
+          "pair": "WIN/EUR",
+          "entryAt": 1781871300000,
+          "exitAt": 1781900100000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.037174951449996560900",
+          "feesEur": "0.028596127938446596",
+          "netEur": "-0.065771079388443156900",
+          "entryBasisEur": "14.330968096393244857900"
+        },
+        {
+          "pair": "ICP/EUR",
+          "entryAt": 1781914500000,
+          "exitAt": 1781943300000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "0.158105026192004344",
+          "feesEur": "0.028749797376016002",
+          "netEur": "0.129355228815988342",
+          "entryBasisEur": "14.310142021086909827"
+        },
+        {
+          "pair": "WIN/EUR",
+          "entryAt": 1781957700000,
+          "exitAt": 1781986500000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "0.107047677684025699236",
+          "feesEur": "0.028759393038249722",
+          "netEur": "0.078288284645775977236",
+          "entryBasisEur": "14.340498852963130847"
+        },
+        {
+          "pair": "AVAX/EUR",
+          "entryAt": 1782000900000,
+          "exitAt": 1782029700000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.03973281404399739",
+          "feesEur": "0.028556024815403998",
+          "netEur": "-0.068288838859401388",
+          "entryBasisEur": "14.312176693538721388"
+        },
+        {
+          "pair": "WIN/EUR",
+          "entryAt": 1782044100000,
+          "exitAt": 1782072900000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.053667249644040",
+          "feesEur": "0.028601681371289399",
+          "netEur": "-0.082268931015329399",
+          "entryBasisEur": "14.342001984777186719"
+        },
+        {
+          "pair": "SUI/EUR",
+          "entryAt": 1782130500000,
+          "exitAt": 1782137700000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.290147136922632",
+          "feesEur": "0.028302987085477368",
+          "netEur": "-0.318450124008109368",
+          "entryBasisEur": "14.3108636783112"
+        },
+        {
+          "pair": "TRX/EUR",
+          "entryAt": 1782173700000,
+          "exitAt": 1782202500000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.11791059263999760",
+          "feesEur": "0.027931317252479997",
+          "netEur": "-0.145841909892477597",
+          "entryBasisEur": "14.038638536482557597"
+        },
+        {
+          "pair": "SUI/EUR",
+          "entryAt": 1782216900000,
+          "exitAt": 1782245700000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.08967403116",
+          "feesEur": "0.02828778008508",
+          "netEur": "-0.11796181124508",
+          "entryBasisEur": "14.20291578517812"
+        },
+        {
+          "pair": "ICP/EUR",
+          "entryAt": 1782260100000,
+          "exitAt": 1782288900000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.211655013983997084",
+          "feesEur": "0.028227118738751996",
+          "netEur": "-0.239882132722749080",
+          "entryBasisEur": "14.233606263244365082"
+        },
+        {
+          "pair": "AVAX/EUR",
+          "entryAt": 1782303300000,
+          "exitAt": 1782308700000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.2875460139694100",
+          "feesEur": "0.028049255306030584",
+          "netEur": "-0.315595269275440584",
+          "entryBasisEur": "14.182569060659997498"
+        },
+        {
+          "pair": "AVAX/EUR",
+          "entryAt": 1782346500000,
+          "exitAt": 1782375300000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "0.137463009719998755",
+          "feesEur": "0.02833598474448",
+          "netEur": "0.109127024975518755",
+          "entryBasisEur": "14.113360128247378755"
+        },
+        {
+          "pair": "BCH/EUR",
+          "entryAt": 1782432900000,
+          "exitAt": 1782437400000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.28690182961302765",
+          "feesEur": "0.027986417045026971",
+          "netEur": "-0.314888246658054621",
+          "entryBasisEur": "14.150796096757318339"
+        },
+        {
+          "pair": "WIN/EUR",
+          "entryAt": 1782476100000,
+          "exitAt": 1782487800000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.286442486134017587638",
+          "feesEur": "0.027941609459840724",
+          "netEur": "-0.314384095593858311638",
+          "entryBasisEur": "14.128139998960357070539"
+        },
+        {
+          "pair": "AVAX/EUR",
+          "entryAt": 1782519300000,
+          "exitAt": 1782548100000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.09683317819999758",
+          "feesEur": "0.027948669829431998",
+          "netEur": "-0.124781848029429578",
+          "entryBasisEur": "14.036774255319813578"
+        },
+        {
+          "pair": "XLM/EUR",
+          "entryAt": 1782562500000,
+          "exitAt": 1782591300000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.16191905039999910",
+          "feesEur": "0.0276301748520",
+          "netEur": "-0.18954922525199910",
+          "entryBasisEur": "13.90994299815119910"
+        },
+        {
+          "pair": "TRX/EUR",
+          "entryAt": 1782605700000,
+          "exitAt": 1782634500000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "-0.0653905117599951",
+          "feesEur": "0.027685049293999996",
+          "netEur": "-0.093075561053995096",
+          "entryBasisEur": "13.889095122782875096"
+        },
+        {
+          "pair": "LTC/EUR",
+          "entryAt": 1782648900000,
+          "exitAt": 1782675900000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.284195036039826825",
+          "feesEur": "0.027722377412040169",
+          "netEur": "-0.311917413451866994",
+          "entryBasisEur": "14.017289510264038154"
+        },
+        {
+          "pair": "AVAX/EUR",
+          "entryAt": 1782692100000,
+          "exitAt": 1782720900000,
+          "exitClass": "timeout",
+          "reason": "Fixed 32-bar timeout",
+          "grossEur": "0.15620238306400247",
+          "feesEur": "0.028044140759751999",
+          "netEur": "0.128158242304250471",
+          "entryBasisEur": "13.957913157532341527"
+        },
+        {
+          "pair": "XRP/EUR",
+          "entryAt": 1782735300000,
+          "exitAt": 1782741600000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.28204606141246218",
+          "feesEur": "0.027512751352067537",
+          "netEur": "-0.309558812764529717",
+          "entryBasisEur": "13.91129610544673851"
+        },
+        {
+          "pair": "ICP/EUR",
+          "entryAt": 1782778500000,
+          "exitAt": 1782787500000,
+          "exitClass": "stop",
+          "reason": "intrabar stop-first",
+          "grossEur": "-0.282532552689806247",
+          "feesEur": "0.027560207123942192",
+          "netEur": "-0.310092759813748439",
+          "entryBasisEur": "13.935291208154313108"
+        },
+        {
+          "pair": "BCH/EUR",
+          "entryAt": 1782821700000,
+          "exitAt": 1782824400000,
+          "exitClass": "stop",
+          "reason": "gap stop",
+          "grossEur": "-0.30396998743999842",
+          "feesEur": "0.027207960063039998",
+          "netEur": "-0.331177947503038418",
+          "entryBasisEur": "13.769720990265238418"
+        }
+      ]
+    }
+  },
+  "scope": "Post-hoc attribution of the two consumed ungated simulated portfolios. Gross removes paid fees only and retains modeled spread and slippage. Different periods and trade counts. No new outcome or strategy evaluation.",
+  "profitabilityEstablished": false
+}

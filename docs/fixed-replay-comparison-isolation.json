@@ -1,0 +1,21 @@
+{
+  "verifierHash": "995119a39ed562f8fffb014342d88416af36b8cfc7ab82717a3b0777af198e9a",
+  "verifiedAt": "2026-10-28T21:03:08.829Z",
+  "buildId": "319b229e1e0f42a1131f7035b079aeab270a4fa1072be9b47cdd002d2228daec",
+  "strategyVersion": "aee11a8c76c80a19d0325feee258d12a101dabfa770f84192a0f6c796c507193",
+  "datasetId": "d0066ea5e97b107a22c148dbfcfcd245a2ea37e555684a5af36a382134b14926",
+  "capturedAt": "2026-10-28T20:01:22.069Z",
+  "dataHash": "fa60e70db8f4343e6d6121c674ad32cc71754851982432227a8ea749c9cf4a67",
+  "optionsHash": "a24c2c6f037f819d808f1627e00bcde2237e9cda88b1e79040e5b8f8c1d0be83",
+  "privateExchangeCalls": 0,
+  "realOrders": 0,
+  "paidCalls": 0,
+  "independentProfitabilityEstablished": false,
+  "status": "passed",
+  "pointerHash": "f10adc960a8f4340a9367bb328172a5170f118443eda5c6ce92efd8d74855810",
+  "defaultReportHash": "8e75165799771c95aa092f53aad10ed4d61e54ebfb6dda8d041bbf2c321ff33f",
+  "runtimeFeeRate": 0.002,
+  "frozenFeeRate": 0.001,
+  "runtimeConfigurationMatches": false,
+  "defaultPreserved": true
+}

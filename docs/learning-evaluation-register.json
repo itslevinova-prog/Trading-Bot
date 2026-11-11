@@ -1,0 +1,24 @@
+{
+  "recordedAt": "2026-10-30T20:55:26.510162+00:00",
+  "experiments": [
+    {
+      "protocol": "docs/learning-protocol-v1.json",
+      "reportId": "33432b7d0ced9f3518a500d88776fcb88b4f0df6cc8af3a62f2e65c3541ae12e",
+      "datasetId": "d0066ea5e97b107a22c148dbfcfcd245a2ea37e555684a5af36a382134b14926",
+      "historicalDataAlreadyInspected": true,
+      "testWindowsNowInspected": [
+        {
+          "from": 1792438200000,
+          "to": 1792783800000
+        },
+        {
+          "from": 1792783800000,
+          "to": 1793129400000
+        }
+      ],
+      "independentProspectiveEvidence": false,
+      "result": "Ridge did not improve test MAE over zero in either fold; validation-selected variants placed no diagnostic trades; not deployed.",
+      "nextUsePolicy": "These windows are available for retrospective development/debugging, not fresh independent confirmation. Any changed hypothesis gets a new frozen protocol/report; preserve this result."
+    }
+  ]
+}

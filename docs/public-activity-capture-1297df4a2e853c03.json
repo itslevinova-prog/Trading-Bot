@@ -1,0 +1,3520 @@
+{
+  "version": "public-activity-capture-v1",
+  "protocolHash": "f1888472782dd167a6fe95ba6bfa1bdae62c63c19b9004f449cd05bacd8f7968",
+  "runnerHash": "7fa1af7a814d408b7988bf013cb48fbf8a9de83d965a4104dc00fb6ca0659e23",
+  "buildId": "257f8027cf7e813f40af3ec64a1d4de1912b8714769e55c5d63079524ed48028",
+  "closedAt": 1793648700000,
+  "from": 1793562300000,
+  "results": [
+    {
+      "pair": "BTC/EUR",
+      "requestedAt": 1793649163124,
+      "capturedAt": 1793649164077,
+      "url": "https://data-api.binance.vision/api/v3/klines?symbol=BTCEUR&interval=15m&startTime=1793562300000&endTime=1793648699999&limit=96",
+      "rawPath": "data/public-activity-captures/f1888472782dd167/BTC-EUR-raw.json",
+      "rawHash": "efbdf075940cc6430b251b90f0bc5e9bf51b357a2d7a0d2a5e18ce6acb14a4c9",
+      "parsed": {
+        "version": "binance-public-activity96-v1",
+        "source": "binance-public-spot-klines",
+        "pair": "BTC/EUR",
+        "closedAt": 1793648700000,
+        "capturedAt": 1793649164077,
+        "expectedBars": 96,
+        "scope": "Exact96closed15m bars. Public aggregate taker-buy fields describe executed activity at one venue, not book liquidity or calibrated profit. Capture time is actual retrieval, not first historical availability.",
+        "complete": true,
+        "reason": null,
+        "bars": [
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793562300000,
+              "open": 68920.36,
+              "high": 69010.28,
+              "low": 68871.66,
+              "close": 69010.27,
+              "volume": 2.18051
+            },
+            "quoteVolume": 150384.0206461,
+            "trades": 673,
+            "takerBuyBaseVolume": 0.46817,
+            "takerBuyQuoteVolume": 32260.8099659,
+            "takerBuyBaseShare": 0.21470665119627977,
+            "takerBuyQuoteShare": 0.21452285839477347
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793563200000,
+              "open": 69010.28,
+              "high": 69164.54,
+              "low": 69010.28,
+              "close": 69164.53,
+              "volume": 6.53152
+            },
+            "quoteVolume": 451263.5602682,
+            "trades": 1600,
+            "takerBuyBaseVolume": 2.40539,
+            "takerBuyQuoteVolume": 166258.5643726,
+            "takerBuyBaseShare": 0.36827415364264365,
+            "takerBuyQuoteShare": 0.3684289603924309
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793564100000,
+              "open": 69164.53,
+              "high": 69205.54,
+              "low": 69098.86,
+              "close": 69197.03,
+              "volume": 1.19896
+            },
+            "quoteVolume": 82903.0416854,
+            "trades": 310,
+            "takerBuyBaseVolume": 0.41797,
+            "takerBuyQuoteVolume": 28897.9379279,
+            "takerBuyBaseShare": 0.34861046240074733,
+            "takerBuyQuoteShare": 0.34857512270251473
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793565000000,
+              "open": 69199.22,
+              "high": 69340.45,
+              "low": 69199.21,
+              "close": 69340.44,
+              "volume": 1.20716
+            },
+            "quoteVolume": 83636.008426,
+            "trades": 423,
+            "takerBuyBaseVolume": 0.64837,
+            "takerBuyQuoteVolume": 44928.5719558,
+            "takerBuyBaseShare": 0.5371036150965903,
+            "takerBuyQuoteShare": 0.5371917287940897
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793565900000,
+              "open": 69340.45,
+              "high": 69427.85,
+              "low": 69340.45,
+              "close": 69422.45,
+              "volume": 1.2923
+            },
+            "quoteVolume": 89668.9897857,
+            "trades": 420,
+            "takerBuyBaseVolume": 0.62776,
+            "takerBuyQuoteVolume": 43554.4476948,
+            "takerBuyBaseShare": 0.48576955815213185,
+            "takerBuyQuoteShare": 0.48572475053963265
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793566800000,
+              "open": 69427.06,
+              "high": 69480.69,
+              "low": 69414.53,
+              "close": 69470.22,
+              "volume": 1.21047
+            },
+            "quoteVolume": 84050.8421013,
+            "trades": 387,
+            "takerBuyBaseVolume": 0.83181,
+            "takerBuyQuoteVolume": 57757.5051056,
+            "takerBuyBaseShare": 0.6871793600832735,
+            "takerBuyQuoteShare": 0.6871734257699563
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793567700000,
+              "open": 69470.22,
+              "high": 69529.99,
+              "low": 69449.42,
+              "close": 69517.46,
+              "volume": 1.3188
+            },
+            "quoteVolume": 91634.5224997,
+            "trades": 341,
+            "takerBuyBaseVolume": 0.74591,
+            "takerBuyQuoteVolume": 51825.3727717,
+            "takerBuyBaseShare": 0.5655975128905065,
+            "takerBuyQuoteShare": 0.565566026405274
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793568600000,
+              "open": 69520.94,
+              "high": 69600,
+              "low": 69517.46,
+              "close": 69600,
+              "volume": 0.68556
+            },
+            "quoteVolume": 47682.895903,
+            "trades": 209,
+            "takerBuyBaseVolume": 0.26311,
+            "takerBuyQuoteVolume": 18303.0052316,
+            "takerBuyBaseShare": 0.38378843573137295,
+            "takerBuyQuoteShare": 0.3838484405148819
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793569500000,
+              "open": 69610,
+              "high": 69618.28,
+              "low": 69518,
+              "close": 69574.96,
+              "volume": 0.73441
+            },
+            "quoteVolume": 51092.7964394,
+            "trades": 225,
+            "takerBuyBaseVolume": 0.30783,
+            "takerBuyQuoteVolume": 21416.1062851,
+            "takerBuyBaseShare": 0.419152789313871,
+            "takerBuyQuoteShare": 0.4191609733184433
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793570400000,
+              "open": 69576.9,
+              "high": 69616.43,
+              "low": 69509.73,
+              "close": 69518.94,
+              "volume": 6.58293
+            },
+            "quoteVolume": 458018.6450247,
+            "trades": 2550,
+            "takerBuyBaseVolume": 2.75224,
+            "takerBuyQuoteVolume": 191491.7086562,
+            "takerBuyBaseShare": 0.4180873866196359,
+            "takerBuyQuoteShare": 0.41808714718562007
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793571300000,
+              "open": 69518.94,
+              "high": 69519.01,
+              "low": 69288.45,
+              "close": 69331.09,
+              "volume": 3.56289
+            },
+            "quoteVolume": 247120.4933323,
+            "trades": 1174,
+            "takerBuyBaseVolume": 2.1735,
+            "takerBuyQuoteVolume": 150726.6525956,
+            "takerBuyBaseShare": 0.6100384799979792,
+            "takerBuyQuoteShare": 0.6099318213682896
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793572200000,
+              "open": 69331.08,
+              "high": 69570.99,
+              "low": 69321.22,
+              "close": 69570.99,
+              "volume": 3.492
+            },
+            "quoteVolume": 242441.587664,
+            "trades": 699,
+            "takerBuyBaseVolume": 2.61477,
+            "takerBuyQuoteVolume": 181549.3692536,
+            "takerBuyBaseShare": 0.7487886597938145,
+            "takerBuyQuoteShare": 0.7488375695064718
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793573100000,
+              "open": 69589.99,
+              "high": 69690,
+              "low": 69589.99,
+              "close": 69653.61,
+              "volume": 0.82479
+            },
+            "quoteVolume": 57445.8556134,
+            "trades": 281,
+            "takerBuyBaseVolume": 0.37222,
+            "takerBuyQuoteVolume": 25918.6522331,
+            "takerBuyBaseShare": 0.45129063155469873,
+            "takerBuyQuoteShare": 0.4511840228741259
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793574000000,
+              "open": 69653.61,
+              "high": 70009.99,
+              "low": 69653.61,
+              "close": 69934.5,
+              "volume": 2.36707
+            },
+            "quoteVolume": 165328.1123139,
+            "trades": 629,
+            "takerBuyBaseVolume": 1.27955,
+            "takerBuyQuoteVolume": 89422.1524117,
+            "takerBuyBaseShare": 0.5405628054937116,
+            "takerBuyQuoteShare": 0.5408768730264019
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793574900000,
+              "open": 69975.4,
+              "high": 69989.39,
+              "low": 69900.44,
+              "close": 69929.41,
+              "volume": 0.76151
+            },
+            "quoteVolume": 53261.9174407,
+            "trades": 246,
+            "takerBuyBaseVolume": 0.2536,
+            "takerBuyQuoteVolume": 17736.1609149,
+            "takerBuyBaseShare": 0.3330225473073236,
+            "takerBuyQuoteShare": 0.3329989186860731
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793575800000,
+              "open": 69941.53,
+              "high": 70229.99,
+              "low": 69922.97,
+              "close": 70172.17,
+              "volume": 2.01242
+            },
+            "quoteVolume": 140974.5708676,
+            "trades": 319,
+            "takerBuyBaseVolume": 1.54099,
+            "takerBuyQuoteVolume": 107928.8153904,
+            "takerBuyBaseShare": 0.7657397561145288,
+            "takerBuyQuoteShare": 0.7655906645161148
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793576700000,
+              "open": 70170.34,
+              "high": 70212.99,
+              "low": 70117.58,
+              "close": 70204.73,
+              "volume": 0.47209
+            },
+            "quoteVolume": 33131.393452,
+            "trades": 125,
+            "takerBuyBaseVolume": 0.22724,
+            "takerBuyQuoteVolume": 15946.7271899,
+            "takerBuyBaseShare": 0.4813488953377534,
+            "takerBuyQuoteShare": 0.48131773307401793
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793577600000,
+              "open": 70197.1,
+              "high": 70334.99,
+              "low": 70000,
+              "close": 70000,
+              "volume": 0.92128
+            },
+            "quoteVolume": 64688.7660412,
+            "trades": 234,
+            "takerBuyBaseVolume": 0.57071,
+            "takerBuyQuoteVolume": 40072.1265679,
+            "takerBuyBaseShare": 0.6194750781521362,
+            "takerBuyQuoteShare": 0.6194603641438798
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793578500000,
+              "open": 69990.01,
+              "high": 70059.74,
+              "low": 69890.01,
+              "close": 70004.3,
+              "volume": 0.41094
+            },
+            "quoteVolume": 28744.4589387,
+            "trades": 156,
+            "takerBuyBaseVolume": 0.26558,
+            "takerBuyQuoteVolume": 18573.2036383,
+            "takerBuyBaseShare": 0.6462743952888499,
+            "takerBuyQuoteShare": 0.6461490083326645
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793579400000,
+              "open": 70050.23,
+              "high": 70050.23,
+              "low": 69870.96,
+              "close": 69954.49,
+              "volume": 0.3936
+            },
+            "quoteVolume": 27522.2548922,
+            "trades": 127,
+            "takerBuyBaseVolume": 0.2739,
+            "takerBuyQuoteVolume": 19152.2041457,
+            "takerBuyBaseShare": 0.6958841463414633,
+            "takerBuyQuoteShare": 0.6958806326267937
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793580300000,
+              "open": 69964.89,
+              "high": 70041.55,
+              "low": 69922.88,
+              "close": 69951.18,
+              "volume": 0.41419
+            },
+            "quoteVolume": 28976.7603882,
+            "trades": 140,
+            "takerBuyBaseVolume": 0.23902,
+            "takerBuyQuoteVolume": 16721.2598855,
+            "takerBuyBaseShare": 0.57707815253869,
+            "takerBuyQuoteShare": 0.5770576027646376
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793581200000,
+              "open": 69936.92,
+              "high": 70257.44,
+              "low": 69919.39,
+              "close": 70228.32,
+              "volume": 1.1077
+            },
+            "quoteVolume": 77685.6106367,
+            "trades": 299,
+            "takerBuyBaseVolume": 0.5085,
+            "takerBuyQuoteVolume": 35654.6722196,
+            "takerBuyBaseShare": 0.4590593120881105,
+            "takerBuyQuoteShare": 0.45896108593830276
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793582100000,
+              "open": 70241.59,
+              "high": 70355.12,
+              "low": 70095.2,
+              "close": 70237.05,
+              "volume": 1.2005
+            },
+            "quoteVolume": 84304.9698157,
+            "trades": 348,
+            "takerBuyBaseVolume": 0.78807,
+            "takerBuyQuoteVolume": 55342.0986629,
+            "takerBuyBaseShare": 0.656451478550604,
+            "takerBuyQuoteShare": 0.656451200728545
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793583000000,
+              "open": 70235.98,
+              "high": 70348.06,
+              "low": 70209.06,
+              "close": 70305.24,
+              "volume": 0.59145
+            },
+            "quoteVolume": 41571.6259915,
+            "trades": 162,
+            "takerBuyBaseVolume": 0.4405,
+            "takerBuyQuoteVolume": 30960.5424188,
+            "takerBuyBaseShare": 0.7447797785104404,
+            "takerBuyQuoteShare": 0.7447517791372988
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793583900000,
+              "open": 70319.27,
+              "high": 70319.27,
+              "low": 70162.56,
+              "close": 70162.56,
+              "volume": 0.36003
+            },
+            "quoteVolume": 25291.2055163,
+            "trades": 87,
+            "takerBuyBaseVolume": 0.19345,
+            "takerBuyQuoteVolume": 13588.303847,
+            "takerBuyBaseShare": 0.5373163347498819,
+            "takerBuyQuoteShare": 0.5372738692998416
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793584800000,
+              "open": 70189.55,
+              "high": 70238.4,
+              "low": 70122.63,
+              "close": 70149.98,
+              "volume": 0.31986
+            },
+            "quoteVolume": 22443.5179382,
+            "trades": 63,
+            "takerBuyBaseVolume": 0.23604,
+            "takerBuyQuoteVolume": 16561.0108795,
+            "takerBuyBaseShare": 0.7379478521853311,
+            "takerBuyQuoteShare": 0.7378972817497709
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793585700000,
+              "open": 70141.64,
+              "high": 70281.24,
+              "low": 70141.64,
+              "close": 70281.24,
+              "volume": 0.22714
+            },
+            "quoteVolume": 15946.2255838,
+            "trades": 89,
+            "takerBuyBaseVolume": 0.18862,
+            "takerBuyQuoteVolume": 13241.1647343,
+            "takerBuyBaseShare": 0.830412961169323,
+            "takerBuyQuoteShare": 0.8303635656422602
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793586600000,
+              "open": 70296.97,
+              "high": 70301.21,
+              "low": 70175.52,
+              "close": 70231.04,
+              "volume": 0.1894
+            },
+            "quoteVolume": 13299.2366653,
+            "trades": 43,
+            "takerBuyBaseVolume": 0.00829,
+            "takerBuyQuoteVolume": 582.2769768,
+            "takerBuyBaseShare": 0.043769799366420274,
+            "takerBuyQuoteShare": 0.04378273666783154
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793587500000,
+              "open": 70192.97,
+              "high": 70279.16,
+              "low": 70173.83,
+              "close": 70201.15,
+              "volume": 0.25197
+            },
+            "quoteVolume": 17693.8107672,
+            "trades": 57,
+            "takerBuyBaseVolume": 0.18973,
+            "takerBuyQuoteVolume": 13321.6709423,
+            "takerBuyBaseShare": 0.7529864666428543,
+            "takerBuyQuoteShare": 0.7529000460994598
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793588400000,
+              "open": 70212.17,
+              "high": 70306.64,
+              "low": 70182.74,
+              "close": 70261.93,
+              "volume": 0.27024
+            },
+            "quoteVolume": 18978.0132011,
+            "trades": 93,
+            "takerBuyBaseVolume": 0.11081,
+            "takerBuyQuoteVolume": 7780.3214879,
+            "takerBuyBaseShare": 0.4100429248075785,
+            "takerBuyQuoteShare": 0.40996501611923414
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793589300000,
+              "open": 70264.35,
+              "high": 70463.3,
+              "low": 70264.35,
+              "close": 70369.38,
+              "volume": 1.77172
+            },
+            "quoteVolume": 124713.9247029,
+            "trades": 349,
+            "takerBuyBaseVolume": 1.64404,
+            "takerBuyQuoteVolume": 115730.4054423,
+            "takerBuyBaseShare": 0.9279344365926896,
+            "takerBuyQuoteShare": 0.9279669909995937
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793590200000,
+              "open": 70371.22,
+              "high": 70436.9,
+              "low": 70319.09,
+              "close": 70352.97,
+              "volume": 0.37003
+            },
+            "quoteVolume": 26042.1008274,
+            "trades": 124,
+            "takerBuyBaseVolume": 0.08644,
+            "takerBuyQuoteVolume": 6081.3148555,
+            "takerBuyBaseShare": 0.23360268086371375,
+            "takerBuyQuoteShare": 0.23351859728235097
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793591100000,
+              "open": 70356.52,
+              "high": 70543.76,
+              "low": 70319.36,
+              "close": 70319.36,
+              "volume": 0.5754
+            },
+            "quoteVolume": 40520.4073358,
+            "trades": 222,
+            "takerBuyBaseVolume": 0.40139,
+            "takerBuyQuoteVolume": 28264.5457346,
+            "takerBuyBaseShare": 0.6975842891901286,
+            "takerBuyQuoteShare": 0.6975385390469192
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793592000000,
+              "open": 70321.37,
+              "high": 70384.65,
+              "low": 70250.42,
+              "close": 70374.34,
+              "volume": 0.20273
+            },
+            "quoteVolume": 14253.5477538,
+            "trades": 68,
+            "takerBuyBaseVolume": 0.09969,
+            "takerBuyQuoteVolume": 7007.7449238,
+            "takerBuyBaseShare": 0.49173777931238594,
+            "takerBuyQuoteShare": 0.49164917007639264
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793592900000,
+              "open": 70347.34,
+              "high": 70395.58,
+              "low": 70262.53,
+              "close": 70280.81,
+              "volume": 0.13668
+            },
+            "quoteVolume": 9614.7987189,
+            "trades": 55,
+            "takerBuyBaseVolume": 0.09218,
+            "takerBuyQuoteVolume": 6483.6525044,
+            "takerBuyBaseShare": 0.6744220076090137,
+            "takerBuyQuoteShare": 0.6743409502327861
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793593800000,
+              "open": 70281,
+              "high": 70292.48,
+              "low": 70161.76,
+              "close": 70161.76,
+              "volume": 0.22467
+            },
+            "quoteVolume": 15774.1240672,
+            "trades": 69,
+            "takerBuyBaseVolume": 0.12307,
+            "takerBuyQuoteVolume": 8639.2965439,
+            "takerBuyBaseShare": 0.5477811901900566,
+            "takerBuyQuoteShare": 0.5476878783947289
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793594700000,
+              "open": 70154.54,
+              "high": 70211.92,
+              "low": 70090.05,
+              "close": 70090.05,
+              "volume": 0.32554
+            },
+            "quoteVolume": 22835.4335193,
+            "trades": 107,
+            "takerBuyBaseVolume": 0.14558,
+            "takerBuyQuoteVolume": 10210.2288353,
+            "takerBuyBaseShare": 0.4471954291331326,
+            "takerBuyQuoteShare": 0.4471221808279025
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793595600000,
+              "open": 70090.81,
+              "high": 70108.83,
+              "low": 69911.21,
+              "close": 69955.81,
+              "volume": 0.26798
+            },
+            "quoteVolume": 18761.1583392,
+            "trades": 160,
+            "takerBuyBaseVolume": 0.15127,
+            "takerBuyQuoteVolume": 10586.5121102,
+            "takerBuyBaseShare": 0.5644824240614971,
+            "takerBuyQuoteShare": 0.564278170824895
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793596500000,
+              "open": 69976.9,
+              "high": 70008.93,
+              "low": 69918.53,
+              "close": 69982.33,
+              "volume": 0.51302
+            },
+            "quoteVolume": 35897.6581622,
+            "trades": 147,
+            "takerBuyBaseVolume": 0.37088,
+            "takerBuyQuoteVolume": 25951.1590371,
+            "takerBuyBaseShare": 0.7229347783712136,
+            "takerBuyQuoteShare": 0.7229206685250126
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793597400000,
+              "open": 70003.26,
+              "high": 70103.43,
+              "low": 69954.84,
+              "close": 70103.43,
+              "volume": 0.17835
+            },
+            "quoteVolume": 12488.1275988,
+            "trades": 68,
+            "takerBuyBaseVolume": 0.10777,
+            "takerBuyQuoteVolume": 7544.9322798,
+            "takerBuyBaseShare": 0.6042612839921503,
+            "takerBuyQuoteShare": 0.6041684167709018
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793598300000,
+              "open": 70082.16,
+              "high": 70082.16,
+              "low": 70001.93,
+              "close": 70012.37,
+              "volume": 0.28403
+            },
+            "quoteVolume": 19892.4927036,
+            "trades": 105,
+            "takerBuyBaseVolume": 0.11479,
+            "takerBuyQuoteVolume": 8037.746762,
+            "takerBuyBaseShare": 0.4041474492131113,
+            "takerBuyQuoteShare": 0.4040593042693632
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793599200000,
+              "open": 70009.81,
+              "high": 70043.05,
+              "low": 69922.01,
+              "close": 69934.71,
+              "volume": 0.19649
+            },
+            "quoteVolume": 13750.7991525,
+            "trades": 94,
+            "takerBuyBaseVolume": 0.10397,
+            "takerBuyQuoteVolume": 7275.4686269,
+            "takerBuyBaseShare": 0.5291363428164284,
+            "takerBuyQuoteShare": 0.5290942399938454
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793600100000,
+              "open": 69955.72,
+              "high": 69962.83,
+              "low": 69856.04,
+              "close": 69869.7,
+              "volume": 0.24561
+            },
+            "quoteVolume": 17166.5636598,
+            "trades": 136,
+            "takerBuyBaseVolume": 0.07718,
+            "takerBuyQuoteVolume": 5392.4198848,
+            "takerBuyBaseShare": 0.3142380196246081,
+            "takerBuyQuoteShare": 0.3141234315536173
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793601000000,
+              "open": 69869.29,
+              "high": 69886.7,
+              "low": 69813.07,
+              "close": 69813.5,
+              "volume": 0.2208
+            },
+            "quoteVolume": 15424.760902,
+            "trades": 129,
+            "takerBuyBaseVolume": 0.13689,
+            "takerBuyQuoteVolume": 9562.7969924,
+            "takerBuyBaseShare": 0.6199728260869566,
+            "takerBuyQuoteShare": 0.6199640340071705
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793601900000,
+              "open": 69817.29,
+              "high": 69877.64,
+              "low": 69772.81,
+              "close": 69807.83,
+              "volume": 0.30459
+            },
+            "quoteVolume": 21265.3243993,
+            "trades": 227,
+            "takerBuyBaseVolume": 0.19208,
+            "takerBuyQuoteVolume": 13411.5719101,
+            "takerBuyBaseShare": 0.6306182080829967,
+            "takerBuyQuoteShare": 0.630677983475365
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793602800000,
+              "open": 69815.21,
+              "high": 69878.48,
+              "low": 69767.8,
+              "close": 69767.8,
+              "volume": 0.31553
+            },
+            "quoteVolume": 22031.7645242,
+            "trades": 118,
+            "takerBuyBaseVolume": 0.09251,
+            "takerBuyQuoteVolume": 6458.3259062,
+            "takerBuyBaseShare": 0.2931892371565303,
+            "takerBuyQuoteShare": 0.29313702491264754
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793603700000,
+              "open": 69764.92,
+              "high": 69807.87,
+              "low": 69661.9,
+              "close": 69710.09,
+              "volume": 0.90242
+            },
+            "quoteVolume": 62922.0799789,
+            "trades": 248,
+            "takerBuyBaseVolume": 0.09447,
+            "takerBuyQuoteVolume": 6587.6049012,
+            "takerBuyBaseShare": 0.10468517984973737,
+            "takerBuyQuoteShare": 0.10469464619429392
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793604600000,
+              "open": 69707.45,
+              "high": 69716.78,
+              "low": 69550.02,
+              "close": 69631.32,
+              "volume": 0.58494
+            },
+            "quoteVolume": 40739.8175132,
+            "trades": 209,
+            "takerBuyBaseVolume": 0.09728,
+            "takerBuyQuoteVolume": 6776.3837605,
+            "takerBuyBaseShare": 0.16630765548603277,
+            "takerBuyQuoteShare": 0.16633318885889464
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793605500000,
+              "open": 69636.16,
+              "high": 69744.9,
+              "low": 69537,
+              "close": 69664.76,
+              "volume": 0.64266
+            },
+            "quoteVolume": 44747.6105352,
+            "trades": 234,
+            "takerBuyBaseVolume": 0.15228,
+            "takerBuyQuoteVolume": 10602.0451132,
+            "takerBuyBaseShare": 0.23695266548408178,
+            "takerBuyQuoteShare": 0.23692986030751448
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793606400000,
+              "open": 69672.2,
+              "high": 69836.29,
+              "low": 69630.16,
+              "close": 69670.6,
+              "volume": 0.4363
+            },
+            "quoteVolume": 30431.9260865,
+            "trades": 179,
+            "takerBuyBaseVolume": 0.20644,
+            "takerBuyQuoteVolume": 14397.9246229,
+            "takerBuyBaseShare": 0.4731606692642677,
+            "takerBuyQuoteShare": 0.4731190717924065
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793607300000,
+              "open": 69700.6,
+              "high": 69901.68,
+              "low": 69624.41,
+              "close": 69677.18,
+              "volume": 1.83256
+            },
+            "quoteVolume": 127811.2545382,
+            "trades": 268,
+            "takerBuyBaseVolume": 1.57107,
+            "takerBuyQuoteVolume": 109590.402247,
+            "takerBuyBaseShare": 0.8573089012092373,
+            "takerBuyQuoteShare": 0.8574393752957478
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793608200000,
+              "open": 69683.18,
+              "high": 69830.46,
+              "low": 69658.03,
+              "close": 69739.04,
+              "volume": 2.22842
+            },
+            "quoteVolume": 155351.2295296,
+            "trades": 378,
+            "takerBuyBaseVolume": 0.55366,
+            "takerBuyQuoteVolume": 38610.1637645,
+            "takerBuyBaseShare": 0.2484540616221359,
+            "takerBuyQuoteShare": 0.2485346519716046
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793609100000,
+              "open": 69726.97,
+              "high": 69781.68,
+              "low": 69641.28,
+              "close": 69648.56,
+              "volume": 0.52474
+            },
+            "quoteVolume": 36582.2548387,
+            "trades": 161,
+            "takerBuyBaseVolume": 0.13803,
+            "takerBuyQuoteVolume": 9623.3407953,
+            "takerBuyBaseShare": 0.26304455539886423,
+            "takerBuyQuoteShare": 0.26306035091963675
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793610000000,
+              "open": 69651.27,
+              "high": 69696.65,
+              "low": 69600.96,
+              "close": 69600.96,
+              "volume": 1.14974
+            },
+            "quoteVolume": 80079.9825008,
+            "trades": 186,
+            "takerBuyBaseVolume": 0.24642,
+            "takerBuyQuoteVolume": 17162.9046446,
+            "takerBuyBaseShare": 0.214326717344791,
+            "takerBuyQuoteShare": 0.21432203290539606
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793610900000,
+              "open": 69591.26,
+              "high": 69627.14,
+              "low": 69523.64,
+              "close": 69523.64,
+              "volume": 0.33199
+            },
+            "quoteVolume": 23096.408385,
+            "trades": 164,
+            "takerBuyBaseVolume": 0.14835,
+            "takerBuyQuoteVolume": 10319.6894768,
+            "takerBuyBaseShare": 0.4468508087593,
+            "takerBuyQuoteShare": 0.44680927461873854
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793611800000,
+              "open": 69519.74,
+              "high": 69557.39,
+              "low": 69463.57,
+              "close": 69539.94,
+              "volume": 0.42236
+            },
+            "quoteVolume": 29363.0428054,
+            "trades": 143,
+            "takerBuyBaseVolume": 0.16618,
+            "takerBuyQuoteVolume": 11553.523945,
+            "takerBuyBaseShare": 0.3934558196798939,
+            "takerBuyQuoteShare": 0.39347161741954256
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793612700000,
+              "open": 69539.95,
+              "high": 69609.6,
+              "low": 69518.41,
+              "close": 69518.41,
+              "volume": 0.382
+            },
+            "quoteVolume": 26577.9145572,
+            "trades": 197,
+            "takerBuyBaseVolume": 0.15885,
+            "takerBuyQuoteVolume": 11052.38633,
+            "takerBuyBaseShare": 0.4158376963350785,
+            "takerBuyQuoteShare": 0.4158485161133867
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793613600000,
+              "open": 69521.33,
+              "high": 69521.33,
+              "low": 69430.9,
+              "close": 69457.63,
+              "volume": 0.55427
+            },
+            "quoteVolume": 38502.5255432,
+            "trades": 222,
+            "takerBuyBaseVolume": 0.1106,
+            "takerBuyQuoteVolume": 7682.0656582,
+            "takerBuyBaseShare": 0.1995417395854006,
+            "takerBuyQuoteShare": 0.199521084651465
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793614500000,
+              "open": 69457.63,
+              "high": 69498.48,
+              "low": 69438.8,
+              "close": 69460.78,
+              "volume": 0.52296
+            },
+            "quoteVolume": 36327.811946,
+            "trades": 219,
+            "takerBuyBaseVolume": 0.16501,
+            "takerBuyQuoteVolume": 11462.0686419,
+            "takerBuyBaseShare": 0.3155308245372495,
+            "takerBuyQuoteShare": 0.3155177267196262
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793615400000,
+              "open": 69460.78,
+              "high": 69541.92,
+              "low": 69460.78,
+              "close": 69521.61,
+              "volume": 0.56821
+            },
+            "quoteVolume": 39486.6143938,
+            "trades": 196,
+            "takerBuyBaseVolume": 0.17267,
+            "takerBuyQuoteVolume": 12000.8744162,
+            "takerBuyBaseShare": 0.30388412734728354,
+            "takerBuyQuoteShare": 0.303922597579911
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793616300000,
+              "open": 69500.48,
+              "high": 69578.4,
+              "low": 69485.9,
+              "close": 69511,
+              "volume": 0.55028
+            },
+            "quoteVolume": 38255.266545,
+            "trades": 304,
+            "takerBuyBaseVolume": 0.04135,
+            "takerBuyQuoteVolume": 2873.9586381,
+            "takerBuyBaseShare": 0.07514356327687723,
+            "takerBuyQuoteShare": 0.07512582966110921
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793617200000,
+              "open": 69511,
+              "high": 69554.05,
+              "low": 69437.91,
+              "close": 69503.4,
+              "volume": 0.80793
+            },
+            "quoteVolume": 56144.9456917,
+            "trades": 402,
+            "takerBuyBaseVolume": 0.16901,
+            "takerBuyQuoteVolume": 11742.8266203,
+            "takerBuyBaseShare": 0.2091889148812397,
+            "takerBuyQuoteShare": 0.20915198110229827
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793618100000,
+              "open": 69503.4,
+              "high": 69507.41,
+              "low": 69354.05,
+              "close": 69356.66,
+              "volume": 0.66553
+            },
+            "quoteVolume": 46195.9712911,
+            "trades": 285,
+            "takerBuyBaseVolume": 0.12106,
+            "takerBuyQuoteVolume": 8402.9953681,
+            "takerBuyBaseShare": 0.18190013973825372,
+            "takerBuyQuoteShare": 0.18189887847901792
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793619000000,
+              "open": 69356.66,
+              "high": 69464.62,
+              "low": 69330,
+              "close": 69408.73,
+              "volume": 1.40175
+            },
+            "quoteVolume": 97274.2815546,
+            "trades": 567,
+            "takerBuyBaseVolume": 0.36014,
+            "takerBuyQuoteVolume": 24994.3975188,
+            "takerBuyBaseShare": 0.25692170501159267,
+            "takerBuyQuoteShare": 0.2569476445299743
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793619900000,
+              "open": 69393.34,
+              "high": 69415.52,
+              "low": 69317.74,
+              "close": 69415.52,
+              "volume": 0.469
+            },
+            "quoteVolume": 32532.5619719,
+            "trades": 208,
+            "takerBuyBaseVolume": 0.15356,
+            "takerBuyQuoteVolume": 10649.7018198,
+            "takerBuyBaseShare": 0.32742004264392327,
+            "takerBuyQuoteShare": 0.3273551535534976
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793620800000,
+              "open": 69421.73,
+              "high": 69546.71,
+              "low": 69383.2,
+              "close": 69534.44,
+              "volume": 0.63867
+            },
+            "quoteVolume": 44370.4542261,
+            "trades": 280,
+            "takerBuyBaseVolume": 0.22019,
+            "takerBuyQuoteVolume": 15294.5694967,
+            "takerBuyBaseShare": 0.3447633363082656,
+            "takerBuyQuoteShare": 0.3447016660853403
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793621700000,
+              "open": 69545.64,
+              "high": 69603.09,
+              "low": 69458.77,
+              "close": 69458.77,
+              "volume": 0.49193
+            },
+            "quoteVolume": 34203.627821,
+            "trades": 211,
+            "takerBuyBaseVolume": 0.1487,
+            "takerBuyQuoteVolume": 10337.3036497,
+            "takerBuyBaseShare": 0.30227877950114856,
+            "takerBuyQuoteShare": 0.30222828127469
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793622600000,
+              "open": 69457.02,
+              "high": 69468.87,
+              "low": 69174.33,
+              "close": 69309.31,
+              "volume": 0.68178
+            },
+            "quoteVolume": 47234.6914019,
+            "trades": 281,
+            "takerBuyBaseVolume": 0.23093,
+            "takerBuyQuoteVolume": 16000.4258608,
+            "takerBuyBaseShare": 0.3387163014462143,
+            "takerBuyQuoteShare": 0.3387431014348998
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793623500000,
+              "open": 69323.47,
+              "high": 69369.34,
+              "low": 69240.7,
+              "close": 69310.01,
+              "volume": 0.73246
+            },
+            "quoteVolume": 50745.5661021,
+            "trades": 195,
+            "takerBuyBaseVolume": 0.32431,
+            "takerBuyQuoteVolume": 22466.1894314,
+            "takerBuyBaseShare": 0.44276820577232884,
+            "takerBuyQuoteShare": 0.4427222151034449
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793624400000,
+              "open": 69319.77,
+              "high": 69319.77,
+              "low": 69170.01,
+              "close": 69225.71,
+              "volume": 0.66385
+            },
+            "quoteVolume": 45961.639886,
+            "trades": 289,
+            "takerBuyBaseVolume": 0.28506,
+            "takerBuyQuoteVolume": 19735.0146898,
+            "takerBuyBaseShare": 0.42940423288393453,
+            "takerBuyQuoteShare": 0.4293801252250645
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793625300000,
+              "open": 69222.47,
+              "high": 69222.47,
+              "low": 69116.56,
+              "close": 69214.9,
+              "volume": 0.65207
+            },
+            "quoteVolume": 45098.3171597,
+            "trades": 275,
+            "takerBuyBaseVolume": 0.26413,
+            "takerBuyQuoteVolume": 18266.6122965,
+            "takerBuyBaseShare": 0.4050638735105126,
+            "takerBuyQuoteShare": 0.40503977635828736
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793626200000,
+              "open": 69211.15,
+              "high": 69608.67,
+              "low": 69126.88,
+              "close": 69535.22,
+              "volume": 1.80339
+            },
+            "quoteVolume": 125226.5754765,
+            "trades": 660,
+            "takerBuyBaseVolume": 1.01027,
+            "takerBuyQuoteVolume": 70153.2423749,
+            "takerBuyBaseShare": 0.5602060563716112,
+            "takerBuyQuoteShare": 0.5602104993126236
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793627100000,
+              "open": 69531.77,
+              "high": 69611.67,
+              "low": 69312.91,
+              "close": 69397.35,
+              "volume": 1.83844
+            },
+            "quoteVolume": 127689.0986106,
+            "trades": 468,
+            "takerBuyBaseVolume": 0.60016,
+            "takerBuyQuoteVolume": 41686.7923692,
+            "takerBuyBaseShare": 0.3264506864515568,
+            "takerBuyQuoteShare": 0.3264710364690397
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793628000000,
+              "open": 69393.38,
+              "high": 69506.4,
+              "low": 69347.06,
+              "close": 69389.59,
+              "volume": 0.75895
+            },
+            "quoteVolume": 52691.3487974,
+            "trades": 288,
+            "takerBuyBaseVolume": 0.24453,
+            "takerBuyQuoteVolume": 16975.149499,
+            "takerBuyBaseShare": 0.3221951380196324,
+            "takerBuyQuoteShare": 0.32216198458441475
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793628900000,
+              "open": 69347.67,
+              "high": 69423.11,
+              "low": 69224.96,
+              "close": 69241,
+              "volume": 0.6324
+            },
+            "quoteVolume": 43827.7064398,
+            "trades": 288,
+            "takerBuyBaseVolume": 0.24212,
+            "takerBuyQuoteVolume": 16782.9258706,
+            "takerBuyBaseShare": 0.38285895003162557,
+            "takerBuyQuoteShare": 0.3829295948591871
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793629800000,
+              "open": 69240.99,
+              "high": 69549.99,
+              "low": 69205.59,
+              "close": 69350.18,
+              "volume": 3.89871
+            },
+            "quoteVolume": 270723.1958949,
+            "trades": 1279,
+            "takerBuyBaseVolume": 1.51636,
+            "takerBuyQuoteVolume": 105250.1097582,
+            "takerBuyBaseShare": 0.38893890543282267,
+            "takerBuyQuoteShare": 0.3887738891759394
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793630700000,
+              "open": 69342.36,
+              "high": 69428.04,
+              "low": 69174,
+              "close": 69316.86,
+              "volume": 3.13815
+            },
+            "quoteVolume": 217632.5867247,
+            "trades": 780,
+            "takerBuyBaseVolume": 1.00144,
+            "takerBuyQuoteVolume": 69427.5228715,
+            "takerBuyBaseShare": 0.3191179516594172,
+            "takerBuyQuoteShare": 0.3190125335381146
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793631600000,
+              "open": 69347.62,
+              "high": 69558.99,
+              "low": 69254.05,
+              "close": 69470.36,
+              "volume": 1.28445
+            },
+            "quoteVolume": 89128.6755747,
+            "trades": 461,
+            "takerBuyBaseVolume": 0.55016,
+            "takerBuyQuoteVolume": 38179.5836279,
+            "takerBuyBaseShare": 0.42832340690567944,
+            "takerBuyQuoteShare": 0.4283647589478781
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793632500000,
+              "open": 69457.95,
+              "high": 69556.02,
+              "low": 69325.19,
+              "close": 69439.52,
+              "volume": 0.88649
+            },
+            "quoteVolume": 61550.6255427,
+            "trades": 352,
+            "takerBuyBaseVolume": 0.40343,
+            "takerBuyQuoteVolume": 28008.5572218,
+            "takerBuyBaseShare": 0.4550869158140532,
+            "takerBuyQuoteShare": 0.4550491075410664
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793633400000,
+              "open": 69431.54,
+              "high": 69553.19,
+              "low": 69331.34,
+              "close": 69552.33,
+              "volume": 1.12693
+            },
+            "quoteVolume": 78204.4902367,
+            "trades": 434,
+            "takerBuyBaseVolume": 0.38493,
+            "takerBuyQuoteVolume": 26709.9969655,
+            "takerBuyBaseShare": 0.3415740108081247,
+            "takerBuyQuoteShare": 0.34154045227655566
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793634300000,
+              "open": 69545.09,
+              "high": 69602.7,
+              "low": 68941.58,
+              "close": 69167.85,
+              "volume": 2.12762
+            },
+            "quoteVolume": 147302.1158913,
+            "trades": 636,
+            "takerBuyBaseVolume": 0.49857,
+            "takerBuyQuoteVolume": 34523.1302541,
+            "takerBuyBaseShare": 0.2343322585800096,
+            "takerBuyQuoteShare": 0.23436954754659442
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793635200000,
+              "open": 69146.83,
+              "high": 69312.29,
+              "low": 68977.62,
+              "close": 69073.61,
+              "volume": 2.22687
+            },
+            "quoteVolume": 153874.3711021,
+            "trades": 473,
+            "takerBuyBaseVolume": 1.79703,
+            "takerBuyQuoteVolume": 124152.8651837,
+            "takerBuyBaseShare": 0.8069757103019035,
+            "takerBuyQuoteShare": 0.8068456383897814
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793636100000,
+              "open": 69066.66,
+              "high": 69129.2,
+              "low": 68930.01,
+              "close": 68971.55,
+              "volume": 0.83243
+            },
+            "quoteVolume": 57469.346723,
+            "trades": 399,
+            "takerBuyBaseVolume": 0.42552,
+            "takerBuyQuoteVolume": 29372.479052,
+            "takerBuyBaseShare": 0.5111781170789136,
+            "takerBuyQuoteShare": 0.5110981893282031
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793637000000,
+              "open": 68963.43,
+              "high": 69203.77,
+              "low": 68963.43,
+              "close": 69141.59,
+              "volume": 0.67636
+            },
+            "quoteVolume": 46730.6123011,
+            "trades": 215,
+            "takerBuyBaseVolume": 0.45223,
+            "takerBuyQuoteVolume": 31241.1507835,
+            "takerBuyBaseShare": 0.6686232184044001,
+            "takerBuyQuoteShare": 0.6685371589441941
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793637900000,
+              "open": 69181.99,
+              "high": 69225.84,
+              "low": 69031.34,
+              "close": 69091.98,
+              "volume": 1.00208
+            },
+            "quoteVolume": 69246.0692911,
+            "trades": 261,
+            "takerBuyBaseVolume": 0.71753,
+            "takerBuyQuoteVolume": 49575.9338873,
+            "takerBuyBaseShare": 0.7160406354782053,
+            "takerBuyQuoteShare": 0.7159385997621075
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793638800000,
+              "open": 69081.61,
+              "high": 69163.92,
+              "low": 68942.95,
+              "close": 69004.11,
+              "volume": 0.47593
+            },
+            "quoteVolume": 32867.0870396,
+            "trades": 173,
+            "takerBuyBaseVolume": 0.32379,
+            "takerBuyQuoteVolume": 22358.3452158,
+            "takerBuyBaseShare": 0.6803311411342005,
+            "takerBuyQuoteShare": 0.6802654944401213
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793639700000,
+              "open": 69011.94,
+              "high": 69084.99,
+              "low": 68731.23,
+              "close": 68774.75,
+              "volume": 0.94798
+            },
+            "quoteVolume": 65305.9171641,
+            "trades": 466,
+            "takerBuyBaseVolume": 0.43299,
+            "takerBuyQuoteVolume": 29831.0798268,
+            "takerBuyBaseShare": 0.45675014240806766,
+            "takerBuyQuoteShare": 0.45678984573236736
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793640600000,
+              "open": 68774.76,
+              "high": 68791.97,
+              "low": 68627.4,
+              "close": 68656.6,
+              "volume": 0.87238
+            },
+            "quoteVolume": 59926.1946579,
+            "trades": 415,
+            "takerBuyBaseVolume": 0.39794,
+            "takerBuyQuoteVolume": 27334.9847476,
+            "takerBuyBaseShare": 0.4561544281161879,
+            "takerBuyQuoteShare": 0.4561441770772685
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793641500000,
+              "open": 68658.97,
+              "high": 68823.4,
+              "low": 68501,
+              "close": 68799.11,
+              "volume": 3.37024
+            },
+            "quoteVolume": 231509.4347151,
+            "trades": 545,
+            "takerBuyBaseVolume": 0.68058,
+            "takerBuyQuoteVolume": 46734.8648618,
+            "takerBuyBaseShare": 0.20193814090391188,
+            "takerBuyQuoteShare": 0.20187023876289462
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793642400000,
+              "open": 68771.55,
+              "high": 68975.28,
+              "low": 68749.09,
+              "close": 68884.74,
+              "volume": 0.78687
+            },
+            "quoteVolume": 54199.50523,
+            "trades": 416,
+            "takerBuyBaseVolume": 0.49863,
+            "takerBuyQuoteVolume": 34342.1960496,
+            "takerBuyBaseShare": 0.6336879027031149,
+            "takerBuyQuoteShare": 0.6336256374272441
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793643300000,
+              "open": 68874.98,
+              "high": 68901.77,
+              "low": 68694.22,
+              "close": 68708.67,
+              "volume": 2.9207
+            },
+            "quoteVolume": 200878.3799113,
+            "trades": 260,
+            "takerBuyBaseVolume": 0.15439,
+            "takerBuyQuoteVolume": 10615.6327078,
+            "takerBuyBaseShare": 0.05286061560584791,
+            "takerBuyQuoteShare": 0.052846068912380945
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793644200000,
+              "open": 68685.51,
+              "high": 68833.75,
+              "low": 68615.82,
+              "close": 68649.84,
+              "volume": 1.0466
+            },
+            "quoteVolume": 71918.3645982,
+            "trades": 288,
+            "takerBuyBaseVolume": 0.67014,
+            "takerBuyQuoteVolume": 46051.8539006,
+            "takerBuyBaseShare": 0.6403019300592394,
+            "takerBuyQuoteShare": 0.6403351099247966
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793645100000,
+              "open": 68631.03,
+              "high": 68740,
+              "low": 68631.03,
+              "close": 68693.88,
+              "volume": 0.56278
+            },
+            "quoteVolume": 38655.762953,
+            "trades": 156,
+            "takerBuyBaseVolume": 0.24196,
+            "takerBuyQuoteVolume": 16618.4669596,
+            "takerBuyBaseShare": 0.4299370979778955,
+            "takerBuyQuoteShare": 0.42990916981268046
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793646000000,
+              "open": 68706.17,
+              "high": 68715.61,
+              "low": 68575.95,
+              "close": 68651.87,
+              "volume": 0.569
+            },
+            "quoteVolume": 39054.6592952,
+            "trades": 248,
+            "takerBuyBaseVolume": 0.26238,
+            "takerBuyQuoteVolume": 18007.4294366,
+            "takerBuyBaseShare": 0.4611247803163445,
+            "takerBuyQuoteShare": 0.46108274304708113
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793646900000,
+              "open": 68645.1,
+              "high": 68709.47,
+              "low": 68514.12,
+              "close": 68663.69,
+              "volume": 1.82013
+            },
+            "quoteVolume": 124823.3671594,
+            "trades": 411,
+            "takerBuyBaseVolume": 0.37594,
+            "takerBuyQuoteVolume": 25798.4583181,
+            "takerBuyBaseShare": 0.20654568629713263,
+            "takerBuyQuoteShare": 0.20667971795020762
+          },
+          {
+            "candle": {
+              "pair": "BTC/EUR",
+              "interval": 15,
+              "ts": 1793647800000,
+              "open": 68692.64,
+              "high": 68716.99,
+              "low": 68431.92,
+              "close": 68476.61,
+              "volume": 0.76812
+            },
+            "quoteVolume": 52624.8524288,
+            "trades": 309,
+            "takerBuyBaseVolume": 0.2334,
+            "takerBuyQuoteVolume": 15986.4272591,
+            "takerBuyBaseShare": 0.3038587720668645,
+            "takerBuyQuoteShare": 0.3037809422977329
+          }
+        ]
+      }
+    },
+    {
+      "pair": "ETH/EUR",
+      "requestedAt": 1793649164080,
+      "capturedAt": 1793649164307,
+      "url": "https://data-api.binance.vision/api/v3/klines?symbol=ETHEUR&interval=15m&startTime=1793562300000&endTime=1793648699999&limit=96",
+      "rawPath": "data/public-activity-captures/f1888472782dd167/ETH-EUR-raw.json",
+      "rawHash": "4e4e3c950f431995f1e998adbf7cac88c8973f81b295c556cccad86d55bf525a",
+      "parsed": {
+        "version": "binance-public-activity96-v1",
+        "source": "binance-public-spot-klines",
+        "pair": "ETH/EUR",
+        "closedAt": 1793648700000,
+        "capturedAt": 1793649164307,
+        "expectedBars": 96,
+        "scope": "Exact96closed15m bars. Public aggregate taker-buy fields describe executed activity at one venue, not book liquidity or calibrated profit. Capture time is actual retrieval, not first historical availability.",
+        "complete": true,
+        "reason": null,
+        "bars": [
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793562300000,
+              "open": 2002.01,
+              "high": 2003.68,
+              "low": 2000.13,
+              "close": 2003.67,
+              "volume": 29.5743
+            },
+            "quoteVolume": 59196.764363,
+            "trades": 561,
+            "takerBuyBaseVolume": 5.1321,
+            "takerBuyQuoteVolume": 10270.362424,
+            "takerBuyBaseShare": 0.17353242511234418,
+            "takerBuyQuoteShare": 0.17349533432302472
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793563200000,
+              "open": 2003.74,
+              "high": 2007.61,
+              "low": 2003.74,
+              "close": 2007.59,
+              "volume": 133.981
+            },
+            "quoteVolume": 268795.810802,
+            "trades": 676,
+            "takerBuyBaseVolume": 39.3271,
+            "takerBuyQuoteVolume": 78891.697064,
+            "takerBuyBaseShare": 0.2935274404579754,
+            "takerBuyQuoteShare": 0.2935004709657216
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793564100000,
+              "open": 2007.6,
+              "high": 2008.59,
+              "low": 2004.38,
+              "close": 2008.59,
+              "volume": 13.091
+            },
+            "quoteVolume": 26276.430727,
+            "trades": 168,
+            "takerBuyBaseVolume": 9.4642,
+            "takerBuyQuoteVolume": 18999.522672,
+            "takerBuyBaseShare": 0.7229547017034604,
+            "takerBuyQuoteShare": 0.7230632984135585
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793565000000,
+              "open": 2009.08,
+              "high": 2014.79,
+              "low": 2009.07,
+              "close": 2014.52,
+              "volume": 6.1579
+            },
+            "quoteVolume": 12395.539326,
+            "trades": 130,
+            "takerBuyBaseVolume": 1.8532,
+            "takerBuyQuoteVolume": 3731.546901,
+            "takerBuyBaseShare": 0.300946751327563,
+            "takerBuyQuoteShare": 0.30103949516524653
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793565900000,
+              "open": 2015,
+              "high": 2018,
+              "low": 2015,
+              "close": 2017.56,
+              "volume": 14.2071
+            },
+            "quoteVolume": 28658.295769,
+            "trades": 107,
+            "takerBuyBaseVolume": 2.5767,
+            "takerBuyQuoteVolume": 5196.806292,
+            "takerBuyBaseShare": 0.18136706294739954,
+            "takerBuyQuoteShare": 0.18133689225238034
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793566800000,
+              "open": 2017.56,
+              "high": 2019.94,
+              "low": 2017.29,
+              "close": 2019.82,
+              "volume": 2.9803
+            },
+            "quoteVolume": 6015.067498,
+            "trades": 96,
+            "takerBuyBaseVolume": 0.4679,
+            "takerBuyQuoteVolume": 944.512055,
+            "takerBuyBaseShare": 0.15699761768949433,
+            "takerBuyQuoteShare": 0.15702434849052793
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793567700000,
+              "open": 2019.82,
+              "high": 2021.08,
+              "low": 2018.77,
+              "close": 2021.08,
+              "volume": 1.564
+            },
+            "quoteVolume": 3159.988244,
+            "trades": 72,
+            "takerBuyBaseVolume": 0.3497,
+            "takerBuyQuoteVolume": 706.509715,
+            "takerBuyBaseShare": 0.2235933503836317,
+            "takerBuyQuoteShare": 0.2235798555078422
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793568600000,
+              "open": 2021.08,
+              "high": 2022.9,
+              "low": 2021.08,
+              "close": 2022.28,
+              "volume": 2.154
+            },
+            "quoteVolume": 4355.674166,
+            "trades": 52,
+            "takerBuyBaseVolume": 1.5372,
+            "takerBuyQuoteVolume": 3108.607841,
+            "takerBuyBaseShare": 0.7136490250696379,
+            "takerBuyQuoteShare": 0.7136915486620906
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793569500000,
+              "open": 2022.91,
+              "high": 2023.65,
+              "low": 2020.7,
+              "close": 2022.89,
+              "volume": 4.2374
+            },
+            "quoteVolume": 8572.744129,
+            "trades": 70,
+            "takerBuyBaseVolume": 0.8043,
+            "takerBuyQuoteVolume": 1627.108271,
+            "takerBuyBaseShare": 0.18980978902156984,
+            "takerBuyQuoteShare": 0.1898001674278129
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793570400000,
+              "open": 2021.79,
+              "high": 2023.07,
+              "low": 2020.5,
+              "close": 2020.5,
+              "volume": 4.2895
+            },
+            "quoteVolume": 8673.063425,
+            "trades": 71,
+            "takerBuyBaseVolume": 1.3591,
+            "takerBuyQuoteVolume": 2747.57272,
+            "takerBuyBaseShare": 0.3168434549481291,
+            "takerBuyQuoteShare": 0.316793799994608
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793571300000,
+              "open": 2020.47,
+              "high": 2020.47,
+              "low": 2007.37,
+              "close": 2013.08,
+              "volume": 12.2081
+            },
+            "quoteVolume": 24565.282082,
+            "trades": 285,
+            "takerBuyBaseVolume": 2.7419,
+            "takerBuyQuoteVolume": 5517.317417,
+            "takerBuyBaseShare": 0.22459678410235825,
+            "takerBuyQuoteShare": 0.22459817064517923
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793572200000,
+              "open": 2013.49,
+              "high": 2020.53,
+              "low": 2012.92,
+              "close": 2020.53,
+              "volume": 4.8505
+            },
+            "quoteVolume": 9782.86036,
+            "trades": 103,
+            "takerBuyBaseVolume": 1.9957,
+            "takerBuyQuoteVolume": 4024.618511,
+            "takerBuyBaseShare": 0.41144211936913716,
+            "takerBuyQuoteShare": 0.4113948643748197
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793573100000,
+              "open": 2021.01,
+              "high": 2025.92,
+              "low": 2020.52,
+              "close": 2023.09,
+              "volume": 7.0403
+            },
+            "quoteVolume": 14242.074305,
+            "trades": 151,
+            "takerBuyBaseVolume": 0.5902,
+            "takerBuyQuoteVolume": 1193.406187,
+            "takerBuyBaseShare": 0.08383165490106954,
+            "takerBuyQuoteShare": 0.08379440813484788
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793574000000,
+              "open": 2023.09,
+              "high": 2046.52,
+              "low": 2023.09,
+              "close": 2033.23,
+              "volume": 61.6085
+            },
+            "quoteVolume": 125293.735806,
+            "trades": 518,
+            "takerBuyBaseVolume": 33.0021,
+            "takerBuyQuoteVolume": 67279.475124,
+            "takerBuyBaseShare": 0.5356744605046382,
+            "takerBuyQuoteShare": 0.536973973129614
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793574900000,
+              "open": 2034.19,
+              "high": 2035.08,
+              "low": 2019.82,
+              "close": 2030.64,
+              "volume": 70.3285
+            },
+            "quoteVolume": 142433.711483,
+            "trades": 305,
+            "takerBuyBaseVolume": 5.6013,
+            "takerBuyQuoteVolume": 11383.689634,
+            "takerBuyBaseShare": 0.07964480971441165,
+            "takerBuyQuoteShare": 0.07992271994792952
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793575800000,
+              "open": 2031.04,
+              "high": 2039.43,
+              "low": 2030.88,
+              "close": 2038.09,
+              "volume": 8.804
+            },
+            "quoteVolume": 17907.644733,
+            "trades": 91,
+            "takerBuyBaseVolume": 3.2014,
+            "takerBuyQuoteVolume": 6513.235196,
+            "takerBuyBaseShare": 0.3636301681054066,
+            "takerBuyQuoteShare": 0.3637125536669535
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793576700000,
+              "open": 2037.77,
+              "high": 2039.78,
+              "low": 2036.63,
+              "close": 2038.89,
+              "volume": 9.4698
+            },
+            "quoteVolume": 19298.756174,
+            "trades": 70,
+            "takerBuyBaseVolume": 1.4621,
+            "takerBuyQuoteVolume": 2980.293306,
+            "takerBuyBaseShare": 0.15439608017064774,
+            "takerBuyQuoteShare": 0.1544292947757515
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793577600000,
+              "open": 2039.33,
+              "high": 2045,
+              "low": 2034.62,
+              "close": 2034.72,
+              "volume": 11.1981
+            },
+            "quoteVolume": 22861.815908,
+            "trades": 222,
+            "takerBuyBaseVolume": 6.2694,
+            "takerBuyQuoteVolume": 12799.84187,
+            "takerBuyBaseShare": 0.5598628338736036,
+            "takerBuyQuoteShare": 0.5598786168827897
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793578500000,
+              "open": 2035.21,
+              "high": 2038.91,
+              "low": 2032,
+              "close": 2038.91,
+              "volume": 4.1389
+            },
+            "quoteVolume": 8417.465961,
+            "trades": 114,
+            "takerBuyBaseVolume": 2.2344,
+            "takerBuyQuoteVolume": 4544.048439,
+            "takerBuyBaseShare": 0.5398535842856799,
+            "takerBuyQuoteShare": 0.5398356773943123
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793579400000,
+              "open": 2038.91,
+              "high": 2038.91,
+              "low": 2033.1,
+              "close": 2034,
+              "volume": 3.4278
+            },
+            "quoteVolume": 6975.911457,
+            "trades": 45,
+            "takerBuyBaseVolume": 1.312,
+            "takerBuyQuoteVolume": 2670.106545,
+            "takerBuyBaseShare": 0.38275278604352647,
+            "takerBuyQuoteShare": 0.38276095696723234
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793580300000,
+              "open": 2035,
+              "high": 2036.2,
+              "low": 2033.2,
+              "close": 2034.31,
+              "volume": 1.1052
+            },
+            "quoteVolume": 2248.353304,
+            "trades": 34,
+            "takerBuyBaseVolume": 0.4963,
+            "takerBuyQuoteVolume": 1009.473559,
+            "takerBuyBaseShare": 0.4490589938472675,
+            "takerBuyQuoteShare": 0.44898351037804685
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793581200000,
+              "open": 2034.66,
+              "high": 2050.54,
+              "low": 2034.45,
+              "close": 2048.79,
+              "volume": 13.5726
+            },
+            "quoteVolume": 27760.107873,
+            "trades": 298,
+            "takerBuyBaseVolume": 8.1336,
+            "takerBuyQuoteVolume": 16631.820142,
+            "takerBuyBaseShare": 0.5992661686043941,
+            "takerBuyQuoteShare": 0.5991266394961101
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793582100000,
+              "open": 2048.65,
+              "high": 2056.54,
+              "low": 2045.25,
+              "close": 2052.02,
+              "volume": 36.2782
+            },
+            "quoteVolume": 74446.767665,
+            "trades": 428,
+            "takerBuyBaseVolume": 27.4379,
+            "takerBuyQuoteVolume": 56308.641252,
+            "takerBuyBaseShare": 0.7563192220121174,
+            "takerBuyQuoteShare": 0.756361129141039
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793583000000,
+              "open": 2051.3,
+              "high": 2056.55,
+              "low": 2049.68,
+              "close": 2054.22,
+              "volume": 26.6012
+            },
+            "quoteVolume": 54605.428535,
+            "trades": 294,
+            "takerBuyBaseVolume": 14.4241,
+            "takerBuyQuoteVolume": 29614.936121,
+            "takerBuyBaseShare": 0.5422349367697697,
+            "takerBuyQuoteShare": 0.5423441755798685
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793583900000,
+              "open": 2054.36,
+              "high": 2054.96,
+              "low": 2048.93,
+              "close": 2048.93,
+              "volume": 8.8481
+            },
+            "quoteVolume": 18162.531587,
+            "trades": 131,
+            "takerBuyBaseVolume": 2.7252,
+            "takerBuyQuoteVolume": 5592.738966,
+            "takerBuyBaseShare": 0.3079983273245103,
+            "takerBuyQuoteShare": 0.30792728090851906
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793584800000,
+              "open": 2050.36,
+              "high": 2053.9,
+              "low": 2048.57,
+              "close": 2051.41,
+              "volume": 6.8665
+            },
+            "quoteVolume": 14080.985316,
+            "trades": 103,
+            "takerBuyBaseVolume": 3.1685,
+            "takerBuyQuoteVolume": 6496.970014,
+            "takerBuyBaseShare": 0.4614432389135658,
+            "takerBuyQuoteShare": 0.46140024069321317
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793585700000,
+              "open": 2052.29,
+              "high": 2056.09,
+              "low": 2052.05,
+              "close": 2055.85,
+              "volume": 7.6204
+            },
+            "quoteVolume": 15648.791898,
+            "trades": 59,
+            "takerBuyBaseVolume": 4.9575,
+            "takerBuyQuoteVolume": 10179.304908,
+            "takerBuyBaseShare": 0.65055640123878,
+            "takerBuyQuoteShare": 0.650485032605039
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793586600000,
+              "open": 2056.88,
+              "high": 2057.3,
+              "low": 2050.88,
+              "close": 2053.34,
+              "volume": 8.2678
+            },
+            "quoteVolume": 16977.919116,
+            "trades": 154,
+            "takerBuyBaseVolume": 2.8037,
+            "takerBuyQuoteVolume": 5757.690597,
+            "takerBuyBaseShare": 0.33911076707225624,
+            "takerBuyQuoteShare": 0.33912816745451146
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793587500000,
+              "open": 2053.43,
+              "high": 2055.12,
+              "low": 2051.6,
+              "close": 2054.29,
+              "volume": 3.2811
+            },
+            "quoteVolume": 6736.518395,
+            "trades": 79,
+            "takerBuyBaseVolume": 2.3887,
+            "takerBuyQuoteVolume": 4903.504746,
+            "takerBuyBaseShare": 0.7280180427295724,
+            "takerBuyQuoteShare": 0.7278989618197279
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793588400000,
+              "open": 2055.36,
+              "high": 2055.82,
+              "low": 2053.23,
+              "close": 2054.45,
+              "volume": 3.4679
+            },
+            "quoteVolume": 7125.628649,
+            "trades": 52,
+            "takerBuyBaseVolume": 1.2087,
+            "takerBuyQuoteVolume": 2482.988364,
+            "takerBuyBaseShare": 0.34853946192220076,
+            "takerBuyQuoteShare": 0.34845884992174814
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793589300000,
+              "open": 2054.04,
+              "high": 2073.41,
+              "low": 2054.04,
+              "close": 2065.18,
+              "volume": 18.3618
+            },
+            "quoteVolume": 37885.008678,
+            "trades": 362,
+            "takerBuyBaseVolume": 11.1326,
+            "takerBuyQuoteVolume": 22954.029883,
+            "takerBuyBaseShare": 0.6062913222015271,
+            "takerBuyQuoteShare": 0.6058868846539162
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793590200000,
+              "open": 2067.21,
+              "high": 2068.24,
+              "low": 2064.05,
+              "close": 2064.31,
+              "volume": 2.2307
+            },
+            "quoteVolume": 4610.822284,
+            "trades": 73,
+            "takerBuyBaseVolume": 0.8584,
+            "takerBuyQuoteVolume": 1774.259016,
+            "takerBuyBaseShare": 0.38481194243959294,
+            "takerBuyQuoteShare": 0.38480316670561143
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793591100000,
+              "open": 2065.75,
+              "high": 2069.95,
+              "low": 2063.82,
+              "close": 2065.75,
+              "volume": 6.378
+            },
+            "quoteVolume": 13186.979944,
+            "trades": 85,
+            "takerBuyBaseVolume": 1.8182,
+            "takerBuyQuoteVolume": 3758.730642,
+            "takerBuyBaseShare": 0.2850736908121668,
+            "takerBuyQuoteShare": 0.28503346922205647
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793592000000,
+              "open": 2065.66,
+              "high": 2065.66,
+              "low": 2060.8,
+              "close": 2065.57,
+              "volume": 3.0717
+            },
+            "quoteVolume": 6336.154279,
+            "trades": 35,
+            "takerBuyBaseVolume": 1.9152,
+            "takerBuyQuoteVolume": 3951.890291,
+            "takerBuyBaseShare": 0.6234983885145035,
+            "takerBuyQuoteShare": 0.623704871596609
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793592900000,
+              "open": 2064.85,
+              "high": 2066.35,
+              "low": 2063.61,
+              "close": 2063.61,
+              "volume": 1.0548
+            },
+            "quoteVolume": 2178.270797,
+            "trades": 10,
+            "takerBuyBaseVolume": 0.5011,
+            "takerBuyQuoteVolume": 1034.842935,
+            "takerBuyBaseShare": 0.4750663632916193,
+            "takerBuyQuoteShare": 0.4750754297515378
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793593800000,
+              "open": 2063.97,
+              "high": 2063.97,
+              "low": 2058.96,
+              "close": 2058.96,
+              "volume": 3.2158
+            },
+            "quoteVolume": 6624.764874,
+            "trades": 46,
+            "takerBuyBaseVolume": 1.6468,
+            "takerBuyQuoteVolume": 3391.770022,
+            "takerBuyBaseShare": 0.5120965234156353,
+            "takerBuyQuoteShare": 0.511983456999594
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793594700000,
+              "open": 2058.38,
+              "high": 2059.64,
+              "low": 2049.48,
+              "close": 2049.96,
+              "volume": 11.9444
+            },
+            "quoteVolume": 24515.475799,
+            "trades": 181,
+            "takerBuyBaseVolume": 2.6317,
+            "takerBuyQuoteVolume": 5401.004925,
+            "takerBuyBaseShare": 0.22032919192257458,
+            "takerBuyQuoteShare": 0.22031001842600625
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793595600000,
+              "open": 2050.37,
+              "high": 2050.96,
+              "low": 2044.7,
+              "close": 2047.42,
+              "volume": 6.7881
+            },
+            "quoteVolume": 13906.025519,
+            "trades": 195,
+            "takerBuyBaseVolume": 1.6062,
+            "takerBuyQuoteVolume": 3291.082418,
+            "takerBuyBaseShare": 0.23661996729570867,
+            "takerBuyQuoteShare": 0.23666592683174262
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793596500000,
+              "open": 2046.72,
+              "high": 2047.56,
+              "low": 2043.83,
+              "close": 2046.54,
+              "volume": 7.1721
+            },
+            "quoteVolume": 14671.466144,
+            "trades": 111,
+            "takerBuyBaseVolume": 2.2901,
+            "takerBuyQuoteVolume": 4683.362707,
+            "takerBuyBaseShare": 0.3193067581322067,
+            "takerBuyQuoteShare": 0.3192157253428482
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793597400000,
+              "open": 2046.56,
+              "high": 2051.57,
+              "low": 2045.43,
+              "close": 2051.54,
+              "volume": 2.8405
+            },
+            "quoteVolume": 5819.002126,
+            "trades": 49,
+            "takerBuyBaseVolume": 1.2759,
+            "takerBuyQuoteVolume": 2613.997296,
+            "takerBuyBaseShare": 0.44918148213342723,
+            "takerBuyQuoteShare": 0.4492174498992441
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793598300000,
+              "open": 2050.97,
+              "high": 2050.97,
+              "low": 2047.29,
+              "close": 2047.7,
+              "volume": 2.3936
+            },
+            "quoteVolume": 4903.974266,
+            "trades": 31,
+            "takerBuyBaseVolume": 0.2431,
+            "takerBuyQuoteVolume": 497.707683,
+            "takerBuyBaseShare": 0.1015625,
+            "takerBuyQuoteShare": 0.10149068000839301
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793599200000,
+              "open": 2047.43,
+              "high": 2047.88,
+              "low": 2043.46,
+              "close": 2045.05,
+              "volume": 3.9244
+            },
+            "quoteVolume": 8027.738714,
+            "trades": 42,
+            "takerBuyBaseVolume": 0.4549,
+            "takerBuyQuoteVolume": 930.051784,
+            "takerBuyBaseShare": 0.11591580878605648,
+            "takerBuyQuoteShare": 0.11585476522523501
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793600100000,
+              "open": 2044.15,
+              "high": 2044.15,
+              "low": 2041.24,
+              "close": 2041.95,
+              "volume": 7.4439
+            },
+            "quoteVolume": 15203.958493,
+            "trades": 119,
+            "takerBuyBaseVolume": 3.6991,
+            "takerBuyQuoteVolume": 7555.603025,
+            "takerBuyBaseShare": 0.4969303725197813,
+            "takerBuyQuoteShare": 0.4969497271699767
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793601000000,
+              "open": 2041.95,
+              "high": 2043.29,
+              "low": 2039.35,
+              "close": 2039.68,
+              "volume": 5.5928
+            },
+            "quoteVolume": 11417.587056,
+            "trades": 98,
+            "takerBuyBaseVolume": 1.6775,
+            "takerBuyQuoteVolume": 3424.842715,
+            "takerBuyBaseShare": 0.2999392075525676,
+            "takerBuyQuoteShare": 0.29996204085873185
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793601900000,
+              "open": 2039.52,
+              "high": 2041.97,
+              "low": 2039.52,
+              "close": 2041.05,
+              "volume": 2.6462
+            },
+            "quoteVolume": 5400.425031,
+            "trades": 123,
+            "takerBuyBaseVolume": 0.9848,
+            "takerBuyQuoteVolume": 2009.685337,
+            "takerBuyBaseShare": 0.3721562995994256,
+            "takerBuyQuoteShare": 0.37213466078388746
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793602800000,
+              "open": 2041.38,
+              "high": 2043.96,
+              "low": 2039.27,
+              "close": 2039.27,
+              "volume": 3.8538
+            },
+            "quoteVolume": 7871.453259,
+            "trades": 54,
+            "takerBuyBaseVolume": 2.1887,
+            "takerBuyQuoteVolume": 4471.037379,
+            "takerBuyBaseShare": 0.5679329492967979,
+            "takerBuyQuoteShare": 0.5680065969886744
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793603700000,
+              "open": 2039.15,
+              "high": 2041.13,
+              "low": 2036.65,
+              "close": 2038.16,
+              "volume": 8.1902
+            },
+            "quoteVolume": 16698.039237,
+            "trades": 160,
+            "takerBuyBaseVolume": 5.3072,
+            "takerBuyQuoteVolume": 10819.211681,
+            "takerBuyBaseShare": 0.6479939439818319,
+            "takerBuyQuoteShare": 0.6479330613277322
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793604600000,
+              "open": 2037.89,
+              "high": 2037.89,
+              "low": 2034.05,
+              "close": 2034.56,
+              "volume": 6.3434
+            },
+            "quoteVolume": 12910.293462,
+            "trades": 94,
+            "takerBuyBaseVolume": 3.8875,
+            "takerBuyQuoteVolume": 7912.60839,
+            "takerBuyBaseShare": 0.6128416937289152,
+            "takerBuyQuoteShare": 0.6128914430403829
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793605500000,
+              "open": 2034.96,
+              "high": 2041.2,
+              "low": 2033.29,
+              "close": 2038.13,
+              "volume": 9.1102
+            },
+            "quoteVolume": 18551.904405,
+            "trades": 162,
+            "takerBuyBaseVolume": 4.1125,
+            "takerBuyQuoteVolume": 8374.161876,
+            "takerBuyBaseShare": 0.451417092928805,
+            "takerBuyQuoteShare": 0.4513909565932781
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793606400000,
+              "open": 2038.45,
+              "high": 2046.41,
+              "low": 2038.45,
+              "close": 2040.75,
+              "volume": 8.9751
+            },
+            "quoteVolume": 18337.02397,
+            "trades": 147,
+            "takerBuyBaseVolume": 4.3671,
+            "takerBuyQuoteVolume": 8924.816149,
+            "takerBuyBaseShare": 0.4865795367182538,
+            "takerBuyQuoteShare": 0.4867101751953483
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793607300000,
+              "open": 2042.06,
+              "high": 2043.26,
+              "low": 2039.95,
+              "close": 2043.26,
+              "volume": 4.3236
+            },
+            "quoteVolume": 8826.7165,
+            "trades": 173,
+            "takerBuyBaseVolume": 2.1245,
+            "takerBuyQuoteVolume": 4336.950887,
+            "takerBuyBaseShare": 0.49137292996576926,
+            "takerBuyQuoteShare": 0.4913436255712982
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793608200000,
+              "open": 2043.18,
+              "high": 2052.47,
+              "low": 2042.68,
+              "close": 2047.23,
+              "volume": 17.8393
+            },
+            "quoteVolume": 36527.060094,
+            "trades": 275,
+            "takerBuyBaseVolume": 6.2094,
+            "takerBuyQuoteVolume": 12714.244678,
+            "takerBuyBaseShare": 0.34807419573637977,
+            "takerBuyQuoteShare": 0.3480774156277763
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793609100000,
+              "open": 2047.96,
+              "high": 2051.92,
+              "low": 2045.75,
+              "close": 2045.96,
+              "volume": 6.8137
+            },
+            "quoteVolume": 13957.083359,
+            "trades": 53,
+            "takerBuyBaseVolume": 2.331,
+            "takerBuyQuoteVolume": 4776.725779,
+            "takerBuyBaseShare": 0.34210487693910796,
+            "takerBuyQuoteShare": 0.3422438382099227
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793610000000,
+              "open": 2045.59,
+              "high": 2047.19,
+              "low": 2042.86,
+              "close": 2044.19,
+              "volume": 16.3365
+            },
+            "quoteVolume": 33408.964819,
+            "trades": 194,
+            "takerBuyBaseVolume": 7.4043,
+            "takerBuyQuoteVolume": 15141.319051,
+            "takerBuyBaseShare": 0.4532366173905059,
+            "takerBuyQuoteShare": 0.4532112603018752
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793610900000,
+              "open": 2043.78,
+              "high": 2044.96,
+              "low": 2039.52,
+              "close": 2040.54,
+              "volume": 6.6712
+            },
+            "quoteVolume": 13620.540917,
+            "trades": 73,
+            "takerBuyBaseVolume": 2.6806,
+            "takerBuyQuoteVolume": 5472.792445,
+            "takerBuyBaseShare": 0.401816764600072,
+            "takerBuyQuoteShare": 0.40180433936873433
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793611800000,
+              "open": 2039.56,
+              "high": 2040.72,
+              "low": 2036.81,
+              "close": 2039.65,
+              "volume": 8.7551
+            },
+            "quoteVolume": 17855.013505,
+            "trades": 90,
+            "takerBuyBaseVolume": 5.8452,
+            "takerBuyQuoteVolume": 11921.249672,
+            "takerBuyBaseShare": 0.6676337220591426,
+            "takerBuyQuoteShare": 0.6676695970384818
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793612700000,
+              "open": 2040.51,
+              "high": 2043.04,
+              "low": 2040.51,
+              "close": 2040.64,
+              "volume": 5.7912
+            },
+            "quoteVolume": 11822.968411,
+            "trades": 93,
+            "takerBuyBaseVolume": 3.4964,
+            "takerBuyQuoteVolume": 7137.344412,
+            "takerBuyBaseShare": 0.6037436109959939,
+            "takerBuyQuoteShare": 0.6036846385683877
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793613600000,
+              "open": 2040.06,
+              "high": 2040.06,
+              "low": 2035.04,
+              "close": 2036.53,
+              "volume": 10.1454
+            },
+            "quoteVolume": 20667.434063,
+            "trades": 292,
+            "takerBuyBaseVolume": 4.3133,
+            "takerBuyQuoteVolume": 8786.729357,
+            "takerBuyBaseShare": 0.4251483430914503,
+            "takerBuyQuoteShare": 0.42514853707604155
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793614500000,
+              "open": 2037.24,
+              "high": 2039.09,
+              "low": 2036.05,
+              "close": 2037.26,
+              "volume": 15.085
+            },
+            "quoteVolume": 30734.736598,
+            "trades": 162,
+            "takerBuyBaseVolume": 7.0885,
+            "takerBuyQuoteVolume": 14441.974408,
+            "takerBuyBaseShare": 0.46990387802452765,
+            "takerBuyQuoteShare": 0.46989094446769336
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793615400000,
+              "open": 2037.26,
+              "high": 2040.01,
+              "low": 2036.93,
+              "close": 2037.81,
+              "volume": 6.4433
+            },
+            "quoteVolume": 13130.442977,
+            "trades": 74,
+            "takerBuyBaseVolume": 2.0818,
+            "takerBuyQuoteVolume": 4241.429985,
+            "takerBuyBaseShare": 0.32309530830475064,
+            "takerBuyQuoteShare": 0.32302261183644143
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793616300000,
+              "open": 2037.22,
+              "high": 2040.19,
+              "low": 2037.22,
+              "close": 2038.55,
+              "volume": 6.0931
+            },
+            "quoteVolume": 12421.070428,
+            "trades": 103,
+            "takerBuyBaseVolume": 1.0361,
+            "takerBuyQuoteVolume": 2111.940671,
+            "takerBuyBaseShare": 0.17004480477917647,
+            "takerBuyQuoteShare": 0.17002887820675994
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793617200000,
+              "open": 2038.61,
+              "high": 2040.78,
+              "low": 2036.84,
+              "close": 2040.42,
+              "volume": 8.18
+            },
+            "quoteVolume": 16679.499933,
+            "trades": 139,
+            "takerBuyBaseVolume": 2.9731,
+            "takerBuyQuoteVolume": 6062.554025,
+            "takerBuyBaseShare": 0.3634596577017115,
+            "takerBuyQuoteShare": 0.36347336846744305
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793618100000,
+              "open": 2040.35,
+              "high": 2040.58,
+              "low": 2035.31,
+              "close": 2035.94,
+              "volume": 6.6419
+            },
+            "quoteVolume": 13534.045342,
+            "trades": 120,
+            "takerBuyBaseVolume": 2.847,
+            "takerBuyQuoteVolume": 5800.705661,
+            "takerBuyBaseShare": 0.4286424065402972,
+            "takerBuyQuoteShare": 0.4286010216767013
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793619000000,
+              "open": 2036.32,
+              "high": 2039.83,
+              "low": 2034.94,
+              "close": 2037.3,
+              "volume": 10.6926
+            },
+            "quoteVolume": 21784.742848,
+            "trades": 256,
+            "takerBuyBaseVolume": 6.4888,
+            "takerBuyQuoteVolume": 13219.967259,
+            "takerBuyBaseShare": 0.6068495969174943,
+            "takerBuyQuoteShare": 0.6068452288484869
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793619900000,
+              "open": 2036.55,
+              "high": 2037.84,
+              "low": 2034,
+              "close": 2037.69,
+              "volume": 29.4523
+            },
+            "quoteVolume": 59971.398363,
+            "trades": 178,
+            "takerBuyBaseVolume": 3.0053,
+            "takerBuyQuoteVolume": 6120.044161,
+            "takerBuyBaseShare": 0.10203956906591335,
+            "takerBuyQuoteShare": 0.1020493823398293
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793620800000,
+              "open": 2037.86,
+              "high": 2044.19,
+              "low": 2036.87,
+              "close": 2043.65,
+              "volume": 9.5732
+            },
+            "quoteVolume": 19521.413392,
+            "trades": 90,
+            "takerBuyBaseVolume": 8.0251,
+            "takerBuyQuoteVolume": 16364.963241,
+            "takerBuyBaseShare": 0.8382881377177955,
+            "takerBuyQuoteShare": 0.8383083187873306
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793621700000,
+              "open": 2044.58,
+              "high": 2046.98,
+              "low": 2041.06,
+              "close": 2041.06,
+              "volume": 26.6144
+            },
+            "quoteVolume": 54374.78405,
+            "trades": 191,
+            "takerBuyBaseVolume": 2.6189,
+            "takerBuyQuoteVolume": 5352.910647,
+            "takerBuyBaseShare": 0.09840161716965252,
+            "takerBuyQuoteShare": 0.09844472471058945
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793622600000,
+              "open": 2041.7,
+              "high": 2041.7,
+              "low": 2029.52,
+              "close": 2037.07,
+              "volume": 25.2939
+            },
+            "quoteVolume": 51494.866381,
+            "trades": 222,
+            "takerBuyBaseVolume": 4.7795,
+            "takerBuyQuoteVolume": 9718.36515,
+            "takerBuyBaseShare": 0.18895860266704617,
+            "takerBuyQuoteShare": 0.1887249318814773
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793623500000,
+              "open": 2037.89,
+              "high": 2037.89,
+              "low": 2034.03,
+              "close": 2036.06,
+              "volume": 15.7478
+            },
+            "quoteVolume": 32060.851304,
+            "trades": 144,
+            "takerBuyBaseVolume": 9.8618,
+            "takerBuyQuoteVolume": 20078.443966,
+            "takerBuyBaseShare": 0.6262335056325329,
+            "takerBuyQuoteShare": 0.6262604749829259
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793624400000,
+              "open": 2036.06,
+              "high": 2036.09,
+              "low": 2032.37,
+              "close": 2033.58,
+              "volume": 6.3542
+            },
+            "quoteVolume": 12923.395609,
+            "trades": 115,
+            "takerBuyBaseVolume": 2.9828,
+            "takerBuyQuoteVolume": 6066.277146,
+            "takerBuyBaseShare": 0.46942179975449316,
+            "takerBuyQuoteShare": 0.469402727389648
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793625300000,
+              "open": 2033,
+              "high": 2033,
+              "low": 2029.03,
+              "close": 2031.9,
+              "volume": 7.761
+            },
+            "quoteVolume": 15763.619675,
+            "trades": 126,
+            "takerBuyBaseVolume": 3.5599,
+            "takerBuyQuoteVolume": 7229.317333,
+            "takerBuyBaseShare": 0.45869089034918176,
+            "takerBuyQuoteShare": 0.4586076981078903
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793626200000,
+              "open": 2031.55,
+              "high": 2049.2,
+              "low": 2027.38,
+              "close": 2043.8,
+              "volume": 43.0442
+            },
+            "quoteVolume": 87859.788658,
+            "trades": 573,
+            "takerBuyBaseVolume": 28.8883,
+            "takerBuyQuoteVolume": 58961.374829,
+            "takerBuyBaseShare": 0.671131069923474,
+            "takerBuyQuoteShare": 0.6710848697634708
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793627100000,
+              "open": 2043.61,
+              "high": 2047.05,
+              "low": 2035.23,
+              "close": 2037.03,
+              "volume": 22.9357
+            },
+            "quoteVolume": 46822.797408,
+            "trades": 260,
+            "takerBuyBaseVolume": 8.653,
+            "takerBuyQuoteVolume": 17655.446548,
+            "takerBuyBaseShare": 0.37727211290695295,
+            "takerBuyQuoteShare": 0.3770694517492337
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793628000000,
+              "open": 2035.96,
+              "high": 2042.79,
+              "low": 2035.01,
+              "close": 2039.04,
+              "volume": 48.9309
+            },
+            "quoteVolume": 99805.914758,
+            "trades": 206,
+            "takerBuyBaseVolume": 41.5132,
+            "takerBuyQuoteVolume": 84683.593191,
+            "takerBuyBaseShare": 0.8484045868765953,
+            "takerBuyQuoteShare": 0.8484827116342035
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793628900000,
+              "open": 2039.29,
+              "high": 2041.38,
+              "low": 2034.36,
+              "close": 2034.38,
+              "volume": 8.3048
+            },
+            "quoteVolume": 16919.568395,
+            "trades": 138,
+            "takerBuyBaseVolume": 4.4241,
+            "takerBuyQuoteVolume": 9011.854466,
+            "takerBuyBaseShare": 0.532716019651286,
+            "takerBuyQuoteShare": 0.5326290987814528
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793629800000,
+              "open": 2034.01,
+              "high": 2044.28,
+              "low": 2032.45,
+              "close": 2039.83,
+              "volume": 35.9584
+            },
+            "quoteVolume": 73339.224719,
+            "trades": 500,
+            "takerBuyBaseVolume": 16.3923,
+            "takerBuyQuoteVolume": 33435.628509,
+            "takerBuyBaseShare": 0.45586844798433745,
+            "takerBuyQuoteShare": 0.45590376278327127
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793630700000,
+              "open": 2039.53,
+              "high": 2042.45,
+              "low": 2034.61,
+              "close": 2040.68,
+              "volume": 12.2023
+            },
+            "quoteVolume": 24882.472544,
+            "trades": 281,
+            "takerBuyBaseVolume": 7.1578,
+            "takerBuyQuoteVolume": 14594.587389,
+            "takerBuyBaseShare": 0.5865943305770224,
+            "takerBuyQuoteShare": 0.586540881867435
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793631600000,
+              "open": 2040.68,
+              "high": 2047.75,
+              "low": 2036.28,
+              "close": 2045.69,
+              "volume": 18.0679
+            },
+            "quoteVolume": 36899.057817,
+            "trades": 249,
+            "takerBuyBaseVolume": 10.6835,
+            "takerBuyQuoteVolume": 21823.769141,
+            "takerBuyBaseShare": 0.5912972730643848,
+            "takerBuyQuoteShare": 0.5914451596361746
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793632500000,
+              "open": 2044.25,
+              "high": 2045.09,
+              "low": 2037.96,
+              "close": 2043.7,
+              "volume": 19.1354
+            },
+            "quoteVolume": 39053.116937,
+            "trades": 289,
+            "takerBuyBaseVolume": 8.7192,
+            "takerBuyQuoteVolume": 17794.951719,
+            "takerBuyBaseShare": 0.45565809964777326,
+            "takerBuyQuoteShare": 0.45566021651246413
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793633400000,
+              "open": 2041.87,
+              "high": 2043.71,
+              "low": 2037.12,
+              "close": 2043.71,
+              "volume": 22.2795
+            },
+            "quoteVolume": 45421.208622,
+            "trades": 254,
+            "takerBuyBaseVolume": 4.8067,
+            "takerBuyQuoteVolume": 9800.891833,
+            "takerBuyBaseShare": 0.2157454161897709,
+            "takerBuyQuoteShare": 0.215777874044789
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793634300000,
+              "open": 2043.51,
+              "high": 2045.68,
+              "low": 2020,
+              "close": 2028.51,
+              "volume": 71.4582
+            },
+            "quoteVolume": 145462.720954,
+            "trades": 749,
+            "takerBuyBaseVolume": 7.3856,
+            "takerBuyQuoteVolume": 15008.448366,
+            "takerBuyBaseShare": 0.10335552812693294,
+            "takerBuyQuoteShare": 0.10317728327621588
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793635200000,
+              "open": 2027.77,
+              "high": 2032.5,
+              "low": 2019.45,
+              "close": 2023.53,
+              "volume": 43.2928
+            },
+            "quoteVolume": 87770.967422,
+            "trades": 411,
+            "takerBuyBaseVolume": 9.5726,
+            "takerBuyQuoteVolume": 19408.141203,
+            "takerBuyBaseShare": 0.2211129795254638,
+            "takerBuyQuoteShare": 0.22112256219857163
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793636100000,
+              "open": 2025.46,
+              "high": 2028.68,
+              "low": 2021.25,
+              "close": 2022.12,
+              "volume": 20.0755
+            },
+            "quoteVolume": 40660.56003,
+            "trades": 285,
+            "takerBuyBaseVolume": 5.9261,
+            "takerBuyQuoteVolume": 11998.7101,
+            "takerBuyBaseShare": 0.2951906552763318,
+            "takerBuyQuoteShare": 0.295094560703226
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793637000000,
+              "open": 2022.86,
+              "high": 2030.5,
+              "low": 2022.52,
+              "close": 2026.29,
+              "volume": 11.1536
+            },
+            "quoteVolume": 22602.89619,
+            "trades": 184,
+            "takerBuyBaseVolume": 4.5553,
+            "takerBuyQuoteVolume": 9228.949005,
+            "takerBuyBaseShare": 0.40841522019796295,
+            "takerBuyQuoteShare": 0.40830825074014554
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793637900000,
+              "open": 2027.33,
+              "high": 2029.3,
+              "low": 2022.23,
+              "close": 2023.36,
+              "volume": 8.4531
+            },
+            "quoteVolume": 17111.410846,
+            "trades": 117,
+            "takerBuyBaseVolume": 2.0274,
+            "takerBuyQuoteVolume": 4104.010153,
+            "takerBuyBaseShare": 0.23984100507506126,
+            "takerBuyQuoteShare": 0.23984054792065043
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793638800000,
+              "open": 2023.9,
+              "high": 2026.29,
+              "low": 2018.18,
+              "close": 2020.37,
+              "volume": 6.2386
+            },
+            "quoteVolume": 12614.41991,
+            "trades": 100,
+            "takerBuyBaseVolume": 1.9911,
+            "takerBuyQuoteVolume": 4026.011134,
+            "takerBuyBaseShare": 0.31915814445548685,
+            "takerBuyQuoteShare": 0.31915943521179324
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793639700000,
+              "open": 2021.28,
+              "high": 2026.71,
+              "low": 2010.5,
+              "close": 2012.77,
+              "volume": 20.7693
+            },
+            "quoteVolume": 41936.601412,
+            "trades": 298,
+            "takerBuyBaseVolume": 10.7333,
+            "takerBuyQuoteVolume": 21685.857236,
+            "takerBuyBaseShare": 0.5167867958958655,
+            "takerBuyQuoteShare": 0.5171105074288321
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793640600000,
+              "open": 2012.24,
+              "high": 2012.95,
+              "low": 2008.57,
+              "close": 2010.6,
+              "volume": 11.3838
+            },
+            "quoteVolume": 22884.966178,
+            "trades": 155,
+            "takerBuyBaseVolume": 5.2291,
+            "takerBuyQuoteVolume": 10510.914983,
+            "takerBuyBaseShare": 0.4593457369244013,
+            "takerBuyQuoteShare": 0.4592934462408975
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793641500000,
+              "open": 2010.24,
+              "high": 2015.36,
+              "low": 2001.44,
+              "close": 2014.17,
+              "volume": 29.0178
+            },
+            "quoteVolume": 58237.513053,
+            "trades": 421,
+            "takerBuyBaseVolume": 17.9575,
+            "takerBuyQuoteVolume": 36048.753799,
+            "takerBuyBaseShare": 0.6188442955703051,
+            "takerBuyQuoteShare": 0.6189954190899813
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793642400000,
+              "open": 2013,
+              "high": 2021.08,
+              "low": 2012.57,
+              "close": 2016.09,
+              "volume": 10.2661
+            },
+            "quoteVolume": 20713.225161,
+            "trades": 445,
+            "takerBuyBaseVolume": 7.0355,
+            "takerBuyQuoteVolume": 14195.452523,
+            "takerBuyBaseShare": 0.6853137997876506,
+            "takerBuyQuoteShare": 0.6853327964458176
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793643300000,
+              "open": 2015.91,
+              "high": 2015.91,
+              "low": 2009.41,
+              "close": 2009.41,
+              "volume": 111.0166
+            },
+            "quoteVolume": 223342.505368,
+            "trades": 372,
+            "takerBuyBaseVolume": 6.7722,
+            "takerBuyQuoteVolume": 13628.163582,
+            "takerBuyBaseShare": 0.061001688035843285,
+            "takerBuyQuoteShare": 0.061019121996258446
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793644200000,
+              "open": 2009.72,
+              "high": 2013.48,
+              "low": 2005.24,
+              "close": 2008.01,
+              "volume": 15.6104
+            },
+            "quoteVolume": 31352.197434,
+            "trades": 156,
+            "takerBuyBaseVolume": 5.0503,
+            "takerBuyQuoteVolume": 10151.027269,
+            "takerBuyBaseShare": 0.32352149848818734,
+            "takerBuyQuoteShare": 0.32377402861056503
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793645100000,
+              "open": 2008.05,
+              "high": 2012.3,
+              "low": 2008.05,
+              "close": 2010.34,
+              "volume": 7.2007
+            },
+            "quoteVolume": 14474.153402,
+            "trades": 51,
+            "takerBuyBaseVolume": 1.3777,
+            "takerBuyQuoteVolume": 2769.126144,
+            "takerBuyBaseShare": 0.19132862082853053,
+            "takerBuyQuoteShare": 0.19131524083594204
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793646000000,
+              "open": 2010.82,
+              "high": 2010.98,
+              "low": 2003.91,
+              "close": 2006.63,
+              "volume": 15.0731
+            },
+            "quoteVolume": 30254.318994,
+            "trades": 157,
+            "takerBuyBaseVolume": 3.8884,
+            "takerBuyQuoteVolume": 7802.739897,
+            "takerBuyBaseShare": 0.25796949532611074,
+            "takerBuyQuoteShare": 0.25790499196321126
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793646900000,
+              "open": 2006.93,
+              "high": 2009.71,
+              "low": 2003.43,
+              "close": 2008.51,
+              "volume": 13.3007
+            },
+            "quoteVolume": 26684.83295,
+            "trades": 219,
+            "takerBuyBaseVolume": 8.8803,
+            "takerBuyQuoteVolume": 17811.513966,
+            "takerBuyBaseShare": 0.667656589502808,
+            "takerBuyQuoteShare": 0.6674770645697446
+          },
+          {
+            "candle": {
+              "pair": "ETH/EUR",
+              "interval": 15,
+              "ts": 1793647800000,
+              "open": 2010.31,
+              "high": 2010.41,
+              "low": 1996.29,
+              "close": 1999.58,
+              "volume": 14.8658
+            },
+            "quoteVolume": 29743.866204,
+            "trades": 319,
+            "takerBuyBaseVolume": 3.5212,
+            "takerBuyQuoteVolume": 7049.530523,
+            "takerBuyBaseShare": 0.23686582625892988,
+            "takerBuyQuoteShare": 0.23700787499010362
+          }
+        ]
+      }
+    }
+  ],
+  "completePairs": 2,
+  "rows": 192,
+  "realOrders": false,
+  "financialAccountAccess": false,
+  "externalAi": false,
+  "paidCalls": false,
+  "julyLoaded": false,
+  "modelFitted": false,
+  "activeContextChanged": false,
+  "scope": "Two fixed pairs, one fixed24h96closed15m source window. Free publicGETonly; no retries or venue substitution. Exact legacy OHLCV parsing parity for complete pairs. Capture timestamp is retrieval, not first historical availability; no inference of future edge or order-book liquidity.",
+  "factsHash": "1297df4a2e853c038d09a485b1c18c2d6d0a23672035f8eea397a18e53b076be",
+  "generatedAt": "2026-11-02T19:52:44.493Z"
+}

@@ -1,0 +1,225 @@
+{
+  "version": "historical-regime-proof-v1",
+  "verifiedAt": "2026-10-31T22:02:53.368718+00:00",
+  "buildId": "417be169ac8046ec3bad25762fb64ff1054d78072ae4ff342f2dfcf58fa2e41b",
+  "dataCapture": "docs/historical-capture-proof.json",
+  "registeredPeriods": "docs/historical-regime-protocol-v1.json",
+  "costDefinitionRepair": "docs/historical-cost-guard-protocol-v1.json",
+  "julyHoldout": "docs/historical-learning-partition-v1.json",
+  "julyOutcomeLockActuallyTested": true,
+  "tests": {
+    "main": 989,
+    "offline": 15,
+    "newPeriodCases": 15,
+    "newRawIntegrityCases": 3,
+    "newCostBoundaryCases": 3,
+    "typechecksAndBuildPassed": true,
+    "log": "data/verify-midpoint-guard-2026-10-31.log"
+  },
+  "results": [
+    {
+      "month": "2026-01",
+      "report": {
+        "path": "docs/historical-midpoint-2026-01-d71e556321dc8530.json",
+        "hash": "d71e556321dc8530478c0af9225243a39f20735411cc4486b98cd946db6f0094",
+        "protocolHash": "e3dbff522024d32e128f63621c5a3ab533f1d5d4d90d74489bb238ea9cae540c",
+        "buildId": "417be169ac8046ec3bad25762fb64ff1054d78072ae4ff342f2dfcf58fa2e41b"
+      },
+      "startingBalance": 100,
+      "scenarios": [
+        {
+          "fee": 0.001,
+          "variants": [
+            {
+              "name": "programmed-rules",
+              "returnPct": -1.7576305651938018,
+              "maxDrawdownPct": 1.757630565193807,
+              "closedTrades": 4,
+              "fees": 0.117031541809824,
+              "winRatePct": 0,
+              "btcBuyHoldReturnPct": -10.863196167482004,
+              "cashReturnPct": 0
+            },
+            {
+              "name": "programmed-mock-trend-v2",
+              "returnPct": -1.8980040383044794,
+              "maxDrawdownPct": 4.243953639980031,
+              "closedTrades": 39,
+              "fees": 1.1689307530399236,
+              "winRatePct": 33.33333333333333,
+              "btcBuyHoldReturnPct": -10.863196167482004,
+              "cashReturnPct": 0
+            },
+            {
+              "name": "programmed-mock-structure-exit-v1",
+              "returnPct": -3.0733853928499144,
+              "maxDrawdownPct": 4.324901678869341,
+              "closedTrades": 44,
+              "fees": 1.2642844440626748,
+              "winRatePct": 27.27272727272727,
+              "btcBuyHoldReturnPct": -10.863196167482004,
+              "cashReturnPct": 0
+            }
+          ]
+        },
+        {
+          "fee": 0.002,
+          "variants": [
+            {
+              "name": "programmed-rules",
+              "returnPct": -1.8688145031217962,
+              "maxDrawdownPct": 1.8688145031217973,
+              "closedTrades": 4,
+              "fees": 0.233258471545808,
+              "winRatePct": 0,
+              "btcBuyHoldReturnPct": -11.041292035470807,
+              "cashReturnPct": 0
+            },
+            {
+              "name": "programmed-mock-trend-v2",
+              "returnPct": 0.030940047629512968,
+              "maxDrawdownPct": 0.7189151389194092,
+              "closedTrades": 2,
+              "fees": 0.11970561485200375,
+              "winRatePct": 50,
+              "btcBuyHoldReturnPct": -11.041292035470807,
+              "cashReturnPct": 0
+            },
+            {
+              "name": "programmed-mock-structure-exit-v1",
+              "returnPct": -0.7061905858313344,
+              "maxDrawdownPct": 0.7602963009568392,
+              "closedTrades": 2,
+              "fees": 0.11822839915368541,
+              "winRatePct": 0,
+              "btcBuyHoldReturnPct": -11.041292035470807,
+              "cashReturnPct": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "month": "2026-04",
+      "report": {
+        "path": "docs/historical-midpoint-2026-04-b1b8e14edfe68bf8.json",
+        "hash": "b1b8e14edfe68bf8e45c1f7f041e86fa517e4c27c5a5bed0a1d13991a06243b6",
+        "protocolHash": "e3dbff522024d32e128f63621c5a3ab533f1d5d4d90d74489bb238ea9cae540c",
+        "buildId": "417be169ac8046ec3bad25762fb64ff1054d78072ae4ff342f2dfcf58fa2e41b"
+      },
+      "startingBalance": 100,
+      "scenarios": [
+        {
+          "fee": 0.001,
+          "variants": [
+            {
+              "name": "programmed-rules",
+              "returnPct": 0,
+              "maxDrawdownPct": 0,
+              "closedTrades": 0,
+              "fees": 0,
+              "winRatePct": null,
+              "btcBuyHoldReturnPct": 9.857924460250512,
+              "cashReturnPct": 0
+            },
+            {
+              "name": "programmed-mock-trend-v2",
+              "returnPct": -3.595791493877898,
+              "maxDrawdownPct": 3.800860592636142,
+              "closedTrades": 45,
+              "fees": 1.3205856095344923,
+              "winRatePct": 17.77777777777778,
+              "btcBuyHoldReturnPct": 9.857924460250512,
+              "cashReturnPct": 0
+            },
+            {
+              "name": "programmed-mock-structure-exit-v1",
+              "returnPct": -2.860116100401,
+              "maxDrawdownPct": 3.054638868896687,
+              "closedTrades": 45,
+              "fees": 1.3045769573614014,
+              "winRatePct": 20,
+              "btcBuyHoldReturnPct": 9.857924460250512,
+              "cashReturnPct": 0
+            }
+          ]
+        },
+        {
+          "fee": 0.002,
+          "variants": [
+            {
+              "name": "programmed-rules",
+              "returnPct": 0,
+              "maxDrawdownPct": 0,
+              "closedTrades": 0,
+              "fees": 0,
+              "winRatePct": null,
+              "btcBuyHoldReturnPct": 9.638427669127548,
+              "cashReturnPct": 0
+            },
+            {
+              "name": "programmed-mock-trend-v2",
+              "returnPct": 0,
+              "maxDrawdownPct": 0,
+              "closedTrades": 0,
+              "fees": 0,
+              "winRatePct": null,
+              "btcBuyHoldReturnPct": 9.638427669127548,
+              "cashReturnPct": 0
+            },
+            {
+              "name": "programmed-mock-structure-exit-v1",
+              "returnPct": 0,
+              "maxDrawdownPct": 0,
+              "closedTrades": 0,
+              "fees": 0,
+              "winRatePct": null,
+              "btcBuyHoldReturnPct": 9.638427669127548,
+              "cashReturnPct": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "allFinalEconomicResultsReproducedExactly": true,
+  "runnerHashCapturedAtStart": true,
+  "scripts": {
+    "scripts/historical-period-files.mjs": "da7cc13ae488fbe4b7661352bb4f1a53a55805f64544b1ad456f143030a949e8",
+    "scripts/capture-historical-periods.mjs": "6560650e7ec28601daf7689c73da5eb5ed2927717eaa7ab74bb8477e11c167dc",
+    "scripts/evaluate-historical-period.mjs": "def144947d776c57e922f0c63e99617ae2f35c1407e993a8fd6038d99ef89ef1"
+  },
+  "legacy5bpsCompatibility": {
+    "report": "docs/structure-exit-study-ba4d93bb865d9bd6.json",
+    "original": "docs/structure-exit-study-5e7a4bf0170e6610.json",
+    "allFullEconomicResultsEqual": true
+  },
+  "frozenV3": {
+    "sourceAndRuntimeFilesByteIntact": true,
+    "notDeployedOrRestarted": true,
+    "buildId": "cc12379e164c46d708a93bf730899eca00cbdc8378051ff580b05f49f03fc210"
+  },
+  "interpretation": {
+    "allDecisionMakersProgrammedRules": true,
+    "realOrLearnedAiModelEvaluated": false,
+    "profitableEdgeEstablished": false,
+    "correctedResultsArePostDiagnosticOnConsumedPeriods": true,
+    "strictHistoricalDeployabilityEstablished": false,
+    "legacyOctoberCapital": 1000,
+    "newPeriodsRegisteredCapital": 100,
+    "newSyntheticSpreadBps": 10,
+    "newSyntheticFillSlippageBps": 8,
+    "legacySyntheticSpreadAndSlippageBps": 5,
+    "higherFeeZeroFewTradesNotProofFeesHelp": true
+  },
+  "oss": {
+    "review": "docs/upstream-research/REVIEW-PASS11.md",
+    "selectedFiles": 44,
+    "licences": 5,
+    "wholeRepositoryReviewIncomplete": true
+  },
+  "paidCalls": 0,
+  "privateExchangeCalls": 0,
+  "realOrders": 0,
+  "externalAiCalls": 0
+}

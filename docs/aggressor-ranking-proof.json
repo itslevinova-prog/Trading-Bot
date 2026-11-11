@@ -1,0 +1,34 @@
+{
+  "verifiedAt": "2026-11-02T21:02:23.686Z",
+  "buildId": "0191dc788237c588cd86388f3c71d3bf41b41e5c228438fba5438ebce2774482",
+  "report": {
+    "path": "docs/aggressor-ranking-audit-fbcfb4343dd6bd93.json",
+    "hash": "fbcfb4343dd6bd93fb8041dcffe32e78521ead2873cc7344a46f23b753e719a2"
+  },
+  "independentProof": "docs/aggressor-ranking-independent.json",
+  "documentation": "docs/AGGRESSOR-RANKING-AUDIT.md",
+  "rankTests": 8,
+  "unchangedOldRuntimeFiles": 120,
+  "changedOldRuntimeFiles": [
+    "apps/server/dist/research/barrier-broker-provider.js"
+  ],
+  "sourceReview": "docs/upstream-research/REVIEW-PASS27.md",
+  "sourceManifest": "docs/upstream-research/manifest-mask-dependency-review.json",
+  "selectedSourceFiles": 54,
+  "licenseFiles": 6,
+  "noNewModelFit": true,
+  "noNewSelector": true,
+  "activeProviderChanged": false,
+  "activeSerializerChanged": false,
+  "actualCaptureGuardChanged": false,
+  "newNetworkMarketRequests": 0,
+  "sourceOnlyPublicDownloads": true,
+  "vendorCodeExecuted": false,
+  "newPackageInstalled": false,
+  "modelActivated": false,
+  "profitabilityEstablished": false,
+  "sources": {
+    "scripts/audit-aggressor-ranking.mjs": "7738f2b316612e9159d719bdb6a216a731be60b6e8ed1641e8f664f8cc5c7107",
+    "scripts/verify_aggressor_ranking.py": "241c88d58d047b7b175c2ef7872be31c111401c6cf54eb64b6166a96318fdd65"
+  }
+}

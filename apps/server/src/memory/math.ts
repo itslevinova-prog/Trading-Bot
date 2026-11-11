@@ -1,0 +1,4 @@
+import type {FeatureSnapshot} from '@paper/shared';
+export function vector(f:FeatureSnapshot){return [f.rsi14/100,(f.ema20/f.ema50-1)*100,(f.price/f.ema50_60m-1)*100,f.change1h,f.change4h,f.change24h,f.atrPct,f.volumeRatio];}
+export function statistics(vectors:number[][]){const n=vectors.length;const cols=vectors[0]?.length??0;const means=Array.from({length:cols},(_,j)=>vectors.reduce((s,v)=>s+(v[j]??0),0)/Math.max(n,1));const stds=means.map((mean,j)=>Math.sqrt(vectors.reduce((s,v)=>s+((v[j]??0)-mean)**2,0)/Math.max(n,1))||1);return {means,stds};}
+export function neighbors(target:number[],candidates:{id:string;vector:number[]}[],limit=5,globalStats?:ReturnType<typeof statistics>){const stats=globalStats??statistics(candidates.map(x=>x.vector));const distance=(v:number[])=>Math.sqrt(target.reduce((s,x,i)=>s+((x-(v[i]??0))/(stats.stds[i]??1))**2,0));return candidates.map(x=>({...x,distance:distance(x.vector)})).sort((a,b)=>a.distance-b.distance).slice(0,limit);}

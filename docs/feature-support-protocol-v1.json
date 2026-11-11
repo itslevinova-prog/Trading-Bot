@@ -1,0 +1,27 @@
+{
+  "version": "feature-support-protocol-v1",
+  "registeredAt": "2026-11-02T21:07:32.692Z",
+  "runnerHash": "63c0d68619fcee102c2a9067d89c72350bb62d09e600622f092525785321f083",
+  "sources": {
+    "apps/server/src/research/feature-support.ts": "334a6fec6375af54d0f4e07a860358258a44c3c628f95680371186fdd6fd4f7a",
+    "apps/server/dist/research/feature-support.js": "68551c5f261cc6515b537f439170ab363bb1096a68a392f59782dcc8c318ee3f"
+  },
+  "models": "docs/aggressor-ridge-walkforward-9e6096906eea1521.json",
+  "modelsHash": "9e6096906eea152134caed8459188588a1beb4af80cf0a5aff2daf8d4bf5a916",
+  "minRows": 200,
+  "dimensions": [
+    8,
+    9
+  ],
+  "scope": "All6560original testqueries per representation, same41purgedtraining windows. Only sourceavailableknown training features; metric consumes no payoff/prediction.",
+  "scaling": "Own train-only population mean/std, constantcolumns std1, compared with frozenmodel scales. No query/evaluation fit.",
+  "distance": "Euclidean in standardizedfeature space",
+  "reference": "For eachtrainingrow, nearesttrainrow at a DIFFERENT decisionclock. Average these rowdistances; same-clock20asset siblings all excluded.",
+  "query": "Nearest priortrainrow distance divided by clock-excluded reference mean. Null source or zero reference stays unknown. Preserve10day clock/freshness checks.",
+  "quantiles": "Nearest-rank ceil(p*n)-1, descriptive only",
+  "thresholdChosen": false,
+  "filterApplied": false,
+  "forecastChanged": false,
+  "labelAudit": "Only after immutable outcome-blind diagnostic is saved; no outcome-based metric/threshold choice",
+  "julyLoaded": false
+}

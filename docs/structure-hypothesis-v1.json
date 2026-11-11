@@ -1,0 +1,14 @@
+{
+  "version": "closed-structure-v1",
+  "registeredAt": "2026-10-31T10:51:58.930753+00:00",
+  "scope": "New deterministic mock entry filter and context evidence; not a trained or calibrated model",
+  "window": "21 consecutive closed UTC15m candles; prior range20 excludes last signal candle",
+  "directionalEfficiency": "abs(lastClose-firstClose)/sum(abs(successive close changes)); 0 for a fully flat valid path, unknown for missing/invalid evidence",
+  "entryHypothesis": "Reject new trend-continuation entries when efficiency<=0.2, signal high breaches prior range but closes back within it, signal sweeps both sides, or closes below prior support. Protective and existing held bearish exits remain independent.",
+  "thresholdsSelectedBeforeEvaluation": true,
+  "directionalEfficiencyThreshold": 0.2,
+  "knownHistory": "Existing 90day history/previous ridge test windows already inspected; subsequent historical comparisons retrospective, no independent validation claim.",
+  "frozenComparison": "Running corrected experiment retains source5cad/Mockv1 without this new filter; never patch it in place.",
+  "validation": "Analytic positive/negative/causality/data-gap tests first, then fixed historical comparison with unchanged costs/universe; no profit claim from fewer trades.",
+  "upstreamFinding": "Pinned Jesse er.py uses nth finite differences and one total sum; do not port blindly. Own explicit rolling formula and source-quality guards; no foreign code reused."
+}

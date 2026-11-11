@@ -1,0 +1,224 @@
+{
+  "verifiedAt": "2026-10-31T23:23:31.018Z",
+  "runnerHash": "ee6433702428d0946d52a7fec5f786b4c0bf0e69441efe54efa27bb566790f0d",
+  "patchHash": "afec751d2dd29a5bd6d30704097f7dc61b080ec899da800ca912172576d55441",
+  "oldBuildId": "d1956e35d7a4e9a5babb294176e60903eb50560375ce3bbf8103c02510b1ee00",
+  "newBuildId": "e99be5c11e25fc7e7d8c3959bf1299df9b39e49737cae9f592dab4f1b9dbf33a",
+  "runtime": {
+    "mode": "feature-history-v2",
+    "verifiedRuntimeModules": {
+      "strategy/providers.js": "3efce9850579e6f025f3f52abd8196383c5c1250f811fce6fe07762ac930b659",
+      "strategy/paper-intelligence.js": "2350f9903953a5940cb7c603e6ece4e85199c24d16f8ef18cce231e4c5db5dca",
+      "strategy/covariance-paper.js": "cba1c2eb32ee1c12a8008feeb828320789df6b7dd1020fd51909b9a2150ca70d",
+      "strategy/structure-exit-paper.js": "e235d87a3bce52833fa9a7ab528276a3cfba311ce52fe9d6ebe5467ff44f6f33",
+      "strategy/entry-support-paper.js": "8a0310fc9401110c0841281510381fb7797963557b651b1ad85f00cbfec66118",
+      "research/portfolio.js": "eb16ed041c8c972735db20d6e45620e5f072c97853161573eba0ccd2a33d388a",
+      "market/indicators.js": "4a78e5b62965f67cb645c8616a6cd80788d80c33f19d8fb7d3b3a30940f53b31"
+    }
+  },
+  "previousReport": "docs/breakout-entry-study-ad773aa0759f0716.json",
+  "previousReportHash": "ad773aa0759f0716b70ac0b2da8c95aa97a1ad247118c37c0322317845371734",
+  "fullScenariosVerified": 28,
+  "allCurvesFillsFeesAndReasonsExactlyMatched": true,
+  "checked": [
+    {
+      "period": "2025-10",
+      "fee": 0.001,
+      "variant": "programmed-structure-exit-v1",
+      "resultHash": "5dee24aff47ce19b5ee4410a60ed02ed67e8c6c9fb6650f1eed7d332574826bd",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2025-10",
+      "fee": 0.001,
+      "variant": "programmed-closed-breakout-entry-v1",
+      "resultHash": "65415fb7e1d258a2cb79bcc921d6e2b0d1b920d1649287e5346cc6053e4aba6e",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2025-10",
+      "fee": 0.002,
+      "variant": "programmed-structure-exit-v1",
+      "resultHash": "5405d5db32e0dcff03d0d6111c79e262f1ab3048c7fa9346b76b3fa1c60429c8",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2025-10",
+      "fee": 0.002,
+      "variant": "programmed-closed-breakout-entry-v1",
+      "resultHash": "5405d5db32e0dcff03d0d6111c79e262f1ab3048c7fa9346b76b3fa1c60429c8",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2025-11",
+      "fee": 0.001,
+      "variant": "programmed-structure-exit-v1",
+      "resultHash": "6381ec0670aaf516333126a3a00e4931deab17043d733ef2f5c131081e2ad6a2",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2025-11",
+      "fee": 0.001,
+      "variant": "programmed-closed-breakout-entry-v1",
+      "resultHash": "b5a1e2cb5fbf665876dff26a5e91b10c6d1223fc170c255918d7ee9d3eac80da",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2025-11",
+      "fee": 0.002,
+      "variant": "programmed-structure-exit-v1",
+      "resultHash": "e5e30df455a13004a642cf9d5641947d466393aabd08e313a4e081807bb4689b",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2025-11",
+      "fee": 0.002,
+      "variant": "programmed-closed-breakout-entry-v1",
+      "resultHash": "60c879a35dd5819230ec10deb9501346a3268f02516138677cadb9558556b50e",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2025-12",
+      "fee": 0.001,
+      "variant": "programmed-structure-exit-v1",
+      "resultHash": "dc12aa529df48ad17f9b863cae6e1583961682c2c285ebf5c264bae5bd8e2933",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2025-12",
+      "fee": 0.001,
+      "variant": "programmed-closed-breakout-entry-v1",
+      "resultHash": "5e13a5608589b75cf3ef03c32f9c919aeb95a65dc93ff0571591a8fc8833d73d",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2025-12",
+      "fee": 0.002,
+      "variant": "programmed-structure-exit-v1",
+      "resultHash": "9683ccc3f886ea83497307edd24341876f413d9867a7558418cf95ebce82a1f2",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2025-12",
+      "fee": 0.002,
+      "variant": "programmed-closed-breakout-entry-v1",
+      "resultHash": "b91b4d4f57e6926742fad83735af2c8d567487912a475fbeb5644455b50374ff",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2026-01",
+      "fee": 0.001,
+      "variant": "programmed-structure-exit-v1",
+      "resultHash": "b6f2afe7bd9b7e36b5c9a04f0ef3f411756eb14f35ef09ab02f218e8a27788a5",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2026-01",
+      "fee": 0.001,
+      "variant": "programmed-closed-breakout-entry-v1",
+      "resultHash": "e18fd43f699d6bd01f3fa6c7fb8a9e041d6c0aec77b4f773db3744b841b7eb6a",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2026-01",
+      "fee": 0.002,
+      "variant": "programmed-structure-exit-v1",
+      "resultHash": "7b28682f79f5171c83988661b3d73b6aef8131737b9f8bf3d6e1fe917211ea08",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2026-01",
+      "fee": 0.002,
+      "variant": "programmed-closed-breakout-entry-v1",
+      "resultHash": "5a32cd3b3dbd1e78a67c61f27bb357d89403ad996339a1554e82a0a2b1253732",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2026-02",
+      "fee": 0.001,
+      "variant": "programmed-structure-exit-v1",
+      "resultHash": "8de7674c42cac218d15967b07f80f919f6608b43b495c3c1a2524c80a441caff",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2026-02",
+      "fee": 0.001,
+      "variant": "programmed-closed-breakout-entry-v1",
+      "resultHash": "1cd0c71b8e7b64113cc12a7448ca0d981eab9305011f3c649c99df6cba054da2",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2026-02",
+      "fee": 0.002,
+      "variant": "programmed-structure-exit-v1",
+      "resultHash": "dee4014b3d6a7c9e0bd2e99757bece3408fefb1e8041209edc5a40a7364f6e75",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2026-02",
+      "fee": 0.002,
+      "variant": "programmed-closed-breakout-entry-v1",
+      "resultHash": "17a76c1415c4bb7912d0af67b13979a3d29183ff431c63a3986f43881e4e49ec",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2026-03",
+      "fee": 0.001,
+      "variant": "programmed-structure-exit-v1",
+      "resultHash": "61c0a575c2c4057fd8be435f9f99e2d235354b7a1698cf6c053fb8b435048480",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2026-03",
+      "fee": 0.001,
+      "variant": "programmed-closed-breakout-entry-v1",
+      "resultHash": "92a53bb53004c3f60c99354c6ae698cfc1d81323869175ea9b71e6222567439e",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2026-03",
+      "fee": 0.002,
+      "variant": "programmed-structure-exit-v1",
+      "resultHash": "0f67557f75f011cd2ac56e0477d3455ee291c13fe638ed45b52307d8cad83150",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2026-03",
+      "fee": 0.002,
+      "variant": "programmed-closed-breakout-entry-v1",
+      "resultHash": "8427258653a9807862b42af75e046e10a26d0ab94fbf07f578132a9ba9ab93cc",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2026-04",
+      "fee": 0.001,
+      "variant": "programmed-structure-exit-v1",
+      "resultHash": "7402ca56ec51d4f3d19d1c8e9e3ee4759fe781df63cf87eaac53e6fbb0bbfd9a",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2026-04",
+      "fee": 0.001,
+      "variant": "programmed-closed-breakout-entry-v1",
+      "resultHash": "0844e1c8f475ff5b6a91c333f551cb85b7a77d5ea371057deb97b1542c2f0487",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2026-04",
+      "fee": 0.002,
+      "variant": "programmed-structure-exit-v1",
+      "resultHash": "76a4b5dff81017fbd83d9bb193aebf40f9507940799b76616bbe791d1476b599",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2026-04",
+      "fee": 0.002,
+      "variant": "programmed-closed-breakout-entry-v1",
+      "resultHash": "76a4b5dff81017fbd83d9bb193aebf40f9507940799b76616bbe791d1476b599",
+      "exactFullResultMatch": true
+    }
+  ],
+  "unknownHistoryHandledByUnitTests": true,
+  "julyLoaded": false,
+  "profitabilityEstablished": false
+}

@@ -1,0 +1,41 @@
+{
+  "version": "public-activity-raw-decimal-proof-v1",
+  "reportHash": "1297df4a2e853c038d09a485b1c18c2d6d0a23672035f8eea397a18e53b076be",
+  "reportFileSha256": "8ed243e3f29820af94fe254fedec4096ddb6a74189f115acf20ad95658436f83",
+  "verifierSha256": "9101790dbeb7b7e75bcddd2da5cde58a034cd2b20a911d782aa0cff1a6520eec",
+  "rowsVerified": 192,
+  "decimalSharesVerified": 384,
+  "precisionDigits": 60,
+  "maximumShareDifference": 1.1102230246251565e-16,
+  "captureAndClosedClocksVerified": true,
+  "allRawOhlcvAndRetainedFieldsVerified": true,
+  "windowSummaries": [
+    {
+      "pair": "BTC/EUR",
+      "closedAt": 1793648700000,
+      "capturedAt": 1793649164077,
+      "bars": 96,
+      "actualQuoteVolume": "7250716.83676840",
+      "actualBaseVolume": "104.43968000",
+      "trades": 31669,
+      "windowTakerBuyQuoteShare": 0.4438204061567449,
+      "windowTakerBuyBaseShare": 0.4433137864842175,
+      "scope": "Descriptive one-venue24h aggregate, not book depth, trade prediction or independent profit evidence"
+    },
+    {
+      "pair": "ETH/EUR",
+      "closedAt": 1793648700000,
+      "capturedAt": 1793649164307,
+      "bars": 96,
+      "actualQuoteVolume": "3112658.99132700",
+      "actualBaseVolume": "1533.39540000",
+      "trades": 18068,
+      "windowTakerBuyQuoteShare": 0.37015578759490236,
+      "windowTakerBuyBaseShare": 0.36945447990779157,
+      "scope": "Descriptive one-venue24h aggregate, not book depth, trade prediction or independent profit evidence"
+    }
+  ],
+  "modelFitted": false,
+  "activeContextChanged": false,
+  "profitabilityEstablished": false
+}

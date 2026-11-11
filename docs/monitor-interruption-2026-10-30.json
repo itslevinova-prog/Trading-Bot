@@ -1,0 +1,21 @@
+{
+  "observedAt": "2026-10-30T15:35:29.308427+00:00",
+  "savedPidsAbsent": [
+    24228,
+    27324,
+    32672
+  ],
+  "referenceLastUpdatedAt": "2026-10-29T21:35:40.075Z",
+  "referenceSamples": 331,
+  "referenceFailures": 0,
+  "referenceStaleBookSamples": 301,
+  "developmentLastUpdatedAt": "2026-10-29T21:35:36.436Z",
+  "developmentSamples": 370,
+  "developmentFailures": 1,
+  "monitorCompleted": false,
+  "sampledRunPassed": false,
+  "unattendedActiveSeconds": 0,
+  "frozenFilesVerified": true,
+  "frozenDependencyPackages": 114,
+  "note": "Live process queries found no matching saved processes and port3100 was absent. Do not infer completion from scheduled end time; prior records preserved. Own main server restarted separately with AI/remote/live disabled."
+}

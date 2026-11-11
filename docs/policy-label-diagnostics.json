@@ -1,0 +1,126 @@
+{
+  "source": {
+    "path": "docs/policy-labels-77799fdeb3e8ee60.json",
+    "key": "77799fdeb3e8ee6042f544b9316ed06cbe2a4e9c5bcfe6bd1027db07114358d6",
+    "factsHash": "36f127c80f92ffe0fdd2ebccdad6c57adb9a61c78b516d35808c424c04efab0d",
+    "sourceReportHash": "7e873da81fec4c98e37988a4ce02d0b04ad8098a2fe73bfcd77ba32981597cc4",
+    "contractHash": "2c49d1471508e08630d91e872706f5ae64a321990005f1c7da2265fa85368551",
+    "builderHash": "7268f0594e677f8985c6f3260aca251c582353d8f3cfd6cde4676621e85ebd7f",
+    "verifiedAt": "2026-10-31T12:05:17.105Z",
+    "historicalSimulationOnly": true,
+    "modelTrained": false
+  },
+  "groups": [
+    {
+      "scenario": "base",
+      "variant": "mock-v1",
+      "records": 54,
+      "medianModeledHoldingUpperHours": 7.25,
+      "maxModeledHoldingUpperHours": 26.75,
+      "holdingOver4h": 36,
+      "majorityClassAccuracy": 0.8148148148148148,
+      "maturity": [
+        {
+          "asOf": 1791487800000,
+          "eligible": 16
+        },
+        {
+          "asOf": 1792092600000,
+          "eligible": 28
+        },
+        {
+          "asOf": 1792697400000,
+          "eligible": 43
+        },
+        {
+          "asOf": 1793216700000,
+          "eligible": 54
+        }
+      ]
+    },
+    {
+      "scenario": "base",
+      "variant": "mock-v2",
+      "records": 39,
+      "medianModeledHoldingUpperHours": 8.5,
+      "maxModeledHoldingUpperHours": 26.75,
+      "holdingOver4h": 29,
+      "majorityClassAccuracy": 0.8461538461538461,
+      "maturity": [
+        {
+          "asOf": 1791487800000,
+          "eligible": 11
+        },
+        {
+          "asOf": 1792092600000,
+          "eligible": 18
+        },
+        {
+          "asOf": 1792697400000,
+          "eligible": 29
+        },
+        {
+          "asOf": 1793216700000,
+          "eligible": 39
+        }
+      ]
+    },
+    {
+      "scenario": "double-fee-adaptive",
+      "variant": "mock-v1",
+      "records": 4,
+      "medianModeledHoldingUpperHours": 1.375,
+      "maxModeledHoldingUpperHours": 6.25,
+      "holdingOver4h": 1,
+      "majorityClassAccuracy": 0.5,
+      "maturity": [
+        {
+          "asOf": 1791487800000,
+          "eligible": 3
+        },
+        {
+          "asOf": 1792092600000,
+          "eligible": 4
+        },
+        {
+          "asOf": 1792697400000,
+          "eligible": 4
+        },
+        {
+          "asOf": 1793216700000,
+          "eligible": 4
+        }
+      ]
+    },
+    {
+      "scenario": "double-fee-adaptive",
+      "variant": "mock-v2",
+      "records": 3,
+      "medianModeledHoldingUpperHours": 1.0,
+      "maxModeledHoldingUpperHours": 1.75,
+      "holdingOver4h": 0,
+      "majorityClassAccuracy": 0.6666666666666666,
+      "maturity": [
+        {
+          "asOf": 1791487800000,
+          "eligible": 2
+        },
+        {
+          "asOf": 1792092600000,
+          "eligible": 3
+        },
+        {
+          "asOf": 1792697400000,
+          "eligible": 3
+        },
+        {
+          "asOf": 1793216700000,
+          "eligible": 3
+        }
+      ]
+    }
+  ],
+  "independentSamples": null,
+  "forecastProbability": null,
+  "liveMemoryUpdated": false
+}

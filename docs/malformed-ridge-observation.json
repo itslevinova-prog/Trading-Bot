@@ -1,0 +1,38 @@
+{
+  "observedAt": "2026-11-01T12:16:42.796Z",
+  "build": {
+    "verified": true,
+    "buildId": "411fdd18c00b6365f6ac19709d5edc48fe1f4c623b308083e7551251455f0e70",
+    "builtAt": "2026-11-01T12:11:31.723Z",
+    "sourceFiles": 123,
+    "runtimeFiles": 113,
+    "reasons": []
+  },
+  "sourceHash": "ee115a1dea6c74fc3cbef193552f4b4226dbe40d519623a643fd983f77ac48b4",
+  "syntheticOnly": true,
+  "observations": {
+    "valid": {
+      "forecast": 0.025999999999999995,
+      "accepted": true
+    },
+    "negativeStd": {
+      "forecast": -0.005999999999999997,
+      "accepted": true
+    },
+    "invalidRows": {
+      "forecast": 0.025999999999999995,
+      "accepted": true
+    },
+    "invalidLambda": {
+      "forecast": 0.025999999999999995,
+      "accepted": true
+    },
+    "extraDimension": {
+      "forecast": 0.025999999999999995,
+      "accepted": true
+    }
+  },
+  "finding": "Current research forecast trusts model structural metadata; a negative standard deviation changes a finite forecast sign and invalid fit metadata/extra dimensions remain accepted. This is not a deployed model or observed economic failure.",
+  "fixed": false,
+  "productionModelActivated": false
+}

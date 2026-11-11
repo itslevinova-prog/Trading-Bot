@@ -1,0 +1,14 @@
+{
+  "version": "ws-activity-journal-independent-v1",
+  "fixtureOnly": true,
+  "reportHash": "6c1be75e56d461d15ea435b6b600f2a782576cc626cc380007d28f69aa16530a",
+  "reportFileSha256": "aefb687905a309d3b7888c869d6370e895d2e8f27ef0d87685a19f922e04e478",
+  "verifierHash": "9ca2e9bfcd1bc1ce33630c320df2d48d07dd2be748f2577d7cfd160c5d02da9c",
+  "persistentRowsVerified": 5,
+  "sourceFactsAndRawHashesVerified": 5,
+  "asOfQueriesVerified": 9,
+  "officialSchemaSnapshotHashVerified": true,
+  "noBackdatingOrFutureConflictLeakage": true,
+  "actualLiveMessagesCaptured": 0,
+  "profitabilityEstablished": false
+}

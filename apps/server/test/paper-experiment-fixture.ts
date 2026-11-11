@@ -1,0 +1,9 @@
+import {digest,evaluationFingerprint} from '../src/provenance/build.js';
+import {effectiveTradingPolicy} from '../src/strategy/trading-policy.js';
+import type {PaperExperiment,ExperimentRuntime} from '../src/research/paper-experiment.js';
+export const now=Date.UTC(2026,9,31,9),h=(s:string)=>digest(s);
+export function contract():PaperExperiment{const base=h('base'),universe=h('twenty-EUR-markets'),policy=effectiveTradingPolicy({mode:'safe',stopLossPct:.05,revision:0,updatedAt:null},{MAX_POSITION_PCT:.15,MAX_OPEN_POSITIONS:2,MAX_TRADES_PER_DAY:4,COIN_COOLDOWN_MINUTES:120,MAX_TOTAL_RISK_PCT:.0125,MAX_ENTRY_SPREAD_BPS:10,MAX_ENTRY_SLIPPAGE_BPS:15,DEFAULT_STOP_LOSS_PCT:.05}).fingerprint;return {format:'mock-paper-experiment-v1',registeredAt:now,venue:'binance',quote:'EUR',startingBalance:1000,buildId:h('build'),baseStrategyVersion:base,universeHash:universe,
+ common:{feeRate:.001,maxSpreadBps:10,maxSlippageBps:15,latencyMinMs:300,latencyMaxMs:900,maxBookAgeMs:5000,maxPositionPct:.15,maxOpenPositions:2,maxPortfolioRiskPct:.0125,maxDrawdownPct:.25,minOrderQuote:10,maxEntriesPerDay:4,cooldownMinutes:120,defaultStopLossPct:.05},aiSettings:{mode:'safe',stopLossPct:.05,revision:0,updatedAt:null},
+ benchmark:'initial-full-cash-BTC-buy; hold bypasses entry risk caps and has no stop',
+ legs:[{accountId:'ai',policyFingerprint:policy,evaluationVersion:evaluationFingerprint(h(base+':'+policy),universe)},{accountId:'rules',policyFingerprint:null,evaluationVersion:evaluationFingerprint(base,universe)},{accountId:'hold',policyFingerprint:null,evaluationVersion:evaluationFingerprint(base,universe)}]};}
+export function runtime(c=contract()):ExperimentRuntime{return {paperOnly:true,buildVerified:true,aiProvider:'mock',aiEnabled:false,allowRemote:false,liveEnabled:false,buildId:c.buildId,baseStrategyVersion:c.baseStrategyVersion,venue:c.venue,quote:c.quote,universeHash:c.universeHash,common:structuredClone(c.common),legs:structuredClone(c.legs)};}

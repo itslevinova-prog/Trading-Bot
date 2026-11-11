@@ -1,0 +1,20 @@
+{
+  "version": "feature-support-independent-v1",
+  "reportHash": "bb7c60d0ce2dd8e92b1aa4bf3bec0f3a2d79e2e61da2bc2a9eeb0b5687da99e5",
+  "reportFileSha256": "a4e07fd05866759cdbbca667915c2e607ce491391a10af270911442705a03963",
+  "verifierHash": "f1963cca9aecd741be007a8d4023a4e0e01e12678c4701443781c5e7662df21d",
+  "numpyVersion": "2.5.4",
+  "supportSnapshots": 82,
+  "trainReferenceRowsVerified": 45870,
+  "testQueriesVerified": 13120,
+  "explicitMissingQueries": 16,
+  "maximumReferenceDistanceDifference": 3.552713678800501e-15,
+  "maximumQueryRatioDifference": 1.4210854715202004e-13,
+  "clockExclusionAndTrainOnlyScalingVerified": true,
+  "nearestSourceIdentityVerified": true,
+  "labelsOrForecastsPassedToMetric": false,
+  "thresholdChosen": false,
+  "forecastsChanged": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false
+}

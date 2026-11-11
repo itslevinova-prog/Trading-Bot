@@ -1,0 +1,23 @@
+{
+  "version": "validation-loss-independent-v1",
+  "reportHash": "dc13dc56921895c81828f6060a64c7020dba5ff86c8ae1566f0864a51cd7edad",
+  "reportFileSha256": "dfd6e998983d8a096d865e84d0129b51ac7f55372e8b40f0a175255f78db221e",
+  "verifierHash": "1a323042d505cd1a63119e0f853529913d7c722bc8a4d8e6a5d17bef111f30d1",
+  "foldsVerified": 41,
+  "validationRowsVerified": 6560,
+  "testForecastComparisonsVerified": 26240,
+  "testClockChoicesVerified": 328,
+  "selectedCounts": {
+    "zero": 13,
+    "mean": 24,
+    "ridge": 1,
+    "common": 3,
+    "aggressor": 0
+  },
+  "changedClockChoices": 5,
+  "knownOpportunityLabels": 6,
+  "newModelFitted": false,
+  "actualSelectorChanged": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false
+}

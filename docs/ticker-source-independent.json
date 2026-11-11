@@ -1,0 +1,12 @@
+{
+  "version": "ticker-source-independent-v1",
+  "reportSha256": "64d949ea2a36e0436295416f0ab77e7865dfeec6a14edadf3a8b2a12749547b3",
+  "verifierSha256": "71188b7d19aafa66e5c36d152740dd0176faca998b65ddce3e199fdaa6b9b55b",
+  "cases": 3,
+  "marketRecordsVerified": 120,
+  "allTickerAndQualityFieldsExact": true,
+  "nullClocksStayUnknown": true,
+  "budget": 115000,
+  "newApiCalls": 0,
+  "profitabilityEstablished": false
+}

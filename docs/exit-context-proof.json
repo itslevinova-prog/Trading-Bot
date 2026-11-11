@@ -1,0 +1,53 @@
+{
+  "verifiedAt": "2026-10-30T18:26:46.992Z",
+  "buildId": "f70f3149b7425600394cce21c46b5906488c70f7c998eb915e16dd10253cbe0b",
+  "runId": "c1cbe0bc-c3ab-45f1-912c-fba00b51cc6d",
+  "mainTests": 585,
+  "offlineTests": 15,
+  "fullExitSummaryItems": 20,
+  "maximumOfflineReplacementDepth": 19,
+  "fixedModelCharBudget": 115000,
+  "fullExitFixturePackedChars": 114095,
+  "allMarketFeaturePolicyExitValuesPreserved": true,
+  "selectedMemoryHitsTimestampsOutcomesPreserved": true,
+  "realModelTested": false,
+  "privateExchangeCalls": 0,
+  "realOrders": 0,
+  "paidCalls": 0,
+  "simulationOnlyScope": true,
+  "newNativeProductionConnection": false,
+  "suiteLog": "docs/verification-runs/exit-context-suite-bf417a07ac793655c5a40bcf776ae523a09884c1945fe5809d6a06fd9d1a6ab3.log",
+  "suiteLogHash": "bf417a07ac793655c5a40bcf776ae523a09884c1945fe5809d6a06fd9d1a6ab3",
+  "goalObjectiveFileHash": "e6edee16d0eaf7e82e1b9b5c59a244a1b76333d7ff654b44246442ab0bce8746",
+  "sources": [
+    {
+      "path": "apps/server/src/live/exit-context.ts",
+      "sha256": "236696a9fac56b0b77b91a09492f03a03bc7f992affb641d68ab273a78995aac"
+    },
+    {
+      "path": "apps/server/src/live/intent-context.ts",
+      "sha256": "78d783d368277894e5d647c8f772bd86b38a0cf73d39b0dd45be50be1308ff29"
+    },
+    {
+      "path": "apps/server/src/ai/intent-encoding.ts",
+      "sha256": "cb8fd597cb3365fb7b28bf498d58ddfbf9d1a14407720a9d7365bfc3f1c0654a"
+    },
+    {
+      "path": "apps/server/src/ai/prompt.ts",
+      "sha256": "397712252baa88d769e7781d6f25ae8dccf446e862b05ca03e9902b2693b3b3d"
+    },
+    {
+      "path": "apps/server/test/exit-driver.test.ts",
+      "sha256": "eaf9a43e62c29480e55b28c8a85e12a4cb55db6d5c895abb2ec561b261f262f9"
+    },
+    {
+      "path": "apps/server/test/intent-encoding.test.ts",
+      "sha256": "18a9c46b06ef14d287a4d171738a242d1a7a32ae802b9b6a455b410659eb2bbe"
+    }
+  ],
+  "frozenReferenceDependenciesUnchanged": 114,
+  "limitations": [
+    "Technical mocked input/validation proof, not improved predictive decisions or profit.",
+    "Random mock, joint strategy evidence, dependent historical samples and independent walk-forward comparison remain next work under paper-only scope."
+  ]
+}

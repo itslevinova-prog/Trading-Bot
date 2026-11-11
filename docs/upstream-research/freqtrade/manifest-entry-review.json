@@ -1,0 +1,16 @@
+[
+  {
+    "path": "freqtrade/persistence/trade_model.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/persistence/trade_model.py",
+    "sha256": "a011ca8686a205fd279ef665a2a3d5a1a4e3fb8cec9cbbac7f429eed0da85c2d",
+    "bytes": 87483,
+    "retrievedAt": "2026-10-31T18:43:02.662241+00:00"
+  },
+  {
+    "path": "freqtrade/persistence/custom_data.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/persistence/custom_data.py",
+    "sha256": "a48ece9ccf3b1236662337c939df61e89e8839e260209187ef9c408316de035a",
+    "bytes": 7270,
+    "retrievedAt": "2026-10-31T18:43:02.922889+00:00"
+  }
+]

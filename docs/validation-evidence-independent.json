@@ -1,0 +1,20 @@
+{
+  "version": "validation-evidence-independent-v1",
+  "reportHash": "2c25cb174c52fdce8360f24929c2881dad62be7c2f941eb850bfe24f2b8992fa",
+  "reportFileSha256": "98a57e92097ad9cb50c04542351b88d8643699de5bc90c49ba3243f0bc3ada00",
+  "verifierHash": "96225c9c1cc73e3720e6afa22281fd6ae079ae24b27bdd8a013445154d964289",
+  "validationRowsReconstructed": 6560,
+  "forecastValuesChecked": 32800,
+  "leaveOneClockOutCasesChecked": 328,
+  "opportunityClockChoicesChecked": 1640,
+  "allLabelsStrictlyMature": true,
+  "fullSelectorsExact": true,
+  "uniqueValidationClocks": 328,
+  "sharedValidationTestClocks": 320,
+  "roleUnionClocks": 336,
+  "selectorChanged": false,
+  "newModelFitted": false,
+  "confidenceEstimated": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false
+}

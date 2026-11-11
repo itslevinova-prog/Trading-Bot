@@ -1,0 +1,153 @@
+{
+  "startupProbeFailures": 0,
+  "verifierHash": "72f0ac45d85a771bfc3032b90e0c022067628c09e84e2e9452fa27e59f5b234b",
+  "verifiedAt": "2026-10-29T17:02:39.575Z",
+  "runId": "acec8f8d-4b8e-4429-a530-9547dd343df4",
+  "checks": [
+    "Account valuation is explicit; unknown held prices remain null instead of entry-price PnL",
+    "20 public markets including retained positions, venue identity, history coverage and free defaults",
+    "Every public market includes timestamped 15m/hourly repair coverage without invented gap fills",
+    "Running build matches recorded artifacts and old executions remain explicitly unassigned",
+    "Frozen dataset checksum and default identity verified; repeated historical observations remain explicitly inspected",
+    "Actual-rule portfolio evidence exposes costs, sample size and known limitations",
+    "Durable paper protective-exit diagnostics accessible without exposing exception text",
+    "Forward cohort requires clean aligned same-version baselines; unknown/stale comparisons remain null",
+    "Prospective account evidence remains version-specific with no unearned profitability claim",
+    "Actual 20-market context including all research results fits declared prompt budget with visible omissions",
+    "Pinned local-only metadata and explicit native context window exercised; exact transmitted 20-market prompt checked; fixture only, no real model",
+    "Built dashboard served with current title",
+    "Unproven profitability and private integration remain visible"
+  ],
+  "connected": true,
+  "pairs": 20,
+  "features": 20,
+  "historyRepair": {
+    "reports": 40,
+    "errorReports": 0,
+    "completeReports": 40,
+    "successfulRepairRequests": 40,
+    "missingBars": 0
+  },
+  "freshBooks": 18,
+  "historyBarsRange": [
+    8640,
+    8814
+  ],
+  "packedContextChars": 99961,
+  "charBudgetOnlyContextChars": 99454,
+  "omissions": [
+    "Detailed candle arrays shortened; per-market summaries retained.",
+    "Memory and lessons bounded; held-position memories prioritised.",
+    "Raw candle arrays omitted only for named markets as needed; all market summaries retained. Held positions and BTC prioritised."
+  ],
+  "modelFixtureEvidence": {
+    "phase": "validated",
+    "mode": "ollama-local",
+    "modelArtifactVerified": false,
+    "inferenceAttempted": true,
+    "preSendHookCompleted": true,
+    "startedAt": 1793293359470,
+    "expectedFingerprint": "5b9fa43fda7151c08ae53e05aa0dd14cdd869381a6efeaee55b594fd4d28f3bd",
+    "inputIdentity": {
+      "kind": "ollama-api-reported",
+      "model": "free-contract-fixture:1",
+      "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "serverVersion": "0.99.0",
+      "metadataHash": "e3f3787b6f580d65583341742a30d7ae9f14e3b60698c7ec0d61bb01b77f22de",
+      "fingerprint": "5b9fa43fda7151c08ae53e05aa0dd14cdd869381a6efeaee55b594fd4d28f3bd",
+      "advertisedContextTokens": 131072,
+      "templateBytes": 15,
+      "cloudDisabledReported": true,
+      "modelArtifactVerified": false,
+      "runtimeAttested": false,
+      "observedAt": 1793293359504
+    },
+    "requestBodyHash": "8ce138c4c568a29dd6cfc399fb832eaad7736168e2a873f97a547ba0e7626ac3",
+    "systemPromptHash": "478468e733333c481d02d251265af04b53fe690599ca028420776350f649c29b",
+    "userPromptHash": "18f3e0b791e8faf7604b2326c96fd92112adbf7e7558397568223d8e66ad5691",
+    "inputChars": 99961,
+    "inputBytes": 101463,
+    "contextTokens": 131072,
+    "budgetMethod": "Client UTF-8 bytes plus server template/system bytes, output allowance and4096 framing reserve. Conservative estimate, not an exact tokenizer proof. truncate=false and shift=false requested.",
+    "providerResponseJsonHash": "b65177a85a55dfc8f4dbc9993639ad8fd1afb2329d8f841fffdd8d74d7f02aa5",
+    "promptEvalCount": 12000,
+    "outputEvalCount": 100,
+    "postIdentity": {
+      "kind": "ollama-api-reported",
+      "model": "free-contract-fixture:1",
+      "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "serverVersion": "0.99.0",
+      "metadataHash": "e3f3787b6f580d65583341742a30d7ae9f14e3b60698c7ec0d61bb01b77f22de",
+      "fingerprint": "5b9fa43fda7151c08ae53e05aa0dd14cdd869381a6efeaee55b594fd4d28f3bd",
+      "advertisedContextTokens": 131072,
+      "templateBytes": 15,
+      "cloudDisabledReported": true,
+      "modelArtifactVerified": false,
+      "runtimeAttested": false,
+      "observedAt": 1793293359566
+    },
+    "observedFingerprintMatched": true,
+    "assistantContentHash": "3681a54cfb66d51eb8722748ad2b5db3dff98a73ad0b5d9ea185eafd57a577fd",
+    "finishedAt": 1793293359567
+  },
+  "fixtureInputArtifact": "docs/verification-runs/model-input-1793293359524-8ce138c4c568a29dd6cfc399fb832eaad7736168e2a873f97a547ba0e7626ac3.json",
+  "buildId": "930e737f0f1caafe46a1a0ccf1c3b3b44eb6423f931e776374f5cc9be300eacb",
+  "executionVersion": "64d54ebb3273fad8caab8ef5ea4af6d1ed36a5ad288f95b52fb02752779218f7",
+  "reportMatchesCurrentRuntime": false,
+  "fixedDatasetId": "d0066ea5e97b107a22c148dbfcfcd245a2ea37e555684a5af36a382134b14926",
+  "pairedInputsComparable": true,
+  "portfolioMetrics": {
+    "returnPct": 0,
+    "stressReturnPct": 0,
+    "closedTrades": 0
+  },
+  "protectiveExitFailures": 0,
+  "forwardAccounts": [
+    {
+      "accountId": "ai",
+      "status": "awaiting_baseline",
+      "observations": 0
+    },
+    {
+      "accountId": "rules",
+      "status": "awaiting_baseline",
+      "observations": 0
+    },
+    {
+      "accountId": "hold",
+      "status": "awaiting_baseline",
+      "observations": 0
+    }
+  ],
+  "externalSources": [
+    {
+      "source": "Alternative.me Bitcoin Fear & Greed",
+      "status": "available",
+      "fresh": true
+    },
+    {
+      "source": "Binance perpetual funding BTCUSDT",
+      "status": "available",
+      "fresh": true
+    },
+    {
+      "source": "Binance perpetual funding ETHUSDT",
+      "status": "available",
+      "fresh": true
+    },
+    {
+      "source": "Cointelegraph RSS headlines",
+      "status": "available",
+      "fresh": true
+    },
+    {
+      "source": "CoinDesk RSS headlines",
+      "status": "available",
+      "fresh": true
+    }
+  ],
+  "realModelTested": false,
+  "privateExchangeCalls": 0,
+  "realOrders": 0,
+  "paidCalls": 0
+}

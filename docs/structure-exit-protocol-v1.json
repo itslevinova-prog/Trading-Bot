@@ -1,0 +1,12 @@
+{
+  "version": "structure-exit-paper-v1",
+  "registeredBeforeEvaluation": true,
+  "historyAlreadyInspected": true,
+  "baselineCovarianceReportHash": "88995ecf52b429fdd8dc4c91841da4c1445ab2063d854ee894bae6954599a54c",
+  "hypothesis": "For a uniquely owned held position with known quantity/opening clock and fresh matching closed feature/book, after entry: complete closed-structure-v1, close below excluding-signal prior20bar support, downsideBreakout consistent,1hchange<0 andprice<ema20 =>optional full strategy exit. Wick-only/missing/inconsistent data=>no additional exit. Preserve all baseline/protective exits independently.",
+  "noOriginalEntryThesisAssumed": true,
+  "thresholdTuning": false,
+  "baseline": "Same covariance sizing/entry decisions; UTF8-only reasoning repair allowed, baseline economic facts must equal original complete report except reason strings.",
+  "execution": "Original frozen market dataset/Safe/1000capital/synthetic next-open5bps spread-slip/1000depth/fees.001and.002",
+  "claims": "Opt-in research only; no predicted profit/probability, no real AI/accounts/keys/orders/paid calls."
+}

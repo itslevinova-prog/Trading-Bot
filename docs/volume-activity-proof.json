@@ -1,0 +1,30 @@
+{
+  "verifiedAt": "2026-11-02T19:27:50.794Z",
+  "buildId": "2eb8b138f143bf6b13edc5bdb8fc8fcf5cdabfd265b9ec63370a2ef3b2dd0385",
+  "documentation": "docs/VOLUME-ACTIVITY.md",
+  "review": "docs/upstream-research/REVIEW-PASS26.md",
+  "sourceManifest": "docs/upstream-research/manifest-volume-semantics-review.json",
+  "version": "closed-volume-activity21-v1",
+  "targetedTests": 18,
+  "typechecksPassed": true,
+  "audit": "docs/volume-clock-audit-10fb98c4bf506856.json",
+  "auditHash": "10fb98c4bf506856a670113f36cd36398f5fc952439cba290efa23eebdd99acc",
+  "rawWindowsVerified": 7280,
+  "originalVectorMaxDifference": 0,
+  "decimalRatiosChecked": 7276,
+  "undefinedReferences": 4,
+  "maximumDecimalDifference": 2.2737367544323206e-13,
+  "isolation": "data/volume-activity-isolation-2026-11-02.json",
+  "oldFeatureVectorChanged": false,
+  "newModelFitted": false,
+  "activePacketChanged": false,
+  "julyLoaded": false,
+  "profitabilityEstablished": false,
+  "sources": {
+    "apps/server/src/context/volume-activity.ts": "0abe5b6a536345cfb5e296b06889eecc4a121a823ff06dacc3d0392d243d9aa6",
+    "apps/server/test/volume-activity.test.ts": "853ba47c9b13ca6de5c2a48288d9ef814e6d37c952148e7f6641e363509bc001",
+    "scripts/audit-volume-clocks.mjs": "31c547e150af4b33fa79d1a6f47ea76895bc565a211408fa9ae65e6c5c2a9d03",
+    "scripts/verify-volume-clocks.mjs": "3993a1d1f6a70c7909fe2692e6fd5812f7a44d358d7d0ddaa908344e8d051cab",
+    "scripts/verify_volume_clock_reference.py": "6d077d0898fd2c8c78108185600f84525dc325ec755d16c72b8e840313a5895e"
+  }
+}

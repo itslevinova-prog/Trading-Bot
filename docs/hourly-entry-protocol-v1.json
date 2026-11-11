@@ -1,0 +1,37 @@
+{
+  "version": "rising-hourly-breakout-entry-study-v1",
+  "registeredAt": "2026-11-01T12:12:14.815065+00:00",
+  "designHash": "6668e69fdb4952993745b17b17ffc7221fa1558302770e720e1b80805bf24df4",
+  "runnerHash": "f2eca2ff90ea7bb21ae22193b6a5507d4431afabf7885f361e4390d7ece8beee",
+  "sources": {
+    "apps/server/src/strategy/hourly-entry-paper.ts": "3d7e131330abfcd72a64dc8bd41654ebc3ffc0485f15602a3cddaf63d6e88b9f",
+    "apps/server/src/strategy/breakout-entry-paper.ts": "62ed9a2e557acb3e413ace6e9fe36b2594d30bd261c626eb043c72f256933027",
+    "apps/server/src/strategy/structure-exit-paper.ts": "a930b6676bab40c75a3ab399e3ccb9387df6b70671ffd882d833066a83d10313",
+    "apps/server/src/context/hourly-trend.ts": "5baf9052f29a16074ef283428d7b144b8a4a6d7071aa3d74d2782c82115af003",
+    "apps/server/src/research/mock-replay-context.ts": "793068bceb009f4e49cba2ff0b3f02f94f8d160be9e446caa9c9877021452fbb",
+    "apps/server/src/market/indicators.ts": "09162f1e8aaad80a0c1885533ca63c3c6c0132ab9563fd57c5f6003f3cef3bb0"
+  },
+  "previousReport": "docs/breakout-entry-study-ad773aa0759f0716.json",
+  "previousReportHash": "ad773aa0759f0716b70ac0b2da8c95aa97a1ad247118c37c0322317845371734",
+  "periods": [
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04"
+  ],
+  "feeRates": [
+    0.001,
+    0.002
+  ],
+  "fixedRule": "closed hourly EMA50 current - previous > 1e-12 * max(current,previous); tolerance matches source numerical consistency only; no economic threshold tuning. All source evidence fields must match the feature origin, recurrence-validated producer version and closed/fresh clock.",
+  "candidateOutcomesNotYetEvaluated": true,
+  "recordAllAcceptedEntryOrigins": true,
+  "julyOutcomesLocked": true,
+  "activation": false,
+  "parameterSearch": false,
+  "independentOutOfSample": false,
+  "profitabilityEstablished": false
+}

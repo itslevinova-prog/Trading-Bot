@@ -1,0 +1,32 @@
+[
+  {
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/Drakkar-Software/OctoBot/c45fdc2c95c5bd3d649251fa90c327e2e8f86b00/LICENSE",
+    "sha256": "8b1ba204bb69a0ade2bfcf65ef294a920f6bb361b317dba43c7ef29d96332b9b",
+    "bytes": 35148
+  },
+  {
+    "path": "packages/evaluators/LICENSE",
+    "url": "https://raw.githubusercontent.com/Drakkar-Software/OctoBot/c45fdc2c95c5bd3d649251fa90c327e2e8f86b00/packages/evaluators/LICENSE",
+    "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+    "bytes": 7652
+  },
+  {
+    "path": "docs/content/developers/packages/evaluators.md",
+    "url": "https://raw.githubusercontent.com/Drakkar-Software/OctoBot/c45fdc2c95c5bd3d649251fa90c327e2e8f86b00/docs/content/developers/packages/evaluators.md",
+    "sha256": "44cb386f1fa6eadd3d5fdc91c963f1b382151732c72c58687159bc0446000e86",
+    "bytes": 5513
+  },
+  {
+    "path": "docs/content/developers/packages/trading.md",
+    "url": "https://raw.githubusercontent.com/Drakkar-Software/OctoBot/c45fdc2c95c5bd3d649251fa90c327e2e8f86b00/docs/content/developers/packages/trading.md",
+    "sha256": "96185be84a89f6873199ea8433bbb63f74a00ae072578654f1ae877f740fb7a3",
+    "bytes": 5070
+  },
+  {
+    "path": "packages/evaluators/octobot_evaluators/matrix/matrix.py",
+    "url": "https://raw.githubusercontent.com/Drakkar-Software/OctoBot/c45fdc2c95c5bd3d649251fa90c327e2e8f86b00/packages/evaluators/octobot_evaluators/matrix/matrix.py",
+    "sha256": "9349e99ecab69b7cff3607f40bed344b7257ecfb5557becfc95ee79ea2642e5a",
+    "bytes": 3497
+  }
+]

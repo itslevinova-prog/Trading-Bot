@@ -1,0 +1,39 @@
+{
+  "version": "closed-btc-relative-entry-study-v1",
+  "registeredAt": "2026-11-01T13:27:27.151665+00:00",
+  "designHash": "19bdf0c55f15194e1e8d1732dec33ce59d652198e82c5496394de44e4c9f65d4",
+  "runnerHash": "60bb1bb5e897cddca2a2a8e5a901c4b29b8adcbc5d759626a1d2786a203b8b60",
+  "sources": {
+    "apps/server/src/strategy/relative-entry-paper.ts": "d45483705bbdc638a7c0458781f5f499fec56a4b066dedbe1f9a235e5e3cac8b",
+    "apps/server/src/context/relative-strength.ts": "265e5cd74456ded8d8701997b5bbfba58bafe742485388f5768aec414a181422",
+    "apps/server/src/research/relative-strength-replay.ts": "110eb0fe515ae8e86edb105d78a24b3bea1398df7dd8cf31e8f02c39bba796e8",
+    "apps/server/src/strategy/hourly-entry-paper.ts": "3d7e131330abfcd72a64dc8bd41654ebc3ffc0485f15602a3cddaf63d6e88b9f",
+    "apps/server/src/context/hourly-trend.ts": "5baf9052f29a16074ef283428d7b144b8a4a6d7071aa3d74d2782c82115af003",
+    "apps/server/src/strategy/breakout-entry-paper.ts": "62ed9a2e557acb3e413ace6e9fe36b2594d30bd261c626eb043c72f256933027"
+  },
+  "previousReport": "docs/hourly-entry-study-fd783d6c607d1d30.json",
+  "previousReportHash": "fd783d6c607d1d30daf3d2364b94554fbff298227ba92d5877f7a0ec353a26f0",
+  "periods": [
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04"
+  ],
+  "feeRates": [
+    0.001,
+    0.002
+  ],
+  "candidateOutcomesNotYetEvaluated": true,
+  "relativeThreshold": 0,
+  "BTCselfReferenceRetainsBase": true,
+  "unknownSourceDeclinesEntry": true,
+  "allExitsAndRiskLimitsRetained": true,
+  "thresholdSweep": false,
+  "modelFitted": false,
+  "activation": false,
+  "julyOutcomesLocked": true,
+  "independentSamples": null
+}

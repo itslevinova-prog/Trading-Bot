@@ -1,0 +1,14 @@
+[
+  {
+    "path": "packages/tentacles/Evaluator/TA/momentum_evaluator/momentum.py",
+    "url": "https://raw.githubusercontent.com/Drakkar-Software/OctoBot/c45fdc2c95c5bd3d649251fa90c327e2e8f86b00/packages/tentacles/Evaluator/TA/momentum_evaluator/momentum.py",
+    "sha256": "d442fa6a4de586f87c5fa688d97c4b0d2ce03fc49cb33d1dba5d9167c1c41b27",
+    "bytes": 44983
+  },
+  {
+    "path": "packages/tentacles/Evaluator/TA/trend_evaluator/trend.py",
+    "url": "https://raw.githubusercontent.com/Drakkar-Software/OctoBot/c45fdc2c95c5bd3d649251fa90c327e2e8f86b00/packages/tentacles/Evaluator/TA/trend_evaluator/trend.py",
+    "sha256": "b97cd8c4f9805ff93e7187e8b8f05b6376b3a0432a6b23753270c8c697d23f3c",
+    "bytes": 19246
+  }
+]

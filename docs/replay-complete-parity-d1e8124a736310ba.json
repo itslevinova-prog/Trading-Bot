@@ -1,0 +1,118 @@
+{
+  "version": "replay-complete-data-parity-v1",
+  "verifiedAt": "2026-11-04T15:59:30.446Z",
+  "build": {
+    "verified": true,
+    "buildId": "4feae80f2aaa9d0bcc1a2b8fb9aaaf9a95a232f5edf78a7204f96473b02d78e2",
+    "builtAt": "2026-11-04T15:57:32.062Z",
+    "sourceFiles": 162,
+    "runtimeFiles": 152,
+    "reasons": []
+  },
+  "referenceCases": [
+    {
+      "month": "2026-05",
+      "study": "evidence-post-april",
+      "reference": "docs/may-frozen-portfolio-f53b0d90fa77fffc.json",
+      "sha": "f53b0d90fa77fffc406b9e0399c8c3920958cdf7bda42311cd51a5a71122878d"
+    },
+    {
+      "month": "2026-06",
+      "study": "june-timing-holdout",
+      "reference": "docs/june-frozen-portfolio-13ca4ea0ac9938e5.json",
+      "sha": "13ca4ea0ac9938e59717972a4fae74a4fd7ca37d311f815ff9d15c3793f23b77"
+    }
+  ],
+  "checked": [
+    {
+      "month": "2026-05",
+      "name": "rules",
+      "multiplier": 1,
+      "bars": 960,
+      "fills": 0,
+      "resultSha": "e63c0923fdddb20f8a782151e5d5489cc675ef3efe8099ac30061660b7b875e4"
+    },
+    {
+      "month": "2026-05",
+      "name": "ungated",
+      "multiplier": 1,
+      "bars": 960,
+      "fills": 40,
+      "resultSha": "006601a9029d4cbbf9720be0b35f0b859a6a1351a6a76ea055d250a3af081054"
+    },
+    {
+      "month": "2026-05",
+      "name": "btc",
+      "multiplier": 1,
+      "bars": 960,
+      "fills": 16,
+      "resultSha": "bc1acecae3da4e49e887a77f43e907e9f2e9db23d730358ab1856446dd35f27f"
+    },
+    {
+      "month": "2026-05",
+      "name": "breadth",
+      "multiplier": 1,
+      "bars": 960,
+      "fills": 14,
+      "resultSha": "0f9cc76563783d39e5ca4cb7ca3b8a5bac121c8f3a416dabe0dd023e6053f31c"
+    },
+    {
+      "month": "2026-05",
+      "name": "ungated",
+      "multiplier": 2,
+      "bars": 960,
+      "fills": 0,
+      "resultSha": "99449037c43cc3cc23b73653ad101a6b81931001b9f8c0a260e396c14f6a859f"
+    },
+    {
+      "month": "2026-06",
+      "name": "rules",
+      "multiplier": 1,
+      "bars": 2880,
+      "fills": 22,
+      "resultSha": "afda269e115b87e9d0f1e3aa3b7a6c9e5e78cb49cfc2dd2bd57aec1374a69d83"
+    },
+    {
+      "month": "2026-06",
+      "name": "ungated",
+      "multiplier": 1,
+      "bars": 2880,
+      "fills": 110,
+      "resultSha": "569ea9eea1edcfab3a084d4aca277eb0a5604d52c5b399c1086daf1c9f6f6d1f"
+    },
+    {
+      "month": "2026-06",
+      "name": "btc",
+      "multiplier": 1,
+      "bars": 2880,
+      "fills": 50,
+      "resultSha": "633570b581813992c0c0136b4e04200370b0c17c6cbfc05fe4ad61010aadc946"
+    },
+    {
+      "month": "2026-06",
+      "name": "breadth",
+      "multiplier": 1,
+      "bars": 2880,
+      "fills": 38,
+      "resultSha": "274a89553151c82d4850522223d727cc0972de83a811ce0afff0e3b2d89f654c"
+    },
+    {
+      "month": "2026-06",
+      "name": "cash",
+      "multiplier": 1,
+      "bars": 2880,
+      "fills": 0,
+      "resultSha": "c862b3f37f6ce81fb9cc5db65344596c21742decde43734ddc9ff9417e3c0875"
+    },
+    {
+      "month": "2026-06",
+      "name": "ungated",
+      "multiplier": 2,
+      "bars": 2880,
+      "fills": 0,
+      "resultSha": "59e5e0b3ddde6b5644d1d30cddf9ff28f9b3d04385057d60054a8f97d594bb03"
+    }
+  ],
+  "runnerSha": "d97395f03ec5e892a9c9e01a6f23c746aac5660b7521c3553582b057b07df9c3",
+  "scope": "Complete data parity on consumed windows. Full results including fill and drawdown paths match. No new strategy evaluation."
+}

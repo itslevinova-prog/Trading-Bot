@@ -1,0 +1,119 @@
+{
+  "formatVersion": 1,
+  "strategyId": "rules",
+  "version": "v1",
+  "stage": 1,
+  "status": "failed",
+  "evaluatedAt": "2026-11-05T21:58:03.042Z",
+  "codeHash": "74f948b8df40a646214b41eac3245547004d5c054819afa711ef7f86db5f2903",
+  "configHash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "variantsTested": 1,
+  "metrics": {},
+  "dataHashes": {},
+  "checks": [
+    {
+      "id": "hypothesis",
+      "passed": false,
+      "actual": false,
+      "expected": "registered economic rationale, target and kill criterion from #6"
+    },
+    {
+      "id": "evidence",
+      "passed": false,
+      "actual": false,
+      "expected": "actual run evidence from the designated source (never synthetic data)"
+    },
+    {
+      "id": "development_split",
+      "passed": false,
+      "actual": null,
+      "expected": "2020-01-01 to 2024-01-01 exclusive"
+    },
+    {
+      "id": "backtest_green",
+      "passed": false,
+      "actual": null,
+      "expected": "#5 robustness light: green"
+    },
+    {
+      "id": "beats_btc_and_dca",
+      "passed": false,
+      "actual": {
+        "sharpe": null,
+        "calmar": null,
+        "btcSharpe": null,
+        "btcCalmar": null,
+        "dcaSharpe": null,
+        "dcaCalmar": null
+      },
+      "expected": "higher Sharpe than both BTC Buy & Hold and DCA, OR higher Calmar than both"
+    },
+    {
+      "id": "deflated_sharpe",
+      "passed": false,
+      "actual": null,
+      "expected": "DSR probability >= 0.95"
+    },
+    {
+      "id": "pbo",
+      "passed": false,
+      "actual": null,
+      "expected": "PBO calculated and < 0.2"
+    },
+    {
+      "id": "variants",
+      "passed": false,
+      "actual": null,
+      "expected": "honest hypothesis variantsTested"
+    },
+    {
+      "id": "sample",
+      "passed": false,
+      "actual": {
+        "trades": null,
+        "exposureYears": null
+      },
+      "expected": ">= 100 closed trades OR >= 3 years with exposure"
+    },
+    {
+      "id": "gross_edge",
+      "passed": false,
+      "actual": {
+        "grossEdge": null,
+        "roundtripCost": null
+      },
+      "expected": "gross edge >= 2 * strictly positive roundtrip cost"
+    },
+    {
+      "id": "bootstrap_band",
+      "passed": false,
+      "actual": [
+        null,
+        null
+      ],
+      "expected": "valid P10/P90 expectations for next stages"
+    },
+    {
+      "id": "source_error",
+      "passed": false,
+      "actual": "Issue #5: pnpm backtest command is not installed; no backtest was executed",
+      "expected": "complete local evidence from upstream issue"
+    }
+  ],
+  "reasons": [
+    "hypothesis: expected registered economic rationale, target and kill criterion from #6",
+    "evidence: expected actual run evidence from the designated source (never synthetic data)",
+    "development_split: expected 2020-01-01 to 2024-01-01 exclusive",
+    "backtest_green: expected #5 robustness light: green",
+    "beats_btc_and_dca: expected higher Sharpe than both BTC Buy & Hold and DCA, OR higher Calmar than both",
+    "deflated_sharpe: expected DSR probability >= 0.95",
+    "pbo: expected PBO calculated and < 0.2",
+    "variants: expected honest hypothesis variantsTested",
+    "sample: expected >= 100 closed trades OR >= 3 years with exposure",
+    "gross_edge: expected gross edge >= 2 * strictly positive roundtrip cost",
+    "bootstrap_band: expected valid P10/P90 expectations for next stages",
+    "source_error: expected complete local evidence from upstream issue"
+  ],
+  "evidenceHash": null,
+  "source": "local:missing-upstream-evidence"
+}

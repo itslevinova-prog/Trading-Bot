@@ -1,0 +1,37 @@
+{
+  "version": "historical-learning-partition-v2",
+  "registeredAt": "2026-10-31T22:44:46.147564+00:00",
+  "priorPartitionPreserved": "docs/historical-learning-partition-v1.json",
+  "newTrainingProtocol": "docs/historical-training-pre-april-protocol-v1.json",
+  "newTrainingProtocolSha256": "f983c759ff02eb84d312d87051b56d978959973e7a25d7708d67446c802ca9e2",
+  "trainingPeriods": [
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03"
+  ],
+  "trainingDataDomain": "Each month reinitializes100fakeEUR, retains evaluation-end censoring; adjacent warmups overlap and are not independent samples. Full frozen20survivor basket required; later metadata assumed.",
+  "validationPeriod": "2026-04",
+  "validationAlreadyConsumedExploratorily": true,
+  "lockedTestPeriod": "2026-07",
+  "julyOutcomesNotInspected": true,
+  "julyRule": "Do not calculate July outcomes until concrete candidate/model contract and selection protocol are frozen. No change to existing lock.",
+  "fitStatus": "Not fit. Current Ridge fixed4h gross-return target differs from sparse paid policy-PnL. Need target/version/features/maturity/adequacy assessment, no lowering200defaultguard to force a fit.",
+  "learningRules": [
+    "Fit preprocessing and parameters only on available training labels; outcome fields and post-fill receipts never predictor features.",
+    "No pooling fees/policies as extra independent observations.",
+    "Cross-asset/time-overlapping labels remain dependent; sample count is not confidence.",
+    "April inspected as development validation, not untouched OOS; later October2026 informed strategy.",
+    "Do not alter registered months or discard loss-making/incomplete assets after observation."
+  ],
+  "costs": {
+    "startingBalance": 100,
+    "feeRate": 0.001,
+    "spreadBps": 10,
+    "slippageBps": 8
+  },
+  "deployed": false,
+  "profitabilityEstablished": false
+}

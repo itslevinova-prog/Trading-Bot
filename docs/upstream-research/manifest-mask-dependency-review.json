@@ -1,0 +1,80 @@
+{
+  "reviewedAt": "2026-11-02T21:00:25.102Z",
+  "freqtradeCommit": "7fea5ea24b3c3193cfdd4143b243f7baab66d661",
+  "freqtradeLicense": "GPL-3.0",
+  "files": [
+    {
+      "path": "freqtrade/freqai/data_kitchen.py",
+      "local": "docs/upstream-research/freqtrade/source/freqtrade/freqai/data_kitchen.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/freqai/data_kitchen.py",
+      "sha256": "00a0d1089dab1a8ae47ef5282ca6aa1c1fbb71cb95dc27193fee61c1d1bce82e"
+    },
+    {
+      "path": "freqtrade/freqai/base_models/BaseRegressionModel.py",
+      "local": "docs/upstream-research/freqtrade/source/freqtrade/freqai/base_models/BaseRegressionModel.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/freqai/base_models/BaseRegressionModel.py",
+      "sha256": "b91bf3a0cbf096c204f4c5b2b15d7d79777c1a890fe54345d663610a9198475d"
+    },
+    {
+      "path": "freqtrade/freqai/freqai_interface.py",
+      "local": "docs/upstream-research/freqtrade/source/freqtrade/freqai/freqai_interface.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/freqai/freqai_interface.py",
+      "sha256": "fa0c3d1835ea3e2804d23617095d877d760b357bfd02ec30a954b4ae16154065"
+    },
+    {
+      "path": "requirements-freqai.txt",
+      "local": "docs/upstream-research/freqtrade/source/requirements-freqai.txt",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/requirements-freqai.txt",
+      "sha256": "95388048ea5ae33fa2ca98b8c4c07fab8bca8805fe59ea6574113a21ed637956"
+    }
+  ],
+  "dependency": {
+    "repository": "https://github.com/emergentmethods/datasieve",
+    "tag": "v0.1.9",
+    "commit": "93669d0415e496de388542fae5f252f9aecf7c03",
+    "license": "MIT",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/emergentmethods/datasieve/93669d0415e496de388542fae5f252f9aecf7c03/LICENSE",
+        "local": "docs/upstream-research/datasieve/source/LICENSE",
+        "sha256": "3aff275a39e2a9176fe0cdeb1d116c967bdc81b952f9f7e02f3d2f1fb3a6f4f7",
+        "bytes": 1059
+      },
+      {
+        "path": "datasieve/pipeline.py",
+        "url": "https://raw.githubusercontent.com/emergentmethods/datasieve/93669d0415e496de388542fae5f252f9aecf7c03/datasieve/pipeline.py",
+        "local": "docs/upstream-research/datasieve/source/datasieve/pipeline.py",
+        "sha256": "5a4697f95198b260f1675ba8aa1c87db06435667a9f5699a805056361ce3dd35",
+        "bytes": 8702
+      },
+      {
+        "path": "datasieve/transforms/sklearn_wrapper.py",
+        "url": "https://raw.githubusercontent.com/emergentmethods/datasieve/93669d0415e496de388542fae5f252f9aecf7c03/datasieve/transforms/sklearn_wrapper.py",
+        "local": "docs/upstream-research/datasieve/source/datasieve/transforms/sklearn_wrapper.py",
+        "sha256": "7721426ff82390676c6268fd70c467d5137fc77c5b8ccba490d6b40ef7f4cce6",
+        "bytes": 1491
+      },
+      {
+        "path": "datasieve/transforms/dissimilarity_index.py",
+        "url": "https://raw.githubusercontent.com/emergentmethods/datasieve/93669d0415e496de388542fae5f252f9aecf7c03/datasieve/transforms/dissimilarity_index.py",
+        "local": "docs/upstream-research/datasieve/source/datasieve/transforms/dissimilarity_index.py",
+        "sha256": "09784643059fc8763b059649541f9368b58bf2e7d96704b3aeb0692055e053ff",
+        "bytes": 2748
+      }
+    ],
+    "versionEvidence": "Pinned Freqtrade requirements-freqai.txt saysdatasieve==0.1.9; publicGitHubtags mapsv0.1.9tothiscommit. No installed-wheel attestation."
+  },
+  "sections": [
+    "data_kitchen.filter_features inference NaNfill/mask",
+    "BaseRegressionModel.predict transform without incomingmask then overwrite do_predict",
+    "DataSievePipeline._validate_arguments outlier_check initializesones",
+    "SKLearnWrapper.transform preservesnewy",
+    "DissimilarityIndex nearest/meantrain distance, notprobability"
+  ],
+  "selectedArchiveFiles": 54,
+  "licenseFiles": 6,
+  "newPackageInstalled": false,
+  "vendorCodeExecuted": false,
+  "vendorCodeCopied": false
+}

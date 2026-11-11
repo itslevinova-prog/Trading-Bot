@@ -1,0 +1,12 @@
+{
+  "verifiedAt": "2026-11-01T14:14:03.322Z",
+  "factsHash": "fe958b9f76f3cdb00051da89726444aec35e8a32e583875125356bcf9f4b56d0",
+  "rawRowsChecked": 269,
+  "available": 267,
+  "unavailable": 2,
+  "firstEventOrderVerified": true,
+  "allCostedPayoffsVerified": true,
+  "modelFitted": false,
+  "portfolioPerformanceClaimed": false,
+  "julyLoaded": false
+}

@@ -1,0 +1,130 @@
+name: Research-Daten und Schnelltest
+
+# Manuell gestartet. Lädt nur öffentliche, kostenlose Binance-Public-Data-Kerzen
+# (kein Account, kein API-Key) und führt den vorregistrierten Schnelltest #33 aus.
+# Daten bleiben im Artefakt und werden nie ins Repository committet.
+on:
+  workflow_dispatch:
+    inputs:
+      symbols:
+        description: Kommagetrennte Paare; leer = alle archivierten USDT-Paare
+        default: ''
+      from:
+        description: Startmonat (YYYY-MM)
+        default: '2020-01'
+      to:
+        description: Endmonat (YYYY-MM), nie später als 2023-12 für Entwicklung
+        default: '2023-12'
+      intervals:
+        description: Intervalle
+        default: 1d,1h
+      run_spike:
+        description: Schnelltest #33 ausführen und Ergebnis ins Issue posten
+        type: boolean
+        default: true
+
+      run_trend:
+        description: H-025 Forschungslauf mit Annahmen (keine Pipeline-Freigabe)
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: research-data
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      LIVE_ENABLED: 'false'
+      AI_ALLOW_REMOTE: 'false'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      # Runner ist ab Werk >80 % belegt; die Archiv-Sicherung verlangt 20 % frei.
+      - name: Vorinstallierte, ungenutzte Software entfernen
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL /usr/local/share/boost
+          sudo docker image prune --all --force >/dev/null 2>&1 || true
+          df -h /
+      - name: pnpm 11.25.0 mit Corepack aktivieren
+        run: corepack enable && corepack prepare pnpm@11.25.0 --activate
+      - name: Node.js 22 einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - name: Abhängigkeiten installieren
+        run: pnpm install --frozen-lockfile
+      - name: Entwicklungsfenster vor jedem Download prüfen
+        env:
+          IMPORT_FROM: ${{ inputs.from }}
+          IMPORT_TO: ${{ inputs.to }}
+          IMPORT_INTERVALS: ${{ inputs.intervals }}
+          RUN_TREND: ${{ inputs.run_trend }}
+          IMPORT_SYMBOLS: ${{ inputs.symbols }}
+        run: |
+          pnpm --filter @paper/shared build
+          pnpm --filter @paper/server exec tsx -e "import {validateResearchMonths} from './src/backtest/trend-research.ts'; validateResearchMonths(process.env.IMPORT_FROM!,process.env.IMPORT_TO!); if(process.env.RUN_TREND==='true'&&(process.env.IMPORT_FROM!=='2020-01'||process.env.IMPORT_TO!=='2023-12'||process.env.IMPORT_INTERVALS!=='1d,1h'||process.env.IMPORT_SYMBOLS!=='')) throw Error('H-025 requires fixed 2020-01..2023-12 and 1d,1h with empty symbols');"
+      - name: Öffentliche Binance-Kerzen importieren
+        env:
+          IMPORT_FROM: ${{ inputs.from }}
+          IMPORT_TO: ${{ inputs.to }}
+          IMPORT_SYMBOLS: ${{ inputs.symbols }}
+          IMPORT_INTERVALS: ${{ inputs.intervals }}
+        run: pnpm data:import --from "$IMPORT_FROM" --to "$IMPORT_TO" --symbols "$IMPORT_SYMBOLS" --intervals "$IMPORT_INTERVALS" --quote USDT
+      - name: Trendfolge H-025 mit vorregistrierten Forschungsannahmen
+        if: ${{ inputs.run_trend }}
+        run: pnpm --filter @paper/server exec tsx src/backtest/trend-research-cli.ts | tee trend.txt
+      - name: Datenbericht
+        run: pnpm data:report | tee data-report.txt
+      - name: Schnelltest #33
+        if: ${{ inputs.run_spike }}
+        run: pnpm trend:spike | tee spike.txt
+      - name: Ergebnisse als Artefakt sichern
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-results
+          path: |
+            data-report.txt
+            spike.txt
+            trend.txt
+            data/trend-research/
+            data/archive/report.json
+            docs/spikes/
+            docs/DATA-ARCHIVE.md
+          if-no-files-found: ignore
+      - name: Ergebnis in Issue #18 kommentieren (alt #33)
+        if: ${{ inputs.run_spike && success() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "**Automatischer Lauf** (${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+            echo
+            cat docs/spikes/TREND-1D-SPIKE.md
+          } > comment.md
+          gh issue comment 18 --repo "${{ github.repository }}" --body-file comment.md
+      - name: Forschungsergebnis in Issue #3 kommentieren (alt #4)
+        if: ${{ inputs.run_trend && success() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "**Automatischer Forschungslauf** (${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+            echo
+            cat data/trend-research/summary.md
+          } > trend-comment.md
+          gh issue comment 3 --repo "${{ github.repository }}" --body-file trend-comment.md

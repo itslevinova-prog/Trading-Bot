@@ -1,0 +1,12 @@
+{
+  "version": "closed-relative-strength-design-v1",
+  "registeredAt": "2026-11-01T13:21:12.438348+00:00",
+  "upstreamConcept": "PinnedFreqAI correlated-pair features and informative closed-timeframe merge; own implementation, no GPL/Pandas port.",
+  "metric": "Exactly16same-clockM15return edges: (asset_end/asset_start)/(BTC_end/BTC_start)-1, in percent. This is relative price performance, not alpha, beta residual, correlation, hedging or probability.",
+  "unknown": "Require17adjacent valid closed candles in each source, same quote, exact source identities; missing/duplicate/future-only/stale windows stay unknown.",
+  "researchOnly": true,
+  "futureFixedHypothesis": "If evaluated, require positive relative4h performance for nonBTC risk-qualified hourly-breakout entries; BTCself-reference remains0 and otherwise retains original entry rules. Gate every candidate before deterministic selection; all exits unchanged. No threshold sweep.",
+  "modelOrPolicyActivated": false,
+  "julyOutcomesLocked": true,
+  "profitabilityEstablished": false
+}

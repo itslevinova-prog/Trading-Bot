@@ -1,0 +1,17 @@
+{
+  "registeredAt": "2026-11-01T14:12:59.077Z",
+  "version": "recorded-entries-first-barrier-descriptive-v1",
+  "report": "docs/relative-entry-study-a023aed7d8d61ea8.json",
+  "reportHash": "a023aed7d8d61ea83ca7f489011d93606a52b7733b196de415457e54e196d0dd",
+  "pathAudit": "docs/intrabar-assumption-audit-643c2cf0cdae70e2.json",
+  "horizonBars": 32,
+  "geometry": "Unchanged per-entry captured stop/target; no parameter search",
+  "runnerHash": "b1287114f03ec8c6ab2bef852eb04c1d9eaad9d7464500fab82fd478cfc7e379",
+  "sources": {
+    "apps/server/src/research/first-barrier-outcome.ts": "7db6e08e50e224c2e33918b2d8ad4ecc00cfe351cf537c5284920d1bbcc65084",
+    "apps/server/dist/research/first-barrier-outcome.js": "19a6b692beb975a441bbb1a7cb6c0dfde00f708480b4a71b0e1c1a2347e4a858",
+    "apps/server/src/research/local-learning.ts": "5a127d54bdf3faa0f8628bb6baecebc6947af1709c0353693c51e54793fef690",
+    "apps/server/dist/research/local-learning.js": "eebd8828b1f64d20829eb8c8f9383bc99567aea8c5e34ae44d59c4a315af5e16"
+  },
+  "purpose": "Descriptive target alignment only, no training/strategy/capital performance/July"
+}

@@ -1,0 +1,16 @@
+{
+  "version": "validation-behavior-protocol-v1",
+  "registeredAt": "2026-11-03T15:07:52.476Z",
+  "runnerHash": "b88b6409ba67d32aaf701a0b0e2fa98f5c39759c7218f9d6a41fcb4c3f81b91b",
+  "validation": "docs/validation-evidence-audit-2c25cb174c52fdce.json",
+  "validationHash": "2c25cb174c52fdce8360f24929c2881dad62be7c2f941eb850bfe24f2b8992fa",
+  "ranking": "docs/aggressor-ranking-audit-fbcfb4343dd6bd93.json",
+  "rankingHash": "fbcfb4343dd6bd93fb8041dcffe32e78521ead2873cc7344a46f23b753e719a2",
+  "scope": "All328clock-removal cases; compare each resultingmode using8existingfuturetestcandidatekeys. No testpayoff/performance fields.",
+  "reason": "Model-name sensitivity neednotimply changed trading decisions; separate them explicitly",
+  "exploratorySecondStage": true,
+  "newFit": false,
+  "actualSelectorChanged": false,
+  "testPayoffsUsed": false,
+  "julyLoaded": false
+}

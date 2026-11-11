@@ -1,0 +1,22 @@
+{
+  "version": "common-market-ridge-protocol-v1",
+  "registeredAt": "2026-11-03T15:38:57.641292+00:00",
+  "runnerHash": "e6f0081fc06792711c48b04c49c9c991d8a3fdea72b0f7f9a6ff6553c7fd7cd4",
+  "sources": {
+    "apps/server/src/research/common-market.ts": "dddd19d2fca3e9d8926dd1c91128ae9dae4d00e7a70c33c149445ba2125fa5b5",
+    "apps/server/src/research/clock-ranking.ts": "71c2a6fbaf54d421bdc3c39b4a81a73176f783173e899f8ee1fdb0aa2a227930",
+    "apps/server/src/research/barrier-learning.ts": "bcd91ef518d5f080bed3e503dea5538ef3df9c49d8c559210bd4345d48832f87",
+    "scripts/fit-common-market-ridge.py": "48ff7f69cb4b4a585107d2648bd3cbe9dd15187391969165b2fd9e599fd3f8f3"
+  },
+  "corpus": "docs/barrier-clock-corpus-3262b4fb3be9b47e.json",
+  "corpusHash": "3262b4fb3be9b47e7edf0954e93d52f85fda6dfedf7159178c440fa6300a7414",
+  "prior": "docs/barrier-net-walkforward-4898631417b16e07.json",
+  "priorHash": "4898631417b16e07db860acf1342af2160ab138bd98ea0dfece8a341ba37facc",
+  "lambda": 10,
+  "minTrainRows": 200,
+  "margin": 0.005,
+  "selection": "FixedMSE,min40knownvalidation/95percentcoverage/stablezero,mean,ridge,common,market/1e-12conservativeties/nullforecastzero/unknownlabelsexcluded.",
+  "hypothesis": "ONE BTC4hpercent common-market feature differs from prior relative-strength hard entry gate. Original8Dcontains own4h only; do not add own-minusBTC as another independent vote. Same-clock closed source hash binding; missingBTC=>nullquery.",
+  "scope": "Original41purged14/4/4folds andall7280observations, same labels/costs/trainonlytransforms/guards, faircommon8/9. Historical modeledclose availability only, not actualfirstreceipt. No extra data/API/July.",
+  "limitation": "Exploratory on alreadyexaminedhistory. This execution registration does not create a new untouchedholdout. No parameter/feature/threshold search or deployment/performanceconfidenceclaim."
+}

@@ -1,0 +1,11 @@
+# Review pass19 — complete evaluator cycles and source availability
+
+01.11.2026. Existing OctoBot StrategyEvaluator source reverified in manifest-cycle-review.json at pinnedc45fdc2c95c5bd3d649251fa90c327e2e8f86b00, componentLGPL3+. No new files/packages or code execution/port;47selectedincl5licences remains partial.
+
+Read strategy_matrix_callback/is_evaluator_cycle_complete, available-node cache/retry, current-time validity and last-evaluation bookkeeping. TA is the default full-cycle type; configured timeframe and cycle checks can suppress strategy wakeups. The cycle path checks duplicate evaluator timestamp then validity of available evaluator-node paths at exchange current time and allowed exchange lag. Cached paths are grouped by matrix/exchange/type/crypto/symbol, collected across configured available timeframes; KeyError clears caches and retries once. Last emitted update is tracked by exchange/type/crypto/symbol/timeframe, and allowed lag is obtained from exchange API.
+
+These are useful orchestration concepts: do not issue decisions from a partial refreshed panel or count repeated notifications as independent evidence. They are not a mathematical guarantee of identical quote, return anchors or closed source candles for a cross-market ratio; dependency semantics/configuration and arbitrary upstream availability were not proved. No upstream defect claimed, including empty-node/caller edge cases not executed. We do not port the asynchronous framework to the existing scheduler.
+
+Own BTC-relative research helper therefore checks exact17barclosed windows, quotes, identity, source validity and clocks independently of update notification timestamps. Its entry filter also matches BTC and asset feature endpoint/returns, retains all original source risk/exit guards and BTCself semantics. Existing risk/absolute-momentum guards remain necessary: negative asset returns can outperform a more-negative benchmark; relative strength alone never establishes profit or long eligibility.
+
+Registered full comparison now complete; independent raw verification required before final numbers/promotion decisions. Early inspected outcomes include worseMarch despite fewer trades; source-aware context is a capability improvement, not an automatic economic benefit. July kept locked, no rule or model activation.

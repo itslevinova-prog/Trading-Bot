@@ -1,0 +1,27 @@
+{
+  "version": "policy-learning-chronology-v1",
+  "sourceInputFactsHash": "ea2bb7642d52d94f9e99742930aa4fe875f5c95ae1ef10624609a834dc0de66d",
+  "historicalDataAlreadyInspected": true,
+  "independentOutOfSample": false,
+  "registeredBeforeThisAudit": true,
+  "boundaryBasis": "source report fromTs plus elapsed days plus synthetic5s decision offset; last test end=source toTs+5s",
+  "folds": [
+    {
+      "validationDay": 7,
+      "testDay": 14,
+      "endDay": 21
+    },
+    {
+      "validationDay": 14,
+      "testDay": 21,
+      "endDay": null
+    }
+  ],
+  "embargoMs": 0,
+  "purge": "Availability strictly before next decision boundary; equality excluded; per-trade exit availability rather than fixed4h or row-count gap",
+  "preprocessor": "observed training-only mean/population standard deviation; missing mask; unknown-fit and newly-varying constant columns unsupported; observed-class-balanced weights training-only",
+  "decisionModelTrained": false,
+  "featureSelectionTuned": false,
+  "forecastProbability": null,
+  "performanceClaim": null
+}

@@ -1,0 +1,27 @@
+{
+  "verifiedAt": "2026-11-02T15:26:06.983Z",
+  "documentation": "docs/REGIME-ERROR-ANALYSIS.md",
+  "artifact": "docs/regime-error-audit-492008f3707d9ae1.json",
+  "factsHash": "492008f3707d9ae11c7dc9069ecb00c248efd78f55452449c0713f47f3084917",
+  "independentVerification": "docs/regime-error-verification.json",
+  "rows": 6560,
+  "knownLabels": 6559,
+  "unknownLabels": 1,
+  "groupSummariesVerified": 20,
+  "meanBeatsRidgeAllThreeDirectionalGroups": true,
+  "directTests": 12,
+  "typechecksPassed": true,
+  "buildId": "cd8a81d810cdb22697b1761edf8dc639ad52d0819e9d98119ffd7d94ee8f017c",
+  "isolation": "data/regime-error-build-isolation-2026-11-02.json",
+  "newModelFitted": false,
+  "newRuleSelected": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "sources": {
+    "apps/server/src/research/regime-error-analysis.ts": "378112f357e1b81d9a96cd7ff2f68755bc22a98fb8aef3151ef0b8db7a93d688",
+    "apps/server/test/regime-error-analysis.test.ts": "20c664b01139d64883d98a642985786deb515b6e7d8945c5d0e6c5ae23e0638d",
+    "scripts/audit-regime-errors.mjs": "be3f559ec28e00d34daa264bf43ebd4730a727b6c182cc7b97f3aacd873762e8",
+    "scripts/verify-regime-errors.mjs": "1fbf66fa56a88cb2deea9b35588327a926a79457763e18441501dd2c75ec3a4f"
+  }
+}

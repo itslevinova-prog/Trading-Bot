@@ -1,0 +1,7 @@
+{
+  "url": "https://raw.githubusercontent.com/binance/binance-spot-api-docs/master/web-socket-streams.md",
+  "capturedAt": "2026-11-03T16:29:07.260205+00:00",
+  "sha256": "9d2ba84d1b8a006a832a06de8786374666c0f5eb9ec82326ade8fc180b2ce8c1",
+  "bytes": 26845,
+  "scope": "Official public-market WebSocket schema snapshot only; no market/private API call or vendor code port."
+}

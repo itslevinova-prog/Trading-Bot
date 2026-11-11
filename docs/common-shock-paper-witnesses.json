@@ -1,0 +1,53 @@
+{
+  "version": "paper-common-shock-witness-index-v1",
+  "generatedAt": "2026-11-03T16:01:09.906Z",
+  "build": {
+    "verified": true,
+    "buildId": "eaaef07f2ad29581ca4a17bfcecdcfcdd3fcf505f5bc2749b5326e4b568ba4d4",
+    "builtAt": "2026-11-03T15:46:54.282Z",
+    "sourceFiles": 151,
+    "runtimeFiles": 141,
+    "reasons": []
+  },
+  "cases": [
+    {
+      "path": "docs/common-shock-proofs-2026-11-03/risky-full-exit-c038c2c20551.json",
+      "sha256": "86dfae69130fb14bf5b9053a8e5817bf0592318dbc72a0c0377cc600887bff25",
+      "hash": "c038c2c20551e7bdf19165e388a49c15ecf4db2cef67caa0afb3bd04d8655e8e",
+      "mode": "risky",
+      "kind": "full-exit"
+    },
+    {
+      "path": "docs/common-shock-proofs-2026-11-03/risky-stale-retry-63b4db60a294.json",
+      "sha256": "c678f3cc77f182664d00ed241d615e191d406ddf6cf460e0ee40f02a21ce5f63",
+      "hash": "63b4db60a294632a1a432e2adabfa84b3db2e7ca0c82ad0aca019efdcf6382f7",
+      "mode": "risky",
+      "kind": "stale-retry"
+    },
+    {
+      "path": "docs/common-shock-proofs-2026-11-03/safe-full-exit-4a5ed87e1488.json",
+      "sha256": "2cd5ca5584578889424230920bca58145519a440c9e871e19c4270672b4d96a2",
+      "hash": "4a5ed87e1488e6eeea2d069d1c36791722f6fd10087cefcbdb3b8e4321bf43d4",
+      "mode": "safe",
+      "kind": "full-exit"
+    },
+    {
+      "path": "docs/common-shock-proofs-2026-11-03/safe-stale-retry-417cf7c293ff.json",
+      "sha256": "a354596f6f863305d3276522e51566903ee2638ddfe0d9d581dbc223d0cb72e7",
+      "hash": "417cf7c293ff624542f530b4f18568396a04ca48883a65ca4ba1dc24aeecc2b8",
+      "mode": "safe",
+      "kind": "stale-retry"
+    }
+  ],
+  "sources": {
+    "apps/server/test/common-shock-paper.test.ts": "e1af74d6fc8afd34c9a294415328c92dc9084d41895699cd46ce613788ce0ade",
+    "apps/server/src/broker/PaperExecutionAdapter.ts": "ac5bcc608b27257c77da4327fece4fbbe34ea7ed208a9efb2b5cc6763b5373f5",
+    "apps/server/src/strategy/scheduler.ts": "9f3efb0620f6d6859d64e7953722cf5895cf195de633bee67daafc307d9bc30f",
+    "apps/server/src/strategy/protectiveExits.ts": "114e85db4110265192940bba3cb27caf118cbf4d08d70540d6ff085223c7a2f5",
+    "apps/server/src/strategy/trading-policy.ts": "8aa0a91ebfd66799165c4355c1a6dc629a3eec01163f5fe520177ad43a512cef",
+    "apps/server/src/broker/valuation.ts": "a765f54f34e1fdf408e30488bef61fba898423d7b17af5c4e6eb5b394b4170d3"
+  },
+  "realOrders": 0,
+  "externalAiCalls": 0,
+  "profitabilityEstablished": false
+}

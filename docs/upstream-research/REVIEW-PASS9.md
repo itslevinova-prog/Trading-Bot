@@ -1,0 +1,15 @@
+# Review pass 9 — entry identity and trade-local knowledge
+
+Added two public files from Freqtrade commit7fea5ea24b3c3193cfdd4143b243f7baab66d661. URLs, byte lengths, retrieval time and SHA256 are in freqtrade/manifest-entry-review.json. Total selected archive files now43 including five licence files (Freqtrade21/Jesse11/OctoBot11); this is still a partial review, not a thorough completed review of whole repositories.
+
+Read targeted sections of trade_model.py: enter_tag declarations, the per-trade set/get custom-data interface, and the position amount/stake/open-rate recalculation section around1325. The tag is a persisted trade attribute. Custom-data methods address self.id. Recalculated aggregate holdings after adjustments illustrate why one entry tag must not be treated as a complete per-fill/lot account of every scale-in or partial close. Other margin, leverage and exchange parts of this large class were not reviewed or adopted.
+
+Read custom_data.py's trade/key uniqueness and serialization/retrieval/update paths. It stores JSON-serializable complex values, typed scalar representations and creation/update timestamps. Existing trade/key data are updated; it is not an immutable entry snapshot API. Serialization failure logs a warning/returns. A None trade ID is mapped to0 by that generic wrapper; we do not infer a production bug from that fallback without caller-context verification. We did not run/install Freqtrade or copy its GPL code.
+
+Selective own implementation in the existing SQLite Paper architecture: record an explicit position ID to actual buy-fill ID link inside the same existing transaction as fake cash and holdings. Store a non-overwriting snapshot of the durable original decision/context hash, source feature/closed structure/structured assessment, execution scope, actual applied protections and policy data. Do not discover origin by nearest timestamps or pair-name joins. A partial sale retains position identity; reentry gets a new ID; scale-ins are compound hypotheses, not silent extensions of one thesis. Old positions lacking opening links remain unknown. Actual first capture time gates later context availability; historical simulation stays explicitly marked. Metadata never authorizes a trade and protective exits are independent.
+
+This adapts useful trade-local attribution concepts, not Freqtrade's ORM, dashboards, exchanges or execution system. Our code is independent TypeScript and reuses the existing broker transaction, source decisions/evidence and provenance. SHA256 detects changed stored bytes; it is not an anti-tamper attestation against a user editing the database. Recorded support is an original context fact, not proof that an earlier strategy explicitly promised that level as an exit; any new original-support exit would require its own stated and validated hypothesis.
+
+Primary sources:
+- https://github.com/freqtrade/freqtrade/blob/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/persistence/trade_model.py
+- https://github.com/freqtrade/freqtrade/blob/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/persistence/custom_data.py

@@ -1,0 +1,26 @@
+{
+  "version": "fixed-entry-intents-fee-stress-v1",
+  "registeredAt": "2026-11-02T17:31:21.855Z",
+  "runnerHash": "8a7d0a2c8ef906fb14cb19f097edbdc4c0835d33a0d85d554423872804387141",
+  "sources": {
+    "apps/server/src/research/portfolio.ts": "c9d89444c7e350bc9c7f4810bf85039046f0030e46960f7cc52a4da2fb7b37a3",
+    "apps/server/dist/research/portfolio.js": "eb16ed041c8c972735db20d6e45620e5f072c97853161573eba0ccd2a33d388a",
+    "apps/server/src/research/mock-replay-context.ts": "793068bceb009f4e49cba2ff0b3f02f94f8d160be9e446caa9c9877021452fbb"
+  },
+  "baseReport": "docs/tree-broker-study-b38666f47be482b6.json",
+  "baseReportHash": "b38666f47be482b6a2153aa8d9019c31dba17cdec582f56e32b0e26a2366ee2e",
+  "corpus": "docs/barrier-clock-corpus-3262b4fb3be9b47e.json",
+  "corpusHash": "3262b4fb3be9b47e7edf0954e93d52f85fda6dfedf7159178c440fa6300a7414",
+  "fees": [
+    0.001,
+    0.002
+  ],
+  "fixedSpreadBps": 10,
+  "fixedSlippageBps": 8,
+  "selection": "All24original generated/accepted entry intents, not only winners. Original base broker had zero rejections. No retuning or new costed-forecast selection.",
+  "baseReproduction": "Require FULL original result hash before stress interpretation.",
+  "exits": "Independent same broker protection/8h timeout; fee basis and actual exit paths/minimums can change",
+  "noFeeSearch": true,
+  "modelActivated": false,
+  "julyLoaded": false
+}

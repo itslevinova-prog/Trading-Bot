@@ -1,0 +1,18 @@
+{
+  "version": "support-opportunity-independent-v1",
+  "reportHash": "a2de62e2fb4677eed3e941aca2a219bd586213bc49441ea931bbceef287498a5",
+  "reportFileSha256": "c8addddfa66d58d4c5c949df8b9c7bceecf5d050fb6c9be390dae87f293be337",
+  "verifierHash": "d8190a9f7b2e861a7cfa5f8c181906db857fa6d56839bbe4765ff90870f652be",
+  "frozenGeometryHash": "bb7c60d0ce2dd8e92b1aa4bf3bec0f3a2d79e2e61da2bc2a9eeb0b5687da99e5",
+  "queryRowsChecked": 13120,
+  "predefinedGroupsChecked": 12,
+  "winnerRecordsChecked": 106,
+  "sourceMissingAndUnknownLabelsPreserved": true,
+  "groupsChosenWithoutOutcomes": true,
+  "forecastAndRankingKeysUnchanged": true,
+  "thresholdChosen": false,
+  "newFit": false,
+  "portfolioReturn": null,
+  "independentSamples": null,
+  "profitabilityEstablished": false
+}

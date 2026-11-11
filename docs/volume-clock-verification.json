@@ -1,0 +1,19 @@
+{
+  "version": "volume-clock-verification-v1",
+  "verifiedAt": "2026-11-02T19:24:58.539Z",
+  "report": "docs/volume-clock-audit-10fb98c4bf506856.json",
+  "factsHash": "10fb98c4bf506856a670113f36cd36398f5fc952439cba290efa23eebdd99acc",
+  "verifierHash": "3993a1d1f6a70c7909fe2692e6fd5812f7a44d358d7d0ddaa908344e8d051cab",
+  "rawWindowsVerified": 7280,
+  "originalVolumeVectorValuesVerified": 7280,
+  "maximumLegacyDifference": 0,
+  "zeroReference": 4,
+  "measuredZeroCurrent": 736,
+  "originalCorpusUnchanged": true,
+  "originalEightDimensionalSchemaUnchanged": true,
+  "newModelFitted": false,
+  "activePacketChanged": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false
+}

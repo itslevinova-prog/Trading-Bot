@@ -1,0 +1,19 @@
+{
+  "version": "aggressor-ranking-independent-v1",
+  "reportHash": "fbcfb4343dd6bd93fb8041dcffe32e78521ead2873cc7344a46f23b753e719a2",
+  "reportFileSha256": "7e4866833237c9200b0f6a7fecb907324a54b2e81b0438aed8abf45255627e6d",
+  "verifierHash": "241c88d58d047b7b175c2ef7872be31c111401c6cf54eb64b6166a96318fdd65",
+  "forecastRowsChecked": 45920,
+  "clockChoicesChecked": 2296,
+  "matchedClockDifferencesChecked": 328,
+  "originalEntireChoiceRecordsExact": true,
+  "priorAndExtendedSelectorAll328WinnerKeysEqual": true,
+  "priorAndExtendedSelectorWinnerCount": 11,
+  "ambiguousWinners": 0,
+  "newFit": false,
+  "newSelectorChosen": false,
+  "portfolioReturn": null,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false
+}

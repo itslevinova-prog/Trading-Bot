@@ -1,0 +1,23 @@
+{
+  "version": "archived-aggressor-corpus-independent-v1",
+  "reportHash": "c7cd51de2a58630a2397eb3d538d99bcb777566e4dac96cdd8ef8c1e74d141a9",
+  "reportFileSha256": "c42b5bcb53a5d7652743c0c98a7c035d7b23dea2b68e95e1bf79173b3b209742",
+  "verifierHash": "dbcd1594b02e6c581cdc33ef681b82c25fc3b23920f9e482c1e7fa677e7c4346",
+  "dataScope": "994c121ddff1abb690de37f55f49676e0b18fa1d2819cb0be8f16ac43d300de5",
+  "rawSourcePages": 480,
+  "normalizedMarketFiles": 120,
+  "allOriginalOhlcvAndFullRawOverlapExact": true,
+  "rawBarsChecked": 441600,
+  "duplicateWarmupBars": 76800,
+  "windowBarReferencesChecked": 698880,
+  "originalClockOrderExact": true,
+  "knownFeaturesVerified": 7272,
+  "unknownFeaturesVerified": 8,
+  "precisionDigits": 60,
+  "maximumImbalanceDifference": 8.881784197001252e-16,
+  "availabilityDomainsSeparate": true,
+  "newNetworkRequests": 0,
+  "modelFitted": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false
+}

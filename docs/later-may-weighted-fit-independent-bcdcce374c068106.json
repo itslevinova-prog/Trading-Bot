@@ -1,0 +1,25 @@
+{
+  "version": "later-may-weighted-fit-independent-v1",
+  "verifiedAt": "2026-11-03T20:57:02.138564+00:00",
+  "report": {
+    "path": "docs/later-may-frozen-models-5d81da40dcc2f7d6.json",
+    "hash": "5d81da40dcc2f7d662013b0988a164325b81c48478ea5c1d44a34ce870d324ad"
+  },
+  "reportFileSha256": "62682c694c83bb2bc72ef14f6ad8d73f3e33bbee0abbe731a12b82d171823d8e",
+  "verifierSha256": "f1842bbb538c1990b5f72d23108c37999dfee565301a003d457fb69deb0bf9a8",
+  "knownRows": 8879,
+  "sharedClocks": 444,
+  "rowWeightsChecked": 8879,
+  "calendarWeightMaxError": "2.3719909498945150444418212001801265847552403999882201735602392886E-15",
+  "parameterMaxErrors": {
+    "means": "3.1599756659064411137503512236404460059486021714659959396193946445E-15",
+    "stds": "2.5170747988846556901057665941324292133134519326004554441586312838E-15",
+    "weights": "4.51837819296380547786195614660429202885841822253174622938888498061E-17",
+    "intercept": "1.48218378983716484177533285330458029034416946144217283025436932327E-17"
+  },
+  "precisionDigits": 80,
+  "mayLabelsRead": false,
+  "economicEvaluationPerformed": false,
+  "profitabilityEstablished": false,
+  "scope": "Independent clockgrouprecency/unequalassetcountnormalization andweightedscaling/mean/lambda10normal equations. Training numerical witness only; no future predictive advantage or sample independence inferred."
+}

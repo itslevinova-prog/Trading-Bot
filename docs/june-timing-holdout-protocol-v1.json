@@ -1,0 +1,282 @@
+{
+  "version": "june-timing-holdout-protocol-v1",
+  "registeredAt": "2026-11-04T15:38:20.850184+00:00",
+  "sourceDatasetId": "d0066ea5e97b107a22c148dbfcfcd245a2ea37e555684a5af36a382134b14926",
+  "sourceDatasetCapturedAt": "2026-10-28T20:01:22.069Z",
+  "quote": "EUR",
+  "venue": "binance",
+  "selection": "All20 frozen previous-study survivor symbols, no current ranking or performance-based exclusions; not historical constituents.",
+  "metadataAssumption": "Frozen prior dataset lot/minimum metadata, not historical exchange constraints.",
+  "symbols": [
+    "BTC/EUR",
+    "ETH/EUR",
+    "XRP/EUR",
+    "SOL/EUR",
+    "PEPE/EUR",
+    "BNB/EUR",
+    "ADA/EUR",
+    "TRX/EUR",
+    "DOGE/EUR",
+    "DOT/EUR",
+    "XLM/EUR",
+    "WIN/EUR",
+    "SUI/EUR",
+    "LINK/EUR",
+    "LTC/EUR",
+    "BCH/EUR",
+    "ICP/EUR",
+    "AVAX/EUR",
+    "SHIB/EUR",
+    "APT/EUR"
+  ],
+  "metadata": [
+    {
+      "symbol": "BTC/EUR",
+      "ordermin": 1e-05,
+      "costmin": 5,
+      "lotDecimals": 5,
+      "pairDecimals": 2
+    },
+    {
+      "symbol": "ETH/EUR",
+      "ordermin": 0.0001,
+      "costmin": 5,
+      "lotDecimals": 4,
+      "pairDecimals": 2
+    },
+    {
+      "symbol": "XRP/EUR",
+      "ordermin": 0.1,
+      "costmin": 5,
+      "lotDecimals": 1,
+      "pairDecimals": 4
+    },
+    {
+      "symbol": "SOL/EUR",
+      "ordermin": 0.001,
+      "costmin": 5,
+      "lotDecimals": 3,
+      "pairDecimals": 2
+    },
+    {
+      "symbol": "PEPE/EUR",
+      "ordermin": 1,
+      "costmin": 1,
+      "lotDecimals": 0,
+      "pairDecimals": 8
+    },
+    {
+      "symbol": "BNB/EUR",
+      "ordermin": 0.001,
+      "costmin": 5,
+      "lotDecimals": 3,
+      "pairDecimals": 2
+    },
+    {
+      "symbol": "ADA/EUR",
+      "ordermin": 0.1,
+      "costmin": 5,
+      "lotDecimals": 1,
+      "pairDecimals": 4
+    },
+    {
+      "symbol": "TRX/EUR",
+      "ordermin": 1,
+      "costmin": 5,
+      "lotDecimals": 0,
+      "pairDecimals": 4
+    },
+    {
+      "symbol": "DOGE/EUR",
+      "ordermin": 1,
+      "costmin": 1,
+      "lotDecimals": 0,
+      "pairDecimals": 5
+    },
+    {
+      "symbol": "DOT/EUR",
+      "ordermin": 0.01,
+      "costmin": 5,
+      "lotDecimals": 2,
+      "pairDecimals": 3
+    },
+    {
+      "symbol": "XLM/EUR",
+      "ordermin": 1,
+      "costmin": 5,
+      "lotDecimals": 0,
+      "pairDecimals": 4
+    },
+    {
+      "symbol": "WIN/EUR",
+      "ordermin": 1,
+      "costmin": 5,
+      "lotDecimals": 0,
+      "pairDecimals": 8
+    },
+    {
+      "symbol": "SUI/EUR",
+      "ordermin": 0.1,
+      "costmin": 5,
+      "lotDecimals": 1,
+      "pairDecimals": 4
+    },
+    {
+      "symbol": "LINK/EUR",
+      "ordermin": 0.01,
+      "costmin": 5,
+      "lotDecimals": 2,
+      "pairDecimals": 3
+    },
+    {
+      "symbol": "LTC/EUR",
+      "ordermin": 0.001,
+      "costmin": 5,
+      "lotDecimals": 3,
+      "pairDecimals": 2
+    },
+    {
+      "symbol": "BCH/EUR",
+      "ordermin": 0.001,
+      "costmin": 5,
+      "lotDecimals": 3,
+      "pairDecimals": 1
+    },
+    {
+      "symbol": "ICP/EUR",
+      "ordermin": 0.01,
+      "costmin": 5,
+      "lotDecimals": 2,
+      "pairDecimals": 3
+    },
+    {
+      "symbol": "AVAX/EUR",
+      "ordermin": 0.01,
+      "costmin": 5,
+      "lotDecimals": 2,
+      "pairDecimals": 3
+    },
+    {
+      "symbol": "SHIB/EUR",
+      "ordermin": 1,
+      "costmin": 1,
+      "lotDecimals": 0,
+      "pairDecimals": 8
+    },
+    {
+      "symbol": "APT/EUR",
+      "ordermin": 0.01,
+      "costmin": 5,
+      "lotDecimals": 2,
+      "pairDecimals": 4
+    }
+  ],
+  "periods": [
+    {
+      "id": "2026-06",
+      "fromTs": 1780272000000,
+      "toExclusive": 1782864000000,
+      "warmupDays": 8
+    }
+  ],
+  "baselineOptions": {
+    "startingBalance": 100,
+    "feeRate": 0.001,
+    "spreadBps": 10,
+    "slippageBps": 8,
+    "fromTs": 1790883000000,
+    "toTs": 1793215800000,
+    "decisionIntervalMinutes": 15,
+    "maxDrawdownPct": 0.25,
+    "minOrderQuote": 10,
+    "risk": {
+      "maxPositionPct": 0.3,
+      "maxOpenPositions": 4,
+      "maxTradesPerDay": 10,
+      "cooldownMinutes": 60,
+      "maxPortfolioRiskPct": 0.025,
+      "feeRate": 0.001
+    },
+    "entry": {
+      "maxSpreadBps": 20,
+      "maxSlippageBps": 30
+    }
+  },
+  "primaryComparison": "Fixed May portfolio policy repeated over June against unchanged RuleBasedProvider on matched clocks and cash. Report all policies and hard spread rejections.",
+  "feeRates": [
+    0.001,
+    0.002
+  ],
+  "benchmark": "Cash and BTC buy/hold with costs; no automatic promotion or threshold tuning.",
+  "strategyModules": {
+    "strategy/providers.js": "3efce9850579e6f025f3f52abd8196383c5c1250f811fce6fe07762ac930b659",
+    "strategy/paper-intelligence.js": "2350f9903953a5940cb7c603e6ece4e85199c24d16f8ef18cce231e4c5db5dca",
+    "strategy/covariance-paper.js": "cba1c2eb32ee1c12a8008feeb828320789df6b7dd1020fd51909b9a2150ca70d",
+    "strategy/structure-exit-paper.js": "e235d87a3bce52833fa9a7ab528276a3cfba311ce52fe9d6ebe5467ff44f6f33",
+    "strategy/entry-support-paper.js": "8a0310fc9401110c0841281510381fb7797963557b651b1ad85f00cbfec66118",
+    "research/portfolio.js": "5eae91f903df48561f5d3a150ca51a1250da65f40ae75299db6e038a9ddf2958",
+    "market/indicators.js": "27fd59bc681dbfbf480fb28ff6295c88568974acf1a21052a90de35141383c00",
+    "broker/risk.js": "6bdb433600fef3bda315c00aeb82208b20f60ded5738307d3cb2a1b5dfd1454b"
+  },
+  "endpoint": "https://data-api.binance.vision/api/v3/klines",
+  "publicGETOnly": true,
+  "maxNetworkRequestsTotal": 80,
+  "maxPagesPerSymbolPeriod": 4,
+  "completeUniverseRequired": true,
+  "sourceCapture": "Public unauthenticated GET candles only. Require full registered universe and preserve original raw pages.",
+  "dataPreviouslyUsedForDesign": true,
+  "designInformedByLaterConsumedOctober2026Data": true,
+  "strictHistoricalDeployabilityEstablished": false,
+  "independentOutOfSampleClaim": false,
+  "noParameterSearch": true,
+  "existingDefaultDatasetMustRemainUnchanged": true,
+  "existingDatabasesAndForwardExperimentsMustRemainUnchanged": true,
+  "periodRoles": {
+    "2026-06": "fixed-timing-holdout-only"
+  },
+  "selectionRule": "No parameter or policy selection from June. Predefined comparison only. No automatic promotion.",
+  "reservedUnfetched": [
+    "2026-07"
+  ],
+  "evaluationAuthorizedByThisProtocol": true,
+  "newModelOrThresholdSelected": false,
+  "futureEvaluationRequirement": "July remains locked. No threshold tuning based on June.",
+  "sourceContract": {
+    "url": "https://developers.binance.com/en/docs/catalog/core-trading-spot-trading/api/rest-api/market#klinecandlestick-data",
+    "verifiedAt": "2026-11-03T20:28:28.315820+00:00",
+    "method": "GET",
+    "path": "/api/v3/klines",
+    "interval": "15m",
+    "limit": 1000,
+    "clock": "UTC",
+    "expectedPagesPerSymbol": 4,
+    "expectedBarsPerSymbol": 3744
+  },
+  "firstReceiptDomain": "Actual retrieval time now; no claim of first historical receipt or historical taker capture.",
+  "registrationSourceHashes": {
+    "scripts/capture-historical-periods.mjs": "9bc245110a1e183671af676287e81343dc4a7806d1d00da0683b0ee91eb1cc19",
+    "scripts/historical-period-files.mjs": "9f7973e6769efe90f7162a132d017e0566a9ee748cd6f93523a2e9d4710d5303",
+    "scripts/evaluate-may-breadth-timing.mjs": "4eb60d425244c0162f963ed354289f8eb035b83959db11041c163777384f16f1",
+    "scripts/replay-may-frozen-portfolio.mjs": "d168190a278ea972016bcf3abcd0a9d26a72bf1baa14482a74098c7035483619",
+    "apps/server/dist/research/portfolio.js": "5eae91f903df48561f5d3a150ca51a1250da65f40ae75299db6e038a9ddf2958",
+    "apps/server/dist/context/relative-strength.js": "6a4f7f9f31d1f296d9eb62da4537222784a3643782cc3cdd2f5d78a06693cfdd"
+  },
+  "priorDesignScope": "Consumed May timing and portfolio results. June outcome window reserved.",
+  "sourceDocumentation": "https://developers.binance.com/en/docs/catalog/core-trading-spot-trading/api/rest-api/market",
+  "comparison": {
+    "window": "Full June UTC, every 12 hours beginning at midnight June 1.",
+    "selection": "Identical May rule: highest closed 4h relative return among 19 non-BTC markets with positive absolute and BTC-relative return. Resolve ties by pair. Require all 20 aligned 97-candle windows and 19 relative features. No entry on missing evidence.",
+    "policies": [
+      "unchanged RuleBasedProvider",
+      "ungated momentum",
+      "BTC24h positive",
+      "BTC24h positive and majority altcoins advancing",
+      "cash",
+      "ungated double costs with unchanged hard caps"
+    ],
+    "execution": "Same 100 EUR initial portfolio, Safe caps and 15% sizing, one held position, 2% fee-inclusive stop, 4% target, entry one 15m candle after decision, 32-bar timeout at next eligible open. OHLC execution assumptions and exchange metadata identical to May portfolio protocol.",
+    "metrics": "Final equity, drawdown, accepted and closed trades, fees, rejection reasons and unliquidated positions. Report all outcomes with synthetic execution caveats.",
+    "promotionAllowed": false
+  },
+  "priorSourceSha256": "03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54"
+}

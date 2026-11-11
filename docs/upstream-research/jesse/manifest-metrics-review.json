@@ -1,0 +1,14 @@
+{
+  "commit": "aded4b9d51d432d411a8f7fbf45e47572dff6629",
+  "license": "MIT",
+  "selectedAt": "2026-11-03T15:03:04.998Z",
+  "files": [
+    {
+      "path": "jesse/services/metrics.py",
+      "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/services/metrics.py",
+      "local": "docs/upstream-research/jesse/source/jesse/services/metrics.py",
+      "sha256": "00561472a7e1a669ab14410c8e4c0cbe1d05b0153626b71f26d55dc85f48e06d",
+      "bytes": 19194
+    }
+  ]
+}

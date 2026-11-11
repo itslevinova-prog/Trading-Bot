@@ -1,0 +1,15 @@
+{
+  "observedAt": "2026-10-31T23:23:52.128Z",
+  "domain": "Synthetic analytical observation, not evaluated trade or profit evidence",
+  "source": "Current bullish entry compares M15price to closedH1EMA50; that level condition alone does not establish direction of the hourly mean.",
+  "quarterClose": 117.55000000000001,
+  "closedHourlyEma50": 116.55000000000001,
+  "previousClosedHourlyEma50": 116.65000000000002,
+  "lastClosedHourClose": 114.1,
+  "priceAboveHourlyMean": true,
+  "hourlyMeanFalling": true,
+  "emaInverseError": 0,
+  "directionIdentity": "For E_t=k*C_t+(1-k)*E_(t-1), sign(E_t-E_(t-1))=sign(C_t-E_t) for0<k<1.",
+  "implementationGap": "Live market context includes compactH1rows; mockReplayStudy currently omits them. Any future hourly-direction rule needs shared causal clock/scope/mean consistency evidence in both paths, not an assumed replay candle source.",
+  "notImplemented": true
+}

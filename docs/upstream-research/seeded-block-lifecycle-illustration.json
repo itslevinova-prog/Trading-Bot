@@ -1,0 +1,25 @@
+{
+  "version": "seeded-block-lifecycle-illustration-v1",
+  "illustrativeSeed": 17,
+  "sourceTupleRows": 99,
+  "outputRows": 100,
+  "blockLength": 10,
+  "sameSeedAndCallsProduceSameIndices": true,
+  "originalMonotonePriceVolumeCorrelation": 1.0,
+  "resampledCrossAssetPriceDeltaCorrelation": 1.0,
+  "resampledDeltaVersusUnshuffledVolumeCorrelation": -0.42924517226560394,
+  "blockStarts": [
+    66,
+    76,
+    9,
+    14,
+    41,
+    50,
+    68,
+    33,
+    3,
+    19,
+    41
+  ],
+  "scope": "Own numerical illustration only, no Jesse code imported/executed. Conditional equal-index price resampling does not preserve original price-volume relation when volume remains in old timestamp order. Not new market evidence, a fitted parameter or profitability probability."
+}

@@ -1,0 +1,24 @@
+{
+  "version": "entry-payoff-independent-verification-v1",
+  "verifiedAt": "2026-11-01T14:07:16.824Z",
+  "factsHash": "ac477e4a42f3fa436d5d280ddd11ac8e542e368418b285ba44b712302c63d7c4",
+  "geometryHash": "b212745bf4f1e69fd17f546f2cfbaca31a5ddddb7e63e5115fdcfcfdeedf7167",
+  "checkedRows": 269,
+  "normalizedCashFlowsVerified": true,
+  "snapshotSerializedIdentityVerified": true,
+  "actualFeeLedgerGeometryVerified": true,
+  "floors": {
+    "programmed-rising-hourly-breakout-entry-v1": {
+      "entries": 139,
+      "binding": 135
+    },
+    "programmed-closed-btc-relative-entry-v1": {
+      "entries": 126,
+      "binding": 122
+    }
+  },
+  "testsPassed": 9,
+  "sourceStrategyChanged": false,
+  "probabilityEstimated": false,
+  "profitabilityEstablished": false
+}

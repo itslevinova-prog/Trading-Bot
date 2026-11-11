@@ -1,0 +1,15 @@
+{
+  "version": "entry-payoff-assumptions-v1",
+  "registeredAt": "2026-11-01T13:59:35.174313+00:00",
+  "runnerHash": "022f4f894d346c22313c473e27efe5bf888ea6a34d2a81b8d09be9e57c7f0a6c",
+  "report": "docs/relative-entry-study-a023aed7d8d61ea8.json",
+  "reportHash": "a023aed7d8d61ea83ca7f489011d93606a52b7733b196de415457e54e196d0dd",
+  "observations": [
+    "recorded2ATRstop or2percentfloor and2Rtarget geometry",
+    "ATR multiples without inferred reachability",
+    "conditional two-outcome RR/required-winrate versus actual exit classes"
+  ],
+  "newStrategyThresholds": false,
+  "modelFitted": false,
+  "julyLoaded": false
+}

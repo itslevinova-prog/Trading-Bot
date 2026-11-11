@@ -1,0 +1,33 @@
+{
+  "version": "same-clock-ranking-audit-v1",
+  "registeredAt": "2026-11-02T15:53:20.837Z",
+  "runnerHash": "0bfc5d207c33b1c44afa77be1754ffc9cbc352f79d93ca6cd1cd3a9849ee9db0",
+  "sources": {
+    "apps/server/src/research/clock-ranking.ts": "71c2a6fbaf54d421bdc3c39b4a81a73176f783173e899f8ee1fdb0aa2a227930",
+    "apps/server/dist/research/clock-ranking.js": "827887963a7a2c855ad98cdb81129e039000a86a891bc43a7ff43a4ea1840320",
+    "apps/server/src/research/barrier-learning.ts": "bcd91ef518d5f080bed3e503dea5538ef3df9c49d8c559210bd4345d48832f87",
+    "apps/server/dist/research/barrier-learning.js": "04a5a8337198a2d40f1ae362658373bb867d093460a0893c677b99679be785aa"
+  },
+  "corpus": "docs/barrier-clock-corpus-3262b4fb3be9b47e.json",
+  "corpusHash": "3262b4fb3be9b47e7edf0954e93d52f85fda6dfedf7159178c440fa6300a7414",
+  "models": "docs/barrier-net-walkforward-4898631417b16e07.json",
+  "modelsHash": "4898631417b16e07db860acf1342af2160ab138bd98ea0dfece8a341ba37facc",
+  "broker": "docs/barrier-broker-study-41357259f1631864.json",
+  "brokerHash": "41357259f1631864199767b38b395aba3f2b4db5505c87505549d55a1e0c39a4",
+  "margin": 0.005,
+  "ranking": "Highest strictly above-margin score at each clock; lexical pair ties, abstentions retained; zero/mean/ridge/prior-validation-selected only",
+  "phases": [
+    "Original strictly matured validation",
+    "Original nonoverlapping test windows"
+  ],
+  "metrics": [
+    "Winner forecast-minus-outcome optimism",
+    "Known mean labels and explicit ambiguous lower/upper assumed barrier scenarios",
+    "No-trade clocks as zero action, unknown chosen labels never silently zero-imputed",
+    "Actual broker entry-set alignment"
+  ],
+  "newSelectorChosen": false,
+  "newTraining": false,
+  "noThresholdSearch": true,
+  "julyLoaded": false
+}

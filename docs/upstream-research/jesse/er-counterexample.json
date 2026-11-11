@@ -1,0 +1,26 @@
+{
+  "pinnedSource": "docs/upstream-research/jesse/source/jesse/indicators/er.py",
+  "sourceHash": "223debf7ca989984e4e184799dca39a775b77d8fc7c825484f3e68186bd824fb",
+  "prices": [
+    100.0,
+    101.0,
+    102.0,
+    103.0,
+    104.0
+  ],
+  "period": 2,
+  "numpyNthDifferenceEquivalent": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "sumOfAllSlidingWindows": 6.0,
+  "pinnedCalculationEquivalent": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "lastWindowDirectionalEfficiency": 1.0,
+  "upstreamCodeExecuted": false,
+  "scope": "Inference from archived code and official NumPy semantics; no claim about every Jesse indicator, version or Rust implementation."
+}

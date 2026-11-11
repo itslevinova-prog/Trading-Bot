@@ -1,0 +1,12 @@
+{
+  "recordedAt": "2026-10-31T23:13:50.753734+00:00",
+  "oldRuntimePath": "data\\feature-history-reference-v1\\indicators.mjs",
+  "oldRuntimeHash": "77bb2ad6811c329c19fd12b6fe2cf9e99ba5336b99c6a58b4905b86a62b1bb46",
+  "oldSourcePath": "data\\feature-history-reference-v1\\indicators.ts",
+  "oldSourceHash": "2f0db8a7dfdd3b1fa4f02600ac06faaf390e7fd95db8387cc43f0635494f8455",
+  "newSourcePath": "apps\\server\\src\\market\\indicators.ts",
+  "newSourceHash": "a548dfdd16c511b4adf468042c65ff79ab786327619aded0509bc79ffe59e421",
+  "method": "97adjacent closedM15points,51adjacent closedH1points, strict closed candle scope/OHLC and finite positive quotes; unchanged known valid numerical formulas. Unknown entire feature returnsundefined, existing API unchanged.",
+  "compatibilityNotYetEstablished": true,
+  "julyOutcomesLocked": true
+}

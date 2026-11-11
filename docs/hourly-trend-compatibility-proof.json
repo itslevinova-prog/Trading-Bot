@@ -1,0 +1,56 @@
+{
+  "verifiedAt": "2026-11-01T12:04:02.968Z",
+  "runnerHash": "d3f79a4b59ed96c6a5ddefa430d8e807b4bd530cf6e51757b4d058db72f75d50",
+  "patchHash": "ee8a7faa85f5aea63eee114f6824421068f819e91c97194e13635dd9489fffd8",
+  "oldBuildId": "d1956e35d7a4e9a5babb294176e60903eb50560375ce3bbf8103c02510b1ee00",
+  "newBuildId": "7a2b241293391e896eac6febeccd8a41914a5dfee20947067a1b0402166aa9fa",
+  "runtime": {
+    "mode": "hourly-trend-v1",
+    "verifiedRuntimeModules": {
+      "strategy/providers.js": "3efce9850579e6f025f3f52abd8196383c5c1250f811fce6fe07762ac930b659",
+      "strategy/paper-intelligence.js": "2350f9903953a5940cb7c603e6ece4e85199c24d16f8ef18cce231e4c5db5dca",
+      "strategy/covariance-paper.js": "cba1c2eb32ee1c12a8008feeb828320789df6b7dd1020fd51909b9a2150ca70d",
+      "strategy/structure-exit-paper.js": "e235d87a3bce52833fa9a7ab528276a3cfba311ce52fe9d6ebe5467ff44f6f33",
+      "strategy/entry-support-paper.js": "8a0310fc9401110c0841281510381fb7797963557b651b1ad85f00cbfec66118",
+      "research/portfolio.js": "eb16ed041c8c972735db20d6e45620e5f072c97853161573eba0ccd2a33d388a",
+      "market/indicators.js": "27fd59bc681dbfbf480fb28ff6295c88568974acf1a21052a90de35141383c00"
+    }
+  },
+  "previousReport": "docs/breakout-entry-study-ad773aa0759f0716.json",
+  "previousReportHash": "ad773aa0759f0716b70ac0b2da8c95aa97a1ad247118c37c0322317845371734",
+  "fullScenariosVerified": 4,
+  "allCurvesFillsFeesAndReasonsExactlyMatched": true,
+  "checked": [
+    {
+      "period": "2026-01",
+      "fee": 0.001,
+      "variant": "programmed-structure-exit-v1",
+      "resultHash": "b6f2afe7bd9b7e36b5c9a04f0ef3f411756eb14f35ef09ab02f218e8a27788a5",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2026-01",
+      "fee": 0.001,
+      "variant": "programmed-closed-breakout-entry-v1",
+      "resultHash": "e18fd43f699d6bd01f3fa6c7fb8a9e041d6c0aec77b4f773db3744b841b7eb6a",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2026-04",
+      "fee": 0.001,
+      "variant": "programmed-structure-exit-v1",
+      "resultHash": "7402ca56ec51d4f3d19d1c8e9e3ee4759fe781df63cf87eaac53e6fbb0bbfd9a",
+      "exactFullResultMatch": true
+    },
+    {
+      "period": "2026-04",
+      "fee": 0.001,
+      "variant": "programmed-closed-breakout-entry-v1",
+      "resultHash": "0844e1c8f475ff5b6a91c333f551cb85b7a77d5ea371057deb97b1542c2f0487",
+      "exactFullResultMatch": true
+    }
+  ],
+  "unknownHistoryHandledByUnitTests": true,
+  "julyLoaded": false,
+  "profitabilityEstablished": false
+}

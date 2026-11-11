@@ -1,0 +1,44 @@
+{
+  "verifiedAt": "2026-11-02T20:54:03.526Z",
+  "buildId": "0191dc788237c588cd86388f3c71d3bf41b41e5c228438fba5438ebce2774482",
+  "documentation": [
+    "docs/ARCHIVED-AGGRESSOR-SOURCES.md",
+    "docs/AGGRESSOR-RIDGE-WALKFORWARD.md"
+  ],
+  "helperTests": 7,
+  "pythonTests": 3,
+  "typechecksPassed": true,
+  "probe": "docs/archived-aggressor-probe-independent.json",
+  "corpus": {
+    "path": "docs/archived-aggressor-corpus-c7cd51de2a58630a.json",
+    "hash": "c7cd51de2a58630a2397eb3d538d99bcb777566e4dac96cdd8ef8c1e74d141a9"
+  },
+  "corpusVerification": "docs/archived-aggressor-corpus-independent.json",
+  "ridge": {
+    "path": "docs/aggressor-ridge-walkforward-9e6096906eea1521.json",
+    "hash": "9e6096906eea152134caed8459188588a1beb4af80cf0a5aff2daf8d4bf5a916"
+  },
+  "ridgeVerification": "docs/aggressor-ridge-verification.json",
+  "availabilityDomain": "modeled-historical-bar-close-v1",
+  "newNetworkRequests": 0,
+  "oldFeatureSchemaChanged": false,
+  "modelActivated": false,
+  "actualCaptureGuardChanged": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "isolation": "data/archived-aggressor-isolation-2026-11-02.json",
+  "sources": {
+    "apps/server/src/research/historical-aggressor.ts": "548e77082c466bc57b8eee374e2c2d615e9348f65a77b0bd93c71a0cd1860183",
+    "apps/server/test/historical-aggressor.test.ts": "8a5354ed9bc88e319ed6f6348f8126b3cd125f3dc47733933601de389640ccf7",
+    "scripts/archived-public-activity.mjs": "d435ce7c6b58f0432cfd659d60b8ebdf066c3b1c01c73f8b8bf5ee7841ad57f2",
+    "scripts/probe-archived-aggressor.mjs": "5cde37e63282bedb57b509c95b736b2d3578df8a3d0bc29beddd6d4fa6166431",
+    "scripts/verify_archived_aggressor_probe.py": "963f7a86ed7b3cc3e20eec0486dc3f2f0dc9618a7b5e8509f257e1d222d23870",
+    "scripts/collect-archived-aggressor-corpus.mjs": "884ee61c26af5b835079af770bc73b5427c6081ca3e784a983e98495d5033d9a",
+    "scripts/verify_archived_aggressor_corpus.py": "dbcd1594b02e6c581cdc33ef681b82c25fc3b23920f9e482c1e7fa677e7c4346",
+    "scripts/fit-aggressor-ridge.py": "1ed3ae7906f44bf5e2ae75bf8a2d2b1345b3b50c24d6e5601abf7f1a0dbf6adb",
+    "scripts/test_aggressor_ridge.py": "52338b57016584e9eac58811da4fe578c081a4edd39d5020b18e3ff0aa3ae12b",
+    "scripts/run-aggressor-ridge-walkforward.mjs": "487e00932ac4b4e2e0ab8500726bbfba4cc079702c498c958faaf48c748705a1",
+    "scripts/verify-aggressor-ridge-walkforward.mjs": "6402c6b5c01fe879fc27200e1435171eb7b765f4d515ea01852a09298015bb27"
+  }
+}

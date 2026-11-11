@@ -1,0 +1,270 @@
+{
+  "version": "consumed-april-breadth-redundancy-v1",
+  "generatedAt": "2026-11-04T15:29:35.614Z",
+  "build": {
+    "verified": true,
+    "buildId": "9091422646e6d99527b03a65363ad8b85d0dcd92304c4a3cc349d498caa34ae6",
+    "builtAt": "2026-11-04T15:20:27.509Z",
+    "sourceFiles": 161,
+    "runtimeFiles": 151,
+    "reasons": []
+  },
+  "source": {
+    "file": "docs/paper-market-breadth-april-13230c4ddf25e182.json",
+    "sha256": "13230c4ddf25e18286c5cf3916c7cd1f91efd7ae26d9cba67584492854fcbfcc"
+  },
+  "runnerSha256": "8233906ce8c8dc86ebb932413adc785abb1b11d129648b56bccbe9d6d000519e",
+  "rows": [
+    {
+      "now": 1775044800000,
+      "btc24h": 2.021144841387823,
+      "btc4h": -0.1987368256336497,
+      "breadthExcludingBtc": 0.8421052631578947,
+      "medianMarket24h": 2.002695041470648,
+      "fractionOutperformingBtc4h": 0.2631578947368421
+    },
+    {
+      "now": 1775131200000,
+      "btc24h": -2.8370056110578856,
+      "btc4h": -0.9264824830929608,
+      "breadthExcludingBtc": 0.05263157894736842,
+      "medianMarket24h": -3.71679706598031,
+      "fractionOutperformingBtc4h": 0.47368421052631576
+    },
+    {
+      "now": 1775217600000,
+      "btc24h": 0.9702200945023387,
+      "btc4h": -0.05975878929244116,
+      "breadthExcludingBtc": 0.8947368421052632,
+      "medianMarket24h": 1.788888557725954,
+      "fractionOutperformingBtc4h": 0.7368421052631579
+    },
+    {
+      "now": 1775304000000,
+      "btc24h": 0.419026644383802,
+      "btc4h": 0.21981425532140442,
+      "breadthExcludingBtc": 0.3157894736842105,
+      "medianMarket24h": -0.1484993174383331,
+      "fractionOutperformingBtc4h": 0.15789473684210525
+    },
+    {
+      "now": 1775390400000,
+      "btc24h": -0.19223503541402343,
+      "btc4h": 0.27605027385337877,
+      "breadthExcludingBtc": 0.10526315789473684,
+      "medianMarket24h": -1.1210175368218667,
+      "fractionOutperformingBtc4h": 0.3157894736842105
+    },
+    {
+      "now": 1775476800000,
+      "btc24h": 3.587932932325777,
+      "btc4h": 0.919401649837237,
+      "breadthExcludingBtc": 0.9473684210526315,
+      "medianMarket24h": 3.671436821894114,
+      "fractionOutperformingBtc4h": 0.47368421052631576
+    },
+    {
+      "now": 1775563200000,
+      "btc24h": -1.8791303943946125,
+      "btc4h": -0.493997624383824,
+      "breadthExcludingBtc": 0,
+      "medianMarket24h": -3.5264991747661845,
+      "fractionOutperformingBtc4h": 0.5263157894736842
+    },
+    {
+      "now": 1775649600000,
+      "btc24h": 3.59807120540534,
+      "btc4h": 0.022851061676654183,
+      "breadthExcludingBtc": 0.9473684210526315,
+      "medianMarket24h": 3.904112552994543,
+      "fractionOutperformingBtc4h": 0.10526315789473684
+    },
+    {
+      "now": 1775736000000,
+      "btc24h": -0.6097881374601655,
+      "btc4h": 0.05751449649515905,
+      "breadthExcludingBtc": 0.05263157894736842,
+      "medianMarket24h": -2.7102181923463196,
+      "fractionOutperformingBtc4h": 0.21052631578947367
+    },
+    {
+      "now": 1775822400000,
+      "btc24h": 1.1384476761310935,
+      "btc4h": 0.6020936337503002,
+      "breadthExcludingBtc": 0.7894736842105263,
+      "medianMarket24h": 0.6807370339480534,
+      "fractionOutperformingBtc4h": 0.15789473684210525
+    },
+    {
+      "now": 1775908800000,
+      "btc24h": 1.0746589164514653,
+      "btc4h": 0.2660362530758409,
+      "breadthExcludingBtc": 0.5263157894736842,
+      "medianMarket24h": 0.22142892722533114,
+      "fractionOutperformingBtc4h": 0.15789473684210525
+    },
+    {
+      "now": 1775995200000,
+      "btc24h": -1.910234171725933,
+      "btc4h": -0.2625689921338714,
+      "breadthExcludingBtc": 0.05263157894736842,
+      "medianMarket24h": -1.8494777392076334,
+      "fractionOutperformingBtc4h": 0.8421052631578947
+    },
+    {
+      "now": 1776081600000,
+      "btc24h": -0.5578438138839625,
+      "btc4h": 0.26896575065977757,
+      "breadthExcludingBtc": 0.2631578947368421,
+      "medianMarket24h": -0.5295708628382467,
+      "fractionOutperformingBtc4h": 0.21052631578947367
+    },
+    {
+      "now": 1776168000000,
+      "btc24h": 3.8184178478679165,
+      "btc4h": -0.39490724782286213,
+      "breadthExcludingBtc": 0.9473684210526315,
+      "medianMarket24h": 2.363620385646825,
+      "fractionOutperformingBtc4h": 0.8947368421052632
+    },
+    {
+      "now": 1776254400000,
+      "btc24h": -0.06431305724765579,
+      "btc4h": 0.6572310511719248,
+      "breadthExcludingBtc": 0.42105263157894735,
+      "medianMarket24h": -0.2618868035523414,
+      "fractionOutperformingBtc4h": 0.9473684210526315
+    },
+    {
+      "now": 1776340800000,
+      "btc24h": 0.4742549683456998,
+      "btc4h": -0.09621240011671306,
+      "breadthExcludingBtc": 0.8947368421052632,
+      "medianMarket24h": 2.1414496005164207,
+      "fractionOutperformingBtc4h": 0.3684210526315789
+    },
+    {
+      "now": 1776427200000,
+      "btc24h": 1.291928318836244,
+      "btc4h": 0.6016916832918717,
+      "breadthExcludingBtc": 0.9473684210526315,
+      "medianMarket24h": 2.754263486309916,
+      "fractionOutperformingBtc4h": 0.3684210526315789
+    },
+    {
+      "now": 1776513600000,
+      "btc24h": 0.7701418198064136,
+      "btc4h": -1.3141112179436254,
+      "breadthExcludingBtc": 0.21052631578947367,
+      "medianMarket24h": -1.267650171012652,
+      "fractionOutperformingBtc4h": 0.10526315789473684
+    },
+    {
+      "now": 1776600000000,
+      "btc24h": -0.3842248234397938,
+      "btc4h": 0.48353994258150124,
+      "breadthExcludingBtc": 0.15789473684210525,
+      "medianMarket24h": -1.0825493184867085,
+      "fractionOutperformingBtc4h": 0.5789473684210527
+    },
+    {
+      "now": 1776686400000,
+      "btc24h": -0.6904010440445862,
+      "btc4h": 0.42308256008540823,
+      "breadthExcludingBtc": 0.10526315789473684,
+      "medianMarket24h": -0.7430057346423269,
+      "fractionOutperformingBtc4h": 0.05263157894736842
+    },
+    {
+      "now": 1776772800000,
+      "btc24h": 1.6709970388701034,
+      "btc4h": 0.4484256421082522,
+      "breadthExcludingBtc": 0.9473684210526315,
+      "medianMarket24h": 1.5457538167938933,
+      "fractionOutperformingBtc4h": 0.3684210526315789
+    },
+    {
+      "now": 1776859200000,
+      "btc24h": 2.687512289115701,
+      "btc4h": 0.5587709119113438,
+      "breadthExcludingBtc": 0.9473684210526315,
+      "medianMarket24h": 2.056376984382857,
+      "fractionOutperformingBtc4h": 0.3157894736842105
+    },
+    {
+      "now": 1776945600000,
+      "btc24h": -0.39161965697547263,
+      "btc4h": -0.3569837169082324,
+      "breadthExcludingBtc": 0,
+      "medianMarket24h": -2.3854130130926574,
+      "fractionOutperformingBtc4h": 0.7368421052631579
+    },
+    {
+      "now": 1777032000000,
+      "btc24h": 0.5082131315342187,
+      "btc4h": 0.5662245874696659,
+      "breadthExcludingBtc": 0.8421052631578947,
+      "medianMarket24h": 0.9791973451320213,
+      "fractionOutperformingBtc4h": 0.42105263157894735
+    },
+    {
+      "now": 1777118400000,
+      "btc24h": -0.727418900559762,
+      "btc4h": 0.26560641760244863,
+      "breadthExcludingBtc": 0.21052631578947367,
+      "medianMarket24h": -0.32033983130500543,
+      "fractionOutperformingBtc4h": 0.05263157894736842
+    },
+    {
+      "now": 1777204800000,
+      "btc24h": 0.49226819043577397,
+      "btc4h": -0.056703247407863255,
+      "breadthExcludingBtc": 0.6842105263157895,
+      "medianMarket24h": 0.4444975963336817,
+      "fractionOutperformingBtc4h": 0.7894736842105263
+    },
+    {
+      "now": 1777291200000,
+      "btc24h": -0.5395115233504777,
+      "btc4h": 0.27323049001815036,
+      "breadthExcludingBtc": 0.05263157894736842,
+      "medianMarket24h": -1.8657755499860762,
+      "fractionOutperformingBtc4h": 0.42105263157894735
+    },
+    {
+      "now": 1777377600000,
+      "btc24h": -1.6206022685143706,
+      "btc4h": -0.7379876133617014,
+      "breadthExcludingBtc": 0.21052631578947367,
+      "medianMarket24h": -0.6929042968496613,
+      "fractionOutperformingBtc4h": 0.8421052631578947
+    },
+    {
+      "now": 1777464000000,
+      "btc24h": 1.6652973291863216,
+      "btc4h": 0.7716632618899988,
+      "breadthExcludingBtc": 0.9473684210526315,
+      "medianMarket24h": 1.9329795886370404,
+      "fractionOutperformingBtc4h": 0.3157894736842105
+    },
+    {
+      "now": 1777550400000,
+      "btc24h": -2.0362707427268423,
+      "btc4h": -0.350143794266522,
+      "breadthExcludingBtc": 0.10526315789473684,
+      "medianMarket24h": -2.340065369481642,
+      "fractionOutperformingBtc4h": 0.3684210526315789
+    }
+  ],
+  "stats": {
+    "breadthVsBtc24h": 0.8391205068977305,
+    "medianVsBtc24h": 0.8859984842808325,
+    "breadthVsBtc4h": 0.4207896532918771,
+    "breadthVsRelative4h": -0.01847837356300903,
+    "btcUpButMostAltsFlatOrDown": 2,
+    "btcFlatOrDownButMostAltsUp": 0
+  },
+  "scope": "Contemporaneous descriptive analysis, 30 fixed daily clocks in inspected April. BTC excluded from breadth count. No outcome, fit or execution evaluated.",
+  "independentSamples": null,
+  "profitabilityEstablished": false
+}

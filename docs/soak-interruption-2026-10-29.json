@@ -1,0 +1,25 @@
+{
+  "observedAt": "2026-10-29T15:26:33.540871+00:00",
+  "status": "interrupted",
+  "continuousTenHoursCompleted": false,
+  "cause": "Unknown; recorded monitor and paper process PIDs absent at recovery",
+  "previousMonitor": {
+    "startedAt": "2026-10-28T18:57:23.494Z",
+    "expectedEndAt": "2026-10-29T04:57:23.494Z",
+    "updatedAt": "2026-10-28T21:36:25.942Z",
+    "samples": 160,
+    "failures": 0,
+    "disconnectedSamples": 0,
+    "staleBookSamples": 154,
+    "elapsedMs": 9542448,
+    "monitorOnly": true,
+    "activeDevelopmentTimeMs": 0,
+    "file": "C:\\Users\\user\\Documents\\Projekte\\Buisness\\New_Trading_AI\\kraken-paper-bot\\data\\soak\\2026-10-28T18-57-23.494Z.jsonl"
+  },
+  "recordedSamples": 160,
+  "firstAt": 1793213843560,
+  "lastAt": 1793223385941,
+  "maxSampleIntervalMs": 61165,
+  "jsonlSha256": "c7d4997f1a8b68982843a4eb9adbb1f074963b8e7fcb1445c9f996e3d18b19bf",
+  "activeDevelopmentSeconds": 0
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "path": "jesse/indicators/donchian.py",
+    "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/indicators/donchian.py",
+    "sha256": "b7e96ebe3ba476c771a65b353c269a84d02e04587f0d76166c5f322bbbb3a401",
+    "bytes": 1820,
+    "retrievedAt": "2026-10-31T23:03:25.788853+00:00"
+  },
+  {
+    "path": "jesse/candle_pipelines/moving_block_bootstrap.py",
+    "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/candle_pipelines/moving_block_bootstrap.py",
+    "sha256": "f8f135edb97d23d0b714acfc2abc580deb0323e938a0dc18b86624fe63bedc10",
+    "bytes": 4001,
+    "retrievedAt": "2026-10-31T23:03:26.015591+00:00"
+  }
+]

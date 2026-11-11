@@ -1,0 +1,25 @@
+{
+  "version": "calendar-weighted-fit-independent-v1",
+  "verifiedAt": "2026-11-03T20:52:24.563799+00:00",
+  "report": {
+    "path": "docs/calendar-weighted-training-84d5bd03c2e04ed6.json",
+    "hash": "84d5bd03c2e04ed69468bc34bb41d2b835ab095b9450f327473a9d4250c8234f"
+  },
+  "reportFileSha256": "b83d56c9a252befe4263ecca407216b91d00738370e754fa6ed1726324d8620d",
+  "verifierSha256": "5c2911b1994f27a541a57b943e1bc1493b4f440be28ff55c8382d0d6a21d0dff",
+  "knownRows": 8479,
+  "sharedClocks": 424,
+  "rowWeightsChecked": 8479,
+  "calendarWeightMaxError": "2.5950635493159852767201865749821711260072340667841167494865494904E-15",
+  "parameterMaxErrors": {
+    "means": "9.4390610574665625442981182697215437169836954436107987011322924899E-16",
+    "stds": "1.6186558169817604672588568971708626040685035421490415751619503481E-14",
+    "weights": "4.53830228773783486804844534716816328650679486776700033142118576145E-17",
+    "intercept": "3.0812745687443908624105166263976788981905697445335385578864518794E-18"
+  },
+  "precisionDigits": 80,
+  "mayLabelsRead": false,
+  "economicEvaluationPerformed": false,
+  "profitabilityEstablished": false,
+  "scope": "Independent clockgrouprecency/unequalassetcountnormalization andweightedscaling/mean/lambda10normal equations. Training numerical witness only; no future predictive advantage or sample independence inferred."
+}

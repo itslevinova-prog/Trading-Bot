@@ -1,0 +1,6 @@
+# Optional local numerical research only. Main TypeScript app has no Python dependency.
+# Existing NumPy2.5.4 and SciPy1.18.1 were reused read-only through --system-site-packages.
+# docs/local-tree-environment.json records actual versions, RECORD hashes and copied notices.
+scikit-learn==1.7.2
+joblib==1.5.2
+threadpoolctl==3.6.0

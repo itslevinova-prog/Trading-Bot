@@ -1,0 +1,14 @@
+{
+  "datasetId": "d0066ea5e97b107a22c148dbfcfcd245a2ea37e555684a5af36a382134b14926",
+  "pointerHash": "f10adc960a8f4340a9367bb328172a5170f118443eda5c6ce92efd8d74855810",
+  "defaultReportHash": "60dd2d294e05fcb04e8acee5b271af97cc37fa5434c70ad21fb3f8395179fcb2",
+  "status": "passed",
+  "verifiedAt": "2026-10-28T20:06:29.095Z",
+  "runtimeFeeRate": 0.002,
+  "frozenFeeRate": 0.001,
+  "runtimeConfigurationMatches": false,
+  "defaultPreserved": true,
+  "privateExchangeCalls": 0,
+  "paidCalls": 0,
+  "realOrders": 0
+}

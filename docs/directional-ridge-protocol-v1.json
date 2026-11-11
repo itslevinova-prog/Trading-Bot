@@ -1,0 +1,48 @@
+{
+  "version": "directional-ridge-protocol-v1",
+  "registeredAt": "2026-11-02T18:58:30.966Z",
+  "runnerHash": "eb8132c6069f8a1f502d6e1c65da0ce2220c2239314e05d8a3af01c85a8db807",
+  "sources": {
+    "scripts/fit-directional-ridge.py": "8072c6951c8112c84cc9b496ccf0fbf984169b5b85e631247711e7c17beac23a",
+    "apps/server/src/research/barrier-learning.ts": "bcd91ef518d5f080bed3e503dea5538ef3df9c49d8c559210bd4345d48832f87",
+    "apps/server/dist/research/barrier-learning.js": "04a5a8337198a2d40f1ae362658373bb867d093460a0893c677b99679be785aa",
+    "apps/server/src/research/local-learning.ts": "5a127d54bdf3faa0f8628bb6baecebc6947af1709c0353693c51e54793fef690",
+    "apps/server/dist/research/local-learning.js": "eebd8828b1f64d20829eb8c8f9383bc99567aea8c5e34ae44d59c4a315af5e16",
+    "apps/server/src/context/directional-strength.ts": "edb661fd8aa978995bea6043ed7c6eb72c0bb962959c535195883156ba2d785b",
+    "apps/server/src/research/directional-strength-replay.ts": "9d6d6b3bb30184bb66fe5c9f8c21c51b2b11331a7c471626e78cbdfdeab4c369"
+  },
+  "corpus": "docs/barrier-clock-corpus-3262b4fb3be9b47e.json",
+  "corpusHash": "3262b4fb3be9b47e7edf0954e93d52f85fda6dfedf7159178c440fa6300a7414",
+  "sidecar": "docs/directional-clock-corpus-c3c54031ef51c33c.json",
+  "sidecarHash": "c3c54031ef51c33cef9b568a340c0bc4a3a477c1858fe679c1a98879108bc6b0",
+  "priorReport": "docs/barrier-net-walkforward-4898631417b16e07.json",
+  "priorReportHash": "4898631417b16e07db860acf1342af2160ab138bd98ea0dfece8a341ba37facc",
+  "featureSchema": {
+    "version": "closed-vector8-plus-dmi2-v1",
+    "dimensions": 10,
+    "originalDimensions": 8,
+    "append": [
+      "closed193barADX14/100",
+      "closed193barSignedMovementBalance"
+    ],
+    "excluded": [
+      "ADX slope",
+      "DI duplicated sides",
+      "volume proxy",
+      "interactions",
+      "test-derived thresholds"
+    ],
+    "missing": "No imputation; corpus proof shows all7280currently complete; any incomplete descriptor halts this comparison"
+  },
+  "lambda": 10,
+  "minTrainRows": 200,
+  "folds": "Same original41purged14/4/4day chronological windows",
+  "control": "Native8Dweights/predictions match old sealed JS models within1e-10; original zero/mean/ridge metrics exact",
+  "selection": "Validation MAE, minimum95percentcoverage, stable order zero/mean/ridge/directional, ties1e-12; never test labels",
+  "guard": "Train-only population scaling, z6outliers, maximum10days from trainedAt and lastLabelEnd",
+  "hypothesis": "Additional observed strength and signed movement balance may improve costed-barrier net-return estimates; evaluate one fixed linear ablation, no profitability presumption",
+  "parameterSearch": false,
+  "modelActivated": false,
+  "julyLoaded": false,
+  "portfolioReturn": null
+}

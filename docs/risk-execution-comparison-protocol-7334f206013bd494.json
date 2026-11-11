@@ -1,0 +1,163 @@
+{
+  "version": "risk-execution-comparison-protocol-v1",
+  "registeredAt": "2026-11-03T20:23:06.812Z",
+  "runnerHash": "991ff2056e67e032089c701bc61df58d6a7e47a7a0a3d5b1b7ce6f7ab6fd768f",
+  "sourceReport": "docs/breakout-entry-study-ad773aa0759f0716.json",
+  "sourceReportSha256": "e60e2ce5e7291bd425909269480ee3e192b62cf705ee3753b0fd79d85e951b87",
+  "previousBuildId": "3b92fac27a6e17577dfdf400e0c75f44d62a870b9d106514b3cbf0405c086792",
+  "currentBuildId": "0fd91e5ce649ac184dbf727ba44ce41806ce7598c76b00bb8f04a43876fe561e",
+  "baselineModuleHash": "eb16ed041c8c972735db20d6e45620e5f072c97853161573eba0ccd2a33d388a",
+  "relocatedBaselineHash": "f862e36a2f80fc0ceb8660dc5ff56840d321bb41109f44c0dbe653df78b1f0c2",
+  "relocations": [
+    {
+      "relative": "../strategy/trading-policy.js",
+      "target": "C:\\Users\\user\\Documents\\Projekte\\Buisness\\New_Trading_AI\\kraken-paper-bot\\apps\\server\\dist\\strategy\\trading-policy.js",
+      "pinnedSha256": "b1626dbe8713ee9678e189b817d6fd0ea404f37a8a2f20b7bcf37049768fe8e5"
+    },
+    {
+      "relative": "../market/indicators.js",
+      "target": "C:\\Users\\user\\Documents\\Projekte\\Buisness\\New_Trading_AI\\kraken-paper-bot\\apps\\server\\dist\\market\\indicators.js",
+      "pinnedSha256": "27fd59bc681dbfbf480fb28ff6295c88568974acf1a21052a90de35141383c00"
+    },
+    {
+      "relative": "../context/market-context.js",
+      "target": "C:\\Users\\user\\Documents\\Projekte\\Buisness\\New_Trading_AI\\kraken-paper-bot\\apps\\server\\dist\\context\\market-context.js",
+      "pinnedSha256": "1909b545f9c7c4b06debc7a197fae3cb5cc9612f44061bfa3362b90d94715369"
+    },
+    {
+      "relative": "../strategy/providers.js",
+      "target": "C:\\Users\\user\\Documents\\Projekte\\Buisness\\New_Trading_AI\\kraken-paper-bot\\apps\\server\\dist\\strategy\\providers.js",
+      "pinnedSha256": "3efce9850579e6f025f3f52abd8196383c5c1250f811fce6fe07762ac930b659"
+    },
+    {
+      "relative": "../broker/risk.js",
+      "target": "C:\\Users\\user\\Documents\\Projekte\\Buisness\\New_Trading_AI\\kraken-paper-bot\\data\\build-archives\\3b92fac27a6e17577dfdf400e0c75f44d62a870b9d106514b3cbf0405c086792\\apps\\server\\dist\\broker\\risk.js",
+      "pinnedSha256": "1b5536fd5b5b1016906063cee777333df74024f398dd22969af74f19d9407f12"
+    },
+    {
+      "relative": "../broker/executionGuards.js",
+      "target": "C:\\Users\\user\\Documents\\Projekte\\Buisness\\New_Trading_AI\\kraken-paper-bot\\apps\\server\\dist\\broker\\executionGuards.js",
+      "pinnedSha256": "36ddf6a284f5c302bbf1f3474a31bef97164b5814e2aa8735437a136c288d298"
+    }
+  ],
+  "scenarios": [
+    {
+      "period": "2026-01",
+      "fee": 0.001,
+      "dataHash": "3cee5b3d83140cd9a5a3a8713031d666d9a020c1cef1034ace72554ce8e1140b",
+      "options": {
+        "startingBalance": 100,
+        "feeRate": 0.001,
+        "spreadBps": 10,
+        "slippageBps": 8,
+        "fromTs": 1767225600000,
+        "toTs": 1769903100000,
+        "decisionIntervalMinutes": 15,
+        "maxDrawdownPct": 0.25,
+        "minOrderQuote": 10,
+        "risk": {
+          "maxPositionPct": 0.3,
+          "maxOpenPositions": 4,
+          "maxTradesPerDay": 10,
+          "cooldownMinutes": 60,
+          "maxPortfolioRiskPct": 0.025,
+          "feeRate": 0.001
+        },
+        "entry": {
+          "maxSpreadBps": 20,
+          "maxSlippageBps": 30
+        }
+      }
+    },
+    {
+      "period": "2026-01",
+      "fee": 0.002,
+      "dataHash": "3cee5b3d83140cd9a5a3a8713031d666d9a020c1cef1034ace72554ce8e1140b",
+      "options": {
+        "startingBalance": 100,
+        "feeRate": 0.002,
+        "spreadBps": 10,
+        "slippageBps": 8,
+        "fromTs": 1767225600000,
+        "toTs": 1769903100000,
+        "decisionIntervalMinutes": 15,
+        "maxDrawdownPct": 0.25,
+        "minOrderQuote": 10,
+        "risk": {
+          "maxPositionPct": 0.3,
+          "maxOpenPositions": 4,
+          "maxTradesPerDay": 10,
+          "cooldownMinutes": 60,
+          "maxPortfolioRiskPct": 0.025,
+          "feeRate": 0.002
+        },
+        "entry": {
+          "maxSpreadBps": 20,
+          "maxSlippageBps": 30
+        }
+      }
+    },
+    {
+      "period": "2026-04",
+      "fee": 0.001,
+      "dataHash": "fc2f1ced9d3b772d468a1fd4265938c63b040b0a04c820e908fa7d81ea92d481",
+      "options": {
+        "startingBalance": 100,
+        "feeRate": 0.001,
+        "spreadBps": 10,
+        "slippageBps": 8,
+        "fromTs": 1775001600000,
+        "toTs": 1777592700000,
+        "decisionIntervalMinutes": 15,
+        "maxDrawdownPct": 0.25,
+        "minOrderQuote": 10,
+        "risk": {
+          "maxPositionPct": 0.3,
+          "maxOpenPositions": 4,
+          "maxTradesPerDay": 10,
+          "cooldownMinutes": 60,
+          "maxPortfolioRiskPct": 0.025,
+          "feeRate": 0.001
+        },
+        "entry": {
+          "maxSpreadBps": 20,
+          "maxSlippageBps": 30
+        }
+      }
+    },
+    {
+      "period": "2026-04",
+      "fee": 0.002,
+      "dataHash": "fc2f1ced9d3b772d468a1fd4265938c63b040b0a04c820e908fa7d81ea92d481",
+      "options": {
+        "startingBalance": 100,
+        "feeRate": 0.002,
+        "spreadBps": 10,
+        "slippageBps": 8,
+        "fromTs": 1775001600000,
+        "toTs": 1777592700000,
+        "decisionIntervalMinutes": 15,
+        "maxDrawdownPct": 0.25,
+        "minOrderQuote": 10,
+        "risk": {
+          "maxPositionPct": 0.3,
+          "maxOpenPositions": 4,
+          "maxTradesPerDay": 10,
+          "cooldownMinutes": 60,
+          "maxPortfolioRiskPct": 0.025,
+          "feeRate": 0.002
+        },
+        "entry": {
+          "maxSpreadBps": 20,
+          "maxSlippageBps": 30
+        }
+      }
+    }
+  ],
+  "provider": "programmed-structure-exit-v1",
+  "historyAlreadyInspected": true,
+  "julyLoaded": false,
+  "noThresholdOrModelSearch": true,
+  "scope": "Paired descriptive execution-contract comparison, same current pinned-as-old provider/context dependencies; baseline portfolio/risk code from verified prior loaded archive. Relocation rewrites import locations only.",
+  "hash": "7334f206013bd494f2cf51471d4db17dc78c7d7fa6ed6a76e8b15e9f2509460f"
+}

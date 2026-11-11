@@ -1,0 +1,27 @@
+# Separate first-barrier outcome contract
+
+Research-only helper: apps/server/src/research/first-barrier-outcome.ts. No active provider imports or trading decisions. This is a target-definition capability for future learning/evaluation, not a trained model or a strategy improvement claim.
+
+A target is bound to data-scope SHA, horizon (1-96 closed15minute candles), fixed stop and target percentages within existing schema bounds, and fee/spread/slippage assumptions. Entry is idealized at the first raw open, adjusted for half-spread, slippage and entry fee. Stop is based on fee-inclusive entry; target on entry fill. Sell costs use the same existing diagnostic factors. The existing portfolio simulator is unchanged.
+
+The whole horizon must be present, contiguous and closed by asOf. Otherwise no label is returned, even after a seemingly early hit. Invalid source identity, duplicate/OHLC data or contract geometry rejects. Output availableAt is the full horizon close; eventBarTs identifies an interval, not the exact event time. Sorting preserves inputs; data beyond the horizon cannot change a label.
+
+Within each candle, the known open precedes unknown extrema. Adverse gap stops use open; favorable gap targets conservatively use target. If open lies between barriers and both extrema touch, outcome is ambiguous with null exit/payoff. Definite first target, stop and horizon-close timeout have distinct labels and costed conditional net returns. Inclusive boundary touches count. There is no target-first tie breaker or reassignment of an earlier stop merely because the eventual close rises.
+
+This is idealized immediate open entry, unlike actual +5second paper decisions. It lacks depth, order arrival, queue, lot rounding, outages, dynamic strategy exits and changes to protection. Entry-bar extrema may occur before an actual delayed entry. The helper therefore must not replace the production/replay broker or claim executable returns. No model consumes these labels yet, and no probability or expected value is estimated.
+
+Source review: upstream-research/REVIEW-PASS20.md. Design was saved before implementation or loading new economic outcomes: first-barrier-outcome-design-v1.json. Tests cover positive terminal return after an earlier stop, simultaneous barriers, open-gap precedence, conservative favorable gaps, maturity, missing paths, fee geometry, future invariance, readonly sorting, invalid sources and target mixing. No historical results have yet been calculated with this new label definition; this phase is implementation and synthetic validation only.
+
+Next: preregister a descriptive comparison against the already-known recorded entries, retaining all ambiguity/unavailable counts, time horizons and existing exits. Do not search for profitable parameter choices or open July. Only after target alignment and adequate honest data would a separately validated local numerical learner be considered.
+
+## First registered descriptive application
+
+Report first-barrier-recorded-entries-fe958b9f76f3cdb0.json (facts SHA256 fe958b9f76f3cdb00051da89726444aec35e8a32e583875125356bcf9f4b56d0) applies one fixed32bar/8h horizon to269 previously recorded entries using their unchanged requested stop/target geometry and original execution-cost assumptions. No parameter search, new policy or model. All267 available labels and two unavailable paths were independently checked against raw data without calling the new helper (first-barrier-recorded-entries-verification.json).
+
+Base-fee hourly139 entries:47stop,9target,82timeout,1unavailable. Relative126:45stop,9target,71timeout,1unavailable. Each stress variant has2entries,1stop/1target. Zero ambiguous or entry-bar events were observed in this selected set; synthetic ambiguity tests remain required. These are repeated selected dependent trades, not independent experiments, calibrated probabilities or a portfolio return. Geometry differs between entries and cannot be silently pooled as one prediction target without conditioning.
+
+Actual exits preceded the8h boundary in82hourly and81relative base-fee cases. The report's legacy-named originalExitBeforeBarrierEvent field compares actual exit bar against the label event bar, INCLUDING horizon timeout; interpret it as originalExitBeforeLabelEvent, not strictly as earlier than a barrier hit. Each base variant has35such cases. All timing comparisons are candle timestamps, not exact execution/event order within a candle. A horizon reached after an actual exit is a counterfactual label, not a missed realizable trade. Unavailable paths are not losses or non-hits.
+
+Full verification:1212main tests across93files,15offline tests, typechecks and build passed (data/verify-first-barrier-2026-11-01.log).13direct tests also passed independently. Build7bc014a60312d3b0f5c14f835d5a85df5368a905a24c4118695765c4ece4f1f9;129source/119runtime files. Actual main and frozenV3 runs unchanged; all113modules from the main's loaded build byte-identical. New helper has no active-provider imports. Runtime proof: data/first-barrier-runtime-isolation-2026-11-01.json.
+
+Next investigate a preregistered all-clock dataset design with explicit conditioning on entry geometry, volatility and regime, rather than fitting on selected executed winners/losers. Decide whether fixed-horizon costed return or first-barrier outcome actually answers the desired decision; do not mix them. Existing negative baseline economics remain unchanged.

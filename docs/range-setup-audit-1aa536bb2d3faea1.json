@@ -1,0 +1,327 @@
+{
+  "version": "range-setup-audit-v1",
+  "protocolHash": "b45bc87f1f9240a4befc859155a6e2108eb1cbf6ad81398877f9b68655f24b58",
+  "buildId": "c2aabc912434f6b8deb8f1c77d80575882eff1226c6fb3e18ea77d59422fb71d",
+  "datasetId": "d0066ea5e97b107a22c148dbfcfcd245a2ea37e555684a5af36a382134b14926",
+  "dataHash": "fa60e70db8f4343e6d6121c674ad32cc71754851982432227a8ea749c9cf4a67",
+  "runnerHash": "c86f5a1f761c5b177e9cc4ca6b35df4b6f5de25c879245d2da7b277379b4024f",
+  "scenarios": [
+    {
+      "scenario": "base",
+      "options": {
+        "startingBalance": 1000,
+        "feeRate": 0.001,
+        "spreadBps": 5,
+        "slippageBps": 5,
+        "fromTs": 1790883000000,
+        "toTs": 1793215800000,
+        "decisionIntervalMinutes": 15,
+        "maxDrawdownPct": 0.25,
+        "minOrderQuote": 10,
+        "risk": {
+          "maxPositionPct": 0.15,
+          "maxOpenPositions": 2,
+          "maxTradesPerDay": 4,
+          "cooldownMinutes": 120,
+          "maxPortfolioRiskPct": 0.0125,
+          "feeRate": 0.001
+        },
+        "entry": {
+          "maxSpreadBps": 10,
+          "maxSlippageBps": 15
+        }
+      },
+      "decisionTimes": 2593,
+      "observations": 51860,
+      "eligibleConditionalSetups": 0,
+      "counts": {
+        "regimes": {
+          "directional-up": 14109,
+          "unconfirmed-or-flat": 21497,
+          "directional-down": 15920,
+          "repeated-range": 334
+        },
+        "families": {
+          "no-trade": 46663,
+          "trend-continuation-research": 2290,
+          "breakout-research": 2906,
+          "range-reversion-research": 1
+        },
+        "reasons": {
+          "no-confirmed-range-reversion-setup": 51859,
+          "observed-range-target-outside-supported-distance": 1
+        },
+        "assets": {
+          "BTC/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "ETH/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "XRP/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "SOL/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "PEPE/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "BNB/EUR": {
+            "observations": 2593,
+            "rangeSetups": 1,
+            "eligibleSetups": 0
+          },
+          "ADA/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "TRX/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "DOGE/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "DOT/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "XLM/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "WIN/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "SUI/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "LINK/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "LTC/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "BCH/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "ICP/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "AVAX/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "SHIB/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "APT/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          }
+        }
+      },
+      "snapshotHash": "2e4cf2ce2f348395d1597333505f493211240ea7f2ad0b8f6a36eba476a3e7d9",
+      "executedTrades": 0,
+      "observerCashReturnPct": 0,
+      "observerReturnIsNotStrategyPerformance": true
+    },
+    {
+      "scenario": "double-fee-adaptive",
+      "options": {
+        "startingBalance": 1000,
+        "feeRate": 0.002,
+        "spreadBps": 5,
+        "slippageBps": 5,
+        "fromTs": 1790883000000,
+        "toTs": 1793215800000,
+        "decisionIntervalMinutes": 15,
+        "maxDrawdownPct": 0.25,
+        "minOrderQuote": 10,
+        "risk": {
+          "maxPositionPct": 0.15,
+          "maxOpenPositions": 2,
+          "maxTradesPerDay": 4,
+          "cooldownMinutes": 120,
+          "maxPortfolioRiskPct": 0.0125,
+          "feeRate": 0.002
+        },
+        "entry": {
+          "maxSpreadBps": 10,
+          "maxSlippageBps": 15
+        }
+      },
+      "decisionTimes": 2593,
+      "observations": 51860,
+      "eligibleConditionalSetups": 0,
+      "counts": {
+        "regimes": {
+          "directional-up": 14109,
+          "unconfirmed-or-flat": 21497,
+          "directional-down": 15920,
+          "repeated-range": 334
+        },
+        "families": {
+          "no-trade": 46663,
+          "trend-continuation-research": 2290,
+          "breakout-research": 2906,
+          "range-reversion-research": 1
+        },
+        "reasons": {
+          "no-confirmed-range-reversion-setup": 51859,
+          "observed-range-target-outside-supported-distance": 1
+        },
+        "assets": {
+          "BTC/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "ETH/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "XRP/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "SOL/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "PEPE/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "BNB/EUR": {
+            "observations": 2593,
+            "rangeSetups": 1,
+            "eligibleSetups": 0
+          },
+          "ADA/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "TRX/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "DOGE/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "DOT/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "XLM/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "WIN/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "SUI/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "LINK/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "LTC/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "BCH/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "ICP/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "AVAX/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "SHIB/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          },
+          "APT/EUR": {
+            "observations": 2593,
+            "rangeSetups": 0,
+            "eligibleSetups": 0
+          }
+        }
+      },
+      "snapshotHash": "2e4cf2ce2f348395d1597333505f493211240ea7f2ad0b8f6a36eba476a3e7d9",
+      "executedTrades": 0,
+      "observerCashReturnPct": 0,
+      "observerReturnIsNotStrategyPerformance": true
+    }
+  ],
+  "independentOutOfSample": false,
+  "profitabilityEstablished": false,
+  "calibratedProbability": null,
+  "limitations": [
+    "Consumed history and selected surviving universe; overlapping windows/assets are dependent.",
+    "OHLC next-open synthetic quotes/costs; historical books/latency/receipt times unobserved.",
+    "A setup is not a complete strategy: account status/slots/sizing/correlation/depth, entry provenance and causal exits still need integration and independent evaluation.",
+    "No executable range policy enabled or performance result inferred."
+  ],
+  "reportHash": "1aa536bb2d3faea1905015667ae9da019202abac86707a5ec76ceac9ba747b8b",
+  "generatedAt": "2026-10-31T18:34:53.149Z"
+}

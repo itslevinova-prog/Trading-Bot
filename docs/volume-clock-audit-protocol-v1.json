@@ -1,0 +1,28 @@
+{
+  "version": "volume-clock-audit-protocol-v1",
+  "registeredAt": "2026-11-02T19:23:57.667Z",
+  "runnerHash": "31c547e150af4b33fa79d1a6f47ea76895bc565a211408fa9ae65e6c5c2a9d03",
+  "sources": {
+    "apps/server/src/context/volume-activity.ts": "0abe5b6a536345cfb5e296b06889eecc4a121a823ff06dacc3d0392d243d9aa6",
+    "apps/server/dist/context/volume-activity.js": "20421bfac71135042b75ddd3a3234cd7b2049e21e1e2d45233e7caa82a48d689",
+    "scripts/historical-period-files.mjs": "8c3993e798fdcd902111d0cd1a087fc8bbabae71a9bb41d620cb86f95285a1af"
+  },
+  "corpus": "docs/barrier-clock-corpus-3262b4fb3be9b47e.json",
+  "corpusHash": "3262b4fb3be9b47e7edf0954e93d52f85fda6dfedf7159178c440fa6300a7414",
+  "periods": [
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03"
+  ],
+  "sourceWindow": 21,
+  "reference": "previous20closed15m bars; current excluded",
+  "zeroReference": "Complete source, unavailable ratio/null; distinguish measured zero current with positive reference",
+  "selection": "All original7280clocks, no label or policy filtering",
+  "verification": "Separate raw window/hash and direct-sum checks, plus60digitDecimal ratio reference; original8Dvolume column preserved",
+  "newModelFitted": false,
+  "activePacketChanged": false,
+  "julyLoaded": false
+}

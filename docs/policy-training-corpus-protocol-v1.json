@@ -1,0 +1,29 @@
+{
+  "version": "policy-training-corpus-v1",
+  "registeredAt": "2026-10-31T22:48:21.200846+00:00",
+  "runnerHash": "d548783b5fe3b9c717fb7d9c0864689cd9392b052e4f1598df8ca2a5a3637767",
+  "trainingCaptureProtocolHash": "f983c759ff02eb84d312d87051b56d978959973e7a25d7708d67446c802ca9e2",
+  "originalCaptureProtocolHash": "e3dbff522024d32e128f63621c5a3ab533f1d5d4d90d74489bb238ea9cae540c",
+  "periods": [
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03"
+  ],
+  "asOf": 1775001599999,
+  "purpose": "Causal single-policy corpus adequacy only before model design/fit; no candidate tuning. January consumed reference retained; additional month outcomes not yet inspected.",
+  "policy": "programmed-mock-structure-exit-v1",
+  "feeRate": 0.001,
+  "capital": 100,
+  "monthlyAccountReset": true,
+  "aggregateScope": "Hash sorted fixed collection month IDs/dataHashes/capture protocols plus build, decision module and invariant reset/cost convention. Each new replay/capture/label uses that aggregate scope from creation; no old label scope rewritten.",
+  "entrySource": "Original closed decision context of confirmed accepted BUY only, shared capturePolicyEntry v1. Legacy bid-relative feature spread units explicit. No post-fill receipt inputs.",
+  "target": "Full same-policy roundtrip net percent after fees/spread/slippage; end liquidation/still-open censored; outcome availability exit bar close plus5s, actual materialization separate.",
+  "minimumRowsForFutureStudy": 200,
+  "minimumIsNotEvidenceOfIndependenceOrProfit": true,
+  "fitNotAuthorizedByThisProtocol": true,
+  "julyOutcomeLock": true,
+  "modelTrained": false
+}

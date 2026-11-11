@@ -1,0 +1,16 @@
+{
+  "verifiedAt": "2026-11-02T20:26:37.008Z",
+  "fixture": "apps/server/test/fixtures/hourly-budget-context-v1.json",
+  "fixtureHash": "9800763195ca644f97ac346cd7f4d48482367f7714bd796b112d6db96e79a797",
+  "fixtureOnly": true,
+  "baselineChars": 114758,
+  "activeBudget": 115000,
+  "augmentedRejectedAtActiveBudget": true,
+  "researchOnlyComparisonBudget": 120000,
+  "augmentedComparisonChars": 117038,
+  "unknownEvidenceRowsPreserved": 20,
+  "fixtureInputsUnchanged": true,
+  "activeBudgetChanged": false,
+  "modelCallMade": false,
+  "scope": "Original fixture clocks/venues unchanged. All new rows are explicit unavailable; not a claim of20captured markets or successful production integration."
+}

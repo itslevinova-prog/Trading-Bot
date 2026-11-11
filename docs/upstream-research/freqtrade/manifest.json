@@ -1,0 +1,32 @@
+[
+  {
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/LICENSE",
+    "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
+    "bytes": 35141
+  },
+  {
+    "path": "docs/lookahead-analysis.md",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/docs/lookahead-analysis.md",
+    "sha256": "49c0cc7f34f5aa071827366d0fe28af765a2fe7a91f823548d33687bf5b633b9",
+    "bytes": 7801
+  },
+  {
+    "path": "freqtrade/optimize/analysis/lookahead.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/optimize/analysis/lookahead.py",
+    "sha256": "25b02b2d4f6e4317d8855b01976a3fef112e56280b7a33954634ed4dc51e2cca",
+    "bytes": 12470
+  },
+  {
+    "path": "freqtrade/freqai/data_kitchen.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/freqai/data_kitchen.py",
+    "sha256": "00a0d1089dab1a8ae47ef5282ca6aa1c1fbb71cb95dc27193fee61c1d1bce82e",
+    "bytes": 44308
+  },
+  {
+    "path": "freqtrade/freqai/freqai_interface.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/freqai/freqai_interface.py",
+    "sha256": "fa0c3d1835ea3e2804d23617095d877d760b357bfd02ec30a954b4ae16154065",
+    "bytes": 47293
+  }
+]

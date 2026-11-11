@@ -1,0 +1,23 @@
+{
+  "verifierHash": "995119a39ed562f8fffb014342d88416af36b8cfc7ab82717a3b0777af198e9a",
+  "verifiedAt": "2026-10-28T21:03:00.022Z",
+  "buildId": "319b229e1e0f42a1131f7035b079aeab270a4fa1072be9b47cdd002d2228daec",
+  "strategyVersion": "aee11a8c76c80a19d0325feee258d12a101dabfa770f84192a0f6c796c507193",
+  "datasetId": "d0066ea5e97b107a22c148dbfcfcd245a2ea37e555684a5af36a382134b14926",
+  "capturedAt": "2026-10-28T20:01:22.069Z",
+  "dataHash": "fa60e70db8f4343e6d6121c674ad32cc71754851982432227a8ea749c9cf4a67",
+  "optionsHash": "a24c2c6f037f819d808f1627e00bcde2237e9cda88b1e79040e5b8f8c1d0be83",
+  "privateExchangeCalls": 0,
+  "realOrders": 0,
+  "paidCalls": 0,
+  "independentProfitabilityEstablished": false,
+  "status": "passed",
+  "firstGeneratedAt": "2026-10-28T21:02:42.168Z",
+  "secondGeneratedAt": "2026-10-28T21:02:51.727Z",
+  "baseHash": "c643b595b11eee0fb035daa126eb3e7182d02fde5b08164a3e904e5b0d5bcd47",
+  "stressHash": "db98fce27804e44b2e3bf4889cf428ca7c395003d517d1eea8b963bba0365563",
+  "fromTs": 1790883000000,
+  "toTs": 1793215800000,
+  "returnPct": 0,
+  "closedTrades": 0
+}

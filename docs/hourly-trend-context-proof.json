@@ -1,0 +1,43 @@
+{
+  "verifiedAt": "2026-11-01T12:05:49.170260+00:00",
+  "buildId": "7a2b241293391e896eac6febeccd8a41914a5dfee20947067a1b0402166aa9fa",
+  "sourceFiles": 122,
+  "runtimeFiles": 112,
+  "sourceHashes": {
+    "packages/shared/src/index.ts": "57d9d4433fc5cf1d5a6e0448794a369ea6adbd42d82038e646c82c4f02f4b1ae",
+    "apps/server/src/market/indicators.ts": "09162f1e8aaad80a0c1885533ca63c3c6c0132ab9563fd57c5f6003f3cef3bb0",
+    "apps/server/src/context/hourly-trend.ts": "5baf9052f29a16074ef283428d7b144b8a4a6d7071aa3d74d2782c82115af003",
+    "apps/server/src/context/market-context.ts": "8f2bca479d46d5219b7be68d883b0d585b938456b97dd1fe725fa6a2a3affc1e",
+    "apps/server/src/research/mock-replay-context.ts": "793068bceb009f4e49cba2ff0b3f02f94f8d160be9e446caa9c9877021452fbb",
+    "apps/server/src/ai/hourly-encoding.ts": "ba16a3831ffd020bb80dc8645181720f83405b71ad4f9aa76a761551bc574b35",
+    "apps/server/src/ai/prompt.ts": "73c6b63a0cdb897764272e2772a14f6ede9d3dae56fe8a1e69f1226aba7519cd",
+    "apps/server/test/hourly-trend.test.ts": "c5bfa14c8f3857342e2a3ce7edb15440ed89a8679cf99d761a67db588712daf8",
+    "apps/server/test/hourly-encoding.test.ts": "ee0b3722f718759e6e84cf6df0e001b046b0ea359a78863854fcd1b5377bc4bc",
+    "apps/server/test/context.test.ts": "b06d9193af31e527203149772f23ef31264b9f4987678e30871c87abc66d9152",
+    "apps/server/test/feature-history.test.ts": "9bee50080dcafc15a9182fd6bb7b99b3073d6f6b3d35d861ceb5090df8b0bc77",
+    "apps/server/test/history-runtime-patch.test.ts": "c9c42a9422d9548e26cacfc1a74d3278f8882fe646bf3bd6bc6495430bc985cc",
+    "scripts/historical-period-files.mjs": "8c3993e798fdcd902111d0cd1a087fc8bbabae71a9bb41d620cb86f95285a1af",
+    "scripts/compare-hourly-trend-compatibility.mjs": "d3f79a4b59ed96c6a5ddefa430d8e807b4bd530cf6e51757b4d058db72f75d50"
+  },
+  "mainTests": 1098,
+  "offlineTests": 15,
+  "fullVerificationLog": "data/verify-hourly-trend-final-2026-11-01.log",
+  "additionalRepackTypecheck": "data/typecheck-hourly-repack-2026-11-01.log",
+  "targetedTests": {
+    "hourlyTrend": 17,
+    "dictionary": 8,
+    "repackIntegration": 1,
+    "historyRuntimePatch": 6
+  },
+  "compatibilityProof": "docs/hourly-trend-compatibility-proof.json",
+  "fullScenariosExactlyUnchanged": 4,
+  "scope": "January/April2026 base fee, source structure-exit and breakout policies; not all months/fees re-executed in this phase. Previous 28 checks belong to earlier feature24h patch.",
+  "runtimeAndReplayShareHelper": true,
+  "shortHourlyTailDoesNotReseedEMA": true,
+  "contextBudgetRaised": false,
+  "entryPolicyActivated": false,
+  "candidateProfitabilityEvaluated": false,
+  "julyLoaded": false,
+  "mainOrFrozenReferenceRestarted": false,
+  "externalAiOrPaidCalls": false
+}

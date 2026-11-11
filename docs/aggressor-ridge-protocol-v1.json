@@ -1,0 +1,31 @@
+{
+  "version": "aggressor-ridge-protocol-v1",
+  "registeredAt": "2026-11-02T20:50:44.840Z",
+  "runnerHash": "487e00932ac4b4e2e0ab8500726bbfba4cc079702c498c958faaf48c748705a1",
+  "sources": {
+    "scripts/fit-aggressor-ridge.py": "1ed3ae7906f44bf5e2ae75bf8a2d2b1345b3b50c24d6e5601abf7f1a0dbf6adb",
+    "apps/server/src/research/barrier-learning.ts": "bcd91ef518d5f080bed3e503dea5538ef3df9c49d8c559210bd4345d48832f87",
+    "apps/server/dist/research/barrier-learning.js": "04a5a8337198a2d40f1ae362658373bb867d093460a0893c677b99679be785aa",
+    "apps/server/src/research/local-learning.ts": "5a127d54bdf3faa0f8628bb6baecebc6947af1709c0353693c51e54793fef690",
+    "apps/server/dist/research/local-learning.js": "eebd8828b1f64d20829eb8c8f9383bc99567aea8c5e34ae44d59c4a315af5e16"
+  },
+  "corpus": "docs/barrier-clock-corpus-3262b4fb3be9b47e.json",
+  "corpusHash": "3262b4fb3be9b47e7edf0954e93d52f85fda6dfedf7159178c440fa6300a7414",
+  "sidecar": "docs/archived-aggressor-corpus-c7cd51de2a58630a.json",
+  "sidecarHash": "c7cd51de2a58630a2397eb3d538d99bcb777566e4dac96cdd8ef8c1e74d141a9",
+  "dataScope": "994c121ddff1abb690de37f55f49676e0b18fa1d2819cb0be8f16ac43d300de5",
+  "availabilityDomain": "modeled-historical-bar-close-v1",
+  "priorReport": "docs/barrier-net-walkforward-4898631417b16e07.json",
+  "priorReportHash": "4898631417b16e07db860acf1342af2160ab138bd98ea0dfece8a341ba37facc",
+  "lambda": 10,
+  "minTrainRows": 200,
+  "folds": "Original41chronological14/4/4day purged windows",
+  "feature": "Original8 plus exactlyone fixedlast4hquoteaggressorimbalance, no search",
+  "fairControl": "Common8D and9D train on identical source-available known rows; unknown queries abstain for both, no zero-input imputation. Also preserve all original full8D/mean/zero controls exactly.",
+  "selection": "ValidationMAE,95percentcoverage, conservative1e-12ties, stable zero/mean/ridge/common/aggressor order; no test-based choice",
+  "guards": "Train-only scaling, z6and10day freshness; all labels includingambiguous validated/mature before training; min200notlowered",
+  "parameterSearch": false,
+  "modelActivated": false,
+  "portfolioReturn": null,
+  "julyLoaded": false
+}

@@ -1,0 +1,43 @@
+{
+  "version": "policy-failure-proof-v1",
+  "verifiedAt": "2026-10-31T22:18:16.097388+00:00",
+  "buildId": "36b78687b49cc5ac1f06a8ce18486d57c78ca0fc27c987eb937fab99ff2e0b47",
+  "audit": {
+    "path": "docs/policy-failure-audit-954c617d74217901.json",
+    "hash": "954c617d74217901615b62dbe576dc981a58739d61a90f6ed4eff7abfcf77238",
+    "protocolHash": "d8cf2cdfb36bfe7f7848f1a38d4c9dcbc1f2370e3cdfaa1a330b610af9bc2202",
+    "buildId": "36b78687b49cc5ac1f06a8ce18486d57c78ca0fc27c987eb937fab99ff2e0b47"
+  },
+  "verification": "docs/policy-failure-verification.json",
+  "tests": {
+    "main": 1004,
+    "offline": 15,
+    "newDiagnosticCases": 15,
+    "typechecksAndBuildPassed": true,
+    "log": "data/verify-policy-failure-2026-10-31.log"
+  },
+  "allEightFullEconomicsExactlyMatchCorrectedReferences": true,
+  "scopedRows": 177,
+  "distinctPairEntryClocks": 103,
+  "independentSamples": null,
+  "uncensoredHistoricalLabels": 176,
+  "censoredLabels": 1,
+  "sourceEntryVersusOutcomeSeparated": true,
+  "actualMaterializationAndModelledMaturityVerified": true,
+  "structureBaseFeeFindings": {
+    "lossTrades": 68,
+    "hadPositiveStrictInteriorHypotheticalNetCloseBeforeLoss": 34,
+    "sampleScope": "January+April structure policy at0.1%fee, not independent observations",
+    "tradableGivebackRecoveryEstablished": false
+  },
+  "runtimePolicyChanged": false,
+  "modelTrained": false,
+  "julyLoaded": false,
+  "profitabilityEstablished": false,
+  "frozenV3FilesUnchanged": true,
+  "paidCalls": 0,
+  "realOrders": 0,
+  "privateExchangeCalls": 0,
+  "externalAiCalls": 0,
+  "next": "Predeclare and test a causal profit-protection hypothesis, preserving winners/fees/reentry paths and baseline parity; alternatively low-dimensional learner with explicit adequacy/chronological validation. Do not optimize on hindsight interior extremes or unlock July before freeze."
+}

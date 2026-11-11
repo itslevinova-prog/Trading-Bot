@@ -1,0 +1,20 @@
+{
+  "verifiedAt": "2026-11-01T12:25:03.709108+00:00",
+  "buildId": "d082bb911fe3ceff8924443b3791503ae5004007e97ea34d0e55630c3a405ab9",
+  "mainTests": 1132,
+  "offlineTests": 15,
+  "fullVerificationLog": "data/verify-ridge-model-final-2026-11-01.log",
+  "beforeFixLog": "data/test-ridge-model-before-fix-2026-11-01.log",
+  "beforeFixFailedCases": 6,
+  "afterFixLocalLearningTests": 23,
+  "afterFixAllPassed": true,
+  "newRegressionCases": 9,
+  "exactValidForecastComparisons": 120,
+  "contract": "docs/ridge-model-validation-contract-v1.json",
+  "compatibility": "docs/ridge-model-valid-compatibility-proof.json",
+  "sourceHash": "5a127d54bdf3faa0f8628bb6baecebc6947af1709c0353693c51e54793fef690",
+  "modelTrainedForDeployment": false,
+  "activeProviderChanged": false,
+  "numericModelAuthenticationImplemented": false,
+  "scope": "Structural validity and dense finite input rejection; not proof of target provenance, valid-sign prediction, cryptographic model identity or profitability."
+}

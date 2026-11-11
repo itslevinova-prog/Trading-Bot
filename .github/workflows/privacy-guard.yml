@@ -1,0 +1,76 @@
+name: Datenschutz-Wächter
+
+# Verhindert, dass private Daten (Namen, E-Mails, Benutzerpfade, Chat-Links,
+# Schlüssel) in dieses öffentliche Repository gelangen. Private Wörter stehen nur
+# im Secret PRIVACY_BLOCKLIST, nie im Repository; Logs zeigen nie den gefundenen Text.
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+  push:
+    branches: [main]
+  issues:
+    types: [opened, edited]
+  issue_comment:
+    types: [created, edited]
+  pull_request_review:
+    types: [submitted, edited]
+  pull_request_review_comment:
+    types: [created, edited]
+
+permissions:
+  contents: read
+
+jobs:
+  code:
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Code und Commits prüfen
+        env:
+          PG_EVENT: ${{ github.event_name }}
+          PRIVACY_BLOCKLIST: ${{ secrets.PRIVACY_BLOCKLIST }}
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          PR_HEAD: ${{ github.event.pull_request.head.sha }}
+          PUSH_BEFORE: ${{ github.event.before }}
+          PUSH_AFTER: ${{ github.event.after }}
+        run: |
+          if [ "$PG_EVENT" = "pull_request" ]; then
+            PG_MODE=diff PG_BASE="$PR_BASE" PG_HEAD="$PR_HEAD" node .github/privacy-guard/check.mjs
+          elif [ -z "$PUSH_BEFORE" ] || ! git cat-file -e "${PUSH_BEFORE}^{commit}" 2>/dev/null; then
+            # Erster Push, Force-Push oder unbekannter Vorgänger: alles prüfen.
+            PG_MODE=full node .github/privacy-guard/check.mjs
+          else
+            PG_MODE=diff PG_BASE="$PUSH_BEFORE" PG_HEAD="$PUSH_AFTER" node .github/privacy-guard/check.mjs
+          fi
+      - name: PR-Titel und -Beschreibung prüfen
+        if: github.event_name == 'pull_request'
+        env:
+          PG_MODE: text
+          PRIVACY_BLOCKLIST: ${{ secrets.PRIVACY_BLOCKLIST }}
+          PG_TEXT_TITLE: ${{ github.event.pull_request.title }}
+          PG_TEXT_BODY: ${{ github.event.pull_request.body }}
+        run: node .github/privacy-guard/check.mjs
+
+  text:
+    if: github.event_name != 'pull_request' && github.event_name != 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github/privacy-guard
+          persist-credentials: false
+      - name: Issue-, Kommentar- und Review-Texte prüfen
+        env:
+          PG_MODE: text
+          PRIVACY_BLOCKLIST: ${{ secrets.PRIVACY_BLOCKLIST }}
+          PG_TEXT_ISSUE_TITLE: ${{ github.event.issue.title }}
+          PG_TEXT_ISSUE_BODY: ${{ github.event_name == 'issues' && github.event.issue.body || '' }}
+          PG_TEXT_COMMENT: ${{ github.event.comment.body }}
+          PG_TEXT_REVIEW: ${{ github.event.review.body }}
+        run: node .github/privacy-guard/check.mjs

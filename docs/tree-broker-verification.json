@@ -1,0 +1,57 @@
+{
+  "verifiedAt": "2026-11-02T17:29:49.480Z",
+  "factsHash": "b38666f47be482b6a2153aa8d9019c31dba17cdec582f56e32b0e26a2366ee2e",
+  "variants": [
+    {
+      "variant": "ridge-reference",
+      "rawPaidFillsVerified": 100,
+      "curvePointsVerified": 15744,
+      "signalFeaturesAndPredictionsVerified": 6560,
+      "returnPct": -4.39065250498153,
+      "closedTrades": 50,
+      "allLedgerCashFeesAndPnLMatched": true,
+      "allExitReferencePricesMatched": true,
+      "allMarkToMarketAndDrawdownMatched": true
+    },
+    {
+      "variant": "selected-reference",
+      "rawPaidFillsVerified": 22,
+      "curvePointsVerified": 15744,
+      "signalFeaturesAndPredictionsVerified": 6560,
+      "returnPct": -0.8745618249965004,
+      "closedTrades": 11,
+      "allLedgerCashFeesAndPnLMatched": true,
+      "allExitReferencePricesMatched": true,
+      "allMarkToMarketAndDrawdownMatched": true
+    },
+    {
+      "variant": "tree",
+      "rawPaidFillsVerified": 242,
+      "curvePointsVerified": 15744,
+      "signalFeaturesAndPredictionsVerified": 6560,
+      "returnPct": -7.199211420638319,
+      "closedTrades": 121,
+      "allLedgerCashFeesAndPnLMatched": true,
+      "allExitReferencePricesMatched": true,
+      "allMarkToMarketAndDrawdownMatched": true
+    },
+    {
+      "variant": "extended-selected",
+      "rawPaidFillsVerified": 48,
+      "curvePointsVerified": 15744,
+      "signalFeaturesAndPredictionsVerified": 6560,
+      "returnPct": 0.4984195488457077,
+      "closedTrades": 24,
+      "allLedgerCashFeesAndPnLMatched": true,
+      "allExitReferencePricesMatched": true,
+      "allMarkToMarketAndDrawdownMatched": true
+    }
+  ],
+  "analyticCashMeanZeroControlsVerified": true,
+  "oldReferenceFullEconomicsExactlyMatched": 2,
+  "sourceEngineChanged": false,
+  "modelActivated": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false
+}

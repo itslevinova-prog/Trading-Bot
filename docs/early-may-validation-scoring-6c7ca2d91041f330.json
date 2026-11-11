@@ -1,0 +1,29 @@
+{
+  "version": "early-may-validation-scoring-v1",
+  "registeredAt": "2026-11-03T20:45:03.121Z",
+  "runnerHash": "bc962c2d34145993968a388d3399951933ae921e8ce725bd592e758f813c6564",
+  "protocol": {
+    "path": "docs/early-may-learning-protocol-3b082fa23406b6e1.json",
+    "hash": "3b082fa23406b6e108be5cb30b511f2d38f2420c428e891b76e3c23fa7d130b7"
+  },
+  "frozenModels": {
+    "path": "docs/early-may-frozen-models-460f53edb54ffb46.json",
+    "hash": "460f53edb54ffb46c29832db61b606e80233cc2b7b96ca17e93c399ed45d17e6"
+  },
+  "frozenModelFileSha256": "ed66f1f45845680602becf3c7a633507a2bd174a42e886257b4111d5d1a799fa",
+  "maySourceProof": {
+    "path": "docs/may-evidence-source-proof-38927056120e7ed3.json",
+    "sha256": "3a3e5ec3d9da0c82e022a19d217576e257c91c9b53ce25e5dbe219cbccf219b7"
+  },
+  "sourcePolicy": "Strict original May+April raw archive reconstruction; exact overlapping warmup equality; featureinputsclosedasof, bounded75015m/hourly; no laterMayoutcomes",
+  "predictionPolicy": "All400pairslots/20sharedclocks preserved. Nullforecastsremainnull. Zero is abstainbaseline,meanrequiresdate+source, ridgerequiresdate+source+z6. No refit.",
+  "lossPolicy": "For knownlabels only, absolute/squared loss of prediction; nullforecasts incur explicit zero-abstention loss without becoming numericzero predictions. Source/predictioncoverage denominator all400slots; ambiguouslabels excludedfromerror butcounted.",
+  "selectionPolicy": "ExistingMAE stablezero/mean/ridge, min40knownlabels, minimum95pctcoverage, improvementmorethan1e-12. No threshold/windowsearch.",
+  "rankingMargin": 0.005,
+  "rankingScope": "Score-only opportunity diagnostics, not portfolio/trades/profit or permission",
+  "mayLabelsReadBeforeRegistration": false,
+  "modelRefitAllowed": false,
+  "juneLoaded": false,
+  "julyLoaded": false,
+  "hash": "6c7ca2d91041f330a438301cb3e0e7209fdc980529993f4cae0b6a95b77a9888"
+}

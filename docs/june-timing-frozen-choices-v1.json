@@ -1,0 +1,911 @@
+{
+  "version": "june-timing-frozen-choices-v1",
+  "generatedAt": "2026-11-04T15:39:34.271Z",
+  "protocolSha": "c8ea568bdbe08d320265d7aea5e4b5f7e9d57683e172bf0e75d7cab134e47e63",
+  "buildId": "9091422646e6d99527b03a65363ad8b85d0dcd92304c4a3cc349d498caa34ae6",
+  "dataSha": "f753430de897259ce28e44b394f6b63f5ab387a3cd0f8d1613a20f20fcd278b9",
+  "runnerSha": "ac303ab1ce969771b089b5a97712317ef0e7a31713a1849c3288bb31bac7b73f",
+  "rows": [
+    {
+      "decisionAt": 1780272000000,
+      "entryAt": 1780272900000,
+      "valid": true,
+      "btc24h": -0.002174299151960102,
+      "advancing": 8,
+      "selectedPair": "XLM/EUR",
+      "relative4h": 6.401261561332894,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1780315200000,
+      "entryAt": 1780316100000,
+      "valid": true,
+      "btc24h": -0.018668680220371048,
+      "advancing": 2,
+      "selectedPair": "ICP/EUR",
+      "relative4h": 3.7884880628066497,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1780358400000,
+      "entryAt": 1780359300000,
+      "valid": true,
+      "btc24h": -0.02918816934918378,
+      "advancing": 5,
+      "selectedPair": "BCH/EUR",
+      "relative4h": 0.748054252067698,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1780401600000,
+      "entryAt": 1780402500000,
+      "valid": true,
+      "btc24h": -0.04171536373553353,
+      "advancing": 3,
+      "selectedPair": "ICP/EUR",
+      "relative4h": 5.003618054876657,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1780444800000,
+      "entryAt": 1780445700000,
+      "valid": true,
+      "btc24h": -0.06384590502317877,
+      "advancing": 1,
+      "selectedPair": "XLM/EUR",
+      "relative4h": 2.1018617044840315,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1780488000000,
+      "entryAt": 1780488900000,
+      "valid": true,
+      "btc24h": -0.03154842784146361,
+      "advancing": 0,
+      "selectedPair": "APT/EUR",
+      "relative4h": 1.3227770759526525,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1780531200000,
+      "entryAt": 1780532100000,
+      "valid": true,
+      "btc24h": -0.03831468897020385,
+      "advancing": 8,
+      "selectedPair": "LINK/EUR",
+      "relative4h": 3.6987816342935798,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1780574400000,
+      "entryAt": 1780575300000,
+      "valid": true,
+      "btc24h": -0.06917230334380142,
+      "advancing": 0,
+      "selectedPair": "BCH/EUR",
+      "relative4h": 2.081730734997933,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1780617600000,
+      "entryAt": 1780618500000,
+      "valid": true,
+      "btc24h": -0.004108088402627108,
+      "advancing": 1,
+      "selectedPair": null,
+      "relative4h": null,
+      "actions": {
+        "ungated": false,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1780660800000,
+      "entryAt": 1780661700000,
+      "valid": true,
+      "btc24h": -0.009032817218462164,
+      "advancing": 0,
+      "selectedPair": null,
+      "relative4h": null,
+      "actions": {
+        "ungated": false,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1780704000000,
+      "entryAt": 1780704900000,
+      "valid": true,
+      "btc24h": -0.03515094045435607,
+      "advancing": 1,
+      "selectedPair": "XLM/EUR",
+      "relative4h": 4.165489343468298,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1780747200000,
+      "entryAt": 1780748100000,
+      "valid": true,
+      "btc24h": -0.006861780984894983,
+      "advancing": 2,
+      "selectedPair": "SHIB/EUR",
+      "relative4h": 0.8443228485632837,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1780790400000,
+      "entryAt": 1780791300000,
+      "valid": true,
+      "btc24h": -0.002044978592308011,
+      "advancing": 9,
+      "selectedPair": "XLM/EUR",
+      "relative4h": 4.14623941314991,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1780833600000,
+      "entryAt": 1780834500000,
+      "valid": true,
+      "btc24h": 0.031119361116551225,
+      "advancing": 18,
+      "selectedPair": "ADA/EUR",
+      "relative4h": 1.1405810889588475,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": true,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1780876800000,
+      "entryAt": 1780877700000,
+      "valid": true,
+      "btc24h": 0.03894101510678838,
+      "advancing": 18,
+      "selectedPair": "BCH/EUR",
+      "relative4h": 1.4960978139058723,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": true,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1780920000000,
+      "entryAt": 1780920900000,
+      "valid": true,
+      "btc24h": 0.009282649937441656,
+      "advancing": 15,
+      "selectedPair": "APT/EUR",
+      "relative4h": 2.110193498061874,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": true,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1780963200000,
+      "entryAt": 1780964100000,
+      "valid": true,
+      "btc24h": -0.004904628188153848,
+      "advancing": 7,
+      "selectedPair": "ETH/EUR",
+      "relative4h": 0.823330283367496,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781006400000,
+      "entryAt": 1781007300000,
+      "valid": true,
+      "btc24h": -0.014764113464087458,
+      "advancing": 0,
+      "selectedPair": null,
+      "relative4h": null,
+      "actions": {
+        "ungated": false,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781049600000,
+      "entryAt": 1781050500000,
+      "valid": true,
+      "btc24h": -0.022470753970748936,
+      "advancing": 0,
+      "selectedPair": "WIN/EUR",
+      "relative4h": 0.9544399159553851,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781092800000,
+      "entryAt": 1781093700000,
+      "valid": true,
+      "btc24h": -0.023886589542230552,
+      "advancing": 1,
+      "selectedPair": "TRX/EUR",
+      "relative4h": 1.0230609470003538,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781136000000,
+      "entryAt": 1781136900000,
+      "valid": true,
+      "btc24h": -0.0035620782628903447,
+      "advancing": 0,
+      "selectedPair": "LTC/EUR",
+      "relative4h": 1.068742738292494,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781179200000,
+      "entryAt": 1781180100000,
+      "valid": true,
+      "btc24h": 0.03332246223712021,
+      "advancing": 17,
+      "selectedPair": "SHIB/EUR",
+      "relative4h": 0.7774682056624238,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": true,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781222400000,
+      "entryAt": 1781223300000,
+      "valid": true,
+      "btc24h": 0.030523625901138107,
+      "advancing": 18,
+      "selectedPair": "TRX/EUR",
+      "relative4h": 1.0604328595166246,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": true,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781265600000,
+      "entryAt": 1781266500000,
+      "valid": true,
+      "btc24h": 0.007214153639205634,
+      "advancing": 17,
+      "selectedPair": "APT/EUR",
+      "relative4h": 2.4145377986049876,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": true,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781308800000,
+      "entryAt": 1781309700000,
+      "valid": true,
+      "btc24h": 0.000489604596493054,
+      "advancing": 5,
+      "selectedPair": "LTC/EUR",
+      "relative4h": 0.26634960757139226,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781352000000,
+      "entryAt": 1781352900000,
+      "valid": true,
+      "btc24h": 0.004553187276507442,
+      "advancing": 17,
+      "selectedPair": "SHIB/EUR",
+      "relative4h": 2.374635294316496,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": true,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781395200000,
+      "entryAt": 1781396100000,
+      "valid": true,
+      "btc24h": 0.01440068893274371,
+      "advancing": 18,
+      "selectedPair": "LTC/EUR",
+      "relative4h": 0.9627309674618223,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": true,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781438400000,
+      "entryAt": 1781439300000,
+      "valid": true,
+      "btc24h": 0.009895298372513572,
+      "advancing": 7,
+      "selectedPair": "LINK/EUR",
+      "relative4h": 0.33766526833090005,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781481600000,
+      "entryAt": 1781482500000,
+      "valid": true,
+      "btc24h": 0.016651937583131327,
+      "advancing": 18,
+      "selectedPair": "ADA/EUR",
+      "relative4h": 6.800694786260242,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": true,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781524800000,
+      "entryAt": 1781525700000,
+      "valid": true,
+      "btc24h": 0.021330519465520226,
+      "advancing": 19,
+      "selectedPair": "BCH/EUR",
+      "relative4h": 6.633003706033236,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": true,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781568000000,
+      "entryAt": 1781568900000,
+      "valid": true,
+      "btc24h": 0.009174980553481094,
+      "advancing": 13,
+      "selectedPair": "LTC/EUR",
+      "relative4h": 0.7505482128726593,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": true,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781611200000,
+      "entryAt": 1781612100000,
+      "valid": true,
+      "btc24h": 0.004355657568595017,
+      "advancing": 6,
+      "selectedPair": "XLM/EUR",
+      "relative4h": 2.5652648552684454,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781654400000,
+      "entryAt": 1781655300000,
+      "valid": true,
+      "btc24h": -0.011865041318860237,
+      "advancing": 4,
+      "selectedPair": "WIN/EUR",
+      "relative4h": 1.6765641328845726,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781697600000,
+      "entryAt": 1781698500000,
+      "valid": true,
+      "btc24h": -0.024824523582180236,
+      "advancing": 3,
+      "selectedPair": "XLM/EUR",
+      "relative4h": 2.5150643666741246,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781740800000,
+      "entryAt": 1781741700000,
+      "valid": true,
+      "btc24h": -0.008649676170238596,
+      "advancing": 8,
+      "selectedPair": "XLM/EUR",
+      "relative4h": 2.116581115842231,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781784000000,
+      "entryAt": 1781784900000,
+      "valid": true,
+      "btc24h": -0.0016731471957823763,
+      "advancing": 3,
+      "selectedPair": "BNB/EUR",
+      "relative4h": 0.8454640195201701,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781827200000,
+      "entryAt": 1781828100000,
+      "valid": true,
+      "btc24h": -0.02012179753106158,
+      "advancing": 3,
+      "selectedPair": "SUI/EUR",
+      "relative4h": 1.3013501544646422,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781870400000,
+      "entryAt": 1781871300000,
+      "valid": true,
+      "btc24h": -0.020809624159805362,
+      "advancing": 2,
+      "selectedPair": "WIN/EUR",
+      "relative4h": 1.6053390977228021,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781913600000,
+      "entryAt": 1781914500000,
+      "valid": true,
+      "btc24h": 0.00855527784659782,
+      "advancing": 3,
+      "selectedPair": "ICP/EUR",
+      "relative4h": 0.8256007316747249,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1781956800000,
+      "entryAt": 1781957700000,
+      "valid": true,
+      "btc24h": 0.016265484823220655,
+      "advancing": 17,
+      "selectedPair": "WIN/EUR",
+      "relative4h": 0.7848144860570061,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": true,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782000000000,
+      "entryAt": 1782000900000,
+      "valid": true,
+      "btc24h": 0.011899955981614418,
+      "advancing": 15,
+      "selectedPair": "AVAX/EUR",
+      "relative4h": 1.5017084687584559,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": true,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782043200000,
+      "entryAt": 1782044100000,
+      "valid": true,
+      "btc24h": 0.006995801726157325,
+      "advancing": 7,
+      "selectedPair": "WIN/EUR",
+      "relative4h": 0.8577980695392062,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782086400000,
+      "entryAt": 1782087300000,
+      "valid": true,
+      "btc24h": -0.015189019323641362,
+      "advancing": 3,
+      "selectedPair": null,
+      "relative4h": null,
+      "actions": {
+        "ungated": false,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782129600000,
+      "entryAt": 1782130500000,
+      "valid": true,
+      "btc24h": 0.009505744242963354,
+      "advancing": 18,
+      "selectedPair": "SUI/EUR",
+      "relative4h": 3.3849342766602897,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": true,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782172800000,
+      "entryAt": 1782173700000,
+      "valid": true,
+      "btc24h": 0.014623590272666132,
+      "advancing": 16,
+      "selectedPair": "TRX/EUR",
+      "relative4h": 1.2066592414136768,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": true,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782216000000,
+      "entryAt": 1782216900000,
+      "valid": true,
+      "btc24h": -0.02810513783508284,
+      "advancing": 2,
+      "selectedPair": "SUI/EUR",
+      "relative4h": 3.888538667892627,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782259200000,
+      "entryAt": 1782260100000,
+      "valid": true,
+      "btc24h": -0.016479709056765768,
+      "advancing": 2,
+      "selectedPair": "ICP/EUR",
+      "relative4h": 1.822571033629683,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782302400000,
+      "entryAt": 1782303300000,
+      "valid": true,
+      "btc24h": 0.010666049518482046,
+      "advancing": 12,
+      "selectedPair": "AVAX/EUR",
+      "relative4h": 0.5179203829667856,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": true,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782345600000,
+      "entryAt": 1782346500000,
+      "valid": true,
+      "btc24h": -0.02438360757512925,
+      "advancing": 1,
+      "selectedPair": "AVAX/EUR",
+      "relative4h": 3.0189669139232933,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782388800000,
+      "entryAt": 1782389700000,
+      "valid": true,
+      "btc24h": -0.025967330660180532,
+      "advancing": 2,
+      "selectedPair": null,
+      "relative4h": null,
+      "actions": {
+        "ungated": false,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782432000000,
+      "entryAt": 1782432900000,
+      "valid": true,
+      "btc24h": -0.021580817150714915,
+      "advancing": 1,
+      "selectedPair": "BCH/EUR",
+      "relative4h": 2.104101730701191,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782475200000,
+      "entryAt": 1782476100000,
+      "valid": true,
+      "btc24h": -0.03554608432295292,
+      "advancing": 1,
+      "selectedPair": "WIN/EUR",
+      "relative4h": 2.4411077676912862,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782518400000,
+      "entryAt": 1782519300000,
+      "valid": true,
+      "btc24h": 0.003066190633942645,
+      "advancing": 15,
+      "selectedPair": "AVAX/EUR",
+      "relative4h": 2.4205055839969347,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": true,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782561600000,
+      "entryAt": 1782562500000,
+      "valid": true,
+      "btc24h": 0.016285269688222748,
+      "advancing": 18,
+      "selectedPair": "XLM/EUR",
+      "relative4h": 0.8124152809559915,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": true,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782604800000,
+      "entryAt": 1782605700000,
+      "valid": true,
+      "btc24h": -0.0009797979510555166,
+      "advancing": 2,
+      "selectedPair": "TRX/EUR",
+      "relative4h": 0.4287994882505197,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782648000000,
+      "entryAt": 1782648900000,
+      "valid": true,
+      "btc24h": 0.00030184619490447595,
+      "advancing": 3,
+      "selectedPair": "LTC/EUR",
+      "relative4h": 1.6353096304103198,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782691200000,
+      "entryAt": 1782692100000,
+      "valid": true,
+      "btc24h": -0.007876073090748337,
+      "advancing": 6,
+      "selectedPair": "AVAX/EUR",
+      "relative4h": 2.3401507375752972,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782734400000,
+      "entryAt": 1782735300000,
+      "valid": true,
+      "btc24h": -0.008582731633893337,
+      "advancing": 8,
+      "selectedPair": "XRP/EUR",
+      "relative4h": 0.5873606679114296,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782777600000,
+      "entryAt": 1782778500000,
+      "valid": true,
+      "btc24h": 0.008558137149147882,
+      "advancing": 16,
+      "selectedPair": "ICP/EUR",
+      "relative4h": 0.9955026960552615,
+      "actions": {
+        "ungated": true,
+        "btc": true,
+        "breadth": true,
+        "cash": false
+      }
+    },
+    {
+      "decisionAt": 1782820800000,
+      "entryAt": 1782821700000,
+      "valid": true,
+      "btc24h": -0.011322010433494012,
+      "advancing": 6,
+      "selectedPair": "BCH/EUR",
+      "relative4h": 0.5763403983630289,
+      "actions": {
+        "ungated": true,
+        "btc": false,
+        "breadth": false,
+        "cash": false
+      }
+    }
+  ],
+  "outcomesEvaluated": false
+}

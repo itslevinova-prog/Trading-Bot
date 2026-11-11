@@ -1,0 +1,39 @@
+{
+  "verifiedAt": "2026-11-01T12:52:08.507296+00:00",
+  "fixtureOnly": true,
+  "fixtureHash": "9800763195ca644f97ac346cd7f4d48482367f7714bd796b112d6db96e79a797",
+  "maxChars": 115000,
+  "packedChars": 114758,
+  "headroom": 242,
+  "all20RegimesExactlyRetained": true,
+  "all20MockIntentsRetained": true,
+  "budgetRaised": false,
+  "storedContextUnmutated": true,
+  "explicitOmissions": [
+    "Detailed candle arrays shortened; per-market summaries retained.",
+    "Memory and lessons bounded; held-position memories prioritised.",
+    "Raw candle arrays omitted only for named markets as needed; all market summaries retained. Held positions and BTC prioritised."
+  ],
+  "mainRuntimeProof": "data/main-budget-resume-proof-2026-11-01.json",
+  "fullSuite": {
+    "mainTests": 1140,
+    "offlineTests": 15,
+    "log": "data/verify-full-regime-budget-2026-11-01.log"
+  },
+  "runtimeLog": "data/runtime-full-regime-budget-2026-11-01.log",
+  "buildId": "c2f35b6dabc00fa3ceb306cf9daad4b7b6b3dd124e627819d5f15e3b905aadff",
+  "sourceHashes": {
+    "apps/server/src/ai/feature-encoding.ts": "d2e7cadf3952f35f88fd3c9f786880d84ada7fe76bd46242242d83fa89847027",
+    "apps/server/src/ai/hourly-encoding.ts": "047a62f29c8f1a6bd60aaed82a866e33690f7d164ef9ecd5a604b85c43116f87",
+    "apps/server/src/ai/prompt.ts": "264f97916ea6e526b95dd34eaa16e064e76ca82780791f74d0f0db291a311d5a",
+    "apps/server/test/regime-encoding.test.ts": "853cb97b67bb90cf12352bb7f8de83398c8e42ac16e48d8e9b4b9a24085d93e2",
+    "apps/server/test/hourly-encoding.test.ts": "5cd880a33d3d88f93977705b90b2c6ba978cf7d1dd3b8356089ad50b6689249d",
+    "apps/server/test/context.test.ts": "36b9a1baa1a6962191de851f67750fe797ad01e99e50277912902654e74555f7",
+    "scripts/verify-runtime.mjs": "48d31f0731000a54af975a1cbf64501e5f2eb07ccb16dc9afabe5f8531fc74c9",
+    "scripts/audit-hourly-entry-failures.mjs": "6711593e7652bc29676ff6cebbd8cfcc07e01def627eae0236e5948cde689ff1",
+    "scripts/verify-hourly-entry-failures.mjs": "42f8fa9b20f97337fd47c60b34d95c739ee22b5f8bf9754218c8f5f6fc0f46e0",
+    "scripts/resume-main-paper.mjs": "23c2fbcc8682c6d6961535da83d0f4b9b73af28a4561c18370a3c8b61d6c13d2"
+  },
+  "realModelTested": false,
+  "dummyOnly": true
+}

@@ -1,0 +1,22 @@
+{
+  "before": 1793444649479,
+  "after": 1793444650478,
+  "server": {
+    "serverTime": 1793444651137
+  },
+  "lastKlines": [
+    {
+      "openAt": 1793442600000,
+      "closeAt": 1793443499999
+    },
+    {
+      "openAt": 1793443500000,
+      "closeAt": 1793444399999
+    },
+    {
+      "openAt": 1793444400000,
+      "closeAt": 1793445299999
+    }
+  ],
+  "clockAheadServerMs": -1158
+}

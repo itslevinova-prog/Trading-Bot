@@ -1,0 +1,26 @@
+{
+  "verifiedAt": "2026-11-01T13:50:10.811Z",
+  "artifact": "docs/intrabar-assumption-audit-643c2cf0cdae70e2.json",
+  "factsHash": "643c2cf0cdae70e2bf13e418d927d9a7f75a9f1ad388c1734bc706225284cf82",
+  "scopedRoundtrips": 269,
+  "ambiguousIntrabarOrders": 0,
+  "entryBarTouchTimesUnknown": 0,
+  "rejections": {
+    "Entry below exchange minimum": 4,
+    "Kaufpause des Trading-Modus aktiv": 14,
+    "Post-fill cash/exposure/portfolio risk cap": 1
+  },
+  "sourceSimulatorUnchanged": true,
+  "newPathOptionJustifiedByObservedAmbiguity": false,
+  "newPathOptionImplemented": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "auditRunnerHash": "f91e8b3643b80a83d3ea08ed0e9b43e118a97477718f827d362d6306fb5e4780",
+  "portfolioModuleHash": "c9d89444c7e350bc9c7f4810bf85039046f0030e46960f7cc52a4da2fb7b37a3",
+  "existingAdversarialPortfolioTests": 13,
+  "testLog": "data/test-intrabar-conventions-2026-11-01.log",
+  "gapStopObservation": "docs/gap-stop-observations.json",
+  "strategyExitTimingObservation": "docs/strategy-exit-timing-observations.json",
+  "sourceOrExecutionResultsModified": false
+}

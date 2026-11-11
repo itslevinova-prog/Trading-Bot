@@ -1,0 +1,24 @@
+{
+  "version": "hourly-trend-runtime-patch-v1",
+  "registeredAt": "2026-11-01T12:02:56.631119+00:00",
+  "originalIndicatorHash": "77bb2ad6811c329c19fd12b6fe2cf9e99ba5336b99c6a58b4905b86a62b1bb46",
+  "sourceHashes": {
+    "packages/shared/src/index.ts": "57d9d4433fc5cf1d5a6e0448794a369ea6adbd42d82038e646c82c4f02f4b1ae",
+    "apps/server/src/market/indicators.ts": "09162f1e8aaad80a0c1885533ca63c3c6c0132ab9563fd57c5f6003f3cef3bb0",
+    "apps/server/src/context/hourly-trend.ts": "5baf9052f29a16074ef283428d7b144b8a4a6d7071aa3d74d2782c82115af003",
+    "apps/server/src/context/market-context.ts": "8f2bca479d46d5219b7be68d883b0d585b938456b97dd1fe725fa6a2a3affc1e",
+    "apps/server/src/research/mock-replay-context.ts": "793068bceb009f4e49cba2ff0b3f02f94f8d160be9e446caa9c9877021452fbb"
+  },
+  "runtimeHashes": {
+    "packages/shared/dist/index.js": "359829dce1a2eb956f1e9599b1b6543a94190e5840a40e6352576b40738b6316",
+    "apps/server/dist/market/indicators.js": "27fd59bc681dbfbf480fb28ff6295c88568974acf1a21052a90de35141383c00",
+    "apps/server/dist/context/hourly-trend.js": "b1c8aab20fbcd0bfed984b73890f5700b2cf0840418e41b02e3c710f681374ea",
+    "apps/server/dist/context/market-context.js": "748fd1b114e9218f3acc1d685a41fbfafe88a167e7317a846a5fbb0d4201ba79",
+    "apps/server/dist/research/mock-replay-context.js": "67613bb47e2249a53750df6e2e4d611171838c00611414bceb740110991d34d3"
+  },
+  "runnerHash": "d3f79a4b59ed96c6a5ddefa430d8e807b4bd530cf6e51757b4d058db72f75d50",
+  "previousReport": "docs/breakout-entry-study-ad773aa0759f0716.json",
+  "previousReportHash": "ad773aa0759f0716b70ac0b2da8c95aa97a1ad247118c37c0322317845371734",
+  "purpose": "Context-only causal hourly direction; four exact original result checks January/April base fee, source and breakout. Does not authorise policy changes or outcome promotion. Full build manifest also pins codec and prompt.",
+  "julyOutcomesLocked": true
+}

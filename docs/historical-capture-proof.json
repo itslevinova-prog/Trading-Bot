@@ -1,0 +1,30 @@
+{
+  "verifiedAt": "2026-10-31T21:58:38.486Z",
+  "protocolHash": "e3dbff522024d32e128f63621c5a3ab533f1d5d4d90d74489bb238ea9cae540c",
+  "sourceDatasetId": "d0066ea5e97b107a22c148dbfcfcd245a2ea37e555684a5af36a382134b14926",
+  "periods": [
+    {
+      "id": "2026-01",
+      "markets": 20,
+      "bars": 74880,
+      "complete": true
+    },
+    {
+      "id": "2026-04",
+      "markets": 20,
+      "bars": 72960,
+      "complete": true
+    },
+    {
+      "id": "2026-07",
+      "markets": 20,
+      "bars": 74880,
+      "complete": true
+    }
+  ],
+  "networkRequestsReserved": 240,
+  "maxNetworkRequests": 360,
+  "allPricesReconstructedFromChecksumBoundSourcePages": true,
+  "julyOutcomesEvaluated": false,
+  "actualAiOrFinancialAccountsUsed": false
+}

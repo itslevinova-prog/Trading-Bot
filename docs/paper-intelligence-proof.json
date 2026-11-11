@@ -1,0 +1,51 @@
+{
+  "recordedAt": "2026-10-30T20:30:31.825072+00:00",
+  "buildId": "9b48e123c98382d1d2e6ac9ff180811c422407ce30fe64efceedac6006291d24",
+  "runtimeVerifiedAt": "2026-10-30T20:26:49.768Z",
+  "tests": {
+    "main": 616,
+    "offline": 15,
+    "paperIntelligence": 18,
+    "causality": 4,
+    "sourceAndTestTypechecksPassed": true
+  },
+  "mainFullVerifyBeforeLastTestAddition": 612,
+  "finalTestAdditionChangesProductionCode": false,
+  "simulationOnly": true,
+  "mockActivated": false,
+  "performanceValidated": false,
+  "estimatedWinProbability": null,
+  "expectedValue": null,
+  "copiedUpstreamCodeIntoApp": false,
+  "upstreamReviewComplete": false,
+  "runtime": {
+    "pairs": 20,
+    "features": 20,
+    "freshBooks": 16,
+    "packedContextChars": 113705,
+    "realModelTested": false,
+    "privateExchangeCalls": 0,
+    "realOrders": 0,
+    "paidCalls": 0
+  },
+  "hashes": {
+    "apps/server/src/strategy/paper-intelligence.ts": "cce8c5e57edf473848d25153e6dd28379303f3406d1d48c07069e520963d7c3f",
+    "apps/server/src/strategy/providers.ts": "05aaaf9a7439d00b2eedc63d179aff9f876bad4ef7a345eb58860c8fb98905f8",
+    "apps/server/src/strategy/paper-payoff.ts": "2174c6109d20d30dc9c625e8da7d44836c724f68c05991305eebcd1587ad4e78",
+    "apps/server/src/memory/index.ts": "9a9038c994383d01fd6f2ce848355cdcd52f93dd8990a3491a0f4177fcbcef71",
+    "apps/server/test/paper-intelligence.test.ts": "62f0359ce720eaa2d4e7861fb1d946f6a8e2e920e124c371218125e99c586102",
+    "apps/server/test/paper-lookahead.test.ts": "695c4d74626ba8b2d9af89cc0462fc263de8522b4d155e96d0bd30c43a1f8c27",
+    "docs/upstream-research/REVIEW.md": "d7ff48053b27b19d990634b08bd49b27296d7d36ce19045393b3477981774f9e",
+    "docs/verification-latest.json": "1e3eb1673199870855c767ca15ee5ba959cf964b713d8bda8e499e6fb1e5e827",
+    "data/verify-paper-intelligence-2026-10-30.log": "c1fe95772d8babf876878d28e5a96d16081cb9b895e2e5f971713ccea4e9e75b",
+    "data/tests-paper-intelligence-final-2026-10-30.log": "72be21f27210c4857d2e5da5da44d604cb15f4147f8f9e8108083eae056eba1e",
+    "data/typecheck-paper-lookahead-2026-10-30.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/lookahead-paper-intelligence-2026-10-30.log": "414bab0bb01cda94cecc0d9ca725e5994471371c8167ab075cd24256ceaffd60",
+    "docs/upstream-research/freqtrade/manifest.json": "5abcafdb8fa68a773ab2676fd256e5a98dc2f6d891560f4f78b47dacf232ad71",
+    "docs/upstream-research/jesse/manifest.json": "c1c56671e8a764aa3e51270cba0ba663c4d115a9a879d69c6112c238693f6810",
+    "docs/upstream-research/OctoBot/manifest.json": "55afdf54180eedc83a4ee0571bdbe2c0b3c1a408b31b0a9dd78fa5ef9eaac84f",
+    "docs/upstream-research/freqtrade/index.json": "909a93e6adc320226a86d2f6d9cb49fd9398c3d1a05e109ef240cec828e10798",
+    "docs/upstream-research/jesse/index.json": "126b31c7979f6d5d8c80f6b2e7eb7dc57b172b27acd841f9aaf07e9c3b7e2d7b",
+    "docs/upstream-research/OctoBot/index.json": "21d24ebdca5305dafd3fab6a485b5f32c7c94347584fbca42125ad59317cac67"
+  }
+}

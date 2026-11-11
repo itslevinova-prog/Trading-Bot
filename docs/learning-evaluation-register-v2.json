@@ -1,0 +1,89 @@
+{
+  "recordedAt": "2026-10-30T21:07:10.538580+00:00",
+  "previousRegister": "docs/learning-evaluation-register.json",
+  "experiments": [
+    {
+      "protocol": "docs/learning-protocol-v2-expanded.json",
+      "reportId": "d93b5722d7484b417c77197009dcbf275834b75c54c02abfee12458d66dd2533",
+      "datasetId": "d0066ea5e97b107a22c148dbfcfcd245a2ea37e555684a5af36a382134b14926",
+      "window": {
+        "from": 1785715200000,
+        "to": 1793216700000
+      },
+      "testWindowsNowInspected": [
+        {
+          "from": 1787270400000,
+          "to": 1787616000000
+        },
+        {
+          "from": 1787616000000,
+          "to": 1787961600000
+        },
+        {
+          "from": 1787961600000,
+          "to": 1788307200000
+        },
+        {
+          "from": 1788307200000,
+          "to": 1788652800000
+        },
+        {
+          "from": 1788652800000,
+          "to": 1788998400000
+        },
+        {
+          "from": 1788998400000,
+          "to": 1789344000000
+        },
+        {
+          "from": 1789344000000,
+          "to": 1789689600000
+        },
+        {
+          "from": 1789689600000,
+          "to": 1790035200000
+        },
+        {
+          "from": 1790035200000,
+          "to": 1790380800000
+        },
+        {
+          "from": 1790380800000,
+          "to": 1790726400000
+        },
+        {
+          "from": 1790726400000,
+          "to": 1791072000000
+        },
+        {
+          "from": 1791072000000,
+          "to": 1791417600000
+        },
+        {
+          "from": 1791417600000,
+          "to": 1791763200000
+        },
+        {
+          "from": 1791763200000,
+          "to": 1792108800000
+        },
+        {
+          "from": 1792108800000,
+          "to": 1792454400000
+        },
+        {
+          "from": 1792454400000,
+          "to": 1792800000000
+        },
+        {
+          "from": 1792800000000,
+          "to": 1793145600000
+        }
+      ],
+      "historicalDataAlreadyInspected": true,
+      "independentProspectiveEvidence": false,
+      "result": "Ridge overall worse than zero MAE; selection small positive base diagnostic fails doubled costs. No activation/tuning.",
+      "nextUsePolicy": "Preserve v1/v2 reports. These expanded test windows are now inspected; reuse only as retrospective development/stress evidence, not fresh independent confirmation."
+    }
+  ]
+}

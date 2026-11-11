@@ -1,0 +1,52 @@
+{
+  "version": "later-may-validation-independent-v1",
+  "verifiedAt": "2026-11-03T20:57:54.885988+00:00",
+  "report": {
+    "path": "docs/later-may-validation-7b4c6eac554d151a.json",
+    "hash": "7b4c6eac554d151a33fc6f8d51713f288cf849a44859328e3bd09644cf62d259"
+  },
+  "reportFileSha256": "c3e5cc61836146cad6e2b838b5fe872f13a750d073209aee5a9096a9720600b0",
+  "verifierSha256": "8d00328b12f09726b61a882762c763fbd32690d1819197a55b6cb54f70f85d9b",
+  "sourcePagesVerified": 80,
+  "labelsVerified": 400,
+  "frozenForecastSlotsVerified": 2000,
+  "sharedClocks": 20,
+  "classes": {
+    "stop": 124,
+    "timeout": 262,
+    "target": 14
+  },
+  "metrics": {
+    "zero": {
+      "mae": "0.013268827998038792110011901240918059485482650566384452899438567229223078534057734",
+      "rmse": "0.016195932418852590691026832392532845497483124984317113696956500413318878363847282",
+      "coverage": 1.0
+    },
+    "training-mean": {
+      "mae": "0.011799703865627005333205396309591771339463761639165754493043345475080378342786879",
+      "rmse": "0.014823433394225367545106807724122326483899443845615274393804419328363139425644784",
+      "coverage": 1.0
+    },
+    "ridge-lambda10": {
+      "mae": "0.011732033260620605249568002124406110416914822606132054956257006657671566192772436",
+      "rmse": "0.014769436981994776717187176853482963145564754500587529813739373456689439897019525",
+      "coverage": 0.9975
+    },
+    "clock-mean30": {
+      "mae": "0.012055096222102493965541062069938724217258198327752650945374483867283243341396113",
+      "rmse": "0.015051203862589876475360473820786110109386252727784820612410888135327506657181105",
+      "coverage": 1.0
+    },
+    "clock-ridge30": {
+      "mae": "0.011892096919929134566987761961861229313462163987230482027274341899447345243877092",
+      "rmse": "0.014944634091418158700855983384479168672133308176201178801950743048978113870534360",
+      "coverage": 0.9975
+    }
+  },
+  "selected": "ridge-lambda10",
+  "opportunityClocks": 0,
+  "modelFileUnchanged": true,
+  "activeModelChanged": false,
+  "profitabilityEstablished": false,
+  "scope": "Independent original raw-page/80digitDecimal costed labels and saved-model forecasts/guards, MAE/RMSE/coverage/selection and fixed-margin clock ranking. Saved feature vectors rely on separately tested past-only feature pipeline; this audit does not independently reconstruct indicators.20sharedclocks, not2000independent observations; no executed portfolio return inferred."
+}

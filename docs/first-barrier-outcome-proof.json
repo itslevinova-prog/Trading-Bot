@@ -1,0 +1,28 @@
+{
+  "verifiedAt": "2026-11-01T14:15:35.961Z",
+  "documentation": "docs/FIRST-BARRIER-OUTCOMES.md",
+  "sourceReview": "docs/upstream-research/REVIEW-PASS20.md",
+  "artifact": "docs/first-barrier-recorded-entries-fe958b9f76f3cdb0.json",
+  "factsHash": "fe958b9f76f3cdb00051da89726444aec35e8a32e583875125356bcf9f4b56d0",
+  "independentRawVerification": "docs/first-barrier-recorded-entries-verification.json",
+  "runtimeIsolation": "data/first-barrier-runtime-isolation-2026-11-01.json",
+  "buildId": "7bc014a60312d3b0f5c14f835d5a85df5368a905a24c4118695765c4ece4f1f9",
+  "mainTests": 1212,
+  "offlineTests": 15,
+  "directTests": 13,
+  "fullVerificationLog": "data/verify-first-barrier-2026-11-01.log",
+  "scopedEntries": 269,
+  "availableLabels": 267,
+  "unavailable": 2,
+  "modelFitted": false,
+  "strategyActivated": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "sources": {
+    "apps/server/src/research/first-barrier-outcome.ts": "7db6e08e50e224c2e33918b2d8ad4ecc00cfe351cf537c5284920d1bbcc65084",
+    "apps/server/test/first-barrier-outcome.test.ts": "d362cb7988528816e01103f734eab7f41a730114ba5f86f17c4e3a8ee0eb2210",
+    "scripts/audit-first-barrier-recorded-entries.mjs": "b1287114f03ec8c6ab2bef852eb04c1d9eaad9d7464500fab82fd478cfc7e379",
+    "scripts/verify-first-barrier-recorded-entries.mjs": "079822994a08e4c47b547741952358e6f289f241e870cbd81a36a47f61458f20"
+  }
+}

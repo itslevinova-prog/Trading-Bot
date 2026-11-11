@@ -1,0 +1,82 @@
+{
+  "verifiedAt": "2026-11-01T13:16:59.410693+00:00",
+  "workingBuildId": "66dd06c43cc68dd7c5ffa298310f79fc0687f5cd70f2b3928deec5bc58efd653",
+  "mainLoadedBuildId": "c2f35b6dabc00fa3ceb306cf9daad4b7b6b3dd124e627819d5f15e3b905aadff",
+  "commonMainRuntimeFilesUnchanged": 113,
+  "mainTests": 1163,
+  "offlineTests": 15,
+  "fullVerificationLog": "data/verify-fixed-target-capital-2026-11-01.log",
+  "sourceHashes": {
+    "apps/server/src/research/fixed-target-learning.ts": "b1167a6e55258a134f4acbfa1c9a6bbc53dc113686cc6a49f1f40b57df581fbb",
+    "apps/server/src/research/fixed-target-diagnostic.ts": "be71e682c6e26a34996cd01ff0e66729d86c18d988500a6bb96150c623c3b020",
+    "apps/server/test/fixed-target-learning.test.ts": "735f62291ba641b6ac47a3c86a977c2da165d4d47e5e324b61c022ee0ecd5d55",
+    "apps/server/test/fixed-target-diagnostic.test.ts": "f4f991704e1b6c07edd87575144959374b3df114fbc8d071ed1ea5871955e118",
+    "scripts/collect-fixed-target-observations.mjs": "f4b4b7dd1be36621e86c789b2570b99ff303266f101dc24f97681ffb14da2959",
+    "scripts/verify-fixed-target-observations.mjs": "cdec964b8025694687337d77265a9b811dafc595941743360a1a9cb05a180009",
+    "scripts/run-fixed-target-walkforward.mjs": "4a416102feec7fd3f327f55de99a268b9792e731b1c3b1087844846d6cb53e67",
+    "scripts/verify-fixed-target-walkforward.mjs": "774636bddfdd46339aea8775ab3abacbc0cfe1ca4c574889b32957d5b782e400"
+  },
+  "corpusProof": "docs/fixed-target-observations-verification.json",
+  "observationsVerified": 7280,
+  "distinctDecisionClocks": 364,
+  "offlineRidgeModelsFittedAndVerified": 41,
+  "testForecastsVerified": 6560,
+  "capitalPositionsIncludingStressVerified": 591,
+  "evaluationProof": "docs/fixed-target-walkforward-verification.json",
+  "selectedModelCounts": {
+    "zero": 27,
+    "mean": 10,
+    "ridge": 4
+  },
+  "aggregate": {
+    "zero": {
+      "testRows": 6560,
+      "mae": 0.017521108515730393,
+      "coverage": 1,
+      "baseReturnPct": 0,
+      "adaptiveStressReturnPct": 0,
+      "pairedStressReturnPct": 0,
+      "baseTrades": 0,
+      "adaptiveStressTrades": 0,
+      "independentSamples": null
+    },
+    "mean": {
+      "testRows": 6560,
+      "mae": 0.0178404407081805,
+      "coverage": 1,
+      "baseReturnPct": 0,
+      "adaptiveStressReturnPct": 0,
+      "pairedStressReturnPct": 0,
+      "baseTrades": 0,
+      "adaptiveStressTrades": 0,
+      "independentSamples": null
+    },
+    "ridge": {
+      "testRows": 6560,
+      "mae": 0.019044782553510636,
+      "coverage": 0.9824695121951219,
+      "baseReturnPct": -13.180833759559874,
+      "adaptiveStressReturnPct": -11.526090938170242,
+      "pairedStressReturnPct": -21.91943696130324,
+      "baseTrades": 232,
+      "adaptiveStressTrades": 127,
+      "independentSamples": null
+    },
+    "selected": {
+      "testRows": 6560,
+      "mae": 0.017749838807094184,
+      "coverage": 0.9981707317073171,
+      "baseReturnPct": -1.8815868525403512,
+      "adaptiveStressReturnPct": -1.3359373276048525,
+      "pairedStressReturnPct": -2.368620523675935,
+      "baseTrades": 11,
+      "adaptiveStressTrades": 5,
+      "independentSamples": null
+    }
+  },
+  "realAiIntegrated": false,
+  "modelActivated": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false
+}

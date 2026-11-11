@@ -1,0 +1,13 @@
+# Execution-assumption audit before further strategy changes
+
+Post-outcome audit of269scoped source/candidate/fee roundtrips from the frozen relative-entry study. Repeated variants/fees are dependent, not269trials. Original paid fills, initial captured stop/target, exact raw exit candles and all price-reference conventions checked. Source simulator and original results remain unchanged. Existing13portfolio adversarial tests (including artificial simultaneous stop/target) pass. Facts643c2cf0cdae70e2bf13e418d927d9a7f75a9f1ad388c1734bc706225284cf82 and independent source-fill cross-check saved.
+
+44intrabar stop-first exits,33intrabar targets,19gapstops,168structural exits,3other programmed bearish exits and2evaluation-end liquidations. ZEROexit candles touched both initial barriers; ZEROintrabar exits were in their entry bar. The name stop-first therefore does not mean those44exits were ambiguous. Changing to a target-first convention cannot explain these recorded losses; no speculative new simulator mode or optimistic fill replacement is justified by this audit.
+
+Residual uncertainty remains:18modelled strategy-open exits have an exit candle that touches one barrier somewhere during its15minutes (11distinctpair/exit clocks). We do not know whether that occurred before the nominal+5second decision. No actual missed protective exit or alternative fill is inferred. Historical OHLC lacks real arrival/queue/depth/latency and the within-bar path, even without simultaneous barriers.
+
+19scoped gapstops correspond to11distinctpair/exit clocks. Relative to hypothetical liquidation at the original stop reference WITH the same spread/slippage/fees, the largest extra recorded loss is.516665percentage points of that trade basis; worst recorded net gap-stop return-4.929541%. These are descriptive observations, not a maximum future loss or guaranteed stop price. Initial stop distances vary; hypothetical stop proceeds are not executable alternatives.
+
+Broker rejections across repeated variants:4entry-below-minimum,14mode-entry-pause,1post-fill cash/exposure/risk-cap. These are real common guard effects; do not delete them to improve a result or mistake research proposal counts for accepted trades.
+
+No new trading/model rule, simulator option, default dataset, API, account/reference or actual runtime change. July outcomes remain locked. The existing negative policy economics remain negative; this audit narrows an execution-artifact explanation instead of manufacturing profit. Next investigate source entry payoff/stop/target and volatility evidence with an independently registered post-outcome analysis before any new strategy hypothesis.

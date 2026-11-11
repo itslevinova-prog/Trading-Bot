@@ -1,0 +1,43 @@
+{
+  "version": "paper-common-shock-independent-v1",
+  "witnessIndexSha256": "d50c4330034751adda5afa2f6bb0fd5a379fdeadb1b7a142c356b96b932aaa02",
+  "verifierSha256": "f0f7ed895127a9d12003475d95b57f5b37c3db7e69e9a0801e044621dcedf512",
+  "casesVerified": 4,
+  "realPaperFillsVerified": 16,
+  "feeAmountsVerified": 16,
+  "maxDecimalCurrencyError": "1.2993706297E-13",
+  "cases": [
+    {
+      "mode": "risky",
+      "kind": "full-exit",
+      "finalCash": "934.71680516697997006293703",
+      "realizedPnl": "-65.28319483302004993706297",
+      "profitabilityEvidence": false
+    },
+    {
+      "mode": "risky",
+      "kind": "stale-retry",
+      "finalCash": "972.25340204988654947902099",
+      "realizedPnl": "-27.74659795011347052097901",
+      "profitabilityEvidence": false
+    },
+    {
+      "mode": "safe",
+      "kind": "full-exit",
+      "finalCash": "934.71680516697997006293703",
+      "realizedPnl": "-65.28319483302004993706297",
+      "profitabilityEvidence": false
+    },
+    {
+      "mode": "safe",
+      "kind": "stale-retry",
+      "finalCash": "972.25340204988654947902099",
+      "realizedPnl": "-27.74659795011347052097901",
+      "profitabilityEvidence": false
+    }
+  ],
+  "scope": "Deterministic synthetic Safe/Risky held-position scenarios; arithmetic/ledger-state verification, not historical or forward profitability evidence. ActualPaper means local simulator transactions only.",
+  "externalAiCalls": 0,
+  "realOrders": 0,
+  "profitabilityEstablished": false
+}

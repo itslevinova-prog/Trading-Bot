@@ -1,0 +1,58 @@
+{
+  "createdAt": "2026-10-29T15:23:37.855Z",
+  "snapshotAt": "2026-10-29T15:23:37.259Z",
+  "candidateId": "2026-10-28T21-14-52.089Z-3c29d6e9c59a",
+  "buildId": "3c29d6e9c59ac39fb30a3a49edcafa23871dbc9d7329396711fe78a6d9867731",
+  "path": "data/checkpoints/2026-10-29T15-23-37.259Z.db",
+  "sha256": "5f13666d4f223eb8d81f9affb61023d711d1a44d26c107e932bd03e4951ac8c0",
+  "kind": "post-startup consistent SQLite backup",
+  "reconstructsInitialSeed": false,
+  "initialSeedHash": "dbc3f66879839b358863b271ca3d94bbb14d0a80d98113fd2feb303832c789e5",
+  "accounts": [
+    {
+      "id": "ai",
+      "cash": 100,
+      "status": "inactive"
+    },
+    {
+      "id": "hold",
+      "cash": 0.023281758600020908,
+      "status": "active"
+    },
+    {
+      "id": "rules",
+      "cash": 100,
+      "status": "active"
+    }
+  ],
+  "trades": {
+    "count": 1,
+    "firstAt": 1793222287011,
+    "lastAt": 1793222287011
+  },
+  "epochs": [
+    {
+      "account_id": "hold",
+      "evaluation_version": "6befebf4af506910c511533d39fe7851b6778904534e914395bdbb40590a6378",
+      "started_at": 1793222286313,
+      "baseline_equity": 100,
+      "contamination": null
+    },
+    {
+      "account_id": "rules",
+      "evaluation_version": "6befebf4af506910c511533d39fe7851b6778904534e914395bdbb40590a6378",
+      "started_at": 1793222286312,
+      "baseline_equity": 100,
+      "contamination": null
+    }
+  ],
+  "points": {
+    "count": 40,
+    "firstAt": 1793222286312,
+    "lastAt": 1793223366443
+  },
+  "privateExchangeCalls": 0,
+  "realOrders": 0,
+  "paidCalls": 0,
+  "profitabilityEstablished": false
+}

@@ -1,0 +1,19 @@
+{
+  "version": "synchronized-stress-independent-v1",
+  "reportHash": "c181f208d18f474721bfb5928f4db726fc793d7e7c89501b3cf1b548b63c8f78",
+  "reportFileSha256": "f6733a80830a09d536c8731d2f92aeb27a03b6f02a01b5226b0ed297ccd707e7",
+  "verifierHash": "683c2409f80134b03fdd900e3326d631b7516c373b1bd04df8aae867bdf2d84e",
+  "sourceMarketsVerified": 20,
+  "sourceBarsVerified": 7700,
+  "scenariosVerified": 2,
+  "decimalOhlcValuesVerified": 30720,
+  "coSampledVolumesVerified": 7680,
+  "covarianceEntriesVerified": 800,
+  "budgetCasesVerified": 2,
+  "maxDecimalRelativePriceError": 3.4847875013437366e-15,
+  "maxSourceReturnCovarianceError": 2.757939276260002e-18,
+  "pinnedUpstreamFilesVerified": 3,
+  "vendorCodeExecuted": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false
+}

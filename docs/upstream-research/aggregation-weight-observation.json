@@ -1,0 +1,42 @@
+{
+  "observation": "Per-evaluator timeframe weights are not equal per-timeframe normalization or independent votes.",
+  "synthetic": true,
+  "hour1": {
+    "weight": 1,
+    "signals": [
+      1
+    ]
+  },
+  "quarterHour": {
+    "weight": 1,
+    "signals": [
+      -1,
+      -1,
+      -1
+    ]
+  },
+  "perEvaluatorWeightedAverage": -0.5,
+  "averageOfTimeframeMeans": 0.0,
+  "upstreamSourcesVerified": [
+    {
+      "path": "packages/tentacles/Evaluator/Strategies/mixed_strategies_evaluator/mixed_strategies.py",
+      "url": "https://raw.githubusercontent.com/Drakkar-Software/OctoBot/c45fdc2c95c5bd3d649251fa90c327e2e8f86b00/packages/tentacles/Evaluator/Strategies/mixed_strategies_evaluator/mixed_strategies.py",
+      "sha256": "6ad600f312614b6509ef239488d66cddb45a487a6d66c37e8d1feeb0881b78c8",
+      "bytes": 22969
+    },
+    {
+      "path": "packages/tentacles/Evaluator/TA/trend_evaluator/trend.py",
+      "url": "https://raw.githubusercontent.com/Drakkar-Software/OctoBot/c45fdc2c95c5bd3d649251fa90c327e2e8f86b00/packages/tentacles/Evaluator/TA/trend_evaluator/trend.py",
+      "sha256": "b97cd8c4f9805ff93e7187e8b8f05b6376b3a0432a6b23753270c8c697d23f3c",
+      "bytes": 19246
+    },
+    {
+      "path": "jesse/strategies/Strategy.py",
+      "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/strategies/Strategy.py",
+      "sha256": "e2f89664377714d87c5971fdfe13ad244845eda2e1daa449b8bf182de8e660ab",
+      "bytes": 75743
+    }
+  ],
+  "copiedCode": false,
+  "profitabilityEstablished": false
+}

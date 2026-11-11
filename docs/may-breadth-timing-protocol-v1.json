@@ -1,0 +1,31 @@
+{
+  "version": "may-breadth-timing-protocol-v1",
+  "registeredAt": "2026-11-04T15:31:37.376Z",
+  "buildId": "9091422646e6d99527b03a65363ad8b85d0dcd92304c4a3cc349d498caa34ae6",
+  "runnerHash": "4eb60d425244c0162f963ed354289f8eb035b83959db11041c163777384f16f1",
+  "from": 1779321600000,
+  "to": 1780185600000,
+  "stride": 43200000,
+  "target": {
+    "dataScope": "df5ed748ced1b3730c976d79c1542adea04b8d46fb08b611468da75047e290e4",
+    "horizonBars": 32,
+    "stopLossPct": 0.02,
+    "takeProfitPct": 0.04,
+    "costs": {
+      "feeRate": 0.001,
+      "spreadBps": 10,
+      "slippageBps": 8
+    }
+  },
+  "candidate": "Highest strict closed four-hour relative return among the nineteen non-BTC markets. Require positive absolute four-hour return and positive relative return. Resolve ties by pair.",
+  "gates": {
+    "ungated": "Use common candidate",
+    "btc": "Common candidate and BTC closed 24-hour return > 0",
+    "breadth": "BTC policy and more than half of nineteen altcoins have positive closed 24-hour return",
+    "cash": "Abstain"
+  },
+  "missing": "All 20 aligned 97-bar source windows and 19 relative features required. Missing candidate or evidence produces no trade. Ambiguous/unavailable selected label remains null and invalidates full aggregate.",
+  "scoring": "Same candidate and costed first-barrier label across policies. Compare mean net label per scheduled clock including zero for abstentions. Report coverage and observed veto labels, not portfolio PnL.",
+  "dataScope": "df5ed748ced1b3730c976d79c1542adea04b8d46fb08b611468da75047e290e4",
+  "selection": "One fixed descriptive timing comparison. No refit, threshold search, or strategy activation."
+}

@@ -1,0 +1,31 @@
+{
+  "version": "archived-aggressor-probe-protocol-v1",
+  "registeredAt": "2026-11-02T20:44:45.770Z",
+  "runnerHash": "5cde37e63282bedb57b509c95b736b2d3578df8a3d0bc29beddd6d4fa6166431",
+  "sources": {
+    "scripts/archived-public-activity.mjs": "d435ce7c6b58f0432cfd659d60b8ebdf066c3b1c01c73f8b8bf5ee7841ad57f2",
+    "scripts/historical-period-files.mjs": "8c3993e798fdcd902111d0cd1a087fc8bbabae71a9bb41d620cb86f95285a1af",
+    "apps/server/src/research/historical-aggressor.ts": "548e77082c466bc57b8eee374e2c2d615e9348f65a77b0bd93c71a0cd1860183",
+    "apps/server/dist/research/historical-aggressor.js": "036e8e8ecb34a8b0cf536ab809a635115f7d9759113ae00a4e4711a3adc045ea",
+    "apps/server/src/research/public-activity.ts": "ade94f87fc1c0d68f804865823b322bd4674726aab21060181fc7189413cfb2a",
+    "apps/server/dist/research/public-activity.js": "a722e924d07634c52f28123c5f747ba5cd3143132c3903bc15b91ddf99fbb66c"
+  },
+  "corpus": "docs/barrier-clock-corpus-3262b4fb3be9b47e.json",
+  "corpusHash": "3262b4fb3be9b47e7edf0954e93d52f85fda6dfedf7159178c440fa6300a7414",
+  "pairs": [
+    "BTC/EUR",
+    "ETH/EUR"
+  ],
+  "period": "2025-10",
+  "availabilityDomain": "modeled-historical-bar-close-v1",
+  "hypothesis": "One fixed4h quote-volume-weighted aggressor imbalance may add information beyond original8D; this stage verifies sources only before any fit or broader extraction.",
+  "feature": "2*sum(last16takerBuyQuote)/sum(last16totalQuote)-1",
+  "sourceWindowBars": 96,
+  "zeroQuote": "explicit unknown/null, never zero imputation",
+  "selection": "All original pair/clock rows in this period, no outcome selection",
+  "maximumNetworkRequests": 0,
+  "originalOhlcvParity": "Exact for all96sourcebars of every row",
+  "newModelFitted": false,
+  "julyLoaded": false,
+  "full20PairControlsAndMin200GatePreserved": true
+}

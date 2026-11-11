@@ -1,0 +1,941 @@
+{
+  "version": "support-opportunity-audit-v1",
+  "protocolHash": "10f70d83d20371e645c42522bce76990e5306cc961cb4c90573a9c26ac806c1f",
+  "runnerHash": "bac170a7ae756505f46c3b11499eb2b1157d16b74e87d8557ac3758af5b56545",
+  "supportHash": "bb7c60d0ce2dd8e92b1aa4bf3bec0f3a2d79e2e61da2bc2a9eeb0b5687da99e5",
+  "modelsHash": "9e6096906eea152134caed8459188588a1beb4af80cf0a5aff2daf8d4bf5a916",
+  "rankingHash": "fbcfb4343dd6bd93fb8041dcffe32e78521ead2873cc7344a46f23b753e719a2",
+  "groups": {
+    "8": {
+      "allQueries": {
+        "rows": 6560,
+        "distanceKnown": 6552,
+        "forecastKnown": 6437,
+        "labelKnown": 6559,
+        "forecastAndLabelKnown": 6437,
+        "ratioMean": 1.103447466044898,
+        "ratioMedian": 0.7449527384145707,
+        "ratioP90": 1.786128895525962,
+        "ratioMaximum": 145.0355546368421,
+        "meanForecast": -0.005325066649058323,
+        "meanOpportunityLabel": -0.0048040262746490495,
+        "meanOverprediction": -0.0004978446898365984
+      },
+      "sourceAvailable": {
+        "rows": 6552,
+        "distanceKnown": 6552,
+        "forecastKnown": 6437,
+        "labelKnown": 6551,
+        "forecastAndLabelKnown": 6437,
+        "ratioMean": 1.103447466044898,
+        "ratioMedian": 0.7449527384145707,
+        "ratioP90": 1.786128895525962,
+        "ratioMaximum": 145.0355546368421,
+        "meanForecast": -0.005325066649058323,
+        "meanOpportunityLabel": -0.004793940406745574,
+        "meanOverprediction": -0.0004978446898365984
+      },
+      "forecastEligible": {
+        "rows": 6437,
+        "distanceKnown": 6437,
+        "forecastKnown": 6437,
+        "labelKnown": 6437,
+        "forecastAndLabelKnown": 6437,
+        "ratioMean": 0.9354434072345544,
+        "ratioMedian": 0.7345514010116213,
+        "ratioP90": 1.6653179860438103,
+        "ratioMaximum": 5.95823780590927,
+        "meanForecast": -0.005325066649058323,
+        "meanOpportunityLabel": -0.004827221959221749,
+        "meanOverprediction": -0.0004978446898365984
+      },
+      "aboveMargin": {
+        "rows": 173,
+        "distanceKnown": 173,
+        "forecastKnown": 173,
+        "labelKnown": 173,
+        "forecastAndLabelKnown": 173,
+        "ratioMean": 1.9680577322849153,
+        "ratioMedian": 1.7426844269461295,
+        "ratioP90": 3.671920259296313,
+        "ratioMaximum": 5.72541175927952,
+        "meanForecast": 0.008789103196639874,
+        "meanOpportunityLabel": -0.0031868087368920974,
+        "meanOverprediction": 0.011975911933531971
+      },
+      "rankedWinners": {
+        "rows": 50,
+        "distanceKnown": 50,
+        "forecastKnown": 50,
+        "labelKnown": 50,
+        "forecastAndLabelKnown": 50,
+        "ratioMean": 2.243503552238954,
+        "ratioMedian": 1.749993388977345,
+        "ratioP90": 3.9108639683509425,
+        "ratioMaximum": 5.72541175927952,
+        "meanForecast": 0.008995802945912556,
+        "meanOpportunityLabel": -0.005717407835070123,
+        "meanOverprediction": 0.014713210780982682
+      },
+      "eligibleNonwinners": {
+        "rows": 6387,
+        "distanceKnown": 6387,
+        "forecastKnown": 6387,
+        "labelKnown": 6387,
+        "forecastAndLabelKnown": 6387,
+        "ratioMean": 0.9252033873112381,
+        "ratioMedian": 0.7322078677616682,
+        "ratioP90": 1.6496675057203805,
+        "ratioMaximum": 5.95823780590927,
+        "meanForecast": -0.005437176165223748,
+        "meanOpportunityLabel": -0.004820253226829012,
+        "meanOverprediction": -0.0006169229383947556
+      }
+    },
+    "9": {
+      "allQueries": {
+        "rows": 6560,
+        "distanceKnown": 6552,
+        "forecastKnown": 6437,
+        "labelKnown": 6559,
+        "forecastAndLabelKnown": 6437,
+        "ratioMean": 1.085832323915295,
+        "ratioMedian": 0.7864274537685862,
+        "ratioP90": 1.7062149209527362,
+        "ratioMaximum": 122.08449731968345,
+        "meanForecast": -0.005357547805062415,
+        "meanOpportunityLabel": -0.0048040262746490495,
+        "meanOverprediction": -0.0005303258458406795
+      },
+      "sourceAvailable": {
+        "rows": 6552,
+        "distanceKnown": 6552,
+        "forecastKnown": 6437,
+        "labelKnown": 6551,
+        "forecastAndLabelKnown": 6437,
+        "ratioMean": 1.085832323915295,
+        "ratioMedian": 0.7864274537685862,
+        "ratioP90": 1.7062149209527362,
+        "ratioMaximum": 122.08449731968345,
+        "meanForecast": -0.005357547805062415,
+        "meanOpportunityLabel": -0.004793940406745574,
+        "meanOverprediction": -0.0005303258458406795
+      },
+      "forecastEligible": {
+        "rows": 6437,
+        "distanceKnown": 6437,
+        "forecastKnown": 6437,
+        "labelKnown": 6437,
+        "forecastAndLabelKnown": 6437,
+        "ratioMean": 0.9443710222195625,
+        "ratioMedian": 0.7782998531508819,
+        "ratioP90": 1.608468896980117,
+        "ratioMaximum": 5.167975598812499,
+        "meanForecast": -0.005357547805062415,
+        "meanOpportunityLabel": -0.004827221959221749,
+        "meanOverprediction": -0.0005303258458406795
+      },
+      "aboveMargin": {
+        "rows": 184,
+        "distanceKnown": 184,
+        "forecastKnown": 184,
+        "labelKnown": 184,
+        "forecastAndLabelKnown": 184,
+        "ratioMean": 1.7738433946094117,
+        "ratioMedian": 1.6513540952790828,
+        "ratioP90": 3.1279572691222985,
+        "ratioMaximum": 4.770015268894761,
+        "meanForecast": 0.00875167452932992,
+        "meanOpportunityLabel": -0.0028659835796225903,
+        "meanOverprediction": 0.011617658108952511
+      },
+      "rankedWinners": {
+        "rows": 56,
+        "distanceKnown": 56,
+        "forecastKnown": 56,
+        "labelKnown": 56,
+        "forecastAndLabelKnown": 56,
+        "ratioMean": 2.0088450859851217,
+        "ratioMedian": 1.703681886076928,
+        "ratioP90": 3.3714259886187756,
+        "ratioMaximum": 4.770015268894761,
+        "meanForecast": 0.009008701557483732,
+        "meanOpportunityLabel": -0.004800110897939689,
+        "meanOverprediction": 0.013808812455423423
+      },
+      "eligibleNonwinners": {
+        "rows": 6381,
+        "distanceKnown": 6381,
+        "forecastKnown": 6381,
+        "labelKnown": 6381,
+        "forecastAndLabelKnown": 6381,
+        "ratioMean": 0.9350291404501101,
+        "ratioMedian": 0.7757109284598133,
+        "ratioP90": 1.5875829324009223,
+        "ratioMaximum": 5.167975598812499,
+        "meanForecast": -0.005483626783953273,
+        "meanOpportunityLabel": -0.00482745988735712,
+        "meanOverprediction": -0.0006561668965961704
+      }
+    }
+  },
+  "winners": {
+    "8": [
+      {
+        "pair": "ICP/EUR",
+        "decisionAt": 1762171200000,
+        "referenceRatio": 3.4928142793665344,
+        "forecast": 0.011275121925967135,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "ICP/EUR",
+        "decisionAt": 1762214400000,
+        "referenceRatio": 5.320399402607215,
+        "forecast": 0.015791397628476336,
+        "opportunityLabel": 0.036573194389610375
+      },
+      {
+        "pair": "APT/EUR",
+        "decisionAt": 1762257600000,
+        "referenceRatio": 3.9210148147720902,
+        "forecast": 0.011357674975754031,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "DOT/EUR",
+        "decisionAt": 1762603200000,
+        "referenceRatio": 3.0524714020757133,
+        "forecast": 0.010388340965327234,
+        "opportunityLabel": -0.022252334391999917
+      },
+      {
+        "pair": "AVAX/EUR",
+        "decisionAt": 1764936000000,
+        "referenceRatio": 1.6209888481785735,
+        "forecast": 0.005299676163797895,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "WIN/EUR",
+        "decisionAt": 1765195200000,
+        "referenceRatio": 3.571203100667987,
+        "forecast": 0.006653896420802176,
+        "opportunityLabel": 0.0365731943896106
+      },
+      {
+        "pair": "AVAX/EUR",
+        "decisionAt": 1765324800000,
+        "referenceRatio": 1.0854346488091096,
+        "forecast": 0.008147558412842286,
+        "opportunityLabel": -0.0037956489628329093
+      },
+      {
+        "pair": "LTC/EUR",
+        "decisionAt": 1765540800000,
+        "referenceRatio": 0.7116837945248461,
+        "forecast": 0.0068602363841655314,
+        "opportunityLabel": -0.02225233439200014
+      },
+      {
+        "pair": "APT/EUR",
+        "decisionAt": 1765670400000,
+        "referenceRatio": 1.385100324191044,
+        "forecast": 0.0128038334047159,
+        "opportunityLabel": -0.0170148118595439
+      },
+      {
+        "pair": "SHIB/EUR",
+        "decisionAt": 1765800000000,
+        "referenceRatio": 0.6502581002041417,
+        "forecast": 0.0054280052559624046,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "WIN/EUR",
+        "decisionAt": 1765843200000,
+        "referenceRatio": 1.2303073298493798,
+        "forecast": 0.007598306941593126,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "BTC/EUR",
+        "decisionAt": 1765886400000,
+        "referenceRatio": 0.769312034770163,
+        "forecast": 0.0066154336075253855,
+        "opportunityLabel": -0.0017742207803759236
+      },
+      {
+        "pair": "ETH/EUR",
+        "decisionAt": 1765929600000,
+        "referenceRatio": 0.5592853708757641,
+        "forecast": 0.006050130601861266,
+        "opportunityLabel": -0.004209078606172034
+      },
+      {
+        "pair": "AVAX/EUR",
+        "decisionAt": 1765972800000,
+        "referenceRatio": 0.7319845333235615,
+        "forecast": 0.008033788335887856,
+        "opportunityLabel": -0.02225233439200014
+      },
+      {
+        "pair": "SUI/EUR",
+        "decisionAt": 1766145600000,
+        "referenceRatio": 1.3722626687514583,
+        "forecast": 0.009769072443593318,
+        "opportunityLabel": 0.021693372466470295
+      },
+      {
+        "pair": "PEPE/EUR",
+        "decisionAt": 1766188800000,
+        "referenceRatio": 0.9722245548023538,
+        "forecast": 0.006999479928683674,
+        "opportunityLabel": 0.0011149212352039584
+      },
+      {
+        "pair": "SHIB/EUR",
+        "decisionAt": 1766232000000,
+        "referenceRatio": 1.4078668249187825,
+        "forecast": 0.00797192355296717,
+        "opportunityLabel": -0.010820489326093696
+      },
+      {
+        "pair": "TRX/EUR",
+        "decisionAt": 1766275200000,
+        "referenceRatio": 1.5391644681207075,
+        "forecast": 0.008564533819234246,
+        "opportunityLabel": 0.002435045717561035
+      },
+      {
+        "pair": "BCH/EUR",
+        "decisionAt": 1768132800000,
+        "referenceRatio": 1.2557343793413533,
+        "forecast": 0.005115146053538424,
+        "opportunityLabel": 0.0012910762380071716
+      },
+      {
+        "pair": "SUI/EUR",
+        "decisionAt": 1768348800000,
+        "referenceRatio": 2.0304252001639465,
+        "forecast": 0.00500558706471698,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "BTC/EUR",
+        "decisionAt": 1768780800000,
+        "referenceRatio": 3.859224252510329,
+        "forecast": 0.0060513433191544674,
+        "opportunityLabel": -0.0019432081568583337
+      },
+      {
+        "pair": "APT/EUR",
+        "decisionAt": 1768996800000,
+        "referenceRatio": 3.0732139397370823,
+        "forecast": 0.0070226310898242085,
+        "opportunityLabel": 0.018577024754691696
+      },
+      {
+        "pair": "WIN/EUR",
+        "decisionAt": 1769040000000,
+        "referenceRatio": 1.3143777520548536,
+        "forecast": 0.005718616235582841,
+        "opportunityLabel": -0.00901545135309001
+      },
+      {
+        "pair": "AVAX/EUR",
+        "decisionAt": 1769083200000,
+        "referenceRatio": 3.276864664900019,
+        "forecast": 0.005555160470516598,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "APT/EUR",
+        "decisionAt": 1769860800000,
+        "referenceRatio": 2.530631450652648,
+        "forecast": 0.006578370189575106,
+        "opportunityLabel": -0.027818551545461312
+      },
+      {
+        "pair": "SOL/EUR",
+        "decisionAt": 1769904000000,
+        "referenceRatio": 3.586047373246963,
+        "forecast": 0.022159647086874925,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "ETH/EUR",
+        "decisionAt": 1769947200000,
+        "referenceRatio": 1.52983422745395,
+        "forecast": 0.00632644813194224,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "ETH/EUR",
+        "decisionAt": 1769990400000,
+        "referenceRatio": 4.210205294774166,
+        "forecast": 0.013553870775192375,
+        "opportunityLabel": -0.022252334391999917
+      },
+      {
+        "pair": "ETH/EUR",
+        "decisionAt": 1770033600000,
+        "referenceRatio": 2.610861470233576,
+        "forecast": 0.015387905551144866,
+        "opportunityLabel": 0.036573194389610375
+      },
+      {
+        "pair": "BCH/EUR",
+        "decisionAt": 1770336000000,
+        "referenceRatio": 5.72541175927952,
+        "forecast": 0.0076300877222679996,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "APT/EUR",
+        "decisionAt": 1770379200000,
+        "referenceRatio": 3.1785288517501242,
+        "forecast": 0.009818571952320353,
+        "opportunityLabel": 0.0365731943896106
+      },
+      {
+        "pair": "WIN/EUR",
+        "decisionAt": 1770768000000,
+        "referenceRatio": 1.215806669590638,
+        "forecast": 0.005194061194923553,
+        "opportunityLabel": -0.014284994719342747
+      },
+      {
+        "pair": "PEPE/EUR",
+        "decisionAt": 1771070400000,
+        "referenceRatio": 3.9108639683509425,
+        "forecast": 0.00819428468503356,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "XRP/EUR",
+        "decisionAt": 1771848000000,
+        "referenceRatio": 0.9267696779901979,
+        "forecast": 0.008501823067057015,
+        "opportunityLabel": -0.02225233439200014
+      },
+      {
+        "pair": "BCH/EUR",
+        "decisionAt": 1771934400000,
+        "referenceRatio": 1.6440165971701368,
+        "forecast": 0.007466378481934282,
+        "opportunityLabel": 0.0064488759974574705
+      },
+      {
+        "pair": "AVAX/EUR",
+        "decisionAt": 1772020800000,
+        "referenceRatio": 1.1073826729412537,
+        "forecast": 0.006935056129878573,
+        "opportunityLabel": 0.0365731943896106
+      },
+      {
+        "pair": "WIN/EUR",
+        "decisionAt": 1772107200000,
+        "referenceRatio": 1.3015616905699758,
+        "forecast": 0.008347462735841067,
+        "opportunityLabel": 0.036573194389610375
+      },
+      {
+        "pair": "DOT/EUR",
+        "decisionAt": 1772150400000,
+        "referenceRatio": 2.1434537788344348,
+        "forecast": 0.009841385440655452,
+        "opportunityLabel": 0.0365731943896106
+      },
+      {
+        "pair": "DOT/EUR",
+        "decisionAt": 1772323200000,
+        "referenceRatio": 4.852004355884161,
+        "forecast": 0.011210822110827584,
+        "opportunityLabel": -0.022252334391999917
+      },
+      {
+        "pair": "ICP/EUR",
+        "decisionAt": 1772971200000,
+        "referenceRatio": 1.6713937642204726,
+        "forecast": 0.007976998607564704,
+        "opportunityLabel": -0.006464916447601277
+      },
+      {
+        "pair": "SHIB/EUR",
+        "decisionAt": 1773316800000,
+        "referenceRatio": 1.144107806065383,
+        "forecast": 0.0069765281802694305,
+        "opportunityLabel": -0.027560450275960102
+      },
+      {
+        "pair": "ICP/EUR",
+        "decisionAt": 1773360000000,
+        "referenceRatio": 2.2934642578945796,
+        "forecast": 0.008966605728178199,
+        "opportunityLabel": -0.02274153830668657
+      },
+      {
+        "pair": "PEPE/EUR",
+        "decisionAt": 1773403200000,
+        "referenceRatio": 1.2419231576100718,
+        "forecast": 0.012845512947706028,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "LTC/EUR",
+        "decisionAt": 1773446400000,
+        "referenceRatio": 2.1215742737097667,
+        "forecast": 0.00793230275697859,
+        "opportunityLabel": -0.01567921867808142
+      },
+      {
+        "pair": "ICP/EUR",
+        "decisionAt": 1773532800000,
+        "referenceRatio": 1.9336696205249944,
+        "forecast": 0.008103653157247502,
+        "opportunityLabel": -0.02225233439200014
+      },
+      {
+        "pair": "SOL/EUR",
+        "decisionAt": 1773619200000,
+        "referenceRatio": 2.0905134502833844,
+        "forecast": 0.011173639417080349,
+        "opportunityLabel": 0.009960103945834131
+      },
+      {
+        "pair": "PEPE/EUR",
+        "decisionAt": 1773792000000,
+        "referenceRatio": 3.7560603036187117,
+        "forecast": 0.008521886949979286,
+        "opportunityLabel": -0.00458943729035266
+      },
+      {
+        "pair": "WIN/EUR",
+        "decisionAt": 1773878400000,
+        "referenceRatio": 1.7886991262705787,
+        "forecast": 0.016071480583367673,
+        "opportunityLabel": -0.025039577253571088
+      },
+      {
+        "pair": "APT/EUR",
+        "decisionAt": 1774008000000,
+        "referenceRatio": 1.749993388977345,
+        "forecast": 0.005595573742951677,
+        "opportunityLabel": 0.000035002025371433376
+      },
+      {
+        "pair": "LINK/EUR",
+        "decisionAt": 1774267200000,
+        "referenceRatio": 3.7067819345327084,
+        "forecast": 0.01840289496634507,
+        "opportunityLabel": 0.012107772148647777
+      }
+    ],
+    "9": [
+      {
+        "pair": "ICP/EUR",
+        "decisionAt": 1762171200000,
+        "referenceRatio": 3.1444054407123807,
+        "forecast": 0.01169553244301274,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "ICP/EUR",
+        "decisionAt": 1762214400000,
+        "referenceRatio": 4.509587840257938,
+        "forecast": 0.01608217002073232,
+        "opportunityLabel": 0.036573194389610375
+      },
+      {
+        "pair": "APT/EUR",
+        "decisionAt": 1762257600000,
+        "referenceRatio": 3.326699742950793,
+        "forecast": 0.011957647125389676,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "DOT/EUR",
+        "decisionAt": 1762603200000,
+        "referenceRatio": 3.1279572691222985,
+        "forecast": 0.010112390487228649,
+        "opportunityLabel": -0.022252334391999917
+      },
+      {
+        "pair": "APT/EUR",
+        "decisionAt": 1763769600000,
+        "referenceRatio": 2.8793631233289267,
+        "forecast": 0.005810167846747864,
+        "opportunityLabel": -0.02369520624831145
+      },
+      {
+        "pair": "APT/EUR",
+        "decisionAt": 1763985600000,
+        "referenceRatio": 2.5929252555419335,
+        "forecast": 0.009548642394862597,
+        "opportunityLabel": 0.0365731943896106
+      },
+      {
+        "pair": "AVAX/EUR",
+        "decisionAt": 1764936000000,
+        "referenceRatio": 1.683860233571482,
+        "forecast": 0.00535619706432826,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "WIN/EUR",
+        "decisionAt": 1765195200000,
+        "referenceRatio": 3.0125275281384405,
+        "forecast": 0.0066424888168860165,
+        "opportunityLabel": 0.0365731943896106
+      },
+      {
+        "pair": "AVAX/EUR",
+        "decisionAt": 1765324800000,
+        "referenceRatio": 1.175189339713224,
+        "forecast": 0.007999942103277041,
+        "opportunityLabel": -0.0037956489628329093
+      },
+      {
+        "pair": "LTC/EUR",
+        "decisionAt": 1765540800000,
+        "referenceRatio": 0.7771365788049649,
+        "forecast": 0.006914201096248674,
+        "opportunityLabel": -0.02225233439200014
+      },
+      {
+        "pair": "ICP/EUR",
+        "decisionAt": 1765670400000,
+        "referenceRatio": 0.6984291504637411,
+        "forecast": 0.009994344459332005,
+        "opportunityLabel": -0.021001224345780556
+      },
+      {
+        "pair": "SHIB/EUR",
+        "decisionAt": 1765800000000,
+        "referenceRatio": 0.7401326375290472,
+        "forecast": 0.006258611266583477,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "WIN/EUR",
+        "decisionAt": 1765843200000,
+        "referenceRatio": 1.0571425509587453,
+        "forecast": 0.0072874741130928644,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "BTC/EUR",
+        "decisionAt": 1765886400000,
+        "referenceRatio": 0.7557779114572454,
+        "forecast": 0.006649860715357771,
+        "opportunityLabel": -0.0017742207803759236
+      },
+      {
+        "pair": "PEPE/EUR",
+        "decisionAt": 1765929600000,
+        "referenceRatio": 0.7380871136254649,
+        "forecast": 0.007820617630946596,
+        "opportunityLabel": -0.0017208189540135477
+      },
+      {
+        "pair": "AVAX/EUR",
+        "decisionAt": 1765972800000,
+        "referenceRatio": 1.4756498005886711,
+        "forecast": 0.009572526319905694,
+        "opportunityLabel": -0.02225233439200014
+      },
+      {
+        "pair": "AVAX/EUR",
+        "decisionAt": 1766145600000,
+        "referenceRatio": 1.0426386225997775,
+        "forecast": 0.01056682495676083,
+        "opportunityLabel": 0.020660001373501657
+      },
+      {
+        "pair": "SUI/EUR",
+        "decisionAt": 1766188800000,
+        "referenceRatio": 1.1167753034991381,
+        "forecast": 0.006240134488063413,
+        "opportunityLabel": -0.003956978827825752
+      },
+      {
+        "pair": "SHIB/EUR",
+        "decisionAt": 1766232000000,
+        "referenceRatio": 1.2781591950014417,
+        "forecast": 0.008433185877033626,
+        "opportunityLabel": -0.010820489326093696
+      },
+      {
+        "pair": "TRX/EUR",
+        "decisionAt": 1766275200000,
+        "referenceRatio": 1.3414765831628257,
+        "forecast": 0.008840538318210255,
+        "opportunityLabel": 0.002435045717561035
+      },
+      {
+        "pair": "BCH/EUR",
+        "decisionAt": 1768132800000,
+        "referenceRatio": 1.0633390956669024,
+        "forecast": 0.00518753919358459,
+        "opportunityLabel": 0.0012910762380071716
+      },
+      {
+        "pair": "APT/EUR",
+        "decisionAt": 1768176000000,
+        "referenceRatio": 1.0185867643280202,
+        "forecast": 0.0052066617942472,
+        "opportunityLabel": -0.011797808712213143
+      },
+      {
+        "pair": "PEPE/EUR",
+        "decisionAt": 1768262400000,
+        "referenceRatio": 1.6036446398931952,
+        "forecast": 0.005725665569572179,
+        "opportunityLabel": 0.015601446334589486
+      },
+      {
+        "pair": "BCH/EUR",
+        "decisionAt": 1768348800000,
+        "referenceRatio": 1.703681886076928,
+        "forecast": 0.005506178354092192,
+        "opportunityLabel": -0.0025109414304804734
+      },
+      {
+        "pair": "BTC/EUR",
+        "decisionAt": 1768780800000,
+        "referenceRatio": 3.221521630664637,
+        "forecast": 0.005679356187276215,
+        "opportunityLabel": -0.0019432081568583337
+      },
+      {
+        "pair": "APT/EUR",
+        "decisionAt": 1768867200000,
+        "referenceRatio": 1.6877517666122712,
+        "forecast": 0.008911063599971682,
+        "opportunityLabel": -0.01912097835180737
+      },
+      {
+        "pair": "APT/EUR",
+        "decisionAt": 1768996800000,
+        "referenceRatio": 2.626581792217095,
+        "forecast": 0.008258093398773548,
+        "opportunityLabel": 0.018577024754691696
+      },
+      {
+        "pair": "WIN/EUR",
+        "decisionAt": 1769040000000,
+        "referenceRatio": 1.2839906812640647,
+        "forecast": 0.006141880984996203,
+        "opportunityLabel": -0.00901545135309001
+      },
+      {
+        "pair": "WIN/EUR",
+        "decisionAt": 1769083200000,
+        "referenceRatio": 1.287521377813855,
+        "forecast": 0.008717333886420979,
+        "opportunityLabel": -0.021943488227177177
+      },
+      {
+        "pair": "APT/EUR",
+        "decisionAt": 1769731200000,
+        "referenceRatio": 2.2354790491012895,
+        "forecast": 0.006082606757037176,
+        "opportunityLabel": -0.023067599471403577
+      },
+      {
+        "pair": "APT/EUR",
+        "decisionAt": 1769860800000,
+        "referenceRatio": 2.189548388244713,
+        "forecast": 0.006902100573019867,
+        "opportunityLabel": -0.027818551545461312
+      },
+      {
+        "pair": "SOL/EUR",
+        "decisionAt": 1769904000000,
+        "referenceRatio": 3.0052537582992573,
+        "forecast": 0.022227845976921883,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "ETH/EUR",
+        "decisionAt": 1769947200000,
+        "referenceRatio": 1.7095786938961848,
+        "forecast": 0.006368244265881656,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "ETH/EUR",
+        "decisionAt": 1769990400000,
+        "referenceRatio": 3.6514098304761107,
+        "forecast": 0.013366018064050262,
+        "opportunityLabel": -0.022252334391999917
+      },
+      {
+        "pair": "ETH/EUR",
+        "decisionAt": 1770033600000,
+        "referenceRatio": 2.198735409371623,
+        "forecast": 0.015588882930598597,
+        "opportunityLabel": 0.036573194389610375
+      },
+      {
+        "pair": "BCH/EUR",
+        "decisionAt": 1770336000000,
+        "referenceRatio": 4.770015268894761,
+        "forecast": 0.007117239592571633,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "APT/EUR",
+        "decisionAt": 1770379200000,
+        "referenceRatio": 2.649669839347101,
+        "forecast": 0.010075358119772039,
+        "opportunityLabel": 0.0365731943896106
+      },
+      {
+        "pair": "WIN/EUR",
+        "decisionAt": 1770768000000,
+        "referenceRatio": 1.0698623581669475,
+        "forecast": 0.0051238764519756196,
+        "opportunityLabel": -0.014284994719342747
+      },
+      {
+        "pair": "PEPE/EUR",
+        "decisionAt": 1771070400000,
+        "referenceRatio": 3.5946139540506232,
+        "forecast": 0.009194052317749377,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "XRP/EUR",
+        "decisionAt": 1771848000000,
+        "referenceRatio": 0.7811665819210555,
+        "forecast": 0.007868580160935182,
+        "opportunityLabel": -0.02225233439200014
+      },
+      {
+        "pair": "WIN/EUR",
+        "decisionAt": 1771934400000,
+        "referenceRatio": 1.0175629800668549,
+        "forecast": 0.007917730758806175,
+        "opportunityLabel": 0.0365731943896106
+      },
+      {
+        "pair": "AVAX/EUR",
+        "decisionAt": 1772020800000,
+        "referenceRatio": 1.410986557102837,
+        "forecast": 0.008078055993019216,
+        "opportunityLabel": 0.0365731943896106
+      },
+      {
+        "pair": "WIN/EUR",
+        "decisionAt": 1772107200000,
+        "referenceRatio": 1.1237545380574088,
+        "forecast": 0.006430904634315787,
+        "opportunityLabel": 0.036573194389610375
+      },
+      {
+        "pair": "DOT/EUR",
+        "decisionAt": 1772150400000,
+        "referenceRatio": 1.9044954288999996,
+        "forecast": 0.010275293376456393,
+        "opportunityLabel": 0.0365731943896106
+      },
+      {
+        "pair": "DOT/EUR",
+        "decisionAt": 1772323200000,
+        "referenceRatio": 4.458569893881167,
+        "forecast": 0.01119955635030447,
+        "opportunityLabel": -0.022252334391999917
+      },
+      {
+        "pair": "ICP/EUR",
+        "decisionAt": 1772971200000,
+        "referenceRatio": 2.086996878643043,
+        "forecast": 0.010669957192779078,
+        "opportunityLabel": -0.006464916447601277
+      },
+      {
+        "pair": "SHIB/EUR",
+        "decisionAt": 1773316800000,
+        "referenceRatio": 1.2447015478089807,
+        "forecast": 0.006419912517376473,
+        "opportunityLabel": -0.027560450275960102
+      },
+      {
+        "pair": "ICP/EUR",
+        "decisionAt": 1773360000000,
+        "referenceRatio": 2.056673012069625,
+        "forecast": 0.005698272397745284,
+        "opportunityLabel": -0.02274153830668657
+      },
+      {
+        "pair": "PEPE/EUR",
+        "decisionAt": 1773403200000,
+        "referenceRatio": 1.2448986363137866,
+        "forecast": 0.01367398754235815,
+        "opportunityLabel": -0.02225233439200003
+      },
+      {
+        "pair": "LTC/EUR",
+        "decisionAt": 1773446400000,
+        "referenceRatio": 1.8019276633747368,
+        "forecast": 0.010431737223467243,
+        "opportunityLabel": -0.01567921867808142
+      },
+      {
+        "pair": "ICP/EUR",
+        "decisionAt": 1773532800000,
+        "referenceRatio": 2.2757881062670506,
+        "forecast": 0.011062694415235852,
+        "opportunityLabel": -0.02225233439200014
+      },
+      {
+        "pair": "SOL/EUR",
+        "decisionAt": 1773619200000,
+        "referenceRatio": 1.7896604367984268,
+        "forecast": 0.011163187091173588,
+        "opportunityLabel": 0.009960103945834131
+      },
+      {
+        "pair": "PEPE/EUR",
+        "decisionAt": 1773792000000,
+        "referenceRatio": 3.18991999022645,
+        "forecast": 0.008472287511682159,
+        "opportunityLabel": -0.00458943729035266
+      },
+      {
+        "pair": "WIN/EUR",
+        "decisionAt": 1773878400000,
+        "referenceRatio": 2.2157868620805337,
+        "forecast": 0.0160224572547489,
+        "opportunityLabel": -0.025039577253571088
+      },
+      {
+        "pair": "APT/EUR",
+        "decisionAt": 1774008000000,
+        "referenceRatio": 1.4763023076220048,
+        "forecast": 0.005446422691061636,
+        "opportunityLabel": 0.000035002025371433376
+      },
+      {
+        "pair": "LINK/EUR",
+        "decisionAt": 1774267200000,
+        "referenceRatio": 3.3714259886187756,
+        "forecast": 0.018492754545110127,
+        "opportunityLabel": 0.012107772148647777
+      }
+    ]
+  },
+  "thresholdChosen": false,
+  "forecastsChanged": false,
+  "newPredictiveModelFitted": false,
+  "newSelectorChosen": false,
+  "portfolioReturn": null,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "scope": "Predefined outcome-blind groups; labels attached only after frozen geometric output and group membership. Query support ratios are descriptive relative geometry, not probability/calibrated confidence or entry gates. Forecast/error means use only existing nonnull forecasts, labels use only known values; counts explicit. Winner labels are opportunities, not portfolio returns. Known pooled20asset/serially-dependent data.",
+  "factsHash": "a2de62e2fb4677eed3e941aca2a219bd586213bc49441ea931bbceef287498a5",
+  "generatedAt": "2026-11-02T21:10:14.348Z"
+}

@@ -1,0 +1,35 @@
+{
+  "version": "closed-breakout-entry-study-v1",
+  "registeredAt": "2026-10-31T23:01:28.873843+00:00",
+  "runnerHash": "1d33f5b1cf4a6c8d322c74521f7f422e206d636ee1fe8ebbe0f764cd9b8291f7",
+  "sources": {
+    "apps/server/src/strategy/breakout-entry-paper.ts": "62ed9a2e557acb3e413ace6e9fe36b2594d30bd261c626eb043c72f256933027",
+    "apps/server/src/strategy/structure-exit-paper.ts": "a930b6676bab40c75a3ab399e3ccb9387df6b70671ffd882d833066a83d10313",
+    "apps/server/src/context/market-structure.ts": "7caeba5a13960949f1add470d7ebcfc29a45d1153a58044b7896ef89725c983d"
+  },
+  "hypothesis": "Additional long-entry confirmation: signal CLOSED price strictly above high of prior20closed candles EXCLUDINGsignal; no new fitted thresholds/slopes/grid. Preserve all existing entry risk and exit behavior. Reselect already-qualified assessments after gate.",
+  "periods": [
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04"
+  ],
+  "feeRates": [
+    0.001,
+    0.002
+  ],
+  "trainingMonthsAlreadyExamined": true,
+  "aprilValidationAlreadyExplored": true,
+  "candidateOutcomeNotYetEvaluated": true,
+  "sourceBaseline": "Existing programmed structure-exit-v1 full results exact-check against stored references where available; include cash and same-cost BTCbenchmark.",
+  "learningModelFit": false,
+  "julyOutcomeLocked": true,
+  "parameterSearch": false,
+  "activation": false,
+  "independentOutOfSampleClaim": false,
+  "economicChanges": "Different accepted entry/selection changes portfolio path, reentry and future opportunities. Full costed paired replay required; no subtraction of old losing trades.",
+  "licenses": "Own TypeScript composition of existing own validators; Jesse MIT filter lifecycle used as architectural reference, not a copied strategy or calibrated predictor."
+}

@@ -1,0 +1,102 @@
+{
+  "verifiedAt": "2026-11-02T16:56:24.110Z",
+  "factsHash": "5097bdc64f688d20b4a6e563a09f11596ecf12850de3e387611b368401d27f44",
+  "modelsTrainScopeVerified": 41,
+  "treeStagesTrainResidualsVerified": 4100,
+  "leafResidualMeansVerified": 14423,
+  "nativeRawPredictionsVerified": 13120,
+  "guardedNativePredictionsVerified": 12897,
+  "testPredictionRowsVerified": 6560,
+  "maxNativeError": 0,
+  "selectedCounts": {
+    "zero": 8,
+    "mean": 21,
+    "ridge": 6,
+    "tree": 6
+  },
+  "aggregate": {
+    "zero": {
+      "rows": 6560,
+      "knownLabels": 6559,
+      "unknownLabels": 1,
+      "mae": 0.015381640349558799,
+      "rmse": 0.018491895440564607,
+      "coverage": 1,
+      "rankingKnownWinners": 0,
+      "rankingUnknownWinners": 0,
+      "rankingKnownMeanLabel": null
+    },
+    "mean": {
+      "rows": 6560,
+      "knownLabels": 6559,
+      "unknownLabels": 1,
+      "mae": 0.014350822607371427,
+      "rmse": 0.017969805487786074,
+      "coverage": 1,
+      "rankingKnownWinners": 0,
+      "rankingUnknownWinners": 0,
+      "rankingKnownMeanLabel": null
+    },
+    "ridge": {
+      "rows": 6560,
+      "knownLabels": 6559,
+      "unknownLabels": 1,
+      "mae": 0.014676210501317951,
+      "rmse": 0.01855752495906572,
+      "coverage": 0.9824695121951219,
+      "rankingKnownWinners": 50,
+      "rankingUnknownWinners": 0,
+      "rankingKnownMeanLabel": -0.005717407835070123
+    },
+    "tree": {
+      "rows": 6560,
+      "knownLabels": 6559,
+      "unknownLabels": 1,
+      "mae": 0.014975803492722704,
+      "rmse": 0.018784382627608547,
+      "coverage": 0.9824695121951219,
+      "rankingKnownWinners": 121,
+      "rankingUnknownWinners": 0,
+      "rankingKnownMeanLabel": -0.0038740937862227743
+    },
+    "prior-selected": {
+      "rows": 6560,
+      "knownLabels": 6559,
+      "unknownLabels": 1,
+      "mae": 0.0147416063388946,
+      "rmse": 0.0183965194656837,
+      "coverage": 0.9954268292682927,
+      "rankingKnownWinners": 11,
+      "rankingUnknownWinners": 0,
+      "rankingKnownMeanLabel": -0.004427206417030649
+    },
+    "extended-selected": {
+      "rows": 6560,
+      "knownLabels": 6559,
+      "unknownLabels": 1,
+      "mae": 0.014701014358601043,
+      "rmse": 0.01835571179800064,
+      "coverage": 0.9926829268292683,
+      "rankingKnownWinners": 24,
+      "rankingUnknownWinners": 0,
+      "rankingKnownMeanLabel": 0.0020585429419359563
+    }
+  },
+  "modelActivated": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "portfolioReturn": null,
+  "documentation": "docs/BARRIER-TREE-WALKFORWARD.md",
+  "report": "docs/barrier-tree-walkforward-5097bdc64f688d20.json",
+  "proof": "docs/barrier-tree-walkforward-verification.json",
+  "previousMainBuild": "e0ec7f7af9ac946947a1e8ea94cfd93d373b3d094a0ecc0c142fe18e945dba85",
+  "allPreviousMainRuntimeFilesUnchanged": 121,
+  "workingBuild": "b065096a07aed055e0668c3fa98f8b9493c386749644c8ac3e11de1e93409263",
+  "sources": {
+    "scripts/fit-barrier-tree-batch.py": "03c4657cfe83b4315aae93e7d581c99a1c1a111f9d591b0f16eaddf5f69f8939",
+    "scripts/run-barrier-tree-walkforward.mjs": "5405fe0ac075fa0ea602831ba29a5350f89dd20fb4201fe24537cbf29fe1bfad",
+    "scripts/verify-barrier-tree-walkforward.mjs": "f4c93a50393f0d9f79341bff46dddf34784b4a20fc337b894542c28d46069720",
+    "docs/barrier-tree-walkforward-protocol-v1.json": "ffd2bdd558a3927c93cfe4d50f4284a3ad935ae63f1204c95101012d801e6053"
+  }
+}

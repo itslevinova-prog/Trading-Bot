@@ -1,0 +1,66 @@
+{
+  "registeredAt": "2026-10-28T21:02:42.951Z",
+  "firstForwardDecisionAt": "2026-10-28T21:15:05.000Z",
+  "strategyHash": "0bb1c67c0c4dde1fdc6cdfe3cfc7f82c645dcdc67a83b131fe4b8572576020b6",
+  "sourceFiles": [
+    "strategy/providers.ts",
+    "strategy/quality.ts",
+    "market/indicators.ts",
+    "broker/risk.ts",
+    "broker/executionGuards.ts",
+    "research/portfolio.ts",
+    "broker/PaperExecutionAdapter.ts",
+    "research/registration.ts",
+    "research/dataset.ts",
+    "research/comparison.ts",
+    "strategy/scheduler.ts",
+    "config.ts"
+  ],
+  "options": {
+    "startingBalance": 100,
+    "feeRate": 0.001,
+    "spreadBps": 10,
+    "slippageBps": 8,
+    "decisionIntervalMinutes": 15,
+    "maxDrawdownPct": 0.25,
+    "minOrderQuote": 10,
+    "risk": {
+      "maxPositionPct": 0.3,
+      "maxOpenPositions": 4,
+      "maxTradesPerDay": 10,
+      "cooldownMinutes": 60,
+      "maxPortfolioRiskPct": 0.025,
+      "feeRate": 0.001
+    },
+    "entry": {
+      "maxSpreadBps": 20,
+      "maxSlippageBps": 30
+    }
+  },
+  "universe": [
+    "BTC/EUR",
+    "ETH/EUR",
+    "XRP/EUR",
+    "SOL/EUR",
+    "PEPE/EUR",
+    "BNB/EUR",
+    "ADA/EUR",
+    "TRX/EUR",
+    "DOGE/EUR",
+    "DOT/EUR",
+    "XLM/EUR",
+    "WIN/EUR",
+    "SUI/EUR",
+    "LINK/EUR",
+    "LTC/EUR",
+    "BCH/EUR",
+    "ICP/EUR",
+    "AVAX/EUR",
+    "SHIB/EUR",
+    "APT/EUR"
+  ],
+  "deploymentVerified": false,
+  "historicalDataAlreadyInspected": true,
+  "profitabilityEstablished": false,
+  "method": "Immutable registration per source/config/universe fingerprint. Source/config/universe changes create a new registration, never a retroactive cutoff. Forward evidence additionally requires deployment verification and decisions tagged with this version."
+}

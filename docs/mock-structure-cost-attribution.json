@@ -1,0 +1,123 @@
+{
+  "sourceReport": {
+    "path": "docs/mock-structure-study-e705a1a2ce58-7e873da81fec.json",
+    "reportHash": "7e873da81fec4c98e37988a4ce02d0b04ad8098a2fe73bfcd77ba32981597cc4",
+    "protocolHash": "e705a1a2ce58f554f44ebfb5e0609b92426e91364b604f72df3985f85ab5e96a",
+    "buildId": "93002bbc5f0bbfb42c9ea86861834d2b8b2b744fba78872f716ca37320415c10"
+  },
+  "scope": "Posthoc descriptive decomposition at the same simulated quantities/fill triggers; not a no-cost executable replay or parameter search",
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "scenarios": [
+    {
+      "name": "base",
+      "variants": [
+        {
+          "name": "mock-v1",
+          "netPnl": -54.927953074163156,
+          "paidFees": 15.659579767730802,
+          "pnlAtSameActualFillPricesBeforeFees": -39.26837330643153,
+          "pnlAtSameQuantitiesAndReferenceTriggers": -27.523701990337827,
+          "assumedSpreadSlippageDrag": 11.7446713160937,
+          "meanMarkedExposurePct": 10.94775003539893,
+          "exitReasons": {
+            "intrabar stop-first": {
+              "count": 15,
+              "realizedPnl": -49.440351391002196
+            },
+            "PAPER-MOCK: Bestand reduzieren; kurzfristiger und stündlicher Trend sowie4h-Momentum negativ. Schutzverkäufe laufen unabhängig.": {
+              "count": 22,
+              "realizedPnl": -41.71630905894972
+            },
+            "intrabar target": {
+              "count": 9,
+              "realizedPnl": 56.32882532522652
+            },
+            "gap stop": {
+              "count": 7,
+              "realizedPnl": -25.41109577798079
+            },
+            "gap target (conservative target fill)": {
+              "count": 1,
+              "realizedPnl": 5.31097782854377
+            }
+          }
+        },
+        {
+          "name": "mock-v2",
+          "netPnl": -39.262047495604975,
+          "paidFees": 11.395917201976433,
+          "pnlAtSameActualFillPricesBeforeFees": -27.86613029362877,
+          "pnlAtSameQuantitiesAndReferenceTriggers": -19.319201912663914,
+          "assumedSpreadSlippageDrag": 8.546928380964857,
+          "meanMarkedExposurePct": 9.307792960867742,
+          "exitReasons": {
+            "PAPER-MOCK: Bestand reduzieren; kurzfristiger und stündlicher Trend sowie4h-Momentum negativ. Schutzverkäufe laufen unabhängig.": {
+              "count": 21,
+              "realizedPnl": -38.594039200248005
+            },
+            "intrabar stop-first": {
+              "count": 7,
+              "realizedPnl": -24.231748580526187
+            },
+            "gap stop": {
+              "count": 5,
+              "realizedPnl": -16.865167691210956
+            },
+            "intrabar target": {
+              "count": 5,
+              "realizedPnl": 35.05535216180223
+            },
+            "gap target (conservative target fill)": {
+              "count": 1,
+              "realizedPnl": 5.373555814577571
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "double-fee-adaptive",
+      "variants": [
+        {
+          "name": "mock-v1",
+          "netPnl": 9.051109995550405,
+          "paidFees": 2.413207443838451,
+          "pnlAtSameActualFillPricesBeforeFees": 11.464317439388907,
+          "pnlAtSameQuantitiesAndReferenceTriggers": 12.369275529266304,
+          "assumedSpreadSlippageDrag": 0.9049580898773968,
+          "meanMarkedExposurePct": 0.20197717541199245,
+          "exitReasons": {
+            "intrabar stop-first": {
+              "count": 2,
+              "realizedPnl": -10.103534844455197
+            },
+            "intrabar target": {
+              "count": 2,
+              "realizedPnl": 19.15464484000566
+            }
+          }
+        },
+        {
+          "name": "mock-v2",
+          "netPnl": 3.110021169693937,
+          "paidFees": 1.797367787235149,
+          "pnlAtSameActualFillPricesBeforeFees": 4.907388956929111,
+          "pnlAtSameQuantitiesAndReferenceTriggers": 5.5814042347545865,
+          "assumedSpreadSlippageDrag": 0.6740152778254753,
+          "meanMarkedExposurePct": 0.06243297397843197,
+          "exitReasons": {
+            "intrabar stop-first": {
+              "count": 2,
+              "realizedPnl": -10.074697923165957
+            },
+            "intrabar target": {
+              "count": 1,
+              "realizedPnl": 13.184719092859922
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

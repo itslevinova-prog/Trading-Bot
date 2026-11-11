@@ -1,0 +1,160 @@
+{
+  "nativeHistoryStressBytes": 115284,
+  "stressOutputReserve": 4000,
+  "stressFixtureTemplateBytes": 15,
+  "nativeHistoryStressChars": 113784,
+  "syntheticHistoryFixtureOnly": true,
+  "startupProbeFailures": 2,
+  "verifierHash": "593aee9cb7497ea7168c6c5237a3866dda3c51c1485a4027f00017e310158ea0",
+  "verifiedAt": "2026-10-29T18:19:21.271Z",
+  "runId": "db366055-c26a-4958-873a-2b60a2919e7d",
+  "checks": [
+    "Account valuation is explicit; unknown held prices remain null instead of entry-price PnL",
+    "20 public markets including retained positions, venue identity, history coverage and free defaults",
+    "Every public market includes timestamped 15m/hourly repair coverage without invented gap fills",
+    "Calendar-anchored UTC 24h/48h metrics expose missing bars/return anchors and never backfill windows with older prices",
+    "Running build matches recorded artifacts and old executions remain explicitly unassigned",
+    "Frozen dataset checksum and default identity verified; repeated historical observations remain explicitly inspected",
+    "Actual-rule portfolio evidence exposes costs, sample size and known limitations",
+    "Durable paper protective-exit diagnostics accessible without exposing exception text",
+    "Forward cohort requires clean aligned same-version baselines; unknown/stale comparisons remain null",
+    "Prospective account evidence remains version-specific with no unearned profitability claim",
+    "Actual 20-market context including all research results fits declared prompt budget with visible omissions",
+    "Twenty synthetic native intent summaries fit alongside every real market summary; intents remain explicitly distinct from a verified trade ledger",
+    "Pinned local-only metadata and explicit native context window exercised; exact transmitted 20-market prompt checked; fixture only, no real model",
+    "Built dashboard served with current title",
+    "Unproven profitability and private integration remain visible"
+  ],
+  "connected": true,
+  "pairs": 20,
+  "features": 20,
+  "historyRepair": {
+    "reports": 40,
+    "errorReports": 0,
+    "completeReports": 40,
+    "successfulRepairRequests": 40,
+    "missingBars": 0
+  },
+  "freshBooks": 16,
+  "historyBarsRange": [
+    8645,
+    8819
+  ],
+  "packedContextChars": 113837,
+  "charBudgetOnlyContextChars": 114758,
+  "omissions": [
+    "Detailed candle arrays shortened; per-market summaries retained.",
+    "Memory and lessons bounded; held-position memories prioritised.",
+    "Raw candle arrays omitted only for named markets as needed; all market summaries retained. Held positions and BTC prioritised."
+  ],
+  "modelFixtureEvidence": {
+    "phase": "validated",
+    "mode": "ollama-local",
+    "modelArtifactVerified": false,
+    "inferenceAttempted": true,
+    "preSendHookCompleted": true,
+    "startedAt": 1793297961190,
+    "expectedFingerprint": "5b9fa43fda7151c08ae53e05aa0dd14cdd869381a6efeaee55b594fd4d28f3bd",
+    "inputIdentity": {
+      "kind": "ollama-api-reported",
+      "model": "free-contract-fixture:1",
+      "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "serverVersion": "0.99.0",
+      "metadataHash": "e3f3787b6f580d65583341742a30d7ae9f14e3b60698c7ec0d61bb01b77f22de",
+      "fingerprint": "5b9fa43fda7151c08ae53e05aa0dd14cdd869381a6efeaee55b594fd4d28f3bd",
+      "advertisedContextTokens": 131072,
+      "templateBytes": 15,
+      "cloudDisabledReported": true,
+      "modelArtifactVerified": false,
+      "runtimeAttested": false,
+      "observedAt": 1793297961217
+    },
+    "requestBodyHash": "220e9cd50cc2e6dfdccb64eb88c7246d59ec12da6c963d66c5c5612571180f02",
+    "systemPromptHash": "478468e733333c481d02d251265af04b53fe690599ca028420776350f649c29b",
+    "userPromptHash": "842762a29bd4c57fa9dc61aff90c15f580fc6a7f18ddb7ddb39a18fa26bcc5e1",
+    "inputChars": 113837,
+    "inputBytes": 115337,
+    "contextTokens": 131072,
+    "budgetMethod": "Client UTF-8 bytes plus server template/system bytes, output allowance and4096 framing reserve. Conservative estimate, not an exact tokenizer proof. truncate=false and shift=false requested.",
+    "providerResponseJsonHash": "b65177a85a55dfc8f4dbc9993639ad8fd1afb2329d8f841fffdd8d74d7f02aa5",
+    "promptEvalCount": 12000,
+    "outputEvalCount": 100,
+    "postIdentity": {
+      "kind": "ollama-api-reported",
+      "model": "free-contract-fixture:1",
+      "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "serverVersion": "0.99.0",
+      "metadataHash": "e3f3787b6f580d65583341742a30d7ae9f14e3b60698c7ec0d61bb01b77f22de",
+      "fingerprint": "5b9fa43fda7151c08ae53e05aa0dd14cdd869381a6efeaee55b594fd4d28f3bd",
+      "advertisedContextTokens": 131072,
+      "templateBytes": 15,
+      "cloudDisabledReported": true,
+      "modelArtifactVerified": false,
+      "runtimeAttested": false,
+      "observedAt": 1793297961264
+    },
+    "observedFingerprintMatched": true,
+    "assistantContentHash": "3681a54cfb66d51eb8722748ad2b5db3dff98a73ad0b5d9ea185eafd57a577fd",
+    "finishedAt": 1793297961264
+  },
+  "fixtureInputArtifact": "docs/verification-runs/model-input-1793297961228-220e9cd50cc2e6dfdccb64eb88c7246d59ec12da6c963d66c5c5612571180f02.json",
+  "buildId": "871524007933cc07b2af250e463182c0d9e40b03139d9545628f21acdc81caad",
+  "executionVersion": "b4668351598f9c0a07c8299cb8a4961ea62b60dee83f94b97e3dc5c8c98db750",
+  "reportMatchesCurrentRuntime": false,
+  "fixedDatasetId": "d0066ea5e97b107a22c148dbfcfcd245a2ea37e555684a5af36a382134b14926",
+  "pairedInputsComparable": true,
+  "portfolioMetrics": {
+    "returnPct": 0,
+    "stressReturnPct": 0,
+    "closedTrades": 0
+  },
+  "protectiveExitFailures": 0,
+  "forwardAccounts": [
+    {
+      "accountId": "ai",
+      "status": "awaiting_baseline",
+      "observations": 0
+    },
+    {
+      "accountId": "rules",
+      "status": "awaiting_baseline",
+      "observations": 0
+    },
+    {
+      "accountId": "hold",
+      "status": "awaiting_baseline",
+      "observations": 0
+    }
+  ],
+  "externalSources": [
+    {
+      "source": "Alternative.me Bitcoin Fear & Greed",
+      "status": "available",
+      "fresh": true
+    },
+    {
+      "source": "Binance perpetual funding BTCUSDT",
+      "status": "available",
+      "fresh": true
+    },
+    {
+      "source": "Binance perpetual funding ETHUSDT",
+      "status": "available",
+      "fresh": true
+    },
+    {
+      "source": "Cointelegraph RSS headlines",
+      "status": "available",
+      "fresh": true
+    },
+    {
+      "source": "CoinDesk RSS headlines",
+      "status": "available",
+      "fresh": true
+    }
+  ],
+  "realModelTested": false,
+  "privateExchangeCalls": 0,
+  "realOrders": 0,
+  "paidCalls": 0
+}

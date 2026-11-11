@@ -1,0 +1,193 @@
+{
+  "observedAt": "2026-11-01T13:52:34.934Z",
+  "sourceArtifact": "docs/intrabar-assumption-audit-643c2cf0cdae70e2.json",
+  "sourceFactsHash": "643c2cf0cdae70e2bf13e418d927d9a7f75a9f1ad388c1734bc706225284cf82",
+  "distinctPairExitClocks": 11,
+  "rows": [
+    {
+      "period": "2025-10",
+      "fee": 0.001,
+      "variant": "programmed-rising-hourly-breakout-entry-v1",
+      "pair": "TRX/EUR",
+      "exitBarTs": 1760629500000,
+      "stopTouched": true,
+      "targetTouched": false,
+      "actualReason": "STRUCTURE-EXIT: Nach Einstieg unter vorherigem20Kerzen-Support geschlossen, unter EMA20 und1hMomentum negativ. Aktuelle Struktur verletzt; urspr\u00c3\u00bcngliche Einstiegsthese nicht gespeichert. Schutz-Stops bleiben unabh\u00c3\u00a4ngig."
+    },
+    {
+      "period": "2025-10",
+      "fee": 0.001,
+      "variant": "programmed-closed-btc-relative-entry-v1",
+      "pair": "TRX/EUR",
+      "exitBarTs": 1760629500000,
+      "stopTouched": true,
+      "targetTouched": false,
+      "actualReason": "STRUCTURE-EXIT: Nach Einstieg unter vorherigem20Kerzen-Support geschlossen, unter EMA20 und1hMomentum negativ. Aktuelle Struktur verletzt; urspr\u00c3\u00bcngliche Einstiegsthese nicht gespeichert. Schutz-Stops bleiben unabh\u00c3\u00a4ngig."
+    },
+    {
+      "period": "2025-11",
+      "fee": 0.001,
+      "variant": "programmed-rising-hourly-breakout-entry-v1",
+      "pair": "SHIB/EUR",
+      "exitBarTs": 1763292600000,
+      "stopTouched": true,
+      "targetTouched": false,
+      "actualReason": "STRUCTURE-EXIT: Nach Einstieg unter vorherigem20Kerzen-Support geschlossen, unter EMA20 und1hMomentum negativ. Aktuelle Struktur verletzt; urspr\u00c3\u00bcngliche Einstiegsthese nicht gespeichert. Schutz-Stops bleiben unabh\u00c3\u00a4ngig."
+    },
+    {
+      "period": "2025-11",
+      "fee": 0.001,
+      "variant": "programmed-rising-hourly-breakout-entry-v1",
+      "pair": "BCH/EUR",
+      "exitBarTs": 1764377100000,
+      "stopTouched": true,
+      "targetTouched": false,
+      "actualReason": "STRUCTURE-EXIT: Nach Einstieg unter vorherigem20Kerzen-Support geschlossen, unter EMA20 und1hMomentum negativ. Aktuelle Struktur verletzt; urspr\u00c3\u00bcngliche Einstiegsthese nicht gespeichert. Schutz-Stops bleiben unabh\u00c3\u00a4ngig."
+    },
+    {
+      "period": "2025-11",
+      "fee": 0.001,
+      "variant": "programmed-closed-btc-relative-entry-v1",
+      "pair": "BCH/EUR",
+      "exitBarTs": 1764377100000,
+      "stopTouched": true,
+      "targetTouched": false,
+      "actualReason": "STRUCTURE-EXIT: Nach Einstieg unter vorherigem20Kerzen-Support geschlossen, unter EMA20 und1hMomentum negativ. Aktuelle Struktur verletzt; urspr\u00c3\u00bcngliche Einstiegsthese nicht gespeichert. Schutz-Stops bleiben unabh\u00c3\u00a4ngig."
+    },
+    {
+      "period": "2025-12",
+      "fee": 0.001,
+      "variant": "programmed-rising-hourly-breakout-entry-v1",
+      "pair": "LINK/EUR",
+      "exitBarTs": 1766430900000,
+      "stopTouched": true,
+      "targetTouched": false,
+      "actualReason": "STRUCTURE-EXIT: Nach Einstieg unter vorherigem20Kerzen-Support geschlossen, unter EMA20 und1hMomentum negativ. Aktuelle Struktur verletzt; urspr\u00c3\u00bcngliche Einstiegsthese nicht gespeichert. Schutz-Stops bleiben unabh\u00c3\u00a4ngig."
+    },
+    {
+      "period": "2026-01",
+      "fee": 0.001,
+      "variant": "programmed-rising-hourly-breakout-entry-v1",
+      "pair": "ADA/EUR",
+      "exitBarTs": 1768203000000,
+      "stopTouched": true,
+      "targetTouched": false,
+      "actualReason": "STRUCTURE-EXIT: Nach Einstieg unter vorherigem20Kerzen-Support geschlossen, unter EMA20 und1hMomentum negativ. Aktuelle Struktur verletzt; urspr\u00c3\u00bcngliche Einstiegsthese nicht gespeichert. Schutz-Stops bleiben unabh\u00c3\u00a4ngig."
+    },
+    {
+      "period": "2026-01",
+      "fee": 0.001,
+      "variant": "programmed-rising-hourly-breakout-entry-v1",
+      "pair": "LINK/EUR",
+      "exitBarTs": 1768778100000,
+      "stopTouched": true,
+      "targetTouched": false,
+      "actualReason": "STRUCTURE-EXIT: Nach Einstieg unter vorherigem20Kerzen-Support geschlossen, unter EMA20 und1hMomentum negativ. Aktuelle Struktur verletzt; urspr\u00c3\u00bcngliche Einstiegsthese nicht gespeichert. Schutz-Stops bleiben unabh\u00c3\u00a4ngig."
+    },
+    {
+      "period": "2026-01",
+      "fee": 0.001,
+      "variant": "programmed-rising-hourly-breakout-entry-v1",
+      "pair": "PEPE/EUR",
+      "exitBarTs": 1769495400000,
+      "stopTouched": true,
+      "targetTouched": false,
+      "actualReason": "STRUCTURE-EXIT: Nach Einstieg unter vorherigem20Kerzen-Support geschlossen, unter EMA20 und1hMomentum negativ. Aktuelle Struktur verletzt; urspr\u00c3\u00bcngliche Einstiegsthese nicht gespeichert. Schutz-Stops bleiben unabh\u00c3\u00a4ngig."
+    },
+    {
+      "period": "2026-01",
+      "fee": 0.001,
+      "variant": "programmed-closed-btc-relative-entry-v1",
+      "pair": "ADA/EUR",
+      "exitBarTs": 1768203000000,
+      "stopTouched": true,
+      "targetTouched": false,
+      "actualReason": "STRUCTURE-EXIT: Nach Einstieg unter vorherigem20Kerzen-Support geschlossen, unter EMA20 und1hMomentum negativ. Aktuelle Struktur verletzt; urspr\u00c3\u00bcngliche Einstiegsthese nicht gespeichert. Schutz-Stops bleiben unabh\u00c3\u00a4ngig."
+    },
+    {
+      "period": "2026-01",
+      "fee": 0.001,
+      "variant": "programmed-closed-btc-relative-entry-v1",
+      "pair": "PEPE/EUR",
+      "exitBarTs": 1769495400000,
+      "stopTouched": true,
+      "targetTouched": false,
+      "actualReason": "STRUCTURE-EXIT: Nach Einstieg unter vorherigem20Kerzen-Support geschlossen, unter EMA20 und1hMomentum negativ. Aktuelle Struktur verletzt; urspr\u00c3\u00bcngliche Einstiegsthese nicht gespeichert. Schutz-Stops bleiben unabh\u00c3\u00a4ngig."
+    },
+    {
+      "period": "2026-03",
+      "fee": 0.001,
+      "variant": "programmed-rising-hourly-breakout-entry-v1",
+      "pair": "LTC/EUR",
+      "exitBarTs": 1773469800000,
+      "stopTouched": true,
+      "targetTouched": false,
+      "actualReason": "STRUCTURE-EXIT: Nach Einstieg unter vorherigem20Kerzen-Support geschlossen, unter EMA20 und1hMomentum negativ. Aktuelle Struktur verletzt; urspr\u00c3\u00bcngliche Einstiegsthese nicht gespeichert. Schutz-Stops bleiben unabh\u00c3\u00a4ngig."
+    },
+    {
+      "period": "2026-03",
+      "fee": 0.001,
+      "variant": "programmed-rising-hourly-breakout-entry-v1",
+      "pair": "BCH/EUR",
+      "exitBarTs": 1773580500000,
+      "stopTouched": true,
+      "targetTouched": false,
+      "actualReason": "STRUCTURE-EXIT: Nach Einstieg unter vorherigem20Kerzen-Support geschlossen, unter EMA20 und1hMomentum negativ. Aktuelle Struktur verletzt; urspr\u00c3\u00bcngliche Einstiegsthese nicht gespeichert. Schutz-Stops bleiben unabh\u00c3\u00a4ngig."
+    },
+    {
+      "period": "2026-03",
+      "fee": 0.001,
+      "variant": "programmed-rising-hourly-breakout-entry-v1",
+      "pair": "BCH/EUR",
+      "exitBarTs": 1774076400000,
+      "stopTouched": true,
+      "targetTouched": false,
+      "actualReason": "STRUCTURE-EXIT: Nach Einstieg unter vorherigem20Kerzen-Support geschlossen, unter EMA20 und1hMomentum negativ. Aktuelle Struktur verletzt; urspr\u00c3\u00bcngliche Einstiegsthese nicht gespeichert. Schutz-Stops bleiben unabh\u00c3\u00a4ngig."
+    },
+    {
+      "period": "2026-03",
+      "fee": 0.001,
+      "variant": "programmed-closed-btc-relative-entry-v1",
+      "pair": "LTC/EUR",
+      "exitBarTs": 1773469800000,
+      "stopTouched": true,
+      "targetTouched": false,
+      "actualReason": "STRUCTURE-EXIT: Nach Einstieg unter vorherigem20Kerzen-Support geschlossen, unter EMA20 und1hMomentum negativ. Aktuelle Struktur verletzt; urspr\u00c3\u00bcngliche Einstiegsthese nicht gespeichert. Schutz-Stops bleiben unabh\u00c3\u00a4ngig."
+    },
+    {
+      "period": "2026-03",
+      "fee": 0.001,
+      "variant": "programmed-closed-btc-relative-entry-v1",
+      "pair": "BCH/EUR",
+      "exitBarTs": 1773580500000,
+      "stopTouched": true,
+      "targetTouched": false,
+      "actualReason": "STRUCTURE-EXIT: Nach Einstieg unter vorherigem20Kerzen-Support geschlossen, unter EMA20 und1hMomentum negativ. Aktuelle Struktur verletzt; urspr\u00c3\u00bcngliche Einstiegsthese nicht gespeichert. Schutz-Stops bleiben unabh\u00c3\u00a4ngig."
+    },
+    {
+      "period": "2026-03",
+      "fee": 0.001,
+      "variant": "programmed-closed-btc-relative-entry-v1",
+      "pair": "BCH/EUR",
+      "exitBarTs": 1774076400000,
+      "stopTouched": true,
+      "targetTouched": false,
+      "actualReason": "STRUCTURE-EXIT: Nach Einstieg unter vorherigem20Kerzen-Support geschlossen, unter EMA20 und1hMomentum negativ. Aktuelle Struktur verletzt; urspr\u00c3\u00bcngliche Einstiegsthese nicht gespeichert. Schutz-Stops bleiben unabh\u00c3\u00a4ngig."
+    },
+    {
+      "period": "2026-04",
+      "fee": 0.001,
+      "variant": "programmed-rising-hourly-breakout-entry-v1",
+      "pair": "SUI/EUR",
+      "exitBarTs": 1777267800000,
+      "stopTouched": true,
+      "targetTouched": false,
+      "actualReason": "STRUCTURE-EXIT: Nach Einstieg unter vorherigem20Kerzen-Support geschlossen, unter EMA20 und1hMomentum negativ. Aktuelle Struktur verletzt; urspr\u00c3\u00bcngliche Einstiegsthese nicht gespeichert. Schutz-Stops bleiben unabh\u00c3\u00a4ngig."
+    }
+  ],
+  "interpretation": "A barrier touched somewhere in the15mbar after a modelled strategy-open exit does not establish it touched before the nominal+5sdecision. Tick ordering remains unknown; these are NOT alternative fills or known missed protective exits.",
+  "independentSamples": null,
+  "newSimulatorMode": false,
+  "profitabilityEstablished": false,
+  "scopedStrategyOpenExitsWhoseCandleTouchesABarrier": 18
+}

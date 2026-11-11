@@ -1,0 +1,539 @@
+{
+  "verifiedAt": "2026-11-02T17:34:18.522Z",
+  "factsHash": "44fc4391adc37a684ff3c93605d570ddaa9cae7630623d715a0199ad5c0c75f4",
+  "sameEntryClockPairs": 24,
+  "exitClockChanges": 4,
+  "exitReasonChanges": 2,
+  "absoluteQuantityChanges": 20,
+  "paired": [
+    {
+      "pair": "APT/EUR",
+      "entryAt": 1762258500000,
+      "base": {
+        "pair": "APT/EUR",
+        "entryAt": 1762258500000,
+        "exitAt": 1762262100000,
+        "qty": 6.3,
+        "exitReason": "intrabar stop-first",
+        "netReturn": -0.02225233439200021
+      },
+      "stress": {
+        "pair": "APT/EUR",
+        "entryAt": 1762258500000,
+        "exitAt": 1762262100000,
+        "qty": 6.29,
+        "exitReason": "gap stop",
+        "netReturn": -0.023735093601051444
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": true
+    },
+    {
+      "pair": "BTC/EUR",
+      "entryAt": 1762301700000,
+      "base": {
+        "pair": "BTC/EUR",
+        "entryAt": 1762301700000,
+        "exitAt": 1762305300000,
+        "qty": 0.00016,
+        "exitReason": "intrabar stop-first",
+        "netReturn": -0.022252334392000032
+      },
+      "stress": {
+        "pair": "BTC/EUR",
+        "entryAt": 1762301700000,
+        "exitAt": 1762305300000,
+        "qty": 0.00016,
+        "exitReason": "intrabar stop-first",
+        "netReturn": -0.02323106078400002
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "ADA/EUR",
+      "entryAt": 1762474500000,
+      "base": {
+        "pair": "ADA/EUR",
+        "entryAt": 1762474500000,
+        "exitAt": 1762503300000,
+        "qty": 32,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": 0.022029262251591537
+      },
+      "stress": {
+        "pair": "ADA/EUR",
+        "entryAt": 1762474500000,
+        "exitAt": 1762503300000,
+        "qty": 32,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": 0.01998724166363512
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "WIN/EUR",
+      "entryAt": 1762517700000,
+      "base": {
+        "pair": "WIN/EUR",
+        "entryAt": 1762517700000,
+        "exitAt": 1762534800000,
+        "qty": 488302,
+        "exitReason": "gap target (conservative target fill)",
+        "netReturn": 0.03657319438961069
+      },
+      "stress": {
+        "pair": "WIN/EUR",
+        "entryAt": 1762517700000,
+        "exitAt": 1762534800000,
+        "qty": 487490,
+        "exitReason": "gap target (conservative target fill)",
+        "netReturn": 0.03450211493812393
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "BTC/EUR",
+      "entryAt": 1768781700000,
+      "base": {
+        "pair": "BTC/EUR",
+        "entryAt": 1768781700000,
+        "exitAt": 1768810500000,
+        "qty": 0.00018,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": -0.0019807220374015626
+      },
+      "stress": {
+        "pair": "BTC/EUR",
+        "entryAt": 1768781700000,
+        "exitAt": 1768810500000,
+        "qty": 0.00018,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": -0.003974770532928244
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "APT/EUR",
+      "entryAt": 1768997700000,
+      "base": {
+        "pair": "APT/EUR",
+        "entryAt": 1768997700000,
+        "exitAt": 1769026500000,
+        "qty": 11.25,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": 0.008862056800318156
+      },
+      "stress": {
+        "pair": "APT/EUR",
+        "entryAt": 1768997700000,
+        "exitAt": 1769013000000,
+        "qty": 11.23,
+        "exitReason": "intrabar stop-first",
+        "netReturn": -0.02323106078399983
+      },
+      "exitClockChanged": true,
+      "exitReasonChanged": true
+    },
+    {
+      "pair": "WIN/EUR",
+      "entryAt": 1769040900000,
+      "base": {
+        "pair": "WIN/EUR",
+        "entryAt": 1769040900000,
+        "exitAt": 1769069700000,
+        "qty": 667636,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": -0.009015451353090105
+      },
+      "stress": {
+        "pair": "WIN/EUR",
+        "entryAt": 1769040900000,
+        "exitAt": 1769069700000,
+        "qty": 662928,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": -0.010995444417305805
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "AVAX/EUR",
+      "entryAt": 1769084100000,
+      "base": {
+        "pair": "AVAX/EUR",
+        "entryAt": 1769084100000,
+        "exitAt": 1769094900000,
+        "qty": 1.42,
+        "exitReason": "intrabar stop-first",
+        "netReturn": -0.022252334392000122
+      },
+      "stress": {
+        "pair": "AVAX/EUR",
+        "entryAt": 1769084100000,
+        "exitAt": 1769094900000,
+        "qty": 1.41,
+        "exitReason": "intrabar stop-first",
+        "netReturn": -0.023231060783999863
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "APT/EUR",
+      "entryAt": 1770898500000,
+      "base": {
+        "pair": "APT/EUR",
+        "entryAt": 1770898500000,
+        "exitAt": 1770908400000,
+        "qty": 18.72,
+        "exitReason": "gap stop",
+        "netReturn": -0.023300162153316064
+      },
+      "stress": {
+        "pair": "APT/EUR",
+        "entryAt": 1770898500000,
+        "exitAt": 1770904800000,
+        "qty": 18.58,
+        "exitReason": "gap stop",
+        "netReturn": -0.02400672489827987
+      },
+      "exitClockChanged": true,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "DOGE/EUR",
+      "entryAt": 1771114500000,
+      "base": {
+        "pair": "DOGE/EUR",
+        "entryAt": 1771114500000,
+        "exitAt": 1771128000000,
+        "qty": 158,
+        "exitReason": "intrabar target",
+        "netReturn": 0.03657319438961032
+      },
+      "stress": {
+        "pair": "DOGE/EUR",
+        "entryAt": 1771114500000,
+        "exitAt": 1771128000000,
+        "qty": 157,
+        "exitReason": "intrabar target",
+        "netReturn": 0.03450211493812387
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "DOT/EUR",
+      "entryAt": 1772324100000,
+      "base": {
+        "pair": "DOT/EUR",
+        "entryAt": 1772324100000,
+        "exitAt": 1772326800000,
+        "qty": 10.74,
+        "exitReason": "intrabar stop-first",
+        "netReturn": -0.02225233439200011
+      },
+      "stress": {
+        "pair": "DOT/EUR",
+        "entryAt": 1772324100000,
+        "exitAt": 1772326800000,
+        "qty": 10.66,
+        "exitReason": "intrabar stop-first",
+        "netReturn": -0.02323106078399976
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "APT/EUR",
+      "entryAt": 1772583300000,
+      "base": {
+        "pair": "APT/EUR",
+        "entryAt": 1772583300000,
+        "exitAt": 1772612100000,
+        "qty": 17.15,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": -0.01831923815531362
+      },
+      "stress": {
+        "pair": "APT/EUR",
+        "entryAt": 1772583300000,
+        "exitAt": 1772612100000,
+        "qty": 17.01,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": -0.020280642197768574
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "BCH/EUR",
+      "entryAt": 1772626500000,
+      "base": {
+        "pair": "BCH/EUR",
+        "entryAt": 1772626500000,
+        "exitAt": 1772651700000,
+        "qty": 0.038,
+        "exitReason": "gap target (conservative target fill)",
+        "netReturn": 0.0365731943896104
+      },
+      "stress": {
+        "pair": "BCH/EUR",
+        "entryAt": 1772626500000,
+        "exitAt": 1772651700000,
+        "qty": 0.037,
+        "exitReason": "gap target (conservative target fill)",
+        "netReturn": 0.0345021149381237
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "BCH/EUR",
+      "entryAt": 1772669700000,
+      "base": {
+        "pair": "BCH/EUR",
+        "entryAt": 1772669700000,
+        "exitAt": 1772698500000,
+        "qty": 0.037,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": -0.01133713630947412
+      },
+      "stress": {
+        "pair": "BCH/EUR",
+        "entryAt": 1772669700000,
+        "exitAt": 1772698500000,
+        "qty": 0.037,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": -0.013312490633240122
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "DOT/EUR",
+      "entryAt": 1772972100000,
+      "base": {
+        "pair": "DOT/EUR",
+        "entryAt": 1772972100000,
+        "exitAt": 1773000900000,
+        "qty": 11.84,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": -0.0014319097321939982
+      },
+      "stress": {
+        "pair": "DOT/EUR",
+        "entryAt": 1772972100000,
+        "exitAt": 1773000900000,
+        "qty": 11.74,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": -0.00342705475799377
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "DOT/EUR",
+      "entryAt": 1773015300000,
+      "base": {
+        "pair": "DOT/EUR",
+        "entryAt": 1773015300000,
+        "exitAt": 1773044100000,
+        "qty": 11.75,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": 0.007941301500641746
+      },
+      "stress": {
+        "pair": "DOT/EUR",
+        "entryAt": 1773015300000,
+        "exitAt": 1773044100000,
+        "qty": 11.64,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": 0.005927428742653051
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "SUI/EUR",
+      "entryAt": 1773058500000,
+      "base": {
+        "pair": "SUI/EUR",
+        "entryAt": 1773058500000,
+        "exitAt": 1773083700000,
+        "qty": 19,
+        "exitReason": "intrabar target",
+        "netReturn": 0.03657319438961042
+      },
+      "stress": {
+        "pair": "SUI/EUR",
+        "entryAt": 1773058500000,
+        "exitAt": 1773083700000,
+        "qty": 18.8,
+        "exitReason": "intrabar target",
+        "netReturn": 0.03450211493812366
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "PEPE/EUR",
+      "entryAt": 1773144900000,
+      "base": {
+        "pair": "PEPE/EUR",
+        "entryAt": 1773144900000,
+        "exitAt": 1773152100000,
+        "qty": 5167125,
+        "exitReason": "intrabar stop-first",
+        "netReturn": -0.02225233439200011
+      },
+      "stress": {
+        "pair": "PEPE/EUR",
+        "entryAt": 1773144900000,
+        "exitAt": 1773151200000,
+        "qty": 5115712,
+        "exitReason": "intrabar stop-first",
+        "netReturn": -0.02323106078399998
+      },
+      "exitClockChanged": true,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "DOT/EUR",
+      "entryAt": 1773231300000,
+      "base": {
+        "pair": "DOT/EUR",
+        "entryAt": 1773231300000,
+        "exitAt": 1773260100000,
+        "qty": 11.43,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": 0.011355354331998673
+      },
+      "stress": {
+        "pair": "DOT/EUR",
+        "entryAt": 1773231300000,
+        "exitAt": 1773260100000,
+        "qty": 11.31,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": 0.00933466027600259
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "SOL/EUR",
+      "entryAt": 1773620100000,
+      "base": {
+        "pair": "SOL/EUR",
+        "entryAt": 1773620100000,
+        "exitAt": 1773648900000,
+        "qty": 0.185,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": 0.009960103945834053
+      },
+      "stress": {
+        "pair": "SOL/EUR",
+        "entryAt": 1773620100000,
+        "exitAt": 1773648900000,
+        "qty": 0.184,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": 0.007942197608467155
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "PEPE/EUR",
+      "entryAt": 1773792900000,
+      "base": {
+        "pair": "PEPE/EUR",
+        "entryAt": 1773792900000,
+        "exitAt": 1773821700000,
+        "qty": 4727667,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": -0.004589437290352899
+      },
+      "stress": {
+        "pair": "PEPE/EUR",
+        "entryAt": 1773792900000,
+        "exitAt": 1773821700000,
+        "qty": 4677140,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": -0.006578273557177824
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "WIN/EUR",
+      "entryAt": 1773879300000,
+      "base": {
+        "pair": "WIN/EUR",
+        "entryAt": 1773879300000,
+        "exitAt": 1773891000000,
+        "qty": 771629,
+        "exitReason": "gap stop",
+        "netReturn": -0.025039577253571494
+      },
+      "stress": {
+        "pair": "WIN/EUR",
+        "entryAt": 1773879300000,
+        "exitAt": 1773882000000,
+        "qty": 763155,
+        "exitReason": "gap stop",
+        "netReturn": -0.023415929937564868
+      },
+      "exitClockChanged": true,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "WIN/EUR",
+      "entryAt": 1774224900000,
+      "base": {
+        "pair": "WIN/EUR",
+        "entryAt": 1774224900000,
+        "exitAt": 1774253700000,
+        "qty": 817880,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": -0.004045497092150963
+      },
+      "stress": {
+        "pair": "WIN/EUR",
+        "entryAt": 1774224900000,
+        "exitAt": 1774253700000,
+        "qty": 809095,
+        "exitReason": "PAPER-RESEARCH fixed8h timeout; first available decision open, not guaranteed label-close price.",
+        "netReturn": -0.006035420154750238
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": false
+    },
+    {
+      "pair": "APT/EUR",
+      "entryAt": 1774268100000,
+      "base": {
+        "pair": "APT/EUR",
+        "entryAt": 1774268100000,
+        "exitAt": 1774281600000,
+        "qty": 18.39,
+        "exitReason": "gap target (conservative target fill)",
+        "netReturn": 0.036573194389610486
+      },
+      "stress": {
+        "pair": "APT/EUR",
+        "entryAt": 1774268100000,
+        "exitAt": 1774281600000,
+        "qty": 18.19,
+        "exitReason": "gap target (conservative target fill)",
+        "netReturn": 0.03450211493812374
+      },
+      "exitClockChanged": false,
+      "exitReasonChanged": false
+    }
+  ],
+  "scope": "Fixed entry selection, NOT fixed quantities/exit clocks; higher fee changes basis and actual protection/cash path. Trade net returns are not portfolio-return differences."
+}

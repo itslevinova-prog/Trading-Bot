@@ -1,0 +1,60 @@
+{
+  "verifiedAt": "2026-10-30T17:07:29.421Z",
+  "buildId": "b6a32c2fd030579d1c3c429c131bc6bc3b3852eae044e6065ea275424f638817",
+  "sourceFiles": [
+    {
+      "path": "apps/server/src/live/exit-plan.ts",
+      "sha256": "5afaab11f563c5f4fa8448cb87e5e9d3b5a3485bc812fce79b7a48065c3bb509"
+    },
+    {
+      "path": "apps/server/src/live/exit-driver.ts",
+      "sha256": "d1d2a917ffc4ccc1b59a75cb3f444085c3848f32b4a05dd0047db0399a7ecd57"
+    },
+    {
+      "path": "apps/server/src/live/exit-evidence.ts",
+      "sha256": "02cd3b371fcd15b460235c87a9cd203cac649ca378e70d1bafd96c879b739026"
+    },
+    {
+      "path": "apps/server/src/live/intent-state.ts",
+      "sha256": "192dc11cb35570abd0758359426b96c2be314a738853c5dfc4ac53c537c260ee"
+    },
+    {
+      "path": "apps/server/src/live/journal.ts",
+      "sha256": "9dfebc2f63c94f67152438c48dc07b840c44fe5d5ef06fa336dacb773478eb46"
+    },
+    {
+      "path": "apps/server/test/exit-driver.test.ts",
+      "sha256": "ff1c24f4f8b596175f5795666dbce2eb7c22077f02021d52c48bb9ca9e79ee0a"
+    }
+  ],
+  "localDriverImplemented": true,
+  "driverTestCases": 49,
+  "fullSuiteTests": 551,
+  "offlineTests": 15,
+  "typecheck": true,
+  "build": true,
+  "suiteLog": "docs/verification-runs/native-exit-suite-70db3c64413ccae169dae177460878d16e70cdc3d3601eadf5cc42739e76c45f.log",
+  "suiteLogHash": "70db3c64413ccae169dae177460878d16e70cdc3d3601eadf5cc42739e76c45f",
+  "transport": "injected local matching-engine fixture only",
+  "actualSqliteReopenTested": true,
+  "postAcknowledgementAloneNotProtection": true,
+  "productionTransportImplemented": false,
+  "modelSellRouteEnabled": false,
+  "newPrivateEndpointsGranted": false,
+  "actualPrivateExchangeCalls": 0,
+  "actualOrders": 0,
+  "paidCalls": 0,
+  "actualMatchingEngineTested": false,
+  "realModelTested": false,
+  "followingOcoParentSupported": false,
+  "emergencyGapExitImplemented": false,
+  "priceGapEliminated": false,
+  "profitabilityEstablished": false,
+  "frozenReferenceFilesUnchanged": true,
+  "frozenReferenceDependencyPackages": 114,
+  "limitations": [
+    "Native SELL remains blocked in the production adapter and mutation whitelist unchanged.",
+    "Gap emergency exit, replacement-parent lineage, actual paginated fill storage, policy/context integration and independent prospective validation remain required.",
+    "Audit hashes establish local consistency, not exchange attestation or protection against total local rewriting."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+ "version":"barrier-broker-design-v1",
+ "purpose":"Offline broker comparison only; never active provider",
+ "signal":"Existing12h UTC grid, frozen chronological model and closed8features; execution exactly one15m candle later",
+ "selection":"Selected/mean/ridge/zero snapshots fixed by prior validation; require predicted already-costed net return>0.005, no cost added twice",
+ "sizing":"Existing Safe maximum15percent equity, one new buy per signal, no scale-in; single held position prevents new exposure; common broker controls remain authoritative",
+ "exits":"Existing independent fixed2percent fee-inclusive stop/4percent fill target; strategy timeout at first decision >=8h after fill, thus next-open gap can differ from label horizon close",
+ "data":"Original union6known months/20survivors, original100EUR start/minimums/costs; contiguous frozen test interval, no fold cash resets",
+ "baselines":"Unchanged hourly-entry provider full replay; cash0 and nonpositive mean/zero controls explicitly separated; no new fee/threshold/parameter search",
+ "limits":"Synthetic OHLC/visible book; retain rejected entries/dust/protective failures/censored final exit/entry-bar ambiguity; not actual market execution or unseen independent evidence",
+ "activation":false,"julyLoaded":false
+}

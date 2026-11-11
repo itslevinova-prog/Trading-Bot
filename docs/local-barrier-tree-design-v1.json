@@ -1,0 +1,10 @@
+{
+ "version":"local-barrier-tree-design-v1",
+ "purpose":"One fixed nonlinear numerical baseline in isolated local research; no external AI or active provider",
+ "library":"scikit-learn1.7.2 GradientBoostingRegressor (BSD3); project-local venv, read-only reuse of existing NumPy/SciPy",
+ "parameters":{"loss":"squared_error","n_estimators":100,"learning_rate":0.05,"max_depth":2,"min_samples_leaf":40,"subsample":1.0,"random_state":0,"n_iter_no_change":null},
+ "chronology":"Existing8features/fixedcostedbarrier target; same14/4/4day folds. Strictly matured training only, no random internal holdout/early stopping, no warm-start/test tuning",
+ "serialization":"Explicit numeric JSON tree nodes and parameters, never pickle/eval. Validate topology/bounds/target/schema/hash/freshness before inference. Float32 input comparisons match documented sklearn tree prediction semantics",
+ "controls":"Keep zero/mean/ridge, existing margin and broker controls. No activation or unseen/independent profitability claims",
+ "thisPhase":"Synthetic export/inference integration and hostile-input tests before any historical fit"
+}

@@ -1,0 +1,18 @@
+import {test,expect,vi} from 'vitest';import Fastify from 'fastify';import {eq} from 'drizzle-orm';import type {FastifyBaseLogger} from 'fastify';
+import {db} from '../src/db.js';import {accounts,positions,equitySnapshots} from '../src/schema.js';import {PaperExecutionAdapter} from '../src/broker/PaperExecutionAdapter.js';import {Scheduler} from '../src/strategy/scheduler.js';import {registerRoutes} from '../src/api/routes.js';import type {MarketFeed} from '../src/market/types.js';
+test('unknown held valuation stays null across API, model context and analytics; resume and synthetic equity samples are refused',async()=>{
+ const id='valuation-api-fixture';db.delete(positions).where(eq(positions.accountId,id)).run();db.delete(equitySnapshots).where(eq(equitySnapshots.accountId,id)).run();db.delete(accounts).where(eq(accounts.id,id)).run();db.insert(accounts).values({id,name:id,strategy:'rules',cash:80,startingBalance:100,peakEquity:110,status:'paused',createdAt:Date.now()}).run();db.insert(positions).values({id:id+'-held',accountId:id,pair:'MISSING/EUR',qty:1,avgEntryPrice:20,costBasisEur:20,openedAt:Date.now()}).run();
+ const market={venue:'binance',connected:true,tickers:new Map(),books:new Map(),features:new Map()} as unknown as MarketFeed,broker=new PaperExecutionAdapter(market,()=>{}),events:{type:string;payload:unknown}[]=[];
+ const scheduler=new Scheduler(market,broker,(type,payload)=>events.push({type,payload}),{error:vi.fn(),warn:vi.fn(),info:vi.fn()} as unknown as FastifyBaseLogger),app=Fastify();registerRoutes(app,market,broker);
+ try{
+  expect((await app.inject('/api/accounts/nonexistent-valuation-fixture/positions')).statusCode).toBe(404);
+  const account=(await app.inject('/api/accounts')).json().find((a:{id:string})=>a.id===id);expect(account).toMatchObject({equity:null,pnlEur:null,pnlPct:null,drawdownPct:null,valuation:{complete:false,unvaluedPairs:['MISSING/EUR']}});
+  expect((await app.inject(`/api/accounts/${id}/positions`)).json()[0]).toMatchObject({value:null,pnlEur:null,bid:null,valuationStatus:'missing'});
+  expect((await app.inject({method:'POST',url:`/api/accounts/${id}/resume`})).statusCode).toBe(409);
+  expect((await app.inject('/api/forward-cohort')).json()).toMatchObject({profitabilityEstablished:false,currentMetrics:null});
+  const context=scheduler.context(id);expect(context.forwardCohort).toMatchObject({status:'unavailable',currentMetrics:null});expect(context.account).toMatchObject({equity:null,drawdown:null});expect(context.positions[0]).toMatchObject({currentValue:null,unrealizedEur:null});expect(context.performance).toMatchObject({currentDrawdownPct:null});
+  vi.useFakeTimers();scheduler.start();await vi.advanceTimersByTimeAsync(1);await scheduler.stop();vi.useRealTimers();expect(db.select().from(equitySnapshots).where(eq(equitySnapshots.accountId,id)).all()).toHaveLength(0);expect(db.select().from(accounts).where(eq(accounts.id,id)).get()!.peakEquity).toBe(110);expect(events.some(e=>e.type==='equity'&&(e.payload as {accountId:string;equity:number|null}).accountId===id&&(e.payload as {equity:number|null}).equity===null)).toBe(true);
+  market.books.set('MISSING/EUR',{symbol:'MISSING/EUR',valid:true,receivedAt:Date.now(),bids:[{price:'15',qty:'10'}],asks:[{price:'15.1',qty:'10'}]});
+  expect((await app.inject({method:'POST',url:`/api/accounts/${id}/resume`})).json()).toMatchObject({status:'active',peakEquity:95});
+ }finally{vi.useRealTimers();await scheduler.stop();await app.close();db.delete(positions).where(eq(positions.accountId,id)).run();db.delete(equitySnapshots).where(eq(equitySnapshots.accountId,id)).run();db.delete(accounts).where(eq(accounts.id,id)).run();}
+});

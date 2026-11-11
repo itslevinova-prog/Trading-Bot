@@ -1,0 +1,95 @@
+{
+  "version": "drawdown-execution-boundary-proof-v1",
+  "generatedAt": "2026-11-03T19:47:20.997708+00:00",
+  "workingBuildId": "0fd91e5ce649ac184dbf727ba44ce41806ce7598c76b00bb8f04a43876fe561e",
+  "loadedMainBuildId": "3b92fac27a6e17577dfdf400e0c75f44d62a870b9d106514b3cbf0405c086792",
+  "sourceHashes": {
+    "apps/server/src/broker/risk.ts": "9ac2fb3dc446c6fe6b94cec195b95f484517f17df8af810e45548a6185b4d463",
+    "apps/server/src/broker/PaperExecutionAdapter.ts": "8a8c08fd45078d588c93939a55784abf54080ac092aba84ec95b493d881a6d97",
+    "apps/server/src/research/portfolio.ts": "9ce051d612a4822bbb9e2cb1905faae192b2bcc66ee4ff2959ef1501a32489e2",
+    "apps/server/test/risk.test.ts": "503e2fd144ead4763a57511f2b2db1147b1c2ff37ce6befe9177822882917573",
+    "apps/server/test/broker.test.ts": "64a1d8b41cfc25fd9783f7d3751a46e47866cf892563ed17df3f2e84b2bf17f7",
+    "apps/server/test/portfolio.test.ts": "7866055731282a9dab7073411a1019ff93158c049a8ff9e52940a93e2802a072"
+  },
+  "testReport": {
+    "path": "docs/drawdown-test-results-00ba21d6446877e9.json",
+    "sha256": "00ba21d6446877e980a907b96ec1ffc266729c751ae46ece206c637b5ea373d3"
+  },
+  "testFilesPassed": 122,
+  "testsPassed": 1628,
+  "newTests": 6,
+  "previouslyFailingBrokerCases": 3,
+  "newAssertions": [
+    {
+      "ancestorTitles": [],
+      "fullName": "drawdown blocks entry before the minute scheduler pauses the account and survives broker restart",
+      "status": "passed",
+      "title": "drawdown blocks entry before the minute scheduler pauses the account and survives broker restart",
+      "duration": 2.9248000000000047,
+      "failureMessages": [],
+      "meta": {}
+    },
+    {
+      "ancestorTitles": [],
+      "fullName": "drawdown appearing during execution latency blocks the queued entry",
+      "status": "passed",
+      "title": "drawdown appearing during execution latency blocks the queued entry",
+      "duration": 2.484499999999798,
+      "failureMessages": [],
+      "meta": {}
+    },
+    {
+      "ancestorTitles": [],
+      "fullName": "persisted drawdown cannot block a protective full exit",
+      "status": "passed",
+      "title": "persisted drawdown cannot block a protective full exit",
+      "duration": 24.520699999999806,
+      "failureMessages": [],
+      "meta": {}
+    },
+    {
+      "ancestorTitles": [],
+      "fullName": "entry costs cannot open a fill already beyond the persisted drawdown limit",
+      "status": "passed",
+      "title": "entry costs cannot open a fill already beyond the persisted drawdown limit",
+      "duration": 14.816699999999855,
+      "failureMessages": [],
+      "meta": {}
+    },
+    {
+      "ancestorTitles": [],
+      "fullName": "known entry fees and spread cannot create exposure beyond the replay drawdown limit",
+      "status": "passed",
+      "title": "known entry fees and spread cannot create exposure beyond the replay drawdown limit",
+      "duration": 1.1306999999999903,
+      "failureMessages": [],
+      "meta": {}
+    },
+    {
+      "ancestorTitles": [],
+      "fullName": "persisted drawdown boundary is exact and does not guess invalid valuations",
+      "status": "passed",
+      "title": "persisted drawdown boundary is exact and does not guess invalid valuations",
+      "duration": 0.34719999999998663,
+      "failureMessages": [],
+      "meta": {}
+    }
+  ],
+  "serverAndTestTypechecksPassed": true,
+  "servicesRestarted": false,
+  "realOrders": 0,
+  "modelCalls": 0,
+  "actualCaptureAudit": {
+    "path": "docs/public-ws-capture-audit-a797634f1961dd7c.json",
+    "hash": "a797634f1961dd7cbda10182b48df8b9c4b0f65f4eb323d676410ee1c9098c52"
+  },
+  "actualRawRowsVerified": 200,
+  "actualWindowCounts": {
+    "h1": 20,
+    "h4": 0,
+    "h24": 0
+  },
+  "independentProfitabilityEstablished": false,
+  "scope": "Synthetic Paper broker/replay drawdown-boundary regressions. Complete server tests include existing mocks only. Fresh actual activity capture is separate source-integrity evidence; no performance claim.",
+  "factsHash": "7286b67d2b82840dcdee1b3a1fbad7f794fc131415f2414e064d404132d4acad"
+}

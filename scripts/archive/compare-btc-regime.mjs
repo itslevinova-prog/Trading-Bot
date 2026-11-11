@@ -1,0 +1,29 @@
+import assert from 'node:assert/strict';import {readFileSync,writeFileSync,existsSync} from 'node:fs';
+import {inspectBuild,digest} from '../apps/server/dist/provenance/build.js';
+import {defaultDataset,datasetReplay,datasetDataHash,canonicalJson} from '../apps/server/dist/research/dataset.js';
+import {replayRulesPortfolio} from '../apps/server/dist/research/portfolio.js';
+import {mockReplayStudy} from '../apps/server/dist/research/mock-replay-context.js';
+import {MockAiProvider} from '../apps/server/dist/strategy/providers.js';
+import {RegimePaperProvider} from '../apps/server/dist/strategy/regime-paper.js';
+const read=p=>JSON.parse(readFileSync(p,'utf8')),build=inspectBuild(process.cwd());assert.equal(build.verified,true);
+const protocolFile='docs/btc-regime-protocol-v1.json',protocol=read(protocolFile),protocolHash=digest(readFileSync(protocolFile));
+const pointer=read('docs/mock-structure-study-latest.json'),old=read(pointer.path),{reportHash,generatedAt,...facts}=old;assert.equal(digest(canonicalJson(facts)),reportHash);assert.equal(protocol.baselineReportHash,reportHash);
+assert.equal(digest(readFileSync('apps/server/dist/strategy/paper-intelligence.js')),old.candidate.decisionModuleHash);
+const dataset=defaultDataset(process.cwd(),'binance','EUR');assert.equal(dataset.datasetId,old.datasetId);assert.equal(datasetDataHash(dataset),old.dataHash);const markets=datasetReplay(dataset),originalProtocol=read('docs/mock-structure-study-protocol-v1.json');
+function summary(r){const sales=r.fills.filter(f=>f.side==='sell'),gains=sales.reduce((n,f)=>n+Math.max(0,f.realizedPnl),0),losses=sales.reduce((n,f)=>n+Math.max(0,-f.realizedPnl),0),slices=[];for(let from=r.fromTs;from<r.toTs;from+=7*86400000){const to=Math.min(r.toTs,from+7*86400000),start=r.curve.filter(p=>p.ts<=from).at(-1)?.equity??r.startingBalance,end=r.curve.filter(p=>p.ts<=to).at(-1)?.equity??start;slices.push({from,to,returnPct:(end/start-1)*100,positionsCarryAcrossBoundaries:true});}return {returnPct:r.returnPct,maxDrawdownPct:r.maxDrawdownPct,closedTrades:r.closedTrades,fees:r.fees,winRatePct:r.winRatePct,profitFactor:losses?gains/losses:null,meanNetPnl:sales.length?sales.reduce((n,f)=>n+f.realizedPnl,0)/sales.length:null,sameFillDoubleFeeReturnPct:r.returnPct-r.fees/r.startingBalance*100,sameFillFeeStressIsAlgebraOnly:true,weeklyCarrySlices:slices};}
+const scenarios=[];
+for(const source of old.scenarios){
+ const options=source.options,variants=[],fingerprints=[];
+ for(const[name,delegate]of [['mock-v2',new MockAiProvider()],['btc-regime-v1',new RegimePaperProvider()]]){
+  const samples=new Map(),codes={};let reducedBudgets=0;
+  const provider={decide:async c=>{samples.set(c.timeUTC,digest(canonicalJson({features:c.features,limits:c.limits,markets:c.marketContext.markets})));const answer=await delegate.decide(c),e=delegate.getEvidence();assert.equal(e.estimatedWinProbability,null);for(const a of e.assessments)for(const code of a.contradictions)codes[code]=(codes[code]??0)+1;for(const r of Object.values(e.relationships??{}))if(r.budgetFactor<1)reducedBudgets++;return answer;}};
+  const result=await replayRulesPortfolio(markets,options,provider,mockReplayStudy(options,{venue:'binance',quoteCurrency:'EUR',visibleDepthQuote:originalProtocol.visibleDepthQuotePerSide,stopLossPct:originalProtocol.stopLossPct}));
+  const hash=digest(canonicalJson(result));if(name==='mock-v2')assert.equal(hash,digest(canonicalJson(source.variants.find(v=>v.name==='mock-v2').result)),'Original full baseline changed');
+  variants.push({name,resultHash:hash,summary:summary(result),refusalCodes:codes,reducedBudgetAssessments:reducedBudgets,result});fingerprints.push(samples);console.log(JSON.stringify({scenario:source.scenario.name,variant:name,summary:summary(result),reducedBudgets}));
+ }
+ let shared=0;for(const[t,h]of fingerprints[0])if(fingerprints[1].has(t)){shared++;assert.equal(h,fingerprints[1].get(t),'Unfair exogenous inputs');}
+ scenarios.push({scenario:source.scenario.name,options,variants,sharedDecisionTimes:shared,sharedExogenousMismatches:0,deltaReturnPct:variants[1].result.returnPct-variants[0].result.returnPct,cashReturnPct:0});
+}
+const body={version:'btc-regime-study-v1',protocolHash,buildId:build.buildId,sourceReportHash:reportHash,datasetId:dataset.datasetId,dataHash:datasetDataHash(dataset),moduleHash:digest(readFileSync('apps/server/dist/strategy/regime-paper.js')),runnerHash:digest(readFileSync(new URL(import.meta.url))),scenarios,historicalDataAlreadyInspected:true,independentOutOfSample:false,independentSamples:null,calibratedProbability:null,profitabilityEstablished:false,limitations:['Selected surviving markets; synthetic OHLC next-open books/depth/slippage/receipt clocks; no historical orderbook execution observations.','Known history, no parameter sweep, weekly carry slices are not independent walk-forward folds.','BTC common-factor proxy is not a measured pairwise covariance or causal relation.','Candidate remains opt-in Paper-only; no live AI/accounts/orders/paid calls.']};
+const hash=digest(canonicalJson(body)),path='docs/btc-regime-study-'+hash.slice(0,16)+'.json';if(existsSync(path)){const saved=read(path),{reportHash,generatedAt,...savedFacts}=saved;assert.equal(digest(canonicalJson(savedFacts)),hash);}else writeFileSync(path,JSON.stringify({...body,reportHash:hash,generatedAt:new Date().toISOString()},null,2),{flag:'wx'});
+writeFileSync('docs/btc-regime-latest.json',JSON.stringify({path,reportHash:hash,protocolHash,buildId:build.buildId,profitabilityEstablished:false},null,2));console.log(JSON.stringify({path,hash,results:scenarios.map(s=>({scenario:s.scenario,delta:s.deltaReturnPct,variants:s.variants.map(v=>({name:v.name,summary:v.summary}))}))}));

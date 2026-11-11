@@ -1,0 +1,15 @@
+export type RankingDiagnosticRow={pair:string;decisionAt:number;forecast:number|null;netReturn:number|null};
+/** Descriptive consumed-label audit only. No threshold selection, order or independent-sample estimate. */
+export function auditClockDiscrimination(rows:readonly RankingDiagnosticRow[],fixedMargin=.005){
+ if(!Array.isArray(rows)||!Number.isFinite(fixedMargin)||fixedMargin<0||fixedMargin>1)throw Error('Invalid discrimination scope');
+ const groups=new Map<number,RankingDiagnosticRow[]>(),seen=new Set<string>();
+ for(const r of rows){if(!r||typeof r.pair!=='string'||!r.pair||!Number.isSafeInteger(r.decisionAt)||r.decisionAt<0||r.forecast!==null&&!Number.isFinite(r.forecast)||r.netReturn!==null&&!Number.isFinite(r.netReturn))throw Error('Invalid discrimination row');const key=JSON.stringify([r.pair,r.decisionAt]);if(seen.has(key))throw Error('Duplicate discrimination row');seen.add(key);const g=groups.get(r.decisionAt)??[];g.push(r);groups.set(r.decisionAt,g);}
+ const clocks=[...groups].sort(([a],[b])=>a-b).map(([decisionAt,g])=>{
+  const known=g.filter((r):r is RankingDiagnosticRow&{forecast:number;netReturn:number}=>r.forecast!==null&&r.netReturn!==null);let concordant=0,discordant=0,predictionTies=0,labelTies=0;
+  for(let i=0;i<known.length;i++)for(let j=i+1;j<known.length;j++){const a=known[i]!,b=known[j]!,dy=Math.sign(a.netReturn-b.netReturn),dx=Math.sign(a.forecast-b.forecast);if(dy===0)labelTies++;else if(dx===0)predictionTies++;else if(dx===dy)concordant++;else discordant++;}
+  const comparable=concordant+discordant+predictionTies,top=[...g].filter((r):r is RankingDiagnosticRow&{forecast:number}=>r.forecast!==null).sort((a,b)=>b.forecast-a.forecast||a.pair.localeCompare(b.pair))[0];
+  return {decisionAt,rows:g.length,knownLabelRows:g.filter(r=>r.netReturn!==null).length,forecastRows:g.filter(r=>r.forecast!==null).length,comparablePairs:comparable,concordant,discordant,predictionTies,labelTies,concordance:comparable?(concordant+.5*predictionTies)/comparable:null,hindsightPositiveLabelRows:g.filter(r=>r.netReturn!==null&&r.netReturn>fixedMargin).length,descriptiveTop:top?{pair:top.pair,forecast:top.forecast,netReturn:top.netReturn,aboveUnchangedMargin:top.forecast>fixedMargin}:null};
+ });
+ const evaluated=clocks.filter((c):c is typeof c&{concordance:number}=>c.concordance!==null);
+ return {rows:rows.length,sharedClocks:clocks.length,clocksWithComparablePairs:evaluated.length,equalClockMeanConcordance:evaluated.length?evaluated.reduce((s,c)=>s+c.concordance/evaluated.length,0):null,hindsightClocksWithPositiveLabel:clocks.filter(c=>c.hindsightPositiveLabelRows>0).length,clocksWithForecastAboveMargin:clocks.filter(c=>c.descriptiveTop?.aboveUnchangedMargin).length,clocks,independentSamples:null,forecastWinProbability:null,scope:'Consumed fixed-label ranking diagnostic. Pair comparisons share clocks/markets and are not independent trials. Hindsight labels and descriptive top ranks are not executable signals, portfolio returns or permission to lower a margin.'};
+}

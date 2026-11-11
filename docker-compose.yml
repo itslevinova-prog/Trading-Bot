@@ -1,0 +1,14 @@
+services:
+  paper-bot:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      DOCKER: "true"
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - paper-data:/app/data
+volumes:
+  paper-data:

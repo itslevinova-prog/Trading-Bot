@@ -1,0 +1,14 @@
+[
+  {
+    "path": "jesse/models/AiModel.py",
+    "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/models/AiModel.py",
+    "sha256": "e34df598602dcf5c1ee07aae9737cf69008f8d53895cedb454ac6a81a5fcb4ce",
+    "bytes": 841
+  },
+  {
+    "path": "jesse/controllers/ai_model_controller.py",
+    "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/controllers/ai_model_controller.py",
+    "sha256": "c2d40ed9e5553b148b33231c98502fc5bdfbde0049a0157d65edea4e42b3f4d7",
+    "bytes": 2619
+  }
+]

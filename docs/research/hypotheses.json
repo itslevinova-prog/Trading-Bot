@@ -1,0 +1,623 @@
+[
+  {
+    "id": "H-001",
+    "title": "EMA-Kreuzung und Qualitätsfilter (15m)",
+    "idea": "EMA-Kreuzungen mit sechs Qualitätsprüfungen sollen nur wirtschaftlich tragfähige Einstiege erlauben.",
+    "economicRationale": "Ein Trendimpuls könnte nach Gebühren genügend Kursweg liefern.",
+    "data": "01.–28.10.2026; 20 Binance/EUR-Märkte, bekannter eingefrorener Replay",
+    "metric": "Geschlossene Trades, Nettorendite und Filter-Funnel",
+    "successThreshold": "Künftige Prüfung: positiver Nettoertrag gegen Cash auf unverändertem Holdout und Bruttochance ≥2× Roundtrip-Kosten.",
+    "killCriterion": "Verwerfen, wenn der Filter keinen prüfbaren Einstieg zulässt oder Kostenhürde verfehlt wird.",
+    "status": "rejected",
+    "variantsTested": 1,
+    "result": "Im eingefrorenen Basis- und Stress-Replay 0 geschlossene Trades und 0 %; 33 der 33 bis zur ATR-Stufe gelangten Signale abgelehnt.",
+    "evidence": [
+      "docs/archive/RULE-DIAGNOSTIC.md"
+    ]
+  },
+  {
+    "id": "H-002",
+    "title": "Breakout über 20 geschlossene Kerzen",
+    "idea": "Einstiege bei einem Schlusskurs über den 20 vorigen Hochs sollen die Trendselektion verbessern.",
+    "economicRationale": "Ein bestätigter Ausbruch könnte Anschlussbewegungen erfassen.",
+    "data": "7 retrospektiv untersuchte Monate 10/2025–04/2026; 20 EUR-Märkte, je 100 EUR Monatsreset",
+    "metric": "Netto-Portfoliorendite, Gebührenstress, akzeptierte Trades",
+    "successThreshold": "Künftige Prüfung: positive Nettorendite gegenüber Cash in unabhängigen Monaten, auch unter Stress.",
+    "killCriterion": "Verwerfen, wenn alle getesteten Monatsrenditen nach Kosten unter Cash liegen.",
+    "status": "rejected",
+    "variantsTested": 2,
+    "result": "Sechs von sieben Monatsverlusten gegenüber der Quelle reduziert; alle sieben Kandidatenmonate trotzdem negativ, 153 statt 243 Basistrades.",
+    "evidence": [
+      "docs/archive/BREAKOUT-ENTRIES.md",
+      "docs/breakout-entry-latest.json"
+    ]
+  },
+  {
+    "id": "H-003",
+    "title": "Range- und Support-Reversion",
+    "idea": "Wiederholte Range-Berührungen und untere Rückeroberungen sollen günstige Long-Einstiege erzeugen.",
+    "economicRationale": "Ein Einstieg nahe Support könnte gegenüber Widerstand genug Ertragsspielraum bieten.",
+    "data": "Eingefrorener Oktober-2026-Replay: 20 EUR-Märkte, 2.593 gemeinsame Entscheidungstakte",
+    "metric": "Qualifizierte Setups nach Stop-/Ziel-/Kosten- und Datenprüfungen",
+    "successThreshold": "Künftige Prüfung: mehrfach vollständig belegte Setups mit Bruttoziel ≥2× Roundtrip-Kosten.",
+    "killCriterion": "Verwerfen, wenn kein Setup die verbindlichen Kosten-/Risikogrenzen erfüllt.",
+    "status": "rejected",
+    "variantsTested": 1,
+    "result": "334 Range-Beobachtungen, eine untere Rückeroberung, null wirtschaftlich zugelassene Setups; keine Strategie-PnL berechnet.",
+    "evidence": [
+      "docs/archive/RANGE-REGIMES.md",
+      "docs/range-setup-latest.json"
+    ]
+  },
+  {
+    "id": "H-004",
+    "title": "Steigende Stunden-EMA als Einstiegsgate",
+    "idea": "Nur bei nachweislich steigender geschlossener Stunden-EMA sollen Breakout-Einstiege passieren.",
+    "economicRationale": "Ein aufwärts gerichteter höherer Zeithorizont könnte Fehlbreakouts filtern.",
+    "data": "7 bekannte Monatsreplays 10/2025–04/2026; 20 EUR-Märkte",
+    "metric": "Nettorenditen nach Monatsreset, Trades und Kostenstress",
+    "successThreshold": "Künftige Prüfung: Netto-Mehrwert gegenüber identischer Breakout-Referenz und Cash unter Stress.",
+    "killCriterion": "Verwerfen, wenn auch nach weniger Einstiegen alle Basismonate negativ bleiben.",
+    "status": "rejected",
+    "variantsTested": 2,
+    "result": "153 auf 139 Basistrades reduziert; dennoch alle sieben Kandidatenmonate negativ; 36 profitable und 102 verlustreiche reife Kandidatentrades.",
+    "evidence": [
+      "docs/archive/HOURLY-ENTRIES.md",
+      "docs/archive/HOURLY-ENTRY-FAILURES.md"
+    ]
+  },
+  {
+    "id": "H-005",
+    "title": "Relative Stärke gegenüber BTC",
+    "idea": "Altcoin-Käufe nur bei positiver geschlossener Vierstunden-Relative-Strength gegenüber BTC.",
+    "economicRationale": "Relative Outperformance könnte attraktivere Marktführer auswählen.",
+    "data": "7 retrospektive Monatsreplays 10/2025–04/2026; EUR-Märkte",
+    "metric": "Nettorendite gegen unveränderte Stundenstrategie, Cash und Gebührenstress",
+    "successThreshold": "Künftige Prüfung: positiver kostenrobuster Netto-Mehrwert gegen Cash und Referenz.",
+    "killCriterion": "Verwerfen, wenn sämtliche untersuchten Basismonate negativ bleiben.",
+    "status": "rejected",
+    "variantsTested": 2,
+    "result": "Tradezahl von 139 auf 126 reduziert, aber alle sieben Basismonate weiterhin negativ; Gebührenstress identisch mit der Quelle.",
+    "evidence": [
+      "docs/archive/RELATIVE-ENTRIES.md"
+    ]
+  },
+  {
+    "id": "H-006",
+    "title": "BTC-Regime-Filter für korrelierte Altcoins",
+    "idea": "Ein BTC-Gegenregime soll hoch korrelierte Altcoin-Longs vetoieren.",
+    "economicRationale": "Gemeinsame Marktrisiken könnten bei gegenläufigem BTC die Verluste vergrößern.",
+    "data": "Bekannter 20-Märkte-Oktober-2026-Replay, Safe-Profil",
+    "metric": "Nettorendite, aktiv ausgelöste BTC-Regime-Vetos",
+    "successThreshold": "Künftige Prüfung: nachweisbarer kausaler Rückgang der Verlust-/Risikobelastung ohne Nettoverschlechterung.",
+    "killCriterion": "Als Renditehypothese verwerfen, falls der Filter keine Entscheidungen ändert.",
+    "status": "rejected",
+    "variantsTested": 2,
+    "result": "Basis-Kandidat und Mock-v2 identisch bei −3,9262 % und 39 Trades; kein zusätzliches Veto ausgelöst.",
+    "evidence": [
+      "docs/archive/BTC-REGIME.md",
+      "docs/btc-regime-latest.json"
+    ]
+  },
+  {
+    "id": "H-007",
+    "title": "Kovarianzbasierte Portfolioallokation",
+    "idea": "Positionsbudgets sollen gleichzeitige Marktrisiken mittels Kovarianz verringern.",
+    "economicRationale": "Reduzierte gemeinsame Exposition könnte Drawdowns abfedern.",
+    "data": "Oktober 2026; 20 korrelierte EUR-Märkte, 2.593 Entscheidungstakte",
+    "metric": "Nettorendite, Maximaldrawdown und mittlere Exposition",
+    "successThreshold": "Künftige Prüfung: geringerer Drawdown bei positivem kostenrobustem Gesamtertrag gegen Cash.",
+    "killCriterion": "Als Profit-Hypothese verwerfen, wenn der Kandidat weiterhin unter Cash liegt.",
+    "status": "open",
+    "variantsTested": 2,
+    "result": "Nettoverlust von −3,9262 % auf −3,0478 % und Drawdown von 3,9262 % auf 3,2658 % reduziert; immer noch schlechter als Cash.",
+    "evidence": [
+      "docs/archive/PORTFOLIO-COVARIANCE.md"
+    ]
+  },
+  {
+    "id": "H-008",
+    "title": "Struktur-Exits bei Trendverschlechterung",
+    "idea": "Geschlossene Strukturverschlechterung soll bestehende Positionen rechtzeitig schließen.",
+    "economicRationale": "Frühere Exits könnten Verlustdauer und unnötige Exposition reduzieren.",
+    "data": "Bekannter Oktober-2026-Mock-Replay, 20 EUR-Märkte",
+    "metric": "Portfoliorendite, Drawdown, Exit-Gründe und Gebührenstress",
+    "successThreshold": "Künftige Prüfung: stabil positiver Netto-Mehrwert gegen Cash und identische Referenz.",
+    "killCriterion": "Verwerfen, falls Verluste zwar sinken, aber erwartete Kosten- und Cashhürden unerfüllt bleiben.",
+    "status": "rejected",
+    "variantsTested": 2,
+    "result": "Gegen Kovarianz-Basis −3,0478 % verbesserte sich der Kandidat auf −1,8880 %; weiterhin unter Cash, Gebührenstress mit nur drei Trades unverändert.",
+    "evidence": [
+      "docs/archive/STRUCTURE-EXITS.md",
+      "docs/structure-exit-study-5e7a4bf0170e6610.json"
+    ]
+  },
+  {
+    "id": "H-009",
+    "title": "Original-Support und 1R-Gain-Protection als Exits",
+    "idea": "Früheres Stützniveau oder ein bereits erzielter 1R-Schlussgewinn sollen spätere Verluste begrenzen.",
+    "economicRationale": "Ein frühzeitiger Ausstieg könnte abgegebene Zwischengewinne sichern.",
+    "data": "Historisch konsumierte Januar-/April-2026-Replays, 20 EUR-Märkte",
+    "metric": "Zusätzliche Exits, Nettorendite gegen identische bestehende Exitstrategie",
+    "successThreshold": "Künftige Prüfung: zusätzliche kausal belegte Exits und positive kostenrobuste Differenz.",
+    "killCriterion": "Verwerfen, wenn keine zusätzlichen Exits entstehen oder die Netto-PnL nicht besser wird.",
+    "status": "rejected",
+    "variantsTested": 2,
+    "result": "Original-Support-Regel: null zusätzliche Exits trotz 1.146 geprüfter Basiseinstiegsbeobachtungen; 1R-Regel ebenfalls ohne inkrementellen Vorteil.",
+    "evidence": [
+      "docs/archive/ENTRY-SUPPORT-EXITS.md",
+      "docs/archive/GAIN-PROTECTION.md"
+    ]
+  },
+  {
+    "id": "H-010",
+    "title": "Lokale Ridge-Modelle auf 4h-Bruttorendite",
+    "idea": "Ein kausales Ridge-Modell soll Null- und Mittelwertprognosen schlagen.",
+    "economicRationale": "Geringer Prognosefehler könnte die Auswahl kostenwirksamer Entries verbessern.",
+    "data": "17 retrospektive chronologische Testfenster; 5.440 Asset-Zeilen / 272 abhängige Uhren",
+    "metric": "MAE, prognostizierte und stressbereinigte Kapitaldiagnose",
+    "successThreshold": "Künftige Prüfung: niedrigere Test-MAE UND positiver Nettoertrag unter gepaarten 2× Kosten.",
+    "killCriterion": "Verwerfen, falls MAE höher bleibt oder positiver Basiseffekt im Kostenstress kippt.",
+    "status": "rejected",
+    "variantsTested": 3,
+    "result": "Ridge-MAE 1,17369 statt Null-MAE 1,12874 Prozentpunkte; validierungsgewählte Kapitaldiagnose +0,51154 % mit 13 Positionen, gepaarter Kostenstress −0,08852 %.",
+    "evidence": [
+      "docs/archive/LOCAL-LEARNING.md",
+      "docs/archive/LOCAL-LEARNING-EXPANDED.md"
+    ]
+  },
+  {
+    "id": "H-011",
+    "title": "Fixes 8h-Ziel statt 4h-Prognose",
+    "idea": "Ein fixes Achtstunden-Ziel soll die Prognose besser auf den tatsächlichen Handelsbedarf ausrichten.",
+    "economicRationale": "Längerer Horizont könnte kurze Kursrauschen-Signale vermeiden.",
+    "data": "41 chronologische Folds; 6.560 abhängige Testzeilen, 20 EUR-Märkte",
+    "metric": "Test-MAE und kapitalgewichtete Nettodiagnose unter Kostenstress",
+    "successThreshold": "Künftige Prüfung: positive Netto-Kapitaldiagnose gegen Cash auch bei 2× Kosten.",
+    "killCriterion": "Verwerfen, wenn die fixe Zielvariante bereits basisnetto negativ bleibt.",
+    "status": "rejected",
+    "variantsTested": 3,
+    "result": "Ridge −13,1808 % mit 232 hypothetischen Positionen, validierungsgewählte Version −1,8816 % mit elf; gleiche Entries bei 2× Kosten −21,9194 % bzw. −2,3686 %.",
+    "evidence": [
+      "docs/archive/FIXED-TARGET-LEARNING.md"
+    ]
+  },
+  {
+    "id": "H-012",
+    "title": "Kostenbehaftete First-Barrier-Lernlabels",
+    "idea": "Stop-, Target- und Timeout-Ergebnisse sollen statt bloßer Endpunktreturns gelernt werden.",
+    "economicRationale": "Kosten- und Pfadabhängigkeit könnte das Label näher an die tatsächliche Entry-Entscheidung bringen.",
+    "data": "10/2025–03/2026; 20 Survivor-EUR-Märkte, 7.280 Zeilen / 364 gemeinsame Uhren",
+    "metric": "Costed-Label-MAE gegen Null- und Mittelwertreferenz",
+    "successThreshold": "Künftige Prüfung: bessere chronologische Prognose und nachgewiesener Broker-Nettoertrag.",
+    "killCriterion": "Verwerfen, wenn Ridge-Fehler höher als der einfache Mittelwert bleibt.",
+    "status": "rejected",
+    "variantsTested": 3,
+    "result": "2.518 Stop-, 545 Target-, 4.216 Timeout- und ein ambiges Label; Ridge-MAE 0,014676 gegenüber Mittelwert 0,014351 (Renditeeinheiten).",
+    "evidence": [
+      "docs/archive/BARRIER-CLOCK-LEARNING.md",
+      "docs/barrier-clock-corpus-latest.json"
+    ]
+  },
+  {
+    "id": "H-013",
+    "title": "Lokale Barrier-Tree-Modelle",
+    "idea": "Ein festes flaches Boosting-Modell soll nichtlineare Marktbeziehungen erfassen.",
+    "economicRationale": "Nichtlinearität könnte über Ridge hinaus nutzbare bedingte Renditen erklären.",
+    "data": "41 historische Purged-Folds; 20 Survivor-Märkte und 6.560 Testzeilen",
+    "metric": "MAE, Broker-Nettorendite und eingefrorener Gebührenstress",
+    "successThreshold": "Künftige Prüfung: positiver unverbrauchter Holdout-Broker-Return und positiver 2×-Kostenstress.",
+    "killCriterion": "Verwerfen, wenn der kleine positive Rücktest im vorab fixierten Gebührenstress negativ wird.",
+    "status": "rejected",
+    "variantsTested": 4,
+    "result": "Standalone Tree-Broker −7,1992 % (121 Trades); erweiterte Auswahl +0,4984 % (24 abhängige Trades), bei 2× Gebühren −0,5421 %.",
+    "evidence": [
+      "docs/archive/BARRIER-TREE-WALKFORWARD.md",
+      "docs/archive/TREE-BROKER-COMPARISON.md",
+      "docs/archive/FEE-STOP-PATHS.md"
+    ]
+  },
+  {
+    "id": "H-014",
+    "title": "Barrier-Ridge über den unveränderten Broker",
+    "idea": "Frozen Ridge- und validierungsgewählte Barrierprognosen sollen den alten Hourly-Broker übertreffen.",
+    "economicRationale": "Bessere Vorschläge könnten bei gleichen Schutz- und Kostengrenzen Verluste vermeiden.",
+    "data": "19.10.2025–01.04.2026; 164 Tage, 20 Survivor-EUR-Märkte",
+    "metric": "Gesamter Broker-Nettoreturn gegen Baseline und Cash",
+    "successThreshold": "Künftige Prüfung: unabhängig positiver Nettoertrag gegen Cash einschließlich Kosten.",
+    "killCriterion": "Verwerfen, wenn sowohl Ridge als auch Selector gegenüber Cash verlieren.",
+    "status": "rejected",
+    "variantsTested": 3,
+    "result": "Unveränderte Hourly-Referenz −8,9409 % / 105 Trades, Ridge −4,3907 % / 50, Selector −0,8746 % / elf; keine Variante schlägt Cash.",
+    "evidence": [
+      "docs/archive/BARRIER-BROKER-COMPARISON.md"
+    ]
+  },
+  {
+    "id": "H-015",
+    "title": "Direktionale ADX/DMI-Zusatzfeatures",
+    "idea": "Zwei geschlossene Directional-Strength-Merkmale sollen die Barrier-Ridge-Prognose verbessern.",
+    "economicRationale": "Trendstärke und Richtung könnten Reversal-Signale von Trends unterscheiden.",
+    "data": "41 alte Folds; 6.560 Testprognosen / 20 Märkte",
+    "metric": "MAE und Margin-qualifizierte Chancen gegenüber demselben Ridge/Mean-Control",
+    "successThreshold": "Künftige Prüfung: niedrigere MAE und positive kostenbehaftete Brokerergebnisse.",
+    "killCriterion": "Verwerfen, wenn Zusatzmodell schlechter als Ridge und Trainingsmittelwert ist.",
+    "status": "rejected",
+    "variantsTested": 2,
+    "result": "Die 10D-Zusatzfeature-Variante lag im Test-MAE hinter der ursprünglichen 8D-Ridge und dem Mean-Control; kein positiver Brokerbeleg.",
+    "evidence": [
+      "docs/archive/DIRECTIONAL-RIDGE-WALKFORWARD.md"
+    ]
+  },
+  {
+    "id": "H-016",
+    "title": "Aggressor-Orderflow als Ridge-Feature",
+    "idea": "Original gespeicherte Taker-Buy-Ungleichgewichte sollen die Barrierprognose verbessern.",
+    "economicRationale": "Aggressor-Ungleichgewichte könnten kurzfristigen Kaufdruck zeigen.",
+    "data": "41 historische Folds; 6.560 Testzeilen / 328 überlappende Auswahl-Uhren",
+    "metric": "MAE und durchschnittliches bekanntes Netto-Label der Rankings",
+    "successThreshold": "Künftige Prüfung: positiv costed Ranking-Label plus unabhängiger Broker-Nettoertrag.",
+    "killCriterion": "Verwerfen, wenn über Margin ausgewählte Chancen durchschnittlich negative Netto-Labels haben.",
+    "status": "rejected",
+    "variantsTested": 2,
+    "result": "Etwa 50 gewählte historische Uhren; mittlere prognostizierte Chance rund +0,0090, zugehöriges kostenbehaftetes Label −0,0057174; MAE nicht besser als Mean-Control.",
+    "evidence": [
+      "docs/archive/AGGRESSOR-RIDGE-WALKFORWARD.md",
+      "docs/archive/AGGRESSOR-RANKING-AUDIT.md",
+      "docs/aggressor-ranking-latest.json"
+    ]
+  },
+  {
+    "id": "H-017",
+    "title": "BTC-Common-Market-Ridge-Feature",
+    "idea": "Ein zeitgleicher BTC-Vierstundenreturn soll als neuntes Merkmal die Barrier-Ridge erweitern.",
+    "economicRationale": "Gemeinsame Marktschocks könnten Vorhersagefehler erklären.",
+    "data": "41 historische Folds, 7.280 Vektoren / 364 gemeinsame Uhren",
+    "metric": "MSE, MAE, qualifizierte Chancen und deren Kostenlabel",
+    "successThreshold": "Künftige Prüfung: MAE/MSE besser als faire 8D-Kontrolle und positive Brokerkostenrendite.",
+    "killCriterion": "Verwerfen, wenn die Featureablation Prognosefehler verschlechtert und Rankings negativ bleiben.",
+    "status": "rejected",
+    "variantsTested": 2,
+    "result": "Neuntes BTC-Feature verschlechterte MSE und MAE; erweiterter Selector wählte Common-Market-Kandidat in null Folds.",
+    "evidence": [
+      "docs/archive/COMMON-MARKET-RIDGE.md",
+      "docs/common-market-ridge-latest.json"
+    ]
+  },
+  {
+    "id": "H-018",
+    "title": "Volumen- und Aktivitätsdaten als Prädiktor",
+    "idea": "Kausale Volumen-, Quote-Turnover- und WebSocket-Takerfelder könnten eine neue Chancenhypothese ermöglichen.",
+    "economicRationale": "Tatsächliche Aktivitätsdaten könnten Liquidität und Nachfrage besser repräsentieren als bloße Kerzenfarbe.",
+    "data": "7.280 historische Featurezeilen / 364 Takte plus 192 öffentlich erfasste BTC/ETH-15m-Bars",
+    "metric": "Vollständigkeit kausaler Features und später nur präreigistrierte Netto-PnL",
+    "successThreshold": "Künftige Prüfung: vollständige vor Entscheidung verfügbare Quelle und Nettoeffekt oberhalb 2× Roundtrip-Kosten.",
+    "killCriterion": "Nicht als Strategie verwenden, wenn Quelle/Empfangszeit unbekannt oder Kostenhürde unerfüllt ist.",
+    "status": "open",
+    "variantsTested": 1,
+    "result": "7.276/7.280 historische Volumenverhältnisse definiert, vier ausdrücklich unbekannt; zwei 96-Bar-Captures bestätigen nur Datenzugriff, keinen Handelsvorteil.",
+    "evidence": [
+      "docs/archive/VOLUME-ACTIVITY.md",
+      "docs/archive/PUBLIC-EXECUTED-ACTIVITY.md",
+      "docs/volume-clock-audit-10fb98c4bf506856.json"
+    ]
+  },
+  {
+    "id": "H-019",
+    "title": "Deterministische Mock-KI-Policies",
+    "idea": "Ein fester nachvollziehbarer Mock mit Marktstruktur soll die reine heuristische Mock-v1-Auswahl verbessern.",
+    "economicRationale": "Erklärbare Veto- und Exitentscheidungen könnten Fehlentries reduzieren.",
+    "data": "Oktober 2026, 20 EUR-Märkte, 1.000 EUR je Strategie",
+    "metric": "Nettoreturn, Gebühren, Trades und identischer Cash-Vergleich",
+    "successThreshold": "Künftige Prüfung: konsistente kostenrobuste Gewinne gegenüber Cash auf prospektivem Protokoll.",
+    "killCriterion": "Verwerfen, wenn nur die Verluste kleiner werden, Nettoertrag aber negativ bleibt.",
+    "status": "rejected",
+    "variantsTested": 2,
+    "result": "Mock-v1 −5,4928 % mit 54 Trades, Struktur-Mock-v2 −3,9262 % mit 39; Cash weiterhin 0 %.",
+    "evidence": [
+      "docs/archive/MOCK-STRUCTURE-STUDY.md"
+    ]
+  },
+  {
+    "id": "H-020",
+    "title": "Kalendergewichtete Ridge-Refits im Mai",
+    "idea": "Vorab fixierte 30-Tage-Halbwertsgewichtung soll neuere Beobachtungen stärker berücksichtigen.",
+    "economicRationale": "Jüngste Marktregimes könnten für Prognosen relevanter sein.",
+    "data": "1.–11.05. und 11.–21.05.2026; je 400 Asset-Zeilen an nur 20 Takten",
+    "metric": "Chronologische costed-Label-MAE und Chancen über 0,005 Margin",
+    "successThreshold": "Künftige Prüfung: bessere MAE gegen denselben Refit ohne Gewichtung und positive Nettoeinstiege.",
+    "killCriterion": "Verwerfen, wenn Gewichtung schlechter ist und kein Signal die fixierte Eintrittsmarge erreicht.",
+    "status": "rejected",
+    "variantsTested": 5,
+    "result": "Spätes Mai-Fenster: ungewichtete Ridge-MAE 0,0117320 gegenüber gewichteter Ridge 0,0118921; alle fünf Kandidaten ohne Chance über 0,005.",
+    "evidence": [
+      "docs/archive/EARLY-MAY-VALIDATION.md",
+      "docs/archive/LATER-MAY-VALIDATION.md",
+      "docs/archive/CALENDAR-CLOCK-WEIGHTING.md"
+    ]
+  },
+  {
+    "id": "H-021",
+    "title": "Robuste Clock-Rankings und Validierungsziele",
+    "idea": "Validation muss die Kaufentscheidung und deren Unsicherheit statt nur Zeilen-MAE berücksichtigen.",
+    "economicRationale": "Abhängige Zeitpunkte und Selektionsoptimismus können scheinbar gute Modellwahl erzeugen.",
+    "data": "41 historische Folds, je nur acht Validierungstakte",
+    "metric": "Leave-one-clock-out-Auswahlstabilität und costed Auswahl-Labels",
+    "successThreshold": "Künftige Prüfung: stabile Positivlabels und Brokererträge auf noch unberührten Takten.",
+    "killCriterion": "Keine Selektion auf konsumierten Fenstern, wenn gewählte Payoffs negativ und Moduswahl instabil bleiben.",
+    "status": "open",
+    "variantsTested": 2,
+    "result": "44/328 Leave-one-clock-out-Fälle änderten den gewählten Modellnamen; MSE-Selector fand sechs Chancen mit mittlerem costed Label −0,0072252.",
+    "evidence": [
+      "docs/archive/VALIDATION-EVIDENCE.md",
+      "docs/archive/VALIDATION-LOSS-OBJECTIVE.md",
+      "docs/archive/CLOCK-RANKING-ERRORS.md"
+    ]
+  },
+  {
+    "id": "H-022",
+    "title": "Prospektive eingefrorene Paper-V3-Kohorte",
+    "idea": "Ein unveränderter Mock/Rules/BTC-Vergleich soll zukünftige Ergebnisse ohne rückblickende Auswahl messen.",
+    "economicRationale": "Prospektive Beobachtung mit echten Eingangszeitstempeln könnte Rücktestverzerrung begrenzen.",
+    "data": "Seit 31.10.2026; separate eingefrorene Paper-V3-Sessions mit dokumentierten Unterbrechungen",
+    "metric": "Nettoertrag, Zeit-/Datenabdeckung und Kostenstress pro tatsächlicher Kohorte",
+    "successThreshold": "Vor Registrierung: ausreichend vollständige, unabhängige prospektive Zeitpunkte und positiver Nettovorteil gegen Cash.",
+    "killCriterion": "Kein Profiturteil bei unzureichenden Samples, Lücken oder ungleichem Risiko.",
+    "status": "open",
+    "variantsTested": 1,
+    "result": "Paper-V3 gestartet und später unter dokumentierten Lücken fortgesetzt; keine belastbare unabhängige Profit-Evidenz oder ausreichende Stichprobe nachgewiesen.",
+    "evidence": [
+      "docs/archive/MOCK-FORWARD-V3.md",
+      "docs/archive/PAPER-RESUME-2026-11-01.md",
+      "docs/archive/PAPER-RESUME-2026-11-03.md"
+    ]
+  },
+  {
+    "id": "H-023",
+    "title": "Sicherheits- und Ausführungsannahmen",
+    "idea": "Kosten, Bid-Seite, Drawdown-Gates und gemeinsame Schocks sollen vor einer positiven PnL-Aussage konservativ bewertet werden.",
+    "economicRationale": "Ein nicht ausführbarer Fill kann eine scheinbar rentable Backtest-Strategie verfälschen.",
+    "data": "269 wiederholt überlappende Entry/Exit-Audits plus synthetische Broker-Stresstests",
+    "metric": "Gebühreneffekt, Gap-/Drawdown-Konsistenz, Nettoertrag gegenüber Cash",
+    "successThreshold": "Künftige Prüfung: unveränderte Sicherheitsinvarianten, vollständige Fill-Belege und 2×-Kostenrobustheit.",
+    "killCriterion": "Keinen Handelsvorteil behaupten, sobald Bruttobewegung oder belegter Fill die Kostenhürde nicht tragen.",
+    "status": "open",
+    "variantsTested": 2,
+    "result": "Beim Stundenkandidaten gross ausgewertete Nettosumme −11,866624 Quote-Einheiten trotz brutto −7,808999 vor expliziten Gebühren; Ausführungschecks belegen Robustheit, nicht Alpha.",
+    "evidence": [
+      "docs/archive/HOURLY-ENTRY-FAILURES.md",
+      "docs/archive/INTRABAR-ASSUMPTIONS.md",
+      "docs/archive/DRAWDOWN-EXECUTION.md"
+    ]
+  },
+  {
+    "id": "H-024",
+    "title": "Gemeinsames Tages-Marktregime v1",
+    "idea": "Eine vorab festgelegte, gleichgewichtete Marktampel aus BTC-Trend, BTC-Volatilität und PIT-Top-50-Breite kann Drawdowns von Long-only-Portfolios verringern.",
+    "economicRationale": "Abgesenkte Netto-Exposure in fallenden und instabilen Märkten kann grosse Verlustphasen mildern, kostet aber potenzielle Aufwärtsrendite.",
+    "data": "Entwicklung 2020–2023; 2024 einmalige Validierung; Holdout ab 2025 unangetastet (ausser rein operationeller Live-Zustandsanzeige).",
+    "metric": "Max-Drawdown, Nettorendite, Sharpe, Wechsel/Jahr; 30-Tage-Folgerenditen mit Bootstrap-KI",
+    "successThreshold": "Niedrigerer Max-Drawdown bei tragbarer Renditeeinbusse; Richtwert weniger als 6 Zustandswechsel/Jahr",
+    "killCriterion": "Kein nachvollziehbarer risikoadjustierter Vorteil oder hohe Instabilität/zu viele Wechsel auf echten historischen Daten",
+    "status": "open",
+    "variantsTested": 1,
+    "result": "Vorregistriert, noch nicht historisch validiert: #3 und #5 fehlen auf main.",
+    "evidence": [
+      "docs/MARKET-REGIME.md",
+      "docs/BTC-REGIME.md",
+      "docs/PAPER-MARKET-BREADTH.md"
+    ]
+  },
+  {
+    "id": "H-025",
+    "title": "Trendfolge mit EMA-Ensemble und Volatilitätsziel auf geschlossenen Tageskerzen",
+    "idea": "Ein rein long ausgerichtetes 20/50/100/200-Tage-EMA-Ensemble mit BTC-200d-Regimefilter, Volatilitätsgewichtung und täglichem Rebalancing soll die risikoadjustierte Stabilität gegenüber den vorhandenen Benchmarks verbessern.",
+    "economicRationale": "Längerfristige Trends und inverse Volatilitätsgewichtung könnten einen Teil des kurzfristigen Rauschens reduzieren, jedoch keine positive Rendite garantieren.",
+    "data": "Nur vorregistrierte Entwicklungsdaten 2020–2023; 2024 ggf. einmalige Validierung; ab 2025 versiegelter Holdout, hier keinerlei Datenzugriff. Aktuell ausschließlich synthetische Fixtures.",
+    "metric": "Netto-CAGR, Netto-Volatilität, Sharpe, Max-Drawdown, Turnover, Kostenanteil, Trades/Jahr, je Jahr und Marktregime",
+    "successThreshold": "Robustere risikoadjustierte Kennzahlen als BTC Buy & Hold, Top-10 Equal Weight, 60/40 BTC/Cash und bestehende Regeln unter vollständiger Kostenrechnung; Parameterumgebung stabil.",
+    "killCriterion": "Kein überprüfbarer Nettovorteil nach Kosten oder starke Parameterempfindlichkeit; historische Datenlücken oder aktuelle Qualitätslabels statt Point-in-Time-Daten.",
+    "status": "open",
+    "variantsTested": 1,
+    "result": "Ein Forschungslauf mit Annahmen wurde technisch erfolgreich ausgeführt, jedoch nur auf BTC/ETH: GitHub ersetzte leere Symbols durch den alten Standard. Kein vollständiger USDT-Test, keine Pipeline-/Paper-Freigabe. Universum wird vor Wiederholung korrigiert; unveränderte Strategie und Annahmen.",
+    "evidence": [
+      "docs/TREND-VOL-TARGET-V1.md",
+      "apps/server/src/backtest/trend-research.ts"
+    ],
+    "researchAssumptions": {
+      "version": "H-025-research-v1",
+      "label": "Forschungslauf mit Annahmen",
+      "pipelineEligible": false,
+      "fromMs": 1577836800000,
+      "toMs": 1704067200000,
+      "minAgeDays": 240,
+      "consecutiveDailyBars": 240,
+      "minMedianQuoteVolume30d": 5000000,
+      "lotDecimals": 0,
+      "minNotional": 10,
+      "initialCash": 10000,
+      "feeRate": 0.001,
+      "spreadBps": 10,
+      "slippageBps": 5,
+      "quote": "USDT",
+      "historicalTradabilityVerified": false
+    },
+    "researchRuns": [
+      {
+        "runId": 42497571412,
+        "url": "https://github.com/itslevinova-prog/Trading/actions/runs/42497571412",
+        "scope": "BTCUSDT,ETHUSDT (unbeabsichtigter Workflow-Standard)",
+        "importedCoins": 2,
+        "universeCoins": 2,
+        "tradedCoins": 1,
+        "outcome": "scope-invalid-for-all-coins-request",
+        "pipelineEligible": false,
+        "summaryComment": "https://github.com/itslevinova-prog/Trading/issues/4#issuecomment-6723727769"
+      }
+    ]
+  },
+  {
+    "id": "H-026",
+    "title": "Entwicklungs-Schnelltest: SMA50/100/200 täglich auf BTC/ETH 2020–2023",
+    "idea": "Drei fest vorregistrierte SMA-Trendfilter auf BTCUSDT/ETHUSDT werden jeweils mit zwei fixen Buy-and-Hold-Benchmarks verglichen.",
+    "economicRationale": "Ein tägliches Trendfilter könnte Drawdowns begrenzen, kann aber nach Gebühren/Slippage schlechter abschneiden als passives Halten.",
+    "data": "Ausschließlich BTCUSDT/ETHUSDT, 2020-01-01 bis 2023-12-31 (inclusiv), Binance Public Archive, keine Daten ab 2024.",
+    "metric": "CAGR, Max-Drawdown, Sharpe, Calmar, Trades, Exposure, gesamte Gebühren und Slippage in % des Startkapitals",
+    "successThreshold": "Grün: mindestens eine der 3 Varianten ist netto bei Sharpe und Calmar strikt besser als BTC/ETH 50/50 Hold; Gelb: nur eine davon; Rot: keine besser.",
+    "killCriterion": "Rot oder nicht klassifizierbar: keine priorisierte Trend-Freigabe; keinen zweiten Parametersuchlauf beginnen.",
+    "status": "open",
+    "variantsTested": 0,
+    "result": "Skript und Tests bereitgestellt, absichtlich NICHT mit echten Archiven ausgeführt. Drei feste Varianten geplant, null empirische Tests abgeschlossen.",
+    "evidence": [
+      "scripts/spike/trend-1d-spike.mjs",
+      "scripts/spike/trend-1d-spike.test.mjs"
+    ]
+  },
+  {
+    "id": "H-027",
+    "title": "Parkiert: täglicher Volatilitätskompressions-Breakout (Issue #84)",
+    "idea": "Long-only Spot nach Schluss über das Hoch der vorigen 20 oder 40 vollständig abgeschlossenen Tage, ausschliesslich nach bereits belegter Kompression.",
+    "economicRationale": "Ein Ausbruch aus ruhigerem Tageshandel könnte längere Bewegungen tragen, kann aber nach Kosten scheitern und ist keine nachgewiesene Edge.",
+    "data": "Nur Entwicklung 2020-01-01 bis 2023-12-31, vollständig abgeschlossene UTC-Tageskerzen mit kausalem historischen Universum; spätere Fenster gesperrt.",
+    "metric": "Paarweise Netto-PnL gegenüber H-025, BTC Buy & Hold, DCA; Trades, Gebühren, Drawdown, Coverage, Kostenstress",
+    "successThreshold": "Beide vorab definierten Varianten werden nach Kosten gegen H-025 und passive Referenzen geprüft; robust positive Netto-Differenz und Brutto-Edge >= 2x Roundtrip-Kosten nötig.",
+    "killCriterion": "Beide Varianten verfehlen netto die Baselines oder Brutto-Edge < 2x Roundtrip-Kosten; negative Befunde bleiben gespeichert.",
+    "status": "parked",
+    "variantsTested": 0,
+    "plannedVariants": [
+      {
+        "id": "breakout-20",
+        "breakoutDays": 20,
+        "compressionDays": 20,
+        "medianDays": 30
+      },
+      {
+        "id": "breakout-40",
+        "breakoutDays": 40,
+        "compressionDays": 20,
+        "medianDays": 30
+      }
+    ],
+    "result": "Vorregistriert, keine Datenläufe, keine Validierung/Profitabilitätskennzahlen; Forschungsfreigabe nach Roadmap #32 weiterhin gesperrt.",
+    "evidence": [
+      "apps/server/src/strategy/daily-compression-breakout.ts",
+      "apps/server/test/daily-compression-breakout.test.ts"
+    ]
+  },
+  {
+    "id": "H-028",
+    "title": "Parkiert: extremes historisches Funding als Spot-Einstiegsfilter (Issue #85)",
+    "idea": "Zwei fixierte Alternativen sperren ausschliesslich Spot-Neukäufe: letztes publiziertes Funding > vergangenes 30d-P90 oder < vergangenes 30d-P10.",
+    "economicRationale": "Extremes vergangenes Funding könnte einen Risikozustand anzeigen, garantiert aber keine Gegenbewegung oder Arbitrage.",
+    "data": "Nur Entwicklung 2020–2023, nur publizierte historische Funding-Beobachtungen von #82 mit As-of-Cutoff; keine Futures-/Margin-Orders, 2024+ gesperrt.",
+    "metric": "Gepaarte Nettodifferenz zur unveränderten H-025-Spot-Basis, verpasste Trades, Coverage, Gebühren, 2x-Kostenstress",
+    "successThreshold": "Stabile positive Netto-Delta der festen Einzelvarianten mit belastbarer historischer Coverage und Brutto-Edge >= 2x Kosten.",
+    "killCriterion": "Keine stabile positive Nettodifferenz oder unvollständige Funding-Historie, oder Brutto-Edge < 2x Roundtrip-Kosten.",
+    "status": "parked",
+    "variantsTested": 0,
+    "plannedVariants": [
+      {
+        "id": "above-p90-block",
+        "lookbackDays": 30,
+        "percentile": 90
+      },
+      {
+        "id": "below-p10-block",
+        "lookbackDays": 30,
+        "percentile": 10
+      }
+    ],
+    "result": "Vorregistriert, keine Datenläufe, keine Validierung/Profitabilitätskennzahlen; Forschungsfreigabe nach Roadmap #32 weiterhin gesperrt.",
+    "evidence": [
+      "apps/server/src/strategy/funding-spot-filter.ts",
+      "apps/server/test/funding-spot-filter.test.ts"
+    ]
+  },
+  {
+    "id": "H-029",
+    "title": "Parkiert: Perpetual-Spot-Basis als Spot-Filter (Issue #86)",
+    "idea": "Zwei feste Alternativen sperren Spot-Neukäufe bei historischer Basis über 30d-P90 beziehungsweise unter 30d-P10.",
+    "economicRationale": "Eine auffällige publizierte Basis könnte Marktstress anzeigen, ohne ein Vorhersagesignal oder eine Derivate-Strategie zu beweisen.",
+    "data": "Nur 2020–2023 mit timestampgenauen, bereits publizierten öffentlichen Spot/Perpetual-Quoten von #83; keine 2024+-Entwicklung.",
+    "metric": "Netto-Delta zur unveränderten H-025-Spot-Referenz, Coverage, gleiche Kosten, abgelehnte Einstiege, Benchmarks",
+    "successThreshold": "Nur robust positiver Netto-Mehrwert beider festgelegter Filter nach Kosten und Brutto-Edge >= 2x Roundtrip-Kosten.",
+    "killCriterion": "Fehlende Basis-Evidenz, nicht positive kostenrobuste Nettodifferenz oder Brutto-Edge < 2x Roundtrip-Kosten.",
+    "status": "parked",
+    "variantsTested": 0,
+    "plannedVariants": [
+      {
+        "id": "basis-above-p90-block",
+        "lookbackDays": 30,
+        "percentile": 90
+      },
+      {
+        "id": "basis-below-p10-block",
+        "lookbackDays": 30,
+        "percentile": 10
+      }
+    ],
+    "result": "Vorregistriert, keine Datenläufe, keine Validierung/Profitabilitätskennzahlen; Forschungsfreigabe nach Roadmap #32 weiterhin gesperrt.",
+    "evidence": [
+      "apps/server/src/strategy/basis-spot-filter.ts",
+      "apps/server/test/basis-spot-filter.test.ts"
+    ]
+  },
+  {
+    "id": "H-030",
+    "title": "Parkiert: UTC-Kalendersegmente bei realen Ausführungskosten (Issue #87)",
+    "idea": "Zwei feste, rein deskriptive Vergleiche öffentlicher Kosten-Snapshots: Samstag/Sonntag gegen Montag–Freitag; UTC 00:00–07:59 gegen 08:00–23:59.",
+    "economicRationale": "Die Liquidität kann nach Wochentag/Uhrzeit variieren, ohne dass die Preisrichtung vorhersagbar wäre.",
+    "data": "Nur 2020–2023 publizierte oder archivierte öffentliche Spread-/Depth-Belege (#17/#69); 2024+ gesperrt; keine Live-/Paper-Order-Regel.",
+    "metric": "Unabhängige zeitliche Coverage, Spread-/Depth-Verteilungen, gepaarter Kostenstress, Segment-Fallzahlen",
+    "successThreshold": "Nur deskriptiv belastbare Coverage und robust unterscheidbare echte Kostenverteilungen rechtfertigen später separat vorregistrierte Arbeit.",
+    "killCriterion": "Coverage-/Beobachtungslücken dominieren oder Kostenstress ist nicht robust; keine profitable Strategie ableiten.",
+    "status": "parked",
+    "variantsTested": 0,
+    "plannedVariants": [
+      {
+        "id": "weekend-vs-weekday",
+        "utcDays": [
+          0,
+          6
+        ]
+      },
+      {
+        "id": "overnight-vs-rest",
+        "utcHourFrom": 0,
+        "utcHourToExclusive": 8
+      }
+    ],
+    "result": "Vorregistriert, keine Datenläufe, keine Validierung/Profitabilitätskennzahlen; Forschungsfreigabe nach Roadmap #32 weiterhin gesperrt.",
+    "evidence": [
+      "apps/server/src/recorder/calendar-cost-study.ts",
+      "apps/server/test/recorder-calendar-cost-study.test.ts"
+    ]
+  },
+  {
+    "id": "H-031",
+    "title": "Parkiert: Quote-Volumen bestätigt H-025-Tagessignal (Issue #88)",
+    "idea": "Zwei feste Spot-Einstiegsfilter prüfen das letzte abgeschlossene Tages-Quote-Volumen gegen den Median der vorherigen 20 beziehungsweise 60 geschlossenen Tage.",
+    "economicRationale": "Überdurchschnittliches vergangenes Quote-Volumen könnte Trend-Einstiege bestätigen, kann aber auch rentable Signale herausfiltern.",
+    "data": "Nur 2020–2023 vollständig geschlossene 1d-Quote-Volumenkerzen mit historischer Coverage/PIT-Universum; 2024+ gesperrt.",
+    "metric": "Gepaartes Netto-Delta gegen unveränderte H-025, abgelehnte Trades, Gebühren, 2x-Kostenstress, Marktregime/Observation Coverage",
+    "successThreshold": "Positive kostenrobuste Nettodifferenz unter unverändertem H-025-Broker/RiskEngine und Brutto-Edge >= 2x Roundtrip-Kosten.",
+    "killCriterion": "Keine positive Nettodifferenz unter Kostenstress, unvollständige Historie oder Brutto-Edge < 2x Roundtrip-Kosten.",
+    "status": "parked",
+    "variantsTested": 0,
+    "plannedVariants": [
+      {
+        "id": "quote-volume-median-20",
+        "priorDays": 20
+      },
+      {
+        "id": "quote-volume-median-60",
+        "priorDays": 60
+      }
+    ],
+    "result": "Vorregistriert, keine Datenläufe, keine Validierung/Profitabilitätskennzahlen; Forschungsfreigabe nach Roadmap #32 weiterhin gesperrt.",
+    "evidence": [
+      "apps/server/src/strategy/trend-volume-gate.ts",
+      "apps/server/test/trend-volume-gate.test.ts"
+    ]
+  }
+]

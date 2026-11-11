@@ -1,0 +1,1163 @@
+{
+  "verifiedAt": "2026-11-01T14:18:11.153Z",
+  "factsHash": "3262b4fb3be9b47e7edf0954e93d52f85fda6dfedf7159178c440fa6300a7414",
+  "allRawLabelsAndCostsVerified": 7280,
+  "allFeatureVectorsExactlyMatchVerifiedPastOnlyCorpus": true,
+  "classes": {
+    "stop": 2518,
+    "target": 545,
+    "timeout": 4216,
+    "ambiguous": 1
+  },
+  "decisionClocks": 364,
+  "assetsPerClock": 20,
+  "independentSamples": null,
+  "entryBarEvents": 57,
+  "positiveEndpointAfterStop": 335,
+  "negativeEndpointAfterTarget": 30,
+  "unresolvedCases": [
+    {
+      "pair": "ADA/EUR",
+      "decisionAt": 1760140800000,
+      "entryAt": 1760141700000,
+      "eventBarTs": 1760141700000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.5582158952105735,
+      "targetPrice": 0.5918005780128,
+      "eventCandle": {
+        "pair": "ADA/EUR",
+        "interval": 15,
+        "ts": 1760141700000,
+        "open": 0.5683,
+        "high": 0.5683,
+        "low": 0.5418,
+        "close": 0.5614,
+        "volume": 507885.5
+      }
+    },
+    {
+      "pair": "APT/EUR",
+      "decisionAt": 1760140800000,
+      "entryAt": 1760141700000,
+      "eventBarTs": 1760141700000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 3.1834906147764714,
+      "targetPrice": 3.375023180256,
+      "eventCandle": {
+        "pair": "APT/EUR",
+        "interval": 15,
+        "ts": 1760141700000,
+        "open": 3.241,
+        "high": 3.241,
+        "low": 3.161,
+        "close": 3.216,
+        "volume": 912.67
+      }
+    },
+    {
+      "pair": "AVAX/EUR",
+      "decisionAt": 1760140800000,
+      "entryAt": 1760141700000,
+      "eventBarTs": 1760141700000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 17.916343354990076,
+      "targetPrice": 18.99426806784,
+      "eventCandle": {
+        "pair": "AVAX/EUR",
+        "interval": 15,
+        "ts": 1760141700000,
+        "open": 18.24,
+        "high": 18.46,
+        "low": 17.81,
+        "close": 18.46,
+        "volume": 1899.8
+      }
+    },
+    {
+      "pair": "BCH/EUR",
+      "decisionAt": 1760140800000,
+      "entryAt": 1760141700000,
+      "eventBarTs": 1760141700000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 440.44344081017266,
+      "targetPrice": 466.94242333439996,
+      "eventCandle": {
+        "pair": "BCH/EUR",
+        "interval": 15,
+        "ts": 1760141700000,
+        "open": 448.4,
+        "high": 448.4,
+        "low": 439.6,
+        "close": 444,
+        "volume": 12.704
+      }
+    },
+    {
+      "pair": "BNB/EUR",
+      "decisionAt": 1760140800000,
+      "entryAt": 1760141700000,
+      "eventBarTs": 1760141700000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 953.0924956568211,
+      "targetPrice": 1010.4346627689598,
+      "eventCandle": {
+        "pair": "BNB/EUR",
+        "interval": 15,
+        "ts": 1760141700000,
+        "open": 970.31,
+        "high": 973.45,
+        "low": 942.5,
+        "close": 970.39,
+        "volume": 217.371
+      }
+    },
+    {
+      "pair": "DOGE/EUR",
+      "decisionAt": 1760140800000,
+      "entryAt": 1760141700000,
+      "eventBarTs": 1760141700000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.16865329791950637,
+      "targetPrice": 0.1788002098272,
+      "eventCandle": {
+        "pair": "DOGE/EUR",
+        "interval": 15,
+        "ts": 1760141700000,
+        "open": 0.1717,
+        "high": 0.17185,
+        "low": 0.16514,
+        "close": 0.16992,
+        "volume": 1214395
+      }
+    },
+    {
+      "pair": "DOT/EUR",
+      "decisionAt": 1760140800000,
+      "entryAt": 1760141700000,
+      "eventBarTs": 1760141700000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 2.5695808232814716,
+      "targetPrice": 2.724177920256,
+      "eventCandle": {
+        "pair": "DOT/EUR",
+        "interval": 15,
+        "ts": 1760141700000,
+        "open": 2.616,
+        "high": 2.617,
+        "low": 2.523,
+        "close": 2.603,
+        "volume": 4553.01
+      }
+    },
+    {
+      "pair": "LINK/EUR",
+      "decisionAt": 1760140800000,
+      "entryAt": 1760141700000,
+      "eventBarTs": 1760141700000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 14.979398912477995,
+      "targetPrice": 15.880624343999997,
+      "eventCandle": {
+        "pair": "LINK/EUR",
+        "interval": 15,
+        "ts": 1760141700000,
+        "open": 15.25,
+        "high": 15.27,
+        "low": 14.75,
+        "close": 15.22,
+        "volume": 8177.02
+      }
+    },
+    {
+      "pair": "LTC/EUR",
+      "decisionAt": 1760140800000,
+      "entryAt": 1760141700000,
+      "eventBarTs": 1760141700000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 83.8944564665407,
+      "targetPrice": 88.94190985056,
+      "eventCandle": {
+        "pair": "LTC/EUR",
+        "interval": 15,
+        "ts": 1760141700000,
+        "open": 85.41,
+        "high": 85.41,
+        "low": 82.83,
+        "close": 85.05,
+        "volume": 441.256
+      }
+    },
+    {
+      "pair": "PEPE/EUR",
+      "decisionAt": 1760140800000,
+      "entryAt": 1760141700000,
+      "eventBarTs": 1760141700000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.000005873888885024159,
+      "targetPrice": 0.00000622728744768,
+      "eventCandle": {
+        "pair": "PEPE/EUR",
+        "interval": 15,
+        "ts": 1760141700000,
+        "open": 0.00000598,
+        "high": 0.000006,
+        "low": 0.00000579,
+        "close": 0.00000596,
+        "volume": 6922040696
+      }
+    },
+    {
+      "pair": "SHIB/EUR",
+      "decisionAt": 1760140800000,
+      "entryAt": 1760141700000,
+      "eventBarTs": 1760141700000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.000008516156627618638,
+      "targetPrice": 0.00000902852544672,
+      "eventCandle": {
+        "pair": "SHIB/EUR",
+        "interval": 15,
+        "ts": 1760141700000,
+        "open": 0.00000867,
+        "high": 0.00000899,
+        "low": 0.00000848,
+        "close": 0.0000086,
+        "volume": 1018715043
+      }
+    },
+    {
+      "pair": "SOL/EUR",
+      "decisionAt": 1760140800000,
+      "entryAt": 1760141700000,
+      "eventBarTs": 1760141700000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 162.42579699458108,
+      "targetPrice": 172.19803550976,
+      "eventCandle": {
+        "pair": "SOL/EUR",
+        "interval": 15,
+        "ts": 1760141700000,
+        "open": 165.36,
+        "high": 165.55,
+        "low": 161.29,
+        "close": 164.04,
+        "volume": 6510.365
+      }
+    },
+    {
+      "pair": "SUI/EUR",
+      "decisionAt": 1760140800000,
+      "entryAt": 1760141700000,
+      "eventBarTs": 1760141700000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 2.258795130435043,
+      "targetPrice": 2.3946940158335996,
+      "eventCandle": {
+        "pair": "SUI/EUR",
+        "interval": 15,
+        "ts": 1760141700000,
+        "open": 2.2996,
+        "high": 2.2996,
+        "low": 2.2181,
+        "close": 2.2924,
+        "volume": 43201.1
+      }
+    },
+    {
+      "pair": "XLM/EUR",
+      "decisionAt": 1760140800000,
+      "entryAt": 1760141700000,
+      "eventBarTs": 1760141700000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.2734599775235327,
+      "targetPrice": 0.28991251261439993,
+      "eventCandle": {
+        "pair": "XLM/EUR",
+        "interval": 15,
+        "ts": 1760141700000,
+        "open": 0.2784,
+        "high": 0.2785,
+        "low": 0.2724,
+        "close": 0.2771,
+        "volume": 29843
+      }
+    },
+    {
+      "pair": "XRP/EUR",
+      "decisionAt": 1760140800000,
+      "entryAt": 1760141700000,
+      "eventBarTs": 1760141700000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 2.0304206879989026,
+      "targetPrice": 2.1525795791136,
+      "eventCandle": {
+        "pair": "XRP/EUR",
+        "interval": 15,
+        "ts": 1760141700000,
+        "open": 2.0671,
+        "high": 2.0754,
+        "low": 2.0119,
+        "close": 2.0735,
+        "volume": 430937
+      }
+    },
+    {
+      "pair": "BCH/EUR",
+      "decisionAt": 1761825600000,
+      "entryAt": 1761826500000,
+      "eventBarTs": 1761826500000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 478.35850953290384,
+      "targetPrice": 507.1386265919999,
+      "eventCandle": {
+        "pair": "BCH/EUR",
+        "interval": 15,
+        "ts": 1761826500000,
+        "open": 487,
+        "high": 487,
+        "low": 471.6,
+        "close": 472.8,
+        "volume": 25.06
+      }
+    },
+    {
+      "pair": "ICP/EUR",
+      "decisionAt": 1762387200000,
+      "entryAt": 1762388100000,
+      "eventBarTs": 1762388100000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 5.028166756260646,
+      "targetPrice": 5.330683017503999,
+      "eventCandle": {
+        "pair": "ICP/EUR",
+        "interval": 15,
+        "ts": 1762388100000,
+        "open": 5.119,
+        "high": 5.119,
+        "low": 4.871,
+        "close": 4.977,
+        "volume": 1651.22
+      }
+    },
+    {
+      "pair": "ICP/EUR",
+      "decisionAt": 1762430400000,
+      "entryAt": 1762431300000,
+      "eventBarTs": 1762431300000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 5.45741248247395,
+      "targetPrice": 5.785754023296,
+      "eventCandle": {
+        "pair": "ICP/EUR",
+        "interval": 15,
+        "ts": 1762431300000,
+        "open": 5.556,
+        "high": 5.642,
+        "low": 5.431,
+        "close": 5.518,
+        "volume": 3030.29
+      }
+    },
+    {
+      "pair": "ICP/EUR",
+      "decisionAt": 1762560000000,
+      "entryAt": 1762560900000,
+      "eventBarTs": 1762560900000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 7.106619746346119,
+      "targetPrice": 7.53418472976,
+      "eventCandle": {
+        "pair": "ICP/EUR",
+        "interval": 15,
+        "ts": 1762560900000,
+        "open": 7.235,
+        "high": 7.238,
+        "low": 6.828,
+        "close": 6.958,
+        "volume": 1131.83
+      }
+    },
+    {
+      "pair": "LTC/EUR",
+      "decisionAt": 1762646400000,
+      "entryAt": 1762647300000,
+      "eventBarTs": 1762647300000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 91.77214691100454,
+      "targetPrice": 97.29355622687999,
+      "eventCandle": {
+        "pair": "LTC/EUR",
+        "interval": 15,
+        "ts": 1762647300000,
+        "open": 93.43,
+        "high": 93.43,
+        "low": 90.64,
+        "close": 90.94,
+        "volume": 978.295
+      }
+    },
+    {
+      "pair": "ICP/EUR",
+      "decisionAt": 1762689600000,
+      "entryAt": 1762690500000,
+      "eventBarTs": 1762690500000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 6.103736710959888,
+      "targetPrice": 6.470963913024,
+      "eventCandle": {
+        "pair": "ICP/EUR",
+        "interval": 15,
+        "ts": 1762690500000,
+        "open": 6.214,
+        "high": 6.214,
+        "low": 6.093,
+        "close": 6.157,
+        "volume": 1163.88
+      }
+    },
+    {
+      "pair": "WIN/EUR",
+      "decisionAt": 1762819200000,
+      "entryAt": 1762820100000,
+      "eventBarTs": 1762820100000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.00003231621142429679,
+      "targetPrice": 0.000034260494486399995,
+      "eventCandle": {
+        "pair": "WIN/EUR",
+        "interval": 15,
+        "ts": 1762820100000,
+        "open": 0.0000329,
+        "high": 0.0000329,
+        "low": 0.00003206,
+        "close": 0.00003281,
+        "volume": 235631847
+      }
+    },
+    {
+      "pair": "ICP/EUR",
+      "decisionAt": 1762992000000,
+      "entryAt": 1762992900000,
+      "eventBarTs": 1762992900000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 5.459376993806734,
+      "targetPrice": 5.787836728127998,
+      "eventCandle": {
+        "pair": "ICP/EUR",
+        "interval": 15,
+        "ts": 1762992900000,
+        "open": 5.558,
+        "high": 5.571,
+        "low": 5.436,
+        "close": 5.436,
+        "volume": 45.02
+      }
+    },
+    {
+      "pair": "ADA/EUR",
+      "decisionAt": 1763726400000,
+      "entryAt": 1763727300000,
+      "eventBarTs": 1763727300000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.33838707707204385,
+      "targetPrice": 0.3587459073119999,
+      "eventCandle": {
+        "pair": "ADA/EUR",
+        "interval": 15,
+        "ts": 1763727300000,
+        "open": 0.3445,
+        "high": 0.3445,
+        "low": 0.3362,
+        "close": 0.338,
+        "volume": 197096.1
+      }
+    },
+    {
+      "pair": "AVAX/EUR",
+      "decisionAt": 1763726400000,
+      "entryAt": 1763727300000,
+      "eventBarTs": 1763727300000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 10.981618350262558,
+      "targetPrice": 11.642320010879999,
+      "eventCandle": {
+        "pair": "AVAX/EUR",
+        "interval": 15,
+        "ts": 1763727300000,
+        "open": 11.18,
+        "high": 11.18,
+        "low": 10.98,
+        "close": 11.01,
+        "volume": 2083.38
+      }
+    },
+    {
+      "pair": "BNB/EUR",
+      "decisionAt": 1763726400000,
+      "entryAt": 1763727300000,
+      "eventBarTs": 1763727300000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 687.6575469277112,
+      "targetPrice": 729.0299993932799,
+      "eventCandle": {
+        "pair": "BNB/EUR",
+        "interval": 15,
+        "ts": 1763727300000,
+        "open": 700.08,
+        "high": 700.08,
+        "low": 687.04,
+        "close": 689.91,
+        "volume": 253.615
+      }
+    },
+    {
+      "pair": "BTC/EUR",
+      "decisionAt": 1763726400000,
+      "entryAt": 1763727300000,
+      "eventBarTs": 1763727300000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 70141.79665581966,
+      "targetPrice": 74361.83053890237,
+      "eventCandle": {
+        "pair": "BTC/EUR",
+        "interval": 15,
+        "ts": 1763727300000,
+        "open": 71408.9,
+        "high": 71420.18,
+        "low": 70010.02,
+        "close": 70250.38,
+        "volume": 29.61121
+      }
+    },
+    {
+      "pair": "DOGE/EUR",
+      "decisionAt": 1763726400000,
+      "entryAt": 1763727300000,
+      "eventBarTs": 1763727300000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.11653481226074684,
+      "targetPrice": 0.12354605063423998,
+      "eventCandle": {
+        "pair": "DOGE/EUR",
+        "interval": 15,
+        "ts": 1763727300000,
+        "open": 0.11864,
+        "high": 0.11864,
+        "low": 0.11568,
+        "close": 0.11615,
+        "volume": 1228441
+      }
+    },
+    {
+      "pair": "ETH/EUR",
+      "decisionAt": 1763726400000,
+      "entryAt": 1763727300000,
+      "eventBarTs": 1763727300000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 2289.1075402999,
+      "targetPrice": 2426.83015139136,
+      "eventCandle": {
+        "pair": "ETH/EUR",
+        "interval": 15,
+        "ts": 1763727300000,
+        "open": 2330.46,
+        "high": 2331.12,
+        "low": 2278.2,
+        "close": 2289.78,
+        "volume": 558.9595
+      }
+    },
+    {
+      "pair": "LINK/EUR",
+      "decisionAt": 1763726400000,
+      "entryAt": 1763727300000,
+      "eventBarTs": 1763727300000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 10.097588250509757,
+      "targetPrice": 10.705102836479998,
+      "eventCandle": {
+        "pair": "LINK/EUR",
+        "interval": 15,
+        "ts": 1763727300000,
+        "open": 10.28,
+        "high": 10.28,
+        "low": 10.09,
+        "close": 10.1,
+        "volume": 2304.2
+      }
+    },
+    {
+      "pair": "LTC/EUR",
+      "decisionAt": 1763726400000,
+      "entryAt": 1763727300000,
+      "eventBarTs": 1763727300000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 69.66157186052062,
+      "targetPrice": 73.85271334272,
+      "eventCandle": {
+        "pair": "LTC/EUR",
+        "interval": 15,
+        "ts": 1763727300000,
+        "open": 70.92,
+        "high": 70.92,
+        "low": 69.54,
+        "close": 69.65,
+        "volume": 370.684
+      }
+    },
+    {
+      "pair": "PEPE/EUR",
+      "decisionAt": 1763726400000,
+      "entryAt": 1763727300000,
+      "eventBarTs": 1763727300000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.0000035066527290194396,
+      "targetPrice": 0.00000371762812512,
+      "eventCandle": {
+        "pair": "PEPE/EUR",
+        "interval": 15,
+        "ts": 1763727300000,
+        "open": 0.00000357,
+        "high": 0.00000358,
+        "low": 0.00000349,
+        "close": 0.0000035,
+        "volume": 12892646717
+      }
+    },
+    {
+      "pair": "SHIB/EUR",
+      "decisionAt": 1763726400000,
+      "entryAt": 1763727300000,
+      "eventBarTs": 1763727300000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.000006571290408162478,
+      "targetPrice": 0.0000069666476630399996,
+      "eventCandle": {
+        "pair": "SHIB/EUR",
+        "interval": 15,
+        "ts": 1763727300000,
+        "open": 0.00000669,
+        "high": 0.00000669,
+        "low": 0.00000655,
+        "close": 0.00000657,
+        "volume": 1566411425
+      }
+    },
+    {
+      "pair": "SOL/EUR",
+      "decisionAt": 1763726400000,
+      "entryAt": 1763727300000,
+      "eventBarTs": 1763727300000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 105.77911271375444,
+      "targetPrice": 112.14324167903999,
+      "eventCandle": {
+        "pair": "SOL/EUR",
+        "interval": 15,
+        "ts": 1763727300000,
+        "open": 107.69,
+        "high": 107.69,
+        "low": 105.62,
+        "close": 106.1,
+        "volume": 5017.206
+      }
+    },
+    {
+      "pair": "XRP/EUR",
+      "decisionAt": 1763726400000,
+      "entryAt": 1763727300000,
+      "eventBarTs": 1763727300000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 1.5929240141879057,
+      "targetPrice": 1.6887612130271998,
+      "eventCandle": {
+        "pair": "XRP/EUR",
+        "interval": 15,
+        "ts": 1763727300000,
+        "open": 1.6217,
+        "high": 1.6217,
+        "low": 1.5803,
+        "close": 1.5862,
+        "volume": 378781.2
+      }
+    },
+    {
+      "pair": "DOT/EUR",
+      "decisionAt": 1764547200000,
+      "entryAt": 1764548100000,
+      "eventBarTs": 1764548100000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 1.8152084714924155,
+      "targetPrice": 1.9244192647679998,
+      "eventCandle": {
+        "pair": "DOT/EUR",
+        "interval": 15,
+        "ts": 1764548100000,
+        "open": 1.848,
+        "high": 1.851,
+        "low": 1.81,
+        "close": 1.812,
+        "volume": 5246.31
+      }
+    },
+    {
+      "pair": "ICP/EUR",
+      "decisionAt": 1764547200000,
+      "entryAt": 1764548100000,
+      "eventBarTs": 1764548100000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 3.154022944784711,
+      "targetPrice": 3.3437826077759993,
+      "eventCandle": {
+        "pair": "ICP/EUR",
+        "interval": 15,
+        "ts": 1764548100000,
+        "open": 3.211,
+        "high": 3.212,
+        "low": 3.14,
+        "close": 3.14,
+        "volume": 697.8
+      }
+    },
+    {
+      "pair": "PEPE/EUR",
+      "decisionAt": 1764547200000,
+      "entryAt": 1764548100000,
+      "eventBarTs": 1764548100000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.0000037325715322895994,
+      "targetPrice": 0.0000039571391808,
+      "eventCandle": {
+        "pair": "PEPE/EUR",
+        "interval": 15,
+        "ts": 1764548100000,
+        "open": 0.0000038,
+        "high": 0.0000038,
+        "low": 0.00000373,
+        "close": 0.00000373,
+        "volume": 4512517771
+      }
+    },
+    {
+      "pair": "WIN/EUR",
+      "decisionAt": 1765022400000,
+      "entryAt": 1765023300000,
+      "eventBarTs": 1765023300000,
+      "outcome": "target",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.00002770943234891831,
+      "targetPrice": 0.000029376551655359995,
+      "eventCandle": {
+        "pair": "WIN/EUR",
+        "interval": 15,
+        "ts": 1765023300000,
+        "open": 0.00002821,
+        "high": 0.0000295,
+        "low": 0.00002814,
+        "close": 0.00002857,
+        "volume": 488885192
+      }
+    },
+    {
+      "pair": "ADA/EUR",
+      "decisionAt": 1770336000000,
+      "entryAt": 1770336900000,
+      "eventBarTs": 1770336900000,
+      "outcome": "ambiguous",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.19173630607971834,
+      "targetPrice": 0.20327199160319998,
+      "eventCandle": {
+        "pair": "ADA/EUR",
+        "interval": 15,
+        "ts": 1770336900000,
+        "open": 0.1952,
+        "high": 0.2092,
+        "low": 0.1878,
+        "close": 0.1971,
+        "volume": 831750
+      }
+    },
+    {
+      "pair": "APT/EUR",
+      "decisionAt": 1770336000000,
+      "entryAt": 1770336900000,
+      "eventBarTs": 1770336900000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.7848222774472079,
+      "targetPrice": 0.8320405803840001,
+      "eventCandle": {
+        "pair": "APT/EUR",
+        "interval": 15,
+        "ts": 1770336900000,
+        "open": 0.799,
+        "high": 0.809,
+        "low": 0.773,
+        "close": 0.801,
+        "volume": 1287.48
+      }
+    },
+    {
+      "pair": "AVAX/EUR",
+      "decisionAt": 1770336000000,
+      "entryAt": 1770336900000,
+      "eventBarTs": 1770336900000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 6.502532511515039,
+      "targetPrice": 6.89375299392,
+      "eventCandle": {
+        "pair": "AVAX/EUR",
+        "interval": 15,
+        "ts": 1770336900000,
+        "open": 6.62,
+        "high": 6.76,
+        "low": 6.42,
+        "close": 6.66,
+        "volume": 3588.5
+      }
+    },
+    {
+      "pair": "BCH/EUR",
+      "decisionAt": 1770336000000,
+      "entryAt": 1770336900000,
+      "eventBarTs": 1770336900000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 361.17540853233834,
+      "targetPrice": 382.90528336319994,
+      "eventCandle": {
+        "pair": "BCH/EUR",
+        "interval": 15,
+        "ts": 1770336900000,
+        "open": 367.7,
+        "high": 371.6,
+        "low": 360.9,
+        "close": 371.6,
+        "volume": 12.281
+      }
+    },
+    {
+      "pair": "DOGE/EUR",
+      "decisionAt": 1770336000000,
+      "entryAt": 1770336900000,
+      "eventBarTs": 1770336900000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.06870878386412038,
+      "targetPrice": 0.07284260149919998,
+      "eventCandle": {
+        "pair": "DOGE/EUR",
+        "interval": 15,
+        "ts": 1770336900000,
+        "open": 0.06995,
+        "high": 0.072,
+        "low": 0.06813,
+        "close": 0.0712,
+        "volume": 542995
+      }
+    },
+    {
+      "pair": "DOT/EUR",
+      "decisionAt": 1770336000000,
+      "entryAt": 1770336900000,
+      "eventBarTs": 1770336900000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.9753798767272556,
+      "targetPrice": 1.0340629490879998,
+      "eventCandle": {
+        "pair": "DOT/EUR",
+        "interval": 15,
+        "ts": 1770336900000,
+        "open": 0.993,
+        "high": 0.996,
+        "low": 0.94,
+        "close": 0.989,
+        "volume": 21133.83
+      }
+    },
+    {
+      "pair": "ICP/EUR",
+      "decisionAt": 1770336000000,
+      "entryAt": 1770336900000,
+      "eventBarTs": 1770336900000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 1.7631489211736395,
+      "targetPrice": 1.86922758672,
+      "eventCandle": {
+        "pair": "ICP/EUR",
+        "interval": 15,
+        "ts": 1770336900000,
+        "open": 1.795,
+        "high": 1.795,
+        "low": 1.7,
+        "close": 1.789,
+        "volume": 6305.28
+      }
+    },
+    {
+      "pair": "LINK/EUR",
+      "decisionAt": 1770336000000,
+      "entryAt": 1770336900000,
+      "eventBarTs": 1770336900000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 6.178388141605679,
+      "targetPrice": 6.5501066966399994,
+      "eventCandle": {
+        "pair": "LINK/EUR",
+        "interval": 15,
+        "ts": 1770336900000,
+        "open": 6.29,
+        "high": 6.44,
+        "low": 6.09,
+        "close": 6.37,
+        "volume": 10713.88
+      }
+    },
+    {
+      "pair": "LTC/EUR",
+      "decisionAt": 1770336000000,
+      "entryAt": 1770336900000,
+      "eventBarTs": 1770336900000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 39.172355975712954,
+      "targetPrice": 41.52913435008,
+      "eventCandle": {
+        "pair": "LTC/EUR",
+        "interval": 15,
+        "ts": 1770336900000,
+        "open": 39.88,
+        "high": 40.74,
+        "low": 38.36,
+        "close": 40.14,
+        "volume": 3235.221
+      }
+    },
+    {
+      "pair": "PEPE/EUR",
+      "decisionAt": 1770336000000,
+      "entryAt": 1770336900000,
+      "eventBarTs": 1770336900000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.000002671735412586239,
+      "targetPrice": 0.0000028324785715199993,
+      "eventCandle": {
+        "pair": "PEPE/EUR",
+        "interval": 15,
+        "ts": 1770336900000,
+        "open": 0.00000272,
+        "high": 0.00000279,
+        "low": 0.00000265,
+        "close": 0.00000277,
+        "volume": 10700265307
+      }
+    },
+    {
+      "pair": "SHIB/EUR",
+      "decisionAt": 1770336000000,
+      "entryAt": 1770336900000,
+      "eventBarTs": 1770336900000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.000004371037715444398,
+      "targetPrice": 0.000004634018251199999,
+      "eventCandle": {
+        "pair": "SHIB/EUR",
+        "interval": 15,
+        "ts": 1770336900000,
+        "open": 0.00000445,
+        "high": 0.00000456,
+        "low": 0.00000433,
+        "close": 0.00000452,
+        "volume": 2972614281
+      }
+    },
+    {
+      "pair": "SOL/EUR",
+      "decisionAt": 1770336000000,
+      "entryAt": 1770336900000,
+      "eventBarTs": 1770336900000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 60.379255813116224,
+      "targetPrice": 64.01193301152,
+      "eventCandle": {
+        "pair": "SOL/EUR",
+        "interval": 15,
+        "ts": 1770336900000,
+        "open": 61.47,
+        "high": 62.39,
+        "low": 57.41,
+        "close": 60.54,
+        "volume": 18227.217
+      }
+    },
+    {
+      "pair": "SUI/EUR",
+      "decisionAt": 1770336000000,
+      "entryAt": 1770336900000,
+      "eventBarTs": 1770336900000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.6857126807082551,
+      "targetPrice": 0.7269681216096,
+      "eventCandle": {
+        "pair": "SUI/EUR",
+        "interval": 15,
+        "ts": 1770336900000,
+        "open": 0.6981,
+        "high": 0.7177,
+        "low": 0.6704,
+        "close": 0.7076,
+        "volume": 214254.6
+      }
+    },
+    {
+      "pair": "XLM/EUR",
+      "decisionAt": 1770336000000,
+      "entryAt": 1770336900000,
+      "eventBarTs": 1770336900000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.11610261976753437,
+      "targetPrice": 0.12308785557119999,
+      "eventCandle": {
+        "pair": "XLM/EUR",
+        "interval": 15,
+        "ts": 1770336900000,
+        "open": 0.1182,
+        "high": 0.1206,
+        "low": 0.1161,
+        "close": 0.1203,
+        "volume": 190647
+      }
+    },
+    {
+      "pair": "XRP/EUR",
+      "decisionAt": 1770336000000,
+      "entryAt": 1770336900000,
+      "eventBarTs": 1770336900000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.9563241167992509,
+      "targetPrice": 1.0138607122176,
+      "eventCandle": {
+        "pair": "XRP/EUR",
+        "interval": 15,
+        "ts": 1770336900000,
+        "open": 0.9736,
+        "high": 0.9985,
+        "low": 0.951,
+        "close": 0.9811,
+        "volume": 654567.4
+      }
+    },
+    {
+      "pair": "XLM/EUR",
+      "decisionAt": 1772020800000,
+      "entryAt": 1772021700000,
+      "eventBarTs": 1772021700000,
+      "outcome": "target",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.12946129683046553,
+      "targetPrice": 0.13725024842879996,
+      "eventCandle": {
+        "pair": "XLM/EUR",
+        "interval": 15,
+        "ts": 1772021700000,
+        "open": 0.1318,
+        "high": 0.1448,
+        "low": 0.1318,
+        "close": 0.1327,
+        "volume": 170886
+      }
+    },
+    {
+      "pair": "ICP/EUR",
+      "decisionAt": 1773273600000,
+      "entryAt": 1773274500000,
+      "eventBarTs": 1773274500000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 2.267046078032735,
+      "targetPrice": 2.4034413761279994,
+      "eventCandle": {
+        "pair": "ICP/EUR",
+        "interval": 15,
+        "ts": 1773274500000,
+        "open": 2.308,
+        "high": 2.312,
+        "low": 2.264,
+        "close": 2.269,
+        "volume": 602.4
+      }
+    },
+    {
+      "pair": "SUI/EUR",
+      "decisionAt": 1773705600000,
+      "entryAt": 1773706500000,
+      "eventBarTs": 1773706500000,
+      "outcome": "stop",
+      "entryBarTimingUnknownRelativeToDelayedPaperDecision": true,
+      "stopPrice": 0.922436296308727,
+      "targetPrice": 0.9779340538656,
+      "eventCandle": {
+        "pair": "SUI/EUR",
+        "interval": 15,
+        "ts": 1773706500000,
+        "open": 0.9391,
+        "high": 0.9394,
+        "low": 0.9214,
+        "close": 0.9242,
+        "volume": 19654.5
+      }
+    }
+  ],
+  "modelFitted": false,
+  "profitabilityEstablished": false,
+  "julyLoaded": false
+}

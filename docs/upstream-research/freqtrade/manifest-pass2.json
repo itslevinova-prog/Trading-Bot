@@ -1,0 +1,14 @@
+[
+  {
+    "path": "freqtrade/freqai/base_models/BaseRegressionModel.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/freqai/base_models/BaseRegressionModel.py",
+    "sha256": "b91bf3a0cbf096c204f4c5b2b15d7d79777c1a890fe54345d663610a9198475d",
+    "bytes": 5325
+  },
+  {
+    "path": "freqtrade/freqai/base_models/BaseClassifierModel.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/freqai/base_models/BaseClassifierModel.py",
+    "sha256": "d557ca4c2a1d0b5847f01363bb8a8a20dd27bc13114ed6c6aa37739d52af6b5e",
+    "bytes": 4970
+  }
+]

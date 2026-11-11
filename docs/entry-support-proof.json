@@ -1,0 +1,67 @@
+{
+  "version": "entry-support-proof-v2",
+  "verifiedAt": "2026-10-31T21:20:41.466571+00:00",
+  "buildId": "16e4bae32dfc9256d21da78e2c30f984dc5ab9ad375da3761d3f7bf2c241d515",
+  "protocol": "docs/entry-support-protocol-v2.json",
+  "report": {
+    "path": "docs/entry-support-study-a514d2783dd8ae6f.json",
+    "hash": "a514d2783dd8ae6f4545167b8b8df6989cc18a906bc0528f552d43a21818150a",
+    "protocolHash": "2f3039bd0947c5767799bf9e94d12603066a97d84418ea286e1e1ec058c07931",
+    "buildId": "16e4bae32dfc9256d21da78e2c30f984dc5ab9ad375da3761d3f7bf2c241d515"
+  },
+  "firstComparisonPreserved": "docs/entry-support-study-87806beef743b4a9.json",
+  "allFullEconomicResultsEqualFirstComparison": true,
+  "fullOriginalStructureExitBaselineExactlyMatched": true,
+  "tests": {
+    "main": 968,
+    "offline": 15,
+    "newThisPhase": 23,
+    "typechecksAndBuildPassed": true,
+    "log": "data/verify-entry-support-final-2026-10-31.log"
+  },
+  "sourceAttributionRepair": "Observer copies pre-provider context AND all original actions; explicit order/fill/decision/evidence IDs. Duplicate proposals cannot be silently converted into a unique source. Modelled receipt/capture availability remains distinguished from actual materialization.",
+  "results": [
+    {
+      "scenario": "base",
+      "returnPct": -1.8879906204267605,
+      "closedTrades": 42,
+      "fees": 11.422114771548951,
+      "validatedOriginalEntryObservations": 1146,
+      "additionalExits": 0,
+      "sharedDecisionTimes": 2593
+    },
+    {
+      "scenario": "double-fee-adaptive",
+      "returnPct": 0.3110021169693944,
+      "closedTrades": 3,
+      "fees": 1.7973677872351488,
+      "validatedOriginalEntryObservations": 11,
+      "additionalExits": 0,
+      "sharedDecisionTimes": 2593
+    }
+  ],
+  "noParameterSearch": true,
+  "independentOutOfSample": false,
+  "profitabilityEstablished": false,
+  "newPolicyEnabled": false,
+  "frozenV3": {
+    "sourceAndRuntimeFilesIntact": true,
+    "buildId": "cc12379e164c46d708a93bf730899eca00cbdc8378051ff580b05f49f03fc210",
+    "runId": "197a613c-3df9-4789-aa1c-424c3176bfc0",
+    "healthProof": "data/verify-v3-after-entry-support-2026-10-31.json",
+    "stillCollecting": true,
+    "insufficientSample": true,
+    "notUpgradedOrRestarted": true
+  },
+  "oss": {
+    "review": "docs/upstream-research/REVIEW-PASS10.md",
+    "selectedFiles": 43,
+    "licenceFiles": 5,
+    "reviewIncomplete": true
+  },
+  "realOrders": 0,
+  "paidCalls": 0,
+  "privateExchangeCalls": 0,
+  "externalAiCalls": 0,
+  "next": "Do not activate a zero-increment exit on consumed history. Prioritize broader free preregistered regime/cost data and useful strategy generalization/causal learning; new temporal validation must distinguish unseen data from strict historical deployability."
+}

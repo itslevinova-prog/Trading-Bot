@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "verifiedAt": "2026-10-31T10:13:36.029Z",
+  "verifierHash": "31f4d12bee5d7ea416800c1337d7c5a22df86edd714c4764ce3cf4e601159e95",
+  "buildId": "799e5544485b1371cb54d3f9544003c3077788ea187e8313c566354e8c1c594a",
+  "strategyVersion": "09702015f990fa3b50511efdfc9157ec90368ad9d349b7fa7281345fb6b2945d",
+  "baselineBuildId": "319b229e1e0f42a1131f7035b079aeab270a4fa1072be9b47cdd002d2228daec",
+  "baselineVerifiedAt": "2026-10-28T21:03:00.022Z",
+  "datasetId": "d0066ea5e97b107a22c148dbfcfcd245a2ea37e555684a5af36a382134b14926",
+  "dataHash": "fa60e70db8f4343e6d6121c674ad32cc71754851982432227a8ea749c9cf4a67",
+  "optionsHash": "a24c2c6f037f819d808f1627e00bcde2237e9cda88b1e79040e5b8f8c1d0be83",
+  "baseHash": "c643b595b11eee0fb035daa126eb3e7182d02fde5b08164a3e904e5b0d5bcd47",
+  "stressHash": "db98fce27804e44b2e3bf4889cf428ca7c395003d517d1eea8b963bba0365563",
+  "method": "One complete base/stress replay equals the prior repeated baseline across builds. This is cross-build parity, not a new same-build repeatability or independent performance claim.",
+  "returnPct": 0,
+  "closedTrades": 0,
+  "privateExchangeCalls": 0,
+  "paidCalls": 0,
+  "realOrders": 0
+}

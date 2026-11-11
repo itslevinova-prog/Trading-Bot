@@ -1,0 +1,86 @@
+{
+  "at": "2026-10-31T16:14:12.196Z",
+  "reason": "Saved experiment universe differs from freshly selected market universe on resume",
+  "expectedUniverseHash": "bc35e7ce9c773aad12d66c98b96b086798aca633a740d8fa0772d3a24ba3799a",
+  "currentUniverseHash": "1e898e2b37ad597c733997163436f44f6597e245c52ec6015cca9a2156bb665b",
+  "buildId": "5cadb6de7c67fd055b6167164ae1fc3b801ca843475087a8d4be37e8f3c00368",
+  "runId": "60c6f842-f5f6-4ca6-95ab-c33604aeab03",
+  "health": {
+    "connected": true,
+    "checkedAt": 1793463252188,
+    "paperOnly": true,
+    "pairs": 20,
+    "freshBooks": 12,
+    "readyFeatures": 20,
+    "staleBooks": 8,
+    "trackedAccounts": 3,
+    "protectiveExitFailures": 0,
+    "rejections24h": 0,
+    "lastTradeAt": 1793443817046,
+    "feeRate": 0.001,
+    "disclaimer": "Verbindungsqualität und vergangene Handelsdaten sind keine Gewinnprognose."
+  },
+  "difference": {
+    "previous": [
+      "ADA/EUR",
+      "BCH/EUR",
+      "BNB/EUR",
+      "BTC/EUR",
+      "DOGE/EUR",
+      "EGLD/EUR",
+      "ETH/EUR",
+      "LINK/EUR",
+      "LTC/EUR",
+      "NEAR/EUR",
+      "PEPE/EUR",
+      "POL/EUR",
+      "SHIB/EUR",
+      "SOL/EUR",
+      "SUI/EUR",
+      "TRX/EUR",
+      "VET/EUR",
+      "WIN/EUR",
+      "XLM/EUR",
+      "XRP/EUR"
+    ],
+    "current": [
+      "ADA/EUR",
+      "APT/EUR",
+      "BCH/EUR",
+      "BNB/EUR",
+      "BTC/EUR",
+      "DOGE/EUR",
+      "EGLD/EUR",
+      "ETH/EUR",
+      "LINK/EUR",
+      "LTC/EUR",
+      "NEAR/EUR",
+      "PEPE/EUR",
+      "RENDER/EUR",
+      "SHIB/EUR",
+      "SOL/EUR",
+      "SUI/EUR",
+      "TRX/EUR",
+      "WIN/EUR",
+      "XLM/EUR",
+      "XRP/EUR"
+    ],
+    "oldOnly": [
+      "POL/EUR",
+      "VET/EUR"
+    ],
+    "newOnly": [
+      "APT/EUR",
+      "RENDER/EUR"
+    ],
+    "lastSample": {
+      "ts": 1793449216392
+    },
+    "lastTrade": {
+      "ts": 1793443817046
+    }
+  },
+  "profitabilityEstablished": false,
+  "currentMetrics": null,
+  "baselineReset": false
+}

@@ -1,0 +1,79 @@
+{
+  "verifiedAt": "2026-10-31T10:33:19.823Z",
+  "verifierHash": "a0777c3b41b6be24275e182bafc195dc874545889df0b5daba5c9d3b71dbd2fd",
+  "experimentId": "2026-10-31T10-25-06.139Z-799e5544485b",
+  "registeredExperimentId": "6d767d12fa40b0aa39b18153dc50da83308ea1dd0c3f328f783892d34aa52bcb",
+  "buildId": "799e5544485b1371cb54d3f9544003c3077788ea187e8313c566354e8c1c594a",
+  "runId": "dd8776aa-59d5-4c43-b55d-a71d62942ca1",
+  "dependencyPackages": 114,
+  "sourceTreeIndependent": true,
+  "accountHistoryCopied": false,
+  "profile": "mock-paper-only",
+  "realAiEnabled": false,
+  "remoteAiEnabled": false,
+  "connected": true,
+  "markets": 20,
+  "readyFeatures": 20,
+  "registeredAt": 1793442445406,
+  "epochs": [
+    {
+      "account_id": "ai",
+      "started_at": 1793442445406,
+      "baseline_equity": 1000,
+      "evaluation_version": "8da07eebd887c5df656b4fb79bccc3d124449aee3977e9c88fc44ef24cb33a02"
+    },
+    {
+      "account_id": "hold",
+      "started_at": 1793442445406,
+      "baseline_equity": 1000,
+      "evaluation_version": "abd1314601d5baf2e242a0f520a9128b6109f1e9f7bf888a0cad1e63a298c8b8"
+    },
+    {
+      "account_id": "rules",
+      "started_at": 1793442445406,
+      "baseline_equity": 1000,
+      "evaluation_version": "abd1314601d5baf2e242a0f520a9128b6109f1e9f7bf888a0cad1e63a298c8b8"
+    }
+  ],
+  "holdFills": [
+    {
+      "id": "52bf154c-3046-4954-b91a-5d4df4c58d51",
+      "ts": 1793442446803,
+      "cost_eur": 998.6195396999999,
+      "fee_eur": 0.9986195397,
+      "qty": 0.01455,
+      "verified": 1,
+      "evaluation_version": "abd1314601d5baf2e242a0f520a9128b6109f1e9f7bf888a0cad1e63a298c8b8"
+    }
+  ],
+  "registeredRuns": 1,
+  "comparison": {
+    "experimentId": "6d767d12fa40b0aa39b18153dc50da83308ea1dd0c3f328f783892d34aa52bcb",
+    "profitabilityEstablished": false,
+    "independentSamples": null,
+    "insufficientSample": true,
+    "currentMetrics": {
+      "asOf": 1793442745681,
+      "returnsPct": {
+        "ai": 0,
+        "hold": -0.11223722396999092,
+        "rules": 0
+      },
+      "aiExcessVsRules": 0,
+      "aiExcessVsHold": 0.11223722396999092
+    },
+    "warning": "Matched fresh paper marks only. Paid fill fees included; hypothetical exit costs/intraminute path unknown. Gaps do not reconstruct missed executions.",
+    "samples": 7,
+    "validSamples": 7,
+    "invalidSamples": 0,
+    "maxGapMs": 60012,
+    "longGaps": 0,
+    "currentAgeMs": 54018,
+    "observedCadenceComplete": true,
+    "status": "collecting"
+  },
+  "profitabilityEstablished": false,
+  "privateExchangeCalls": 0,
+  "realOrders": 0,
+  "paidCalls": 0
+}

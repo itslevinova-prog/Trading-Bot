@@ -1,0 +1,20 @@
+[
+  {
+    "path": "freqtrade/plugins/pairlist/VolatilityFilter.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/plugins/pairlist/VolatilityFilter.py",
+    "sha256": "1d8ca3067e65ea6b313afde0a1651a27fd2c4262bcad9190c0d8fe56d0ccb88b",
+    "bytes": 6340
+  },
+  {
+    "path": "freqtrade/plugins/pairlist/rangestabilityfilter.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/plugins/pairlist/rangestabilityfilter.py",
+    "sha256": "569a370cb77008d201f10d9bbf7ff8737597c7a40135828013e2a7270845af6b",
+    "bytes": 6507
+  },
+  {
+    "path": "tests/plugins/test_pairlist.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/tests/plugins/test_pairlist.py",
+    "sha256": "3fcf1f014371a588294aaae346493bfdf8214ffd0826ba765d88181baa72e2c0",
+    "bytes": 124319
+  }
+]

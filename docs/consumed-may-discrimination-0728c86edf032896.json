@@ -1,0 +1,3189 @@
+{
+  "version": "consumed-may-discrimination-v1",
+  "generatedAt": "2026-11-03T21:24:33.826Z",
+  "runnerHash": "c7a5aed94d2966b427da4b9c05ebf4fd36509f89021fb38b70d00d786193a56a",
+  "diagnosticSourceSha256": "04e20a74253db762d9989477fc9ee252a51107d6a0ee0a3c802df0aa4264b941",
+  "fixedMargin": 0.005,
+  "periods": {
+    "early": {
+      "source": {
+        "path": "docs/early-may-validation-41c6517e0c61f4e3.json",
+        "hash": "41c6517e0c61f4e373b7ef273c9d8d7e07952790e4588ac5519220db6870e841"
+      },
+      "sourceFileSha256": "e601d4f862aaa57244bbead358a8859b02bba1b3123e33d2cf292baa5d626a3b",
+      "frozenForecasts": {
+        "path": "docs/early-may-frozen-forecasts-1f6a2ca61365910f.json",
+        "hash": "1f6a2ca61365910f2717108be4cc3ab2daa8ee6567c212f584b52ffd09d626bb"
+      },
+      "selectedByEarlierFixedValidation": "zero",
+      "models": {
+        "zero": {
+          "rows": 400,
+          "sharedClocks": 20,
+          "clocksWithComparablePairs": 20,
+          "equalClockMeanConcordance": 0.5000000000000001,
+          "hindsightClocksWithPositiveLabel": 18,
+          "clocksWithForecastAboveMargin": 0,
+          "clocks": [
+            {
+              "decisionAt": 1777593600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 2,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": 0.0025003815323656475,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777636800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 8,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": 0.003415283412610437,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777680000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 188,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 188,
+              "labelTies": 2,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 1,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.005530723874475285,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777723200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 8,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": 0.00670066360994559,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777766400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 189,
+              "labelTies": 1,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 1,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.006926081803755535,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777809600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.005986831622654565,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777852800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 187,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 187,
+              "labelTies": 3,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 19,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": 0.009509862464741392,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777896000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 3,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": 0.005247561211719098,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777939200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 12,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": 0.026589855697747522,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777982400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 7,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.005936406928660598,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778025600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 15,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": 0.00696959559506527,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778068800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 150,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 150,
+              "labelTies": 40,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 1,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778112000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 188,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 188,
+              "labelTies": 2,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 3,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.0002024361325313473,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778155200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 129,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 129,
+              "labelTies": 61,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.022252334391999917,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778198400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 189,
+              "labelTies": 1,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 2,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.007700095298820431,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778241600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 175,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 175,
+              "labelTies": 15,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 15,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": 0.020661297945272494,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778284800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 5,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": 0.00010790985242126183,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778328000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 189,
+              "labelTies": 1,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 2,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.008018931046458233,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778371200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 2,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.002427381333120593,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778414400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 177,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 177,
+              "labelTies": 13,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 17,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": 0.0365731943896106,
+                "aboveUnchangedMargin": false
+              }
+            }
+          ],
+          "independentSamples": null,
+          "forecastWinProbability": null,
+          "scope": "Consumed fixed-label ranking diagnostic. Pair comparisons share clocks/markets and are not independent trials. Hindsight labels and descriptive top ranks are not executable signals, portfolio returns or permission to lower a margin."
+        },
+        "training-mean": {
+          "rows": 400,
+          "sharedClocks": 20,
+          "clocksWithComparablePairs": 20,
+          "equalClockMeanConcordance": 0.5000000000000001,
+          "hindsightClocksWithPositiveLabel": 18,
+          "clocksWithForecastAboveMargin": 0,
+          "clocks": [
+            {
+              "decisionAt": 1777593600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 2,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": 0.0025003815323656475,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777636800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 8,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": 0.003415283412610437,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777680000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 188,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 188,
+              "labelTies": 2,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 1,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": -0.005530723874475285,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777723200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 8,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": 0.00670066360994559,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777766400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 189,
+              "labelTies": 1,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 1,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": -0.006926081803755535,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777809600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": -0.005986831622654565,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777852800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 187,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 187,
+              "labelTies": 3,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 19,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": 0.009509862464741392,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777896000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 3,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": 0.005247561211719098,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777939200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 12,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": 0.026589855697747522,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777982400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 7,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": -0.005936406928660598,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778025600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 15,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": 0.00696959559506527,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778068800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 150,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 150,
+              "labelTies": 40,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 1,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778112000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 188,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 188,
+              "labelTies": 2,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 3,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": -0.0002024361325313473,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778155200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 129,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 129,
+              "labelTies": 61,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": -0.022252334391999917,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778198400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 189,
+              "labelTies": 1,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 2,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": -0.007700095298820431,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778241600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 175,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 175,
+              "labelTies": 15,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 15,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": 0.020661297945272494,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778284800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 5,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": 0.00010790985242126183,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778328000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 189,
+              "labelTies": 1,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 2,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": -0.008018931046458233,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778371200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 2,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": -0.002427381333120593,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778414400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 177,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 177,
+              "labelTies": 13,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 17,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004912131126673943,
+                "netReturn": 0.0365731943896106,
+                "aboveUnchangedMargin": false
+              }
+            }
+          ],
+          "independentSamples": null,
+          "forecastWinProbability": null,
+          "scope": "Consumed fixed-label ranking diagnostic. Pair comparisons share clocks/markets and are not independent trials. Hindsight labels and descriptive top ranks are not executable signals, portfolio returns or permission to lower a margin."
+        },
+        "ridge-lambda10": {
+          "rows": 400,
+          "sharedClocks": 20,
+          "clocksWithComparablePairs": 20,
+          "equalClockMeanConcordance": 0.45098286801148507,
+          "hindsightClocksWithPositiveLabel": 18,
+          "clocksWithForecastAboveMargin": 0,
+          "clocks": [
+            {
+              "decisionAt": 1777593600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 72,
+              "discordant": 118,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.37894736842105264,
+              "hindsightPositiveLabelRows": 2,
+              "descriptiveTop": {
+                "pair": "WIN/EUR",
+                "forecast": -0.003769062734772021,
+                "netReturn": 0.003238957939668552,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777636800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 111,
+              "discordant": 79,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.5842105263157895,
+              "hindsightPositiveLabelRows": 8,
+              "descriptiveTop": {
+                "pair": "XLM/EUR",
+                "forecast": -0.004300088728903038,
+                "netReturn": 0.004200059952116586,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777680000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 188,
+              "concordant": 86,
+              "discordant": 102,
+              "predictionTies": 0,
+              "labelTies": 2,
+              "concordance": 0.4574468085106383,
+              "hindsightPositiveLabelRows": 1,
+              "descriptiveTop": {
+                "pair": "XLM/EUR",
+                "forecast": -0.004707498485806571,
+                "netReturn": -0.005320819041057856,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777723200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 93,
+              "discordant": 97,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.48947368421052634,
+              "hindsightPositiveLabelRows": 8,
+              "descriptiveTop": {
+                "pair": "ICP/EUR",
+                "forecast": -0.00440200425497799,
+                "netReturn": 0.006869242860959579,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777766400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 79,
+              "discordant": 110,
+              "predictionTies": 0,
+              "labelTies": 1,
+              "concordance": 0.41798941798941797,
+              "hindsightPositiveLabelRows": 1,
+              "descriptiveTop": {
+                "pair": "ICP/EUR",
+                "forecast": -0.004393852656143296,
+                "netReturn": -0.0031096396252738856,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777809600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 96,
+              "discordant": 94,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.5052631578947369,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "WIN/EUR",
+                "forecast": -0.004712114372575596,
+                "netReturn": -0.0075051097060223615,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777852800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 187,
+              "concordant": 75,
+              "discordant": 112,
+              "predictionTies": 0,
+              "labelTies": 3,
+              "concordance": 0.40106951871657753,
+              "hindsightPositiveLabelRows": 19,
+              "descriptiveTop": {
+                "pair": "APT/EUR",
+                "forecast": -0.004467771035530335,
+                "netReturn": 0.007331647292996513,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777896000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 71,
+              "discordant": 119,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.3736842105263158,
+              "hindsightPositiveLabelRows": 3,
+              "descriptiveTop": {
+                "pair": "LINK/EUR",
+                "forecast": -0.004021927921645533,
+                "netReturn": -0.009523318642073453,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777939200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 68,
+              "discordant": 122,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.35789473684210527,
+              "hindsightPositiveLabelRows": 12,
+              "descriptiveTop": {
+                "pair": "BCH/EUR",
+                "forecast": -0.0044807231583068,
+                "netReturn": -0.001971313769285832,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1777982400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 77,
+              "discordant": 113,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.4052631578947368,
+              "hindsightPositiveLabelRows": 7,
+              "descriptiveTop": {
+                "pair": "BCH/EUR",
+                "forecast": -0.0033554977296798077,
+                "netReturn": -0.013960987117390022,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778025600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 82,
+              "discordant": 108,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.43157894736842106,
+              "hindsightPositiveLabelRows": 15,
+              "descriptiveTop": {
+                "pair": "ICP/EUR",
+                "forecast": -0.0029526406394225816,
+                "netReturn": -0.02225233439200014,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778068800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 150,
+              "concordant": 76,
+              "discordant": 74,
+              "predictionTies": 0,
+              "labelTies": 40,
+              "concordance": 0.5066666666666667,
+              "hindsightPositiveLabelRows": 1,
+              "descriptiveTop": {
+                "pair": "APT/EUR",
+                "forecast": -0.0034411879914597212,
+                "netReturn": -0.022252334391999917,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778112000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 19,
+              "comparablePairs": 170,
+              "concordant": 80,
+              "discordant": 90,
+              "predictionTies": 0,
+              "labelTies": 1,
+              "concordance": 0.47058823529411764,
+              "hindsightPositiveLabelRows": 3,
+              "descriptiveTop": {
+                "pair": "TRX/EUR",
+                "forecast": -0.005009539646784137,
+                "netReturn": -0.01133341129245058,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778155200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 129,
+              "concordant": 45,
+              "discordant": 84,
+              "predictionTies": 0,
+              "labelTies": 61,
+              "concordance": 0.3488372093023256,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "DOGE/EUR",
+                "forecast": -0.0047533320312634275,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778198400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 58,
+              "discordant": 131,
+              "predictionTies": 0,
+              "labelTies": 1,
+              "concordance": 0.30687830687830686,
+              "hindsightPositiveLabelRows": 2,
+              "descriptiveTop": {
+                "pair": "DOGE/EUR",
+                "forecast": -0.004458431943222885,
+                "netReturn": -0.02225233439200014,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778241600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 175,
+              "concordant": 86,
+              "discordant": 89,
+              "predictionTies": 0,
+              "labelTies": 15,
+              "concordance": 0.49142857142857144,
+              "hindsightPositiveLabelRows": 15,
+              "descriptiveTop": {
+                "pair": "DOGE/EUR",
+                "forecast": -0.0036781559746374235,
+                "netReturn": 0.010358633200847622,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778284800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 77,
+              "discordant": 113,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.4052631578947368,
+              "hindsightPositiveLabelRows": 5,
+              "descriptiveTop": {
+                "pair": "ICP/EUR",
+                "forecast": 0.0002653634400726851,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778328000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 100,
+              "discordant": 89,
+              "predictionTies": 0,
+              "labelTies": 1,
+              "concordance": 0.5291005291005291,
+              "hindsightPositiveLabelRows": 2,
+              "descriptiveTop": {
+                "pair": "BCH/EUR",
+                "forecast": -0.004518192272022331,
+                "netReturn": -0.005630661728333486,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778371200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 88,
+              "discordant": 102,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.4631578947368421,
+              "hindsightPositiveLabelRows": 2,
+              "descriptiveTop": {
+                "pair": "BCH/EUR",
+                "forecast": -0.004347668340302379,
+                "netReturn": 0.0013929099639775622,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778414400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 177,
+              "concordant": 123,
+              "discordant": 54,
+              "predictionTies": 0,
+              "labelTies": 13,
+              "concordance": 0.6949152542372882,
+              "hindsightPositiveLabelRows": 17,
+              "descriptiveTop": {
+                "pair": "SUI/EUR",
+                "forecast": -0.0025185647390118513,
+                "netReturn": 0.0365731943896106,
+                "aboveUnchangedMargin": false
+              }
+            }
+          ],
+          "independentSamples": null,
+          "forecastWinProbability": null,
+          "scope": "Consumed fixed-label ranking diagnostic. Pair comparisons share clocks/markets and are not independent trials. Hindsight labels and descriptive top ranks are not executable signals, portfolio returns or permission to lower a margin."
+        }
+      }
+    },
+    "later": {
+      "source": {
+        "path": "docs/later-may-validation-7b4c6eac554d151a.json",
+        "hash": "7b4c6eac554d151a33fc6f8d51713f288cf849a44859328e3bd09644cf62d259"
+      },
+      "sourceFileSha256": "c3e5cc61836146cad6e2b838b5fe872f13a750d073209aee5a9096a9720600b0",
+      "frozenForecasts": {
+        "path": "docs/later-may-frozen-forecasts-fbfdb67366c9a59f.json",
+        "hash": "fbfdb67366c9a59f048c92cc7b707d2c5f2563674cd810f2f478bdf746517c1d"
+      },
+      "selectedByEarlierFixedValidation": "ridge-lambda10",
+      "models": {
+        "zero": {
+          "rows": 400,
+          "sharedClocks": 20,
+          "clocksWithComparablePairs": 20,
+          "equalClockMeanConcordance": 0.5000000000000001,
+          "hindsightClocksWithPositiveLabel": 9,
+          "clocksWithForecastAboveMargin": 0,
+          "clocks": [
+            {
+              "decisionAt": 1778457600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 172,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 172,
+              "labelTies": 18,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778500800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 10,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": 0.001303056526956059,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778544000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 186,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 186,
+              "labelTies": 4,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.01920939939477473,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778587200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 183,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 183,
+              "labelTies": 7,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.02225233439200014,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778630400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 12,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": 0.0031435752814097384,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778673600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 128,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 128,
+              "labelTies": 62,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778716800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 189,
+              "labelTies": 1,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.006785841885916799,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778760000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 161,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 161,
+              "labelTies": 29,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 18,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": 0.0365731943896106,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778803200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 160,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 160,
+              "labelTies": 30,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.02225233439200014,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778846400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 122,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 122,
+              "labelTies": 68,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778889600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 142,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 142,
+              "labelTies": 48,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.02225233439200014,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778932800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 4,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": 0.0013220918623313427,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778976000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 3,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": 0.0003989527733403442,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779019200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.012246441618888437,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779062400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 189,
+              "labelTies": 1,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.012412821278361852,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779105600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 169,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 169,
+              "labelTies": 21,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 1,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779148800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 1,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.007348080882157659,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779192000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 189,
+              "labelTies": 1,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.0050534981587487815,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779235200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 15,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": 0.0038145918507230814,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779278400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 7,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": 0,
+                "netReturn": -0.0018063695474552777,
+                "aboveUnchangedMargin": false
+              }
+            }
+          ],
+          "independentSamples": null,
+          "forecastWinProbability": null,
+          "scope": "Consumed fixed-label ranking diagnostic. Pair comparisons share clocks/markets and are not independent trials. Hindsight labels and descriptive top ranks are not executable signals, portfolio returns or permission to lower a margin."
+        },
+        "training-mean": {
+          "rows": 400,
+          "sharedClocks": 20,
+          "clocksWithComparablePairs": 20,
+          "equalClockMeanConcordance": 0.5000000000000001,
+          "hindsightClocksWithPositiveLabel": 9,
+          "clocksWithForecastAboveMargin": 0,
+          "clocks": [
+            {
+              "decisionAt": 1778457600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 172,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 172,
+              "labelTies": 18,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778500800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 10,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": 0.001303056526956059,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778544000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 186,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 186,
+              "labelTies": 4,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": -0.01920939939477473,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778587200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 183,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 183,
+              "labelTies": 7,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": -0.02225233439200014,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778630400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 12,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": 0.0031435752814097384,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778673600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 128,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 128,
+              "labelTies": 62,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778716800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 189,
+              "labelTies": 1,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": -0.006785841885916799,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778760000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 161,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 161,
+              "labelTies": 29,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 18,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": 0.0365731943896106,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778803200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 160,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 160,
+              "labelTies": 30,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": -0.02225233439200014,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778846400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 122,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 122,
+              "labelTies": 68,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778889600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 142,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 142,
+              "labelTies": 48,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": -0.02225233439200014,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778932800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 4,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": 0.0013220918623313427,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778976000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 3,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": 0.0003989527733403442,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779019200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": -0.012246441618888437,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779062400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 189,
+              "labelTies": 1,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": -0.012412821278361852,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779105600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 169,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 169,
+              "labelTies": 21,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 1,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779148800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 1,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": -0.007348080882157659,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779192000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 189,
+              "labelTies": 1,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": -0.0050534981587487815,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779235200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 15,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": 0.0038145918507230814,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779278400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 7,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.004664394805052768,
+                "netReturn": -0.0018063695474552777,
+                "aboveUnchangedMargin": false
+              }
+            }
+          ],
+          "independentSamples": null,
+          "forecastWinProbability": null,
+          "scope": "Consumed fixed-label ranking diagnostic. Pair comparisons share clocks/markets and are not independent trials. Hindsight labels and descriptive top ranks are not executable signals, portfolio returns or permission to lower a margin."
+        },
+        "ridge-lambda10": {
+          "rows": 400,
+          "sharedClocks": 20,
+          "clocksWithComparablePairs": 20,
+          "equalClockMeanConcordance": 0.5037738342008709,
+          "hindsightClocksWithPositiveLabel": 9,
+          "clocksWithForecastAboveMargin": 0,
+          "clocks": [
+            {
+              "decisionAt": 1778457600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 19,
+              "comparablePairs": 155,
+              "concordant": 82,
+              "discordant": 73,
+              "predictionTies": 0,
+              "labelTies": 16,
+              "concordance": 0.5290322580645161,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "TRX/EUR",
+                "forecast": -0.004389081392273721,
+                "netReturn": -0.005593550164639471,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778500800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 57,
+              "discordant": 133,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.3,
+              "hindsightPositiveLabelRows": 10,
+              "descriptiveTop": {
+                "pair": "ICP/EUR",
+                "forecast": -0.0012997308708150583,
+                "netReturn": -0.022252334391999917,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778544000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 186,
+              "concordant": 105,
+              "discordant": 81,
+              "predictionTies": 0,
+              "labelTies": 4,
+              "concordance": 0.5645161290322581,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "BCH/EUR",
+                "forecast": -0.004339697602079599,
+                "netReturn": -0.0069364886564481365,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778587200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 183,
+              "concordant": 105,
+              "discordant": 78,
+              "predictionTies": 0,
+              "labelTies": 7,
+              "concordance": 0.5737704918032787,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ICP/EUR",
+                "forecast": -0.0037394876078477982,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778630400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 104,
+              "discordant": 86,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.5473684210526316,
+              "hindsightPositiveLabelRows": 12,
+              "descriptiveTop": {
+                "pair": "APT/EUR",
+                "forecast": -0.003956828106874256,
+                "netReturn": 0.013744235045577868,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778673600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 128,
+              "concordant": 67,
+              "discordant": 61,
+              "predictionTies": 0,
+              "labelTies": 62,
+              "concordance": 0.5234375,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ICP/EUR",
+                "forecast": -0.003234617776150351,
+                "netReturn": -0.022252334391999917,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778716800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 124,
+              "discordant": 65,
+              "predictionTies": 0,
+              "labelTies": 1,
+              "concordance": 0.656084656084656,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "BCH/EUR",
+                "forecast": -0.004130812755905804,
+                "netReturn": -0.004589437290352549,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778760000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 161,
+              "concordant": 87,
+              "discordant": 74,
+              "predictionTies": 0,
+              "labelTies": 29,
+              "concordance": 0.5403726708074534,
+              "hindsightPositiveLabelRows": 18,
+              "descriptiveTop": {
+                "pair": "WIN/EUR",
+                "forecast": -0.0033548242891468863,
+                "netReturn": 0.020603743430645194,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778803200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 160,
+              "concordant": 84,
+              "discordant": 76,
+              "predictionTies": 0,
+              "labelTies": 30,
+              "concordance": 0.525,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "WIN/EUR",
+                "forecast": -0.0039054238236257872,
+                "netReturn": -0.013442449521233302,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778846400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 122,
+              "concordant": 62,
+              "discordant": 60,
+              "predictionTies": 0,
+              "labelTies": 68,
+              "concordance": 0.5081967213114754,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "WIN/EUR",
+                "forecast": -0.004117620988323815,
+                "netReturn": -0.02225233439200014,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778889600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 142,
+              "concordant": 58,
+              "discordant": 84,
+              "predictionTies": 0,
+              "labelTies": 48,
+              "concordance": 0.4084507042253521,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ICP/EUR",
+                "forecast": -0.0033440905239057912,
+                "netReturn": -0.022252334391999917,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778932800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 71,
+              "discordant": 119,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.3736842105263158,
+              "hindsightPositiveLabelRows": 4,
+              "descriptiveTop": {
+                "pair": "ICP/EUR",
+                "forecast": -0.0020408479309412943,
+                "netReturn": -0.005469552730414384,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778976000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 118,
+              "discordant": 72,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.6210526315789474,
+              "hindsightPositiveLabelRows": 3,
+              "descriptiveTop": {
+                "pair": "SUI/EUR",
+                "forecast": -0.0027740944250471368,
+                "netReturn": 0.003024061331770911,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779019200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 55,
+              "discordant": 135,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.2894736842105263,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "APT/EUR",
+                "forecast": -0.0033790002219659184,
+                "netReturn": -0.022252334391999917,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779062400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 111,
+              "discordant": 78,
+              "predictionTies": 0,
+              "labelTies": 1,
+              "concordance": 0.5873015873015873,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "TRX/EUR",
+                "forecast": -0.004568792066878246,
+                "netReturn": -0.004915054092024307,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779105600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 169,
+              "concordant": 70,
+              "discordant": 99,
+              "predictionTies": 0,
+              "labelTies": 21,
+              "concordance": 0.41420118343195267,
+              "hindsightPositiveLabelRows": 1,
+              "descriptiveTop": {
+                "pair": "WIN/EUR",
+                "forecast": -0.003059130489534286,
+                "netReturn": -0.00276187811769113,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779148800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 87,
+              "discordant": 103,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.45789473684210524,
+              "hindsightPositiveLabelRows": 1,
+              "descriptiveTop": {
+                "pair": "ICP/EUR",
+                "forecast": -0.0022722768498466255,
+                "netReturn": -0.01795663374571943,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779192000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 108,
+              "discordant": 81,
+              "predictionTies": 0,
+              "labelTies": 1,
+              "concordance": 0.5714285714285714,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "BCH/EUR",
+                "forecast": -0.0036073452856401856,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779235200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 97,
+              "discordant": 93,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.5105263157894737,
+              "hindsightPositiveLabelRows": 15,
+              "descriptiveTop": {
+                "pair": "BCH/EUR",
+                "forecast": -0.003733377182036786,
+                "netReturn": -0.004900892410099056,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779278400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 109,
+              "discordant": 81,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.5736842105263158,
+              "hindsightPositiveLabelRows": 7,
+              "descriptiveTop": {
+                "pair": "DOGE/EUR",
+                "forecast": -0.00390779098377439,
+                "netReturn": -0.00001924321744184443,
+                "aboveUnchangedMargin": false
+              }
+            }
+          ],
+          "independentSamples": null,
+          "forecastWinProbability": null,
+          "scope": "Consumed fixed-label ranking diagnostic. Pair comparisons share clocks/markets and are not independent trials. Hindsight labels and descriptive top ranks are not executable signals, portfolio returns or permission to lower a margin."
+        },
+        "clock-mean30": {
+          "rows": 400,
+          "sharedClocks": 20,
+          "clocksWithComparablePairs": 20,
+          "equalClockMeanConcordance": 0.5000000000000001,
+          "hindsightClocksWithPositiveLabel": 9,
+          "clocksWithForecastAboveMargin": 0,
+          "clocks": [
+            {
+              "decisionAt": 1778457600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 172,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 172,
+              "labelTies": 18,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778500800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 10,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": 0.001303056526956059,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778544000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 186,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 186,
+              "labelTies": 4,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": -0.01920939939477473,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778587200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 183,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 183,
+              "labelTies": 7,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": -0.02225233439200014,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778630400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 12,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": 0.0031435752814097384,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778673600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 128,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 128,
+              "labelTies": 62,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778716800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 189,
+              "labelTies": 1,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": -0.006785841885916799,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778760000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 161,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 161,
+              "labelTies": 29,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 18,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": 0.0365731943896106,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778803200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 160,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 160,
+              "labelTies": 30,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": -0.02225233439200014,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778846400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 122,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 122,
+              "labelTies": 68,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778889600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 142,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 142,
+              "labelTies": 48,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": -0.02225233439200014,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778932800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 4,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": 0.0013220918623313427,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778976000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 3,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": 0.0003989527733403442,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779019200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": -0.012246441618888437,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779062400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 189,
+              "labelTies": 1,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": -0.012412821278361852,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779105600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 169,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 169,
+              "labelTies": 21,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 1,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779148800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 1,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": -0.007348080882157659,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779192000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 189,
+              "labelTies": 1,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": -0.0050534981587487815,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779235200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 15,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": 0.0038145918507230814,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779278400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 0,
+              "discordant": 0,
+              "predictionTies": 190,
+              "labelTies": 0,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 7,
+              "descriptiveTop": {
+                "pair": "ADA/EUR",
+                "forecast": -0.003463099853148043,
+                "netReturn": -0.0018063695474552777,
+                "aboveUnchangedMargin": false
+              }
+            }
+          ],
+          "independentSamples": null,
+          "forecastWinProbability": null,
+          "scope": "Consumed fixed-label ranking diagnostic. Pair comparisons share clocks/markets and are not independent trials. Hindsight labels and descriptive top ranks are not executable signals, portfolio returns or permission to lower a margin."
+        },
+        "clock-ridge30": {
+          "rows": 400,
+          "sharedClocks": 20,
+          "clocksWithComparablePairs": 20,
+          "equalClockMeanConcordance": 0.4824170051593941,
+          "hindsightClocksWithPositiveLabel": 9,
+          "clocksWithForecastAboveMargin": 0,
+          "clocks": [
+            {
+              "decisionAt": 1778457600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 19,
+              "comparablePairs": 155,
+              "concordant": 83,
+              "discordant": 72,
+              "predictionTies": 0,
+              "labelTies": 16,
+              "concordance": 0.535483870967742,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "TRX/EUR",
+                "forecast": -0.003071201599635452,
+                "netReturn": -0.005593550164639471,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778500800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 58,
+              "discordant": 132,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.30526315789473685,
+              "hindsightPositiveLabelRows": 10,
+              "descriptiveTop": {
+                "pair": "ICP/EUR",
+                "forecast": 0.0002276934813645248,
+                "netReturn": -0.022252334391999917,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778544000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 186,
+              "concordant": 104,
+              "discordant": 82,
+              "predictionTies": 0,
+              "labelTies": 4,
+              "concordance": 0.5591397849462365,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "BCH/EUR",
+                "forecast": -0.00298309020814762,
+                "netReturn": -0.0069364886564481365,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778587200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 183,
+              "concordant": 108,
+              "discordant": 75,
+              "predictionTies": 0,
+              "labelTies": 7,
+              "concordance": 0.5901639344262295,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ICP/EUR",
+                "forecast": -0.001977274239568764,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778630400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 91,
+              "discordant": 99,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.4789473684210526,
+              "hindsightPositiveLabelRows": 12,
+              "descriptiveTop": {
+                "pair": "ICP/EUR",
+                "forecast": -0.0012245994619455186,
+                "netReturn": 0.0365731943896106,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778673600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 128,
+              "concordant": 64,
+              "discordant": 64,
+              "predictionTies": 0,
+              "labelTies": 62,
+              "concordance": 0.5,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "BCH/EUR",
+                "forecast": -0.002340087182183514,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778716800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 71,
+              "discordant": 118,
+              "predictionTies": 0,
+              "labelTies": 1,
+              "concordance": 0.37566137566137564,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "APT/EUR",
+                "forecast": -0.001256282625349089,
+                "netReturn": -0.02240439143280737,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778760000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 161,
+              "concordant": 78,
+              "discordant": 83,
+              "predictionTies": 0,
+              "labelTies": 29,
+              "concordance": 0.484472049689441,
+              "hindsightPositiveLabelRows": 18,
+              "descriptiveTop": {
+                "pair": "WIN/EUR",
+                "forecast": -0.001045288947839213,
+                "netReturn": 0.020603743430645194,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778803200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 160,
+              "concordant": 95,
+              "discordant": 65,
+              "predictionTies": 0,
+              "labelTies": 30,
+              "concordance": 0.59375,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ICP/EUR",
+                "forecast": -0.0019605830539686534,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778846400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 122,
+              "concordant": 51,
+              "discordant": 71,
+              "predictionTies": 0,
+              "labelTies": 68,
+              "concordance": 0.4180327868852459,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ICP/EUR",
+                "forecast": 0.00038857585130799323,
+                "netReturn": -0.02225233439200014,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778889600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 142,
+              "concordant": 60,
+              "discordant": 82,
+              "predictionTies": 0,
+              "labelTies": 48,
+              "concordance": 0.4225352112676056,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "ICP/EUR",
+                "forecast": 0.00013953123617367657,
+                "netReturn": -0.022252334391999917,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778932800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 86,
+              "discordant": 104,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.45263157894736844,
+              "hindsightPositiveLabelRows": 4,
+              "descriptiveTop": {
+                "pair": "ICP/EUR",
+                "forecast": 0.0043352078446327255,
+                "netReturn": -0.005469552730414384,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1778976000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 116,
+              "discordant": 74,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.6105263157894737,
+              "hindsightPositiveLabelRows": 3,
+              "descriptiveTop": {
+                "pair": "APT/EUR",
+                "forecast": 0.00018262989920090353,
+                "netReturn": 0.010084919899470135,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779019200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 75,
+              "discordant": 115,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.39473684210526316,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "SHIB/EUR",
+                "forecast": -0.0014217287546386742,
+                "netReturn": -0.010538105991804825,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779062400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 108,
+              "discordant": 81,
+              "predictionTies": 0,
+              "labelTies": 1,
+              "concordance": 0.5714285714285714,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "SHIB/EUR",
+                "forecast": -0.003275442109250212,
+                "netReturn": -0.010659013892240887,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779105600000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 169,
+              "concordant": 73,
+              "discordant": 96,
+              "predictionTies": 0,
+              "labelTies": 21,
+              "concordance": 0.4319526627218935,
+              "hindsightPositiveLabelRows": 1,
+              "descriptiveTop": {
+                "pair": "WIN/EUR",
+                "forecast": -0.00009541884619834263,
+                "netReturn": -0.00276187811769113,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779148800000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 85,
+              "discordant": 105,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.4473684210526316,
+              "hindsightPositiveLabelRows": 1,
+              "descriptiveTop": {
+                "pair": "ICP/EUR",
+                "forecast": 0.0003870740913729429,
+                "netReturn": -0.01795663374571943,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779192000000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 189,
+              "concordant": 92,
+              "discordant": 97,
+              "predictionTies": 0,
+              "labelTies": 1,
+              "concordance": 0.48677248677248675,
+              "hindsightPositiveLabelRows": 0,
+              "descriptiveTop": {
+                "pair": "BCH/EUR",
+                "forecast": 0.000680926799037525,
+                "netReturn": -0.02225233439200003,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779235200000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 104,
+              "discordant": 86,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.5473684210526316,
+              "hindsightPositiveLabelRows": 15,
+              "descriptiveTop": {
+                "pair": "BCH/EUR",
+                "forecast": -0.00039408129598647893,
+                "netReturn": -0.004900892410099056,
+                "aboveUnchangedMargin": false
+              }
+            },
+            {
+              "decisionAt": 1779278400000,
+              "rows": 20,
+              "knownLabelRows": 20,
+              "forecastRows": 20,
+              "comparablePairs": 190,
+              "concordant": 84,
+              "discordant": 106,
+              "predictionTies": 0,
+              "labelTies": 0,
+              "concordance": 0.4421052631578947,
+              "hindsightPositiveLabelRows": 7,
+              "descriptiveTop": {
+                "pair": "XLM/EUR",
+                "forecast": -0.0021118634865944677,
+                "netReturn": 0.0035099163525247334,
+                "aboveUnchangedMargin": false
+              }
+            }
+          ],
+          "independentSamples": null,
+          "forecastWinProbability": null,
+          "scope": "Consumed fixed-label ranking diagnostic. Pair comparisons share clocks/markets and are not independent trials. Hindsight labels and descriptive top ranks are not executable signals, portfolio returns or permission to lower a margin."
+        }
+      }
+    }
+  },
+  "newLabelsRead": false,
+  "refitted": false,
+  "thresholdsChanged": false,
+  "activeStrategyChanged": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "scope": "Post-hoc diagnosis of already-consumed May labels. Equal-clock concordance is descriptive rank ordering, not a calibrated probability or executable PnL. Pair comparisons overlap; hindsight opportunities cannot authorize trades or margin relaxation.",
+  "factsHash": "0728c86edf0328967a901e5b2bba5db4be87cd94b1229632cca3b71d3e7128ed"
+}

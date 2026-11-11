@@ -1,0 +1,64 @@
+{
+  "verifiedAt": "2026-10-29T21:09:38.045Z",
+  "verifierHash": "493c140424d940dba6b0e0b4cb66f5be98a5632e185a0491bc2eb6b78245132e",
+  "dependencyVerifierHash": "f3d5cebc16cf8b02bfaa41cc3b12a801622465f5b674c37400af8785ba90cf5e",
+  "candidateId": "2026-10-28T21-14-52.089Z-3c29d6e9c59a",
+  "buildId": "3c29d6e9c59ac39fb30a3a49edcafa23871dbc9d7329396711fe78a6d9867731",
+  "runId": "cf706eaa-04d6-4709-995a-cfc7cf3e3fd8",
+  "evaluationVersion": "a5b491992d24f2a8b9bd51ae09e25794f5756edc12a01884d308b27e94e30dd3",
+  "dependencyPackages": 114,
+  "sourceTreeIndependent": true,
+  "dependencyLinksStayWithinCandidate": true,
+  "paperOnly": true,
+  "aiEnabled": false,
+  "privateExchangeCalls": 0,
+  "realOrders": 0,
+  "paidCalls": 0,
+  "connected": true,
+  "markets": 20,
+  "readyFeatures": 20,
+  "accounts": [
+    {
+      "id": "ai",
+      "cash": 100,
+      "equity": 100,
+      "positionCount": 0,
+      "valuationComplete": true
+    },
+    {
+      "id": "rules",
+      "cash": 100,
+      "equity": 100,
+      "positionCount": 0,
+      "valuationComplete": true
+    },
+    {
+      "id": "hold",
+      "cash": 0.023281758600020908,
+      "equity": 96.90388665860002,
+      "positionCount": 1,
+      "valuationComplete": true
+    }
+  ],
+  "forward": [
+    {
+      "accountId": "ai",
+      "status": "awaiting_baseline",
+      "registeredAt": null,
+      "observations": 0
+    },
+    {
+      "accountId": "rules",
+      "status": "collecting",
+      "registeredAt": 1793287478554,
+      "observations": 368
+    },
+    {
+      "accountId": "hold",
+      "status": "awaiting_baseline",
+      "registeredAt": null,
+      "observations": 0
+    }
+  ],
+  "profitabilityEstablished": false
+}

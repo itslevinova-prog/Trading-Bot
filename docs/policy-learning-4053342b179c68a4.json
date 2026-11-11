@@ -1,0 +1,1897 @@
+{
+  "version": "policy-learning-audit-v1",
+  "materializedAt": "2026-10-31T16:30:54.018Z",
+  "builderBuildId": "9d2052fa1d972b8cd0e0abcbaf614c0e481b26d846899205510e37925aa2ffd5",
+  "protocolHash": "72e062eaab7eeb92744f2c5eed953a6b52ba925f3b9d075ac425573441c1dff4",
+  "moduleHash": "d8e82e4cd3b29516ae2105dcac04460d1c4a6124bf10e509e759a9a3e39031b7",
+  "sourceInputFactsHash": "ea2bb7642d52d94f9e99742930aa4fe875f5c95ae1ef10624609a834dc0de66d",
+  "groups": [
+    {
+      "scenario": "base",
+      "variant": "mock-v1",
+      "scopeId": "21988d14cedd4f6713793168d8152a56f2bca1520d01832218d9afb633b39cd7",
+      "folds": [
+        {
+          "options": {
+            "mode": "historical-simulation",
+            "scopeId": "21988d14cedd4f6713793168d8152a56f2bca1520d01832218d9afb633b39cd7",
+            "trainStart": 1790883005000,
+            "validationStart": 1791487805000,
+            "testStart": 1792092605000,
+            "testEnd": 1792697405000,
+            "embargoMs": 0
+          },
+          "trainAsOf": 1791487804999,
+          "validationAsOf": 1792092604999,
+          "testAsOf": 1792697404999,
+          "preprocessor": {
+            "version": "policy-preprocessor-v1",
+            "scopeId": "21988d14cedd4f6713793168d8152a56f2bca1520d01832218d9afb633b39cd7",
+            "asOf": 1791487804999,
+            "trainStart": 1790883005000,
+            "rows": 16,
+            "featureFields": [
+              "rsi14",
+              "emaGapPct",
+              "hourlyGapPct",
+              "change1h",
+              "change4h",
+              "change24h",
+              "atrPct",
+              "volumeRatio",
+              "spreadBps",
+              "feeBps",
+              "slippageCapBps",
+              "assumedSlippageBps",
+              "directionalEfficiency",
+              "priorSupportDistancePct",
+              "priorResistanceDistancePct",
+              "btcCorrelation48h",
+              "upsideBreakout",
+              "downsideBreakout",
+              "upsideRejection",
+              "downsideRejection",
+              "twoSidedSweep"
+            ],
+            "trainingIds": [
+              "6d3c897b44a1751899e7263fb203e51f9f3a5b8aa6043d62dd2c58d5827c32f8",
+              "8bd40a8fedde2845ba217665e0e822769603111dbe8bdef45373ced029fb414f",
+              "1517aae9a7c98c0b292ad881fab80e6ce4b6b6714a8eab9bb2b173b06e9c064c",
+              "827c8610f458c09cca5e739bbb34d16c735effbde976c995e74c9b38bd7a4f00",
+              "b74f5fb199b1a4b5fe73da71bcf5d4f5c6ef824969effae7f54a5dfde283e0ce",
+              "ea56e1f77f9bba5d8c2b1c2fd7923818c1694d13b21ee85f0fe39f1691a116f0",
+              "d82178fc59a070ae766adb433d25922ec29e942959717b3eeaef4c931a957ca9",
+              "868f9360519a6a77d9b1a66615e73b45f2f02ff7efe01e7e116abcb2c440f912",
+              "553e1b3ca9e005d6d2a6b2c29430a8bcbf20f1ed8b2af65810f08647484f7200",
+              "889af67b294d5c35c10e3180d65cac052b35ebd408f9ad3cd20c6433c985ce80",
+              "cc0b20ea3c59ca2ce63cfca74f418e8b92b33fbf6cb27ec8f91de18ac8409e46",
+              "01ebd3832cf51ac6ac451790eb21b72c24c3eaa1825e89dc82b44521ccfe90e6",
+              "683d753b80daa75b727b669f76bab854af265c1f60338a032419cdcb8a34872b",
+              "8f8cd72c13b1e0010394ce26a1d8d821cb5af2ee03dc6902183b872a4a087575",
+              "759eff286c8a7010abd3aba6248e94db91dee9692370152e9c0a890a7beb01d7",
+              "5fb4cba9e331f1950d64dddd087dd2f54ee392e3855fdfb1e41a26930ead510b"
+            ],
+            "trainingInputHashes": [
+              "001963b151447c1e2a6532212fbdcd16ec884241c22c2a00b05e8cd4357a625b",
+              "65ce09725dbbd16aea67ee029697ccb5246b93c01312641aa53aa323a3c0089c",
+              "a8b1121be79cadb6fa271b354254eb104538a87b4e2bc9bb0bd081be1c23f05f",
+              "e8652056f741d3822ac2d1d06ab586f2650d8feaec9f9e72a4b5e44d2aa183d2",
+              "cbd6dc956148d38f14fad9bbf0425bb98f7970c6a9d9348f2c29d7a8194e6208",
+              "b6be17ed11f3ff537b74d8d6460b72835dc696f9a97dd814a8897d7a7dd396d5",
+              "43bd61595ada597b0c3f9ec44495b234db08ec371b15d1445720cff701d11547",
+              "8770d1a791a779fe40e02904ff61be89015af6edf4c80d585b3e1759dbe6db4c",
+              "3cd10b885d6c40562b53e868991ba2a611bb2c766972cb941a42b832224af5a3",
+              "76c07270cab51711eb3ee65350be048f44428f7b526dc63bd20d28025ec5be28",
+              "5c41ebefe4b626b05ed633250f10d711dc4c2edd61d6ebbd3febc42f89685199",
+              "bb212e5c88d54ecc79bc309aba861251d71f30c80fe651754139d546b734502f",
+              "7b20a07fecdbf68f040aecac518e2c11b3725029200714cc3b622ce5de9a5ca3",
+              "eb71ffea8fd4d1b6e92640750a9798f84fe901fd9a37d6c915f0541a74282ec8",
+              "425c2902d0d85601169e04885584363a42ae3cce04c018127f088581f559145f",
+              "b8427d3ea6abde27df4fff2b754be13d35aefd584f03eaafb8d38ad58317b07d"
+            ],
+            "columns": [
+              {
+                "count": 16,
+                "mean": 60.792177461199365,
+                "std": 5.8835427590429665
+              },
+              {
+                "count": 16,
+                "mean": 0.7618201377699085,
+                "std": 0.7364737348174831
+              },
+              {
+                "count": 16,
+                "mean": 2.9899637547382008,
+                "std": 2.3375876012243775
+              },
+              {
+                "count": 16,
+                "mean": 0.4580280836492293,
+                "std": 1.0422384431963898
+              },
+              {
+                "count": 16,
+                "mean": 1.923108839925841,
+                "std": 2.0220907122097866
+              },
+              {
+                "count": 16,
+                "mean": 4.191542429969734,
+                "std": 4.2100522138992975
+              },
+              {
+                "count": 16,
+                "mean": 0.6505875632546061,
+                "std": 0.5763913171776359
+              },
+              {
+                "count": 16,
+                "mean": 3.372664460159948,
+                "std": 3.5500913108987904
+              },
+              {
+                "count": 16,
+                "mean": 5.001250312579169,
+                "std": 8.667190537890148e-13
+              },
+              {
+                "count": 16,
+                "mean": 10,
+                "std": 0
+              },
+              {
+                "count": 16,
+                "mean": 15,
+                "std": 0
+              },
+              {
+                "count": 16,
+                "mean": 5,
+                "std": 0
+              },
+              {
+                "count": 16,
+                "mean": 0.22858170674533926,
+                "std": 0.1289845551190751
+              },
+              {
+                "count": 16,
+                "mean": 2.865512202864192,
+                "std": 2.080737850724773
+              },
+              {
+                "count": 16,
+                "mean": 1.8318738473732916,
+                "std": 3.1418559220248543
+              },
+              {
+                "count": 16,
+                "mean": 0.2278678762654514,
+                "std": 0.20030807954510205
+              },
+              {
+                "count": 16,
+                "mean": 0.25,
+                "std": 0.4330127018922193
+              },
+              {
+                "count": 16,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 16,
+                "mean": 0.0625,
+                "std": 0.24206145913796356
+              },
+              {
+                "count": 16,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 16,
+                "mean": 0,
+                "std": 0
+              }
+            ],
+            "classes": {
+              "profit": 2,
+              "loss": 14,
+              "break-even": 0
+            },
+            "classWeights": {
+              "profit": 4,
+              "loss": 0.5714285714285714,
+              "break-even": null
+            },
+            "hash": "162742adc971ce5d22533ddbb99c81ea3e8199e4ec9ea7c5c79542d81d4b3195"
+          },
+          "train": {
+            "rows": 16,
+            "entriesInWindow": 16,
+            "unsupportedCells": 0,
+            "ids": [
+              "6d3c897b44a1751899e7263fb203e51f9f3a5b8aa6043d62dd2c58d5827c32f8",
+              "8bd40a8fedde2845ba217665e0e822769603111dbe8bdef45373ced029fb414f",
+              "1517aae9a7c98c0b292ad881fab80e6ce4b6b6714a8eab9bb2b173b06e9c064c",
+              "827c8610f458c09cca5e739bbb34d16c735effbde976c995e74c9b38bd7a4f00",
+              "b74f5fb199b1a4b5fe73da71bcf5d4f5c6ef824969effae7f54a5dfde283e0ce",
+              "ea56e1f77f9bba5d8c2b1c2fd7923818c1694d13b21ee85f0fe39f1691a116f0",
+              "d82178fc59a070ae766adb433d25922ec29e942959717b3eeaef4c931a957ca9",
+              "868f9360519a6a77d9b1a66615e73b45f2f02ff7efe01e7e116abcb2c440f912",
+              "553e1b3ca9e005d6d2a6b2c29430a8bcbf20f1ed8b2af65810f08647484f7200",
+              "889af67b294d5c35c10e3180d65cac052b35ebd408f9ad3cd20c6433c985ce80",
+              "cc0b20ea3c59ca2ce63cfca74f418e8b92b33fbf6cb27ec8f91de18ac8409e46",
+              "01ebd3832cf51ac6ac451790eb21b72c24c3eaa1825e89dc82b44521ccfe90e6",
+              "683d753b80daa75b727b669f76bab854af265c1f60338a032419cdcb8a34872b",
+              "8f8cd72c13b1e0010394ce26a1d8d821cb5af2ee03dc6902183b872a4a087575",
+              "759eff286c8a7010abd3aba6248e94db91dee9692370152e9c0a890a7beb01d7",
+              "5fb4cba9e331f1950d64dddd087dd2f54ee392e3855fdfb1e41a26930ead510b"
+            ]
+          },
+          "validation": {
+            "rows": 12,
+            "entriesInWindow": 12,
+            "unsupportedCells": 0,
+            "ids": [
+              "46b0d9c59c94c03dc44b7da32e2ab7b3128aa46565aac5572ad2131964e0d5cf",
+              "dbf32ffc6a2793ce278d8c5ddfe20f0ffa39882e10b7e841212aaedd52fdd81f",
+              "4e3c9d2788043ec32ba18fb55485f54288292f0efdbeae467474d2664f80da7b",
+              "16fa9e61dc4be72a9eae7c37f24bf34effa8b7edcc504567217d2afd738d38f6",
+              "eae4bc56f2d5607ed3fd1fbb328806f9559c6ea1a835837378300453e5b5a206",
+              "527e174472913c69559bae8d1378fd7fbd2d6a44d2c2eebb239718c185ed118a",
+              "911f8da6341d19920633c068421273d24a7155388864d8a7f494e3a5ce4d8dc0",
+              "108d2ffc2a2543b914308f7d101f97d61cab2208ecc93fcab74f98351bad57ac",
+              "d93eacec5538ab92575f826e86448f732eec961d3b0d7cbcec0fc9ec37b79f6d",
+              "b690bfa2945a63c3078ff9142735eb1ce3b9fb0969b586a5bac3cd199bf6676e",
+              "62d88720914403b2788569676734526830798b3266c7ae2dffe6d81d54d3bc90",
+              "7d1d46eff23b6c3cfb137c44e7ecded5b350b747562070ccb59ae2e76f1c54fd"
+            ]
+          },
+          "test": {
+            "rows": 15,
+            "entriesInWindow": 16,
+            "unsupportedCells": 0,
+            "ids": [
+              "87aff30eaef52e5a94cc012981b54a121209c54360aee892f2717516f6c40ff9",
+              "f06467937fbb5ad81877b432616e6a92e5d951af720c2616d5f06a49917b4b67",
+              "ed30af85cb41f443db83f79f6cef34a385b6569f125c57ef89eadaf7bb11884c",
+              "4a33a9137dc8c129072e3de7529c51566492fb0e1671a34530a33501cb7c1267",
+              "2fb2245e1edbb44b02acd7d7e72174b96bdef7dcd1a22c1122abf5c0d885a8a3",
+              "bacd44ead6a76d2697981eb5b7f63e0655e716f18ce0a879f8515e0a556043c2",
+              "8372a4da9c40db59a9043a8f9b70dfc3e0bcd70701c65a6370046979975dab91",
+              "d716dd0a8c8a8aca6ab029eefaf2a4e83585d8698ec2b8b1bf464274db2d0613",
+              "1c921c899ac16da9bcb997838daf13240696f06434a2b4dcb4c8403a24a47754",
+              "7882b15ca70d166d66a2157758f880b5c5c9efde2e9fbc5407f10e5d5637dbc0",
+              "a30bd4f92f65ee95ea47b6e82ef0841ed3dc0b0cbdd9a385e42331ccd3b3e6ba",
+              "7e010b1a33865bbbe713e7843be852aa0f74862ca6ec74e469e01e4ab8e249c7",
+              "8fa9b3a642f494ad4fe86a6539b592c195dd7153e6c85e1d1ed3d0afb9364c8c",
+              "8e27b22813b439fef4545c3f8f407e41ca30f86bef32fe5799b1b88c07778732",
+              "a984b6ebbe5f6e5366f736bc0f9c919956662d419237e6373c5e7cc040b88f31"
+            ]
+          },
+          "modelTrained": false,
+          "independentSamples": null
+        },
+        {
+          "options": {
+            "mode": "historical-simulation",
+            "scopeId": "21988d14cedd4f6713793168d8152a56f2bca1520d01832218d9afb633b39cd7",
+            "trainStart": 1790883005000,
+            "validationStart": 1792092605000,
+            "testStart": 1792697405000,
+            "testEnd": 1793216705000,
+            "embargoMs": 0
+          },
+          "trainAsOf": 1792092604999,
+          "validationAsOf": 1792697404999,
+          "testAsOf": 1793216704999,
+          "preprocessor": {
+            "version": "policy-preprocessor-v1",
+            "scopeId": "21988d14cedd4f6713793168d8152a56f2bca1520d01832218d9afb633b39cd7",
+            "asOf": 1792092604999,
+            "trainStart": 1790883005000,
+            "rows": 28,
+            "featureFields": [
+              "rsi14",
+              "emaGapPct",
+              "hourlyGapPct",
+              "change1h",
+              "change4h",
+              "change24h",
+              "atrPct",
+              "volumeRatio",
+              "spreadBps",
+              "feeBps",
+              "slippageCapBps",
+              "assumedSlippageBps",
+              "directionalEfficiency",
+              "priorSupportDistancePct",
+              "priorResistanceDistancePct",
+              "btcCorrelation48h",
+              "upsideBreakout",
+              "downsideBreakout",
+              "upsideRejection",
+              "downsideRejection",
+              "twoSidedSweep"
+            ],
+            "trainingIds": [
+              "6d3c897b44a1751899e7263fb203e51f9f3a5b8aa6043d62dd2c58d5827c32f8",
+              "8bd40a8fedde2845ba217665e0e822769603111dbe8bdef45373ced029fb414f",
+              "1517aae9a7c98c0b292ad881fab80e6ce4b6b6714a8eab9bb2b173b06e9c064c",
+              "827c8610f458c09cca5e739bbb34d16c735effbde976c995e74c9b38bd7a4f00",
+              "b74f5fb199b1a4b5fe73da71bcf5d4f5c6ef824969effae7f54a5dfde283e0ce",
+              "ea56e1f77f9bba5d8c2b1c2fd7923818c1694d13b21ee85f0fe39f1691a116f0",
+              "d82178fc59a070ae766adb433d25922ec29e942959717b3eeaef4c931a957ca9",
+              "868f9360519a6a77d9b1a66615e73b45f2f02ff7efe01e7e116abcb2c440f912",
+              "553e1b3ca9e005d6d2a6b2c29430a8bcbf20f1ed8b2af65810f08647484f7200",
+              "889af67b294d5c35c10e3180d65cac052b35ebd408f9ad3cd20c6433c985ce80",
+              "cc0b20ea3c59ca2ce63cfca74f418e8b92b33fbf6cb27ec8f91de18ac8409e46",
+              "01ebd3832cf51ac6ac451790eb21b72c24c3eaa1825e89dc82b44521ccfe90e6",
+              "683d753b80daa75b727b669f76bab854af265c1f60338a032419cdcb8a34872b",
+              "8f8cd72c13b1e0010394ce26a1d8d821cb5af2ee03dc6902183b872a4a087575",
+              "759eff286c8a7010abd3aba6248e94db91dee9692370152e9c0a890a7beb01d7",
+              "5fb4cba9e331f1950d64dddd087dd2f54ee392e3855fdfb1e41a26930ead510b",
+              "46b0d9c59c94c03dc44b7da32e2ab7b3128aa46565aac5572ad2131964e0d5cf",
+              "dbf32ffc6a2793ce278d8c5ddfe20f0ffa39882e10b7e841212aaedd52fdd81f",
+              "4e3c9d2788043ec32ba18fb55485f54288292f0efdbeae467474d2664f80da7b",
+              "16fa9e61dc4be72a9eae7c37f24bf34effa8b7edcc504567217d2afd738d38f6",
+              "eae4bc56f2d5607ed3fd1fbb328806f9559c6ea1a835837378300453e5b5a206",
+              "527e174472913c69559bae8d1378fd7fbd2d6a44d2c2eebb239718c185ed118a",
+              "911f8da6341d19920633c068421273d24a7155388864d8a7f494e3a5ce4d8dc0",
+              "108d2ffc2a2543b914308f7d101f97d61cab2208ecc93fcab74f98351bad57ac",
+              "d93eacec5538ab92575f826e86448f732eec961d3b0d7cbcec0fc9ec37b79f6d",
+              "b690bfa2945a63c3078ff9142735eb1ce3b9fb0969b586a5bac3cd199bf6676e",
+              "62d88720914403b2788569676734526830798b3266c7ae2dffe6d81d54d3bc90",
+              "7d1d46eff23b6c3cfb137c44e7ecded5b350b747562070ccb59ae2e76f1c54fd"
+            ],
+            "trainingInputHashes": [
+              "001963b151447c1e2a6532212fbdcd16ec884241c22c2a00b05e8cd4357a625b",
+              "65ce09725dbbd16aea67ee029697ccb5246b93c01312641aa53aa323a3c0089c",
+              "a8b1121be79cadb6fa271b354254eb104538a87b4e2bc9bb0bd081be1c23f05f",
+              "e8652056f741d3822ac2d1d06ab586f2650d8feaec9f9e72a4b5e44d2aa183d2",
+              "cbd6dc956148d38f14fad9bbf0425bb98f7970c6a9d9348f2c29d7a8194e6208",
+              "b6be17ed11f3ff537b74d8d6460b72835dc696f9a97dd814a8897d7a7dd396d5",
+              "43bd61595ada597b0c3f9ec44495b234db08ec371b15d1445720cff701d11547",
+              "8770d1a791a779fe40e02904ff61be89015af6edf4c80d585b3e1759dbe6db4c",
+              "3cd10b885d6c40562b53e868991ba2a611bb2c766972cb941a42b832224af5a3",
+              "76c07270cab51711eb3ee65350be048f44428f7b526dc63bd20d28025ec5be28",
+              "5c41ebefe4b626b05ed633250f10d711dc4c2edd61d6ebbd3febc42f89685199",
+              "bb212e5c88d54ecc79bc309aba861251d71f30c80fe651754139d546b734502f",
+              "7b20a07fecdbf68f040aecac518e2c11b3725029200714cc3b622ce5de9a5ca3",
+              "eb71ffea8fd4d1b6e92640750a9798f84fe901fd9a37d6c915f0541a74282ec8",
+              "425c2902d0d85601169e04885584363a42ae3cce04c018127f088581f559145f",
+              "b8427d3ea6abde27df4fff2b754be13d35aefd584f03eaafb8d38ad58317b07d",
+              "054e6481de8962dfec34884baba160a76699679c1505b50697aba216cc691313",
+              "21222c9945565b100c44aea864ea0c71de79ab34bcfa49136bf2f21912fbbb15",
+              "d2ecef97b8ece41274fcf05c57a605752c6f271a0e98ca9fb120dc029a08dd0e",
+              "38adc9a20c22c0f0239fe30c0ba67402ba8b194ef8f3701a1028dce8f3a15285",
+              "b00bb481b864e4841b4d6c6e70989d922da891cb92d208bae9e0b07aeb1d86f1",
+              "3b6af9785c28dd615636ae8271c29c79a282caef08068249225df49257c4631f",
+              "442381837688ff3f242140ba5214405017394f4fe9803a7011abb7a7f9d3864c",
+              "7caf49849e4119e3cfe34b94230277b037ab86d5fab246ca978d8f93d693b6f2",
+              "eeab6e41f4a215db4ddc6ae8a8ec5c4c4c3b084e2661d68b231597f3c2f2fa1e",
+              "6b2cdb9158942214f0769ec7d04e072262a105bf684cf124d1be7129238609b2",
+              "08c489162efa973b60cf09aa82a4a0818e3be81a09dcf41a07017969357ff97a",
+              "dc19d36cdcad693bc0ac627e094c765cc7c960ea49f5feb0b088118f979c705f"
+            ],
+            "columns": [
+              {
+                "count": 28,
+                "mean": 60.72158275848806,
+                "std": 6.298576975072891
+              },
+              {
+                "count": 28,
+                "mean": 0.6829370148631642,
+                "std": 0.6089978136430093
+              },
+              {
+                "count": 28,
+                "mean": 2.5492105593360117,
+                "std": 2.2150037525437933
+              },
+              {
+                "count": 28,
+                "mean": 0.3076328443764452,
+                "std": 1.0367023210603554
+              },
+              {
+                "count": 28,
+                "mean": 1.5415603666775053,
+                "std": 1.6645282348357766
+              },
+              {
+                "count": 28,
+                "mean": 4.3617654304865265,
+                "std": 4.305799634943051
+              },
+              {
+                "count": 28,
+                "mean": 0.5457487329866367,
+                "std": 0.4816138526638991
+              },
+              {
+                "count": 28,
+                "mean": 3.3607017270213317,
+                "std": 3.404129564321797
+              },
+              {
+                "count": 28,
+                "mean": 5.001250312578874,
+                "std": 1.037159704692311e-12
+              },
+              {
+                "count": 28,
+                "mean": 10,
+                "std": 0
+              },
+              {
+                "count": 28,
+                "mean": 15,
+                "std": 0
+              },
+              {
+                "count": 28,
+                "mean": 5,
+                "std": 0
+              },
+              {
+                "count": 28,
+                "mean": 0.23423251342864415,
+                "std": 0.126054663413988
+              },
+              {
+                "count": 28,
+                "mean": 2.419367817175671,
+                "std": 1.700586447325226
+              },
+              {
+                "count": 28,
+                "mean": 1.3055018355085963,
+                "std": 2.5914611586398784
+              },
+              {
+                "count": 28,
+                "mean": 0.23543885586571972,
+                "std": 0.207184648892739
+              },
+              {
+                "count": 28,
+                "mean": 0.25000000000000006,
+                "std": 0.4330127018922193
+              },
+              {
+                "count": 28,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 28,
+                "mean": 0.10714285714285715,
+                "std": 0.30929478706587094
+              },
+              {
+                "count": 28,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 28,
+                "mean": 0,
+                "std": 0
+              }
+            ],
+            "classes": {
+              "profit": 5,
+              "loss": 23,
+              "break-even": 0
+            },
+            "classWeights": {
+              "profit": 2.8,
+              "loss": 0.6086956521739131,
+              "break-even": null
+            },
+            "hash": "364e2f890539e035c0a01fea640aed00ebe09f06bac1666ba12ef0835b55db37"
+          },
+          "train": {
+            "rows": 28,
+            "entriesInWindow": 28,
+            "unsupportedCells": 0,
+            "ids": [
+              "6d3c897b44a1751899e7263fb203e51f9f3a5b8aa6043d62dd2c58d5827c32f8",
+              "8bd40a8fedde2845ba217665e0e822769603111dbe8bdef45373ced029fb414f",
+              "1517aae9a7c98c0b292ad881fab80e6ce4b6b6714a8eab9bb2b173b06e9c064c",
+              "827c8610f458c09cca5e739bbb34d16c735effbde976c995e74c9b38bd7a4f00",
+              "b74f5fb199b1a4b5fe73da71bcf5d4f5c6ef824969effae7f54a5dfde283e0ce",
+              "ea56e1f77f9bba5d8c2b1c2fd7923818c1694d13b21ee85f0fe39f1691a116f0",
+              "d82178fc59a070ae766adb433d25922ec29e942959717b3eeaef4c931a957ca9",
+              "868f9360519a6a77d9b1a66615e73b45f2f02ff7efe01e7e116abcb2c440f912",
+              "553e1b3ca9e005d6d2a6b2c29430a8bcbf20f1ed8b2af65810f08647484f7200",
+              "889af67b294d5c35c10e3180d65cac052b35ebd408f9ad3cd20c6433c985ce80",
+              "cc0b20ea3c59ca2ce63cfca74f418e8b92b33fbf6cb27ec8f91de18ac8409e46",
+              "01ebd3832cf51ac6ac451790eb21b72c24c3eaa1825e89dc82b44521ccfe90e6",
+              "683d753b80daa75b727b669f76bab854af265c1f60338a032419cdcb8a34872b",
+              "8f8cd72c13b1e0010394ce26a1d8d821cb5af2ee03dc6902183b872a4a087575",
+              "759eff286c8a7010abd3aba6248e94db91dee9692370152e9c0a890a7beb01d7",
+              "5fb4cba9e331f1950d64dddd087dd2f54ee392e3855fdfb1e41a26930ead510b",
+              "46b0d9c59c94c03dc44b7da32e2ab7b3128aa46565aac5572ad2131964e0d5cf",
+              "dbf32ffc6a2793ce278d8c5ddfe20f0ffa39882e10b7e841212aaedd52fdd81f",
+              "4e3c9d2788043ec32ba18fb55485f54288292f0efdbeae467474d2664f80da7b",
+              "16fa9e61dc4be72a9eae7c37f24bf34effa8b7edcc504567217d2afd738d38f6",
+              "eae4bc56f2d5607ed3fd1fbb328806f9559c6ea1a835837378300453e5b5a206",
+              "527e174472913c69559bae8d1378fd7fbd2d6a44d2c2eebb239718c185ed118a",
+              "911f8da6341d19920633c068421273d24a7155388864d8a7f494e3a5ce4d8dc0",
+              "108d2ffc2a2543b914308f7d101f97d61cab2208ecc93fcab74f98351bad57ac",
+              "d93eacec5538ab92575f826e86448f732eec961d3b0d7cbcec0fc9ec37b79f6d",
+              "b690bfa2945a63c3078ff9142735eb1ce3b9fb0969b586a5bac3cd199bf6676e",
+              "62d88720914403b2788569676734526830798b3266c7ae2dffe6d81d54d3bc90",
+              "7d1d46eff23b6c3cfb137c44e7ecded5b350b747562070ccb59ae2e76f1c54fd"
+            ]
+          },
+          "validation": {
+            "rows": 15,
+            "entriesInWindow": 16,
+            "unsupportedCells": 0,
+            "ids": [
+              "87aff30eaef52e5a94cc012981b54a121209c54360aee892f2717516f6c40ff9",
+              "f06467937fbb5ad81877b432616e6a92e5d951af720c2616d5f06a49917b4b67",
+              "ed30af85cb41f443db83f79f6cef34a385b6569f125c57ef89eadaf7bb11884c",
+              "4a33a9137dc8c129072e3de7529c51566492fb0e1671a34530a33501cb7c1267",
+              "2fb2245e1edbb44b02acd7d7e72174b96bdef7dcd1a22c1122abf5c0d885a8a3",
+              "bacd44ead6a76d2697981eb5b7f63e0655e716f18ce0a879f8515e0a556043c2",
+              "8372a4da9c40db59a9043a8f9b70dfc3e0bcd70701c65a6370046979975dab91",
+              "d716dd0a8c8a8aca6ab029eefaf2a4e83585d8698ec2b8b1bf464274db2d0613",
+              "1c921c899ac16da9bcb997838daf13240696f06434a2b4dcb4c8403a24a47754",
+              "7882b15ca70d166d66a2157758f880b5c5c9efde2e9fbc5407f10e5d5637dbc0",
+              "a30bd4f92f65ee95ea47b6e82ef0841ed3dc0b0cbdd9a385e42331ccd3b3e6ba",
+              "7e010b1a33865bbbe713e7843be852aa0f74862ca6ec74e469e01e4ab8e249c7",
+              "8fa9b3a642f494ad4fe86a6539b592c195dd7153e6c85e1d1ed3d0afb9364c8c",
+              "8e27b22813b439fef4545c3f8f407e41ca30f86bef32fe5799b1b88c07778732",
+              "a984b6ebbe5f6e5366f736bc0f9c919956662d419237e6373c5e7cc040b88f31"
+            ]
+          },
+          "test": {
+            "rows": 10,
+            "entriesInWindow": 10,
+            "unsupportedCells": 0,
+            "ids": [
+              "9f2a48ccf67f181e19d9dea815c099df67ef4b1452c4e724af5e46e99b536ad5",
+              "e1cd2babeab6bd0eb961f77e1fd0998856ae623c29301fdb50493f734f44e407",
+              "e68dbe3c2fb2cda1dd64bd1ca2dc94395e9a74f1f966b0f226a561b863fe0dd4",
+              "528f92285e06199468d706832c8be2913b6114206207869d64f0d58701286724",
+              "5075578a6f9f7b4ca487498b9fb224e7fc1f0e24c59b409cfc3655a1b60249ab",
+              "04f8e1d2cb1f5a6dad026e006799887f30be7e6e54bc61943bb5f6c15ab70a78",
+              "d6d1cb6a9394ce60a8188781702c54ef8f905a5895711c3d739c2c59f98e6b62",
+              "8bebccfbe53df619863780293abada929ace80c6a231474a70d07ed116dbfcbb",
+              "3404a40d1521815b3c7b093546f31e18b70ec491ec82f6a3ab0669fdfba852b1",
+              "586fe9138c9782cbb385a4a3646e81dfd9f1249ddd49dc460174aa7c3b69f419"
+            ]
+          },
+          "modelTrained": false,
+          "independentSamples": null
+        }
+      ]
+    },
+    {
+      "scenario": "base",
+      "variant": "mock-v2",
+      "scopeId": "a5e1a4ce1f254403b4116420549c1b7c55b41acf4a64665949ecc9f4d55cb0db",
+      "folds": [
+        {
+          "options": {
+            "mode": "historical-simulation",
+            "scopeId": "a5e1a4ce1f254403b4116420549c1b7c55b41acf4a64665949ecc9f4d55cb0db",
+            "trainStart": 1790883005000,
+            "validationStart": 1791487805000,
+            "testStart": 1792092605000,
+            "testEnd": 1792697405000,
+            "embargoMs": 0
+          },
+          "trainAsOf": 1791487804999,
+          "validationAsOf": 1792092604999,
+          "testAsOf": 1792697404999,
+          "preprocessor": {
+            "version": "policy-preprocessor-v1",
+            "scopeId": "a5e1a4ce1f254403b4116420549c1b7c55b41acf4a64665949ecc9f4d55cb0db",
+            "asOf": 1791487804999,
+            "trainStart": 1790883005000,
+            "rows": 11,
+            "featureFields": [
+              "rsi14",
+              "emaGapPct",
+              "hourlyGapPct",
+              "change1h",
+              "change4h",
+              "change24h",
+              "atrPct",
+              "volumeRatio",
+              "spreadBps",
+              "feeBps",
+              "slippageCapBps",
+              "assumedSlippageBps",
+              "directionalEfficiency",
+              "priorSupportDistancePct",
+              "priorResistanceDistancePct",
+              "btcCorrelation48h",
+              "upsideBreakout",
+              "downsideBreakout",
+              "upsideRejection",
+              "downsideRejection",
+              "twoSidedSweep"
+            ],
+            "trainingIds": [
+              "0446d760fb8fdb382f195f8c19480728b6a4fb86d2c45792ba172833adfe8959",
+              "d3c6cd97fcae78a977d683f482cf83da5eed911511fc93d508760f2889847d14",
+              "452029ab9aff67ccf77e28171736f0972f2f6ca0b14b30e454029b0e6d28c7e2",
+              "5b803bf87f41b81a62e4d8acf2a19a4594d65e8d12e04bf06206100ca1ae5fa3",
+              "682fd802329cd4c90303dfcf4d6522997d7130beb3c2ff297deedb5c9c7aaeb0",
+              "00ef50b7a54207c93cbd593563e38729b1d311d05316a82e03126a4986c333d5",
+              "87aa0ed842af00417b2da2683185fb592e7a9dcd604aedb1f6fa635f4f328253",
+              "89e52c2b24dbbf021ded456f5e9338b34383458b85976f5d2da91eddfb079ec2",
+              "1799ec7cd86db2da7a1c965981c062e9fc9b019dace813fc117e46892af33ce8",
+              "fb60198a8aa12c71bfb2a841d61b7bc18dae9e279bfed5240bd5216b5ecf2aa8",
+              "c4054e5237f4ba55fb29f0dcbdb685cfbabf5f6994e0ba4a1f5cd43599975a0d"
+            ],
+            "trainingInputHashes": [
+              "35871d08ddf11209262bd3d7f2a18a5d39aae9d2ac39d7b021a00a9d7c271841",
+              "6bf136b93123b863a8760f6a94c4e6575af3add4705a7eafa81a6d65115be15f",
+              "af131409f31eeb1a153799969b8549b66192573ef7d3b37d5e11ef6d03e8eb05",
+              "3cfd901d6f70c087fa4d83f897643a830af760239ef0eb82e2a47d656a8a8337",
+              "8b912e42d09dddd4c45567b65de0096c9fa3ece1daea6e2c6cff271498680b1f",
+              "1dd28283d22adf011b4b21c808b90fa7ddf7b2095b05ebad5ec813e6a7ee32b9",
+              "f56a0cdd699fed630d5b32a6d44ab1be4f6eaf2924e20c44beea27f7838b7076",
+              "65b5f611cb401edd6e27beb88da7c49f0e206bcf10b781374b78e4c782e17d66",
+              "62284223654113f19714149c4cf4216905219e4375db3b16a84eb3b8aed6d18c",
+              "395e2a8a1b439cf2117da7c4a4f29313836891f88fa38e9f1e642945e3a74ada",
+              "84f2621d1d4e3ad049fde2f183f25f8274a33d714fce48c3a06060d06a51090f"
+            ],
+            "columns": [
+              {
+                "count": 11,
+                "mean": 62.93469683664144,
+                "std": 3.805554869838255
+              },
+              {
+                "count": 11,
+                "mean": 0.8847786176517007,
+                "std": 0.8000876951454426
+              },
+              {
+                "count": 11,
+                "mean": 2.9887888612236075,
+                "std": 2.5378497797039374
+              },
+              {
+                "count": 11,
+                "mean": 0.688945015996326,
+                "std": 1.1315363402599579
+              },
+              {
+                "count": 11,
+                "mean": 2.3593488988762386,
+                "std": 2.275689341772592
+              },
+              {
+                "count": 11,
+                "mean": 3.8951172386849597,
+                "std": 4.70645787793738
+              },
+              {
+                "count": 11,
+                "mean": 0.7073605576080765,
+                "std": 0.6600815248590396
+              },
+              {
+                "count": 11,
+                "mean": 5.470181025268095,
+                "std": 6.510170412558478
+              },
+              {
+                "count": 11,
+                "mean": 5.001250312578779,
+                "std": 1.068164545516062e-12
+              },
+              {
+                "count": 11,
+                "mean": 10,
+                "std": 0
+              },
+              {
+                "count": 11,
+                "mean": 15,
+                "std": 0
+              },
+              {
+                "count": 11,
+                "mean": 5,
+                "std": 0
+              },
+              {
+                "count": 11,
+                "mean": 0.3228401909745594,
+                "std": 0.09596921028960599
+              },
+              {
+                "count": 11,
+                "mean": 3.3814222607499094,
+                "std": 2.2272149548478675
+              },
+              {
+                "count": 11,
+                "mean": 1.7850239638101444,
+                "std": 3.4045582053126915
+              },
+              {
+                "count": 11,
+                "mean": 0.28260340138757534,
+                "std": 0.24851421258514605
+              },
+              {
+                "count": 11,
+                "mean": 0.1818181818181818,
+                "std": 0.38569460791993504
+              },
+              {
+                "count": 11,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 11,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 11,
+                "mean": 0.09090909090909093,
+                "std": 0.28747978728803447
+              },
+              {
+                "count": 11,
+                "mean": 0,
+                "std": 0
+              }
+            ],
+            "classes": {
+              "profit": 1,
+              "loss": 10,
+              "break-even": 0
+            },
+            "classWeights": {
+              "profit": 5.5,
+              "loss": 0.55,
+              "break-even": null
+            },
+            "hash": "6f4f0c66baf17ff1c1be8eb11f01248ece8ff5bcbb2f91873fd8f44263404e71"
+          },
+          "train": {
+            "rows": 11,
+            "entriesInWindow": 11,
+            "unsupportedCells": 0,
+            "ids": [
+              "0446d760fb8fdb382f195f8c19480728b6a4fb86d2c45792ba172833adfe8959",
+              "d3c6cd97fcae78a977d683f482cf83da5eed911511fc93d508760f2889847d14",
+              "452029ab9aff67ccf77e28171736f0972f2f6ca0b14b30e454029b0e6d28c7e2",
+              "5b803bf87f41b81a62e4d8acf2a19a4594d65e8d12e04bf06206100ca1ae5fa3",
+              "682fd802329cd4c90303dfcf4d6522997d7130beb3c2ff297deedb5c9c7aaeb0",
+              "00ef50b7a54207c93cbd593563e38729b1d311d05316a82e03126a4986c333d5",
+              "87aa0ed842af00417b2da2683185fb592e7a9dcd604aedb1f6fa635f4f328253",
+              "89e52c2b24dbbf021ded456f5e9338b34383458b85976f5d2da91eddfb079ec2",
+              "1799ec7cd86db2da7a1c965981c062e9fc9b019dace813fc117e46892af33ce8",
+              "fb60198a8aa12c71bfb2a841d61b7bc18dae9e279bfed5240bd5216b5ecf2aa8",
+              "c4054e5237f4ba55fb29f0dcbdb685cfbabf5f6994e0ba4a1f5cd43599975a0d"
+            ]
+          },
+          "validation": {
+            "rows": 7,
+            "entriesInWindow": 7,
+            "unsupportedCells": 0,
+            "ids": [
+              "82b3deb2cf4c684571d39f27e437f0917f336d25eda6d796d43664ae4a324212",
+              "b45afcfb281baef2fe902866f597d55bd0faa0b13157bf37a152fdab7cbe5b76",
+              "bd680e45b49f517a751647925935c87ea00a1e1e22d65a83ccee464143240ccf",
+              "0502d8610d3ad480d6da2ffb811083eb2c3a5f7c2b0c3c7e0efe23f6994a919e",
+              "be67eebbd1c1e33d2f3225e2ee4281d0746558b21102c408f604e1baa57273ce",
+              "ac05a4aab93d0617c5abf7118a314f4a1ada82e54309a9376882d1be79fe59ee",
+              "8fe697f5ee4cb535e4fc676b83697b9384652d1a06b668f609b6ec74fe63b32e"
+            ]
+          },
+          "test": {
+            "rows": 11,
+            "entriesInWindow": 12,
+            "unsupportedCells": 0,
+            "ids": [
+              "91ba8bed97c053e3a2fc37d1021682c92933aa06c8828d575a0b014435aca1c2",
+              "db72b6c83e516b58a4fd01aa55e2fb07309715c7aed6eb662f03df7d871de170",
+              "1c2027b288a86ae56d8896b2cb930abc6ac10b208975eea0f4024f21fbfb40f5",
+              "12629e7d4ff46d8230e7163c2d569904c8b2b1046cb2cecc4e8c6610bc1b815e",
+              "bc77dd9f2ddfa45014dae62151cf70cc1f8f582842033b90f6a32207e2ff4139",
+              "75d8c093e8ee8a666d48d9e46cd922b4fa997551864409ff0eec69d06e320249",
+              "44cb5ab08631f501e90ed7ace3c6cb2564a16609f19a84b735b3823eed1f1215",
+              "3e3655b41ed88d9974db89735d180085b9618f7e799b59603b52f9e7d197d360",
+              "e36124b18c84dc10cfe06145daf459371edff12e01f61bdee2156c8872c0b422",
+              "74a661b379c4d415d1bc5f0b0f7fc0154fe55eb89f0895e14aaa72cd14d37576",
+              "6388273edc4cbfa20e5197a368686e20efd51ea293b4e043564de942958df8df"
+            ]
+          },
+          "modelTrained": false,
+          "independentSamples": null
+        },
+        {
+          "options": {
+            "mode": "historical-simulation",
+            "scopeId": "a5e1a4ce1f254403b4116420549c1b7c55b41acf4a64665949ecc9f4d55cb0db",
+            "trainStart": 1790883005000,
+            "validationStart": 1792092605000,
+            "testStart": 1792697405000,
+            "testEnd": 1793216705000,
+            "embargoMs": 0
+          },
+          "trainAsOf": 1792092604999,
+          "validationAsOf": 1792697404999,
+          "testAsOf": 1793216704999,
+          "preprocessor": {
+            "version": "policy-preprocessor-v1",
+            "scopeId": "a5e1a4ce1f254403b4116420549c1b7c55b41acf4a64665949ecc9f4d55cb0db",
+            "asOf": 1792092604999,
+            "trainStart": 1790883005000,
+            "rows": 18,
+            "featureFields": [
+              "rsi14",
+              "emaGapPct",
+              "hourlyGapPct",
+              "change1h",
+              "change4h",
+              "change24h",
+              "atrPct",
+              "volumeRatio",
+              "spreadBps",
+              "feeBps",
+              "slippageCapBps",
+              "assumedSlippageBps",
+              "directionalEfficiency",
+              "priorSupportDistancePct",
+              "priorResistanceDistancePct",
+              "btcCorrelation48h",
+              "upsideBreakout",
+              "downsideBreakout",
+              "upsideRejection",
+              "downsideRejection",
+              "twoSidedSweep"
+            ],
+            "trainingIds": [
+              "0446d760fb8fdb382f195f8c19480728b6a4fb86d2c45792ba172833adfe8959",
+              "d3c6cd97fcae78a977d683f482cf83da5eed911511fc93d508760f2889847d14",
+              "452029ab9aff67ccf77e28171736f0972f2f6ca0b14b30e454029b0e6d28c7e2",
+              "5b803bf87f41b81a62e4d8acf2a19a4594d65e8d12e04bf06206100ca1ae5fa3",
+              "682fd802329cd4c90303dfcf4d6522997d7130beb3c2ff297deedb5c9c7aaeb0",
+              "00ef50b7a54207c93cbd593563e38729b1d311d05316a82e03126a4986c333d5",
+              "87aa0ed842af00417b2da2683185fb592e7a9dcd604aedb1f6fa635f4f328253",
+              "89e52c2b24dbbf021ded456f5e9338b34383458b85976f5d2da91eddfb079ec2",
+              "1799ec7cd86db2da7a1c965981c062e9fc9b019dace813fc117e46892af33ce8",
+              "fb60198a8aa12c71bfb2a841d61b7bc18dae9e279bfed5240bd5216b5ecf2aa8",
+              "c4054e5237f4ba55fb29f0dcbdb685cfbabf5f6994e0ba4a1f5cd43599975a0d",
+              "82b3deb2cf4c684571d39f27e437f0917f336d25eda6d796d43664ae4a324212",
+              "b45afcfb281baef2fe902866f597d55bd0faa0b13157bf37a152fdab7cbe5b76",
+              "bd680e45b49f517a751647925935c87ea00a1e1e22d65a83ccee464143240ccf",
+              "0502d8610d3ad480d6da2ffb811083eb2c3a5f7c2b0c3c7e0efe23f6994a919e",
+              "be67eebbd1c1e33d2f3225e2ee4281d0746558b21102c408f604e1baa57273ce",
+              "ac05a4aab93d0617c5abf7118a314f4a1ada82e54309a9376882d1be79fe59ee",
+              "8fe697f5ee4cb535e4fc676b83697b9384652d1a06b668f609b6ec74fe63b32e"
+            ],
+            "trainingInputHashes": [
+              "35871d08ddf11209262bd3d7f2a18a5d39aae9d2ac39d7b021a00a9d7c271841",
+              "6bf136b93123b863a8760f6a94c4e6575af3add4705a7eafa81a6d65115be15f",
+              "af131409f31eeb1a153799969b8549b66192573ef7d3b37d5e11ef6d03e8eb05",
+              "3cfd901d6f70c087fa4d83f897643a830af760239ef0eb82e2a47d656a8a8337",
+              "8b912e42d09dddd4c45567b65de0096c9fa3ece1daea6e2c6cff271498680b1f",
+              "1dd28283d22adf011b4b21c808b90fa7ddf7b2095b05ebad5ec813e6a7ee32b9",
+              "f56a0cdd699fed630d5b32a6d44ab1be4f6eaf2924e20c44beea27f7838b7076",
+              "65b5f611cb401edd6e27beb88da7c49f0e206bcf10b781374b78e4c782e17d66",
+              "62284223654113f19714149c4cf4216905219e4375db3b16a84eb3b8aed6d18c",
+              "395e2a8a1b439cf2117da7c4a4f29313836891f88fa38e9f1e642945e3a74ada",
+              "84f2621d1d4e3ad049fde2f183f25f8274a33d714fce48c3a06060d06a51090f",
+              "afda665bfdfc844bed19b6f8ecdd79de6989913448f9afd334b5c46eba282c02",
+              "e82dc478767c822c249903481e0c2f5626034cf24da23aed18e013d7800832ad",
+              "b03f119e981507ef8ac4846c0d79d4e5ff8f7590731d2c0353c2d07f11839c47",
+              "c6cf172218fbbd9f54cba896187d24441033d3ba988cc915eb72108700197d7a",
+              "5e77e3f4e83b5a529adb11536d560813b9b14e92d7b25f76debd32fef598f660",
+              "d676c866c67697769d10ba0a22b73bbedbd5b58c1c8200b01ed8389339925301",
+              "9aa24dced460242936b043e9c380b40b5c2c1ac82b0aabb7a83284fb0ab4cb58"
+            ],
+            "columns": [
+              {
+                "count": 18,
+                "mean": 63.369762591503175,
+                "std": 4.848704518569448
+              },
+              {
+                "count": 18,
+                "mean": 0.7964329702547026,
+                "std": 0.6848079474626243
+              },
+              {
+                "count": 18,
+                "mean": 2.6223373429826036,
+                "std": 2.4829039012110616
+              },
+              {
+                "count": 18,
+                "mean": 0.5075769375333458,
+                "std": 1.0063002395076457
+              },
+              {
+                "count": 18,
+                "mean": 1.891818300138385,
+                "std": 1.9473615302191334
+              },
+              {
+                "count": 18,
+                "mean": 3.8808939509518736,
+                "std": 4.327909984654814
+              },
+              {
+                "count": 18,
+                "mean": 0.5428652724618794,
+                "std": 0.5616177750891524
+              },
+              {
+                "count": 18,
+                "mean": 11.156353315757064,
+                "std": 25.766476947227655
+              },
+              {
+                "count": 18,
+                "mean": 5.001250312578723,
+                "std": 1.0824842483564578e-12
+              },
+              {
+                "count": 18,
+                "mean": 10,
+                "std": 0
+              },
+              {
+                "count": 18,
+                "mean": 15,
+                "std": 0
+              },
+              {
+                "count": 18,
+                "mean": 5,
+                "std": 0
+              },
+              {
+                "count": 18,
+                "mean": 0.3121485301486649,
+                "std": 0.08551164112176887
+              },
+              {
+                "count": 18,
+                "mean": 2.7750048893680983,
+                "std": 1.9350660429067372
+              },
+              {
+                "count": 18,
+                "mean": 1.1333343806110672,
+                "std": 2.7978125141634838
+              },
+              {
+                "count": 18,
+                "mean": 0.30577406078078323,
+                "std": 0.2519043777585623
+              },
+              {
+                "count": 18,
+                "mean": 0.2777777777777778,
+                "std": 0.44790320823880836
+              },
+              {
+                "count": 18,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 18,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 18,
+                "mean": 0.055555555555555566,
+                "std": 0.2290614236454256
+              },
+              {
+                "count": 18,
+                "mean": 0,
+                "std": 0
+              }
+            ],
+            "classes": {
+              "profit": 2,
+              "loss": 16,
+              "break-even": 0
+            },
+            "classWeights": {
+              "profit": 4.5,
+              "loss": 0.5625,
+              "break-even": null
+            },
+            "hash": "5d459f0d72bae3c1754d43c7d602200cf0c87b77b5b0b45fc1d98f22545a9bf9"
+          },
+          "train": {
+            "rows": 18,
+            "entriesInWindow": 18,
+            "unsupportedCells": 0,
+            "ids": [
+              "0446d760fb8fdb382f195f8c19480728b6a4fb86d2c45792ba172833adfe8959",
+              "d3c6cd97fcae78a977d683f482cf83da5eed911511fc93d508760f2889847d14",
+              "452029ab9aff67ccf77e28171736f0972f2f6ca0b14b30e454029b0e6d28c7e2",
+              "5b803bf87f41b81a62e4d8acf2a19a4594d65e8d12e04bf06206100ca1ae5fa3",
+              "682fd802329cd4c90303dfcf4d6522997d7130beb3c2ff297deedb5c9c7aaeb0",
+              "00ef50b7a54207c93cbd593563e38729b1d311d05316a82e03126a4986c333d5",
+              "87aa0ed842af00417b2da2683185fb592e7a9dcd604aedb1f6fa635f4f328253",
+              "89e52c2b24dbbf021ded456f5e9338b34383458b85976f5d2da91eddfb079ec2",
+              "1799ec7cd86db2da7a1c965981c062e9fc9b019dace813fc117e46892af33ce8",
+              "fb60198a8aa12c71bfb2a841d61b7bc18dae9e279bfed5240bd5216b5ecf2aa8",
+              "c4054e5237f4ba55fb29f0dcbdb685cfbabf5f6994e0ba4a1f5cd43599975a0d",
+              "82b3deb2cf4c684571d39f27e437f0917f336d25eda6d796d43664ae4a324212",
+              "b45afcfb281baef2fe902866f597d55bd0faa0b13157bf37a152fdab7cbe5b76",
+              "bd680e45b49f517a751647925935c87ea00a1e1e22d65a83ccee464143240ccf",
+              "0502d8610d3ad480d6da2ffb811083eb2c3a5f7c2b0c3c7e0efe23f6994a919e",
+              "be67eebbd1c1e33d2f3225e2ee4281d0746558b21102c408f604e1baa57273ce",
+              "ac05a4aab93d0617c5abf7118a314f4a1ada82e54309a9376882d1be79fe59ee",
+              "8fe697f5ee4cb535e4fc676b83697b9384652d1a06b668f609b6ec74fe63b32e"
+            ]
+          },
+          "validation": {
+            "rows": 11,
+            "entriesInWindow": 12,
+            "unsupportedCells": 0,
+            "ids": [
+              "91ba8bed97c053e3a2fc37d1021682c92933aa06c8828d575a0b014435aca1c2",
+              "db72b6c83e516b58a4fd01aa55e2fb07309715c7aed6eb662f03df7d871de170",
+              "1c2027b288a86ae56d8896b2cb930abc6ac10b208975eea0f4024f21fbfb40f5",
+              "12629e7d4ff46d8230e7163c2d569904c8b2b1046cb2cecc4e8c6610bc1b815e",
+              "bc77dd9f2ddfa45014dae62151cf70cc1f8f582842033b90f6a32207e2ff4139",
+              "75d8c093e8ee8a666d48d9e46cd922b4fa997551864409ff0eec69d06e320249",
+              "44cb5ab08631f501e90ed7ace3c6cb2564a16609f19a84b735b3823eed1f1215",
+              "3e3655b41ed88d9974db89735d180085b9618f7e799b59603b52f9e7d197d360",
+              "e36124b18c84dc10cfe06145daf459371edff12e01f61bdee2156c8872c0b422",
+              "74a661b379c4d415d1bc5f0b0f7fc0154fe55eb89f0895e14aaa72cd14d37576",
+              "6388273edc4cbfa20e5197a368686e20efd51ea293b4e043564de942958df8df"
+            ]
+          },
+          "test": {
+            "rows": 9,
+            "entriesInWindow": 9,
+            "unsupportedCells": 0,
+            "ids": [
+              "f26bdd24ae3fc560ec406afae7c4ba36d8048bbf1bd9f88e1ddba751bb554ac7",
+              "bc517bcd17a02f71ccc0786d763c785dbcb27668a62c96af2116f1dbc0401f1d",
+              "53563cd3a9571d04393cfad9523c6742cbaf37adfb7e691ae9ac13dfc6467fca",
+              "bb88a8e5ecc69b974277c891778ff50ee17a9d8b6efd606b3f5455a1439b63b5",
+              "423877cd6b8d6b40d7aa0108171cfb53c7f0343eda107fcc363053a82ac38508",
+              "52438b2c2e858718162c27a73e2e7ea17c1269b4b229aa6041c5c8e79e28a727",
+              "e8f8183970a536bc8af2224656ffed5d279ac89eeac82cc4c0dac6cdb0df88b0",
+              "b5e9261ffefe41636447c78e9af86ca715abf29950fe0b52960618f38b1171e6",
+              "29a140446a86c261de0f9b3e5d56a90c17af336825a8bb3ede1afd83e3d18173"
+            ]
+          },
+          "modelTrained": false,
+          "independentSamples": null
+        }
+      ]
+    },
+    {
+      "scenario": "double-fee-adaptive",
+      "variant": "mock-v1",
+      "scopeId": "608f5527611031b37f80441e9f239c5ad4dbebb9b0b8e29adf5b9f87eb6643dc",
+      "folds": [
+        {
+          "options": {
+            "mode": "historical-simulation",
+            "scopeId": "608f5527611031b37f80441e9f239c5ad4dbebb9b0b8e29adf5b9f87eb6643dc",
+            "trainStart": 1790883005000,
+            "validationStart": 1791487805000,
+            "testStart": 1792092605000,
+            "testEnd": 1792697405000,
+            "embargoMs": 0
+          },
+          "trainAsOf": 1791487804999,
+          "validationAsOf": 1792092604999,
+          "testAsOf": 1792697404999,
+          "preprocessor": {
+            "version": "policy-preprocessor-v1",
+            "scopeId": "608f5527611031b37f80441e9f239c5ad4dbebb9b0b8e29adf5b9f87eb6643dc",
+            "asOf": 1791487804999,
+            "trainStart": 1790883005000,
+            "rows": 3,
+            "featureFields": [
+              "rsi14",
+              "emaGapPct",
+              "hourlyGapPct",
+              "change1h",
+              "change4h",
+              "change24h",
+              "atrPct",
+              "volumeRatio",
+              "spreadBps",
+              "feeBps",
+              "slippageCapBps",
+              "assumedSlippageBps",
+              "directionalEfficiency",
+              "priorSupportDistancePct",
+              "priorResistanceDistancePct",
+              "btcCorrelation48h",
+              "upsideBreakout",
+              "downsideBreakout",
+              "upsideRejection",
+              "downsideRejection",
+              "twoSidedSweep"
+            ],
+            "trainingIds": [
+              "95ce063969916bb927db8ebc583a65155e91d8c4892b827b8400099d85694036",
+              "895e0e00c602c024cecbcd5919403e1f871004e02a2ed84bbd9ef49dc0138d0c",
+              "adb7923adc0cc1fbebb1f183413fd156242603d2c708064eab256a563b295c00"
+            ],
+            "trainingInputHashes": [
+              "44f20e9071066f66c18c2f896d2225de2b77aa83dcca47377c3297705586d21c",
+              "326f9bd69df75e4b8c71a1e1ef45d8f858e4a5f28cea61904f62e37efaaba8da",
+              "2d90a8bdf1bfafe3ca5af7d00b6a4bb6fe10120c42ddf2859d10cace080b7a25"
+            ],
+            "columns": [
+              {
+                "count": 3,
+                "mean": 57.1919195182035,
+                "std": 4.822486687104166
+              },
+              {
+                "count": 3,
+                "mean": 1.680511069211462,
+                "std": 1.1475007994036843
+              },
+              {
+                "count": 3,
+                "mean": 5.4035063692130745,
+                "std": 3.436914647529387
+              },
+              {
+                "count": 3,
+                "mean": 0.8901778096312096,
+                "std": 1.7817957996808285
+              },
+              {
+                "count": 3,
+                "mean": 4.829789037082992,
+                "std": 2.7621356991331765
+              },
+              {
+                "count": 3,
+                "mean": 9.928762486858648,
+                "std": 4.529580193481226
+              },
+              {
+                "count": 3,
+                "mean": 1.6971774437131442,
+                "std": 0.521801204217033
+              },
+              {
+                "count": 3,
+                "mean": 1.6779781759094785,
+                "std": 0.4365851910028059
+              },
+              {
+                "count": 3,
+                "mean": 5.001250312578105,
+                "std": 1.0468329733866442e-12
+              },
+              {
+                "count": 3,
+                "mean": 20,
+                "std": 0
+              },
+              {
+                "count": 3,
+                "mean": 15,
+                "std": 0
+              },
+              {
+                "count": 3,
+                "mean": 5,
+                "std": 0
+              },
+              {
+                "count": 3,
+                "mean": 0.23978814435246024,
+                "std": 0.1600947982513618
+              },
+              {
+                "count": 3,
+                "mean": 5.982770185783941,
+                "std": 2.4719712528295115
+              },
+              {
+                "count": 3,
+                "mean": 5.970666465016286,
+                "std": 4.178286437920127
+              },
+              {
+                "count": 3,
+                "mean": 0.016694176960907026,
+                "std": 0.02618163121742023
+              },
+              {
+                "count": 3,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 3,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 3,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 3,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 3,
+                "mean": 0,
+                "std": 0
+              }
+            ],
+            "classes": {
+              "profit": 2,
+              "loss": 1,
+              "break-even": 0
+            },
+            "classWeights": {
+              "profit": 0.75,
+              "loss": 1.5,
+              "break-even": null
+            },
+            "hash": "c6813fef58da223cbdfe16f526cdcdd581d2e4cef6fbaf99b5296b1e206155b7"
+          },
+          "train": {
+            "rows": 3,
+            "entriesInWindow": 3,
+            "unsupportedCells": 0,
+            "ids": [
+              "95ce063969916bb927db8ebc583a65155e91d8c4892b827b8400099d85694036",
+              "895e0e00c602c024cecbcd5919403e1f871004e02a2ed84bbd9ef49dc0138d0c",
+              "adb7923adc0cc1fbebb1f183413fd156242603d2c708064eab256a563b295c00"
+            ]
+          },
+          "validation": {
+            "rows": 1,
+            "entriesInWindow": 1,
+            "unsupportedCells": 0,
+            "ids": [
+              "d6d2f69e5fb8a584c027c8ac2f9f7f3f721e6d23ca50dbfdfd5b45696bb78498"
+            ]
+          },
+          "test": {
+            "rows": 0,
+            "entriesInWindow": 0,
+            "unsupportedCells": 0,
+            "ids": []
+          },
+          "modelTrained": false,
+          "independentSamples": null
+        },
+        {
+          "options": {
+            "mode": "historical-simulation",
+            "scopeId": "608f5527611031b37f80441e9f239c5ad4dbebb9b0b8e29adf5b9f87eb6643dc",
+            "trainStart": 1790883005000,
+            "validationStart": 1792092605000,
+            "testStart": 1792697405000,
+            "testEnd": 1793216705000,
+            "embargoMs": 0
+          },
+          "trainAsOf": 1792092604999,
+          "validationAsOf": 1792697404999,
+          "testAsOf": 1793216704999,
+          "preprocessor": {
+            "version": "policy-preprocessor-v1",
+            "scopeId": "608f5527611031b37f80441e9f239c5ad4dbebb9b0b8e29adf5b9f87eb6643dc",
+            "asOf": 1792092604999,
+            "trainStart": 1790883005000,
+            "rows": 4,
+            "featureFields": [
+              "rsi14",
+              "emaGapPct",
+              "hourlyGapPct",
+              "change1h",
+              "change4h",
+              "change24h",
+              "atrPct",
+              "volumeRatio",
+              "spreadBps",
+              "feeBps",
+              "slippageCapBps",
+              "assumedSlippageBps",
+              "directionalEfficiency",
+              "priorSupportDistancePct",
+              "priorResistanceDistancePct",
+              "btcCorrelation48h",
+              "upsideBreakout",
+              "downsideBreakout",
+              "upsideRejection",
+              "downsideRejection",
+              "twoSidedSweep"
+            ],
+            "trainingIds": [
+              "95ce063969916bb927db8ebc583a65155e91d8c4892b827b8400099d85694036",
+              "895e0e00c602c024cecbcd5919403e1f871004e02a2ed84bbd9ef49dc0138d0c",
+              "adb7923adc0cc1fbebb1f183413fd156242603d2c708064eab256a563b295c00",
+              "d6d2f69e5fb8a584c027c8ac2f9f7f3f721e6d23ca50dbfdfd5b45696bb78498"
+            ],
+            "trainingInputHashes": [
+              "44f20e9071066f66c18c2f896d2225de2b77aa83dcca47377c3297705586d21c",
+              "326f9bd69df75e4b8c71a1e1ef45d8f858e4a5f28cea61904f62e37efaaba8da",
+              "2d90a8bdf1bfafe3ca5af7d00b6a4bb6fe10120c42ddf2859d10cace080b7a25",
+              "e6d41511b798af122fb4b1b3b7d8cda81f90fd5946e4ec4e034bb9a155476bdf"
+            ],
+            "columns": [
+              {
+                "count": 4,
+                "mean": 59.11190212475169,
+                "std": 5.338659289916846
+              },
+              {
+                "count": 4,
+                "mean": 1.802767185014753,
+                "std": 1.0160749170351535
+              },
+              {
+                "count": 4,
+                "mean": 5.465453459288744,
+                "std": 2.9783886661596175
+              },
+              {
+                "count": 4,
+                "mean": 0.5685253294731601,
+                "std": 1.6405725091551593
+              },
+              {
+                "count": 4,
+                "mean": 5.436642738324515,
+                "std": 2.612825952766669
+              },
+              {
+                "count": 4,
+                "mean": 9.697114164493225,
+                "std": 3.943197355274931
+              },
+              {
+                "count": 4,
+                "mean": 1.6420615513302375,
+                "std": 0.46186649296225396
+              },
+              {
+                "count": 4,
+                "mean": 1.575653598774005,
+                "std": 0.41757146575176546
+              },
+              {
+                "count": 4,
+                "mean": 5.001250312577921,
+                "std": 9.61545439811512e-13
+              },
+              {
+                "count": 4,
+                "mean": 20,
+                "std": 0
+              },
+              {
+                "count": 4,
+                "mean": 15,
+                "std": 0
+              },
+              {
+                "count": 4,
+                "mean": 5,
+                "std": 0
+              },
+              {
+                "count": 4,
+                "mean": 0.2958698163983165,
+                "std": 0.16928738918990718
+              },
+              {
+                "count": 4,
+                "mean": 6.660990682816215,
+                "std": 2.4419112461135324
+              },
+              {
+                "count": 4,
+                "mean": 6.124766017916444,
+                "std": 3.6283327003725185
+              },
+              {
+                "count": 4,
+                "mean": 0.09613178624777581,
+                "std": 0.13944572301631705
+              },
+              {
+                "count": 4,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 4,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 4,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 4,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 4,
+                "mean": 0,
+                "std": 0
+              }
+            ],
+            "classes": {
+              "profit": 2,
+              "loss": 2,
+              "break-even": 0
+            },
+            "classWeights": {
+              "profit": 1,
+              "loss": 1,
+              "break-even": null
+            },
+            "hash": "4669bd077ab9b69a9733c0248db23bde14cd1233aed408c21148e1718826eafc"
+          },
+          "train": {
+            "rows": 4,
+            "entriesInWindow": 4,
+            "unsupportedCells": 0,
+            "ids": [
+              "95ce063969916bb927db8ebc583a65155e91d8c4892b827b8400099d85694036",
+              "895e0e00c602c024cecbcd5919403e1f871004e02a2ed84bbd9ef49dc0138d0c",
+              "adb7923adc0cc1fbebb1f183413fd156242603d2c708064eab256a563b295c00",
+              "d6d2f69e5fb8a584c027c8ac2f9f7f3f721e6d23ca50dbfdfd5b45696bb78498"
+            ]
+          },
+          "validation": {
+            "rows": 0,
+            "entriesInWindow": 0,
+            "unsupportedCells": 0,
+            "ids": []
+          },
+          "test": {
+            "rows": 0,
+            "entriesInWindow": 0,
+            "unsupportedCells": 0,
+            "ids": []
+          },
+          "modelTrained": false,
+          "independentSamples": null
+        }
+      ]
+    },
+    {
+      "scenario": "double-fee-adaptive",
+      "variant": "mock-v2",
+      "scopeId": "e02e72907d81e61e130b34f25e0dd40ccce5bbd65a05db85241afc7428d43bbe",
+      "folds": [
+        {
+          "options": {
+            "mode": "historical-simulation",
+            "scopeId": "e02e72907d81e61e130b34f25e0dd40ccce5bbd65a05db85241afc7428d43bbe",
+            "trainStart": 1790883005000,
+            "validationStart": 1791487805000,
+            "testStart": 1792092605000,
+            "testEnd": 1792697405000,
+            "embargoMs": 0
+          },
+          "trainAsOf": 1791487804999,
+          "validationAsOf": 1792092604999,
+          "testAsOf": 1792697404999,
+          "preprocessor": {
+            "version": "policy-preprocessor-v1",
+            "scopeId": "e02e72907d81e61e130b34f25e0dd40ccce5bbd65a05db85241afc7428d43bbe",
+            "asOf": 1791487804999,
+            "trainStart": 1790883005000,
+            "rows": 2,
+            "featureFields": [
+              "rsi14",
+              "emaGapPct",
+              "hourlyGapPct",
+              "change1h",
+              "change4h",
+              "change24h",
+              "atrPct",
+              "volumeRatio",
+              "spreadBps",
+              "feeBps",
+              "slippageCapBps",
+              "assumedSlippageBps",
+              "directionalEfficiency",
+              "priorSupportDistancePct",
+              "priorResistanceDistancePct",
+              "btcCorrelation48h",
+              "upsideBreakout",
+              "downsideBreakout",
+              "upsideRejection",
+              "downsideRejection",
+              "twoSidedSweep"
+            ],
+            "trainingIds": [
+              "bfff809159924e010d8c5750155aeb4a04b3799082c5303c450a94384f763b10",
+              "15f060da510f683927b6c44e90f9358c8020e31ba7076e2a32890765c4e73b19"
+            ],
+            "trainingInputHashes": [
+              "cd90a875c7a7b18ba9cbef4d1156a24ac2788c344c949bcfd6f0d3a8d75574be",
+              "7e6d7c7d7764289b55c77a9b3f7baa95b866972591950a98d51aaf60639d4d65"
+            ],
+            "columns": [
+              {
+                "count": 2,
+                "mean": 59.547501228725054,
+                "std": 4.270628898196884
+              },
+              {
+                "count": 2,
+                "mean": 2.4073260314550704,
+                "std": 0.6247856903968008
+              },
+              {
+                "count": 2,
+                "mean": 7.3997806469613625,
+                "std": 2.4006750020785237
+              },
+              {
+                "count": 2,
+                "mean": 0.8204059608778902,
+                "std": 2.17889652691563
+              },
+              {
+                "count": 2,
+                "mean": 6.765263536915411,
+                "std": 0.4537684565218416
+              },
+              {
+                "count": 2,
+                "mean": 13.093287718768888,
+                "std": 0.8561455855031199
+              },
+              {
+                "count": 2,
+                "mean": 1.9903421130265593,
+                "std": 0.3880440375557734
+              },
+              {
+                "count": 2,
+                "mean": 1.912166244864608,
+                "std": 0.34839315231737467
+              },
+              {
+                "count": 2,
+                "mean": 5.001250312578476,
+                "std": 1.1102230246251565e-12
+              },
+              {
+                "count": 2,
+                "mean": 20,
+                "std": 0
+              },
+              {
+                "count": 2,
+                "mean": 15,
+                "std": 0
+              },
+              {
+                "count": 2,
+                "mean": 5,
+                "std": 0
+              },
+              {
+                "count": 2,
+                "mean": 0.3404514472979211,
+                "std": 0.0897006965471701
+              },
+              {
+                "count": 2,
+                "mean": 7.727716532237161,
+                "std": 0.1773402273087754
+              },
+              {
+                "count": 2,
+                "mean": 8.59695406398262,
+                "std": 2.3441323935537106
+              },
+              {
+                "count": 2,
+                "mean": 0.0344682031700784,
+                "std": 0.008970434591175497
+              },
+              {
+                "count": 2,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 2,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 2,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 2,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 2,
+                "mean": 0,
+                "std": 0
+              }
+            ],
+            "classes": {
+              "profit": 1,
+              "loss": 1,
+              "break-even": 0
+            },
+            "classWeights": {
+              "profit": 1,
+              "loss": 1,
+              "break-even": null
+            },
+            "hash": "9567fcfc8923a5dca6c65270f51cfd5b54bc5a0554ba24619cb1b13c6cdcadd9"
+          },
+          "train": {
+            "rows": 2,
+            "entriesInWindow": 2,
+            "unsupportedCells": 0,
+            "ids": [
+              "bfff809159924e010d8c5750155aeb4a04b3799082c5303c450a94384f763b10",
+              "15f060da510f683927b6c44e90f9358c8020e31ba7076e2a32890765c4e73b19"
+            ]
+          },
+          "validation": {
+            "rows": 1,
+            "entriesInWindow": 1,
+            "unsupportedCells": 0,
+            "ids": [
+              "8148ce9aa20811d988f67867d3b67e6542153172a35d0ae70f824d14758f4e4d"
+            ]
+          },
+          "test": {
+            "rows": 0,
+            "entriesInWindow": 0,
+            "unsupportedCells": 0,
+            "ids": []
+          },
+          "modelTrained": false,
+          "independentSamples": null
+        },
+        {
+          "options": {
+            "mode": "historical-simulation",
+            "scopeId": "e02e72907d81e61e130b34f25e0dd40ccce5bbd65a05db85241afc7428d43bbe",
+            "trainStart": 1790883005000,
+            "validationStart": 1792092605000,
+            "testStart": 1792697405000,
+            "testEnd": 1793216705000,
+            "embargoMs": 0
+          },
+          "trainAsOf": 1792092604999,
+          "validationAsOf": 1792697404999,
+          "testAsOf": 1793216704999,
+          "preprocessor": {
+            "version": "policy-preprocessor-v1",
+            "scopeId": "e02e72907d81e61e130b34f25e0dd40ccce5bbd65a05db85241afc7428d43bbe",
+            "asOf": 1792092604999,
+            "trainStart": 1790883005000,
+            "rows": 3,
+            "featureFields": [
+              "rsi14",
+              "emaGapPct",
+              "hourlyGapPct",
+              "change1h",
+              "change4h",
+              "change24h",
+              "atrPct",
+              "volumeRatio",
+              "spreadBps",
+              "feeBps",
+              "slippageCapBps",
+              "assumedSlippageBps",
+              "directionalEfficiency",
+              "priorSupportDistancePct",
+              "priorResistanceDistancePct",
+              "btcCorrelation48h",
+              "upsideBreakout",
+              "downsideBreakout",
+              "upsideRejection",
+              "downsideRejection",
+              "twoSidedSweep"
+            ],
+            "trainingIds": [
+              "bfff809159924e010d8c5750155aeb4a04b3799082c5303c450a94384f763b10",
+              "15f060da510f683927b6c44e90f9358c8020e31ba7076e2a32890765c4e73b19",
+              "8148ce9aa20811d988f67867d3b67e6542153172a35d0ae70f824d14758f4e4d"
+            ],
+            "trainingInputHashes": [
+              "cd90a875c7a7b18ba9cbef4d1156a24ac2788c344c949bcfd6f0d3a8d75574be",
+              "7e6d7c7d7764289b55c77a9b3f7baa95b866972591950a98d51aaf60639d4d65",
+              "bd77b78555a6135e9ccdb9723815e9c2309e8b4f02a0d7c0619c6bee820cb4e8"
+            ],
+            "columns": [
+              {
+                "count": 3,
+                "mean": 61.32228413394879,
+                "std": 4.296342185948223
+              },
+              {
+                "count": 3,
+                "mean": 2.3280625317782557,
+                "std": 0.5223059550797509
+              },
+              {
+                "count": 3,
+                "mean": 6.8169520078128265,
+                "std": 2.1263910166351376
+              },
+              {
+                "count": 3,
+                "mean": 0.41479327025159735,
+                "std": 1.8692520856207522
+              },
+              {
+                "count": 3,
+                "mean": 6.9292436386266365,
+                "std": 0.4370920829038856
+              },
+              {
+                "count": 3,
+                "mean": 11.729581544978245,
+                "std": 2.051352212384248
+              },
+              {
+                "count": 3,
+                "mean": 1.819132700078212,
+                "std": 0.39876155308566674
+              },
+              {
+                "count": 3,
+                "mean": 1.6976707856989335,
+                "std": 0.4158546978530827
+              },
+              {
+                "count": 3,
+                "mean": 5.001250312578105,
+                "std": 1.046675968065418e-12
+              },
+              {
+                "count": 3,
+                "mean": 20,
+                "std": 0
+              },
+              {
+                "count": 3,
+                "mean": 15,
+                "std": 0
+              },
+              {
+                "count": 3,
+                "mean": 5,
+                "std": 0
+              },
+              {
+                "count": 3,
+                "mean": 0.38167257571057583,
+                "std": 0.09360825905116564
+              },
+              {
+                "count": 3,
+                "mean": 8.05036174612912,
+                "std": 0.4787131071000611
+              },
+              {
+                "count": 3,
+                "mean": 7.926990934860719,
+                "std": 2.1356511047229096
+              },
+              {
+                "count": 3,
+                "mean": 0.13446034014951297,
+                "std": 0.14159979065402742
+              },
+              {
+                "count": 3,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 3,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 3,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 3,
+                "mean": 0,
+                "std": 0
+              },
+              {
+                "count": 3,
+                "mean": 0,
+                "std": 0
+              }
+            ],
+            "classes": {
+              "profit": 1,
+              "loss": 2,
+              "break-even": 0
+            },
+            "classWeights": {
+              "profit": 1.5,
+              "loss": 0.75,
+              "break-even": null
+            },
+            "hash": "8e4e54c34c904a92b0d829eb179277693af3c990498c748e74f226c48d006ce1"
+          },
+          "train": {
+            "rows": 3,
+            "entriesInWindow": 3,
+            "unsupportedCells": 0,
+            "ids": [
+              "bfff809159924e010d8c5750155aeb4a04b3799082c5303c450a94384f763b10",
+              "15f060da510f683927b6c44e90f9358c8020e31ba7076e2a32890765c4e73b19",
+              "8148ce9aa20811d988f67867d3b67e6542153172a35d0ae70f824d14758f4e4d"
+            ]
+          },
+          "validation": {
+            "rows": 0,
+            "entriesInWindow": 0,
+            "unsupportedCells": 0,
+            "ids": []
+          },
+          "test": {
+            "rows": 0,
+            "entriesInWindow": 0,
+            "unsupportedCells": 0,
+            "ids": []
+          },
+          "modelTrained": false,
+          "independentSamples": null
+        }
+      ]
+    }
+  ],
+  "factsHash": "4053342b179c68a43cc517a233cb2a6816e454de21bebb9842fd145bf51898f9",
+  "historicalDataAlreadyInspected": true,
+  "independentOutOfSample": false,
+  "modelTrained": false,
+  "forecastProbability": null,
+  "profitabilityEstablished": false
+}

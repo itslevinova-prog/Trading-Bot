@@ -1,0 +1,22 @@
+{
+  "version": "entry-support-study-v2-full-source-actions",
+  "registeredAt": "2026-10-31T19:14:41.698171+00:00",
+  "historyAlreadyInspected": true,
+  "independentOutOfSample": false,
+  "parameterSearch": false,
+  "baselineReport": "docs/structure-exit-study-5e7a4bf0170e6610.json",
+  "baselineReportHash": "5e7a4bf0170e66101ad724fac8cafb79d73c82efa3484c3bef10297a9936dc99",
+  "hypothesis": "Preserve every existing structure/covariance/bearish exit and entry limit. For one scoped/owned/non-compound actually filled trend-continuation entry, after a new closed observation: close below support recorded in the original entry context AND current EMA20 AND negative1h -> additional full sell. Original support is a fact; the old strategy never explicitly promised this exit intent. Missing/mixed scope/future/legacy/compound source produces no extra exit.",
+  "simulation": "Original fixed dataset, Safe capital/fees/spread/slippage/depth/protective stop semantics and both adaptive fee scenarios unchanged. Optional onBuyFill hook copies source before provider mutation and only records accepted fills, isolated from economic state. Original source/receipt/capture clocks are explicitly modelled, with separate actual report materialization timestamp.",
+  "validation": "Full structure-exit baseline must match old result exactly including fills/curve. Shared exogenous inputs must match across variants. No new parameter threshold or tuning on results.",
+  "sources": {
+    "apps/server/src/context/position-entry.ts": "cd4474814259a9999879acd4ee31920ceae7a38742c74e1bc9774a57b1285bb2",
+    "apps/server/src/research/portfolio.ts": "c9d89444c7e350bc9c7f4810bf85039046f0030e46960f7cc52a4da2fb7b37a3",
+    "apps/server/src/research/entry-support-replay.ts": "8f30b5cb2a891a14af8a635c4ebceda167febbc6e796956e2e5e51f66cb5eded",
+    "apps/server/src/strategy/entry-support-paper.ts": "c2cf0f87d92e76e164f4d80ce386309abd07eb0c0bfc45b194825e2a8f79fe0c",
+    "apps/server/src/strategy/structure-exit-paper.ts": "a930b6676bab40c75a3ab399e3ccb9387df6b70671ffd882d833066a83d10313"
+  },
+  "profitabilityEstablished": false,
+  "sourceAttributionRepair": "Store all original decision actions and bind decision/evidence/order/fill IDs explicitly. Exit rule and thresholds unchanged. Prior first comparison preserved as87806beef743b4a9; assert every new full economic result exactly equals that first result, not a new strategy selection.",
+  "supersedes": "docs/entry-support-protocol-v1.json"
+}

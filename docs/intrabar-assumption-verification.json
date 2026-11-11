@@ -1,0 +1,19 @@
+{
+  "verifiedAt": "2026-11-01T13:50:10.811Z",
+  "artifact": "docs/intrabar-assumption-audit-643c2cf0cdae70e2.json",
+  "factsHash": "643c2cf0cdae70e2bf13e418d927d9a7f75a9f1ad388c1734bc706225284cf82",
+  "scopedRoundtrips": 269,
+  "ambiguousIntrabarOrders": 0,
+  "entryBarTouchTimesUnknown": 0,
+  "rejections": {
+    "Entry below exchange minimum": 4,
+    "Kaufpause des Trading-Modus aktiv": 14,
+    "Post-fill cash/exposure/portfolio risk cap": 1
+  },
+  "sourceSimulatorUnchanged": true,
+  "newPathOptionJustifiedByObservedAmbiguity": false,
+  "newPathOptionImplemented": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false
+}

@@ -1,0 +1,66 @@
+{
+  "verifiedAt": "2026-11-01T14:36:18.865Z",
+  "source": "docs/upstream-research/jesse/source/jesse/modes/backtest_mode.py",
+  "sourceSha256": "9a3d585b35f567567704dd5b9401bd733712654d35ea95b734eb4070f9fa3b0c",
+  "upstreamUrl": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/modes/backtest_mode.py",
+  "license": "MIT",
+  "sections": [
+    "opening-gap classification/execution around1460..1628",
+    "intrabar execution/splitting around1630..1692",
+    "red/green price-order heuristic around2272..2315"
+  ],
+  "observations": [
+    {
+      "path": [
+        100,
+        104,
+        110,
+        98,
+        90,
+        99
+      ],
+      "ohlc": {
+        "open": 100,
+        "high": 110,
+        "low": 90,
+        "close": 99
+      },
+      "firstBarrier": "target"
+    },
+    {
+      "path": [
+        100,
+        98,
+        90,
+        104,
+        110,
+        99
+      ],
+      "ohlc": {
+        "open": 100,
+        "high": 110,
+        "low": 90,
+        "close": 99
+      },
+      "firstBarrier": "stop"
+    }
+  ],
+  "ownLabel": {
+    "version": "first-barrier-outcome-v1",
+    "targetHash": "15d0422745461ac7fbf2d8a085c77b7ce110797c7ba12e270333bae2561f84bf",
+    "entryAt": 0,
+    "availableAt": 900000,
+    "eventBarTs": 0,
+    "outcome": "ambiguous",
+    "execution": "unknown-path",
+    "entryFill": 100,
+    "entryBasis": 100,
+    "stopPrice": 98,
+    "targetPrice": 104,
+    "exitReference": null,
+    "netReturn": null
+  },
+  "foreignCodeExecuted": false,
+  "directCodeCopied": false,
+  "profitabilityEstablished": false
+}

@@ -1,0 +1,56 @@
+{
+  "verifiedAt": "2026-11-01T14:23:33.437Z",
+  "factsHash": "4898631417b16e07db860acf1342af2160ab138bd98ea0dfece8a341ba37facc",
+  "trainOnlyNormalEquationModelsVerified": 41,
+  "testPredictionsVerified": 6560,
+  "knownScoredLabels": 6559,
+  "unknownScoredAsZero": false,
+  "unknownLabels": 1,
+  "selectedCounts": {
+    "zero": 8,
+    "mean": 25,
+    "ridge": 8
+  },
+  "aggregate": {
+    "zero": {
+      "rows": 6560,
+      "knownLabels": 6559,
+      "unknownLabels": 1,
+      "mae": 0.015381640349558799,
+      "rmse": 0.018491895440564607,
+      "coverage": 1,
+      "positiveForecasts": 0
+    },
+    "mean": {
+      "rows": 6560,
+      "knownLabels": 6559,
+      "unknownLabels": 1,
+      "mae": 0.014350822607371427,
+      "rmse": 0.017969805487786074,
+      "coverage": 1,
+      "positiveForecasts": 0
+    },
+    "ridge": {
+      "rows": 6560,
+      "knownLabels": 6559,
+      "unknownLabels": 1,
+      "mae": 0.014676210501317951,
+      "rmse": 0.01855752495906572,
+      "coverage": 0.9824695121951219,
+      "positiveForecasts": 770
+    },
+    "selected": {
+      "rows": 6560,
+      "knownLabels": 6559,
+      "unknownLabels": 1,
+      "mae": 0.0147416063388946,
+      "rmse": 0.0183965194656837,
+      "coverage": 0.9954268292682927,
+      "positiveForecasts": 185
+    }
+  },
+  "modelActivated": false,
+  "profitabilityEstablished": false,
+  "julyLoaded": false,
+  "independentSamples": null
+}

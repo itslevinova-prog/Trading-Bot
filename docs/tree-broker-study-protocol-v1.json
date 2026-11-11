@@ -1,0 +1,42 @@
+{
+  "version": "optional-tree-broker-study-v1",
+  "registeredAt": "2026-11-02T17:23:47.002Z",
+  "runnerHash": "e76bb1fc4a0db9dae0297f553f59e03dd1720eac4d4251bbe583ae622af34aac",
+  "sources": {
+    "apps/server/src/research/barrier-broker-provider.ts": "5774ecef8da1da24c1cfd6caf14e84b35575b1bcb7c26cc34779feb121bfd06f",
+    "apps/server/dist/research/barrier-broker-provider.js": "3793b6fd9d043569ac0da1bc333ffd7c85145f2becdfb26f9c836fd496e7e6d3",
+    "apps/server/src/research/barrier-tree.ts": "b1d53bc86302ba345cab39674ec14b53c3ee7e41f0dafa02cac69041593ad94b",
+    "apps/server/dist/research/barrier-tree.js": "b2ac07a2dec4103b3e5c27ac77a7fd44058a7c8912b1ad815ddb37586fa3d0c4",
+    "apps/server/src/research/portfolio.ts": "c9d89444c7e350bc9c7f4810bf85039046f0030e46960f7cc52a4da2fb7b37a3",
+    "apps/server/dist/research/portfolio.js": "eb16ed041c8c972735db20d6e45620e5f072c97853161573eba0ccd2a33d388a",
+    "apps/server/src/research/mock-replay-context.ts": "793068bceb009f4e49cba2ff0b3f02f94f8d160be9e446caa9c9877021452fbb",
+    "apps/server/src/research/barrier-learning.ts": "bcd91ef518d5f080bed3e503dea5538ef3df9c49d8c559210bd4345d48832f87"
+  },
+  "extensionHash": "6c9caf32004291a4b7d65839ba01f377003504c2a146b0ac1d1b95aa2b9afb5e",
+  "corpus": "docs/barrier-clock-corpus-3262b4fb3be9b47e.json",
+  "corpusHash": "3262b4fb3be9b47e7edf0954e93d52f85fda6dfedf7159178c440fa6300a7414",
+  "ridgeReport": "docs/barrier-net-walkforward-4898631417b16e07.json",
+  "ridgeReportHash": "4898631417b16e07db860acf1342af2160ab138bd98ea0dfece8a341ba37facc",
+  "treeReport": "docs/barrier-tree-walkforward-5097bdc64f688d20.json",
+  "treeReportHash": "5097bdc64f688d20b4a6e563a09f11596ecf12850de3e387611b368401d27f44",
+  "previousBroker": "docs/barrier-broker-study-41357259f1631864.json",
+  "previousBrokerHash": "41357259f1631864199767b38b395aba3f2b4db5505c87505549d55a1e0c39a4",
+  "variants": [
+    "ridge-reference",
+    "selected-reference",
+    "tree",
+    "extended-selected"
+  ],
+  "referenceGate": "First two FULL result hashes equal frozen old ridge and selected results. Stop before interpreting new portfolios if either changes.",
+  "costs": {
+    "feeRate": 0.001,
+    "spreadBps": 10,
+    "slippageBps": 8
+  },
+  "startingBalance": 100,
+  "netMargin": 0.005,
+  "maxAllocationPct": 0.15,
+  "noSizingOrThresholdSearch": true,
+  "modelActivated": false,
+  "julyLoaded": false
+}

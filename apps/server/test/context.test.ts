@@ -1,0 +1,23 @@
+import {readPackedMarketRegime} from '../src/ai/feature-encoding.js';
+import {readPackedHourlyTrend} from '../src/ai/hourly-encoding.js';
+import {expect,test} from 'vitest';
+import {aggregate,marketContext} from '../src/context/market-context.js';import {packContext} from '../src/ai/prompt.js';import {parseKlines,partialBook} from '../src/market/binance-data.js';
+import type {Candle,DecisionContext} from '@paper/shared';
+const start=Date.UTC(2026,0,1),now=start+400*900000;
+const rows:Candle[]=Array.from({length:400},(_,i)=>({pair:'BTC/EUR',interval:15,ts:start+i*900000,open:100+i,high:102+i,low:99+i,close:101+i,volume:10}));
+test('Higher intervals require exact contiguous closed candles',()=>{const full=aggregate(rows,60,now);expect(full).toHaveLength(100);expect(full[0]).toMatchObject({open:100,close:104,volume:40});expect(aggregate(rows.filter((_,i)=>i!==1),60,now)).toHaveLength(99);expect(aggregate(rows,1440,start+86400000-1)).toHaveLength(0);});
+test('Context excludes current/future candles and exposes stale/missing sources',()=>{const context=marketContext([{pair:'BTC/EUR',candles:rows,hourly:[]}],'binance','EUR',now-450000);expect(context.markets[0]!.quality.closedBars).toBe(399);expect(context.markets[0]!.quality.bookUsable).toBe(false);expect(context.markets[0]!.ticker).toBeNull();expect(context.markets[0]!.regime.correlationBTC48h.samples).toBeGreaterThan(40);expect(context.markets[0]!.candles.m15.at(-1)![0]).toBe(rows[398]!.ts);});
+test('Kline parser rejects unfinished, unaligned and impossible candles',()=>{const raw=[[start,100,102,99,101,10,start+899999],[start+900000,101,102,100,101,10,start+899999],[start+1,100,102,99,101,10,start+899999],[start,100,90,99,101,10,start+899999]];expect(parseKlines('BTC/EUR',15,raw,start+900000)).toHaveLength(1);});
+test('Partial books reject crossed, empty and nonfinite data',()=>{expect(partialBook('X/EUR',{bids:[['101','2']],asks:[['100','2']]}).valid).toBe(false);expect(partialBook('X/EUR',{bids:[['Infinity','2']],asks:[['100','2']]}).valid).toBe(false);expect(partialBook('X/EUR',{bids:[['99','2']],asks:[['100','2']]}).valid).toBe(true);});
+const context:DecisionContext={timeUTC:'now',timeZurich:'now',account:{cash:100},positions:[],features:[],recentTrades:[],limits:{MAX_POSITION_PCT:.3},memory:[],lessons:[],marketContext:marketContext([{pair:'BTC/EUR',candles:rows,hourly:[]}],'binance','EUR',now)};
+test('Prompt budget is explicit, preserves hard limits and never mutates full context',()=>{const original=JSON.stringify(context),packed=packContext(context,12000);expect(packed.chars).toBeLessThanOrEqual(12000);expect(JSON.parse(packed.user).limits.MAX_POSITION_PCT).toBe(.3);expect(JSON.stringify(context)).toBe(original);});
+test('Oversized mandatory context blocks model use instead of silent truncation',()=>{expect(()=>packContext({...context,positions:[{pair:'BTC/EUR',data:'x'.repeat(20000)}]},12000)).toThrow('Kontextbudget');});
+test('budget trimming prioritises held positions and BTC while keeping every market summary',()=>{const inputs=['BTC/EUR','ETH/EUR','SOL/EUR','XRP/EUR','ADA/EUR','LINK/EUR','DOT/EUR','LTC/EUR','BNB/EUR','DOGE/EUR'].map(pair=>({pair,candles:rows.map(c=>({...c,pair})),hourly:[]}));const full={...context,positions:[{pair:'ETH/EUR'}],marketContext:marketContext(inputs,'binance','EUR',now)};const packed=packContext(full,18000),result=JSON.parse(packed.user);expect(result.marketContext.markets).toHaveLength(10);expect(result.marketContext.markets.find((m:any)=>m.pair==='ETH/EUR').candles).toBeDefined();expect(result.marketContext.markets.find((m:any)=>m.pair==='BTC/EUR').candles).toBeDefined();expect(new Set(result.transmission.omittedCandlePairs)).toEqual(new Set(result.marketContext.markets.filter((m:any)=>!m.candles).map((m:any)=>m.pair))); expect(packed.chars).toBeLessThanOrEqual(18000);});
+
+test('packed hourly context can be repacked without losing source evidence or mutating stored context',()=>{
+ const inputs=Array.from({length:10},(_,i)=>({pair:i===0?'BTC/EUR':`ASSET${i}/EUR`,candles:rows.map(c=>({...c,pair:i===0?'BTC/EUR':`ASSET${i}/EUR`})),hourly:[]}));
+ const full={...context,marketContext:marketContext(inputs,'binance','EUR',now)},before=JSON.stringify(full);
+ const first=JSON.parse(packContext(full,18000).user),firstBytes=JSON.stringify(first),second=JSON.parse(packContext(first,18000).user);
+ for(const packed of [first,second])for(let i=0;i<inputs.length;i++)expect(readPackedHourlyTrend((readPackedMarketRegime(packed.marketContext.markets[i].regime,packed) as any).hourlyTrend,packed)).toEqual(full.marketContext.markets[i]!.regime.hourlyTrend);
+ expect(JSON.stringify(first)).toBe(firstBytes);expect(JSON.stringify(full)).toBe(before);
+});

@@ -1,0 +1,37 @@
+{
+  "version": "mock-forward-v2",
+  "registeredAt": "2026-10-31T10:47:27.473513+00:00",
+  "scope": "New isolated prospective Paper simulation only, no model provider or financial accounts",
+  "strategy": "Existing deterministic MockAiProvider, unchanged rule baseline and initial BTC buy/hold",
+  "capitalPerAccount": 1000,
+  "venue": "binance",
+  "quote": "EUR",
+  "universeSelection": "Current20volume-ranked eligible EUR markets selected by existing feed before any study order; record actual shared universe hash",
+  "sharedHardLimits": {
+    "MAX_POSITION_PCT": 0.15,
+    "MAX_OPEN_POSITIONS": 2,
+    "MAX_TRADES_PER_DAY": 4,
+    "COIN_COOLDOWN_MINUTES": 120,
+    "MAX_TOTAL_RISK_PCT": 0.0125,
+    "MAX_ENTRY_SPREAD_BPS": 10,
+    "MAX_ENTRY_SLIPPAGE_BPS": 15,
+    "DEFAULT_STOP_LOSS_PCT": 0.05
+  },
+  "aiPolicy": "Default Safe5percent; extra AI policy gates remain explicit and versioned",
+  "benchmark": "One initial BTC purchase requesting all cash, entry allocation caps bypassed, no stop; actual fees/fill/dust and distinct risk disclosed",
+  "costs": "Fixed0.1percent fee each fill; real public visible-book simulated walk and300..900ms latency, no queue/real fills",
+  "seed": "Only public pairs/closed candles; never copy prior accounts/trades/cohort/results",
+  "forwardEvidence": "Atomic3leg flat baseline before any order; registered runs, real source timestamps, exact per-leg versions, actual paid fake fees and fresh matched marks. Preserve downtime/unknowns, no interpolation.",
+  "evaluation": "Descriptive return/drawdown/fees/trade/rejection frequency vs rules, BTC and cash; confidence/independence/profitability unknown. No result-based stopping, no hindsight tuning. Review after meaningful observed events, never time alone.",
+  "restrictions": "Mock only; AI_ENABLEDfalse/remote/livefalse/empty keys, no paid services/installers/real orders. Background runtime counts0active development.",
+  "registeredBeforeLaunchAt": "2026-10-31T10:47:27.473513+00:00",
+  "previousExperimentId": "2026-10-31T10-25-06.139Z-799e5544485b",
+  "sourceBuildId": "5cadb6de7c67fd055b6167164ae1fc3b801ca843475087a8d4be37e8f3c00368",
+  "changeFromV1": "One captured Scheduler clock passed to collector. No strategy thresholds/risk/cost changes; prior defective run retained separately and excluded from strategy performance.",
+  "preflightEvidence": {
+    "schedulerSqlCollectorMockGatePassed": true,
+    "log": "data/mock-v2-scheduler-gate-2026-10-31.log",
+    "sha256": "68c9a458b4ef56705b864e475cd212160606fb031fec62b82f0ff05e02bf4c38"
+  },
+  "supersedesProtocolRegisteredAt": "2026-10-31T10:22:15.274618+00:00"
+}

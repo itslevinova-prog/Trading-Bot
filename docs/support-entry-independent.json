@@ -1,0 +1,25 @@
+{
+  "version": "support-entry-independent-v1",
+  "reportHash": "fde9532cba7b6072a7311118b9447ac998cb918aa0a8b163e9cb4c603d3e8c7b",
+  "reportFileSha256": "3501f0fb0c6c88e3105766b97fc8c58b2e20bed2456a9c7cac09340861187839",
+  "verifierHash": "e16f7cf19860dbbed3638b2067e25b44e3fcd6bed8bc875bb485687a5264fade",
+  "trainingOnlyCutoffsVerified": 82,
+  "entryScoreRowsVerified": 13120,
+  "clockChoicesVerified": 656,
+  "supportedSecondCandidatesReselected": {
+    "common": 4,
+    "aggressor": 6
+  },
+  "noNewOpportunityClocksCreated": true,
+  "nullForecastsNeverReactivated": true,
+  "originalControlsExact": true,
+  "originalForecastsUnchanged": true,
+  "empiricalQuantile": 0.95,
+  "confidenceInterpretation": false,
+  "newFit": false,
+  "activeStrategyChanged": false,
+  "portfolioReturn": null,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false
+}

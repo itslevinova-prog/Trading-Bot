@@ -1,0 +1,16 @@
+{
+  "version": "intrabar-assumption-audit-v1",
+  "registeredAt": "2026-11-01T13:47:59.826268+00:00",
+  "runnerHash": "f91e8b3643b80a83d3ea08ed0e9b43e118a97477718f827d362d6306fb5e4780",
+  "report": "docs/relative-entry-study-a023aed7d8d61ea8.json",
+  "reportHash": "a023aed7d8d61ea83ca7f489011d93606a52b7733b196de415457e54e196d0dd",
+  "checks": [
+    "initial recorded protection and exact exit candle",
+    "both barriers plus open-inside versus plain stop-first naming",
+    "entrybar unresolved timing",
+    "all paid exit reference price conventions and original rejections"
+  ],
+  "newStrategyOrSimulatorOptions": false,
+  "julyLoaded": false,
+  "profitabilityEstablished": false
+}

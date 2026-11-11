@@ -1,0 +1,14 @@
+{
+  "version": "historical-cost-guard-protocol-v1",
+  "registeredAt": "2026-10-31T21:51:40.841076+00:00",
+  "discoveredOn": "January original mock0trades; all59520 assessments blocked by mixed spread denominators",
+  "change": "Reuse existing broker entryQuoteGuard midpoint spread/tolerance in programmed strategy. Same10bps hard limit, no strategy threshold tuning. New evidence costGuardVersion explicit.",
+  "originalResultsPreserved": true,
+  "sourceFiles": {
+    "apps/server/src/strategy/paper-intelligence.ts": "318a6802063c24d70ff88d9f55cc3328029444da98f5a752a1f7a19b4cdd24a5",
+    "apps/server/src/broker/executionGuards.ts": "777a66da8c56191675475e83b705e9933ba1fee1510b00ca47932b60fade7ade"
+  },
+  "otherRegisteredStrategyRuntimeModulesMustRemainIdentical": true,
+  "evaluation": "Same collected January andApril markets/options/fees, original10bps spread and8bps fill slip, separately labeled new implementation; no original-baseline overwrite. July outcome lock retained.",
+  "notProfitClaim": true
+}

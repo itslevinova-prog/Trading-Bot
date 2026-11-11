@@ -1,0 +1,55 @@
+{
+  "version": "later-may-calendar-validation-protocol-v1",
+  "registeredAt": "2026-11-03T20:56:17.866Z",
+  "runnerHash": "233054172c708d58734d483e2387b8258eab3c145572f1f132fa9276920ea4bd",
+  "buildId": "01ccb6696f1c40a5d70f692926103bf62399bde8e1bcd8d6a5ac143fea157f7d",
+  "trainingOrigin": {
+    "path": "docs/training-through-april-671bd04d6f9f77d2.json",
+    "hash": "671bd04d6f9f77d257527d70448a1ca12577746cf37440fed97f83c589aa49b4"
+  },
+  "pastConsumedValidation": {
+    "path": "docs/early-may-validation-41c6517e0c61f4e3.json",
+    "hash": "41c6517e0c61f4e373b7ef273c9d8d7e07952790e4588ac5519220db6870e841"
+  },
+  "pastValidationIndependent": {
+    "path": "docs/early-may-validation-independent-b843b2075394fbc9.json",
+    "sha256": "7bc77ecbc17fdeb5cd1080171219ea0c97708fc71e626ff4407ec1b426c9f199"
+  },
+  "roleTransition": "EarlyMay1..11targets previously used asvalidation are knownpast training only atMay11cutoff. Oldnegativevalidation preserved; not relabelledunseen. May11..21outcomes not readbeforeprotocol/models.",
+  "trainedAt": 1778457600000,
+  "validationFrom": 1778457600000,
+  "validationToExclusive": 1779321600000,
+  "candidates": [
+    "zero",
+    "training-mean",
+    "ridge-lambda10",
+    "clock-mean30",
+    "clock-ridge30"
+  ],
+  "lambda": 10,
+  "calendarHalfLifeDays": 30,
+  "halfLifeReason": "Onefixedcalendar-monthscale motivatedbyupstreamrecencyconcept, no grid or outcomeoptimization.",
+  "minimumKnownTrainingRows": 200,
+  "minimumKnownValidationRows": 40,
+  "forecastCoverage": 0.95,
+  "rankingMargin": 0.005,
+  "maxModelAgeDays": 10,
+  "marginalZLimit": 6,
+  "selection": "Stablezero/mean/ridge/clockmean/clockridge MAEimprovement1e-12and95coverage; nullforecast retainsnull andexplicitzero-abstentionloss on knownlabels; full400slots/20sharedclocks.",
+  "geometry": {
+    "horizonBars": 32,
+    "stopLossPct": 0.02,
+    "takeProfitPct": 0.04,
+    "costs": {
+      "feeRate": 0.001,
+      "spreadBps": 10,
+      "slippageBps": 8
+    }
+  },
+  "featureSchema": "closed-bounded750-vector8-v1",
+  "validationOutcomeReadBeforeRegistration": false,
+  "juneLoaded": false,
+  "julyLoaded": false,
+  "activeModelChanged": false,
+  "hash": "5d866bb485aba28375c0c5426c82806c398cd0eff6372a88d6703d872b06d6bd"
+}

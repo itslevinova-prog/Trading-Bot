@@ -1,0 +1,291 @@
+{
+  "version": "paper-common-shock-fixture-v1",
+  "mode": "risky",
+  "kind": "full-exit",
+  "simulated": true,
+  "facts": {
+    "initial": {
+      "policy": {
+        "version": 1,
+        "mode": "risky",
+        "stopLossPct": 0.05,
+        "revision": 1,
+        "updatedAt": 1767484800000,
+        "label": "Risky",
+        "maxPositionPct": 0.3,
+        "maxOpenPositions": 4,
+        "maxEntriesPerDay": 10,
+        "minEntryMinutes": 30,
+        "cooldownMinutes": 60,
+        "maxPortfolioRiskPct": 0.025,
+        "maxSpreadBps": 20,
+        "maxSlippageBps": 30,
+        "minConfidence": 0.6,
+        "stopBasis": "average entry including buy fees",
+        "scope": "AI risk preferences shared with native new entries; additional native guards apply. Existing stops never loosen; exits are exempt from entry frequency gates",
+        "confidenceMeaning": "Uncalibrated model filter, never a probability or sizing input",
+        "fingerprint": "f2600844bdaf2a9401d5dbd4073d98fce0fb57438acbb723cb5eda21c4e8f1d0"
+      },
+      "positions": [
+        {
+          "id": "39dd7015-8466-4c31-ae81-675ec7e2666c",
+          "accountId": "common-shock-paper",
+          "pair": "SHOCKBTC/EUR",
+          "qty": 0.998901,
+          "avgEntryPrice": 100.11001,
+          "costBasisEur": 99.99998909901001,
+          "stopLossPrice": 95.10450949999999,
+          "takeProfitPrice": 110.01100000000001,
+          "openedAt": 1767484800000
+        },
+        {
+          "id": "91b4b50f-0615-492e-8bcd-d435610580d3",
+          "accountId": "common-shock-paper",
+          "pair": "SHOCKETH/EUR",
+          "qty": 1.997802,
+          "avgEntryPrice": 50.055005,
+          "costBasisEur": 99.99998909901001,
+          "stopLossPrice": 47.552254749999996,
+          "takeProfitPrice": 55.005500000000005,
+          "openedAt": 1767486660000
+        }
+      ],
+      "trades": [
+        {
+          "id": "b2cbf9ac-90d1-4fe5-b9d3-0bc81e6825f4",
+          "accountId": "common-shock-paper",
+          "pair": "SHOCKBTC/EUR",
+          "side": "buy",
+          "qty": 0.998901,
+          "fillPrice": 100.01,
+          "costEur": 99.90008901,
+          "feeEur": 0.09990008901,
+          "midPriceAtDecision": 100.005,
+          "slippageBps": 0.4999750012513182,
+          "latencyMs": 0,
+          "reason": "Synthetic held entry",
+          "decisionId": "entry-0",
+          "realizedPnlEur": null,
+          "ts": 1767484800000
+        },
+        {
+          "id": "d616acb2-36ae-4807-b1d3-0b580c5144ee",
+          "accountId": "common-shock-paper",
+          "pair": "SHOCKETH/EUR",
+          "side": "buy",
+          "qty": 1.997802,
+          "fillPrice": 50.005,
+          "costEur": 99.90008901,
+          "feeEur": 0.09990008901,
+          "midPriceAtDecision": 50.0025,
+          "slippageBps": 0.4999750012513182,
+          "latencyMs": 0,
+          "reason": "Synthetic held entry",
+          "decisionId": "entry-1",
+          "realizedPnlEur": null,
+          "ts": 1767486660000
+        }
+      ],
+      "account": {
+        "id": "common-shock-paper",
+        "name": "Synthetic common-shock test",
+        "strategy": "ai",
+        "startingBalance": 1000,
+        "cash": 800.00002180198,
+        "peakEquity": 1000,
+        "status": "active",
+        "createdAt": 1767484800000
+      }
+    },
+    "preExit": {
+      "asOf": 1767486660000,
+      "complete": true,
+      "equity": 939.84616180198,
+      "cash": 800.00002180198,
+      "positions": [
+        {
+          "id": "39dd7015-8466-4c31-ae81-675ec7e2666c",
+          "accountId": "common-shock-paper",
+          "pair": "SHOCKBTC/EUR",
+          "qty": 0.998901,
+          "avgEntryPrice": 100.11001,
+          "costBasisEur": 99.99998909901001,
+          "stopLossPrice": 95.10450949999999,
+          "takeProfitPrice": 110.01100000000001,
+          "openedAt": 1767484800000,
+          "bid": 70,
+          "value": 69.92307,
+          "priceAsOf": 1767486660000,
+          "priceAgeMs": 0,
+          "valuationStatus": "fresh",
+          "lastKnownBid": 70,
+          "pnlEur": -30.076919099010013,
+          "pnlPct": -30.076922377692306
+        },
+        {
+          "id": "91b4b50f-0615-492e-8bcd-d435610580d3",
+          "accountId": "common-shock-paper",
+          "pair": "SHOCKETH/EUR",
+          "qty": 1.997802,
+          "avgEntryPrice": 50.055005,
+          "costBasisEur": 99.99998909901001,
+          "stopLossPrice": 47.552254749999996,
+          "takeProfitPrice": 55.005500000000005,
+          "openedAt": 1767486660000,
+          "bid": 35,
+          "value": 69.92307,
+          "priceAsOf": 1767486660000,
+          "priceAgeMs": 0,
+          "valuationStatus": "fresh",
+          "lastKnownBid": 35,
+          "pnlEur": -30.076919099010013,
+          "pnlPct": -30.076922377692306
+        }
+      ],
+      "unvaluedPairs": [],
+      "method": "fresh public top bid; no entry-price fallback; depth/fees excluded from mark",
+      "maxAgeMs": 5000
+    },
+    "after": {
+      "account": {
+        "id": "common-shock-paper",
+        "name": "Synthetic common-shock test",
+        "strategy": "ai",
+        "startingBalance": 1000,
+        "cash": 934.7168051669801,
+        "peakEquity": 1000,
+        "status": "paused",
+        "createdAt": 1767484800000
+      },
+      "positions": [],
+      "trades": [
+        {
+          "id": "b2cbf9ac-90d1-4fe5-b9d3-0bc81e6825f4",
+          "accountId": "common-shock-paper",
+          "pair": "SHOCKBTC/EUR",
+          "side": "buy",
+          "qty": 0.998901,
+          "fillPrice": 100.01,
+          "costEur": 99.90008901,
+          "feeEur": 0.09990008901,
+          "midPriceAtDecision": 100.005,
+          "slippageBps": 0.4999750012513182,
+          "latencyMs": 0,
+          "reason": "Synthetic held entry",
+          "decisionId": "entry-0",
+          "realizedPnlEur": null,
+          "ts": 1767484800000
+        },
+        {
+          "id": "d616acb2-36ae-4807-b1d3-0b580c5144ee",
+          "accountId": "common-shock-paper",
+          "pair": "SHOCKETH/EUR",
+          "side": "buy",
+          "qty": 1.997802,
+          "fillPrice": 50.005,
+          "costEur": 99.90008901,
+          "feeEur": 0.09990008901,
+          "midPriceAtDecision": 50.0025,
+          "slippageBps": 0.4999750012513182,
+          "latencyMs": 0,
+          "reason": "Synthetic held entry",
+          "decisionId": "entry-1",
+          "realizedPnlEur": null,
+          "ts": 1767486660000
+        },
+        {
+          "id": "0655ab74-cb75-487e-aba5-40f9739fcf25",
+          "accountId": "common-shock-paper",
+          "pair": "SHOCKBTC/EUR",
+          "side": "sell",
+          "qty": 0.998901,
+          "fillPrice": 67.49999999999999,
+          "costEur": 67.4258175,
+          "feeEur": 0.0674258175,
+          "midPriceAtDecision": 75,
+          "slippageBps": 1000.000000000002,
+          "latencyMs": 0,
+          "reason": "Stop-Loss ausgelöst",
+          "decisionId": "da118bc9-6d52-444e-98ab-397985aca3c4",
+          "realizedPnlEur": -32.64159741651001,
+          "ts": 1767486660000
+        },
+        {
+          "id": "06bc5137-0e89-42a2-bbc3-57da1e145c35",
+          "accountId": "common-shock-paper",
+          "pair": "SHOCKETH/EUR",
+          "side": "sell",
+          "qty": 1.997802,
+          "fillPrice": 33.74999999999999,
+          "costEur": 67.4258175,
+          "feeEur": 0.0674258175,
+          "midPriceAtDecision": 37.5,
+          "slippageBps": 1000.000000000002,
+          "latencyMs": 0,
+          "reason": "Stop-Loss ausgelöst",
+          "decisionId": "0c6f97f6-a163-4795-a3ee-34ca95ae821d",
+          "realizedPnlEur": -32.64159741651001,
+          "ts": 1767486660000
+        }
+      ],
+      "valuation": {
+        "asOf": 1767486660000,
+        "complete": true,
+        "equity": 934.7168051669801,
+        "cash": 934.7168051669801,
+        "positions": [],
+        "unvaluedPairs": [],
+        "method": "fresh public top bid; no entry-price fallback; depth/fees excluded from mark",
+        "maxAgeMs": 5000
+      },
+      "failures": []
+    },
+    "feeRate": 0.001,
+    "books": [
+      {
+        "symbol": "SHOCKBTC/EUR",
+        "valid": true,
+        "receivedAt": 1767486660000,
+        "bids": [
+          {
+            "price": "70",
+            "qty": "0.4994505"
+          },
+          {
+            "price": "65",
+            "qty": "0.998901"
+          }
+        ],
+        "asks": [
+          {
+            "price": "80",
+            "qty": "1000"
+          }
+        ]
+      },
+      {
+        "symbol": "SHOCKETH/EUR",
+        "valid": true,
+        "receivedAt": 1767486660000,
+        "bids": [
+          {
+            "price": "35",
+            "qty": "0.998901"
+          },
+          {
+            "price": "32.5",
+            "qty": "1.997802"
+          }
+        ],
+        "asks": [
+          {
+            "price": "40",
+            "qty": "1000"
+          }
+        ]
+      }
+    ]
+  },
+  "profitabilityEstablished": false,
+  "hash": "c038c2c20551e7bdf19165e388a49c15ecf4db2cef67caa0afb3bd04d8655e8e"
+}

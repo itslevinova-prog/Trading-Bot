@@ -1,0 +1,45 @@
+{
+  "recordedAt": "2026-10-31T23:11:12.694236+00:00",
+  "buildId": "d1956e35d7a4e9a5babb294176e60903eb50560375ce3bbf8103c02510b1ee00",
+  "mainTests": 1047,
+  "offlineTests": 15,
+  "newDirectTests": 15,
+  "testLog": "data/verify-breakout-entry-2026-11-01.log",
+  "comparisonLog": "data/compare-breakout-entry-2026-11-01.log",
+  "report": {
+    "path": "docs/breakout-entry-study-ad773aa0759f0716.json",
+    "hash": "ad773aa0759f0716b70ac0b2da8c95aa97a1ad247118c37c0322317845371734",
+    "protocolHash": "111779dbe557a0330846490af64c0e876252dad389cc3b7b47fbf6c646609351",
+    "buildId": "d1956e35d7a4e9a5babb294176e60903eb50560375ce3bbf8103c02510b1ee00"
+  },
+  "independentVerification": "docs/breakout-entry-verification.json",
+  "matchedFeePeriodScenarios": 14,
+  "actualReplays": 28,
+  "candidateBuyClosesIndependentlyChecked": 155,
+  "previousFullBaselinesExactlyMatched": 9,
+  "baseFee": {
+    "months": 7,
+    "improvedVsBaseline": 6,
+    "worseVsBaseline": 1,
+    "positiveCandidateMonths": 0,
+    "baselineTrades": 243,
+    "candidateTrades": 153,
+    "cashBeatsCandidateEveryMonth": true
+  },
+  "stressFee": {
+    "positiveCandidateMonths": 1,
+    "candidateTrades": 2,
+    "note": "Only one positive stress month with one trade, many no-trade outcomes; changed opportunity set, not evidence higher fees improve alpha."
+  },
+  "activation": false,
+  "modelTrained": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "sourceReview": "docs/upstream-research/REVIEW-PASS14.md",
+  "archivedSelectedFiles": 46,
+  "newSourceFiles": 2,
+  "featureDataIssue": "docs/feature-history-gap-observation.json",
+  "issueAffectsTheseFullGridHistoricalResults": false,
+  "totalActiveSeconds": 66094
+}

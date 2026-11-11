@@ -1,0 +1,9 @@
+[
+  {
+    "path": "freqtrade/freqai/prediction_models/LightGBMRegressor.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/freqai/prediction_models/LightGBMRegressor.py",
+    "sha256": "aa3a3e7cb6b2c0be75c8266650efc7997496b49bebe1ec3ae661e578378880cf",
+    "bytes": 2278,
+    "license": "GPL-3.0; archive only, no source port or execution"
+  }
+]

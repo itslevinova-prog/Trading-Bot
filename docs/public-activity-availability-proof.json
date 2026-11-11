@@ -1,0 +1,28 @@
+{
+  "verifiedAt": "2026-11-02T19:58:25.117Z",
+  "captureHash": "1297df4a2e853c038d09a485b1c18c2d6d0a23672035f8eea397a18e53b076be",
+  "buildId": "368f61105a9cd29e792b91def242a9767eacba756d50c7094f278a4ed8c27f0e",
+  "guardSourceHash": "66911ffd4f82f356352fea2cafcaab6891c9ef14f058187ef62f3c79f4063726",
+  "actualCaptureChecks": [
+    {
+      "pair": "BTC/EUR",
+      "rawHash": "efbdf075940cc6430b251b90f0bc5e9bf51b357a2d7a0d2a5e18ce6acb14a4c9",
+      "capturedAt": 1793649164077,
+      "acceptedAtCapture": true,
+      "deniedAtRetrospectiveClose": true,
+      "deniedAfterNextBoundary": true
+    },
+    {
+      "pair": "ETH/EUR",
+      "rawHash": "4e4e3c950f431995f1e998adbf7cac88c8973f81b295c556cccad86d55bf525a",
+      "capturedAt": 1793649164307,
+      "acceptedAtCapture": true,
+      "deniedAtRetrospectiveClose": true,
+      "deniedAfterNextBoundary": true
+    }
+  ],
+  "clockScenariosChecked": 6,
+  "newNetworkRequests": 0,
+  "modelActivated": false,
+  "activeContextChanged": false
+}

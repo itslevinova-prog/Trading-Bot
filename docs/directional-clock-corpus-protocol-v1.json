@@ -1,0 +1,30 @@
+{
+  "version": "directional-clock-corpus-protocol-v1",
+  "registeredAt": "2026-11-02T18:54:40.958Z",
+  "runnerHash": "b65252e94a36e2193642ebce3dd5e0f0d88f6e14ce5ec96c225450bf369c3699",
+  "sources": {
+    "apps/server/src/context/directional-strength.ts": "edb661fd8aa978995bea6043ed7c6eb72c0bb962959c535195883156ba2d785b",
+    "apps/server/dist/context/directional-strength.js": "e5e2a1ff7bbc75d4ecf51390a7390158289e31e9ab458f5fd53742b643a7adf8",
+    "apps/server/src/research/directional-strength-replay.ts": "9d6d6b3bb30184bb66fe5c9f8c21c51b2b11331a7c471626e78cbdfdeab4c369",
+    "apps/server/dist/research/directional-strength-replay.js": "deaf486067628bbe2454dbbe7b708bd0aa331f3904a28f4e4363e34233eb1753",
+    "scripts/historical-period-files.mjs": "8c3993e798fdcd902111d0cd1a087fc8bbabae71a9bb41d620cb86f95285a1af"
+  },
+  "originalCorpus": "docs/barrier-clock-corpus-3262b4fb3be9b47e.json",
+  "originalCorpusHash": "3262b4fb3be9b47e7edf0954e93d52f85fda6dfedf7159178c440fa6300a7414",
+  "periods": [
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03"
+  ],
+  "descriptorVersion": "closed-dmi-adx14-193-v1",
+  "windowClosedBars": 193,
+  "selection": "All7280original clocks without outcome selection; preserve missing as unknown/null, never zero-fill",
+  "independentVerification": "Reconstruct raw193bar windows and six descriptor fields with separate closed-form power sums; do not import runtime descriptor into verifier",
+  "modelFitted": false,
+  "activeContextChanged": false,
+  "oldSchemaChanged": false,
+  "julyLoaded": false
+}

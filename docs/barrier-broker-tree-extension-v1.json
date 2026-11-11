@@ -1,0 +1,10 @@
+{
+  "version": "barrier-broker-tree-extension-v1",
+  "registeredAt": "2026-11-02T17:21:41.995Z",
+  "priorSourceHash": "3a57476859e5638aae6b2e8b59711acd87bcc26d9032cd01384ddd3a18f4fd75",
+  "newSourceHash": "5774ecef8da1da24c1cfd6caf14e84b35575b1bcb7c26cc34779feb121bfd06f",
+  "priorArchivedBuild": "e0ec7f7af9ac946947a1e8ea94cfd93d373b3d094a0ecc0c142fe18e945dba85",
+  "change": "Optional sealed tree snapshot, explicit tree tag/selection, same train window/target/count validation; original schedules untouched. Must prove full original ridge/selected curves/fills identical before interpreting new portfolios.",
+  "coreEngineChanged": false,
+  "modelActivated": false
+}

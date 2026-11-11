@@ -1,0 +1,11 @@
+{
+  "path": "docs/policy-labels-77799fdeb3e8ee60.json",
+  "key": "77799fdeb3e8ee6042f544b9316ed06cbe2a4e9c5bcfe6bd1027db07114358d6",
+  "factsHash": "36f127c80f92ffe0fdd2ebccdad6c57adb9a61c78b516d35808c424c04efab0d",
+  "sourceReportHash": "7e873da81fec4c98e37988a4ce02d0b04ad8098a2fe73bfcd77ba32981597cc4",
+  "contractHash": "2c49d1471508e08630d91e872706f5ae64a321990005f1c7da2265fa85368551",
+  "builderHash": "7268f0594e677f8985c6f3260aca251c582353d8f3cfd6cde4676621e85ebd7f",
+  "verifiedAt": "2026-10-31T12:05:17.105Z",
+  "historicalSimulationOnly": true,
+  "modelTrained": false
+}

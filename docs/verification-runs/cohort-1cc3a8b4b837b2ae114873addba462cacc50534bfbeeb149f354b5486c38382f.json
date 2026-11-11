@@ -1,0 +1,141 @@
+{
+  "generatedAt": "2026-10-29T15:39:43.110Z",
+  "verifierHash": "d878cc12f29ebe06be3d9fa33a26e2f7f3eae0c791e4adda6e18808b6661c804",
+  "readerSourceHash": "b884d51ac42ad8506a91754ce30c5f597267a2eed0f44c4794f886f0d8f66460",
+  "readerBuildId": "dc12518b959d67b19e032e5b574866f49fee3626b17d8af29eb1582f545e8891",
+  "candidateId": "2026-10-28T21-14-52.089Z-3c29d6e9c59a",
+  "candidateBuildId": "3c29d6e9c59ac39fb30a3a49edcafa23871dbc9d7329396711fe78a6d9867731",
+  "candidateRunId": "cf706eaa-04d6-4709-995a-cfc7cf3e3fd8",
+  "currentEvaluationVersion": "a5b491992d24f2a8b9bd51ae09e25794f5756edc12a01884d308b27e94e30dd3",
+  "currentCohort": {
+    "accounts": {
+      "strategy": "rules",
+      "btc": "hold"
+    },
+    "profitabilityEstablished": false,
+    "independentPerformanceEstablished": false,
+    "insufficientSample": true,
+    "alignmentToleranceMs": 1000,
+    "maxCurrentAgeMs": 120000,
+    "currentMetrics": null,
+    "lastValidMetrics": null,
+    "metricsAreStale": true,
+    "valuationMethod": "Fresh top-bid account marks including paid paper fill fees. Hypothetical exit costs and intra-sample execution are unknown.",
+    "cashBenchmark": "Same-quote uninvested cash: 0 nominal return; no interest or FX adjustment.",
+    "warning": "Short prospective paper observations do not establish an advantage. Downtime may have missed strategy signals and protective executions; endpoint values do not reconstruct that path.",
+    "status": "awaiting_baselines",
+    "reason": "Both accounts need their own clean baseline for the same execution version",
+    "registeredAt": {
+      "strategy": 1793287478554,
+      "btc": null
+    }
+  },
+  "archivedCohorts": [
+    {
+      "evaluationVersion": "6befebf4af506910c511533d39fe7851b6778904534e914395bdbb40590a6378",
+      "activeRuntimeVersion": false,
+      "evidence": {
+        "accounts": {
+          "strategy": "rules",
+          "btc": "hold"
+        },
+        "profitabilityEstablished": false,
+        "independentPerformanceEstablished": false,
+        "insufficientSample": true,
+        "alignmentToleranceMs": 1000,
+        "maxCurrentAgeMs": 120000,
+        "currentMetrics": null,
+        "lastValidMetrics": {
+          "asOf": 1793223366443,
+          "strategyAt": 1793223366442,
+          "benchmarkAt": 1793223366443,
+          "strategyEquity": 100,
+          "benchmarkEquity": 99.6901104586,
+          "strategyReturnPct": 0,
+          "btcReturnPct": -0.30988954139999914,
+          "excessVsBtcPercentagePoints": 0.30988954139999914,
+          "excessVsCashPercentagePoints": 0
+        },
+        "metricsAreStale": true,
+        "valuationMethod": "Fresh top-bid account marks including paid paper fill fees. Hypothetical exit costs and intra-sample execution are unknown.",
+        "cashBenchmark": "Same-quote uninvested cash: 0 nominal return; no interest or FX adjustment.",
+        "warning": "Short prospective paper observations do not establish an advantage. Downtime may have missed strategy signals and protective executions; endpoint values do not reconstruct that path.",
+        "evaluationVersion": "6befebf4af506910c511533d39fe7851b6778904534e914395bdbb40590a6378",
+        "registeredAt": {
+          "strategy": 1793222286312,
+          "btc": 1793222286313
+        },
+        "baselineEquity": {
+          "strategy": 100,
+          "btc": 100
+        },
+        "startSkewMs": 1,
+        "status": "observation_gap",
+        "lastPairedAt": 1793287418590,
+        "lastValidPairedAt": 1793223366443,
+        "pairedObservations": 20,
+        "validPairedObservations": 19,
+        "invalidPairedObservations": 1,
+        "unmatchedObservations": {
+          "strategy": 1,
+          "btc": 1
+        },
+        "maximumPairSkewMs": 868,
+        "observedSpanMs": 65132277,
+        "elapsedSinceBaselineMs": 66096796,
+        "currentGapMs": 964519,
+        "registeredWindowSampleCoveragePct": 1.6341639313348866,
+        "maximumPairedGapMs": 64052147,
+        "longGaps": 1,
+        "supportedSampleIntervalMs": 1080130,
+        "sampledIntervalCoveragePct": 1.6583636405034634,
+        "coverageMethod": "Sum of intervals <=90s between adjacent valid paired samples; not proof of continuous freshness between samples. No coverage across gaps.",
+        "hasGaps": true,
+        "observedAt": 1793288383109,
+        "benchmarkFirstFillAt": 1793222287011,
+        "benchmarkDefinition": "One verified initial BTC buy, including its actual fee/slippage; no benchmark rebalancing",
+        "executionAttribution": {
+          "strategy": {
+            "fills": 0,
+            "buyFills": 0,
+            "sellFills": 0,
+            "feesPaid": 0,
+            "realizedPnl": 0,
+            "decisions": 1,
+            "decisionStatuses": {
+              "hold": 1
+            },
+            "unknownContextDecisions": 0,
+            "otherVersionDecisions": 1,
+            "decisionLinkedFills": 0,
+            "fillsWithoutDecisionRecord": 0,
+            "fillsWithPostFillDecisionRecord": 0,
+            "note": "Sell fills may be partial. Protective executions may carry verified execution provenance without an ordinary decision record. Unlinked fills are not silently assigned to model decisions. A post-fill decision record does not prove which information was available before execution."
+          },
+          "btc": {
+            "fills": 1,
+            "buyFills": 1,
+            "sellFills": 0,
+            "feesPaid": 0.09987684139999997,
+            "realizedPnl": 0,
+            "decisions": 1,
+            "decisionStatuses": {
+              "executed": 1
+            },
+            "unknownContextDecisions": 0,
+            "otherVersionDecisions": 0,
+            "decisionLinkedFills": 0,
+            "fillsWithoutDecisionRecord": 0,
+            "fillsWithPostFillDecisionRecord": 1,
+            "note": "Sell fills may be partial. Protective executions may carry verified execution provenance without an ordinary decision record. Unlinked fills are not silently assigned to model decisions. A post-fill decision record does not prove which information was available before execution."
+          }
+        }
+      }
+    }
+  ],
+  "privateExchangeCalls": 0,
+  "realOrders": 0,
+  "paidCalls": 0,
+  "profitabilityEstablished": false,
+  "warning": "All registered historical cohorts are retained without selecting a winner. Changed universes require new baselines. Frozen runtime code was not replaced by this read-only report."
+}

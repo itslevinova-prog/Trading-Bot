@@ -1,0 +1,90 @@
+{
+  "verifiedAt": "2026-10-30T17:52:11.549Z",
+  "checkpointRecoveredAt": "2026-10-30T17:59:36.587Z",
+  "buildId": "13c1a60b5bbd62a620083b63e6a1b3a653eb8cdced605528dd02d4f4a0ce44d5",
+  "runId": "2ccc8f17-4750-438c-be50-7048e10059d7",
+  "sourceFiles": [
+    {
+      "path": "apps/server/src/live/bracket-lineage.ts",
+      "sha256": "0c849a0300d237fdbad8d99f51d189c8d0a8c68d021d0061ffd2b982004456f2"
+    },
+    {
+      "path": "apps/server/src/live/exit-plan.ts",
+      "sha256": "120df9df7068c45231c2f16ef8b82adde73828c93820bf52af11a31c02b881ee"
+    },
+    {
+      "path": "apps/server/src/live/exit-driver.ts",
+      "sha256": "49d01770f0c10262860afd81fea7d72d6df91fed440a0e34ba831ab154d3be1b"
+    },
+    {
+      "path": "apps/server/src/live/exit-evidence.ts",
+      "sha256": "4b11f6743cbf00206f63f707cde761f5b6a97b2477561d906428fc61ccca628d"
+    },
+    {
+      "path": "apps/server/src/live/protection.ts",
+      "sha256": "5fd9c9903a92b74ec9f44712a3859f910ab7d857eebd6bc85b4ee2ee8bdbfbc5"
+    },
+    {
+      "path": "apps/server/src/live/trading-policy.ts",
+      "sha256": "22742b31d6401111fa7612f300f185ca3aa65e20622e900b8c0b56373b56115c"
+    },
+    {
+      "path": "apps/server/src/live/BinanceSpotExecutionAdapter.ts",
+      "sha256": "92d831186b89a65b9ef5fbe0f0fa3b36a4b87ba6a6f3a1242d6e85f40ca3b48d"
+    },
+    {
+      "path": "apps/server/test/exit-driver.test.ts",
+      "sha256": "356c3df20812e9ea4a6ac197b3a4715dfdabf0f9a1b0a439c6a1edf4659c5f84"
+    },
+    {
+      "path": "apps/server/test/protection.test.ts",
+      "sha256": "124eacf2b885cf62e3a95ecdac22135bac49518979af5d3397ddd050d082137b"
+    },
+    {
+      "path": "apps/server/test/exit-plan.test.ts",
+      "sha256": "01e54dc884383386d9a27f4a7d7b93cd02bfce00c86a13207495454488a92266"
+    },
+    {
+      "path": "apps/server/test/live.test.ts",
+      "sha256": "785bbfc828fbacf267264a79b2b234238b2fe8fc553dc89cd8d214d69b9d277e"
+    },
+    {
+      "path": "apps/server/test/live-balances.test.ts",
+      "sha256": "bfe6d23813523da55b39765f717b356a42913735f1a49e211e649b56e4529056"
+    }
+  ],
+  "localDriverImplemented": true,
+  "driverTestCases": 73,
+  "fullSuiteTests": 576,
+  "offlineTests": 15,
+  "typecheck": true,
+  "build": true,
+  "suiteLog": "docs/verification-runs/native-lineage-suite-f36e6adc1380cb55345976a3e196681584aab68cec9ea9c52cec226939ad70d5.log",
+  "suiteLogHash": "f36e6adc1380cb55345976a3e196681584aab68cec9ea9c52cec226939ad70d5",
+  "transport": "injected local fixtures only",
+  "actualSqliteReopenTested": true,
+  "followingOcoParentSupported": true,
+  "maximumLineageDepthCodeBound": 128,
+  "maximumLineageDepthIntegratedTested": 2,
+  "validatedCompletionCooldown": true,
+  "productionTransportImplemented": false,
+  "modelSellRouteEnabled": false,
+  "newPrivateEndpointsGranted": false,
+  "actualPrivateExchangeCalls": 0,
+  "actualOrders": 0,
+  "paidCalls": 0,
+  "actualMatchingEngineTested": false,
+  "realModelTested": false,
+  "emergencyGapExitImplemented": false,
+  "exchangeTriggeredReplacementClosureObserverImplemented": false,
+  "fullObservedNativeExitModelContextTested": false,
+  "priceGapEliminated": false,
+  "profitabilityEstablished": false,
+  "frozenReferenceFilesUnchanged": true,
+  "frozenReferenceDependencyPackages": 114,
+  "limitations": [
+    "Only injected transports tested; original private mutation whitelist and model SELL block unchanged.",
+    "Independent exchange-triggered replacement closure, emergency gap exit, paginated actual fees/fills and full exit model-context stress remain open.",
+    "Historical acknowledged/protected intents are observations, not current live protection or PnL."
+  ]
+}

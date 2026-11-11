@@ -1,0 +1,31 @@
+{
+  "verifiedAt": "2026-11-02T15:55:59.086Z",
+  "documentation": "docs/CLOCK-RANKING-ERRORS.md",
+  "artifact": "docs/clock-ranking-audit-b599b7f4d444621d.json",
+  "factsHash": "b599b7f4d444621d8e06bc2cfc6646e396b1997fc8ed94e95db72e095a7dc057",
+  "verification": "docs/clock-ranking-verification.json",
+  "clockChoicesVerified": 2624,
+  "rowPredictionsCompared": 52480,
+  "brokerEntrySetsExactlyMatched": true,
+  "ridgeWinnerClocks": 50,
+  "selectedWinnerClocks": 11,
+  "ridgeMeanWinnerForecast": 0.00899812214249873,
+  "ridgeMeanWinnerLabel": -0.005717407835070123,
+  "selectedMeanWinnerForecast": 0.009657938021440321,
+  "selectedMeanWinnerLabel": -0.004427206417030649,
+  "directTests": 8,
+  "typechecksPassed": true,
+  "buildId": "f2f5de30b61b8323cf39962adedad0e9b8b7b6f36f31f7881d922977b664ebf0",
+  "isolation": "data/clock-ranking-isolation-2026-11-02.json",
+  "newSelectorChosen": false,
+  "newModelFitted": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "sources": {
+    "apps/server/src/research/clock-ranking.ts": "71c2a6fbaf54d421bdc3c39b4a81a73176f783173e899f8ee1fdb0aa2a227930",
+    "apps/server/test/clock-ranking.test.ts": "a9205ff743d3fba59adaa181bb022cb7bbee2b5b5a191cb29011ee43f282af2d",
+    "scripts/audit-clock-ranking.mjs": "0bfc5d207c33b1c44afa77be1754ffc9cbc352f79d93ca6cd1cd3a9849ee9db0",
+    "scripts/verify-clock-ranking.mjs": "ef11f840f3f608e74d1f73a8b25c8d65161a4036eecd088807aecdaba41a48ef"
+  }
+}

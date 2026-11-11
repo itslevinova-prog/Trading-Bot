@@ -1,0 +1,28 @@
+{
+  "commit": "aded4b9d51d432d411a8f7fbf45e47572dff6629",
+  "license": "MIT",
+  "selectedAt": "2026-11-03T15:43:55.467942+00:00",
+  "files": [
+    {
+      "path": "jesse/candle_pipelines/base_candles.py",
+      "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/candle_pipelines/base_candles.py",
+      "sha256": "7e2ebe516079e36b28852fe72f197f4221ccf7b43b0946491a2fc78b8c0df943",
+      "bytes": 1633,
+      "local": "docs/upstream-research/jesse/source/jesse/candle_pipelines/base_candles.py"
+    },
+    {
+      "path": "jesse/candle_pipelines/moving_block_bootstrap.py",
+      "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/candle_pipelines/moving_block_bootstrap.py",
+      "sha256": "f8f135edb97d23d0b714acfc2abc580deb0323e938a0dc18b86624fe63bedc10",
+      "bytes": 4001,
+      "local": "docs/upstream-research/jesse/source/jesse/candle_pipelines/moving_block_bootstrap.py"
+    },
+    {
+      "path": "jesse/candle_pipelines/gaussian_resampler.py",
+      "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/candle_pipelines/gaussian_resampler.py",
+      "sha256": "c5b7ada83c37233083a14564bde3389b36f565baa638e7946280ecd3433105ad",
+      "bytes": 3074,
+      "local": "docs/upstream-research/jesse/source/jesse/candle_pipelines/gaussian_resampler.py"
+    }
+  ]
+}

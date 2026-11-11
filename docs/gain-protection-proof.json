@@ -1,0 +1,44 @@
+{
+  "version": "closed-gain-protection-proof-v1",
+  "verifiedAt": "2026-10-31T22:36:43.908807+00:00",
+  "buildId": "8b48dcabebc9d3b703a1f3685d33f7d30392c950222f8d1ecd21e5550862aa7e",
+  "protocol": "docs/gain-protection-protocol-v1.json",
+  "report": {
+    "path": "docs/gain-protection-study-2d0675ee95ee7421.json",
+    "hash": "2d0675ee95ee7421ffac5d33d865864087b3dbae55bc9f3dca9f3b8816a40e4d",
+    "protocolHash": "f064814413388144fa0f202075e15e81f28d31b85a8d18cac35a8a62a8fdab04",
+    "buildId": "8b48dcabebc9d3b703a1f3685d33f7d30392c950222f8d1ecd21e5550862aa7e"
+  },
+  "tests": {
+    "main": 1027,
+    "offline": 15,
+    "newUnitCases": 21,
+    "newCompleteReplayCases": 2,
+    "typechecksAndBuildPassed": true,
+    "log": "data/verify-gain-protection-final-2026-10-31.log"
+  },
+  "fullBaselinesAndCandidateResultsExactlyEqual": true,
+  "additionalHistoricalExits": 0,
+  "baseFeeWitnessObservations": {
+    "January": 124,
+    "April": 62
+  },
+  "observationsAreDependentNotSampleCounts": true,
+  "syntheticReplayActuallyExecutesWhenConditionsHold": true,
+  "highOnlyPeakDoesNotTrigger": true,
+  "syntheticExitMayStillLoseMoney": true,
+  "nativeStopMutations": 0,
+  "newPolicyActivated": false,
+  "julyLoaded": false,
+  "modelTrained": false,
+  "profitabilityEstablished": false,
+  "frozenV3SourceRuntimeIntact": true,
+  "sourceReview": "docs/upstream-research/REVIEW-PASS12.md",
+  "selectedArchiveFiles": 44,
+  "wholeRepositoryReviewStillIncomplete": true,
+  "paidCalls": 0,
+  "privateExchangeCalls": 0,
+  "realOrders": 0,
+  "externalAiCalls": 0,
+  "next": "Stop iterating exit thresholds on these consumed cases. Prioritize entry/regime intelligence and adequate predeclared training data before any local learner; existing Ridge defaults require200rows, one January policy has44."
+}

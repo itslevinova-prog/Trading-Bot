@@ -1,0 +1,64 @@
+{
+  "verifiedAt": "2026-11-01T13:11:36.032Z",
+  "verifierHash": "774636bddfdd46339aea8775ab3abacbc0cfe1ca4c574889b32957d5b782e400",
+  "report": "docs/fixed-target-walkforward-dae4209016d39a3e.json",
+  "factsHash": "dae4209016d39a3e7e71bf3eb1224bf00bb5b71dc7df32ebbac37b3c41238984",
+  "modelsTrainOnlyNormalEquationsVerified": 41,
+  "testPredictionsVerified": 6560,
+  "capitalPositionsIncludingStressVerified": 591,
+  "selectedCounts": {
+    "zero": 27,
+    "mean": 10,
+    "ridge": 4
+  },
+  "aggregate": {
+    "zero": {
+      "testRows": 6560,
+      "mae": 0.017521108515730393,
+      "coverage": 1,
+      "baseReturnPct": 0,
+      "adaptiveStressReturnPct": 0,
+      "pairedStressReturnPct": 0,
+      "baseTrades": 0,
+      "adaptiveStressTrades": 0,
+      "independentSamples": null
+    },
+    "mean": {
+      "testRows": 6560,
+      "mae": 0.0178404407081805,
+      "coverage": 1,
+      "baseReturnPct": 0,
+      "adaptiveStressReturnPct": 0,
+      "pairedStressReturnPct": 0,
+      "baseTrades": 0,
+      "adaptiveStressTrades": 0,
+      "independentSamples": null
+    },
+    "ridge": {
+      "testRows": 6560,
+      "mae": 0.019044782553510636,
+      "coverage": 0.9824695121951219,
+      "baseReturnPct": -13.180833759559874,
+      "adaptiveStressReturnPct": -11.526090938170242,
+      "pairedStressReturnPct": -21.91943696130324,
+      "baseTrades": 232,
+      "adaptiveStressTrades": 127,
+      "independentSamples": null
+    },
+    "selected": {
+      "testRows": 6560,
+      "mae": 0.017749838807094184,
+      "coverage": 0.9981707317073171,
+      "baseReturnPct": -1.8815868525403512,
+      "adaptiveStressReturnPct": -1.3359373276048525,
+      "pairedStressReturnPct": -2.368620523675935,
+      "baseTrades": 11,
+      "adaptiveStressTrades": 5,
+      "independentSamples": null
+    }
+  },
+  "modelActivated": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "path": "jesse/candle_pipelines/base_candles.py",
+    "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/candle_pipelines/base_candles.py",
+    "sha256": "7e2ebe516079e36b28852fe72f197f4221ccf7b43b0946491a2fc78b8c0df943",
+    "bytes": 1633,
+    "license": "MIT; archive/review only, no source execution or port"
+  },
+  {
+    "path": "jesse/candle_pipelines/moving_block_bootstrap.py",
+    "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/candle_pipelines/moving_block_bootstrap.py",
+    "sha256": "f8f135edb97d23d0b714acfc2abc580deb0323e938a0dc18b86624fe63bedc10",
+    "bytes": 4001,
+    "license": "MIT; archive/review only, no source execution or port"
+  },
+  {
+    "path": "jesse/modes/backtest_mode.py",
+    "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/modes/backtest_mode.py",
+    "sha256": "9a3d585b35f567567704dd5b9401bd733712654d35ea95b734eb4070f9fa3b0c",
+    "bytes": 91167,
+    "license": "MIT; archive/review only, no source execution or port"
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "verifiedAt": "2026-11-02T20:26:36.631Z",
+  "captureHash": "1297df4a2e853c038d09a485b1c18c2d6d0a23672035f8eea397a18e53b076be",
+  "buildId": "ebf867334bfce9b52504737ddc33ac2a6d5eb22c9b17dac4e9958de034542afe",
+  "runnerHash": "4cd03a4b89faec574c805bf6d4c2640554975599d1a0121d00c6dbb395f778e3",
+  "envelopeHashes": [
+    {
+      "pair": "BTC/EUR",
+      "hash": "8293fcb671b5674faa9fc0be2840cf9bd0d790499a80a7201d4398ce6697ddf0",
+      "captureFactsHash": "1297df4a2e853c038d09a485b1c18c2d6d0a23672035f8eea397a18e53b076be"
+    },
+    {
+      "pair": "ETH/EUR",
+      "hash": "aafc10d8fa6d35186f2a968908c4c3acd9648d219c584c358b8c0794ae26698b",
+      "captureFactsHash": "1297df4a2e853c038d09a485b1c18c2d6d0a23672035f8eea397a18e53b076be"
+    }
+  ],
+  "checks": [
+    {
+      "pair": "BTC/EUR",
+      "asOf": 1793649164307,
+      "available": true,
+      "reason": null
+    },
+    {
+      "pair": "ETH/EUR",
+      "asOf": 1793649164307,
+      "available": true,
+      "reason": null
+    },
+    {
+      "pair": "SOL/EUR",
+      "asOf": 1793649164307,
+      "available": false,
+      "reason": "public-capture-unavailable"
+    },
+    {
+      "pair": "BTC/EUR",
+      "scenario": "retrospective",
+      "available": false,
+      "reason": "not-yet-captured-at-decision"
+    },
+    {
+      "pair": "ETH/EUR",
+      "scenario": "retrospective",
+      "available": false,
+      "reason": "not-yet-captured-at-decision"
+    },
+    {
+      "pair": "BTC/EUR",
+      "scenario": "stale",
+      "available": false,
+      "reason": "source-window-not-current-at-decision"
+    },
+    {
+      "pair": "ETH/EUR",
+      "scenario": "stale",
+      "available": false,
+      "reason": "source-window-not-current-at-decision"
+    },
+    {
+      "pair": "BTC/EUR",
+      "scenario": "source-mismatch",
+      "available": false,
+      "reason": "capture-and-causal-ohlcv-disagree"
+    }
+  ],
+  "existingFramesFeaturesUnchanged": true,
+  "sourceInputsUnchanged": true,
+  "targetedTests": 71,
+  "adapterTests": 29,
+  "typechecksPassed": true,
+  "sources": {
+    "apps/server/src/research/executed-activity-replay.ts": "ed80e422225ac6ec9ba11f7358b5273c95b2e77f1693c0275c3b31c2d6f021e7",
+    "apps/server/dist/research/executed-activity-replay.js": "767b1825da2a35674906b3365c8ab202382e696b936349253c0e1797637cbdc6",
+    "apps/server/test/executed-activity-replay.test.ts": "e339813f2c462041f02076f284ad68f840cf950bcf3a4fe6c43ecaedc4ed0adb"
+  },
+  "newNetworkRequests": 0,
+  "modelFitted": false,
+  "activeContextChanged": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "documentation": "docs/EXECUTED-ACTIVITY-REPLAY.md",
+  "budgetProof": "docs/executed-activity-budget-proof.json",
+  "isolation": "data/executed-activity-replay-isolation-2026-11-02.json"
+}

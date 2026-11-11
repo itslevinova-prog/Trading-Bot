@@ -1,0 +1,66 @@
+{
+  "recordedAt": "2026-10-30T20:58:28.746245+00:00",
+  "buildId": "a755b9284075b5a532ee3b9f4b6578f5a327fce2cda9370887c3d503e9b3daea",
+  "runId": "4ced9ddd-e298-42c0-ac86-a8ea60587112",
+  "runtimeVerifiedAt": "2026-10-30T20:54:09.346Z",
+  "mainTests": 636,
+  "offlineTests": 15,
+  "localLearningTests": 11,
+  "reportId": "33432b7d0ced9f3518a500d88776fcb88b4f0df6cc8af3a62f2e65c3541ae12e",
+  "repeatedReportIdentical": true,
+  "protocolRegisteredBeforeFirstFit": true,
+  "historicalDataAlreadyInspected": true,
+  "independentProspectiveEvidence": false,
+  "observations": 2140,
+  "uniqueDecisionTimes": 107,
+  "pairs": 20,
+  "temporalTestFolds": 2,
+  "independentSamples": null,
+  "ridgeBeatsZeroTestMae": [
+    false,
+    false
+  ],
+  "ridgeDiagnosticReturnsPct": [
+    -0.13645617426848444,
+    0
+  ],
+  "ridgeHypotheticalPositions": [
+    2,
+    0
+  ],
+  "validationSelected": [
+    "mean",
+    "zero"
+  ],
+  "selectedDiagnosticPositions": [
+    0,
+    0
+  ],
+  "modelActivated": false,
+  "profitabilityEstablished": false,
+  "existingRuleBaselineReturnPct": 0,
+  "existingRuleBaselineClosedTrades": 0,
+  "originalMemoryRowsPreserved": 2518,
+  "privateExchangeCalls": 0,
+  "paidCalls": 0,
+  "realOrders": 0,
+  "hashes": {
+    "apps/server/src/research/local-learning.ts": "ad2cecfe694f567cf6fc153f0d1f8ed2d0d984ec4bdeef57e0a76d773aa5ca09",
+    "apps/server/test/local-learning.test.ts": "71b3f603f002f41e2feb8dcd5aeda0935dac2227be2f33a2b7b0f633567d087c",
+    "scripts/run-local-learning.ts": "636f8fe006df55184538451681cd1ad5d341714a0d101dba5d3a21a3ae8c9b10",
+    "docs/learning-protocol-v1.json": "e731337b4a950217b27624064ed5504bb1c2b6025bfe11700ed5c5d9988de533",
+    "docs/learning-evaluation-register.json": "af708fbe619d87917da35dffc1c7a8d05392439cb6a8dc5b39f95705a1719c1b",
+    "docs/LOCAL-LEARNING.md": "8ef96e605037e9077c878d4fe8312e960061deb2f2f56f232e8f15a420fc1868",
+    "data/learning-reports/33432b7d0ced9f3518a500d88776fcb88b4f0df6cc8af3a62f2e65c3541ae12e.json": "d9dfff7f68507734f122f44c39586a66f0c21cc32ed9cf953269236a27f87ff2",
+    "data/learning-reports/33432b7d-position-audit.json": "6ece01068b46d3c2c79e771889759608bd3cc68eec779a14af229ff169044690",
+    "data/local-learning-run-2026-10-30.log": "3a52a02b43155f4110c39fc9102715484ce3a8e92cdd07ab587959e0a732a606",
+    "data/local-learning-repeat-2026-10-30.log": "3a52a02b43155f4110c39fc9102715484ce3a8e92cdd07ab587959e0a732a606",
+    "data/verify-local-learning-2026-10-30.log": "6322e42ca91715d732a3cde755c324fae9b05fc1380c5d324887adc8708be695",
+    "data/replay-local-learning-2026-10-30.log": "f71877054661175ff202a1eb6603ef7584b3aae085ddc51e103b4f9773f78898",
+    "data/funnel-local-learning-2026-10-30.log": "b04b6f76b42cab783258c8c28b3dc730455687c79a34519c91e77e342790de18",
+    "data/memory-preservation-after-learning-2026-10-30.log": "fb9a99477f141aff31a82fda693483cce05aebc8bd630eab240d45cf9323edd4",
+    "docs/verification-latest.json": "ce10efdab4e214fad08c6d84a22de0c1a1ce8992351ce6de50e5edaced6f0434",
+    "data/research-datasets/d0066ea5e97b107a22c148dbfcfcd245a2ea37e555684a5af36a382134b14926.json.gz": "70e32aca4bb84fe28a05303bc0a0ca67a95ec71f038cf4e47af01d2dae66d227",
+    "data/research-datasets/binance-eur-default.json": "f10adc960a8f4340a9367bb328172a5170f118443eda5c6ce92efd8d74855810"
+  }
+}

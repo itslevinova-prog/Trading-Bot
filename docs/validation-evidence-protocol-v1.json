@@ -1,0 +1,31 @@
+{
+  "version": "validation-evidence-protocol-v1",
+  "registeredAt": "2026-11-03T15:00:42.859Z",
+  "runnerHash": "3405e79f23aafdb80dff83df80d2a2e1029046a33be4575dbe2690c4df5fc6c4",
+  "sources": {
+    "apps/server/src/research/validation-evidence.ts": "d9057910e3513b1d94d2fa3ad22cc1824ac26b48031d07ef0f50abc4489663f4",
+    "apps/server/dist/research/validation-evidence.js": "73e2063007e453046debf4382b3f86a126c79fdf01750cffe447330375c07e42",
+    "apps/server/src/research/clock-ranking.ts": "71c2a6fbaf54d421bdc3c39b4a81a73176f783173e899f8ee1fdb0aa2a227930",
+    "apps/server/dist/research/clock-ranking.js": "827887963a7a2c855ad98cdb81129e039000a86a891bc43a7ff43a4ea1840320",
+    "apps/server/src/research/barrier-learning.ts": "bcd91ef518d5f080bed3e503dea5538ef3df9c49d8c559210bd4345d48832f87",
+    "apps/server/dist/research/barrier-learning.js": "04a5a8337198a2d40f1ae362658373bb867d093460a0893c677b99679be785aa"
+  },
+  "models": "docs/aggressor-ridge-walkforward-9e6096906eea1521.json",
+  "modelsHash": "9e6096906eea152134caed8459188588a1beb4af80cf0a5aff2daf8d4bf5a916",
+  "corpus": "docs/barrier-clock-corpus-3262b4fb3be9b47e.json",
+  "corpusHash": "3262b4fb3be9b47e7edf0954e93d52f85fda6dfedf7159178c440fa6300a7414",
+  "prior": "docs/barrier-net-walkforward-4898631417b16e07.json",
+  "priorHash": "4898631417b16e07db860acf1342af2160ab138bd98ea0dfece8a341ba37facc",
+  "scope": "All41existing4day validationwindows, no new training or window search",
+  "existingSelection": "Minimum40knownlabels,95percentforecastcoverage, stablezero/mean/ridge/common/aggressor order, MAEabstentionzero, unknownlabelsnot scored,1e-12conservativeties",
+  "diagnostics": [
+    "Distinctvalidationclock/day/pair/rowcounts",
+    "Validation/testcalendar-role overlap, no independence inference",
+    "RemoveALLrows at onevalidationclock, recompute selector on remaining frozen forecasts without refit",
+    "Existing0.005outcome-blindopportunitycounts/forecast-label summaries"
+  ],
+  "selectorChanged": false,
+  "newThresholdChosen": false,
+  "confidenceEstimated": false,
+  "julyLoaded": false
+}

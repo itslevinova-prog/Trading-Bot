@@ -1,0 +1,212 @@
+{
+  "version": "actual-native-activity-research-bridge-audit-v1",
+  "asOf": 1793735156421,
+  "auditedAt": "2026-11-03T19:45:56.421Z",
+  "runnerHash": "3ed95d51acd0db9168af79cc40fc8d21f280bee18115d8afbf3e6fd2839ddeed",
+  "workingBuild": {
+    "verified": true,
+    "buildId": "0fd91e5ce649ac184dbf727ba44ce41806ce7598c76b00bb8f04a43876fe561e",
+    "builtAt": "2026-11-03T19:45:55.434Z",
+    "sourceFiles": 157,
+    "runtimeFiles": 147,
+    "reasons": []
+  },
+  "loadedMainBuildId": "3b92fac27a6e17577dfdf400e0c75f44d62a870b9d106514b3cbf0405c086792",
+  "loadedMainRunId": "f43665df-20ab-4e12-8f6f-1ae71d74f49f",
+  "mainRestarted": false,
+  "publicSourceObservations": {
+    "n": 200,
+    "sharedCloses": 10
+  },
+  "pairs": 20,
+  "availableFeaturePackets": 0,
+  "results": [
+    {
+      "pair": "ADA/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    },
+    {
+      "pair": "APT/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    },
+    {
+      "pair": "AVAX/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    },
+    {
+      "pair": "BCH/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    },
+    {
+      "pair": "BNB/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    },
+    {
+      "pair": "BTC/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    },
+    {
+      "pair": "DOGE/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    },
+    {
+      "pair": "ETH/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    },
+    {
+      "pair": "LINK/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    },
+    {
+      "pair": "LTC/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    },
+    {
+      "pair": "NEAR/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    },
+    {
+      "pair": "PEPE/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    },
+    {
+      "pair": "POL/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    },
+    {
+      "pair": "SHIB/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    },
+    {
+      "pair": "SOL/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    },
+    {
+      "pair": "SUI/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    },
+    {
+      "pair": "TRX/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    },
+    {
+      "pair": "WIN/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    },
+    {
+      "pair": "XLM/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    },
+    {
+      "pair": "XRP/EUR",
+      "evidence": {
+        "available": false,
+        "reason": "no-observed-public-session-source",
+        "asOf": 1793735156421,
+        "summary": null
+      }
+    }
+  ],
+  "contextUnchanged": true,
+  "providerCalls": 0,
+  "realOrders": 0,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "scope": "Read-only actual public source and causal normalized candle tables; minimal synthetic research frame to test source support, no model/strategy invocation, no historical backfill. Build evidence does not imply active main runtime was reloaded.",
+  "factsHash": "f9d64e75569f78de11675f82e02f095bcdb2cd6517e47c0a12375fa3b8b00787"
+}

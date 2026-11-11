@@ -1,0 +1,19 @@
+{
+  "version": "validation-loss-protocol-v1",
+  "registeredAt": "2026-11-03T15:31:34.431343+00:00",
+  "runnerHash": "93575ef646474048287d5b28d21c4496334aabbf7063a30e118f2e0bf4a602ee",
+  "sources": {
+    "apps/server/src/research/validation-loss.ts": "75266c74e875204623b62e25f9c07719bb05db338f44238ff2296559191af9de",
+    "apps/server/src/research/validation-evidence.ts": "d9057910e3513b1d94d2fa3ad22cc1824ac26b48031d07ef0f50abc4489663f4",
+    "apps/server/src/research/clock-ranking.ts": "71c2a6fbaf54d421bdc3c39b4a81a73176f783173e899f8ee1fdb0aa2a227930"
+  },
+  "validation": "docs/validation-evidence-audit-2c25cb174c52fdce.json",
+  "validationHash": "2c25cb174c52fdce8360f24929c2881dad62be7c2f941eb850bfe24f2b8992fa",
+  "models": "docs/aggressor-ridge-walkforward-9e6096906eea1521.json",
+  "modelsHash": "9e6096906eea152134caed8459188588a1beb4af80cf0a5aff2daf8d4bf5a916",
+  "ranking": "docs/aggressor-ranking-audit-fbcfb4343dd6bd93.json",
+  "rankingHash": "fbcfb4343dd6bd93fb8041dcffe32e78521ead2873cc7344a46f23b753e719a2",
+  "selection": "ONE fixed squared-error comparison to conditional-mean target. Existing minimum40known labels/95percentcoverage/stablezero,mean,ridge,common,aggressor order/1e-12conservative tie/nullforecastzero/unknownlabel excluded. No fitted model/threshold/window search.",
+  "margin": 0.005,
+  "limitation": "Exploratory after observing prior known-history outcomes; registering execution does not convert examined test history into an untouched holdout. All41windows retained. No profit or independence inference."
+}

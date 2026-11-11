@@ -1,0 +1,86 @@
+{
+  "verifiedAt": "2026-10-31T18:12:15.596Z",
+  "registeredAt": 1793470079478,
+  "experimentId": "2026-10-31T18-04-59.890Z-cc12379e164c",
+  "registeredExperimentId": "e6349285072901ca91f9260144452d71af2ffcc0faa79fb4e123f8ba834d90df",
+  "runId": "61bf3f02-298f-43f2-8b46-7e215beb9ec4",
+  "buildId": "cc12379e164c46d708a93bf730899eca00cbdc8378051ff580b05f49f03fc210",
+  "root": "C:\\Users\\user\\Documents\\Projekte\\Buisness\\New_Trading_AI\\kraken-paper-bot\\data\\paper-experiments\\2026-10-31T18-04-59.890Z-cc12379e164c",
+  "rawCovariance": {
+    "asOf": 1793470335010,
+    "lastClosedAt": 1793469600000,
+    "returns": 192,
+    "validAssets": 20,
+    "hash": "87dc8bf50c94b3692b28f40229d7c1a64b399292ffd8c14d622d4c5874fe0168"
+  },
+  "baseline": [
+    {
+      "account_id": "ai",
+      "observed_at": 1793470079478,
+      "observed_cash": 1000,
+      "position_count": 0
+    },
+    {
+      "account_id": "hold",
+      "observed_at": 1793470079478,
+      "observed_cash": 1000,
+      "position_count": 0
+    },
+    {
+      "account_id": "rules",
+      "observed_at": 1793470079478,
+      "observed_cash": 1000,
+      "position_count": 0
+    }
+  ],
+  "observedDecisions": [
+    {
+      "account_id": "hold",
+      "provider": "hold",
+      "status": "executed",
+      "n": 1
+    }
+  ],
+  "comparison": {
+    "experimentId": "e6349285072901ca91f9260144452d71af2ffcc0faa79fb4e123f8ba834d90df",
+    "profitabilityEstablished": false,
+    "independentSamples": null,
+    "insufficientSample": true,
+    "currentMetrics": {
+      "asOf": 1793470319789,
+      "returnsPct": {
+        "ai": 0,
+        "hold": -0.2327026116900166,
+        "rules": 0
+      },
+      "aiExcessVsRules": 0,
+      "aiExcessVsHold": 0.2327026116900166
+    },
+    "warning": "Matched fresh paper marks only. Paid fill fees included; hypothetical exit costs/intraminute path unknown. Gaps do not reconstruct missed executions.",
+    "samples": 6,
+    "validSamples": 6,
+    "invalidSamples": 0,
+    "maxGapMs": 60020,
+    "longGaps": 0,
+    "currentAgeMs": 15069,
+    "observedCadenceComplete": true,
+    "status": "collecting"
+  },
+  "holdFills": [
+    {
+      "id": "b7d188f8-3e7b-4a4a-9309-79606addfb90",
+      "ts": 1793470080715,
+      "cost_eur": 998.4185169000001,
+      "fee_eur": 0.9984185169000002,
+      "qty": 0.01451,
+      "verified": 1,
+      "evaluation_version": "cf0174b1eb26ef4f3c8e8d4454d1853af588b11b7a28eaf5cb706c6fd2947051"
+    }
+  ],
+  "sourceTreeIndependent": true,
+  "accountHistoryCopied": false,
+  "realAiEnabled": false,
+  "remoteAiEnabled": false,
+  "profitabilityEstablished": false,
+  "independentSamples": null
+}

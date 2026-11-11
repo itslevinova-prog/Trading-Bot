@@ -1,0 +1,50 @@
+{
+  "verifiedAt": "2026-11-02T20:39:46.428Z",
+  "buildId": "05f0154ae199a0306b499db2cd72805588f7e03236242b78b3be39c693164d9a",
+  "runnerHash": "229fe60397d9a6a985c6810f4d1d5be83c9b18fe401b1da51c6ff03dca0b75b9",
+  "fixture": "apps/server/test/fixtures/hourly-budget-context-v1.json",
+  "fixtureHash": "9800763195ca644f97ac346cd7f4d48482367f7714bd796b112d6db96e79a797",
+  "witnessPath": "data/executed-activity-encoding-witnesses-v1.json",
+  "witnessHash": "dbd4ad52e42325f594689d89fb8b416b3bdb1227e9140036f7faf3c5d36c2cec",
+  "activeBudget": 115000,
+  "baselineChars": 114758,
+  "ordinaryPacketExact": true,
+  "cases": [
+    {
+      "name": "unknown20",
+      "chars": 111439,
+      "againChars": 111217,
+      "allEvidenceFieldsExact": true,
+      "fullOriginalJsonBeforePackingExact": true,
+      "digestTableEntries": 5,
+      "headroom": 3561
+    },
+    {
+      "name": "transport-only-two-retained-records",
+      "chars": 114719,
+      "againChars": 114497,
+      "allEvidenceFieldsExact": true,
+      "fullOriginalJsonBeforePackingExact": true,
+      "digestTableEntries": 5,
+      "headroom": 281
+    }
+  ],
+  "targetedTests": 53,
+  "codecTests": 24,
+  "typechecksPassed": true,
+  "activeSerializerChanged": false,
+  "activeBudgetChanged": false,
+  "modelCalls": 0,
+  "newNetworkRequests": 0,
+  "captureHash": "1297df4a2e853c038d09a485b1c18c2d6d0a23672035f8eea397a18e53b076be",
+  "scope": "JSON transport proof only. Mixed case preserves original capture dates even though they are not decision-available for this older fixture; it is never used as a trading context. No20pair captured-source or general capacity claim.",
+  "sources": {
+    "apps/server/src/research/executed-activity-encoding.ts": "91f7c7f649a230313935cf979330ac409e18ef14002a7f73d6ca473f8944d3c7",
+    "apps/server/src/research/executed-digest-encoding.ts": "4c835e1f29850b873ad3676ce0eec517c5c9873c20bc9f55c964c87d59560c8c",
+    "apps/server/test/executed-activity-encoding.test.ts": "d7ee50a12f4bd689057aa33d0153f0b824ff2c9e168db7bc689574487f20f317",
+    "apps/server/test/executed-digest-encoding.test.ts": "22b6bb5dd2d23bc8aef6a5d2a0d91884ca09d82308656b645e7bed61ad36228d"
+  },
+  "documentation": "docs/EXECUTED-ACTIVITY-ENCODING.md",
+  "independentDecoder": "docs/executed-activity-independent-json-proof.json",
+  "isolation": "data/executed-activity-encoding-isolation-2026-11-02.json"
+}

@@ -1,0 +1,224 @@
+{
+  "version": "risk-input-contract-proof-v1",
+  "fixtureOnly": true,
+  "generatedAt": "2026-11-03T19:46:39.456Z",
+  "runnerHash": "4eb815d97ff1b87112e62d81f2c5623aefb34634beb0b7a833f98bc867f1d4a4",
+  "previousRuntimeSha256": "1b5536fd5b5b1016906063cee777333df74024f398dd22969af74f19d9407f12",
+  "currentRuntimeSha256": "6bdb433600fef3bda315c00aeb82208b20f60ded5738307d3cb2a1b5dfd1454b",
+  "workingBuild": {
+    "verified": true,
+    "buildId": "0fd91e5ce649ac184dbf727ba44ce41806ce7598c76b00bb8f04a43876fe561e",
+    "builtAt": "2026-11-03T19:45:55.434Z",
+    "sourceFiles": 157,
+    "runtimeFiles": 147,
+    "reasons": []
+  },
+  "validDeterministicCasesCompared": 5000,
+  "changedValidCases": 0,
+  "regressions": [
+    {
+      "name": "negative-trade-count",
+      "state": {
+        "equity": 100,
+        "cash": 100,
+        "status": "active",
+        "positions": [],
+        "tradesToday": -1,
+        "now": 1000000
+      },
+      "limits": {
+        "maxPositionPct": 0.3,
+        "maxOpenPositions": 4,
+        "maxTradesPerDay": 10,
+        "cooldownMinutes": 60
+      },
+      "order": {
+        "accountId": "rules",
+        "pair": "BTC/EUR",
+        "side": "buy",
+        "amountEur": 50,
+        "reason": "synthetic regression",
+        "decisionId": "fixture"
+      },
+      "before": {
+        "allowed": true,
+        "amountEur": 30,
+        "reason": "Kaufbetrag auf Positions-/Gesamtrisikobudget gekürzt"
+      },
+      "after": {
+        "allowed": false,
+        "reason": "Ungültiger Risiko-, Positions- oder Zeitvertrag"
+      },
+      "sell": {
+        "allowed": true,
+        "reason": "Verkauf freigegeben"
+      }
+    },
+    {
+      "name": "negative-clock",
+      "state": {
+        "equity": 100,
+        "cash": 100,
+        "status": "active",
+        "positions": [],
+        "tradesToday": 0,
+        "now": -1
+      },
+      "limits": {
+        "maxPositionPct": 0.3,
+        "maxOpenPositions": 4,
+        "maxTradesPerDay": 10,
+        "cooldownMinutes": 60
+      },
+      "order": {
+        "accountId": "rules",
+        "pair": "BTC/EUR",
+        "side": "buy",
+        "amountEur": 50,
+        "reason": "synthetic regression",
+        "decisionId": "fixture"
+      },
+      "before": {
+        "allowed": true,
+        "amountEur": 30,
+        "reason": "Kaufbetrag auf Positions-/Gesamtrisikobudget gekürzt"
+      },
+      "after": {
+        "allowed": false,
+        "reason": "Ungültiger Risiko-, Positions- oder Zeitvertrag"
+      },
+      "sell": {
+        "allowed": true,
+        "reason": "Verkauf freigegeben"
+      }
+    },
+    {
+      "name": "duplicate-position",
+      "state": {
+        "equity": 100,
+        "cash": 100,
+        "status": "active",
+        "positions": [
+          {
+            "pair": "BTC/EUR",
+            "value": 10
+          },
+          {
+            "pair": "BTC/EUR",
+            "value": 10
+          }
+        ],
+        "tradesToday": 0,
+        "now": 1000000
+      },
+      "limits": {
+        "maxPositionPct": 0.3,
+        "maxOpenPositions": 4,
+        "maxTradesPerDay": 10,
+        "cooldownMinutes": 60
+      },
+      "order": {
+        "accountId": "rules",
+        "pair": "BTC/EUR",
+        "side": "buy",
+        "amountEur": 50,
+        "reason": "synthetic regression",
+        "decisionId": "fixture"
+      },
+      "before": {
+        "allowed": true,
+        "amountEur": 20,
+        "reason": "Kaufbetrag auf Positions-/Gesamtrisikobudget gekürzt"
+      },
+      "after": {
+        "allowed": false,
+        "reason": "Ungültiger Risiko-, Positions- oder Zeitvertrag"
+      },
+      "sell": {
+        "allowed": true,
+        "reason": "Verkauf freigegeben"
+      }
+    },
+    {
+      "name": "negative-cooldown",
+      "state": {
+        "equity": 100,
+        "cash": 100,
+        "status": "active",
+        "positions": [],
+        "tradesToday": 0,
+        "now": 1000000
+      },
+      "limits": {
+        "maxPositionPct": 0.3,
+        "maxOpenPositions": 4,
+        "maxTradesPerDay": 10,
+        "cooldownMinutes": -1
+      },
+      "order": {
+        "accountId": "rules",
+        "pair": "BTC/EUR",
+        "side": "buy",
+        "amountEur": 50,
+        "reason": "synthetic regression",
+        "decisionId": "fixture"
+      },
+      "before": {
+        "allowed": true,
+        "amountEur": 30,
+        "reason": "Kaufbetrag auf Positions-/Gesamtrisikobudget gekürzt"
+      },
+      "after": {
+        "allowed": false,
+        "reason": "Ungültiger Risiko-, Positions- oder Zeitvertrag"
+      },
+      "sell": {
+        "allowed": true,
+        "reason": "Verkauf freigegeben"
+      }
+    },
+    {
+      "name": "position-over100pct",
+      "state": {
+        "equity": 100,
+        "cash": 100,
+        "status": "active",
+        "positions": [],
+        "tradesToday": 0,
+        "now": 1000000
+      },
+      "limits": {
+        "maxPositionPct": 1.1,
+        "maxOpenPositions": 4,
+        "maxTradesPerDay": 10,
+        "cooldownMinutes": 60
+      },
+      "order": {
+        "accountId": "rules",
+        "pair": "BTC/EUR",
+        "side": "buy",
+        "amountEur": 50,
+        "reason": "synthetic regression",
+        "decisionId": "fixture"
+      },
+      "before": {
+        "allowed": true,
+        "amountEur": 50,
+        "reason": "Freigegeben"
+      },
+      "after": {
+        "allowed": false,
+        "reason": "Ungültiger Risiko-, Positions- oder Zeitvertrag"
+      },
+      "sell": {
+        "allowed": true,
+        "reason": "Verkauf freigegeben"
+      }
+    }
+  ],
+  "realOrders": 0,
+  "servicesRestarted": false,
+  "profitabilityEstablished": false,
+  "scope": "Synthetic differential contract check against verified archived main build, not historical or live trading performance. Reject malformed entry state without obstructing protective sell authorization.",
+  "factsHash": "115c821ba697bc62ed128c5cb669438385c9e6ac61b23b1f9b5bbc0ac8e7411e"
+}

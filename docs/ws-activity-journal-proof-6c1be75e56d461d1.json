@@ -1,0 +1,307 @@
+{
+  "version": "ws-activity-journal-fixture-v1",
+  "fixtureOnly": true,
+  "generatedAt": "2026-11-03T16:35:44.848Z",
+  "buildId": "ab04491dc41ebfcc26e118b5747e678b400c949d42b7f07dc664a11c5a9ed086",
+  "runnerHash": "63de050d47247de6cdee8c33ec3266cb50d6ee8a7f3d3d10d4ec8a1a9c02eb2a",
+  "databaseFile": "C:\\Users\\user\\Documents\\Projekte\\Buisness\\New_Trading_AI\\kraken-paper-bot\\data\\ws-activity-fixture-2026-11-03T16-35-44.778Z\\fixture.db",
+  "databaseSha256": "0856b2d7d856d4b3f7f51abe07478a6171575b29a365788357f4549fa6a6fc90",
+  "rows": [
+    {
+      "id": "b4f1eefdf5e08789fb3e5179106652ef046c8ad44aae46d6d854e1ef6e3513ce",
+      "pair": "BTC/EUR",
+      "open_at": 1767224700000,
+      "received_at": 1767225600500,
+      "available_after": 1767225600500,
+      "facts_hash": "381360405d734e9ce9b383b255cade945708b29aed0e8c167bc95ff2e6699b85",
+      "raw_hash": "81eb5f014216eeac4c31b3d65ba48aaa5fdd9a526f6eaee18a7a603db8aa4759",
+      "raw_text": "{\"fixtureOnly\":true,\"stream\":\"btceur@kline_15m\",\"data\":{\"e\":\"kline\",\"s\":\"BTCEUR\",\"E\":1767225600100,\"k\":{\"t\":1767224700000,\"T\":1767225599999,\"s\":\"BTCEUR\",\"i\":\"15m\",\"x\":true,\"o\":\"100.00\",\"h\":\"102\",\"l\":\"99\",\"c\":\"101\",\"v\":\"10\",\"q\":\"1000\",\"V\":\"4\",\"Q\":\"400\",\"n\":12}}}"
+    },
+    {
+      "id": "02d8a9c6e5b7c3a552f1d3e3e6d8547bf7a90522b0ad64398aa1e6ae4ea721e4",
+      "pair": "BTC/EUR",
+      "open_at": 1767224700000,
+      "received_at": 1767225600700,
+      "available_after": 1767225600700,
+      "facts_hash": "381360405d734e9ce9b383b255cade945708b29aed0e8c167bc95ff2e6699b85",
+      "raw_hash": "f8c89b769e3a83de83790e8f30a5f896924a30243c0f27a2bdaa04c2a7b1b6d3",
+      "raw_text": "{\"fixtureOnly\":true,\"stream\":\"btceur@kline_15m\",\"data\":{\"e\":\"kline\",\"s\":\"BTCEUR\",\"E\":1767225600600,\"k\":{\"t\":1767224700000,\"T\":1767225599999,\"s\":\"BTCEUR\",\"i\":\"15m\",\"x\":true,\"o\":\"100.0\",\"h\":\"102\",\"l\":\"99\",\"c\":\"101\",\"v\":\"10\",\"q\":\"1000\",\"V\":\"4\",\"Q\":\"400\",\"n\":12}}}"
+    },
+    {
+      "id": "51e77b5aa05904427b69c3f79661bd8d8014188fa0122e07e0fe1d6cc9a2be68",
+      "pair": "BTC/EUR",
+      "open_at": 1767224700000,
+      "received_at": 1767225601000,
+      "available_after": 1767225601000,
+      "facts_hash": "1b5dbfb59b7cafc1d9ff60ece7004682f1833cf63d14b049e18dfe7aa3c23915",
+      "raw_hash": "f2f44a1894dc621e54e7be1e4f1ab8e9a958522b5b41c504b83d69ef60c02c16",
+      "raw_text": "{\"fixtureOnly\":true,\"stream\":\"btceur@kline_15m\",\"data\":{\"e\":\"kline\",\"s\":\"BTCEUR\",\"E\":1767225600100,\"k\":{\"t\":1767224700000,\"T\":1767225599999,\"s\":\"BTCEUR\",\"i\":\"15m\",\"x\":true,\"o\":\"100.00\",\"h\":\"102\",\"l\":\"99\",\"c\":\"101\",\"v\":\"10\",\"q\":\"1000\",\"V\":\"4\",\"Q\":\"401\",\"n\":12}}}"
+    },
+    {
+      "id": "a1ba60fecb5288b7f33618c1e69373edcc671e32e8b6b57dcf4e1e16493036bb",
+      "pair": "BTC/EUR",
+      "open_at": 1767225600000,
+      "received_at": 1767226499950,
+      "available_after": 1767226500100,
+      "facts_hash": "b9092d950b4a9d912b3957da1c29a7367e4dc0bf9fedff32246ddc461aecc376",
+      "raw_hash": "66153bf62caded10f9aa65f135f0df6e9bafb73ade10e99a2ef393c157e4d58e",
+      "raw_text": "{\"fixtureOnly\":true,\"stream\":\"btceur@kline_15m\",\"data\":{\"e\":\"kline\",\"s\":\"BTCEUR\",\"E\":1767226500100,\"k\":{\"t\":1767225600000,\"T\":1767226499999,\"s\":\"BTCEUR\",\"i\":\"15m\",\"x\":true,\"o\":\"100.00\",\"h\":\"102\",\"l\":\"99\",\"c\":\"101\",\"v\":\"10\",\"q\":\"1000\",\"V\":\"4\",\"Q\":\"400\",\"n\":12}}}"
+    },
+    {
+      "id": "793649c839abdc5b26f1b43d2e76f07f68f01db36dc4c50c61a79f7f50ffbaa3",
+      "pair": "BTC/EUR",
+      "open_at": 1767226500000,
+      "received_at": 1767231000000,
+      "available_after": 1767231000000,
+      "facts_hash": "28d8073b13c997daa46685eaabf89e5b0305b1b0415fdac0103f30f1b03863b5",
+      "raw_hash": "18003b584113514ebe837e5b70f879144b4ce2fb25d1023e2ac8a00f913b30c4",
+      "raw_text": "{\"fixtureOnly\":true,\"stream\":\"btceur@kline_15m\",\"data\":{\"e\":\"kline\",\"s\":\"BTCEUR\",\"E\":1767227400100,\"k\":{\"t\":1767226500000,\"T\":1767227399999,\"s\":\"BTCEUR\",\"i\":\"15m\",\"x\":true,\"o\":\"100.00\",\"h\":\"102\",\"l\":\"99\",\"c\":\"101\",\"v\":\"10\",\"q\":\"1000\",\"V\":\"4\",\"Q\":\"400\",\"n\":12}}}"
+    }
+  ],
+  "queries": [
+    {
+      "name": "before-first",
+      "openAt": 1767224700000,
+      "asOf": 1767225600499,
+      "result": {
+        "available": false,
+        "reason": "no-observed-source"
+      }
+    },
+    {
+      "name": "first",
+      "openAt": 1767224700000,
+      "asOf": 1767225600500,
+      "result": {
+        "available": true,
+        "record": {
+          "version": "binance-ws-activity-bar-v1",
+          "source": "wss://data-stream.binance.vision/stream",
+          "receiptDomain": "observed-local-ws-receipt-v1",
+          "pair": "BTC/EUR",
+          "receivedAt": 1767225600500,
+          "eventAt": 1767225600100,
+          "availableAfter": 1767225600500,
+          "closedAt": 1767225600000,
+          "barFactsHash": "381360405d734e9ce9b383b255cade945708b29aed0e8c167bc95ff2e6699b85",
+          "rawHash": "81eb5f014216eeac4c31b3d65ba48aaa5fdd9a526f6eaee18a7a603db8aa4759",
+          "rawText": "{\"fixtureOnly\":true,\"stream\":\"btceur@kline_15m\",\"data\":{\"e\":\"kline\",\"s\":\"BTCEUR\",\"E\":1767225600100,\"k\":{\"t\":1767224700000,\"T\":1767225599999,\"s\":\"BTCEUR\",\"i\":\"15m\",\"x\":true,\"o\":\"100.00\",\"h\":\"102\",\"l\":\"99\",\"c\":\"101\",\"v\":\"10\",\"q\":\"1000\",\"V\":\"4\",\"Q\":\"400\",\"n\":12}}}",
+          "candle": {
+            "pair": "BTC/EUR",
+            "interval": 15,
+            "ts": 1767224700000,
+            "open": 100,
+            "high": 102,
+            "low": 99,
+            "close": 101,
+            "volume": 10
+          },
+          "quoteVolume": 1000,
+          "trades": 12,
+          "takerBuyBaseVolume": 4,
+          "takerBuyQuoteVolume": 400,
+          "takerBuyBaseShare": 0.4,
+          "takerBuyQuoteShare": 0.4
+        },
+        "firstReceivedAt": 1767225600500,
+        "firstUsableAfter": 1767225600500,
+        "observations": 1
+      }
+    },
+    {
+      "name": "equivalent-update",
+      "openAt": 1767224700000,
+      "asOf": 1767225600800,
+      "result": {
+        "available": true,
+        "record": {
+          "version": "binance-ws-activity-bar-v1",
+          "source": "wss://data-stream.binance.vision/stream",
+          "receiptDomain": "observed-local-ws-receipt-v1",
+          "pair": "BTC/EUR",
+          "receivedAt": 1767225600500,
+          "eventAt": 1767225600100,
+          "availableAfter": 1767225600500,
+          "closedAt": 1767225600000,
+          "barFactsHash": "381360405d734e9ce9b383b255cade945708b29aed0e8c167bc95ff2e6699b85",
+          "rawHash": "81eb5f014216eeac4c31b3d65ba48aaa5fdd9a526f6eaee18a7a603db8aa4759",
+          "rawText": "{\"fixtureOnly\":true,\"stream\":\"btceur@kline_15m\",\"data\":{\"e\":\"kline\",\"s\":\"BTCEUR\",\"E\":1767225600100,\"k\":{\"t\":1767224700000,\"T\":1767225599999,\"s\":\"BTCEUR\",\"i\":\"15m\",\"x\":true,\"o\":\"100.00\",\"h\":\"102\",\"l\":\"99\",\"c\":\"101\",\"v\":\"10\",\"q\":\"1000\",\"V\":\"4\",\"Q\":\"400\",\"n\":12}}}",
+          "candle": {
+            "pair": "BTC/EUR",
+            "interval": 15,
+            "ts": 1767224700000,
+            "open": 100,
+            "high": 102,
+            "low": 99,
+            "close": 101,
+            "volume": 10
+          },
+          "quoteVolume": 1000,
+          "trades": 12,
+          "takerBuyBaseVolume": 4,
+          "takerBuyQuoteVolume": 400,
+          "takerBuyBaseShare": 0.4,
+          "takerBuyQuoteShare": 0.4
+        },
+        "firstReceivedAt": 1767225600500,
+        "firstUsableAfter": 1767225600500,
+        "observations": 2
+      }
+    },
+    {
+      "name": "before-conflict",
+      "openAt": 1767224700000,
+      "asOf": 1767225600999,
+      "result": {
+        "available": true,
+        "record": {
+          "version": "binance-ws-activity-bar-v1",
+          "source": "wss://data-stream.binance.vision/stream",
+          "receiptDomain": "observed-local-ws-receipt-v1",
+          "pair": "BTC/EUR",
+          "receivedAt": 1767225600500,
+          "eventAt": 1767225600100,
+          "availableAfter": 1767225600500,
+          "closedAt": 1767225600000,
+          "barFactsHash": "381360405d734e9ce9b383b255cade945708b29aed0e8c167bc95ff2e6699b85",
+          "rawHash": "81eb5f014216eeac4c31b3d65ba48aaa5fdd9a526f6eaee18a7a603db8aa4759",
+          "rawText": "{\"fixtureOnly\":true,\"stream\":\"btceur@kline_15m\",\"data\":{\"e\":\"kline\",\"s\":\"BTCEUR\",\"E\":1767225600100,\"k\":{\"t\":1767224700000,\"T\":1767225599999,\"s\":\"BTCEUR\",\"i\":\"15m\",\"x\":true,\"o\":\"100.00\",\"h\":\"102\",\"l\":\"99\",\"c\":\"101\",\"v\":\"10\",\"q\":\"1000\",\"V\":\"4\",\"Q\":\"400\",\"n\":12}}}",
+          "candle": {
+            "pair": "BTC/EUR",
+            "interval": 15,
+            "ts": 1767224700000,
+            "open": 100,
+            "high": 102,
+            "low": 99,
+            "close": 101,
+            "volume": 10
+          },
+          "quoteVolume": 1000,
+          "trades": 12,
+          "takerBuyBaseVolume": 4,
+          "takerBuyQuoteVolume": 400,
+          "takerBuyBaseShare": 0.4,
+          "takerBuyQuoteShare": 0.4
+        },
+        "firstReceivedAt": 1767225600500,
+        "firstUsableAfter": 1767225600500,
+        "observations": 2
+      }
+    },
+    {
+      "name": "after-conflict",
+      "openAt": 1767224700000,
+      "asOf": 1767225601000,
+      "result": {
+        "available": false,
+        "reason": "conflicting-observed-source"
+      }
+    },
+    {
+      "name": "early-not-eligible",
+      "openAt": 1767225600000,
+      "asOf": 1767226500000,
+      "result": {
+        "available": false,
+        "reason": "source-not-yet-locally-available"
+      }
+    },
+    {
+      "name": "early-eligible",
+      "openAt": 1767225600000,
+      "asOf": 1767226500100,
+      "result": {
+        "available": true,
+        "record": {
+          "version": "binance-ws-activity-bar-v1",
+          "source": "wss://data-stream.binance.vision/stream",
+          "receiptDomain": "observed-local-ws-receipt-v1",
+          "pair": "BTC/EUR",
+          "receivedAt": 1767226499950,
+          "eventAt": 1767226500100,
+          "availableAfter": 1767226500100,
+          "closedAt": 1767226500000,
+          "barFactsHash": "b9092d950b4a9d912b3957da1c29a7367e4dc0bf9fedff32246ddc461aecc376",
+          "rawHash": "66153bf62caded10f9aa65f135f0df6e9bafb73ade10e99a2ef393c157e4d58e",
+          "rawText": "{\"fixtureOnly\":true,\"stream\":\"btceur@kline_15m\",\"data\":{\"e\":\"kline\",\"s\":\"BTCEUR\",\"E\":1767226500100,\"k\":{\"t\":1767225600000,\"T\":1767226499999,\"s\":\"BTCEUR\",\"i\":\"15m\",\"x\":true,\"o\":\"100.00\",\"h\":\"102\",\"l\":\"99\",\"c\":\"101\",\"v\":\"10\",\"q\":\"1000\",\"V\":\"4\",\"Q\":\"400\",\"n\":12}}}",
+          "candle": {
+            "pair": "BTC/EUR",
+            "interval": 15,
+            "ts": 1767225600000,
+            "open": 100,
+            "high": 102,
+            "low": 99,
+            "close": 101,
+            "volume": 10
+          },
+          "quoteVolume": 1000,
+          "trades": 12,
+          "takerBuyBaseVolume": 4,
+          "takerBuyQuoteVolume": 400,
+          "takerBuyBaseShare": 0.4,
+          "takerBuyQuoteShare": 0.4
+        },
+        "firstReceivedAt": 1767226499950,
+        "firstUsableAfter": 1767226500100,
+        "observations": 1
+      }
+    },
+    {
+      "name": "late-before-receipt",
+      "openAt": 1767226500000,
+      "asOf": 1767227400500,
+      "result": {
+        "available": false,
+        "reason": "no-observed-source"
+      }
+    },
+    {
+      "name": "late-after-receipt",
+      "openAt": 1767226500000,
+      "asOf": 1767231000000,
+      "result": {
+        "available": true,
+        "record": {
+          "version": "binance-ws-activity-bar-v1",
+          "source": "wss://data-stream.binance.vision/stream",
+          "receiptDomain": "observed-local-ws-receipt-v1",
+          "pair": "BTC/EUR",
+          "receivedAt": 1767231000000,
+          "eventAt": 1767227400100,
+          "availableAfter": 1767231000000,
+          "closedAt": 1767227400000,
+          "barFactsHash": "28d8073b13c997daa46685eaabf89e5b0305b1b0415fdac0103f30f1b03863b5",
+          "rawHash": "18003b584113514ebe837e5b70f879144b4ce2fb25d1023e2ac8a00f913b30c4",
+          "rawText": "{\"fixtureOnly\":true,\"stream\":\"btceur@kline_15m\",\"data\":{\"e\":\"kline\",\"s\":\"BTCEUR\",\"E\":1767227400100,\"k\":{\"t\":1767226500000,\"T\":1767227399999,\"s\":\"BTCEUR\",\"i\":\"15m\",\"x\":true,\"o\":\"100.00\",\"h\":\"102\",\"l\":\"99\",\"c\":\"101\",\"v\":\"10\",\"q\":\"1000\",\"V\":\"4\",\"Q\":\"400\",\"n\":12}}}",
+          "candle": {
+            "pair": "BTC/EUR",
+            "interval": 15,
+            "ts": 1767226500000,
+            "open": 100,
+            "high": 102,
+            "low": 99,
+            "close": 101,
+            "volume": 10
+          },
+          "quoteVolume": 1000,
+          "trades": 12,
+          "takerBuyBaseVolume": 4,
+          "takerBuyQuoteVolume": 400,
+          "takerBuyBaseShare": 0.4,
+          "takerBuyQuoteShare": 0.4
+        },
+        "firstReceivedAt": 1767231000000,
+        "firstUsableAfter": 1767231000000,
+        "observations": 1
+      }
+    }
+  ],
+  "writerClosedBeforeReadonlyReopen": true,
+  "actualLiveMessagesCaptured": 0,
+  "newMarketApiCalls": 0,
+  "modelCalls": 0,
+  "paperOrders": 0,
+  "profitabilityEstablished": false,
+  "scope": "Synthetic protocol fixtures only, not real WebSocket captures, historical first-receipt evidence or profit data. Dedicated fixture.db is never a production journal.",
+  "factsHash": "6c1be75e56d461d15ea435b6b600f2a782576cc626cc380007d28f69aa16530a"
+}

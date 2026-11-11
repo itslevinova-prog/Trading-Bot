@@ -1,0 +1,36 @@
+{
+  "verifiedAt": "2026-11-02T19:02:06.902Z",
+  "buildId": "7cd37c61b0a2451fb0988c8632033ac3927557140a94d2efa0e91f083229e28d",
+  "documentation": [
+    "docs/DIRECTIONAL-CLOCK-LEARNING.md",
+    "docs/DIRECTIONAL-RIDGE-WALKFORWARD.md"
+  ],
+  "descriptorRows": 7280,
+  "descriptorComplete": 7280,
+  "independentDescriptorFields": 43680,
+  "maximumDescriptorError": 9.947598300641403e-14,
+  "targetedTypeScriptTests": 34,
+  "syntheticPythonTests": 4,
+  "typechecksPassed": true,
+  "corpusVerification": "docs/directional-clock-verification.json",
+  "ridgeVerification": "docs/directional-ridge-verification.json",
+  "ridgeResult": "docs/directional-ridge-walkforward-bf3f0f7644d7fe9c.json",
+  "normalEquations": 738,
+  "newModelPromoted": false,
+  "activePacketChanged": false,
+  "originalEightDimensionalModelsChanged": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "isolation": "data/directional-clock-isolation-2026-11-02.json",
+  "sources": {
+    "apps/server/src/research/directional-strength-replay.ts": "9d6d6b3bb30184bb66fe5c9f8c21c51b2b11331a7c471626e78cbdfdeab4c369",
+    "apps/server/test/directional-strength-replay.test.ts": "b25f6f4fa401cd9dbd5f4725fb5bbd94df12a8ef70b09e26f5e58dc3130bdcb0",
+    "scripts/collect-directional-clock-corpus.mjs": "b65252e94a36e2193642ebce3dd5e0f0d88f6e14ce5ec96c225450bf369c3699",
+    "scripts/verify-directional-clock-corpus.mjs": "1ce2deb61a4c9db9482143d9eb68375090b83ffb66b6d3476939db1cbd333613",
+    "scripts/fit-directional-ridge.py": "8072c6951c8112c84cc9b496ccf0fbf984169b5b85e631247711e7c17beac23a",
+    "scripts/test_directional_ridge.py": "e2ed5cd61722cb4d5c5ad08ff27cfe4e7a10184c72bbe2d5b5fe22e0c068d145",
+    "scripts/run-directional-ridge-walkforward.mjs": "eb8132c6069f8a1f502d6e1c65da0ce2220c2239314e05d8a3af01c85a8db807",
+    "scripts/verify-directional-ridge-walkforward.mjs": "b280391c7c33457d785134c636faea68d948619868d8db69e8387bcb23667f9e"
+  }
+}

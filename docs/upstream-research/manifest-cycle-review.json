@@ -1,0 +1,10 @@
+{
+  "existingSourceReverified": {
+    "path": "packages/evaluators/octobot_evaluators/evaluators/strategy_evaluator.py",
+    "url": "https://raw.githubusercontent.com/Drakkar-Software/OctoBot/c45fdc2c95c5bd3d649251fa90c327e2e8f86b00/packages/evaluators/octobot_evaluators/evaluators/strategy_evaluator.py",
+    "sha256": "44b7c3cc5dfa5225543e13be2242aea782ae977c2c94e5fbc73a2fd82f9ff492",
+    "bytes": 26708
+  },
+  "newFiles": 0,
+  "upstreamCodeExecuted": false
+}

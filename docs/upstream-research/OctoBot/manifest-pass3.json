@@ -1,0 +1,14 @@
+[
+  {
+    "path": "packages/tentacles/Evaluator/Strategies/mixed_strategies_evaluator/mixed_strategies.py",
+    "url": "https://raw.githubusercontent.com/Drakkar-Software/OctoBot/c45fdc2c95c5bd3d649251fa90c327e2e8f86b00/packages/tentacles/Evaluator/Strategies/mixed_strategies_evaluator/mixed_strategies.py",
+    "sha256": "6ad600f312614b6509ef239488d66cddb45a487a6d66c37e8d1feeb0881b78c8",
+    "bytes": 22969
+  },
+  {
+    "path": "packages/tentacles/LICENSE",
+    "url": "https://raw.githubusercontent.com/Drakkar-Software/OctoBot/c45fdc2c95c5bd3d649251fa90c327e2e8f86b00/packages/tentacles/LICENSE",
+    "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+    "bytes": 7652
+  }
+]

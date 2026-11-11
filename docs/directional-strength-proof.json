@@ -1,0 +1,28 @@
+{
+  "verifiedAt": "2026-11-02T18:34:06.420Z",
+  "documentation": "docs/DIRECTIONAL-STRENGTH.md",
+  "source": "apps/server/src/context/directional-strength.ts",
+  "version": "closed-dmi-adx14-193-v1",
+  "directTests": 16,
+  "typechecksPassed": true,
+  "independentReference": "docs/directional-strength-decimal-proof.json",
+  "referencePrecisionDigits": 60,
+  "maxObservedReferenceDifference": 3.552713678800501e-14,
+  "sourceReview": "docs/upstream-research/REVIEW-PASS25.md",
+  "sourceManifest": "docs/upstream-research/manifest-adx-volume-review.json",
+  "buildId": "3f86982f7e960bc852affab58ea2fa68cb3a0a632e0792c61aaf7b9a1b77cb48",
+  "isolation": "data/directional-strength-isolation-2026-11-02.json",
+  "activeContextChanged": false,
+  "oldLearningSchemaChanged": false,
+  "newModelFitted": false,
+  "newTradingRule": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "sources": {
+    "apps/server/src/context/directional-strength.ts": "edb661fd8aa978995bea6043ed7c6eb72c0bb962959c535195883156ba2d785b",
+    "apps/server/test/directional-strength.test.ts": "3ddf57e8c4792e120a9227f4a40e8531e7348d69f02d8ef4e1a2dc49ad2df35c",
+    "apps/server/test/fixtures/directional-strength-v1.json": "e7954b801971a7deefc3dd216df4724a876536b7d066c8490175ed6ae5130a9c",
+    "scripts/verify_directional_strength_reference.py": "ee39d2d61be02a008ff40cf7d70dcb208a522d1675bfab94dfd5e274c2e28b39"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "version": "consumed-may-discrimination-independent-v1",
+  "verifiedAt": "2026-11-03T21:25:10.648922+00:00",
+  "report": "docs/consumed-may-discrimination-0728c86edf032896.json",
+  "reportFileSha256": "7ad6b8fb693bab338a62cae8e36e9aba2ee6b84867a5378e385571484a3a5de3",
+  "method": "Independent Python exact Fraction pair signs, tie counts, equal-clock means, top ranks and fixed-margin hindsight counts against sealed consumed rows. Verifies arithmetic, not unseen performance.",
+  "checks": {
+    "early": {
+      "zero": {
+        "clocks": 20,
+        "exactEqualClockConcordance": "1/2",
+        "verified": true
+      },
+      "training-mean": {
+        "clocks": 20,
+        "exactEqualClockConcordance": "1/2",
+        "verified": true
+      },
+      "ridge-lambda10": {
+        "clocks": 20,
+        "exactEqualClockConcordance": "6018442707199/13345169260500",
+        "verified": true
+      }
+    },
+    "later": {
+      "zero": {
+        "clocks": 20,
+        "exactEqualClockConcordance": "1/2",
+        "verified": true
+      },
+      "training-mean": {
+        "clocks": 20,
+        "exactEqualClockConcordance": "1/2",
+        "verified": true
+      },
+      "ridge-lambda10": {
+        "clocks": 20,
+        "exactEqualClockConcordance": "2416881710876519/4797553081950720",
+        "verified": true
+      },
+      "clock-mean30": {
+        "clocks": 20,
+        "exactEqualClockConcordance": "1/2",
+        "verified": true
+      },
+      "clock-ridge30": {
+        "clocks": 20,
+        "exactEqualClockConcordance": "2893026487359859/5996941352438400",
+        "verified": true
+      }
+    }
+  },
+  "newLabelsRead": false,
+  "profitabilityEstablished": false
+}

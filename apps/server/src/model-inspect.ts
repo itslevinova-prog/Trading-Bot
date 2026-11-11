@@ -1,0 +1,3 @@
+import {config} from './config.js';import {observeLocalModel} from './ai/model-identity.js';
+/** Read local metadata only. Does not enable AI, sign in, pull/load a model or write .env. */
+observeLocalModel(config.AI_BASE_URL,config.AI_MODEL).then(identity=>{console.log(JSON.stringify({identity,configuration:{AI_MODEL_MODE:'ollama-local',AI_EXPECTED_MODEL_FINGERPRINT:identity.fingerprint},inferencePerformed:false,modelArtifactVerified:false},null,2));}).catch(()=>{console.error('Lokale Modellidentität nicht bestätigt. Installiertes Modell, deaktivierte Cloud und lokale Metadaten-API prüfen. Keine Inferenz oder automatische Wiederholung.');process.exitCode=1;});

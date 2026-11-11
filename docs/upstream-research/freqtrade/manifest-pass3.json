@@ -1,0 +1,26 @@
+[
+  {
+    "path": "freqtrade/plugins/protections/stoploss_guard.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/plugins/protections/stoploss_guard.py",
+    "sha256": "db3adae62104271ad8a70773d45715718a547cb6447b4b82353b01a54af1ce66",
+    "bytes": 3943
+  },
+  {
+    "path": "freqtrade/plugins/protections/low_profit_pairs.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/plugins/protections/low_profit_pairs.py",
+    "sha256": "b5e913947de1ef50f93f4e2cb50d220ffb5f197fcfed3be7ea19ba8544e8e69d",
+    "bytes": 4018
+  },
+  {
+    "path": "freqtrade/plugins/protections/max_drawdown_protection.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/plugins/protections/max_drawdown_protection.py",
+    "sha256": "614328466e2e90e3dc57dff909e18e7f87bc817cef5ac9b9d1d89ef94b1cccc7",
+    "bytes": 5095
+  },
+  {
+    "path": "freqtrade/templates/sample_strategy.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/templates/sample_strategy.py",
+    "sha256": "18d48d64b955dc9bd1b43f59115c16f2002a881c62c2851ceca64569a6f8651c",
+    "bytes": 17167
+  }
+]

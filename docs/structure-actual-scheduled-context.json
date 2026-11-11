@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-31T11:16:19.467Z",
+  "decisionId": "e7b702db-d5d0-4017-9cd8-b2eb1efc4649",
+  "storedStatus": "not_sent",
+  "contextAt": "2026-10-31T11:15:05.010Z",
+  "contextHash": "83feabbbdaec8000ea2459ba05e262089ceda5a45e6a0a72a8055fd71236909a",
+  "evidenceVersion": "paper-intelligence-v2",
+  "structuresComplete": 20,
+  "assessments": 20,
+  "refusalCodes": {
+    "upside-breakout-rejected-at-close": 1,
+    "trend-and-momentum-do-not-agree": 11,
+    "account-not-active-or-valuation-unknown": 14,
+    "historical-resistance-before-target": 10,
+    "missing-stale-or-mixed-market-evidence": 6,
+    "momentum-or-volume-not-confirmed": 12,
+    "spread-over-hard-limit": 9,
+    "low-directional-efficiency-for-trend-entry": 1
+  },
+  "proposedActions": [
+    {
+      "type": "hold"
+    }
+  ],
+  "offlineCounterfactualOnly": true,
+  "ordersExecuted": 0,
+  "estimatedWinProbability": null,
+  "performanceValidated": false
+}

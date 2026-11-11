@@ -1,0 +1,30 @@
+{
+  "version": "public-activity-capture-protocol-v1",
+  "registeredAt": "2026-11-02T19:52:42.854Z",
+  "runnerHash": "7fa1af7a814d408b7988bf013cb48fbf8a9de83d965a4104dc00fb6ca0659e23",
+  "sources": {
+    "apps/server/src/research/public-activity.ts": "ade94f87fc1c0d68f804865823b322bd4674726aab21060181fc7189413cfb2a",
+    "apps/server/dist/research/public-activity.js": "a722e924d07634c52f28123c5f747ba5cd3143132c3903bc15b91ddf99fbb66c",
+    "apps/server/src/market/binance-data.ts": "6dbbbff50af912a9fc753f06d11b2e187ecc0c8874423c971c814a2e761bcd4a",
+    "apps/server/dist/market/binance-data.js": "763c843b5b71208cabc6843d0e6b262c4e337b11ba1f7f90fafcd4628eb59945"
+  },
+  "base": "https://data-api.binance.vision",
+  "endpoint": "/api/v3/klines",
+  "pairs": [
+    "BTC/EUR",
+    "ETH/EUR"
+  ],
+  "interval": "15m",
+  "limit": 96,
+  "closedAt": 1793648700000,
+  "from": 1793562300000,
+  "maximumRequests": 2,
+  "retries": 0,
+  "privateEndpoints": false,
+  "paidCalls": false,
+  "scope": "First small public retained-field sample, not training/performance evidence. Preserve raw payloads and actual retrieval timestamps; existing OHLCV/default/frozen history unchanged.",
+  "originalOhlcvParityRequired": true,
+  "missingOrMalformed": "Keep raw response and explicit incomplete state, no synthesis or silent imputation",
+  "modelFitted": false,
+  "activeContextChanged": false
+}

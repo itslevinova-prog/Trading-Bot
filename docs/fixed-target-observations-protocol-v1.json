@@ -1,0 +1,28 @@
+{
+  "version": "fixed-target-observations-protocol-v1",
+  "registeredAt": "2026-11-01T13:01:44.270953+00:00",
+  "runnerHash": "f4b4b7dd1be36621e86c789b2570b99ff303266f101dc24f97681ffb14da2959",
+  "sources": {
+    "apps/server/src/research/fixed-target-learning.ts": "b1167a6e55258a134f4acbfa1c9a6bbc53dc113686cc6a49f1f40b57df581fbb",
+    "apps/server/src/research/local-learning.ts": "5a127d54bdf3faa0f8628bb6baecebc6947af1709c0353693c51e54793fef690",
+    "apps/server/src/market/indicators.ts": "09162f1e8aaad80a0c1885533ca63c3c6c0132ab9563fd57c5f6003f3cef3bb0",
+    "apps/server/src/context/market-context.ts": "8f2bca479d46d5219b7be68d883b0d585b938456b97dd1fe725fa6a2a3affc1e",
+    "apps/server/src/memory/math.ts": "52364db323407076da02e599f5f1b799c0ac8fe7f9b0f945273397ec6c9be909"
+  },
+  "periods": [
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03"
+  ],
+  "horizonBars": 32,
+  "strideBars": 48,
+  "entryLagBars": 1,
+  "datasetPolicy": "Exact continuous union of preserved20survivor markets; compare all duplicate warmup OHLCV, reject conflicts; no network or new capture budget.",
+  "modelFitted": false,
+  "julyLoaded": false,
+  "activation": false,
+  "targetNotOldPolicyLabels": true
+}

@@ -1,0 +1,25 @@
+{
+  "experimentId": "6d767d12fa40b0aa39b18153dc50da83308ea1dd0c3f328f783892d34aa52bcb",
+  "profitabilityEstablished": false,
+  "independentSamples": null,
+  "insufficientSample": true,
+  "currentMetrics": {
+    "asOf": 1793443285822,
+    "returnsPct": {
+      "ai": 0,
+      "hold": -0.1733617739699822,
+      "rules": 0
+    },
+    "aiExcessVsRules": 0,
+    "aiExcessVsHold": 0.1733617739699822
+  },
+  "warning": "Matched fresh paper marks only. Paid fill fees included; hypothetical exit costs/intraminute path unknown. Gaps do not reconstruct missed executions.",
+  "samples": 16,
+  "validSamples": 16,
+  "invalidSamples": 0,
+  "maxGapMs": 60541,
+  "longGaps": 0,
+  "currentAgeMs": 4224,
+  "observedCadenceComplete": true,
+  "status": "collecting"
+}

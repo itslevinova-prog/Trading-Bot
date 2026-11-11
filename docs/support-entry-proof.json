@@ -1,0 +1,32 @@
+{
+  "verifiedAt": "2026-11-03T14:52:27.604Z",
+  "workingBuildId": "77ca5e13612f38c518e2ca58ab73d4fe177e9e84f2e62f2c6dac523cf9e08fe1",
+  "loadedMainBuildId": "eba3bed1782ed4a15df3b7d99fbbe88edcaeb016d019fbb868f32481c8f9ea47",
+  "loadedMainOldRuntimeFilesUnchanged": 135,
+  "changedLoadedMainRuntimeFiles": [],
+  "documentation": "docs/SUPPORT-ENTRY-STUDY.md",
+  "tests": 26,
+  "newGuardTests": 6,
+  "typechecksPassed": true,
+  "study": {
+    "path": "docs/support-entry-study-fde9532cba7b6072.json",
+    "hash": "fde9532cba7b6072a7311118b9447ac998cb918aa0a8b163e9cb4c603d3e8c7b"
+  },
+  "independentProof": "docs/support-entry-independent.json",
+  "paperResumeProof": "data/paper-resume-proof-2026-11-03.json",
+  "modelActivated": false,
+  "originalForecastsChanged": false,
+  "actualCaptureGuardsChanged": false,
+  "activeSerializerChanged": false,
+  "protectiveExitRulesChanged": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "sources": {
+    "apps/server/src/research/support-entry-guard.ts": "15bfb9f531c02eb828c1ba07c840501e23140068b4ca1a4050b26d6a688943f5",
+    "apps/server/test/support-entry-guard.test.ts": "96ab0f67e2239fbbafed6abd731443199da18b04537456d807dd42b949f7ca8a",
+    "scripts/run-support-entry-study.mjs": "ab738955f999e3acd8386f69610c8d6ec1f3214704fd80ab95e7ac6059ab03fa",
+    "scripts/verify_support_entry_study.py": "e16f7cf19860dbbed3638b2067e25b44e3fcd6bed8bc875bb485687a5264fade",
+    "scripts/verify-paper-resume-2026-11-03.mjs": "dfe31d8f099af01777ed76603cc089e6ede5f2bf5d262fb13c785cae82062b6d"
+  }
+}

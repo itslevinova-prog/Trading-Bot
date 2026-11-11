@@ -1,0 +1,99 @@
+{
+  "verifierHash": "25b4120de44c90ceb5b905fb9723023a8795329d5cb1c22afb501653933e8e65",
+  "verifiedAt": "2026-10-28T21:03:41.086Z",
+  "runId": "c607045a-c4fb-437f-b787-8ececae05060",
+  "checks": [
+    "Account valuation is explicit; unknown held prices remain null instead of entry-price PnL",
+    "20 public markets including retained positions, venue identity, history coverage and free defaults",
+    "Every public market includes timestamped 15m/hourly repair coverage without invented gap fills",
+    "Running build matches recorded artifacts and old executions remain explicitly unassigned",
+    "Frozen dataset checksum and default identity verified; repeated historical observations remain explicitly inspected",
+    "Actual-rule portfolio evidence exposes costs, sample size and known limitations",
+    "Durable paper protective-exit diagnostics accessible without exposing exception text",
+    "Prospective account evidence remains version-specific with no unearned profitability claim",
+    "Actual 20-market context including all research results fits declared prompt budget with visible omissions",
+    "Local HTTP model contract exercised; fixture only, zero billable calls",
+    "Built dashboard served with current title",
+    "Unproven profitability and private integration remain visible"
+  ],
+  "connected": true,
+  "pairs": 20,
+  "features": 20,
+  "historyRepair": {
+    "reports": 40,
+    "errorReports": 0,
+    "completeReports": 40,
+    "successfulRepairRequests": 40,
+    "missingBars": 0
+  },
+  "freshBooks": 16,
+  "historyBarsRange": [
+    8645,
+    8734
+  ],
+  "packedContextChars": 99708,
+  "omissions": [
+    "Detailed candle arrays shortened; per-market summaries retained.",
+    "Memory and lessons bounded; held-position memories prioritised.",
+    "Raw candle arrays omitted only for named markets as needed; all market summaries retained. Held positions and BTC prioritised."
+  ],
+  "buildId": "319b229e1e0f42a1131f7035b079aeab270a4fa1072be9b47cdd002d2228daec",
+  "executionVersion": "1baa2871a4dc81851294a997d178d14ac6bf19384a8d2f956f4ec8682091b47f",
+  "reportMatchesCurrentRuntime": false,
+  "fixedDatasetId": "d0066ea5e97b107a22c148dbfcfcd245a2ea37e555684a5af36a382134b14926",
+  "pairedInputsComparable": true,
+  "portfolioMetrics": {
+    "returnPct": 0,
+    "stressReturnPct": 0,
+    "closedTrades": 0
+  },
+  "protectiveExitFailures": 0,
+  "forwardAccounts": [
+    {
+      "accountId": "ai",
+      "status": "awaiting_baseline",
+      "observations": 0
+    },
+    {
+      "accountId": "rules",
+      "status": "awaiting_baseline",
+      "observations": 0
+    },
+    {
+      "accountId": "hold",
+      "status": "awaiting_baseline",
+      "observations": 0
+    }
+  ],
+  "externalSources": [
+    {
+      "source": "Alternative.me Bitcoin Fear & Greed",
+      "status": "available",
+      "fresh": true
+    },
+    {
+      "source": "Binance perpetual funding BTCUSDT",
+      "status": "available",
+      "fresh": true
+    },
+    {
+      "source": "Binance perpetual funding ETHUSDT",
+      "status": "available",
+      "fresh": true
+    },
+    {
+      "source": "Cointelegraph RSS headlines",
+      "status": "available",
+      "fresh": true
+    },
+    {
+      "source": "CoinDesk RSS headlines",
+      "status": "available",
+      "fresh": true
+    }
+  ],
+  "realModelTested": false,
+  "privateExchangeCalls": 0,
+  "realOrders": 0,
+  "paidCalls": 0
+}

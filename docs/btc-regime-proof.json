@@ -1,0 +1,65 @@
+{
+  "verifiedAt": "2026-10-31T16:48:19.124814+00:00",
+  "fullTests": 802,
+  "offlineTests": 15,
+  "newTests": 15,
+  "typechecksAndBuild": true,
+  "buildId": "79d5565e21f0df971e3005ddd1ee160c2b0025ba36e7c414b19ce431efb3f702",
+  "twiceIdenticalFinalStudy": {
+    "path": "docs/btc-regime-study-43a92c60d98f56b8.json",
+    "reportHash": "43a92c60d98f56b82f0e58a9b531d9e77815e105c10c79d419db38324b1a052a",
+    "protocolHash": "28858b8a8a39a5b93bf8e36b9c8f0d4a45f44514700032a7aac3c83d0669f78c",
+    "buildId": "79d5565e21f0df971e3005ddd1ee160c2b0025ba36e7c414b19ce431efb3f702",
+    "profitabilityEstablished": false
+  },
+  "economicPathProof": [
+    {
+      "scenario": "base",
+      "economicFillsIdentical": true,
+      "equityCurveIdentical": true,
+      "summaryIdentical": true,
+      "sharedDecisionTimes": 2593,
+      "sharedExogenousMismatches": 0,
+      "returnPct": -3.9262047495605024,
+      "closedTrades": 39,
+      "additionalRiskBudgetReductions": 0,
+      "newRiskVetoAssessments": 0
+    },
+    {
+      "scenario": "double-fee-adaptive",
+      "economicFillsIdentical": true,
+      "equityCurveIdentical": true,
+      "summaryIdentical": true,
+      "sharedDecisionTimes": 2593,
+      "sharedExogenousMismatches": 0,
+      "returnPct": 0.3110021169693944,
+      "closedTrades": 3,
+      "additionalRiskBudgetReductions": 0,
+      "newRiskVetoAssessments": 0
+    }
+  ],
+  "existing93CompiledModulesUnchanged": true,
+  "mainNoRestartOrConfigChange": true,
+  "mainPaperOnly": true,
+  "mainConnected": true,
+  "mainAIEnabled": false,
+  "mainRemoteEnabled": false,
+  "readyFeatures": 20,
+  "pairs": 20,
+  "preservedOriginalPointers": true,
+  "newCandidateDefaultEnabled": false,
+  "profitabilityEstablished": false,
+  "independentSamples": null,
+  "files": {
+    "apps/server/src/strategy/regime-paper.ts": "1dca53139ffed24e3e43a242924809f39bdb8cd7b7a82c25ad81e454163f1f6f",
+    "apps/server/test/regime-paper.test.ts": "16b15c3658bd4ebf6559a06e743cde21226b58f87c6e5eb705170a404a8478e1",
+    "scripts/compare-btc-regime.mjs": "c384ad4c0c9a784cfd8e211dd83825d299193b48fb65aba0993644ba147b329c",
+    "docs/btc-regime-protocol-v1.json": "28858b8a8a39a5b93bf8e36b9c8f0d4a45f44514700032a7aac3c83d0669f78c",
+    "docs/btc-regime-source-proof.json": "87b4fef73725d7159f220377f609861386c713a02ff8aac8d146c2b55753407c",
+    "docs/upstream-research/REVIEW-REGIME-APPLICATION.md": "9c7e102399d83d9624d69f2a9b21e9e151279954c66fcf6a5208342cbb03e167",
+    "data/verify-btc-regime-final-2026-10-31.log": "6f2a5cfd4b09fea9851b14f5047f456a8a7f4852065149facdad1583d5c5ec65",
+    "data/compare-btc-regime-final-2026-10-31.log": "013bdac193dc9f0dc3046f953c5a35c64daad32dca11bfd33cabf9c315c196ba",
+    "data/compare-btc-regime-repeat-2026-10-31.log": "013bdac193dc9f0dc3046f953c5a35c64daad32dca11bfd33cabf9c315c196ba",
+    "docs/BTC-REGIME.md": "6dc81516f4da16d95df356f37dfb308c09200e29e2b8212815f369e00f0be8fe"
+  }
+}

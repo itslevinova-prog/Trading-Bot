@@ -1,0 +1,30 @@
+{
+  "registeredAt": "2026-11-02T15:23:39.716Z",
+  "version": "closed-regime-error-audit-v1",
+  "runnerHash": "be3f559ec28e00d34daa264bf43ebd4730a727b6c182cc7b97f3aacd873762e8",
+  "sources": {
+    "apps/server/src/research/regime-error-analysis.ts": "378112f357e1b81d9a96cd7ff2f68755bc22a98fb8aef3151ef0b8db7a93d688",
+    "apps/server/dist/research/regime-error-analysis.js": "cfe29608cce942903922aba3df9b6de53f1749c0a247f0d28a680cbe2ea76f91"
+  },
+  "corpus": "docs/barrier-clock-corpus-3262b4fb3be9b47e.json",
+  "corpusHash": "3262b4fb3be9b47e7edf0954e93d52f85fda6dfedf7159178c440fa6300a7414",
+  "modelReport": "docs/barrier-net-walkforward-4898631417b16e07.json",
+  "modelReportHash": "4898631417b16e07db860acf1342af2160ab138bd98ea0dfece8a341ba37facc",
+  "axes": [
+    "Existing EMA-level and4h-return sign agreement:bullish/bearish/mixed",
+    "Existing volumeRatio threshold1.2",
+    "Existing reference source2ATRstop/floor boundary1ATRpercent",
+    "Their joint grouping; all groups retained, no best-group selection"
+  ],
+  "metrics": [
+    "Same known-label MAE/coverage for zero/mean/ridge/priorselected",
+    "Forecast-minus-realized net-return bias",
+    "Fixed prior0.005margin opportunities and outcomes, NOT broker trades",
+    "Fixed2percentstop/ATR multiple and assumed roundtripcost/ATR"
+  ],
+  "postOutcomeAudit": true,
+  "newModelFitted": false,
+  "newRuleSelected": false,
+  "parameterSearch": false,
+  "julyLoaded": false
+}

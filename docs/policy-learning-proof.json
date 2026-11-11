@@ -1,0 +1,35 @@
+{
+  "verifiedAt": "2026-10-31T16:32:04.783466+00:00",
+  "offlineBuildId": "9d2052fa1d972b8cd0e0abcbaf614c0e481b26d846899205510e37925aa2ffd5",
+  "tests": 787,
+  "offlineTests": 15,
+  "fullVerifyPassed": true,
+  "twiceIdenticalAudit": {
+    "path": "docs/policy-learning-4053342b179c68a4.json",
+    "factsHash": "4053342b179c68a43cc517a233cb2a6816e454de21bebb9842fd145bf51898f9",
+    "buildId": "9d2052fa1d972b8cd0e0abcbaf614c0e481b26d846899205510e37925aa2ffd5",
+    "verifiedAt": "2026-10-31T16:30:54.332Z",
+    "modelTrained": false,
+    "independentOutOfSample": false
+  },
+  "mainExistingRuntimeFilesUnchanged": 92,
+  "mainNoRestartRequired": true,
+  "mainPaperOnly": true,
+  "mainAIEnabled": false,
+  "mainRemoteEnabled": false,
+  "mainConnected": true,
+  "readyFeatures": 20,
+  "pairs": 20,
+  "newDecisionModelTrained": false,
+  "profitabilityEstablished": false,
+  "files": {
+    "apps/server/src/research/policy-learning.ts": "954eced3a7650acbbbbb9473387289e82e382aa93e6db3e4dc93c2670064dea8",
+    "apps/server/test/policy-learning.test.ts": "e489a8be8185dcf5f043472565bcf5e0d62602bac709e9a2f859aaa873cf3073",
+    "scripts/audit-policy-learning.mjs": "700cd3703372ed078865c906d3c2ea9302a2490227a23d01c7609fafa366474c",
+    "docs/policy-learning-protocol-v1.json": "72e062eaab7eeb92744f2c5eed953a6b52ba925f3b9d075ac425573441c1dff4",
+    "data/verify-policy-learning-2026-10-31.log": "feb970aa7d1be44d8fe34b971bce10f8e57835f3ba69e9f389afc90bb7b521a2",
+    "data/policy-learning-audit-2026-10-31.log": "90c7cfe750a590a048bd0fa41737f104ea07a90533ae5f5dc11658238950c87f",
+    "data/policy-learning-audit-repeat-2026-10-31.log": "770d58ea2782d8ede36da363160d0b0f2b1dc52c26547408dfd502e11b530f23",
+    "docs/POLICY-LEARNING.md": "e2808a05000694c51a5f6b4b5df2b9e11cfbd870a540cd3f39c3f14d80b70324"
+  }
+}

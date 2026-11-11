@@ -1,0 +1,8 @@
+import {test,expect} from 'vitest';import {bookChecksum,bookVWAP,quantityForBudget,updateBook} from '../src/market/orderBook.js';
+test('Kraken official book v2 checksum vector',()=>{
+ const bids=[['45283.5','0.10000000'],['45283.4','1.54582015'],['45282.1','0.10000000'],['45281.0','0.10000000'],['45280.3','1.54592586'],['45279.0','0.07990000'],['45277.6','0.03310103'],['45277.5','0.30000000'],['45277.3','1.54602737'],['45276.6','0.15445238']].map(([price,qty])=>({price:price!,qty:qty!}));
+ const asks=[['45285.2','0.00100000'],['45286.4','1.54571953'],['45286.6','1.54571109'],['45289.6','1.54560911'],['45290.2','0.15890660'],['45291.8','1.54553491'],['45294.7','0.04454749'],['45296.1','0.35380000'],['45297.5','0.09945542'],['45299.5','0.18772827']].map(([price,qty])=>({price:price!,qty:qty!}));
+ expect(bookChecksum({bids,asks})).toBe(3310070434);const book=updateBook(undefined,{symbol:'BTC/EUR',bids,asks,checksum:3310070434},true);expect(book.valid).toBe(true);
+});
+test('VWAP walks through price levels and rejects insufficient depth',()=>{const asks=[{price:'10',qty:'1'},{price:'12',qty:'2'}];expect(bookVWAP(asks,'buy',2)).toBe(11);expect(bookVWAP(asks,'buy',4)).toBeNull();expect(quantityForBudget(asks,16)).toBeCloseTo(1.5);});
+test('book update deletes zero levels',()=>{const b=updateBook(undefined,{symbol:'T/EUR',bids:[{price:'9',qty:'1'}],asks:[{price:'10',qty:'1'}],checksum:bookChecksum({bids:[{price:'9',qty:'1'}],asks:[{price:'10',qty:'1'}]})},true);const asks=[{price:'11',qty:'1'}];const next=updateBook(b,{symbol:'T/EUR',bids:[],asks:[{price:'10',qty:'0'},...asks],checksum:bookChecksum({bids:b.bids,asks})},false);expect(next.valid).toBe(true);expect(next.asks[0]?.price).toBe('11');});

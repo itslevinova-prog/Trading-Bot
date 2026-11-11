@@ -1,0 +1,20 @@
+[
+  {
+    "path": "freqtrade/templates/FreqaiExampleStrategy.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/templates/FreqaiExampleStrategy.py",
+    "sha256": "294f7e1e7fe912a3bf73a2cb4a2ecffe80cae6228a3d28fc5b78d3fb0731f8d5",
+    "bytes": 11534
+  },
+  {
+    "path": "freqtrade/freqai/prediction_models/SKLearnRandomForestClassifier.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/freqai/prediction_models/SKLearnRandomForestClassifier.py",
+    "sha256": "9ae42bb20319a2c0646ff0f4d727e2ac36e2b3f9e21c66b19a48e3a96467225a",
+    "bytes": 3236
+  },
+  {
+    "path": "tests/strategy/strats/freqai_test_classifier.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/tests/strategy/strats/freqai_test_classifier.py",
+    "sha256": "5865adedd08494c5693a14e57a4e6be6f172ae039b342410c11ee63a3c9073db",
+    "bytes": 3852
+  }
+]

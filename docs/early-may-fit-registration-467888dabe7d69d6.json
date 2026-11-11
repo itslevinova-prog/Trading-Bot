@@ -1,0 +1,21 @@
+{
+  "version": "early-may-fit-registration-v1",
+  "registeredAt": "2026-11-03T20:41:05.613Z",
+  "runnerHash": "2936f7fff6fc64e8e290128f18b38f04b8893f873558c398058ac758bc1bfc00",
+  "learningProtocol": {
+    "path": "docs/early-may-learning-protocol-3b082fa23406b6e1.json",
+    "hash": "3b082fa23406b6e108be5cb30b511f2d38f2420c428e891b76e3c23fa7d130b7"
+  },
+  "trainingCorpus": {
+    "path": "docs/training-through-april-671bd04d6f9f77d2.json",
+    "hash": "671bd04d6f9f77d257527d70448a1ca12577746cf37440fed97f83c589aa49b4"
+  },
+  "trainingCorpusFileSha256": "68370d7c14e3195eeeee9cf063068c8f17741df4f9c9fbb132aceda568b85677",
+  "sources": {
+    "apps/server/dist/research/barrier-learning.js": "04a5a8337198a2d40f1ae362658373bb867d093460a0893c677b99679be785aa",
+    "apps/server/dist/research/local-learning.js": "eebd8828b1f64d20829eb8c8f9383bc99567aea8c5e34ae44d59c4a315af5e16"
+  },
+  "mayFeaturesOrLabelsRead": false,
+  "activeModelChanged": false,
+  "hash": "467888dabe7d69d63da7f400a5d82e64bbe1f48f1f926bf3f4290e95322b05d3"
+}

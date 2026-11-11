@@ -1,0 +1,1281 @@
+{
+  "version": "consumed-momentum-concentration-v1",
+  "generatedAt": "2026-11-04T15:44:33.275Z",
+  "build": {
+    "verified": true,
+    "buildId": "e02504d659144e58aef8396e8f6e3404777c5d6f48547d3434c37198fd2029c6",
+    "builtAt": "2026-11-04T15:44:02.630Z",
+    "sourceFiles": 162,
+    "runtimeFiles": 152,
+    "reasons": []
+  },
+  "source": "docs/momentum-peer-labels-0a61eb690de932be.json",
+  "ledgerSource": "docs/momentum-attribution-c8e9b23bfaac42b3.json",
+  "runnerSha": "7f20e576be7130c66400caf922100f9d47a6c562b63cd10d48d2d33a6c513d34",
+  "results": [
+    {
+      "key": "may",
+      "rows": [
+        {
+          "decisionAt": 1779321600000,
+          "pair": "SUI/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1779321600000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.17205008466258925,
+            "upMoves": 8,
+            "downMoves": 8
+          },
+          "efficiency": 0.22317596566523612,
+          "exitClass": "target",
+          "netEur": "0.547455900091366158"
+        },
+        {
+          "decisionAt": 1779364800000,
+          "pair": "WIN/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1779364800000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.18188066486742052,
+            "upMoves": 6,
+            "downMoves": 3
+          },
+          "efficiency": 0.36111111111111377,
+          "exitClass": "timeout",
+          "netEur": "0.135827104152204201112"
+        },
+        {
+          "decisionAt": 1779408000000,
+          "pair": "BCH/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1779408000000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.6003012848123805,
+            "upMoves": 4,
+            "downMoves": 2
+          },
+          "efficiency": 0,
+          "exitClass": "timeout",
+          "netEur": "-0.060077836408315397"
+        },
+        {
+          "decisionAt": 1779451200000,
+          "pair": "DOT/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1779451200000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.14265559984096152,
+            "upMoves": 9,
+            "downMoves": 6
+          },
+          "efficiency": 0.22857142857142623,
+          "exitClass": "stop",
+          "netEur": "-0.335638133782984581"
+        },
+        {
+          "decisionAt": 1779494400000,
+          "pair": "ETH/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1779494400000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.1568733232181127,
+            "upMoves": 9,
+            "downMoves": 7
+          },
+          "efficiency": 0.38377469525010627,
+          "exitClass": "stop",
+          "netEur": "-0.333538923412365225"
+        },
+        {
+          "decisionAt": 1779537600000,
+          "pair": "ICP/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1779537600000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.18110142716504354,
+            "upMoves": 7,
+            "downMoves": 8
+          },
+          "efficiency": 0.27748691099476513,
+          "exitClass": "target",
+          "netEur": "0.547621224852279129"
+        },
+        {
+          "decisionAt": 1779580800000,
+          "pair": "ETH/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1779580800000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.4294347290992666,
+            "upMoves": 8,
+            "downMoves": 8
+          },
+          "efficiency": 0.30807645944549694,
+          "exitClass": "timeout",
+          "netEur": "-0.045307760089822361"
+        },
+        {
+          "decisionAt": 1779624000000,
+          "pair": "SUI/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1779624000000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.15312599262445317,
+            "upMoves": 11,
+            "downMoves": 5
+          },
+          "efficiency": 0.03773584905660604,
+          "exitClass": "stop",
+          "netEur": "-0.335145448306069335"
+        },
+        {
+          "decisionAt": 1779667200000,
+          "pair": "XLM/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1779667200000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.3618611154838852,
+            "upMoves": 4,
+            "downMoves": 6
+          },
+          "efficiency": 0,
+          "exitClass": "timeout",
+          "netEur": "0.472671150563519997"
+        },
+        {
+          "decisionAt": 1779710400000,
+          "pair": "ICP/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1779710400000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.24374310812570252,
+            "upMoves": 8,
+            "downMoves": 4
+          },
+          "efficiency": 0.40243902439024,
+          "exitClass": "target",
+          "netEur": "0.551025961835387840"
+        },
+        {
+          "decisionAt": 1779753600000,
+          "pair": "BCH/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1779753600000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.21195632966931663,
+            "upMoves": 6,
+            "downMoves": 3
+          },
+          "efficiency": 0.15789473684210192,
+          "exitClass": "stop",
+          "netEur": "-0.33644909095548073"
+        },
+        {
+          "decisionAt": 1779796800000,
+          "pair": "APT/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1779796800000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.30302467008590983,
+            "upMoves": 6,
+            "downMoves": 2
+          },
+          "efficiency": 0.2608695652173904,
+          "exitClass": "stop",
+          "netEur": "-0.510356947288028462"
+        },
+        {
+          "decisionAt": 1779840000000,
+          "pair": "WIN/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1779840000000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.5306263737936873,
+            "upMoves": 4,
+            "downMoves": 1
+          },
+          "efficiency": 0.29729729729728843,
+          "exitClass": "timeout",
+          "netEur": "-0.200412174696141305639"
+        },
+        {
+          "decisionAt": 1779883200000,
+          "pair": "WIN/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1779883200000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.4286078203571109,
+            "upMoves": 2,
+            "downMoves": 1
+          },
+          "efficiency": 0.16129032258064438,
+          "exitClass": "timeout",
+          "netEur": "-0.033804286803094000732"
+        },
+        {
+          "decisionAt": 1779926400000,
+          "pair": "XLM/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1779926400000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.13644496371034406,
+            "upMoves": 7,
+            "downMoves": 8
+          },
+          "efficiency": 0.04117647058823604,
+          "exitClass": "target",
+          "netEur": "0.548599610189050792"
+        },
+        {
+          "decisionAt": 1779969600000,
+          "pair": "XLM/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1779969600000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.14304140347973865,
+            "upMoves": 11,
+            "downMoves": 4
+          },
+          "efficiency": 0.32653061224489893,
+          "exitClass": "target",
+          "netEur": "0.550788055472117779"
+        },
+        {
+          "decisionAt": 1780012800000,
+          "pair": "XLM/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1780012800000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.17112319261282205,
+            "upMoves": 10,
+            "downMoves": 6
+          },
+          "efficiency": 0.03431372549019582,
+          "exitClass": "stop",
+          "netEur": "-0.334609047866061819"
+        },
+        {
+          "decisionAt": 1780056000000,
+          "pair": "WIN/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1780056000000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.8752637133841318,
+            "upMoves": 2,
+            "downMoves": 0
+          },
+          "efficiency": 0.6000000000000147,
+          "exitClass": "timeout",
+          "netEur": "0.120926597454987402696"
+        },
+        {
+          "decisionAt": 1780099200000,
+          "pair": "XLM/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1780099200000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.20955941470122616,
+            "upMoves": 9,
+            "downMoves": 7
+          },
+          "efficiency": 0.5315870570107853,
+          "exitClass": "target",
+          "netEur": "0.545571711020179308"
+        },
+        {
+          "decisionAt": 1780142400000,
+          "pair": "TRX/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1780142400000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.1847517115412543,
+            "upMoves": 11,
+            "downMoves": 2
+          },
+          "efficiency": 0.27777777777777424,
+          "exitClass": "timeout",
+          "netEur": "0.073311710675041533"
+        }
+      ],
+      "summaries": {
+        "all": {
+          "trades": 20,
+          "meanLargestMoveShare": 0.2908713461617679,
+          "meanUpMoves": 7.1,
+          "meanEfficiency": 0.24555545047671604
+        },
+        "stop": {
+          "trades": 6,
+          "meanLargestMoveShare": 0.18979318467526266,
+          "meanUpMoves": 8.5,
+          "meanEfficiency": 0.18386000007130446
+        },
+        "target": {
+          "trades": 6,
+          "meanLargestMoveShare": 0.18099006697410736,
+          "meanUpMoves": 8.333333333333334,
+          "meanEfficiency": 0.30039934014902697
+        },
+        "timeout": {
+          "trades": 8,
+          "meanLargestMoveShare": 0.44909092666739214,
+          "meanUpMoves": 5.125,
+          "meanEfficiency": 0.25069412102654154
+        }
+      }
+    },
+    {
+      "key": "june",
+      "rows": [
+        {
+          "decisionAt": 1780272000000,
+          "pair": "XLM/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1780272000000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.12617158388827074,
+            "upMoves": 10,
+            "downMoves": 6
+          },
+          "efficiency": 0.19417475728155256,
+          "exitClass": "target",
+          "netEur": "0.543768168173832431"
+        },
+        {
+          "decisionAt": 1780315200000,
+          "pair": "ICP/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1780315200000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.1450610208807979,
+            "upMoves": 9,
+            "downMoves": 5
+          },
+          "efficiency": 0.25110132158590087,
+          "exitClass": "target",
+          "netEur": "0.550844141255750303"
+        },
+        {
+          "decisionAt": 1780358400000,
+          "pair": "BCH/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1780358400000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.2401852815482659,
+            "upMoves": 5,
+            "downMoves": 3
+          },
+          "efficiency": 0.11999999999999933,
+          "exitClass": "stop",
+          "netEur": "-0.336426787402880897"
+        },
+        {
+          "decisionAt": 1780401600000,
+          "pair": "ICP/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1780401600000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.17879153704358763,
+            "upMoves": 9,
+            "downMoves": 6
+          },
+          "efficiency": 0.42079207920791856,
+          "exitClass": "stop",
+          "netEur": "-0.335930756393078913"
+        },
+        {
+          "decisionAt": 1780444800000,
+          "pair": "XLM/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1780444800000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.11897141778314432,
+            "upMoves": 7,
+            "downMoves": 9
+          },
+          "efficiency": 0.11747851002865337,
+          "exitClass": "stop",
+          "netEur": "-0.334372630208514836"
+        },
+        {
+          "decisionAt": 1780488000000,
+          "pair": "APT/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1780488000000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.6423538253221456,
+            "upMoves": 1,
+            "downMoves": 3
+          },
+          "efficiency": 0.44444444444444264,
+          "exitClass": "stop",
+          "netEur": "-0.334034062280062474"
+        },
+        {
+          "decisionAt": 1780531200000,
+          "pair": "LINK/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1780531200000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.19167278280863942,
+            "upMoves": 7,
+            "downMoves": 9
+          },
+          "efficiency": 0.01867995018679915,
+          "exitClass": "stop",
+          "netEur": "-0.331587362559956833"
+        },
+        {
+          "decisionAt": 1780574400000,
+          "pair": "BCH/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1780574400000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.148982043222607,
+            "upMoves": 7,
+            "downMoves": 7
+          },
+          "efficiency": 0.05263157894736872,
+          "exitClass": "timeout",
+          "netEur": "0.225639887911203495"
+        },
+        {
+          "decisionAt": 1780704000000,
+          "pair": "XLM/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1780704000000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.15645679861381467,
+            "upMoves": 9,
+            "downMoves": 6
+          },
+          "efficiency": 0.34405144694533674,
+          "exitClass": "stop",
+          "netEur": "-0.349473651439676676"
+        },
+        {
+          "decisionAt": 1780747200000,
+          "pair": "SHIB/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1780747200000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.12614018857940515,
+            "upMoves": 8,
+            "downMoves": 5
+          },
+          "efficiency": 0.03448275862068986,
+          "exitClass": "timeout",
+          "netEur": "-0.0683585845764481801918"
+        },
+        {
+          "decisionAt": 1780790400000,
+          "pair": "XLM/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1780790400000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.1486157241019802,
+            "upMoves": 13,
+            "downMoves": 3
+          },
+          "efficiency": 0.1469194312796194,
+          "exitClass": "stop",
+          "netEur": "-0.329557293202395487"
+        },
+        {
+          "decisionAt": 1780833600000,
+          "pair": "ADA/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1780833600000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.13045043088166108,
+            "upMoves": 7,
+            "downMoves": 9
+          },
+          "efficiency": 0.2777777777777762,
+          "exitClass": "stop",
+          "netEur": "-0.329879356501927108"
+        },
+        {
+          "decisionAt": 1780876800000,
+          "pair": "BCH/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1780876800000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.4768501171472273,
+            "upMoves": 7,
+            "downMoves": 5
+          },
+          "efficiency": 0.22705314009661887,
+          "exitClass": "stop",
+          "netEur": "-0.380405735196118537"
+        },
+        {
+          "decisionAt": 1780920000000,
+          "pair": "APT/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1780920000000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.438032520808613,
+            "upMoves": 2,
+            "downMoves": 3
+          },
+          "efficiency": 0.5199999999999996,
+          "exitClass": "timeout",
+          "netEur": "0.057069863609726502"
+        },
+        {
+          "decisionAt": 1780963200000,
+          "pair": "ETH/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1780963200000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.19159972746082546,
+            "upMoves": 9,
+            "downMoves": 7
+          },
+          "efficiency": 0.05653532197924266,
+          "exitClass": "stop",
+          "netEur": "-0.326138158588976435"
+        },
+        {
+          "decisionAt": 1781049600000,
+          "pair": "WIN/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781049600000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 1,
+            "upMoves": 1,
+            "downMoves": 0
+          },
+          "efficiency": 1,
+          "exitClass": "timeout",
+          "netEur": "-0.126246513231683473280"
+        },
+        {
+          "decisionAt": 1781092800000,
+          "pair": "TRX/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781092800000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.10012430840407444,
+            "upMoves": 8,
+            "downMoves": 7
+          },
+          "efficiency": 0.17647058823529269,
+          "exitClass": "timeout",
+          "netEur": "-0.108336882326394794"
+        },
+        {
+          "decisionAt": 1781136000000,
+          "pair": "LTC/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781136000000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.17303492372432502,
+            "upMoves": 10,
+            "downMoves": 6
+          },
+          "efficiency": 0.054726368159202884,
+          "exitClass": "timeout",
+          "netEur": "0.185570452769837626"
+        },
+        {
+          "decisionAt": 1781179200000,
+          "pair": "SHIB/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781179200000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.25117426069425697,
+            "upMoves": 5,
+            "downMoves": 2
+          },
+          "efficiency": 0.2857142857142899,
+          "exitClass": "timeout",
+          "netEur": "0.182121106540624355465"
+        },
+        {
+          "decisionAt": 1781222400000,
+          "pair": "TRX/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781222400000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.29160311815632806,
+            "upMoves": 10,
+            "downMoves": 5
+          },
+          "efficiency": 0.3220338983050813,
+          "exitClass": "timeout",
+          "netEur": "-0.182889429748562119"
+        },
+        {
+          "decisionAt": 1781265600000,
+          "pair": "APT/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781265600000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.29270613335393236,
+            "upMoves": 8,
+            "downMoves": 3
+          },
+          "efficiency": 0.4090909090909072,
+          "exitClass": "stop",
+          "netEur": "-0.424388635901565443"
+        },
+        {
+          "decisionAt": 1781308800000,
+          "pair": "LTC/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781308800000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.15525664310317216,
+            "upMoves": 10,
+            "downMoves": 4
+          },
+          "efficiency": 0.1621621621621617,
+          "exitClass": "timeout",
+          "netEur": "0.057834575002152002"
+        },
+        {
+          "decisionAt": 1781352000000,
+          "pair": "SHIB/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781352000000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.23572320672449626,
+            "upMoves": 7,
+            "downMoves": 3
+          },
+          "efficiency": 0.5652173913043536,
+          "exitClass": "stop",
+          "netEur": "-0.3254564186097068118885"
+        },
+        {
+          "decisionAt": 1781395200000,
+          "pair": "LTC/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781395200000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.38364604199922225,
+            "upMoves": 9,
+            "downMoves": 5
+          },
+          "efficiency": 0.6344086021505373,
+          "exitClass": "timeout",
+          "netEur": "-0.179572089830324227"
+        },
+        {
+          "decisionAt": 1781438400000,
+          "pair": "LINK/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781438400000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.2160366896063794,
+            "upMoves": 6,
+            "downMoves": 8
+          },
+          "efficiency": 0.05418719211822716,
+          "exitClass": "stop",
+          "netEur": "-0.322740881457101791"
+        },
+        {
+          "decisionAt": 1781481600000,
+          "pair": "ADA/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781481600000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.19548311569731283,
+            "upMoves": 11,
+            "downMoves": 2
+          },
+          "efficiency": 0.8224852071005915,
+          "exitClass": "stop",
+          "netEur": "-0.322576281238920536"
+        },
+        {
+          "decisionAt": 1781524800000,
+          "pair": "BCH/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781524800000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.2648140584714211,
+            "upMoves": 12,
+            "downMoves": 1
+          },
+          "efficiency": 0.8461538461538491,
+          "exitClass": "stop",
+          "netEur": "-0.319119230586077320"
+        },
+        {
+          "decisionAt": 1781568000000,
+          "pair": "LTC/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781568000000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.22901376231185008,
+            "upMoves": 8,
+            "downMoves": 8
+          },
+          "efficiency": 0.04411764705882524,
+          "exitClass": "timeout",
+          "netEur": "-0.062418944315768365"
+        },
+        {
+          "decisionAt": 1781611200000,
+          "pair": "XLM/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781611200000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.1646501151702037,
+            "upMoves": 8,
+            "downMoves": 8
+          },
+          "efficiency": 0.15789473684210517,
+          "exitClass": "stop",
+          "netEur": "-0.318120031429644831"
+        },
+        {
+          "decisionAt": 1781654400000,
+          "pair": "WIN/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781654400000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.26947747102846636,
+            "upMoves": 4,
+            "downMoves": 4
+          },
+          "efficiency": 0.283950617283953,
+          "exitClass": "timeout",
+          "netEur": "0.147984354118289725910"
+        },
+        {
+          "decisionAt": 1781697600000,
+          "pair": "XLM/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781697600000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.19913802032311095,
+            "upMoves": 7,
+            "downMoves": 9
+          },
+          "efficiency": 0.09615384615384576,
+          "exitClass": "timeout",
+          "netEur": "-0.145361397824997079"
+        },
+        {
+          "decisionAt": 1781740800000,
+          "pair": "XLM/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781740800000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.15051155691755683,
+            "upMoves": 8,
+            "downMoves": 5
+          },
+          "efficiency": 0.022421524663676452,
+          "exitClass": "target",
+          "netEur": "0.522323603842260751"
+        },
+        {
+          "decisionAt": 1781784000000,
+          "pair": "BNB/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781784000000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.17687132224712854,
+            "upMoves": 10,
+            "downMoves": 6
+          },
+          "efficiency": 0.2179591836734689,
+          "exitClass": "stop",
+          "netEur": "-0.320774154188922417"
+        },
+        {
+          "decisionAt": 1781827200000,
+          "pair": "SUI/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781827200000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.17940077085887357,
+            "upMoves": 10,
+            "downMoves": 5
+          },
+          "efficiency": 0.36551724137931113,
+          "exitClass": "stop",
+          "netEur": "-0.319163837691275557"
+        },
+        {
+          "decisionAt": 1781870400000,
+          "pair": "WIN/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781870400000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.27979130211562164,
+            "upMoves": 4,
+            "downMoves": 2
+          },
+          "efficiency": 0.5454545454545574,
+          "exitClass": "timeout",
+          "netEur": "-0.065771079388443156900"
+        },
+        {
+          "decisionAt": 1781913600000,
+          "pair": "ICP/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781913600000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.29624795957863925,
+            "upMoves": 4,
+            "downMoves": 2
+          },
+          "efficiency": 0.3623188405797117,
+          "exitClass": "timeout",
+          "netEur": "0.129355228815988342"
+        },
+        {
+          "decisionAt": 1781956800000,
+          "pair": "WIN/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1781956800000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.5724504017833264,
+            "upMoves": 3,
+            "downMoves": 0
+          },
+          "efficiency": 1,
+          "exitClass": "timeout",
+          "netEur": "0.078288284645775977236"
+        },
+        {
+          "decisionAt": 1782000000000,
+          "pair": "AVAX/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1782000000000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.23174280534069872,
+            "upMoves": 8,
+            "downMoves": 6
+          },
+          "efficiency": 0.4425087108013943,
+          "exitClass": "timeout",
+          "netEur": "-0.068288838859401388"
+        },
+        {
+          "decisionAt": 1782043200000,
+          "pair": "WIN/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1782043200000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.3655273652368164,
+            "upMoves": 4,
+            "downMoves": 1
+          },
+          "efficiency": 0.24137931034482835,
+          "exitClass": "timeout",
+          "netEur": "-0.082268931015329399"
+        },
+        {
+          "decisionAt": 1782129600000,
+          "pair": "SUI/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1782129600000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.26438977114038703,
+            "upMoves": 9,
+            "downMoves": 7
+          },
+          "efficiency": 0.6711111111111033,
+          "exitClass": "stop",
+          "netEur": "-0.318450124008109368"
+        },
+        {
+          "decisionAt": 1782172800000,
+          "pair": "TRX/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1782172800000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.3002298209981258,
+            "upMoves": 9,
+            "downMoves": 4
+          },
+          "efficiency": 0.4117647058823406,
+          "exitClass": "timeout",
+          "netEur": "-0.145841909892477597"
+        },
+        {
+          "decisionAt": 1782216000000,
+          "pair": "SUI/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1782216000000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.1293803965831155,
+            "upMoves": 11,
+            "downMoves": 5
+          },
+          "efficiency": 0.39525691699604704,
+          "exitClass": "timeout",
+          "netEur": "-0.11796181124508"
+        },
+        {
+          "decisionAt": 1782259200000,
+          "pair": "ICP/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1782259200000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.3642601043714068,
+            "upMoves": 8,
+            "downMoves": 4
+          },
+          "efficiency": 0.5999999999999962,
+          "exitClass": "timeout",
+          "netEur": "-0.239882132722749080"
+        },
+        {
+          "decisionAt": 1782302400000,
+          "pair": "AVAX/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1782302400000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.22754789437542802,
+            "upMoves": 6,
+            "downMoves": 5
+          },
+          "efficiency": 0.16230366492146545,
+          "exitClass": "stop",
+          "netEur": "-0.315595269275440584"
+        },
+        {
+          "decisionAt": 1782345600000,
+          "pair": "AVAX/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1782345600000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.30246466245067244,
+            "upMoves": 10,
+            "downMoves": 4
+          },
+          "efficiency": 0.6681614349775802,
+          "exitClass": "timeout",
+          "netEur": "0.109127024975518755"
+        },
+        {
+          "decisionAt": 1782432000000,
+          "pair": "BCH/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1782432000000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.23021260246262468,
+            "upMoves": 7,
+            "downMoves": 2
+          },
+          "efficiency": 0.3913043478260832,
+          "exitClass": "stop",
+          "netEur": "-0.314888246658054621"
+        },
+        {
+          "decisionAt": 1782475200000,
+          "pair": "WIN/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1782475200000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.324143063165245,
+            "upMoves": 2,
+            "downMoves": 2
+          },
+          "efficiency": 0.2352941176470567,
+          "exitClass": "stop",
+          "netEur": "-0.314384095593858311638"
+        },
+        {
+          "decisionAt": 1782518400000,
+          "pair": "AVAX/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1782518400000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.33712657055658135,
+            "upMoves": 8,
+            "downMoves": 6
+          },
+          "efficiency": 0.4043583535108987,
+          "exitClass": "timeout",
+          "netEur": "-0.124781848029429578"
+        },
+        {
+          "decisionAt": 1782561600000,
+          "pair": "XLM/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1782561600000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.1699634700285463,
+            "upMoves": 9,
+            "downMoves": 6
+          },
+          "efficiency": 0.2121212121212137,
+          "exitClass": "timeout",
+          "netEur": "-0.18954922525199910"
+        },
+        {
+          "decisionAt": 1782604800000,
+          "pair": "TRX/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1782604800000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.14300946581712423,
+            "upMoves": 8,
+            "downMoves": 3
+          },
+          "efficiency": 0.2631578947368664,
+          "exitClass": "timeout",
+          "netEur": "-0.093075561053995096"
+        },
+        {
+          "decisionAt": 1782648000000,
+          "pair": "LTC/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1782648000000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.22427218574607063,
+            "upMoves": 11,
+            "downMoves": 5
+          },
+          "efficiency": 0.4117647058823527,
+          "exitClass": "stop",
+          "netEur": "-0.311917413451866994"
+        },
+        {
+          "decisionAt": 1782691200000,
+          "pair": "AVAX/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1782691200000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.15724433251000422,
+            "upMoves": 6,
+            "downMoves": 8
+          },
+          "efficiency": 0.1797919762258532,
+          "exitClass": "timeout",
+          "netEur": "0.128158242304250471"
+        },
+        {
+          "decisionAt": 1782734400000,
+          "pair": "XRP/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1782734400000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.18073674917771382,
+            "upMoves": 7,
+            "downMoves": 9
+          },
+          "efficiency": 0.13924050632911458,
+          "exitClass": "stop",
+          "netEur": "-0.309558812764529717"
+        },
+        {
+          "decisionAt": 1782777600000,
+          "pair": "ICP/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1782777600000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.19721163470830114,
+            "upMoves": 6,
+            "downMoves": 5
+          },
+          "efficiency": 0.11594202898550746,
+          "exitClass": "stop",
+          "netEur": "-0.310092759813748439"
+        },
+        {
+          "decisionAt": 1782820800000,
+          "pair": "BCH/EUR",
+          "concentration": {
+            "version": "closed-move-concentration-v1",
+            "closedAt": 1782820800000,
+            "edges": 16,
+            "complete": true,
+            "largestMoveShare": 0.22049378435887101,
+            "upMoves": 8,
+            "downMoves": 6
+          },
+          "efficiency": 0.08510638297872576,
+          "exitClass": "stop",
+          "netEur": "-0.331177947503038418"
+        }
+      ],
+      "summaries": {
+        "all": {
+          "trades": 55,
+          "meanLargestMoveShare": 0.25286267020706216,
+          "meanUpMoves": 7.454545454545454,
+          "meanEfficiency": 0.3215477915135326
+        },
+        "stop": {
+          "trades": 26,
+          "meanLargestMoveShare": 0.233486182306757,
+          "meanUpMoves": 7.769230769230769,
+          "meanEfficiency": 0.30093479520348576
+        },
+        "target": {
+          "trades": 3,
+          "meanLargestMoveShare": 0.14058138722887514,
+          "meanUpMoves": 9,
+          "meanEfficiency": 0.1558992011770433
+        },
+        "timeout": {
+          "trades": 26,
+          "meanLargestMoveShare": 0.2851946907586965,
+          "meanUpMoves": 6.961538461538462,
+          "meanEfficiency": 0.36127408670855904
+        }
+      }
+    }
+  ],
+  "scope": "Post-hoc descriptive summaries of closed path concentration. Exit classes come from already consumed portfolios. No threshold fitted, no causal prediction or new holdout.",
+  "profitabilityEstablished": false
+}

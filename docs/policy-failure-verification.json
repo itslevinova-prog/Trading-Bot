@@ -1,0 +1,17 @@
+{
+  "verifiedAt": "2026-10-31T22:15:56.478Z",
+  "artifact": "docs/policy-failure-audit-954c617d74217901.json",
+  "factsHash": "954c617d74217901615b62dbe576dc981a58739d61a90f6ed4eff7abfcf77238",
+  "fullEconomicParity": true,
+  "scopedRows": 177,
+  "distinctPairEntryClocks": 103,
+  "independentSamples": null,
+  "eligibleHistoricalLabels": 176,
+  "censoredRows": 1,
+  "retainedActualMaterializationTimes": true,
+  "modeledTargetsUnavailableBeforeMaturity": true,
+  "allOriginalFeatureClocksCausal": true,
+  "postOutcomeSeparateFromDecisionInputs": true,
+  "modelTrained": false,
+  "julyLoaded": false
+}

@@ -1,0 +1,45 @@
+{
+  "verifiedAt": "2026-11-02T16:34:51.484Z",
+  "workingBuild": "b065096a07aed055e0668c3fa98f8b9493c386749644c8ac3e11de1e93409263",
+  "treeModelHash": "53b70cd7b4252592531d90eb0e67c3d3eb89409835cd496ce04f513c9d30ae5b",
+  "syntheticOnly": true,
+  "syntheticTrainingRows": 320,
+  "nativePredictionsCompared": 46,
+  "maxAbsDifference": 0,
+  "typeScriptTests": 12,
+  "pythonTests": 6,
+  "typechecksPassed": true,
+  "parameters": {
+    "loss": "squared_error",
+    "n_estimators": 100,
+    "learning_rate": 0.05,
+    "max_depth": 2,
+    "min_samples_leaf": 40,
+    "subsample": 1,
+    "random_state": 0,
+    "n_iter_no_change": null
+  },
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "2.5.4",
+    "sklearn": "1.7.2"
+  },
+  "previousMainBuild": "e0ec7f7af9ac946947a1e8ea94cfd93d373b3d094a0ecc0c142fe18e945dba85",
+  "allPreviousMainRuntimeFilesUnchanged": 121,
+  "historicalModelsFitted": 0,
+  "modelProviderIntegrated": false,
+  "modelActivated": false,
+  "julyLoaded": false,
+  "paidCalls": 0,
+  "profitabilityEstablished": false,
+  "sources": {
+    "scripts/fit-barrier-tree.py": "17d076b968c8af97fbb291e83bdccb40b013065655ce9310bbe0ade4ed6df062",
+    "scripts/test_barrier_tree.py": "6ed4e495ed94d18bd6c6f02e09710c33b2b93e00e276080fa617b08a4359f720",
+    "apps/server/src/research/barrier-tree.ts": "b1d53bc86302ba345cab39674ec14b53c3ee7e41f0dafa02cac69041593ad94b",
+    "apps/server/test/barrier-tree.test.ts": "8db826d394e11cacd9c253f2c27ff636830d905b315348a1b5625d108d31d3de",
+    "apps/server/test/fixtures/barrier-tree-export-v1.json": "ef5c256f8b9609ceb5462a568a4ae4d2da9b099ee6c61db187fa3b3d45e8fc21",
+    "docs/local-barrier-tree-design-v1.json": "e0b3b1320f0f152abd785ec264023d7570cf8f1c4be6859993ffd5384a36bc7b",
+    "docs/local-tree-environment.json": "2974876df994621924d6f628aec41a4608a413d7accda4b508149bfcb9854145",
+    "scripts/requirements-tree-research.txt": "695ee8c171054cbaf4f3025aca211286feaad96a7c026417dbe56b7727c56021"
+  }
+}

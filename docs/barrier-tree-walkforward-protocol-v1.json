@@ -1,0 +1,43 @@
+{
+  "version": "fixed-nonlinear-barrier-walkforward-v1",
+  "registeredAt": "2026-11-02T16:53:18.793Z",
+  "runnerHash": "5405fe0ac075fa0ea602831ba29a5350f89dd20fb4201fe24537cbf29fe1bfad",
+  "sources": {
+    "scripts/fit-barrier-tree.py": "17d076b968c8af97fbb291e83bdccb40b013065655ce9310bbe0ade4ed6df062",
+    "scripts/fit-barrier-tree-batch.py": "03c4657cfe83b4315aae93e7d581c99a1c1a111f9d591b0f16eaddf5f69f8939",
+    "apps/server/src/research/barrier-tree.ts": "b1d53bc86302ba345cab39674ec14b53c3ee7e41f0dafa02cac69041593ad94b",
+    "apps/server/dist/research/barrier-tree.js": "b2ac07a2dec4103b3e5c27ac77a7fd44058a7c8912b1ad815ddb37586fa3d0c4",
+    "apps/server/src/research/clock-ranking.ts": "71c2a6fbaf54d421bdc3c39b4a81a73176f783173e899f8ee1fdb0aa2a227930",
+    "apps/server/dist/research/clock-ranking.js": "827887963a7a2c855ad98cdb81129e039000a86a891bc43a7ff43a4ea1840320",
+    "apps/server/src/research/barrier-learning.ts": "bcd91ef518d5f080bed3e503dea5538ef3df9c49d8c559210bd4345d48832f87",
+    "apps/server/dist/research/barrier-learning.js": "04a5a8337198a2d40f1ae362658373bb867d093460a0893c677b99679be785aa",
+    "docs/local-tree-environment.json": "2974876df994621924d6f628aec41a4608a413d7accda4b508149bfcb9854145",
+    "docs/local-barrier-tree-design-v1.json": "e0b3b1320f0f152abd785ec264023d7570cf8f1c4be6859993ffd5384a36bc7b"
+  },
+  "corpus": "docs/barrier-clock-corpus-3262b4fb3be9b47e.json",
+  "corpusHash": "3262b4fb3be9b47e7edf0954e93d52f85fda6dfedf7159178c440fa6300a7414",
+  "priorReport": "docs/barrier-net-walkforward-4898631417b16e07.json",
+  "priorReportHash": "4898631417b16e07db860acf1342af2160ab138bd98ea0dfece8a341ba37facc",
+  "parameters": {
+    "loss": "squared_error",
+    "n_estimators": 100,
+    "learning_rate": 0.05,
+    "max_depth": 2,
+    "min_samples_leaf": 40,
+    "subsample": 1,
+    "random_state": 0,
+    "n_iter_no_change": null
+  },
+  "folds": "Exact prior41chronological14train/4validation/4test/4step windows",
+  "features": "Original8closedbounded750",
+  "costedTarget": "Same fixed2percentstop/4percenttarget/8h net label",
+  "modelSelection": "Original validation known-MAE/95percentcoverage conservative zero/mean/ridge/tree ordering, no test choice",
+  "outlierGuard": "Same6train-population-std and10day freshness",
+  "rankMargin": 0.005,
+  "pythonRequests": "Only matured training labels; val/test input features queried after fit, never val/test labels. Synthetic tests already proved query independence.",
+  "priorControls": "Require exact unchanged prior0/mean/ridge MAE/coverage",
+  "portfolioDiagnostic": false,
+  "hyperparameterSearch": false,
+  "modelActivated": false,
+  "julyLoaded": false
+}

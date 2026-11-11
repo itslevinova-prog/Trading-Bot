@@ -1,0 +1,401 @@
+{
+  "version": "distinct-upstream-source-inventory-v1",
+  "generatedAt": "2026-11-03T15:54:06.224425+00:00",
+  "scope": "Distinct retained files under each repository source directory; manifests/indexes/reviewdocuments and external installed packages excluded. Corrects earlier incremental55/54overcounts. No source deleted in this phase.",
+  "selectedFiles": 56,
+  "licenceFiles": 6,
+  "files": [
+    {
+      "repository": "datasieve",
+      "path": "docs/upstream-research/datasieve/source/datasieve/pipeline.py",
+      "sha256": "5a4697f95198b260f1675ba8aa1c87db06435667a9f5699a805056361ce3dd35",
+      "bytes": 8702,
+      "isLicence": false
+    },
+    {
+      "repository": "datasieve",
+      "path": "docs/upstream-research/datasieve/source/datasieve/transforms/dissimilarity_index.py",
+      "sha256": "09784643059fc8763b059649541f9368b58bf2e7d96704b3aeb0692055e053ff",
+      "bytes": 2748,
+      "isLicence": false
+    },
+    {
+      "repository": "datasieve",
+      "path": "docs/upstream-research/datasieve/source/datasieve/transforms/sklearn_wrapper.py",
+      "sha256": "7721426ff82390676c6268fd70c467d5137fc77c5b8ccba490d6b40ef7f4cce6",
+      "bytes": 1491,
+      "isLicence": false
+    },
+    {
+      "repository": "datasieve",
+      "path": "docs/upstream-research/datasieve/source/LICENSE",
+      "sha256": "3aff275a39e2a9176fe0cdeb1d116c967bdc81b952f9f7e02f3d2f1fb3a6f4f7",
+      "bytes": 1059,
+      "isLicence": true
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/docs/lookahead-analysis.md",
+      "sha256": "49c0cc7f34f5aa071827366d0fe28af765a2fe7a91f823548d33687bf5b633b9",
+      "bytes": 7801,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/freqtrade/freqai/base_models/BaseClassifierModel.py",
+      "sha256": "d557ca4c2a1d0b5847f01363bb8a8a20dd27bc13114ed6c6aa37739d52af6b5e",
+      "bytes": 4970,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/freqtrade/freqai/base_models/BaseRegressionModel.py",
+      "sha256": "b91bf3a0cbf096c204f4c5b2b15d7d79777c1a890fe54345d663610a9198475d",
+      "bytes": 5325,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/freqtrade/freqai/data_kitchen.py",
+      "sha256": "00a0d1089dab1a8ae47ef5282ca6aa1c1fbb71cb95dc27193fee61c1d1bce82e",
+      "bytes": 44308,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/freqtrade/freqai/freqai_interface.py",
+      "sha256": "fa0c3d1835ea3e2804d23617095d877d760b357bfd02ec30a954b4ae16154065",
+      "bytes": 47293,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/freqtrade/freqai/prediction_models/LightGBMRegressor.py",
+      "sha256": "aa3a3e7cb6b2c0be75c8266650efc7997496b49bebe1ec3ae661e578378880cf",
+      "bytes": 2278,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/freqtrade/freqai/prediction_models/SKLearnRandomForestClassifier.py",
+      "sha256": "9ae42bb20319a2c0646ff0f4d727e2ac36e2b3f9e21c66b19a48e3a96467225a",
+      "bytes": 3236,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/freqtrade/optimize/analysis/lookahead.py",
+      "sha256": "25b02b2d4f6e4317d8855b01976a3fef112e56280b7a33954634ed4dc51e2cca",
+      "bytes": 12470,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/freqtrade/persistence/custom_data.py",
+      "sha256": "a48ece9ccf3b1236662337c939df61e89e8839e260209187ef9c408316de035a",
+      "bytes": 7270,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/freqtrade/persistence/trade_model.py",
+      "sha256": "a011ca8686a205fd279ef665a2a3d5a1a4e3fb8cec9cbbac7f429eed0da85c2d",
+      "bytes": 87483,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/freqtrade/plugins/pairlist/rangestabilityfilter.py",
+      "sha256": "569a370cb77008d201f10d9bbf7ff8737597c7a40135828013e2a7270845af6b",
+      "bytes": 6507,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/freqtrade/plugins/pairlist/SpreadFilter.py",
+      "sha256": "f57e125b995888ad23c48cd249a33262d33ddacc9c619b3a089d65b6d2980655",
+      "bytes": 2839,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/freqtrade/plugins/pairlist/VolatilityFilter.py",
+      "sha256": "1d8ca3067e65ea6b313afde0a1651a27fd2c4262bcad9190c0d8fe56d0ccb88b",
+      "bytes": 6340,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/freqtrade/plugins/protections/low_profit_pairs.py",
+      "sha256": "b5e913947de1ef50f93f4e2cb50d220ffb5f197fcfed3be7ea19ba8544e8e69d",
+      "bytes": 4018,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/freqtrade/plugins/protections/max_drawdown_protection.py",
+      "sha256": "614328466e2e90e3dc57dff909e18e7f87bc817cef5ac9b9d1d89ef94b1cccc7",
+      "bytes": 5095,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/freqtrade/plugins/protections/stoploss_guard.py",
+      "sha256": "db3adae62104271ad8a70773d45715718a547cb6447b4b82353b01a54af1ce66",
+      "bytes": 3943,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/freqtrade/strategy/interface.py",
+      "sha256": "87f06f0f2df0c3298949002a250d99cf801b9cee794f332deffcc875c2c6f4a1",
+      "bytes": 81629,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/freqtrade/strategy/strategy_helper.py",
+      "sha256": "5435fb6752df7c8af2101e81b8ef86d0f3d8f17d285f63d895b2570732faa4e5",
+      "bytes": 9343,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/freqtrade/templates/FreqaiExampleStrategy.py",
+      "sha256": "294f7e1e7fe912a3bf73a2cb4a2ecffe80cae6228a3d28fc5b78d3fb0731f8d5",
+      "bytes": 11534,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/freqtrade/templates/sample_strategy.py",
+      "sha256": "18d48d64b955dc9bd1b43f59115c16f2002a881c62c2851ceca64569a6f8651c",
+      "bytes": 17167,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/LICENSE",
+      "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
+      "bytes": 35141,
+      "isLicence": true
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/requirements-freqai.txt",
+      "sha256": "95388048ea5ae33fa2ca98b8c4c07fab8bca8805fe59ea6574113a21ed637956",
+      "bytes": 199,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/tests/plugins/test_pairlist.py",
+      "sha256": "3fcf1f014371a588294aaae346493bfdf8214ffd0826ba765d88181baa72e2c0",
+      "bytes": 124319,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/tests/strategy/strats/freqai_test_classifier.py",
+      "sha256": "5865adedd08494c5693a14e57a4e6be6f172ae039b342410c11ee63a3c9073db",
+      "bytes": 3852,
+      "isLicence": false
+    },
+    {
+      "repository": "freqtrade",
+      "path": "docs/upstream-research/freqtrade/source/tests/strategy/test_interface.py",
+      "sha256": "fba034e464b6d34a2e2591b39255194c8f3d8a4ac3874478039d227d80ffaee1",
+      "bytes": 50960,
+      "isLicence": false
+    },
+    {
+      "repository": "jesse",
+      "path": "docs/upstream-research/jesse/source/jesse/candle_pipelines/base_candles.py",
+      "sha256": "7e2ebe516079e36b28852fe72f197f4221ccf7b43b0946491a2fc78b8c0df943",
+      "bytes": 1633,
+      "isLicence": false
+    },
+    {
+      "repository": "jesse",
+      "path": "docs/upstream-research/jesse/source/jesse/candle_pipelines/gaussian_resampler.py",
+      "sha256": "c5b7ada83c37233083a14564bde3389b36f565baa638e7946280ecd3433105ad",
+      "bytes": 3074,
+      "isLicence": false
+    },
+    {
+      "repository": "jesse",
+      "path": "docs/upstream-research/jesse/source/jesse/candle_pipelines/moving_block_bootstrap.py",
+      "sha256": "f8f135edb97d23d0b714acfc2abc580deb0323e938a0dc18b86624fe63bedc10",
+      "bytes": 4001,
+      "isLicence": false
+    },
+    {
+      "repository": "jesse",
+      "path": "docs/upstream-research/jesse/source/jesse/controllers/ai_model_controller.py",
+      "sha256": "c2d40ed9e5553b148b33231c98502fc5bdfbde0049a0157d65edea4e42b3f4d7",
+      "bytes": 2619,
+      "isLicence": false
+    },
+    {
+      "repository": "jesse",
+      "path": "docs/upstream-research/jesse/source/jesse/indicators/chop.py",
+      "sha256": "c273b0961409c96c336df7ae4c38b70394da8f22a6d46b0195b0d3b94dbe0747",
+      "bytes": 1234,
+      "isLicence": false
+    },
+    {
+      "repository": "jesse",
+      "path": "docs/upstream-research/jesse/source/jesse/indicators/donchian.py",
+      "sha256": "b7e96ebe3ba476c771a65b353c269a84d02e04587f0d76166c5f322bbbb3a401",
+      "bytes": 1820,
+      "isLicence": false
+    },
+    {
+      "repository": "jesse",
+      "path": "docs/upstream-research/jesse/source/jesse/indicators/er.py",
+      "sha256": "223debf7ca989984e4e184799dca39a775b77d8fc7c825484f3e68186bd824fb",
+      "bytes": 1362,
+      "isLicence": false
+    },
+    {
+      "repository": "jesse",
+      "path": "docs/upstream-research/jesse/source/jesse/indicators/kama.py",
+      "sha256": "ef112c5d48f0373a704ccce2a993ba751081d5fe8f31efbb5053f0a8329a70c5",
+      "bytes": 1788,
+      "isLicence": false
+    },
+    {
+      "repository": "jesse",
+      "path": "docs/upstream-research/jesse/source/jesse/models/AiModel.py",
+      "sha256": "e34df598602dcf5c1ee07aae9737cf69008f8d53895cedb454ac6a81a5fcb4ce",
+      "bytes": 841,
+      "isLicence": false
+    },
+    {
+      "repository": "jesse",
+      "path": "docs/upstream-research/jesse/source/jesse/modes/backtest_mode.py",
+      "sha256": "9a3d585b35f567567704dd5b9401bd733712654d35ea95b734eb4070f9fa3b0c",
+      "bytes": 91167,
+      "isLicence": false
+    },
+    {
+      "repository": "jesse",
+      "path": "docs/upstream-research/jesse/source/jesse/research/monte_carlo/monte_carlo_candles.py",
+      "sha256": "7eb2fe91410db430bcf66f30613c28f5a2798125c1715de15907ab3659c05949",
+      "bytes": 20255,
+      "isLicence": false
+    },
+    {
+      "repository": "jesse",
+      "path": "docs/upstream-research/jesse/source/jesse/research/monte_carlo/monte_carlo_trades.py",
+      "sha256": "e5b91c03bbe4a161eec188bd378a474ea0b724ca3578e83f19208cddefa6a7a1",
+      "bytes": 23741,
+      "isLicence": false
+    },
+    {
+      "repository": "jesse",
+      "path": "docs/upstream-research/jesse/source/jesse/services/metrics.py",
+      "sha256": "00561472a7e1a669ab14410c8e4c0cbe1d05b0153626b71f26d55dc85f48e06d",
+      "bytes": 19194,
+      "isLicence": false
+    },
+    {
+      "repository": "jesse",
+      "path": "docs/upstream-research/jesse/source/jesse/strategies/Strategy.py",
+      "sha256": "e2f89664377714d87c5971fdfe13ad244845eda2e1daa449b8bf182de8e660ab",
+      "bytes": 75743,
+      "isLicence": false
+    },
+    {
+      "repository": "jesse",
+      "path": "docs/upstream-research/jesse/source/jesse/utils.py",
+      "sha256": "d13547cab11eadaaf8cd1615adb1747ff7452d91320675f95da1a603557398f1",
+      "bytes": 12878,
+      "isLicence": false
+    },
+    {
+      "repository": "jesse",
+      "path": "docs/upstream-research/jesse/source/LICENSE",
+      "sha256": "8985ca8447e233f34397a52fe77989c02e27b8145d43bd8c715ae9c7a96056d4",
+      "bytes": 1068,
+      "isLicence": true
+    },
+    {
+      "repository": "OctoBot",
+      "path": "docs/upstream-research/OctoBot/source/docs/content/developers/packages/evaluators.md",
+      "sha256": "44cb386f1fa6eadd3d5fdc91c963f1b382151732c72c58687159bc0446000e86",
+      "bytes": 5513,
+      "isLicence": false
+    },
+    {
+      "repository": "OctoBot",
+      "path": "docs/upstream-research/OctoBot/source/docs/content/developers/packages/trading.md",
+      "sha256": "96185be84a89f6873199ea8433bbb63f74a00ae072578654f1ae877f740fb7a3",
+      "bytes": 5070,
+      "isLicence": false
+    },
+    {
+      "repository": "OctoBot",
+      "path": "docs/upstream-research/OctoBot/source/LICENSE",
+      "sha256": "8b1ba204bb69a0ade2bfcf65ef294a920f6bb361b317dba43c7ef29d96332b9b",
+      "bytes": 35148,
+      "isLicence": true
+    },
+    {
+      "repository": "OctoBot",
+      "path": "docs/upstream-research/OctoBot/source/packages/evaluators/LICENSE",
+      "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+      "bytes": 7652,
+      "isLicence": true
+    },
+    {
+      "repository": "OctoBot",
+      "path": "docs/upstream-research/OctoBot/source/packages/evaluators/octobot_evaluators/evaluators/strategy_evaluator.py",
+      "sha256": "44b7c3cc5dfa5225543e13be2242aea782ae977c2c94e5fbc73a2fd82f9ff492",
+      "bytes": 26708,
+      "isLicence": false
+    },
+    {
+      "repository": "OctoBot",
+      "path": "docs/upstream-research/OctoBot/source/packages/evaluators/octobot_evaluators/evaluators/TA_evaluator.py",
+      "sha256": "5e4ca7c85ce9b3728dc59d375633af58e4c547c5b634f5d64d22ffd6c9e79dce",
+      "bytes": 7515,
+      "isLicence": false
+    },
+    {
+      "repository": "OctoBot",
+      "path": "docs/upstream-research/OctoBot/source/packages/evaluators/octobot_evaluators/matrix/matrix.py",
+      "sha256": "9349e99ecab69b7cff3607f40bed344b7257ecfb5557becfc95ee79ea2642e5a",
+      "bytes": 3497,
+      "isLicence": false
+    },
+    {
+      "repository": "OctoBot",
+      "path": "docs/upstream-research/OctoBot/source/packages/tentacles/Evaluator/Strategies/mixed_strategies_evaluator/mixed_strategies.py",
+      "sha256": "6ad600f312614b6509ef239488d66cddb45a487a6d66c37e8d1feeb0881b78c8",
+      "bytes": 22969,
+      "isLicence": false
+    },
+    {
+      "repository": "OctoBot",
+      "path": "docs/upstream-research/OctoBot/source/packages/tentacles/Evaluator/TA/momentum_evaluator/momentum.py",
+      "sha256": "d442fa6a4de586f87c5fa688d97c4b0d2ce03fc49cb33d1dba5d9167c1c41b27",
+      "bytes": 44983,
+      "isLicence": false
+    },
+    {
+      "repository": "OctoBot",
+      "path": "docs/upstream-research/OctoBot/source/packages/tentacles/Evaluator/TA/trend_evaluator/trend.py",
+      "sha256": "b97cd8c4f9805ff93e7187e8b8f05b6376b3a0432a6b23753270c8c697d23f3c",
+      "bytes": 19246,
+      "isLicence": false
+    },
+    {
+      "repository": "OctoBot",
+      "path": "docs/upstream-research/OctoBot/source/packages/tentacles/LICENSE",
+      "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+      "bytes": 7652,
+      "isLicence": true
+    }
+  ]
+}

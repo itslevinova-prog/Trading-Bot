@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-31T11:02:40.702Z",
+  "markets": 20,
+  "counts": {
+    "complete": 0,
+    "unknown": 20,
+    "noisy": 0,
+    "upsideRejections": 0,
+    "breakouts": 0
+  },
+  "mandatoryPointersUnchanged": true,
+  "aiEnabled": false,
+  "aiProvider": "none",
+  "profitabilityEstablished": false
+}

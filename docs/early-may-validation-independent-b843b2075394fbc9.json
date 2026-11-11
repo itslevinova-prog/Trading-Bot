@@ -1,0 +1,42 @@
+{
+  "version": "early-may-validation-independent-v1",
+  "verifiedAt": "2026-11-03T20:46:17.003527+00:00",
+  "report": {
+    "path": "docs/early-may-validation-41c6517e0c61f4e3.json",
+    "hash": "41c6517e0c61f4e373b7ef273c9d8d7e07952790e4588ac5519220db6870e841"
+  },
+  "reportFileSha256": "e601d4f862aaa57244bbead358a8859b02bba1b3123e33d2cf292baa5d626a3b",
+  "verifierSha256": "98582e869ae71c50f7beba2eeb3e0ff4e7f62c2d10956ebcf2a981352e77eb5e",
+  "sourcePagesVerified": 80,
+  "labelsVerified": 400,
+  "frozenForecastSlotsVerified": 1200,
+  "sharedClocks": 20,
+  "classes": {
+    "timeout": 328,
+    "target": 24,
+    "stop": 48
+  },
+  "metrics": {
+    "zero": {
+      "mae": "0.010860765925858522152466261414348522204737159825672662416893581129687326932707507",
+      "rmse": "0.014527185424364166522203908506186829818876921505284274901748559941865748566540399",
+      "coverage": 1.0
+    },
+    "training-mean": {
+      "mae": "0.011324206255552333693637706104353336336483307999085544119946454303843623174950769",
+      "rmse": "0.015522079433912456413645382286723362772047951866706649281359164784095250764297745",
+      "coverage": 1.0
+    },
+    "ridge-lambda10": {
+      "mae": "0.011385834622620302072035695653536389728136850049791796467381674881772173498296562",
+      "rmse": "0.015615004427642914734257992991959913916954069056564821606173672998364105625949511",
+      "coverage": 0.9975
+    }
+  },
+  "selected": "zero",
+  "opportunityClocks": 0,
+  "modelFileUnchanged": true,
+  "activeModelChanged": false,
+  "profitabilityEstablished": false,
+  "scope": "Independent original raw-page/80digitDecimal costed labels and saved-model forecasts/guards, MAE/RMSE/coverage/selection and fixed-margin clock ranking. Saved feature vectors rely on separately tested past-only feature pipeline; this audit does not independently reconstruct indicators.20sharedclocks, not1200independent observations; no executed portfolio return inferred."
+}

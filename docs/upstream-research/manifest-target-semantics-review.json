@@ -1,0 +1,22 @@
+{
+  "verifiedAt": "2026-11-01T14:11:07.350Z",
+  "files": [
+    {
+      "repo": "freqtrade",
+      "path": "freqtrade/templates/FreqaiExampleStrategy.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/templates/FreqaiExampleStrategy.py",
+      "sha256": "294f7e1e7fe912a3bf73a2cb4a2ecffe80cae6228a3d28fc5b78d3fb0731f8d5",
+      "bytes": 11534,
+      "verifiedSha256": "294f7e1e7fe912a3bf73a2cb4a2ecffe80cae6228a3d28fc5b78d3fb0731f8d5"
+    },
+    {
+      "repo": "jesse",
+      "path": "jesse/strategies/Strategy.py",
+      "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/strategies/Strategy.py",
+      "sha256": "e2f89664377714d87c5971fdfe13ad244845eda2e1daa449b8bf182de8e660ab",
+      "bytes": 75743,
+      "verifiedSha256": "e2f89664377714d87c5971fdfe13ad244845eda2e1daa449b8bf182de8e660ab"
+    }
+  ],
+  "directCodeCopied": false
+}

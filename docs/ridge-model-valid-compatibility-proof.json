@@ -1,0 +1,11 @@
+{
+  "verifiedAt": "2026-11-01T12:22:13.842Z",
+  "oldSourceHash": "ee115a1dea6c74fc3cbef193552f4b4226dbe40d519623a643fd983f77ac48b4",
+  "newSourceHash": "5a127d54bdf3faa0f8628bb6baecebc6947af1709c0353693c51e54793fef690",
+  "validDenseForecastsExactlyMatched": 120,
+  "accepted": 120,
+  "abstained": 0,
+  "comparisonDomain": "Original and new forecast functions transpiled from preserved/current own source; same valid synthetic fitted models and inputs. Existing tests separately cover malformed input abstention and numerical analytic solution.",
+  "economicImprovementClaim": false,
+  "newModelTrainedForDeployment": false
+}

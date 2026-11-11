@@ -1,0 +1,391 @@
+{
+  "verifiedAt": "2026-10-29T21:03:17.328Z",
+  "verifierHash": "5131058d1e492e637621443386b3803fb305ef3c993c0095c1e782388a751453",
+  "offlineArtifactComparison": true,
+  "cold": {
+    "verifiedAt": "2026-10-29T20:52:36.958Z",
+    "buildId": "0b9ed2e0c40eff0bec68b1e95b1443592e4dc6c6c0dd29005efc27b751f57a1f",
+    "captureHash": "ce63bb085791cc3a98a024bbd56de9ab49f10e6ef3e8ae9e368bd833cd29ec48",
+    "publicRequests": 263,
+    "historyRequests": 240
+  },
+  "warm": {
+    "verifiedAt": "2026-10-29T20:53:26.609Z",
+    "buildId": "0b9ed2e0c40eff0bec68b1e95b1443592e4dc6c6c0dd29005efc27b751f57a1f",
+    "captureHash": "7e1608a1991dcd3501e4ebbf9bcc7daa15ce7d04c97461bd7626543e5dfcccb7",
+    "publicRequests": 63,
+    "historyRequests": 40
+  },
+  "comparedSeries": 40,
+  "sameWindowSeries": 40,
+  "allOhlcvEqualSeries": 40,
+  "oldCacheEqualityVerifiedSeries": 40,
+  "coldOnlyPairs": [],
+  "warmOnlyPairs": [],
+  "series": [
+    {
+      "pair": "BTC/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "BTC/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "ETH/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "ETH/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "SOL/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "SOL/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "PEPE/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "PEPE/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "XRP/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "XRP/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "BNB/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "BNB/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "ADA/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "ADA/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "DOGE/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "DOGE/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "AVAX/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "AVAX/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "LINK/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "LINK/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "TRX/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "TRX/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "NEAR/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "NEAR/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "SUI/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "SUI/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "XLM/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "XLM/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "LTC/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "LTC/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "SHIB/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "SHIB/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "APT/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "APT/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "WIN/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "WIN/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "VET/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "VET/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "WLD/EUR",
+      "interval": 15,
+      "sameWindow": true,
+      "coldRows": 8639,
+      "warmRows": 8639,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    },
+    {
+      "pair": "WLD/EUR",
+      "interval": 60,
+      "sameWindow": true,
+      "coldRows": 2159,
+      "warmRows": 2159,
+      "allOhlcvEqual": true,
+      "olderCachedBarsEqual": true
+    }
+  ],
+  "privateExchangeCalls": 0,
+  "realOrders": 0,
+  "paidCalls": 0,
+  "profitabilityEstablished": false
+}

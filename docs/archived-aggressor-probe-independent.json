@@ -1,0 +1,17 @@
+{
+  "version": "archived-aggressor-probe-independent-v1",
+  "reportHash": "03bb845b2d122a80d8952286779eb09b4950e94cb03e37232162385bb234538a",
+  "reportFileSha256": "5b3c75ec4d57485dc19394d34f5e73fa4a5a4ff03b0a9328dde6d21d6016b5a7",
+  "verifierHash": "963f7a86ed7b3cc3e20eec0486dc3f2f0dc9618a7b5e8509f257e1d222d23870",
+  "sourcePages": 8,
+  "rawBarsChecked": 7488,
+  "windowBarReferencesChecked": 11904,
+  "featureRowsChecked": 124,
+  "precisionDigits": 60,
+  "maximumImbalanceDifference": 5.663872149064275e-16,
+  "allNormalizedOhlcvExact": true,
+  "availabilityDomainsSeparate": true,
+  "newNetworkRequests": 0,
+  "modelFitted": false,
+  "profitabilityEstablished": false
+}

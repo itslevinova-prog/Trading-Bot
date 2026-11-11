@@ -1,0 +1,20 @@
+{
+  "verifiedAt": "2026-11-02T17:26:17.518Z",
+  "source": "docs/upstream-research/freqtrade/source/freqtrade/freqai/data_kitchen.py",
+  "sha256": "00a0d1089dab1a8ae47ef5282ca6aa1c1fbb71cb95dc27193fee61c1d1bce82e",
+  "upstreamUrl": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/freqai/data_kitchen.py",
+  "sections": [
+    "make_train_test_datasets126..207",
+    "set_weights_higher_recent408..415"
+  ],
+  "example": {
+    "pooledRows": 560,
+    "rowsPerClock": 20,
+    "illustrativeWeightFactor": 1,
+    "weightFirstAssetAtLatestClock": 0.9666405479250688,
+    "weightLastAssetAtLatestClock": 1,
+    "ratioSameClock": 1.034510710466821,
+    "sameClockAssetsShouldNotHaveLexicalRecencyDifference": true
+  },
+  "scope": "Own mathematical illustration only. Upstream per-pair row weighting is not claimed defective; blindly importing ordinal weights into our pooled20asset corpus would introduce pair-order recency differences. No fitted weights/parameter selection/strategy change."
+}

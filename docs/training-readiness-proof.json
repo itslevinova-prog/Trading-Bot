@@ -1,0 +1,113 @@
+{
+  "recordedAt": "2026-10-31T22:56:27.265417+00:00",
+  "buildId": "dfd737f6e98ef5662435df17b823ec195248cd55f3dc38385633c7c4a32dcc58",
+  "mainTests": 1032,
+  "offlineTests": 15,
+  "targetedTests": 19,
+  "finalVerificationLog": "data/verify-training-final-2026-10-31.log",
+  "ridgeFreshness": "Research forecast requires valid past latest target and both fitted age and target age<=10days; refitting stale data cannot reset target clock. Original200row default retained.",
+  "newTrainingCapture": {
+    "verifiedAt": "2026-10-31T22:49:41.471Z",
+    "protocolHash": "f983c759ff02eb84d312d87051b56d978959973e7a25d7708d67446c802ca9e2",
+    "periods": [
+      {
+        "id": "2025-10",
+        "markets": 20,
+        "bars": 74880,
+        "complete": true,
+        "dataHash": "3b8515ca08310b4d6d6a271ba54b23a4ca0c2161d535669d24407a07b2b1fa80"
+      },
+      {
+        "id": "2025-11",
+        "markets": 20,
+        "bars": 72960,
+        "complete": true,
+        "dataHash": "f445128ba3ff681944b3967fddf566609ec35696b8c1828724e7bb30d29a79b9"
+      },
+      {
+        "id": "2025-12",
+        "markets": 20,
+        "bars": 74880,
+        "complete": true,
+        "dataHash": "fc88dc83de64f07e6601858ce7e940ef0e2ca1e4731d0fb352fae9dc90a62749"
+      },
+      {
+        "id": "2026-02",
+        "markets": 20,
+        "bars": 69120,
+        "complete": true,
+        "dataHash": "b918130a55fcc333027fd4c8a1346678ed6f2d49265cddd6a81a0a93f28f687c"
+      },
+      {
+        "id": "2026-03",
+        "markets": 20,
+        "bars": 74880,
+        "complete": true,
+        "dataHash": "c9fc9d6a8b40be25c640efd99c43bce8eca2946c6a2bb91e84a63e39fc26a9b1"
+      }
+    ],
+    "totalBars": 366720,
+    "publicRequestsReserved": 400,
+    "requestCap": 500,
+    "originalBudgetNotReset": 240,
+    "sourceBytesReconstructed": true,
+    "normalizedRowsEqualOriginalPages": true,
+    "completeFrozenUniverseEveryMonth": true,
+    "julyOutcomesEvaluated": false,
+    "modelTrained": false,
+    "captureRunnerHash": "7dc4c9d902a5d1c6fc397e7688d5d42cd7bfaf914fae23efe825b004ca893d3e",
+    "verifierHelperHash": "5266ec36b25ec3ebc45586dcd5acec1f182febee2ee8ed2e6eadd4e85f866001",
+    "note": "Additional registration guards were added to helper while capture was already running; actual pages independently revalidated using final full raw reconstruction. Helpers do not establish predictive intelligence or historical deployability."
+  },
+  "corpus": {
+    "path": "docs/policy-training-corpus-85f5e747b5597813.json",
+    "hash": "85f5e747b55978133361c7fa35a267b74d6635d9e40105ce23b750be6608bebd",
+    "buildId": "dfd737f6e98ef5662435df17b823ec195248cd55f3dc38385633c7c4a32dcc58"
+  },
+  "adequacy": {
+    "entries": 198,
+    "mature": 196,
+    "censored": 2,
+    "profit": 53,
+    "loss": 143,
+    "independentSamples": null,
+    "numericalMinimumMet": false
+  },
+  "sixMonthlyReturnPct": {
+    "2025-10": -3.2801199382230917,
+    "2025-11": -4.787414526429757,
+    "2025-12": -3.0908539604405094,
+    "2026-01": -3.0733853928499144,
+    "2026-02": -3.5165163607449257,
+    "2026-03": -0.633919600973798
+  },
+  "causalInputs": "Original accepted BUY context before fill observer; legacy21feature bid-relative spread schema explicit; all source clocks/capture hashes validated, paid roundtrip labels rebuilt from complete ledgers.",
+  "baselineJanuaryFullResultsMatched": true,
+  "newScope": "Fresh aggregate source scope includes all fixed month data hashes/build/source/constant costs and monthly reset convention; no old labels rewritten.",
+  "collectionScopeOnly": "Not a fitted predictor;200 is an engineering minimum, not statistical adequacy or independence. A separate concrete model/evaluation design may be pursued autonomously within existing goal.",
+  "julyRejectionLog": "data/training-july-rejection-2026-10-31.log",
+  "julyLoaded": false,
+  "deployed": false,
+  "frozenV3": {
+    "runId": "197a613c-3df9-4789-aa1c-424c3176bfc0",
+    "buildId": "cc12379e164c46d708a93bf730899eca00cbdc8378051ff580b05f49f03fc210",
+    "registeredRuns": 2,
+    "validMarks": 274,
+    "samplesIndependent": false,
+    "insufficientSample": true,
+    "currentMetrics": {
+      "asOf": 1793487199905,
+      "returnsPct": {
+        "ai": -0.1421061500000098,
+        "hold": -0.4167329416900012,
+        "rules": 0
+      },
+      "aiExcessVsRules": -0.1421061500000098,
+      "aiExcessVsHold": 0.2746267916899914
+    },
+    "proof": "data/verify-v3-after-training-2026-10-31.json"
+  },
+  "sourceReview": "docs/upstream-research/REVIEW-PASS13.md",
+  "profitabilityEstablished": false,
+  "totalActiveSeconds": 65320
+}

@@ -1,0 +1,37 @@
+{
+  "version": "barrier-clock-corpus-protocol-v1",
+  "registeredAt": "2026-11-01T14:17:12.950Z",
+  "runnerHash": "a6b01180b7fc56a6eb5b0adf429539b1f552d54e47326b8331ec72389d911d37",
+  "sources": {
+    "apps/server/src/research/first-barrier-outcome.ts": "7db6e08e50e224c2e33918b2d8ad4ecc00cfe351cf537c5284920d1bbcc65084",
+    "apps/server/dist/research/first-barrier-outcome.js": "19a6b692beb975a441bbb1a7cb6c0dfde00f708480b4a71b0e1c1a2347e4a858",
+    "apps/server/src/research/local-learning.ts": "5a127d54bdf3faa0f8628bb6baecebc6947af1709c0353693c51e54793fef690",
+    "apps/server/dist/research/local-learning.js": "eebd8828b1f64d20829eb8c8f9383bc99567aea8c5e34ae44d59c4a315af5e16"
+  },
+  "featureCorpus": "docs/fixed-target-observations-ba81ecdea43bae6d.json",
+  "featureCorpusHash": "ba81ecdea43bae6db3a5d31a941b8782e5fdacb9c1ec85f9d5db75d0befd03ee",
+  "periods": [
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03"
+  ],
+  "horizonBars": 32,
+  "strideBars": 48,
+  "entryLagBars": 1,
+  "stopLossPct": 0.02,
+  "takeProfitPct": 0.04,
+  "costs": {
+    "feeRate": 0.001,
+    "spreadBps": 10,
+    "slippageBps": 8
+  },
+  "geometryReason": "One fixed common target using existing schema floor/2R, not optimized or a claim of the best settings. Fixed percentages plus existing ATR input make volatility scale explicit without mixing entry-dependent targets.",
+  "selection": "All previously verified feature-eligible complete-path grid rows; never filter by policy entry, realized return or barrier class",
+  "ambiguity": "Preserve ambiguous and null-payoff rows, no fabricated tie break",
+  "modelFitted": false,
+  "newNetworkData": false,
+  "julyLoaded": false
+}

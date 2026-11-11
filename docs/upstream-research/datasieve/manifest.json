@@ -1,0 +1,36 @@
+{
+  "repository": "https://github.com/emergentmethods/datasieve",
+  "tag": "v0.1.9",
+  "commit": "93669d0415e496de388542fae5f252f9aecf7c03",
+  "selectedAt": "2026-11-02T20:59:10.313Z",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/emergentmethods/datasieve/93669d0415e496de388542fae5f252f9aecf7c03/LICENSE",
+      "local": "docs/upstream-research/datasieve/source/LICENSE",
+      "sha256": "3aff275a39e2a9176fe0cdeb1d116c967bdc81b952f9f7e02f3d2f1fb3a6f4f7",
+      "bytes": 1059
+    },
+    {
+      "path": "datasieve/pipeline.py",
+      "url": "https://raw.githubusercontent.com/emergentmethods/datasieve/93669d0415e496de388542fae5f252f9aecf7c03/datasieve/pipeline.py",
+      "local": "docs/upstream-research/datasieve/source/datasieve/pipeline.py",
+      "sha256": "5a4697f95198b260f1675ba8aa1c87db06435667a9f5699a805056361ce3dd35",
+      "bytes": 8702
+    },
+    {
+      "path": "datasieve/transforms/sklearn_wrapper.py",
+      "url": "https://raw.githubusercontent.com/emergentmethods/datasieve/93669d0415e496de388542fae5f252f9aecf7c03/datasieve/transforms/sklearn_wrapper.py",
+      "local": "docs/upstream-research/datasieve/source/datasieve/transforms/sklearn_wrapper.py",
+      "sha256": "7721426ff82390676c6268fd70c467d5137fc77c5b8ccba490d6b40ef7f4cce6",
+      "bytes": 1491
+    },
+    {
+      "path": "datasieve/transforms/dissimilarity_index.py",
+      "url": "https://raw.githubusercontent.com/emergentmethods/datasieve/93669d0415e496de388542fae5f252f9aecf7c03/datasieve/transforms/dissimilarity_index.py",
+      "local": "docs/upstream-research/datasieve/source/datasieve/transforms/dissimilarity_index.py",
+      "sha256": "09784643059fc8763b059649541f9368b58bf2e7d96704b3aeb0692055e053ff",
+      "bytes": 2748
+    }
+  ]
+}

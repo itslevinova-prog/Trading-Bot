@@ -1,0 +1,25 @@
+{
+  "version": "early-may-fit-independent-v1",
+  "verifiedAt": "2026-11-03T20:41:30.982046+00:00",
+  "report": {
+    "path": "docs/early-may-frozen-models-460f53edb54ffb46.json",
+    "hash": "460f53edb54ffb46c29832db61b606e80233cc2b7b96ca17e93c399ed45d17e6"
+  },
+  "reportFileSha256": "ed66f1f45845680602becf3c7a633507a2bd174a42e886257b4111d5d1a799fa",
+  "verifierSha256": "72f941a08639016ce12b43f9f331f72efea276095d83defe01f4fcd5564b73b9",
+  "trainingRows": 8479,
+  "ambiguousRowsExcluded": 1,
+  "sharedClocks": 424,
+  "parametersReconstructed": 25,
+  "precisionDigits": 80,
+  "maxAbsoluteErrors": {
+    "means": "2.43029732279749970515390965915791956598655501828045760113220898691E-15",
+    "stds": "7.4780570584340289712130157418904014721591443375761228239249299311E-14",
+    "weights": "7.38199759638114814966502222976197894227699198607336430580540899683E-17",
+    "intercept": "5.07325020639226323858945630380941148720367967920745370916381648779E-17"
+  },
+  "mayFeaturesOrLabelsRead": false,
+  "activeModelChanged": false,
+  "profitabilityEstablished": false,
+  "scope": "Independent population scaling,mean target,8x8lambda10normal equations and partial-pivot solution reconstructed from strictly mature training rows. In-sample parameter agreement is not prediction validation or trading performance."
+}

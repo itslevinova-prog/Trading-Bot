@@ -1,0 +1,382 @@
+{
+  "version": "actual-public-ws-capture-audit-v1",
+  "auditedAt": "2026-11-03T17:29:50.420Z",
+  "runnerHash": "02a2d38bbb5c26ec92cc28ed463dd1ae9f851cc46d7e3fc525b1d2c787b1c66d",
+  "captureFile": "C:\\Users\\user\\Documents\\Projekte\\Buisness\\New_Trading_AI\\kraken-paper-bot\\data\\public-ws-activity\\binance-EUR.db",
+  "activeSession": {
+    "buildId": "3b92fac27a6e17577dfdf400e0c75f44d62a870b9d106514b3cbf0405c086792",
+    "id": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+    "kind": "public-ws",
+    "producer": "binance-market-observer-v1",
+    "quote": "EUR",
+    "runId": "f43665df-20ab-4e12-8f6f-1ae71d74f49f",
+    "startedAt": 1793726284002,
+    "transport": "wss://data-stream.binance.vision/stream",
+    "version": "ws-capture-session-v1"
+  },
+  "total": {
+    "n": 0,
+    "firstAt": null,
+    "lastAt": null
+  },
+  "perPair": [],
+  "rawSampleLimit": 384,
+  "rawRowsChecked": 0,
+  "usedCaptureSessionsChecked": 0,
+  "sourceRows": [],
+  "marketWindows": [
+    {
+      "pair": "ADA/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "APT/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "AVAX/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "BCH/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "BNB/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "BTC/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "DOGE/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "ETH/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "LINK/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "LTC/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "NEAR/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "PEPE/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "POL/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "SHIB/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "SOL/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "SUI/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "TRX/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "WIN/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "XLM/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "XRP/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    }
+  ],
+  "windowCounts": {
+    "h1": 0,
+    "h4": 0,
+    "h24": 0
+  },
+  "state": "enabled-awaiting-first-native-final-message",
+  "extraMarketRequestsIntroduced": 0,
+  "modelCalls": 0,
+  "realOrders": 0,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "scope": "Read-only audit of controller-owned actual main public WS journal and its captured deployment identities. Only latest384rawrecords checked if larger; totalrowcountisnotanindependentsample/trade/profitcount. Incompletecurrentwindowsremainunknown; no firstreceiptbackfill or model/riskchange.",
+  "factsHash": "4d3d6666b0a5bf310beb939200b3664f418dff6314f552f99909e352a5d6107d"
+}

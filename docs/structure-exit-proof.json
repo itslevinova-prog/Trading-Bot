@@ -1,0 +1,227 @@
+{
+  "verifiedAt": "2026-10-31T17:23:27.337575+00:00",
+  "fullTests": 836,
+  "offlineTests": 15,
+  "newTests": 16,
+  "typechecksAndBuildPassed": true,
+  "buildId": "38b76f73093d0b5ab8975f859a671a24fc316c93f0697f83eebde0c9c57b8886",
+  "repeatIdenticalStudy": {
+    "path": "docs/structure-exit-study-5e7a4bf0170e6610.json",
+    "reportHash": "5e7a4bf0170e66101ad724fac8cafb79d73c82efa3484c3bef10297a9936dc99",
+    "protocolHash": "7895a79827fddb03a70d0994768aaa3f522d6813d45b9cbb1b8840d572f1530d",
+    "buildId": "38b76f73093d0b5ab8975f859a671a24fc316c93f0697f83eebde0c9c57b8886",
+    "profitabilityEstablished": false
+  },
+  "previousCovarianceRuntimeDelta": [
+    "apps/server/dist/strategy/covariance-paper.js"
+  ],
+  "deltaReversiblyUtf8ExplanationOnly": true,
+  "mainOriginal92RuntimeModulesUnchanged": true,
+  "mainNoRestartOrConfigChange": true,
+  "mainConnected": true,
+  "mainPaperOnly": true,
+  "mainAIEnabled": false,
+  "mainRemoteEnabled": false,
+  "pairs": 20,
+  "features": 20,
+  "newCandidateDefaultEnabled": false,
+  "profitabilityEstablished": false,
+  "independentOutOfSample": false,
+  "scenarioSummary": [
+    {
+      "scenario": "base",
+      "sharedDecisionTimes": 2593,
+      "sharedExogenousMismatches": 0,
+      "variants": [
+        {
+          "name": "covariance-v1",
+          "summary": {
+            "returnPct": -3.0478287773227364,
+            "maxDrawdownPct": 3.2657779031248197,
+            "closedTrades": 39,
+            "fees": 10.234482725329237,
+            "winRatePct": 15.384615384615385,
+            "profitFactor": 0.5714636021090858,
+            "meanNetPnl": -0.7814945582878684,
+            "sameFillDoubleFeeReturnPct": -4.07127704985566,
+            "sameFillFeeStressIsAlgebraOnly": true,
+            "weeklyCarrySlices": [
+              {
+                "from": 1790883000000,
+                "to": 1791487800000,
+                "returnPct": -1.1911009351747492,
+                "positionsCarryAcrossBoundaries": true
+              },
+              {
+                "from": 1791487800000,
+                "to": 1792092600000,
+                "returnPct": -0.36236938243371375,
+                "positionsCarryAcrossBoundaries": true
+              },
+              {
+                "from": 1792092600000,
+                "to": 1792697400000,
+                "returnPct": -0.9029714098435337,
+                "positionsCarryAcrossBoundaries": true
+              },
+              {
+                "from": 1792697400000,
+                "to": 1793216700000,
+                "returnPct": -0.6249282618312035,
+                "positionsCarryAcrossBoundaries": true
+              }
+            ]
+          },
+          "proposed": 0,
+          "executed": 0
+        },
+        {
+          "name": "structure-exit-v1",
+          "summary": {
+            "returnPct": -1.8879906204267605,
+            "maxDrawdownPct": 2.9416683811296713,
+            "closedTrades": 42,
+            "fees": 11.422114771548951,
+            "winRatePct": 23.809523809523807,
+            "profitFactor": 0.6627688398069006,
+            "meanNetPnl": -0.4495215762920764,
+            "sameFillDoubleFeeReturnPct": -3.0302020975816557,
+            "sameFillFeeStressIsAlgebraOnly": true,
+            "weeklyCarrySlices": [
+              {
+                "from": 1790883000000,
+                "to": 1791487800000,
+                "returnPct": 0.2668022788531843,
+                "positionsCarryAcrossBoundaries": true
+              },
+              {
+                "from": 1791487800000,
+                "to": 1792092600000,
+                "returnPct": 0.05052042673558965,
+                "positionsCarryAcrossBoundaries": true
+              },
+              {
+                "from": 1792092600000,
+                "to": 1792697400000,
+                "returnPct": -1.0795275223630552,
+                "positionsCarryAcrossBoundaries": true
+              },
+              {
+                "from": 1792697400000,
+                "to": 1793216700000,
+                "returnPct": -1.1311524914276672,
+                "positionsCarryAcrossBoundaries": true
+              }
+            ]
+          },
+          "proposed": 27,
+          "executed": 27
+        }
+      ]
+    },
+    {
+      "scenario": "double-fee-adaptive",
+      "sharedDecisionTimes": 2593,
+      "sharedExogenousMismatches": 0,
+      "variants": [
+        {
+          "name": "covariance-v1",
+          "summary": {
+            "returnPct": 0.3110021169693944,
+            "maxDrawdownPct": 0.8468544433218881,
+            "closedTrades": 3,
+            "fees": 1.7973677872351488,
+            "winRatePct": 33.33333333333333,
+            "profitFactor": 1.3086962203147274,
+            "meanNetPnl": 1.0366737232313217,
+            "sameFillDoubleFeeReturnPct": 0.13126533824587952,
+            "sameFillFeeStressIsAlgebraOnly": true,
+            "weeklyCarrySlices": [
+              {
+                "from": 1790883000000,
+                "to": 1791487800000,
+                "returnPct": 0.7978781149102554,
+                "positionsCarryAcrossBoundaries": true
+              },
+              {
+                "from": 1791487800000,
+                "to": 1792092600000,
+                "returnPct": -0.48302207054976565,
+                "positionsCarryAcrossBoundaries": true
+              },
+              {
+                "from": 1792092600000,
+                "to": 1792697400000,
+                "returnPct": 0,
+                "positionsCarryAcrossBoundaries": true
+              },
+              {
+                "from": 1792697400000,
+                "to": 1793216700000,
+                "returnPct": 0,
+                "positionsCarryAcrossBoundaries": true
+              }
+            ]
+          },
+          "proposed": 0,
+          "executed": 0
+        },
+        {
+          "name": "structure-exit-v1",
+          "summary": {
+            "returnPct": 0.3110021169693944,
+            "maxDrawdownPct": 0.8468544433218881,
+            "closedTrades": 3,
+            "fees": 1.7973677872351488,
+            "winRatePct": 33.33333333333333,
+            "profitFactor": 1.3086962203147274,
+            "meanNetPnl": 1.0366737232313217,
+            "sameFillDoubleFeeReturnPct": 0.13126533824587952,
+            "sameFillFeeStressIsAlgebraOnly": true,
+            "weeklyCarrySlices": [
+              {
+                "from": 1790883000000,
+                "to": 1791487800000,
+                "returnPct": 0.7978781149102554,
+                "positionsCarryAcrossBoundaries": true
+              },
+              {
+                "from": 1791487800000,
+                "to": 1792092600000,
+                "returnPct": -0.48302207054976565,
+                "positionsCarryAcrossBoundaries": true
+              },
+              {
+                "from": 1792092600000,
+                "to": 1792697400000,
+                "returnPct": 0,
+                "positionsCarryAcrossBoundaries": true
+              },
+              {
+                "from": 1792697400000,
+                "to": 1793216700000,
+                "returnPct": 0,
+                "positionsCarryAcrossBoundaries": true
+              }
+            ]
+          },
+          "proposed": 0,
+          "executed": 0
+        }
+      ]
+    }
+  ],
+  "files": {
+    "apps/server/src/strategy/structure-exit-paper.ts": "a930b6676bab40c75a3ab399e3ccb9387df6b70671ffd882d833066a83d10313",
+    "apps/server/src/strategy/covariance-paper.ts": "a03a86fa0d3ccdbd393c1d748e1595b4ea450ff375d158b5e491c151b33569a4",
+    "apps/server/test/structure-exit-paper.test.ts": "afc3702c3e60183ee9a71fe661968a7e614b9939421e46b467cc56797c37bc5e",
+    "scripts/compare-structure-exit.mjs": "d8b48a53038ba9868a3860ffa79af367c53ce0b285e34edc7d1588cd8ba41659",
+    "docs/structure-exit-protocol-v1.json": "7895a79827fddb03a70d0994768aaa3f522d6813d45b9cbb1b8840d572f1530d",
+    "docs/upstream-research/freqtrade/manifest-exit-review.json": "2e64e6cf7f38c3d714d1bde2fda874d57fc2b430bf524dbc62884c4d5e0c54e5",
+    "data/verify-structure-exit-final-2026-10-31.log": "7dff4051b89f546cb2f663318251f4dbf21d1439962746484bdbcc5aac948f7e",
+    "data/compare-structure-exit-2026-10-31.log": "ce6126f68c1551c5dbe300f00b7191494e6d79ac0c447f4ec8e6c7ef13fe37d2",
+    "data/compare-structure-exit-repeat-2026-10-31.log": "ce6126f68c1551c5dbe300f00b7191494e6d79ac0c447f4ec8e6c7ef13fe37d2",
+    "docs/STRUCTURE-EXITS.md": "70aeaf09e5b8c9aab109d97dfcafe85c3c980f2d267ed07c2befb7ff8d49b04b",
+    "docs/upstream-research/REVIEW-PASS7.md": "2e6b3a888535db30957778f2e40e0ef94b52ca0f65d3e67455a3831174da2b36"
+  }
+}

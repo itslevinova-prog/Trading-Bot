@@ -1,0 +1,14 @@
+[
+  {
+    "path": "packages/evaluators/octobot_evaluators/evaluators/strategy_evaluator.py",
+    "url": "https://raw.githubusercontent.com/Drakkar-Software/OctoBot/c45fdc2c95c5bd3d649251fa90c327e2e8f86b00/packages/evaluators/octobot_evaluators/evaluators/strategy_evaluator.py",
+    "sha256": "44b7c3cc5dfa5225543e13be2242aea782ae977c2c94e5fbc73a2fd82f9ff492",
+    "bytes": 26708
+  },
+  {
+    "path": "packages/evaluators/octobot_evaluators/evaluators/TA_evaluator.py",
+    "url": "https://raw.githubusercontent.com/Drakkar-Software/OctoBot/c45fdc2c95c5bd3d649251fa90c327e2e8f86b00/packages/evaluators/octobot_evaluators/evaluators/TA_evaluator.py",
+    "sha256": "5e4ca7c85ce9b3728dc59d375633af58e4c547c5b634f5d64d22ffd6c9e79dce",
+    "bytes": 7515
+  }
+]

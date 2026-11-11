@@ -1,0 +1,28 @@
+{
+  "version": "missingness-mask-illustration-v1",
+  "sourceManifest": "docs/upstream-research/manifest-mask-dependency-review.json",
+  "sourceManifestHash": "a46351609255498f81755b6b47dc439c8b2a307ffec29150f9903c176621b406",
+  "initialSourceValidity": [
+    0,
+    1
+  ],
+  "defaultPipelineInliers": [
+    1,
+    1
+  ],
+  "overwriteResult": [
+    1,
+    1
+  ],
+  "requiredIntersection": [
+    0,
+    1
+  ],
+  "syntheticLogicOnly": true,
+  "upstreamExecuted": false,
+  "wholeStackDefectReproduced": false,
+  "localHistoricalSourceMissingnessProof": "docs/aggressor-ridge-verification.json",
+  "localExplicitMissingRawQueries": 32,
+  "localSourceMissingTestRows": 8,
+  "profitabilityEstablished": false
+}

@@ -1,0 +1,724 @@
+{
+  "version": "actual-public-ws-capture-audit-v1",
+  "auditedAt": "2026-11-03T17:30:08.537Z",
+  "runnerHash": "02a2d38bbb5c26ec92cc28ed463dd1ae9f851cc46d7e3fc525b1d2c787b1c66d",
+  "captureFile": "C:\\Users\\user\\Documents\\Projekte\\Buisness\\New_Trading_AI\\kraken-paper-bot\\data\\public-ws-activity\\binance-EUR.db",
+  "activeSession": {
+    "buildId": "3b92fac27a6e17577dfdf400e0c75f44d62a870b9d106514b3cbf0405c086792",
+    "id": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+    "kind": "public-ws",
+    "producer": "binance-market-observer-v1",
+    "quote": "EUR",
+    "runId": "f43665df-20ab-4e12-8f6f-1ae71d74f49f",
+    "startedAt": 1793726284002,
+    "transport": "wss://data-stream.binance.vision/stream",
+    "version": "ws-capture-session-v1"
+  },
+  "total": {
+    "n": 20,
+    "firstAt": 1793726998949,
+    "lastAt": 1793726999110
+  },
+  "perPair": [
+    {
+      "pair": "ADA/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    },
+    {
+      "pair": "APT/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    },
+    {
+      "pair": "AVAX/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    },
+    {
+      "pair": "BCH/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    },
+    {
+      "pair": "BNB/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    },
+    {
+      "pair": "BTC/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    },
+    {
+      "pair": "DOGE/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    },
+    {
+      "pair": "ETH/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    },
+    {
+      "pair": "LINK/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    },
+    {
+      "pair": "LTC/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    },
+    {
+      "pair": "NEAR/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    },
+    {
+      "pair": "PEPE/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    },
+    {
+      "pair": "POL/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    },
+    {
+      "pair": "SHIB/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    },
+    {
+      "pair": "SOL/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    },
+    {
+      "pair": "SUI/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    },
+    {
+      "pair": "TRX/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    },
+    {
+      "pair": "WIN/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    },
+    {
+      "pair": "XLM/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    },
+    {
+      "pair": "XRP/EUR",
+      "n": 1,
+      "lastOpenAt": 1793726100000
+    }
+  ],
+  "rawSampleLimit": 384,
+  "rawRowsChecked": 20,
+  "usedCaptureSessionsChecked": 1,
+  "sourceRows": [
+    {
+      "id": "cb47fad99ebcb3e911a36ff9bacd2b7f889d78f5df37064cf8d5e1c25278f844",
+      "pair": "DOGE/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999110,
+      "eventAt": 1793727000100,
+      "availableAfter": 1793727000100,
+      "rawHash": "6bcc6b2833fb7c204bf6a23919a8a8be6ff3342ffd46d2b75a4ce4574f011515",
+      "barFactsHash": "2e7bfbcf9cf3bb11755a0927816bd6e5d8916bc87e04bd0f1c37074ff0560084",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "5bb8f80f22c1f61cb5d655e77fef1727fdb45b1231ec6dec4f431e591b57d879",
+      "pair": "SOL/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999091,
+      "eventAt": 1793727000098,
+      "availableAfter": 1793727000098,
+      "rawHash": "00711d61d622f0880f25782ca193e76aea4b472f71e6a752732d7071297c759f",
+      "barFactsHash": "0ff5f38a78afa195e8356dcf04514ec0a03c921986d21f876dc68814025e15d2",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "d68f0f7396b39f605adb8ac15e3e0a652e7872866075803c8246e7da9713d5ca",
+      "pair": "PEPE/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999089,
+      "eventAt": 1793727000098,
+      "availableAfter": 1793727000098,
+      "rawHash": "89441390fa8bdbb2baae3ff52873b55fa503b508df5ed09a6da96596f9a827a2",
+      "barFactsHash": "9e4ac8a4b87e99a9df870a65b83c0406a35df315165684340e3932c4c6e259c9",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "ecf5bbeb4fd7cef87f97017ac0ec053e8f33d38c1e4fd8641268d0ebdbed9b73",
+      "pair": "ADA/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999081,
+      "eventAt": 1793727000097,
+      "availableAfter": 1793727000097,
+      "rawHash": "d74e594cf196e589f87796534aeec280fc012e6bbb9129eb443071b328949e34",
+      "barFactsHash": "e4302ea676734723d97b8ea6c0d146dcef201d1c5a47bcbadf3a5bd093a2d3d1",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "014a2ead8c058389395a78acb8b7cd2d84dbf89e1da86da6bc84875e7a9ceccf",
+      "pair": "LTC/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999069,
+      "eventAt": 1793727000096,
+      "availableAfter": 1793727000096,
+      "rawHash": "4924a994dae915e7ff5cbcdd3c539e6a5b1eb9b05fdb97302fb64147ff4a6bc5",
+      "barFactsHash": "1d357b026c54bc4b6607fde8a31e8b3181a7affed076c8fc8cdffe29c4171a65",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "ec23d5fe170231c8a61ba7781b231aa41227e66f9f08b987c8aef217996785f1",
+      "pair": "POL/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999067,
+      "eventAt": 1793727000096,
+      "availableAfter": 1793727000096,
+      "rawHash": "5eda7f153349f94ec4ccb8fe60fc1c17ebc3be588e4ff83d4e03cdf988c9ec7e",
+      "barFactsHash": "dae24c38e36b0cdb182df9921282becaee3218d672caf067e52067190199624d",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "4c4ce1f38280bab5cb3de3e7572f08675f1a39411d8b285e33b8abda0d28b61d",
+      "pair": "AVAX/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999041,
+      "eventAt": 1793727000054,
+      "availableAfter": 1793727000054,
+      "rawHash": "c17842783e069b0b72b328ba2131a143159e97f04402efa604794907cdc1c903",
+      "barFactsHash": "0af7eb2ef36b629dca1c68bf91dc9cee700681317f1be41967b0b980fdaf7343",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "6c80a8d1c2fce6ec819883185d37b73afa469b99d62c5c6954e5e2149b56a265",
+      "pair": "SHIB/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999039,
+      "eventAt": 1793727000054,
+      "availableAfter": 1793727000054,
+      "rawHash": "cb526073a59266e355d95bedc9b0e1d203d57ef7fa28caa013f27f0c521185c0",
+      "barFactsHash": "60d873a7ce9e2752b7c280cfb7c02da5ced36afa24d2bfa6fc229f2b06ac78d8",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "87a738f1ef90adf7f1f8fa8b4b799bcf4e30fc633dc12640158ea24a6d99ae25",
+      "pair": "APT/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999035,
+      "eventAt": 1793727000054,
+      "availableAfter": 1793727000054,
+      "rawHash": "56253e51d7d935c8f7ac33e08c88ae9aed8420e7712e8889250ba9b6b36e0cc7",
+      "barFactsHash": "cf1a540e9ba2b744d933864130b4215e1f99652d78202c838c70947fcf8e7048",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "b50b4ebe72aa1e84f2a5c8f1c13a326a42f3efe6521ef97a9ed5b7a30861a5af",
+      "pair": "SUI/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999021,
+      "eventAt": 1793727000052,
+      "availableAfter": 1793727000052,
+      "rawHash": "7c7fdd04b90b28b77acde793dc773878618077b9f19b00306f537bc81b537f13",
+      "barFactsHash": "d95845f149d8d0381d258d7aabd17a6ff92951fac322d84152eb374d3362b5a6",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "f3e7e8762259cdff4420e9381557f42081955085e83ae2202fc0cb7dc8238398",
+      "pair": "TRX/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999018,
+      "eventAt": 1793727000052,
+      "availableAfter": 1793727000052,
+      "rawHash": "c0a642c0d3563b1552d37c3a246bf0c090e852c56e7c1019e9b1e541cc941a7e",
+      "barFactsHash": "506bf9ff2ce362a706c77a8f1a27b594b871edb3e34298cd53775863773bb19f",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "2ab0fcac44938d2a9a22894306954c5d9014717ee02bfc7ed03c62d05c4968bd",
+      "pair": "LINK/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999011,
+      "eventAt": 1793727000045,
+      "availableAfter": 1793727000045,
+      "rawHash": "8ca8a4ab14a75789953398ed2e80fe42300be57b60fc40c3e7a55db1e88dfe5c",
+      "barFactsHash": "ac40cdf2cb04b88287b3be94bb87e68d176ac756a09cad4694dd91bec7c57cfa",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "0f3c56680f8d497b4009274256c506d9c3057d86583cfa37af46036854929d9c",
+      "pair": "XLM/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726998994,
+      "eventAt": 1793727000043,
+      "availableAfter": 1793727000043,
+      "rawHash": "ce728b9a759c16449204a2e91aeaef877470bfbcc3625b42c491477c5a1fb0a3",
+      "barFactsHash": "a7a0d27678d84ff52fdddb9a2e1ec0febc5ab9cebd87eb4c300fe5e88e6c20e7",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "dbfd209c548ef6166d625d97a2a2e3c5d6a22b9b0e0ddf4d981ff517f1061157",
+      "pair": "XRP/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726998963,
+      "eventAt": 1793727000040,
+      "availableAfter": 1793727000040,
+      "rawHash": "0e0d7d41c77800feea3f35bc35682ccbc2ed409b3e9cba2698c626f49ecfd042",
+      "barFactsHash": "be89017487b203193d54cc4527cb6b61db986a48962b50fe555eca82c9a6fb9a",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "02232d8cb9e4cf64a0ca6f3ba1989148509eccf10f64ce4e2c39ae95ff364a5d",
+      "pair": "BNB/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726998961,
+      "eventAt": 1793727000040,
+      "availableAfter": 1793727000040,
+      "rawHash": "8115f0a4392de5cbbd989b6956e64951c9af1e80f41f836f42dfebde204c61c4",
+      "barFactsHash": "61b5bbf69e2de548c3fb2b09e5cd3f9d828620aba996e654cc133a2fd8995780",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "56feb4cdd1307e107261fd348089700f50dc24f6e6257417aa9fde9ea9abcf93",
+      "pair": "BCH/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726998959,
+      "eventAt": 1793727000040,
+      "availableAfter": 1793727000040,
+      "rawHash": "70c638779398cc79bd223be98e239017f08134fdc1f840ae486643a2e890bff9",
+      "barFactsHash": "a9e6228fa0f38ca4707ef854001f1be33178699eada1630445982bed17eacd65",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "79d61fff8137cae52d7e6471e7bf801676b5714ccdd84233a3758ddd42d42ca5",
+      "pair": "ETH/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726998957,
+      "eventAt": 1793727000040,
+      "availableAfter": 1793727000040,
+      "rawHash": "7b5728399cfe75ad212c8f9e319cbc85183e10d2edca47cd3085b0306fc4cff4",
+      "barFactsHash": "2d57f64f08fd75e6aa31955378b67d26f76eb7bb6aa91d2d1d9d33a2399a17bc",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "32b9e04d24db418f9f05825d813729624f09460870c7bbcc8e72edaa35619591",
+      "pair": "BTC/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726998954,
+      "eventAt": 1793727000039,
+      "availableAfter": 1793727000039,
+      "rawHash": "9efdfa959fef2b38285ddf1367339572a2c289ec34388a66f0a0bc5dba718df2",
+      "barFactsHash": "e5383661e4efd7e1afb5f95f07c4c6bbde644ac90883d405a6ab3f77f8f13a44",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "70205e38979b10234d6dcd7363a8dcdf5293185fca76e8a983a85a491973deba",
+      "pair": "WIN/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726998952,
+      "eventAt": 1793727000039,
+      "availableAfter": 1793727000039,
+      "rawHash": "f83b5486e4dcc9be3245645181adc22e01776c6077ecb41ee185bd5fd5139674",
+      "barFactsHash": "6a8848b7d7e47166e7173915125b5fa864c1a592b4bb9a6cd9f82b39b00362c2",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "a3dacf12aca18c17015bcbf3b9362f76475e948833692b490ddae89a5943bae0",
+      "pair": "NEAR/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726998949,
+      "eventAt": 1793727000039,
+      "availableAfter": 1793727000039,
+      "rawHash": "ce2f024209bcf4d12b3ef84d5327dcf7a30a592e07466da80544eebfa53d8587",
+      "barFactsHash": "6f30c9d03e53b40d8ff216d733e604462721434c649cc54963251d994b3ddfac",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    }
+  ],
+  "marketWindows": [
+    {
+      "pair": "ADA/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "APT/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "AVAX/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "BCH/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "BNB/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "BTC/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "DOGE/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "ETH/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "LINK/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "LTC/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "NEAR/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "PEPE/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "POL/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "SHIB/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "SOL/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "SUI/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "TRX/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "WIN/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "XLM/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "XRP/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    }
+  ],
+  "windowCounts": {
+    "h1": 0,
+    "h4": 0,
+    "h24": 0
+  },
+  "state": "actual-source-observations-present",
+  "extraMarketRequestsIntroduced": 0,
+  "modelCalls": 0,
+  "realOrders": 0,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "scope": "Read-only audit of controller-owned actual main public WS journal and its captured deployment identities. Only latest384rawrecords checked if larger; totalrowcountisnotanindependentsample/trade/profitcount. Incompletecurrentwindowsremainunknown; no firstreceiptbackfill or model/riskchange.",
+  "factsHash": "5f2af439db5cc3c8166580133b47491fd3d5e9d28eb83e53bd93c68e6a75c810"
+}

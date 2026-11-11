@@ -1,0 +1,16 @@
+{
+  "version": "fixed-target-learning-design-v1",
+  "registeredAt": "2026-11-01T12:55:53.491795+00:00",
+  "reason": "Verified selected-trade holding median405minutes differs from legacy4h target. Make target/schema/data scope explicit before any further model study. This is not evidence8h is profitable.",
+  "target": "Gross close/open return fraction at exactly8hours after a15minute-delayed entry, fixed12hUTCstride. No variable-horizon policyPnL claim.",
+  "matchedReference": "If evaluated, fixed4h target on the same12hdecision clock and data/common available anchors, reported separately; no horizon selected from test results.",
+  "features": "Existing8D vector, exactly closed source data, at most750M15/H1 rows matching runtime seeding. Unknown paths omitted, never repaired.",
+  "learningContract": "Model and every training observation bound to target/stride/lag/feature schema/data scope; mixed or mismatched target must reject/abstain. Fit only strictly matured outcomes.",
+  "legacy": "Preserve legacy4h6h builder/diagnostic unchanged; new8h rows must not pass legacy fixed-horizon diagnostic.",
+  "inference": "Own local numerical ridge only, no provider integration or activation; predictions remain uncalibrated gross-return estimates, not win probabilities.",
+  "evaluation": "Future study requires separate frozen runner/data/cost/fold protocol before outcomes, train-only transforms, chronological purges and complete realistic portfolio comparison before promotion.",
+  "julyOutcomesLocked": true,
+  "modelActivated": false,
+  "externalAiCalls": 0,
+  "paidCalls": 0
+}

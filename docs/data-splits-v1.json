@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "created_at": "2026-11-05",
+  "immutable": true,
+  "note": "unveränderlich – keine nachträgliche Anpassung der Zeitfenster anhand von Ergebnissen",
+  "timezone": "UTC",
+  "development": {
+    "start": "2020-01-01",
+    "end": "2023-12-31"
+  },
+  "validation": {
+    "start": "2024-01-01",
+    "end": "2024-12-31"
+  },
+  "holdout": {
+    "start": "2025-01-01",
+    "end": null
+  },
+  "rules": {
+    "validation": "Zugriffe werden protokolliert.",
+    "holdout": "Zugriff nur mit explizitem allowHoldout.reason und Audit-Log data/archive/holdout-access.log.",
+    "candle_interval": "UTC, [fromMs,toMs), nur geschlossene Kerzen, fehlende Kerzen nicht synthetisieren."
+  }
+}

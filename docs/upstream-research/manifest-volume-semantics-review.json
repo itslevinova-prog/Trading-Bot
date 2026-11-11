@@ -1,0 +1,57 @@
+{
+  "reviewedAt": "2026-11-02T19:26:13.423Z",
+  "files": [
+    {
+      "path": "packages/tentacles/Evaluator/TA/trend_evaluator/trend.py",
+      "url": "https://raw.githubusercontent.com/Drakkar-Software/OctoBot/c45fdc2c95c5bd3d649251fa90c327e2e8f86b00/packages/tentacles/Evaluator/TA/trend_evaluator/trend.py",
+      "sha256": "b97cd8c4f9805ff93e7187e8b8f05b6376b3a0432a6b23753270c8c697d23f3c",
+      "bytes": 19246,
+      "local": "docs/upstream-research/OctoBot/source/packages/tentacles/Evaluator/TA/trend_evaluator/trend.py"
+    },
+    {
+      "path": "packages/evaluators/octobot_evaluators/evaluators/TA_evaluator.py",
+      "url": "https://raw.githubusercontent.com/Drakkar-Software/OctoBot/c45fdc2c95c5bd3d649251fa90c327e2e8f86b00/packages/evaluators/octobot_evaluators/evaluators/TA_evaluator.py",
+      "sha256": "5e4ca7c85ce9b3728dc59d375633af58e4c547c5b634f5d64d22ffd6c9e79dce",
+      "bytes": 7515,
+      "local": "docs/upstream-research/OctoBot/source/packages/evaluators/octobot_evaluators/evaluators/TA_evaluator.py"
+    },
+    {
+      "path": "freqtrade/templates/FreqaiExampleStrategy.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/templates/FreqaiExampleStrategy.py",
+      "sha256": "294f7e1e7fe912a3bf73a2cb4a2ecffe80cae6228a3d28fc5b78d3fb0731f8d5",
+      "bytes": 11534,
+      "local": "docs/upstream-research/freqtrade/source/freqtrade/templates/FreqaiExampleStrategy.py"
+    }
+  ],
+  "sections": [
+    "OctoBot DeathAndGoldenCrossEvaluator141..225: optionalVWMA and construction flags",
+    "OctoBotTA callback90..145: closedFalse versus re-evaluationTrue",
+    "FreqAI example relative-volume98..100: rolling mean includes current"
+  ],
+  "officialPublicSchema": {
+    "url": "https://developers.binance.com/en/docs/catalog/core-trading-spot-trading/api/rest-api/market",
+    "accessedAt": "2026-11-02T19:26:13.424Z",
+    "fields": {
+      "5": "Volume",
+      "7": "Quote asset volume",
+      "8": "Number of trades",
+      "9": "Taker buy base asset volume",
+      "10": "Taker buy quote asset volume"
+    },
+    "localParser": "apps/server/src/market/binance-data.ts",
+    "localParserSha256": "6dbbbff50af912a9fc753f06d11b2e187ecc0c8874423c971c814a2e761bcd4a",
+    "retainedByCurrentCandle": [
+      "OHLC",
+      "volume index5"
+    ],
+    "notRetainedByCurrentCandle": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "existingHistoryCannotRecoverDiscardedFields": true
+  },
+  "vendorCodeCopied": false,
+  "vendorCodeExecuted": false
+}

@@ -1,0 +1,265 @@
+{
+  "version": "historical-training-pre-april-v1",
+  "registeredAt": "2026-10-31T22:42:14.652668+00:00",
+  "sourceDatasetId": "d0066ea5e97b107a22c148dbfcfcd245a2ea37e555684a5af36a382134b14926",
+  "sourceDatasetCapturedAt": "2026-10-28T20:01:22.069Z",
+  "quote": "EUR",
+  "venue": "binance",
+  "selection": "All20 frozen previous-study survivor symbols, no current ranking or performance-based exclusions; not historical constituents.",
+  "metadataAssumption": "Frozen prior dataset lot/minimum metadata, not historical exchange constraints.",
+  "symbols": [
+    "BTC/EUR",
+    "ETH/EUR",
+    "XRP/EUR",
+    "SOL/EUR",
+    "PEPE/EUR",
+    "BNB/EUR",
+    "ADA/EUR",
+    "TRX/EUR",
+    "DOGE/EUR",
+    "DOT/EUR",
+    "XLM/EUR",
+    "WIN/EUR",
+    "SUI/EUR",
+    "LINK/EUR",
+    "LTC/EUR",
+    "BCH/EUR",
+    "ICP/EUR",
+    "AVAX/EUR",
+    "SHIB/EUR",
+    "APT/EUR"
+  ],
+  "metadata": [
+    {
+      "symbol": "BTC/EUR",
+      "ordermin": 1e-05,
+      "costmin": 5,
+      "lotDecimals": 5,
+      "pairDecimals": 2
+    },
+    {
+      "symbol": "ETH/EUR",
+      "ordermin": 0.0001,
+      "costmin": 5,
+      "lotDecimals": 4,
+      "pairDecimals": 2
+    },
+    {
+      "symbol": "XRP/EUR",
+      "ordermin": 0.1,
+      "costmin": 5,
+      "lotDecimals": 1,
+      "pairDecimals": 4
+    },
+    {
+      "symbol": "SOL/EUR",
+      "ordermin": 0.001,
+      "costmin": 5,
+      "lotDecimals": 3,
+      "pairDecimals": 2
+    },
+    {
+      "symbol": "PEPE/EUR",
+      "ordermin": 1,
+      "costmin": 1,
+      "lotDecimals": 0,
+      "pairDecimals": 8
+    },
+    {
+      "symbol": "BNB/EUR",
+      "ordermin": 0.001,
+      "costmin": 5,
+      "lotDecimals": 3,
+      "pairDecimals": 2
+    },
+    {
+      "symbol": "ADA/EUR",
+      "ordermin": 0.1,
+      "costmin": 5,
+      "lotDecimals": 1,
+      "pairDecimals": 4
+    },
+    {
+      "symbol": "TRX/EUR",
+      "ordermin": 1,
+      "costmin": 5,
+      "lotDecimals": 0,
+      "pairDecimals": 4
+    },
+    {
+      "symbol": "DOGE/EUR",
+      "ordermin": 1,
+      "costmin": 1,
+      "lotDecimals": 0,
+      "pairDecimals": 5
+    },
+    {
+      "symbol": "DOT/EUR",
+      "ordermin": 0.01,
+      "costmin": 5,
+      "lotDecimals": 2,
+      "pairDecimals": 3
+    },
+    {
+      "symbol": "XLM/EUR",
+      "ordermin": 1,
+      "costmin": 5,
+      "lotDecimals": 0,
+      "pairDecimals": 4
+    },
+    {
+      "symbol": "WIN/EUR",
+      "ordermin": 1,
+      "costmin": 5,
+      "lotDecimals": 0,
+      "pairDecimals": 8
+    },
+    {
+      "symbol": "SUI/EUR",
+      "ordermin": 0.1,
+      "costmin": 5,
+      "lotDecimals": 1,
+      "pairDecimals": 4
+    },
+    {
+      "symbol": "LINK/EUR",
+      "ordermin": 0.01,
+      "costmin": 5,
+      "lotDecimals": 2,
+      "pairDecimals": 3
+    },
+    {
+      "symbol": "LTC/EUR",
+      "ordermin": 0.001,
+      "costmin": 5,
+      "lotDecimals": 3,
+      "pairDecimals": 2
+    },
+    {
+      "symbol": "BCH/EUR",
+      "ordermin": 0.001,
+      "costmin": 5,
+      "lotDecimals": 3,
+      "pairDecimals": 1
+    },
+    {
+      "symbol": "ICP/EUR",
+      "ordermin": 0.01,
+      "costmin": 5,
+      "lotDecimals": 2,
+      "pairDecimals": 3
+    },
+    {
+      "symbol": "AVAX/EUR",
+      "ordermin": 0.01,
+      "costmin": 5,
+      "lotDecimals": 2,
+      "pairDecimals": 3
+    },
+    {
+      "symbol": "SHIB/EUR",
+      "ordermin": 1,
+      "costmin": 1,
+      "lotDecimals": 0,
+      "pairDecimals": 8
+    },
+    {
+      "symbol": "APT/EUR",
+      "ordermin": 0.01,
+      "costmin": 5,
+      "lotDecimals": 2,
+      "pairDecimals": 4
+    }
+  ],
+  "periods": [
+    {
+      "id": "2025-10",
+      "fromTs": 1759276800000,
+      "toExclusive": 1761955200000,
+      "warmupDays": 8
+    },
+    {
+      "id": "2025-11",
+      "fromTs": 1761955200000,
+      "toExclusive": 1764547200000,
+      "warmupDays": 8
+    },
+    {
+      "id": "2025-12",
+      "fromTs": 1764547200000,
+      "toExclusive": 1767225600000,
+      "warmupDays": 8
+    },
+    {
+      "id": "2026-02",
+      "fromTs": 1769904000000,
+      "toExclusive": 1772323200000,
+      "warmupDays": 8
+    },
+    {
+      "id": "2026-03",
+      "fromTs": 1772323200000,
+      "toExclusive": 1775001600000,
+      "warmupDays": 8
+    }
+  ],
+  "baselineOptions": {
+    "startingBalance": 100,
+    "feeRate": 0.001,
+    "spreadBps": 10,
+    "slippageBps": 8,
+    "fromTs": 1790883000000,
+    "toTs": 1793215800000,
+    "decisionIntervalMinutes": 15,
+    "maxDrawdownPct": 0.25,
+    "minOrderQuote": 10,
+    "risk": {
+      "maxPositionPct": 0.3,
+      "maxOpenPositions": 4,
+      "maxTradesPerDay": 10,
+      "cooldownMinutes": 60,
+      "maxPortfolioRiskPct": 0.025,
+      "feeRate": 0.001
+    },
+    "entry": {
+      "maxSpreadBps": 20,
+      "maxSlippageBps": 30
+    }
+  },
+  "primaryComparison": [
+    "programmed-mock-structure-exit-v1"
+  ],
+  "feeRates": [
+    0.001
+  ],
+  "benchmark": "Cash and BTC buy/hold with costs; no automatic promotion or threshold tuning.",
+  "strategyModules": {
+    "strategy/providers.js": "3efce9850579e6f025f3f52abd8196383c5c1250f811fce6fe07762ac930b659",
+    "strategy/paper-intelligence.js": "2350f9903953a5940cb7c603e6ece4e85199c24d16f8ef18cce231e4c5db5dca",
+    "strategy/covariance-paper.js": "cba1c2eb32ee1c12a8008feeb828320789df6b7dd1020fd51909b9a2150ca70d",
+    "strategy/structure-exit-paper.js": "e235d87a3bce52833fa9a7ab528276a3cfba311ce52fe9d6ebe5467ff44f6f33",
+    "strategy/entry-support-paper.js": "8a0310fc9401110c0841281510381fb7797963557b651b1ad85f00cbfec66118",
+    "research/portfolio.js": "eb16ed041c8c972735db20d6e45620e5f072c97853161573eba0ccd2a33d388a",
+    "market/indicators.js": "77bb2ad6811c329c19fd12b6fe2cf9e99ba5336b99c6a58b4905b86a62b1bb46"
+  },
+  "endpoint": "https://data-api.binance.vision/api/v3/klines",
+  "publicGETOnly": true,
+  "maxNetworkRequestsTotal": 500,
+  "maxPagesPerSymbolPeriod": 8,
+  "completeUniverseRequired": true,
+  "sourceCapture": "Immutable per-page canonical JSON checksum and actual retrieval timestamps. Historical candle close is not actual first receipt.",
+  "dataPreviouslyUsedForDesign": false,
+  "designInformedByLaterConsumedOctober2026Data": true,
+  "strictHistoricalDeployabilityEstablished": false,
+  "independentOutOfSampleClaim": false,
+  "noParameterSearch": true,
+  "existingDefaultDatasetMustRemainUnchanged": true,
+  "existingDatabasesAndForwardExperimentsMustRemainUnchanged": true,
+  "purpose": "Additional five uninspected complete calendar months plus existing January form October2025-March2026 training history before April validation. Resolve small policy label count without lowering default200row guard or pooling policies/fees.",
+  "existingJanuaryReference": "docs/historical-midpoint-2026-01-latest.json",
+  "validationStartsAt": 1775001600000,
+  "july2026OutcomeLockRemains": true,
+  "modelTrained": false,
+  "legacyForecasterDifferentTarget": "Existing eight-dimensional Ridge predicts fixed4h price returns. Sparse realized policy-PnL is a different target/contract; data collection does not mean a compatible learner was trained.",
+  "freshness": "Training must retain latest mature-target clock, not just reset fittedAt. Historical capture timestamps/modelled availability remain explicit."
+}

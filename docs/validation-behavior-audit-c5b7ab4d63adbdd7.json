@@ -1,0 +1,3167 @@
+{
+  "version": "validation-mode-versus-decision-sensitivity-v1",
+  "protocolHash": "1d8261b43eb0b313e1ab0fa606da448b6f5b9c2e7026c4398d5175cec96fc2dc",
+  "runnerHash": "b88b6409ba67d32aaf701a0b0e2fa98f5c39759c7218f9d6a41fcb4c3f81b91b",
+  "validationHash": "2c25cb174c52fdce8360f24929c2881dad62be7c2f941eb850bfe24f2b8992fa",
+  "rankingHash": "fbcfb4343dd6bd93fb8041dcffe32e78521ead2873cc7344a46f23b753e719a2",
+  "folds": [
+    {
+      "window": {
+        "trainStart": 1759276800000,
+        "validationStart": 1760486400000,
+        "testStart": 1760832000000,
+        "testEnd": 1761177600000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1760486400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "ridge",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1760529600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1760572800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "ridge",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1760616000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "ridge",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1760659200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1760702400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1760745600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1760788800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "ridge",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1759622400000,
+        "validationStart": 1760832000000,
+        "testStart": 1761177600000,
+        "testEnd": 1761523200000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1760832000000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1760875200000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1760918400000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1760961600000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1761004800000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1761048000000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1761091200000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1761134400000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1759968000000,
+        "validationStart": 1761177600000,
+        "testStart": 1761523200000,
+        "testEnd": 1761868800000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1761177600000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1761220800000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1761264000000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1761307200000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1761350400000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1761393600000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1761436800000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1761480000000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1760313600000,
+        "validationStart": 1761523200000,
+        "testStart": 1761868800000,
+        "testEnd": 1762214400000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1761523200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1761566400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1761609600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1761652800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1761696000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1761739200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1761782400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "aggressor",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": [
+            {
+              "decisionAt": 1762171200000,
+              "baselinePair": null,
+              "alternatePair": "ICP/EUR"
+            }
+          ]
+        },
+        {
+          "removedValidationClock": 1761825600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1760659200000,
+        "validationStart": 1761868800000,
+        "testStart": 1762214400000,
+        "testEnd": 1762560000000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1761868800000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "mean",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": [
+            {
+              "decisionAt": 1762214400000,
+              "baselinePair": "ICP/EUR",
+              "alternatePair": null
+            },
+            {
+              "decisionAt": 1762257600000,
+              "baselinePair": "APT/EUR",
+              "alternatePair": null
+            }
+          ]
+        },
+        {
+          "removedValidationClock": 1761912000000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1761955200000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1761998400000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1762041600000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1762084800000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "mean",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": [
+            {
+              "decisionAt": 1762214400000,
+              "baselinePair": "ICP/EUR",
+              "alternatePair": null
+            },
+            {
+              "decisionAt": 1762257600000,
+              "baselinePair": "APT/EUR",
+              "alternatePair": null
+            }
+          ]
+        },
+        {
+          "removedValidationClock": 1762128000000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1762171200000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1761004800000,
+        "validationStart": 1762214400000,
+        "testStart": 1762560000000,
+        "testEnd": 1762905600000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1762214400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1762257600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1762300800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1762344000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1762387200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1762430400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1762473600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1762516800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1761350400000,
+        "validationStart": 1762560000000,
+        "testStart": 1762905600000,
+        "testEnd": 1763251200000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1762560000000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "aggressor",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1762603200000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "mean",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1762646400000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "aggressor",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1762689600000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "aggressor",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1762732800000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "mean",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1762776000000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "aggressor",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1762819200000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "aggressor",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1762862400000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "aggressor",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1761696000000,
+        "validationStart": 1762905600000,
+        "testStart": 1763251200000,
+        "testEnd": 1763596800000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1762905600000,
+          "baselineSelected": "zero",
+          "alternateSelected": "ridge",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1762948800000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1762992000000,
+          "baselineSelected": "zero",
+          "alternateSelected": "ridge",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763035200000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763078400000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763121600000,
+          "baselineSelected": "zero",
+          "alternateSelected": "ridge",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763164800000,
+          "baselineSelected": "zero",
+          "alternateSelected": "ridge",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763208000000,
+          "baselineSelected": "zero",
+          "alternateSelected": "ridge",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1762041600000,
+        "validationStart": 1763251200000,
+        "testStart": 1763596800000,
+        "testEnd": 1763942400000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1763251200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763294400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763337600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763380800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763424000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763467200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763510400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763553600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1762387200000,
+        "validationStart": 1763596800000,
+        "testStart": 1763942400000,
+        "testEnd": 1764288000000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1763596800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763640000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763683200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763726400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763769600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763812800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763856000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763899200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1762732800000,
+        "validationStart": 1763942400000,
+        "testStart": 1764288000000,
+        "testEnd": 1764633600000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1763942400000,
+          "baselineSelected": "zero",
+          "alternateSelected": "mean",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1763985600000,
+          "baselineSelected": "zero",
+          "alternateSelected": "mean",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764028800000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764072000000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764115200000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764158400000,
+          "baselineSelected": "zero",
+          "alternateSelected": "mean",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764201600000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764244800000,
+          "baselineSelected": "zero",
+          "alternateSelected": "mean",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1763078400000,
+        "validationStart": 1764288000000,
+        "testStart": 1764633600000,
+        "testEnd": 1764979200000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1764288000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764331200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764374400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764417600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764460800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764504000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764547200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764590400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1763424000000,
+        "validationStart": 1764633600000,
+        "testStart": 1764979200000,
+        "testEnd": 1765324800000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1764633600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764676800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764720000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764763200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764806400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764849600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764892800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1764936000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1763769600000,
+        "validationStart": 1764979200000,
+        "testStart": 1765324800000,
+        "testEnd": 1765670400000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1764979200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765022400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765065600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765108800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765152000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765195200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765238400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765281600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1764115200000,
+        "validationStart": 1765324800000,
+        "testStart": 1765670400000,
+        "testEnd": 1766016000000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1765324800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765368000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765411200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765454400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765497600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765540800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765584000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765627200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1764460800000,
+        "validationStart": 1765670400000,
+        "testStart": 1766016000000,
+        "testEnd": 1766361600000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1765670400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765713600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765756800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765800000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765843200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765886400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765929600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1765972800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1764806400000,
+        "validationStart": 1766016000000,
+        "testStart": 1766361600000,
+        "testEnd": 1766707200000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1766016000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766059200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766102400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766145600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766188800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766232000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766275200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766318400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1765152000000,
+        "validationStart": 1766361600000,
+        "testStart": 1766707200000,
+        "testEnd": 1767052800000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1766361600000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "aggressor",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766404800000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "mean",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766448000000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "ridge",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766491200000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "aggressor",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766534400000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "ridge",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766577600000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "mean",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766620800000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "aggressor",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766664000000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "mean",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1765497600000,
+        "validationStart": 1766707200000,
+        "testStart": 1767052800000,
+        "testEnd": 1767398400000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1766707200000,
+          "baselineSelected": "zero",
+          "alternateSelected": "mean",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766750400000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766793600000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766836800000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766880000000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766923200000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1766966400000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767009600000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1765843200000,
+        "validationStart": 1767052800000,
+        "testStart": 1767398400000,
+        "testEnd": 1767744000000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1767052800000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767096000000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767139200000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767182400000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767225600000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767268800000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767312000000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767355200000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1766188800000,
+        "validationStart": 1767398400000,
+        "testStart": 1767744000000,
+        "testEnd": 1768089600000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1767398400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767441600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767484800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767528000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767571200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767614400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767657600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767700800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1766534400000,
+        "validationStart": 1767744000000,
+        "testStart": 1768089600000,
+        "testEnd": 1768435200000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1767744000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767787200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767830400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767873600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767916800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1767960000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768003200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768046400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1766880000000,
+        "validationStart": 1768089600000,
+        "testStart": 1768435200000,
+        "testEnd": 1768780800000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1768089600000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768132800000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768176000000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768219200000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768262400000,
+          "baselineSelected": "zero",
+          "alternateSelected": "mean",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768305600000,
+          "baselineSelected": "zero",
+          "alternateSelected": "mean",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768348800000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768392000000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1767225600000,
+        "validationStart": 1768435200000,
+        "testStart": 1768780800000,
+        "testEnd": 1769126400000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1768435200000,
+          "baselineSelected": "common",
+          "alternateSelected": "mean",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": [
+            {
+              "decisionAt": 1768780800000,
+              "baselinePair": "BTC/EUR",
+              "alternatePair": null
+            },
+            {
+              "decisionAt": 1768996800000,
+              "baselinePair": "APT/EUR",
+              "alternatePair": null
+            },
+            {
+              "decisionAt": 1769040000000,
+              "baselinePair": "WIN/EUR",
+              "alternatePair": null
+            },
+            {
+              "decisionAt": 1769083200000,
+              "baselinePair": "AVAX/EUR",
+              "alternatePair": null
+            }
+          ]
+        },
+        {
+          "removedValidationClock": 1768478400000,
+          "baselineSelected": "common",
+          "alternateSelected": "common",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768521600000,
+          "baselineSelected": "common",
+          "alternateSelected": "common",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768564800000,
+          "baselineSelected": "common",
+          "alternateSelected": "common",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768608000000,
+          "baselineSelected": "common",
+          "alternateSelected": "common",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768651200000,
+          "baselineSelected": "common",
+          "alternateSelected": "common",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768694400000,
+          "baselineSelected": "common",
+          "alternateSelected": "common",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768737600000,
+          "baselineSelected": "common",
+          "alternateSelected": "common",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1767571200000,
+        "validationStart": 1768780800000,
+        "testStart": 1769126400000,
+        "testEnd": 1769472000000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1768780800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768824000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768867200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "zero",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768910400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768953600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1768996800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769040000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769083200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1767916800000,
+        "validationStart": 1769126400000,
+        "testStart": 1769472000000,
+        "testEnd": 1769817600000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1769126400000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769169600000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769212800000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769256000000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769299200000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769342400000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769385600000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "mean",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769428800000,
+          "baselineSelected": "ridge",
+          "alternateSelected": "ridge",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1768262400000,
+        "validationStart": 1769472000000,
+        "testStart": 1769817600000,
+        "testEnd": 1770163200000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1769472000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769515200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769558400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769601600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769644800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769688000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769731200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769774400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1768608000000,
+        "validationStart": 1769817600000,
+        "testStart": 1770163200000,
+        "testEnd": 1770508800000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1769817600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769860800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769904000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769947200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1769990400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1770033600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1770076800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1770120000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1768953600000,
+        "validationStart": 1770163200000,
+        "testStart": 1770508800000,
+        "testEnd": 1770854400000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1770163200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1770206400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1770249600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1770292800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1770336000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "ridge",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": [
+            {
+              "decisionAt": 1770768000000,
+              "baselinePair": null,
+              "alternatePair": "WIN/EUR"
+            }
+          ]
+        },
+        {
+          "removedValidationClock": 1770379200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1770422400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1770465600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1769299200000,
+        "validationStart": 1770508800000,
+        "testStart": 1770854400000,
+        "testEnd": 1771200000000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1770508800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1770552000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1770595200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1770638400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1770681600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1770724800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1770768000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1770811200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1769644800000,
+        "validationStart": 1770854400000,
+        "testStart": 1771200000000,
+        "testEnd": 1771545600000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1770854400000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1770897600000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1770940800000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1770984000000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771027200000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771070400000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771113600000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771156800000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1769990400000,
+        "validationStart": 1771200000000,
+        "testStart": 1771545600000,
+        "testEnd": 1771891200000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1771200000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771243200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771286400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771329600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771372800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771416000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771459200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771502400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1770336000000,
+        "validationStart": 1771545600000,
+        "testStart": 1771891200000,
+        "testEnd": 1772236800000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1771545600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771588800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771632000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771675200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771718400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771761600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771804800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771848000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "aggressor",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": [
+            {
+              "decisionAt": 1771934400000,
+              "baselinePair": null,
+              "alternatePair": "WIN/EUR"
+            },
+            {
+              "decisionAt": 1772020800000,
+              "baselinePair": null,
+              "alternatePair": "AVAX/EUR"
+            },
+            {
+              "decisionAt": 1772107200000,
+              "baselinePair": null,
+              "alternatePair": "WIN/EUR"
+            },
+            {
+              "decisionAt": 1772150400000,
+              "baselinePair": null,
+              "alternatePair": "DOT/EUR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1770681600000,
+        "validationStart": 1771891200000,
+        "testStart": 1772236800000,
+        "testEnd": 1772582400000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1771891200000,
+          "baselineSelected": "common",
+          "alternateSelected": "aggressor",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771934400000,
+          "baselineSelected": "common",
+          "alternateSelected": "common",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1771977600000,
+          "baselineSelected": "common",
+          "alternateSelected": "common",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772020800000,
+          "baselineSelected": "common",
+          "alternateSelected": "aggressor",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772064000000,
+          "baselineSelected": "common",
+          "alternateSelected": "common",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772107200000,
+          "baselineSelected": "common",
+          "alternateSelected": "common",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772150400000,
+          "baselineSelected": "common",
+          "alternateSelected": "common",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772193600000,
+          "baselineSelected": "common",
+          "alternateSelected": "zero",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": [
+            {
+              "decisionAt": 1772323200000,
+              "baselinePair": "DOT/EUR",
+              "alternatePair": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1771027200000,
+        "validationStart": 1772236800000,
+        "testStart": 1772582400000,
+        "testEnd": 1772928000000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1772236800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "zero",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772280000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "aggressor",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772323200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772366400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "zero",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772409600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772452800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772496000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772539200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1771372800000,
+        "validationStart": 1772582400000,
+        "testStart": 1772928000000,
+        "testEnd": 1773273600000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1772582400000,
+          "baselineSelected": "common",
+          "alternateSelected": "common",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772625600000,
+          "baselineSelected": "common",
+          "alternateSelected": "common",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772668800000,
+          "baselineSelected": "common",
+          "alternateSelected": "common",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772712000000,
+          "baselineSelected": "common",
+          "alternateSelected": "ridge",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772755200000,
+          "baselineSelected": "common",
+          "alternateSelected": "common",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772798400000,
+          "baselineSelected": "common",
+          "alternateSelected": "common",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772841600000,
+          "baselineSelected": "common",
+          "alternateSelected": "common",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772884800000,
+          "baselineSelected": "common",
+          "alternateSelected": "common",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1771718400000,
+        "validationStart": 1772928000000,
+        "testStart": 1773273600000,
+        "testEnd": 1773619200000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1772928000000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1772971200000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1773014400000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1773057600000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1773100800000,
+          "baselineSelected": "zero",
+          "alternateSelected": "mean",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1773144000000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1773187200000,
+          "baselineSelected": "zero",
+          "alternateSelected": "zero",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1773230400000,
+          "baselineSelected": "zero",
+          "alternateSelected": "mean",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1772064000000,
+        "validationStart": 1773273600000,
+        "testStart": 1773619200000,
+        "testEnd": 1773964800000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1773273600000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "aggressor",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1773316800000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "aggressor",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1773360000000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "common",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1773403200000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "aggressor",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1773446400000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "aggressor",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1773489600000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "aggressor",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1773532800000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "aggressor",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1773576000000,
+          "baselineSelected": "aggressor",
+          "alternateSelected": "aggressor",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1772409600000,
+        "validationStart": 1773619200000,
+        "testStart": 1773964800000,
+        "testEnd": 1774310400000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1773619200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1773662400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1773705600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1773748800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1773792000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1773835200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1773878400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "aggressor",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": [
+            {
+              "decisionAt": 1774008000000,
+              "baselinePair": null,
+              "alternatePair": "APT/EUR"
+            },
+            {
+              "decisionAt": 1774267200000,
+              "baselinePair": null,
+              "alternatePair": "LINK/EUR"
+            }
+          ]
+        },
+        {
+          "removedValidationClock": 1773921600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "aggressor",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": [
+            {
+              "decisionAt": 1774008000000,
+              "baselinePair": null,
+              "alternatePair": "APT/EUR"
+            },
+            {
+              "decisionAt": 1774267200000,
+              "baselinePair": null,
+              "alternatePair": "LINK/EUR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1772755200000,
+        "validationStart": 1773964800000,
+        "testStart": 1774310400000,
+        "testEnd": 1774656000000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1773964800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1774008000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1774051200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1774094400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1774137600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "aggressor",
+          "modeChanged": true,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1774180800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1774224000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1774267200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    },
+    {
+      "window": {
+        "trainStart": 1773100800000,
+        "validationStart": 1774310400000,
+        "testStart": 1774656000000,
+        "testEnd": 1775001600000
+      },
+      "cases": [
+        {
+          "removedValidationClock": 1774310400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1774353600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1774396800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1774440000000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1774483200000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1774526400000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1774569600000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        },
+        {
+          "removedValidationClock": 1774612800000,
+          "baselineSelected": "mean",
+          "alternateSelected": "mean",
+          "modeChanged": false,
+          "testClockComparisons": 8,
+          "changedTestClockKeys": []
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "folds": 41,
+    "clockRemovalCases": 328,
+    "modeChangedCases": 44,
+    "casesWithChangedTestDecisions": 9,
+    "foldsWithChangedTestDecisions": 7,
+    "testClockComparisons": 2624,
+    "changedClockComparisons": 19,
+    "uniqueChangedTestClocks": 15
+  },
+  "testPayoffsUsed": false,
+  "newModelFitted": false,
+  "actualSelectorChanged": false,
+  "sourceForecastsChanged": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "scope": "Exploratory second-stage sensitivity after observing model-name changes. Compare existing frozen future-test candidate/NO-TRADE keys for full-validation versus clock-omitted selection. No test outcomes accessed or new modes chosen; repeated comparisons are not independent trials or portfolio returns.",
+  "factsHash": "c5b7ab4d63adbdd7ae8c0f7db5fd7e2e3d2d9d41ae12314d4cdb0861f761cf19",
+  "generatedAt": "2026-11-03T15:07:52.653Z"
+}

@@ -1,0 +1,40 @@
+{
+  "version": "mock-structure-retrospective-v1",
+  "registeredAt": "2026-10-31T11:31:47.524732+00:00",
+  "datasetId": "d0066ea5e97b107a22c148dbfcfcd245a2ea37e555684a5af36a382134b14926",
+  "window": "Entire existing frozen evaluation window; no new date/threshold selection",
+  "historyAlreadyInspected": true,
+  "baselineBuildId": "5cadb6de7c67fd055b6167164ae1fc3b801ca843475087a8d4be37e8f3c00368",
+  "baselineMockVersion": "paper-intelligence-v1",
+  "candidateMockVersion": "paper-intelligence-v2",
+  "capital": 1000,
+  "spreadBps": 5,
+  "slippageBps": 5,
+  "visibleDepthQuotePerSide": 1000,
+  "stopLossPct": 0.05,
+  "hardLimits": {
+    "maxPositionPct": 0.15,
+    "maxOpenPositions": 2,
+    "maxTradesPerDay": 4,
+    "cooldownMinutes": 120,
+    "maxPortfolioRiskPct": 0.0125,
+    "maxSpreadBps": 10,
+    "maxSlippageBps": 15
+  },
+  "scenarios": [
+    {
+      "name": "base",
+      "feeRate": 0.001
+    },
+    {
+      "name": "double-fee-adaptive",
+      "feeRate": 0.002
+    }
+  ],
+  "semantics": "Both mocks use identical effective Safe policy/entry-only day cap/global120min entry pause/fee-inclusive stop basis; strategy exits uncapped. Default Rule reference retains its actual distinct role semantics, stated explicitly.",
+  "syntheticExecution": "Fixed-spread quotes at execution-bar open, assumed one-level1000quote depth at nominal+5s. No observed historical depth/queue/receipt/latency. Only closed earlier candles and hourly aggregates in provider inputs.",
+  "comparison": "Net return/drawdown/closed-trade mean realized PnL/win rate/profit factor/entry frequency/weekly chronological carry-position slices. Null if not meaningful. Same-fill fee drag algebra shown separately from adaptive rerun.",
+  "noSelection": "No model training, parameter search, post-test retuning, calibrated probability, independent sample count or prospective profitability claim. Existing history is consumed.",
+  "sourceInputChecks": "Compare exogenous feature/quote/structure/cost fingerprints on shared decision times across both policy paths. Paused paths may have different decision times.",
+  "baselineReferences": "Cash0 and terminal fee-inclusive BTC approximation; Rule reference at same scenario assumptions but with original Rule execution semantics. Original frozen default data/options/report not overwritten."
+}

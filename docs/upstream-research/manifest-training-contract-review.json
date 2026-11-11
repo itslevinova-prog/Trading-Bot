@@ -1,0 +1,24 @@
+{
+  "existingArchivedSourcesReverified": [
+    {
+      "path": "freqtrade/freqai/base_models/BaseRegressionModel.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/freqai/base_models/BaseRegressionModel.py",
+      "sha256": "b91bf3a0cbf096c204f4c5b2b15d7d79777c1a890fe54345d663610a9198475d",
+      "bytes": 5325
+    },
+    {
+      "path": "freqtrade/freqai/data_kitchen.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/freqai/data_kitchen.py",
+      "sha256": "00a0d1089dab1a8ae47ef5282ca6aa1c1fbb71cb95dc27193fee61c1d1bce82e",
+      "bytes": 44308
+    },
+    {
+      "path": "freqtrade/freqai/freqai_interface.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/freqai/freqai_interface.py",
+      "sha256": "fa0c3d1835ea3e2804d23617095d877d760b357bfd02ec30a954b4ae16154065",
+      "bytes": 47293
+    }
+  ],
+  "newFilesFetched": 0,
+  "foreignCodeRunOrPorted": false
+}

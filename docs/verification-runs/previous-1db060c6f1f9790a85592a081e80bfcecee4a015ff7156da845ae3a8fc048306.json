@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "datasetId": "d0066ea5e97b107a22c148dbfcfcd245a2ea37e555684a5af36a382134b14926",
+  "capturedAt": "2026-10-28T20:01:22.069Z",
+  "dataHash": "fa60e70db8f4343e6d6121c674ad32cc71754851982432227a8ea749c9cf4a67",
+  "optionsHash": "a24c2c6f037f819d808f1627e00bcde2237e9cda88b1e79040e5b8f8c1d0be83",
+  "firstGeneratedAt": "2026-10-28T20:01:22.069Z",
+  "baseHash": "d30128e9f6c09dfad23ac989995b4a536ab896d9eba33c4dbafc7a061a557df1",
+  "stressHash": "9834f2d682a0161f2bbddcb88720f1c47ac04fc9b1a9525058b4c826bb460c9d",
+  "fromTs": 1790883000000,
+  "toTs": 1793216700000,
+  "privateExchangeCalls": 0,
+  "paidCalls": 0,
+  "realOrders": 0,
+  "independentProfitabilityEstablished": false,
+  "secondGeneratedAt": "2026-10-28T20:03:32.693Z",
+  "verifiedAt": "2026-10-28T20:03:43.086Z",
+  "returnPct": 0,
+  "closedTrades": 0
+}

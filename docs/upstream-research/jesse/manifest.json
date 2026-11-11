@@ -1,0 +1,26 @@
+[
+  {
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/LICENSE",
+    "sha256": "8985ca8447e233f34397a52fe77989c02e27b8145d43bd8c715ae9c7a96056d4",
+    "bytes": 1068
+  },
+  {
+    "path": "jesse/strategies/Strategy.py",
+    "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/strategies/Strategy.py",
+    "sha256": "e2f89664377714d87c5971fdfe13ad244845eda2e1daa449b8bf182de8e660ab",
+    "bytes": 75743
+  },
+  {
+    "path": "jesse/modes/backtest_mode.py",
+    "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/modes/backtest_mode.py",
+    "sha256": "9a3d585b35f567567704dd5b9401bd733712654d35ea95b734eb4070f9fa3b0c",
+    "bytes": 91167
+  },
+  {
+    "path": "jesse/utils.py",
+    "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/utils.py",
+    "sha256": "d13547cab11eadaaf8cd1615adb1747ff7452d91320675f95da1a603557398f1",
+    "bytes": 12878
+  }
+]

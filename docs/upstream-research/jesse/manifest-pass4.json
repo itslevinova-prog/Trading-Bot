@@ -1,0 +1,20 @@
+[
+  {
+    "path": "jesse/indicators/er.py",
+    "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/indicators/er.py",
+    "sha256": "223debf7ca989984e4e184799dca39a775b77d8fc7c825484f3e68186bd824fb",
+    "bytes": 1362
+  },
+  {
+    "path": "jesse/indicators/chop.py",
+    "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/indicators/chop.py",
+    "sha256": "c273b0961409c96c336df7ae4c38b70394da8f22a6d46b0195b0d3b94dbe0747",
+    "bytes": 1234
+  },
+  {
+    "path": "jesse/indicators/kama.py",
+    "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/indicators/kama.py",
+    "sha256": "ef112c5d48f0373a704ccce2a993ba751081d5fe8f31efbb5053f0a8329a70c5",
+    "bytes": 1788
+  }
+]

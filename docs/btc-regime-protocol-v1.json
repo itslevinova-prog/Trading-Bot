@@ -1,0 +1,17 @@
+{
+  "version": "btc-regime-paper-v1",
+  "registeredBeforeCandidateEvaluation": true,
+  "historyAlreadyInspected": true,
+  "independentOutOfSample": false,
+  "baselineReportHash": "7e873da81fec4c98e37988a4ce02d0b04ad8098a2fe73bfcd77ba32981597cc4",
+  "baselineVariant": "mock-v2",
+  "hypotheses": [
+    "For alt buy candidates with observed BTC correlation>=0.8, require fresh matching same-closed-window BTC reference and veto multi-timeframe bearish BTC regime.",
+    "If no BTC position already triggered existing reduction, halve budget for a new high-BTC-correlated alt when another held alt has high BTC correlation. Shared-factor proxy only, not measured pairwise covariance.",
+    "Missing candidate/held cluster correlation or required BTC reference cannot be treated as independent/neutral.",
+    "Keep all baseline entry/cost/depth/risk checks, independent held exits,3action/1buy cap; if one candidate blocked choose next eligible by same deterministic ordering."
+  ],
+  "thresholdSources": "Reuse existing mock0.8correlation threshold and0.5budget factor without optimizing known history",
+  "execution": "Same source dataset, Safe policy,1000EUR,synthetic next-open one-level1000depth,5bps spread/slip, fees0.001and0.002 as original study",
+  "promotion": "Research candidate only; no default swap without validation. No predicted win probability/calibration/profit claims."
+}

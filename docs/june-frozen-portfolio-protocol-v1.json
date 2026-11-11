@@ -1,0 +1,60 @@
+{
+  "version": "june-frozen-portfolio-replay-v1",
+  "registeredAt": "2026-11-04T15:39:56.326Z",
+  "runnerSha": "cc5f5278cb782a39e9d74cc618ad098c812c77f406e19de7108fefd831e00a16",
+  "choicesPath": "docs/june-timing-frozen-choices-v1.json",
+  "choicesSha": "510b53842aef38d4b555469b87342d80cd605c9f542d1528c404f7f366858df6",
+  "dataSha": "f753430de897259ce28e44b394f6b63f5ab387a3cd0f8d1613a20f20fcd278b9",
+  "buildId": "9091422646e6d99527b03a65363ad8b85d0dcd92304c4a3cc349d498caa34ae6",
+  "options": {
+    "startingBalance": 100,
+    "feeRate": 0.001,
+    "spreadBps": 10,
+    "slippageBps": 8,
+    "fromTs": 1780272000000,
+    "toTs": 1782863100000,
+    "decisionIntervalMinutes": 15,
+    "maxDrawdownPct": 0.25,
+    "minOrderQuote": 10,
+    "risk": {
+      "maxPositionPct": 0.3,
+      "maxOpenPositions": 4,
+      "maxTradesPerDay": 10,
+      "cooldownMinutes": 60,
+      "maxPortfolioRiskPct": 0.025,
+      "feeRate": 0.001
+    },
+    "entry": {
+      "maxSpreadBps": 20,
+      "maxSlippageBps": 30
+    }
+  },
+  "variants": [
+    {
+      "name": "rules",
+      "multiplier": 1
+    },
+    {
+      "name": "ungated",
+      "multiplier": 1
+    },
+    {
+      "name": "btc",
+      "multiplier": 1
+    },
+    {
+      "name": "breadth",
+      "multiplier": 1
+    },
+    {
+      "name": "cash",
+      "multiplier": 1
+    },
+    {
+      "name": "ungated",
+      "multiplier": 2
+    }
+  ],
+  "candidate": "Original frozen pair and entry clock. One open position at a time. Safe 15% sizing cap and original 2% stop, 4% target. Timeout sell at first eligible open after 32 bars.",
+  "assumptions": "Registered June evaluation. Inferred OHLC spread and slippage, exchange minima, fees, cash and broker guards. Same caps at double costs. No historical depth or queue reconstruction."
+}

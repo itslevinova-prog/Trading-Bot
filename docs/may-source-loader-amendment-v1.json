@@ -1,0 +1,21 @@
+{
+  "version": "may-source-loader-amendment-v1",
+  "registeredAt": "2026-11-03T20:32:41.049834+00:00",
+  "originalProtocol": "docs/historical-evidence-post-april-protocol-v1.json",
+  "originalProtocolSha256": "03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54",
+  "originalHelperSha256": "e88a5ab56928db888f16bf47f2146e87dacb4bac7d2eb8b8e234700f92e50aa6",
+  "currentHelperSha256": "c5787fbf0dbc16072d8186d92c6ee03aabd5b545b4c00d76532b3450a4a4e8bf",
+  "reason": "Initial strict module path allowlist rejected the newly registered broker/risk.js. Added exactly this pinned path with retained hash checking/arbitrary broker/traversal rejection. No original protocol/date/role/data/request cap changed.",
+  "sourceDataUnchanged": true,
+  "currentSourceHashes": {
+    "scripts/historical-period-files.mjs": "c5787fbf0dbc16072d8186d92c6ee03aabd5b545b4c00d76532b3450a4a4e8bf",
+    "scripts/capture-historical-periods.mjs": "b2676a29eadabef29f9d2093e7f29100666efc9e073f9330aabe452a56c743dc",
+    "scripts/verify_may_evidence_source.py": "0551d09edc27d5a859113cbb166d1b7e4a9ac00abc1d112c15020e5de95765fe",
+    "apps/server/test/historical-period-files.test.ts": "bc01220f4fedeb88d207d26fae89e8a4b8099f70fa56fc9623ee1511b2a6069b"
+  },
+  "testsPassed": 22,
+  "serverAndTestTypechecksPassed": true,
+  "normalLoaderSourceDataHash": "df5ed748ced1b3730c976d79c1542adea04b8d46fb08b611468da75047e290e4",
+  "normalLoaderNetworkForbidden": true,
+  "activeRuntimeChanged": false
+}

@@ -1,0 +1,30 @@
+{
+  "version": "directional-strength-decimal-proof-v1",
+  "fixtureSha256": "e7954b801971a7deefc3dd216df4724a876536b7d066c8490175ed6ae5130a9c",
+  "referenceScriptSha256": "ee39d2d61be02a008ff40cf7d70dcb208a522d1675bfab94dfd5e274c2e28b39",
+  "observedSha256": "41ffb23c06b16520dd7254d39eb409d00baeab34ce76c03ffcda2e7db5f871a3",
+  "sourceHash": "edb661fd8aa978995bea6043ed7c6eb72c0bb962959c535195883156ba2d785b",
+  "buildId": "3f86982f7e960bc852affab58ea2fa68cb3a0a632e0792c61aaf7b9a1b77cb48",
+  "precisionDigits": 60,
+  "math": "Independent closed-form sums, not TypeScript recurrence",
+  "expected": {
+    "adx": 28.123219811470086,
+    "previousAdx": 29.245253869978768,
+    "adxChange": -1.1220340585086808,
+    "plusDI": 15.713977033041502,
+    "minusDI": 11.96688099589945,
+    "movementBalance": 0.13536777050857235
+  },
+  "absoluteErrors": {
+    "adx": 3.197442310920451e-14,
+    "previousAdx": 2.4868995751603507e-14,
+    "adxChange": 6.217248937900877e-15,
+    "plusDI": 3.552713678800501e-14,
+    "minusDI": 8.881784197001252e-15,
+    "movementBalance": 1.4988010832439613e-15
+  },
+  "syntheticOnly": true,
+  "vendorParityClaimed": false,
+  "strategyActivated": false,
+  "profitabilityEstablished": false
+}

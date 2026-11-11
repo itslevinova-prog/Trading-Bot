@@ -1,0 +1,14 @@
+[
+  {
+    "path": "freqtrade/strategy/interface.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/strategy/interface.py",
+    "sha256": "87f06f0f2df0c3298949002a250d99cf801b9cee794f332deffcc875c2c6f4a1",
+    "bytes": 81629
+  },
+  {
+    "path": "tests/strategy/test_interface.py",
+    "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/tests/strategy/test_interface.py",
+    "sha256": "fba034e464b6d34a2e2591b39255194c8f3d8a4ac3874478039d227d80ffaee1",
+    "bytes": 50960
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "verifiedAt": "2026-11-02T19:59:35.454Z",
+  "buildId": "368f61105a9cd29e792b91def242a9767eacba756d50c7094f278a4ed8c27f0e",
+  "documentation": "docs/PUBLIC-EXECUTED-ACTIVITY.md",
+  "targetedTests": 34,
+  "typechecksPassed": true,
+  "capture": {
+    "path": "docs/public-activity-capture-1297df4a2e853c03.json",
+    "hash": "1297df4a2e853c038d09a485b1c18c2d6d0a23672035f8eea397a18e53b076be"
+  },
+  "derived": {
+    "path": "docs/executed-activity-description-e508cdb67cd641c7.json",
+    "hash": "e508cdb67cd641c74b9ad323ba7dd07a9dad226d5b6278080c506e280db1ec13"
+  },
+  "rawProof": "docs/public-activity-raw-proof.json",
+  "aggregateProof": "docs/executed-activity-decimal-proof.json",
+  "availabilityProof": "docs/public-activity-availability-proof.json",
+  "networkRequests": 2,
+  "rawBars": 192,
+  "decimalPerBarShares": 384,
+  "decimalAggregateFields": 42,
+  "actualAvailabilityScenarios": 6,
+  "activeContextChanged": false,
+  "modelFitted": false,
+  "julyLoaded": false,
+  "profitabilityEstablished": false,
+  "isolation": "data/public-activity-isolation-2026-11-02.json",
+  "sources": {
+    "apps/server/src/research/public-activity.ts": "ade94f87fc1c0d68f804865823b322bd4674726aab21060181fc7189413cfb2a",
+    "apps/server/src/research/executed-activity.ts": "8fd753e529c5a9e80dfa1d671b8f79fc04a2fd797de7e16c81e77017b968a05a",
+    "apps/server/src/research/executed-activity-availability.ts": "66911ffd4f82f356352fea2cafcaab6891c9ef14f058187ef62f3c79f4063726",
+    "apps/server/test/public-activity.test.ts": "5dd99514e7f8dbe0aafe617c3f02dabddce4dd952a04038da73c24d4fb2cbaf9",
+    "apps/server/test/executed-activity.test.ts": "6c53e51d9400b0d2a2c4db15b3c5203500f526caf03985fda33cabdcc8fb078e",
+    "apps/server/test/executed-activity-availability.test.ts": "91703d3ad3ca8fbbc8518bbcaedfcbabe0bc8552fcc2bc9f9322b25484eb2ea0",
+    "scripts/collect-public-activity.mjs": "7fa1af7a814d408b7988bf013cb48fbf8a9de83d965a4104dc00fb6ca0659e23",
+    "scripts/describe-public-activity.mjs": "15e20b4851374dbe79b735915ff9c237d306a203e8e3b7abf7bd901f6fbc6b91",
+    "scripts/verify_public_activity_reference.py": "9101790dbeb7b7e75bcddd2da5cde58a034cd2b20a911d782aa0cff1a6520eec",
+    "scripts/verify_executed_activity_reference.py": "3966f9b9458ca1a501d531b479df022e300d4a66a6c8bfc3f9ea7dc23391d66c"
+  }
+}

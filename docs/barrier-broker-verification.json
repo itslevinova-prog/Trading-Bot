@@ -1,0 +1,45 @@
+{
+  "verifiedAt": "2026-11-02T14:50:25.821Z",
+  "factsHash": "41357259f1631864199767b38b395aba3f2b4db5505c87505549d55a1e0c39a4",
+  "variants": [
+    {
+      "variant": "unchanged-hourly",
+      "rawPaidFillsVerified": 210,
+      "curvePointsVerified": 15744,
+      "signalFeaturesAndPredictionsVerified": 0,
+      "returnPct": -8.940894477014783,
+      "closedTrades": 105,
+      "allLedgerCashFeesAndPnLMatched": true,
+      "allExitReferencePricesMatched": true,
+      "allMarkToMarketAndDrawdownMatched": true
+    },
+    {
+      "variant": "ridge",
+      "rawPaidFillsVerified": 100,
+      "curvePointsVerified": 15744,
+      "signalFeaturesAndPredictionsVerified": 6560,
+      "returnPct": -4.39065250498153,
+      "closedTrades": 50,
+      "allLedgerCashFeesAndPnLMatched": true,
+      "allExitReferencePricesMatched": true,
+      "allMarkToMarketAndDrawdownMatched": true
+    },
+    {
+      "variant": "selected",
+      "rawPaidFillsVerified": 22,
+      "curvePointsVerified": 15744,
+      "signalFeaturesAndPredictionsVerified": 6560,
+      "returnPct": -0.8745618249965004,
+      "closedTrades": 11,
+      "allLedgerCashFeesAndPnLMatched": true,
+      "allExitReferencePricesMatched": true,
+      "allMarkToMarketAndDrawdownMatched": true
+    }
+  ],
+  "analyticCashMeanZeroControlsVerified": true,
+  "sourceEngineChanged": false,
+  "modelActivated": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false
+}

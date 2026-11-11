@@ -1,0 +1,223 @@
+{
+  "verifiedAt": "2026-10-31T17:07:50.315949+00:00",
+  "fullTests": 820,
+  "newTests": 18,
+  "offlineTests": 15,
+  "typechecksBuildPassed": true,
+  "buildId": "7641b9f3acf327d4ca5c87e41d689b944c4f5b503b98002c057fc2d07b358233",
+  "repeatIdenticalStudy": {
+    "path": "docs/covariance-study-88995ecf52b429fd.json",
+    "reportHash": "88995ecf52b429fdd8dc4c91841da4c1445ab2063d854ee894bae6954599a54c",
+    "protocolHash": "d81ee44d454a8b7d3526d97ebc52445048270b61a7efdaff95a70cf52d590608",
+    "buildId": "7641b9f3acf327d4ca5c87e41d689b944c4f5b503b98002c057fc2d07b358233",
+    "profitabilityEstablished": false
+  },
+  "diagnostics": [
+    {
+      "scenario": "base",
+      "sameEntryExitTimesPairsPrices": true,
+      "baseline": {
+        "returnPct": -3.9262047495605024,
+        "maxDrawdownPct": 3.9262047495604975,
+        "closedTrades": 39,
+        "fees": 11.395917201976433,
+        "winRatePct": 15.384615384615385,
+        "profitFactor": 0.5073211600605332,
+        "meanNetPnl": -1.0067191665539832,
+        "sameFillDoubleFeeReturnPct": -5.065796469758146,
+        "sameFillFeeStressIsAlgebraOnly": true,
+        "weeklyCarrySlices": [
+          {
+            "from": 1790883000000,
+            "to": 1791487800000,
+            "returnPct": -1.5583385049517728,
+            "positionsCarryAcrossBoundaries": true
+          },
+          {
+            "from": 1791487800000,
+            "to": 1792092600000,
+            "returnPct": -0.4825964377221159,
+            "positionsCarryAcrossBoundaries": true
+          },
+          {
+            "from": 1792092600000,
+            "to": 1792697400000,
+            "returnPct": -1.138589487986441,
+            "positionsCarryAcrossBoundaries": true
+          },
+          {
+            "from": 1792697400000,
+            "to": 1793216700000,
+            "returnPct": -0.802626568623499,
+            "positionsCarryAcrossBoundaries": true
+          }
+        ]
+      },
+      "candidate": {
+        "returnPct": -3.0478287773227364,
+        "maxDrawdownPct": 3.2657779031248197,
+        "closedTrades": 39,
+        "fees": 10.234482725329237,
+        "winRatePct": 15.384615384615385,
+        "profitFactor": 0.5714636021090858,
+        "meanNetPnl": -0.7814945582878684,
+        "sameFillDoubleFeeReturnPct": -4.07127704985566,
+        "sameFillFeeStressIsAlgebraOnly": true,
+        "weeklyCarrySlices": [
+          {
+            "from": 1790883000000,
+            "to": 1791487800000,
+            "returnPct": -1.1911009351747492,
+            "positionsCarryAcrossBoundaries": true
+          },
+          {
+            "from": 1791487800000,
+            "to": 1792092600000,
+            "returnPct": -0.36236938243371375,
+            "positionsCarryAcrossBoundaries": true
+          },
+          {
+            "from": 1792092600000,
+            "to": 1792697400000,
+            "returnPct": -0.9029714098435337,
+            "positionsCarryAcrossBoundaries": true
+          },
+          {
+            "from": 1792697400000,
+            "to": 1793216700000,
+            "returnPct": -0.6249282618312035,
+            "positionsCarryAcrossBoundaries": true
+          }
+        ]
+      },
+      "sharedDecisionTimes": 2593,
+      "sharedExogenousMismatches": 0,
+      "budgetReductionAssessmentsNotExecutions": 25,
+      "requiredCovarianceUnknownAssessments": 0,
+      "entryGrossSpendRatio": 0.8976646555795086,
+      "meanSampledExposureFraction": [
+        0.09307792960867742,
+        0.08033405690612423
+      ],
+      "candidateRealizedPnl": -30.478287773226867,
+      "uniformScaledBaselineFixedFillPnlAlgebraOnly": -35.24415234248888,
+      "uniformControlNotExecutableReplay": true
+    },
+    {
+      "scenario": "double-fee-adaptive",
+      "sameEntryExitTimesPairsPrices": true,
+      "baseline": {
+        "returnPct": 0.3110021169693944,
+        "maxDrawdownPct": 0.8468544433218881,
+        "closedTrades": 3,
+        "fees": 1.7973677872351488,
+        "winRatePct": 33.33333333333333,
+        "profitFactor": 1.3086962203147274,
+        "meanNetPnl": 1.0366737232313217,
+        "sameFillDoubleFeeReturnPct": 0.13126533824587952,
+        "sameFillFeeStressIsAlgebraOnly": true,
+        "weeklyCarrySlices": [
+          {
+            "from": 1790883000000,
+            "to": 1791487800000,
+            "returnPct": 0.7978781149102554,
+            "positionsCarryAcrossBoundaries": true
+          },
+          {
+            "from": 1791487800000,
+            "to": 1792092600000,
+            "returnPct": -0.48302207054976565,
+            "positionsCarryAcrossBoundaries": true
+          },
+          {
+            "from": 1792092600000,
+            "to": 1792697400000,
+            "returnPct": 0,
+            "positionsCarryAcrossBoundaries": true
+          },
+          {
+            "from": 1792697400000,
+            "to": 1793216700000,
+            "returnPct": 0,
+            "positionsCarryAcrossBoundaries": true
+          }
+        ]
+      },
+      "candidate": {
+        "returnPct": 0.3110021169693944,
+        "maxDrawdownPct": 0.8468544433218881,
+        "closedTrades": 3,
+        "fees": 1.7973677872351488,
+        "winRatePct": 33.33333333333333,
+        "profitFactor": 1.3086962203147274,
+        "meanNetPnl": 1.0366737232313217,
+        "sameFillDoubleFeeReturnPct": 0.13126533824587952,
+        "sameFillFeeStressIsAlgebraOnly": true,
+        "weeklyCarrySlices": [
+          {
+            "from": 1790883000000,
+            "to": 1791487800000,
+            "returnPct": 0.7978781149102554,
+            "positionsCarryAcrossBoundaries": true
+          },
+          {
+            "from": 1791487800000,
+            "to": 1792092600000,
+            "returnPct": -0.48302207054976565,
+            "positionsCarryAcrossBoundaries": true
+          },
+          {
+            "from": 1792092600000,
+            "to": 1792697400000,
+            "returnPct": 0,
+            "positionsCarryAcrossBoundaries": true
+          },
+          {
+            "from": 1792697400000,
+            "to": 1793216700000,
+            "returnPct": 0,
+            "positionsCarryAcrossBoundaries": true
+          }
+        ]
+      },
+      "sharedDecisionTimes": 2593,
+      "sharedExogenousMismatches": 0,
+      "budgetReductionAssessmentsNotExecutions": 0,
+      "requiredCovarianceUnknownAssessments": 0,
+      "entryGrossSpendRatio": 1.0,
+      "meanSampledExposureFraction": [
+        0.0006243297397843197,
+        0.0006243297397843197
+      ],
+      "candidateRealizedPnl": 3.1100211696939652,
+      "uniformScaledBaselineFixedFillPnlAlgebraOnly": 3.1100211696939652,
+      "uniformControlNotExecutableReplay": true
+    }
+  ],
+  "existing94CompiledModulesUnchanged": true,
+  "mainNoRestartOrConfigurationChange": true,
+  "mainConnected": true,
+  "mainPaperOnly": true,
+  "mainAIEnabled": false,
+  "mainRemoteEnabled": false,
+  "readyFeatures": 20,
+  "pairs": 20,
+  "candidateDefaultEnabled": false,
+  "newModelTrained": false,
+  "profitabilityEstablished": false,
+  "independentOutOfSample": false,
+  "files": {
+    "apps/server/src/context/portfolio-covariance.ts": "ab6409265aa50407c67b90fd70c3164529948bc22d65d65def5086b6d0002eb2",
+    "apps/server/src/strategy/covariance-paper.ts": "9d293135cd76ec098aebc8ff6c7832599abda39f8986679826071e9546a464f8",
+    "apps/server/src/research/covariance-replay.ts": "cb9044e2bdc63d029f4abc4d7c19326885317f48784e45ceed8160acfdde33a6",
+    "apps/server/test/portfolio-covariance.test.ts": "02f7393ff898c857666cf57f85d220037863094c2e2460a46056b7ac121043dd",
+    "scripts/compare-covariance.mjs": "a35bb9cac1b9c211e70015c39338d414a7e9ad480a709f2c1b42f375075cf4a0",
+    "docs/covariance-policy-protocol-v1.json": "d81ee44d454a8b7d3526d97ebc52445048270b61a7efdaff95a70cf52d590608",
+    "docs/upstream-research/freqtrade/manifest-covariance-review.json": "6e3a700ee85621b58e7dd0fea30b465260737bdd13041f1619ecf74ed0930fd9",
+    "data/verify-covariance-final-2026-10-31.log": "e4688d558712134a2f01e5e3045012c55d6bdd4a48a8192537925c3118136673",
+    "data/compare-covariance-2026-10-31.log": "9f88409911d99619bb186b014626826b965a80a999f707a65f758ddb0f75027d",
+    "data/compare-covariance-repeat-2026-10-31.log": "9f88409911d99619bb186b014626826b965a80a999f707a65f758ddb0f75027d",
+    "docs/PORTFOLIO-COVARIANCE.md": "6e92935dd0f14544dbc4ad357c55d79ecd979883164164f80518ef5cd87eaa24",
+    "docs/upstream-research/REVIEW-PASS6.md": "1b1bc0a2030da50849af01d70a3868dd1a9a9cd49d1b915b1616e7bbcfe5824e"
+  }
+}

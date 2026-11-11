@@ -1,0 +1,36 @@
+{
+  "verifiedAt": "2026-10-29T19:25:34.774Z",
+  "verifierHash": "13bb6d97e55aef687f0f30b9e05f3728ffe2e330aa0553209308472cb2b30c66",
+  "buildId": "90c2033c7872610a7969fd503d6c5ced49d26021ed301ccc751b9d0a87bdedf3",
+  "probeOnly": true,
+  "network": "live",
+  "quote": "EUR",
+  "markets": 20,
+  "features": 20,
+  "freshBooks": 20,
+  "m15BarsRange": [
+    999,
+    999
+  ],
+  "h1BarsRange": [
+    999,
+    999
+  ],
+  "unavailableMarkets": [],
+  "collectionDurationMs": 8018,
+  "publicRequests": 63,
+  "actualAccountAudited": false,
+  "modelInvoked": false,
+  "actualTradingReady": false,
+  "privateExchangeCalls": 0,
+  "realOrders": 0,
+  "paidCalls": 0,
+  "captureHash": "38c06534ebd747e076c3b7043a11cca72e2649deb2ea1590842265793b7e9cbe",
+  "artifact": "docs/verification-runs/native-public-context-2026-10-29T19-25-34.774Z-38c06534ebd747e076c3b7043a11cca72e2649deb2ea1590842265793b7e9cbe.json",
+  "limitations": [
+    "No private account, protection, fills or commissions verified.",
+    "No actual model or profit claim.",
+    "Bounded1000 requested bars per interval; not90 days.",
+    "Order-book ages use conservative local request start, not an attested exchange event time."
+  ]
+}

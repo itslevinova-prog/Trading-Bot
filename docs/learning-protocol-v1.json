@@ -1,0 +1,51 @@
+{
+  "version": "local-ridge-research-v1",
+  "registeredAt": "2026-10-30T20:45:37.035456+00:00",
+  "scope": "Offline statistical research only; no broker/provider activation",
+  "datasetId": "d0066ea5e97b107a22c148dbfcfcd245a2ea37e555684a5af36a382134b14926",
+  "historicalDataAlreadyInspected": true,
+  "independentProspectiveEvidence": false,
+  "features": [
+    "rsi14/100",
+    "ema20/ema50 percent",
+    "price/ema50_hour percent",
+    "change1h percent",
+    "change4h percent",
+    "change24h percent",
+    "atr percent",
+    "volume ratio"
+  ],
+  "label": "gross future close / next full 15m bar open - 1; enter15m after closed-feature decision, exit4h after entry",
+  "strideHours": 6,
+  "horizonHours": 4,
+  "entryLagMinutes": 15,
+  "folds": {
+    "trainDays": 14,
+    "validationDays": 4,
+    "testDays": 4,
+    "stepDays": 4,
+    "purge": "label end strictly before next phase start; all pairs share UTC boundaries"
+  },
+  "models": [
+    "zero forecast / NO TRADE",
+    "training mean",
+    "ridge lambda10 with unpenalized intercept"
+  ],
+  "ridgeLambda": 10,
+  "minimumTrainingRows": 200,
+  "minimumValidationRows": 40,
+  "validationChoice": "lowest MAE across identical validation rows, abstentions scored as zero; ridge ineligible if coverage below95percent; ties favor zero then mean then ridge",
+  "oodMaxAbsTrainZ": 6,
+  "maxModelAgeDays": 10,
+  "tradeDiagnostic": "fixed horizon only, not actual broker/mock strategy. Forecast must exceed compounded round-trip fee/spread/slippage cost plus0.5percent; top3positive candidates per6h group,10percent capital each, rest cash, simultaneous markets correlated. No leverage/stops; gaps/execution reality unknown.",
+  "entryAllocationPct": 0.1,
+  "maxConcurrentDiagnosticPositions": 3,
+  "forecastMargin": 0.005,
+  "baselineComparisons": "zero/mean/ridge and selected use identical fixed-horizon capital/cost assumptions. Existing frozen RuleBasedProvider full-period baseline remains separately preserved, not falsely claimed as same strategy.",
+  "metrics": [
+    "MAE/RMSE/coverage by fold/model",
+    "net fixed-horizon diagnostic return/fees/drawdown/turnover/counts",
+    "sample/unique UTC time/pair counts, independence unknown"
+  ],
+  "success": "Do not enable any model or claim profit. Report results including failures; compare more regimes/cost stress/prospective evidence before proposing deployment."
+}

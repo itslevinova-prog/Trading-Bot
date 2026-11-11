@@ -1,0 +1,1583 @@
+{
+  "verifiedAt": "2026-10-31T17:33:34.122Z",
+  "probeBuildId": "520b221b817df99f6f87b5e27720d96900694715e35d1c48fab98d8c4667b03c",
+  "collectorRunId": "ce835d90-87de-4a94-9acb-fde0c7950ccd",
+  "collectorBuildId": "972d609de14f525ca33a571c22e47e98dd010311d26378616e3badd28192f7cf",
+  "pairs": [
+    "ADA/EUR",
+    "APT/EUR",
+    "BCH/EUR",
+    "BNB/EUR",
+    "BTC/EUR",
+    "DOGE/EUR",
+    "EGLD/EUR",
+    "ETH/EUR",
+    "LINK/EUR",
+    "LTC/EUR",
+    "NEAR/EUR",
+    "PEPE/EUR",
+    "RENDER/EUR",
+    "SHIB/EUR",
+    "SOL/EUR",
+    "SUI/EUR",
+    "TRX/EUR",
+    "WIN/EUR",
+    "XLM/EUR",
+    "XRP/EUR"
+  ],
+  "metadataHash": "52b6003c26dbf46606bb1ab24bc6dd556aac560eb3751e3cc783babb72ac6b98",
+  "metadata": [
+    {
+      "pair": "ADA/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.00010000",
+          "maxPrice": "1000.00000000",
+          "tickSize": "0.00010000"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "0.10000000",
+          "maxQty": "900000.00000000",
+          "stepSize": "0.10000000"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00000000",
+          "maxQty": "18948.40750000",
+          "stepSize": "0.00000000"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "5.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    },
+    {
+      "pair": "APT/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.00010000",
+          "maxPrice": "1000.00000000",
+          "tickSize": "0.00010000"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "0.01000000",
+          "maxQty": "92141578.00000000",
+          "stepSize": "0.01000000"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00000000",
+          "maxQty": "3030.62016666",
+          "stepSize": "0.00000000"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "5.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    },
+    {
+      "pair": "BCH/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.10000000",
+          "maxPrice": "100000.00000000",
+          "tickSize": "0.10000000"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "0.00100000",
+          "maxQty": "90000.00000000",
+          "stepSize": "0.00100000"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00000000",
+          "maxQty": "15.00735000",
+          "stepSize": "0.00000000"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "5.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    },
+    {
+      "pair": "BNB/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.01000000",
+          "maxPrice": "10000.00000000",
+          "tickSize": "0.01000000"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "0.00100000",
+          "maxQty": "9222449.00000000",
+          "stepSize": "0.00100000"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00000000",
+          "maxQty": "13.23417083",
+          "stepSize": "0.00000000"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "5.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    },
+    {
+      "pair": "BTC/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.01000000",
+          "maxPrice": "1000000.00000000",
+          "tickSize": "0.01000000"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "0.00001000",
+          "maxQty": "9000.00000000",
+          "stepSize": "0.00001000"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00000000",
+          "maxQty": "0.56255975",
+          "stepSize": "0.00000000"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "5.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    },
+    {
+      "pair": "DOGE/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.00001000",
+          "maxPrice": "1000.00000000",
+          "tickSize": "0.00001000"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "1.00000000",
+          "maxQty": "9000000.00000000",
+          "stepSize": "1.00000000"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00000000",
+          "maxQty": "43412.24583333",
+          "stepSize": "0.00000000"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "1.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    },
+    {
+      "pair": "EGLD/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.00100000",
+          "maxPrice": "100000.00000000",
+          "tickSize": "0.00100000"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "0.01000000",
+          "maxQty": "90000.00000000",
+          "stepSize": "0.01000000"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00000000",
+          "maxQty": "3280.53904166",
+          "stepSize": "0.00000000"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "5.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    },
+    {
+      "pair": "ETH/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.01000000",
+          "maxPrice": "100000.00000000",
+          "tickSize": "0.01000000"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "0.00010000",
+          "maxQty": "90000.00000000",
+          "stepSize": "0.00010000"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00000000",
+          "maxQty": "69.46855583",
+          "stepSize": "0.00000000"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "5.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    },
+    {
+      "pair": "LINK/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.00100000",
+          "maxPrice": "10000.00000000",
+          "tickSize": "0.00100000"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "0.01000000",
+          "maxQty": "90000.00000000",
+          "stepSize": "0.01000000"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00000000",
+          "maxQty": "217.07225000",
+          "stepSize": "0.00000000"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "5.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    },
+    {
+      "pair": "LTC/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.01000000",
+          "maxPrice": "100000.00000000",
+          "tickSize": "0.01000000"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "0.00100000",
+          "maxQty": "900000.00000000",
+          "stepSize": "0.00100000"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00000000",
+          "maxQty": "49.74274166",
+          "stepSize": "0.00000000"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "5.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    },
+    {
+      "pair": "NEAR/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.00100000",
+          "maxPrice": "1000.00000000",
+          "tickSize": "0.00100000"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "0.10000000",
+          "maxQty": "900000.00000000",
+          "stepSize": "0.10000000"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00000000",
+          "maxQty": "633.01541666",
+          "stepSize": "0.00000000"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "5.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    },
+    {
+      "pair": "PEPE/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.00000001",
+          "maxPrice": "0.10000000",
+          "tickSize": "0.00000001"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "1.00",
+          "maxQty": "92233720368.00",
+          "stepSize": "1.00"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00",
+          "maxQty": "1131291263.25",
+          "stepSize": "0.00"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "1.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    },
+    {
+      "pair": "RENDER/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.00100000",
+          "maxPrice": "1000.00000000",
+          "tickSize": "0.00100000"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "0.01000000",
+          "maxQty": "92141578.00000000",
+          "stepSize": "0.01000000"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00000000",
+          "maxQty": "1751.61358333",
+          "stepSize": "0.00000000"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "5.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    },
+    {
+      "pair": "SHIB/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.00000001",
+          "maxPrice": "1.00000000",
+          "tickSize": "0.00000001"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "1.00",
+          "maxQty": "46116860414.00",
+          "stepSize": "1.00"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00",
+          "maxQty": "4013319367.01",
+          "stepSize": "0.00"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "1.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    },
+    {
+      "pair": "SOL/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.01000000",
+          "maxPrice": "10000.00000000",
+          "tickSize": "0.01000000"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "0.00100000",
+          "maxQty": "9222440.00000000",
+          "stepSize": "0.00100000"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00000000",
+          "maxQty": "456.94710416",
+          "stepSize": "0.00000000"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "5.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    },
+    {
+      "pair": "SUI/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.00010000",
+          "maxPrice": "1000.00000000",
+          "tickSize": "0.00010000"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "0.10000000",
+          "maxQty": "92141578.00000000",
+          "stepSize": "0.10000000"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00000000",
+          "maxQty": "5980.39791666",
+          "stepSize": "0.00000000"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "5.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    },
+    {
+      "pair": "TRX/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.00010000",
+          "maxPrice": "1000.00000000",
+          "tickSize": "0.00010000"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "1.00000000",
+          "maxQty": "90000000.00000000",
+          "stepSize": "1.00000000"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00000000",
+          "maxQty": "87858.94166666",
+          "stepSize": "0.00000000"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "5.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    },
+    {
+      "pair": "WIN/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.00000001",
+          "maxPrice": "100.00000000",
+          "tickSize": "0.00000001"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "1.00000000",
+          "maxQty": "913205152.00000000",
+          "stepSize": "1.00000000"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00000000",
+          "maxQty": "609346562.37083333",
+          "stepSize": "0.00000000"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "5.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    },
+    {
+      "pair": "XLM/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.00010000",
+          "maxPrice": "1000.00000000",
+          "tickSize": "0.00010000"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "1.00000000",
+          "maxQty": "9000000.00000000",
+          "stepSize": "1.00000000"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00000000",
+          "maxQty": "148793.46666666",
+          "stepSize": "0.00000000"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "5.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    },
+    {
+      "pair": "XRP/EUR",
+      "status": "TRADING",
+      "isSpotTradingAllowed": true,
+      "orderTypes": [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT",
+        "TAKE_PROFIT_LIMIT"
+      ],
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.00010000",
+          "maxPrice": "1000.00000000",
+          "tickSize": "0.00010000"
+        },
+        {
+          "filterType": "LOT_SIZE",
+          "minQty": "0.10000000",
+          "maxQty": "900000.00000000",
+          "stepSize": "0.10000000"
+        },
+        {
+          "filterType": "ICEBERG_PARTS",
+          "limit": 100
+        },
+        {
+          "filterType": "MARKET_LOT_SIZE",
+          "minQty": "0.00000000",
+          "maxQty": "27122.55750000",
+          "stepSize": "0.00000000"
+        },
+        {
+          "filterType": "TRAILING_DELTA",
+          "minTrailingAboveDelta": 10,
+          "maxTrailingAboveDelta": 2000,
+          "minTrailingBelowDelta": 10,
+          "maxTrailingBelowDelta": 2000
+        },
+        {
+          "filterType": "PERCENT_PRICE_BY_SIDE",
+          "bidMultiplierUp": "1.2",
+          "bidMultiplierDown": "0.5",
+          "askMultiplierUp": "2",
+          "askMultiplierDown": "0.8",
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "NOTIONAL",
+          "minNotional": "5.00000000",
+          "applyMinToMarket": true,
+          "maxNotional": "9000000.00000000",
+          "applyMaxToMarket": false,
+          "avgPriceMins": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDERS",
+          "maxNumOrders": 200
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_LISTS",
+          "maxNumOrderLists": 20
+        },
+        {
+          "filterType": "MAX_NUM_ALGO_ORDERS",
+          "maxNumAlgoOrders": 5
+        },
+        {
+          "filterType": "MAX_NUM_ORDER_AMENDS",
+          "maxNumOrderAmends": 10
+        }
+      ]
+    }
+  ],
+  "publicRequests": 2,
+  "rankChangesPreserveMembership": true,
+  "zeroVolumeDoesNotDropMembers": true,
+  "haltedMemberRejected": true,
+  "readOnlyNoDatabaseWrites": true,
+  "envChanged": false,
+  "oldExperimentResumed": false,
+  "prospectiveRegistrationPerformed": false,
+  "privateExchangeCalls": 0,
+  "realAiCalls": 0,
+  "realOrders": 0,
+  "paidCalls": 0
+}

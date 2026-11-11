@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';import{writeFileSync}from'node:fs';
+import {publicRequest}from'../apps/server/dist/market/binance-data.js';
+import {parseFixedPairs,selectBinanceUniverse}from'../apps/server/dist/market/pinned-universe.js';
+import {inspectBuild,digest}from'../apps/server/dist/provenance/build.js';import{canonicalJson}from'../apps/server/dist/research/dataset.js';
+const build=inspectBuild(process.cwd());assert.equal(build.verified,true);
+const get=async path=>{const response=await fetch('http://127.0.0.1:3000'+path,{signal:AbortSignal.timeout(10000)});assert.equal(response.status,200);return response.json();};
+const [context,provenance]=await Promise.all([get('/api/context'),get('/api/provenance')]);assert.equal(context.venue,'binance');assert.equal(context.quoteCurrency,'EUR');
+const pairs=parseFixedPairs(JSON.stringify(context.markets.map(m=>m.pair))),[info,ticks]=await Promise.all([publicRequest('/api/v3/exchangeInfo'),publicRequest('/api/v3/ticker/24hr')]);
+const options={quote:'EUR',topN:pairs.length,held:[],fixed:pairs},active=selectBinanceUniverse(info.symbols,ticks,options);assert.equal(active.length,pairs.length);
+const reranked=ticks.map(t=>({...t,quoteVolume:pairs.some(p=>p.replace('/','')===t.symbol)?'0':'999999999999'}));assert.deepEqual(selectBinanceUniverse(info.symbols,reranked,options).map(x=>x.s.symbol),active.map(x=>x.s.symbol));
+const halted=structuredClone(info.symbols),victim=halted.find(s=>s.symbol===active[0].s.symbol);victim.status='BREAK';assert.throws(()=>selectBinanceUniverse(halted,ticks,options),/no longer tradable/);
+const metadata=active.map(({s})=>({pair:s.baseAsset+'/'+s.quoteAsset,status:s.status,isSpotTradingAllowed:s.isSpotTradingAllowed,orderTypes:s.orderTypes,filters:s.filters}));
+const proof={verifiedAt:new Date().toISOString(),probeBuildId:build.buildId,collectorRunId:provenance.runId,collectorBuildId:provenance.build.buildId,pairs,metadataHash:digest(canonicalJson(metadata)),metadata,publicRequests:2,rankChangesPreserveMembership:true,zeroVolumeDoesNotDropMembers:true,haltedMemberRejected:true,readOnlyNoDatabaseWrites:true,envChanged:false,oldExperimentResumed:false,prospectiveRegistrationPerformed:false,privateExchangeCalls:0,realAiCalls:0,realOrders:0,paidCalls:0};writeFileSync('docs/fixed-universe-public-probe.json',JSON.stringify(proof,null,2));console.log(JSON.stringify({...proof,metadata:undefined}));

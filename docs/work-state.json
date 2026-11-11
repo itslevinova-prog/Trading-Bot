@@ -1,0 +1,20 @@
+{
+  "goal": "Mindestens100produktive Stunden: Freqtrade/Jesse/OctoBot gründlich untersuchen und nützliche Tradingintelligenz selektiv im bestehenden Bot integrieren; gratis, nur Paper und simulierte KI. Aktueller Goal-Auftrag dieses Chats ist massgeblich.",
+  "mode": "paper",
+  "costRule": "Kein Geld ausgeben, keine Credits kaufen, keine kostenpflichtigen APIs oder Dienste, keine Cloud-LLMs, keine Echtgeld-Orders, keine Keys anlegen; LIVE_ENABLED=false; AI_ALLOW_REMOTE=false; LIVE_ACK nie setzen.",
+  "currentPhase": "Welle 1: Issues #3, #5, #6 und #14; laufende Paper-Forschung ohne Echtgeld oder externe KI.",
+  "nextSteps": [
+    "#3: Datenarchive und Splits getrennt dokumentieren, keine JSON-Pfade verschieben.",
+    "#5: Backtest- und Kostenrobustheitsnachweise getrennt vervollständigen.",
+    "#14: parallele Zuständigkeit und unveränderte Paper-Sicherheit einhalten.",
+    "#2 und #4: nächste falsifizierbare, vorab registrierte Forschungsschritte abstimmen.",
+    "#11 und #13: zukünftige prospektive Checks nur nach festem Protokoll."
+  ],
+  "updatedAt": "2026-11-05T21:45:18.530Z",
+  "archive": "docs/archive/work-state-2026-11-05.json",
+  "automationId": "trading-projekt-kostenlos-weiterentwickeln",
+  "requiredActiveSeconds": 360000,
+  "totalActiveSeconds": 100575,
+  "goalComplete": false,
+  "lastCheckpointAt": "2026-11-05T15:16:25.615Z"
+}

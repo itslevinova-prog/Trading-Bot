@@ -1,0 +1,16 @@
+{
+  "verifiedAt": "2026-11-02T15:54:30.655Z",
+  "factsHash": "b599b7f4d444621d8e06bc2cfc6646e396b1997fc8ed94e95db72e095a7dc057",
+  "clockChoicesVerified": 2624,
+  "rowPredictionsCompared": 52480,
+  "validationRows": 6560,
+  "testRows": 6560,
+  "allWinnerChoicesForecastOnly": true,
+  "brokerEntrySetsExactlyMatched": true,
+  "allSummaryErrorsAndLabelBoundsVerified": true,
+  "newSelectorChosen": false,
+  "newModelFitted": false,
+  "independentSamples": null,
+  "julyLoaded": false,
+  "profitabilityEstablished": false
+}

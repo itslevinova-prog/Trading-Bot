@@ -1,0 +1,6 @@
+{
+ "version":"first-barrier-outcome-design-v1",
+ "registeredAt":"2026-11-01T14:10:00Z",
+ "purpose":"Separate offline stop/target/horizon learning target, not existing policy PnL or fixed-horizon gross labels",
+ "rules":["Explicit data scope, fixed horizon, fee/spread/slippage and existing stop/target bounds bind target hash","Full contiguous closed horizon must be available at asOf, even if a barrier occurred early","Model entry at candle open; entry-bar path timing is an idealization, not nominal+5s execution","Open gaps precede intrabar extremes; adverse stops use open, favorable targets conservatively use target","Both barriers touched with open between them yields ambiguous and null payoff, never stop-first or target-first label","No barrier yields costed horizon-close outcome, not a winning/losing barrier class","No fitting, probability, strategy deployment, threshold sweep or July outcomes"]
+}

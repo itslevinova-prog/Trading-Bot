@@ -1,0 +1,23 @@
+{
+  "version": "directional-clock-verification-v1",
+  "verifiedAt": "2026-11-02T18:59:57.858Z",
+  "report": "docs/directional-clock-corpus-c3c54031ef51c33c.json",
+  "reportHash": "c3c54031ef51c33cef9b568a340c0bc4a3a477c1858fe679c1a98879108bc6b0",
+  "verifierHash": "1ce2deb61a4c9db9482143d9eb68375090b83ffb66b6d3476939db1cbd333613",
+  "originalCorpusHash": "3262b4fb3be9b47e7edf0954e93d52f85fda6dfedf7159178c440fa6300a7414",
+  "originalFileUnchanged": true,
+  "originalEightFeatureSchemaUnchanged": true,
+  "originalCostedTargetUnchanged": true,
+  "rows": 7280,
+  "complete": 7280,
+  "unknown": 0,
+  "explicitMissingReasons": {},
+  "independentFieldsChecked": 43680,
+  "maximumAbsoluteDifference": 9.947598300641403e-14,
+  "method": "Raw price units; closed-form power sums independently reconstruct all six values, not runtime recurrence. Source hashes/window/order/clocks checked for every row.",
+  "newModelFitted": false,
+  "activeContextChanged": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false
+}

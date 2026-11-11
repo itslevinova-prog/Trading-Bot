@@ -1,0 +1,9 @@
+import {test,expect} from 'vitest';import {closedVectorRiskRegime} from '../src/research/regime-error-analysis.js';
+const x=[.55,1,2,1,2,3,.5,1.5];
+test('existing bullish descriptors and floor geometry are retained without inventing a probability',()=>{const r=closedVectorRiskRegime(x);expect(r).toMatchObject({direction:'bullish',volumeConfirmed:true,sourcePolicyFloorBinding:true,referenceSourceStopPct:.02,sourcePolicyStopAtrMultiple:4});expect(r).not.toHaveProperty('winProbability');});
+test('bearish requires all three existing directional signs',()=>{expect(closedVectorRiskRegime([.4,-1,-2,-1,-2,-3,.5,1])).toMatchObject({direction:'bearish',volumeConfirmed:false});const r=[...x];r[4]=-1;expect(closedVectorRiskRegime(r).direction).toBe('mixed');});
+test('zero directional signs remain mixed',()=>{for(const i of [1,2,4]){const r=[...x];r[i]=0;expect(closedVectorRiskRegime(r).direction).toBe('mixed');}});
+test('onepercent ATR boundary and volume1.2 match existing strict/inclusive predicates',()=>{const r=[...x];r[6]=1;r[7]=1.2;expect(closedVectorRiskRegime(r)).toMatchObject({sourcePolicyFloorBinding:false,volumeConfirmed:true,sourcePolicyStopAtrMultiple:2});r[6]=2;expect(closedVectorRiskRegime(r)).toMatchObject({referenceSourceStopPct:.04,sourcePolicyStopAtrMultiple:2,fixedStopAtrMultiple:1});});
+test.each([Array(8),[...x,0],x.slice(1),[NaN,...x.slice(1)],[-.01,...x.slice(1)],[1.01,...x.slice(1)]])('invalid dimensions, missingness and RSI refuse classification',r=>{expect(()=>closedVectorRiskRegime(r)).toThrow();});
+test('invalid returns/ratios/ATR/volume are unknown rather than a made-up regime',()=>{for(const [i,v]of [[1,-100],[2,-101],[3,-100],[4,-100],[5,-100],[6,0],[7,-1]]){const r=[...x];r[i!]=v!;expect(()=>closedVectorRiskRegime(r)).toThrow();}});
+test('caller arrays are not reordered or modified',()=>{const before=JSON.stringify(x);closedVectorRiskRegime(Object.freeze([...x]));expect(JSON.stringify(x)).toBe(before);});

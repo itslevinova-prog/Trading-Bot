@@ -1,0 +1,45 @@
+{
+  "verifiedAt": "2026-11-01T12:31:23.857Z",
+  "verifierHash": "42f8fa9b20f97337fd47c60b34d95c739ee22b5f8bf9754218c8f5f6fc0f46e0",
+  "artifact": "docs/hourly-entry-failure-audit-e302125e19392064.json",
+  "factsHash": "e302125e19392064aa2b477c244c6b1d316d53456cfb70f331e65eaa0183a951",
+  "scopedRowsVerified": 296,
+  "completeInteriorPaths": 296,
+  "censored": 2,
+  "baseFeeSelectedTradeTotals": {
+    "programmed-closed-breakout-entry-v1": {
+      "entries": 153,
+      "mature": 152,
+      "censored": 1,
+      "profits": 41,
+      "losses": 111,
+      "netPnl": -13.356497094912568,
+      "grossFillPnl": -8.90950952340681,
+      "explicitFees": 4.446987571505771,
+      "feeOnlySignFlips": 3,
+      "lossWithPositiveInteriorClose": 53,
+      "lossWithNoPositiveInteriorClose": 56,
+      "lossWithUnknownInteriorClose": 2
+    },
+    "programmed-rising-hourly-breakout-entry-v1": {
+      "entries": 139,
+      "mature": 138,
+      "censored": 1,
+      "profits": 36,
+      "losses": 102,
+      "netPnl": -11.866623882901472,
+      "grossFillPnl": -7.808998855974153,
+      "explicitFees": 4.0576250269273455,
+      "feeOnlySignFlips": 3,
+      "lossWithPositiveInteriorClose": 52,
+      "lossWithNoPositiveInteriorClose": 48,
+      "lossWithUnknownInteriorClose": 2
+    }
+  },
+  "independentSamples": null,
+  "julyLoaded": false,
+  "modelTrained": false,
+  "postOutcomeOnly": true,
+  "alternativeExitPerformanceEstablished": false,
+  "profitabilityEstablished": false
+}

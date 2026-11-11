@@ -1,0 +1,480 @@
+BAUAUFTRAG: KI-PAPER-TRADING-BOT MIT LIVE-DASHBOARD (KRYPTO, KRAKEN, EUR)
+=========================================================================
+
+Du bist ein erfahrener TypeScript-Entwickler. Baue das unten beschriebene Projekt vollständig,
+lauffähig und getestet. Alle Architektur- und Produktentscheidungen sind in diesem Dokument
+bereits getroffen. Halte dich daran. Wo etwas nicht festgelegt ist, wähle die einfachste
+robuste Lösung und dokumentiere sie im README unter "Eigene Entscheidungen".
+
+WICHTIG:
+- Es wird KEIN echtes Geld gehandelt. Es gibt in dieser Version keinen Echtgeld-Handel.
+- Die KI-Anbindung (Claude API) wird NOCH NICHT eingebaut. Alles rundherum (Datenfluss,
+  Kontext, Gedächtnis, Validierung, Dashboard) wird gebaut, die KI selbst ist ein Platzhalter.
+- Erfinde keine API-Felder. Lies vor der Implementierung die offizielle Kraken-Doku
+  (docs.kraken.com, Spot WebSocket v2 und Spot REST) und richte dich exakt danach.
+- UI-Sprache: Deutsch. Code, Variablen und Kommentare: Englisch.
+
+
+-------------------------------------------------------------------------
+1. ZIEL
+-------------------------------------------------------------------------
+Ein lokal laufender Bot, der live die echten Kurse der wichtigsten Kryptowährungen gegen EUR
+von Kraken empfängt und mit Fake-Geld (Start: 100 EUR pro Konto) so realistisch wie möglich
+handelt. Drei Konten laufen parallel:
+
+  1. "KI"         – Entscheidungen durch eine KI (vorerst Platzhalter, inaktiv ohne API-Key)
+  2. "Regeln"     – einfache, feste Regel-Strategie (voll funktionsfähig)
+  3. "Buy & Hold" – kauft beim Start für 100 EUR Bitcoin und hält (Vergleichsmassstab)
+
+Ein Web-Dashboard zeigt alles live: Kurse, Charts mit Käufen/Verkäufen, Kontostände,
+Vergleich der drei Konten und ein Log jeder Entscheidung mit Begründung.
+
+Realismus ist die wichtigste Anforderung. Ein Paper-Trade soll sich so verhalten, wie ein
+echter Market-Order auf Kraken zu diesem Zeitpunkt ausgeführt worden wäre.
+
+
+-------------------------------------------------------------------------
+2. TECH-STACK (FIX)
+-------------------------------------------------------------------------
+- Node.js 22 LTS, TypeScript (strict mode), ES Modules
+- Paketmanager: pnpm mit Workspaces
+- Backend: Fastify + @fastify/websocket (Live-Push ans Dashboard)
+- Kraken-Verbindung: "ws" Paket (WebSocket-Client), fetch für REST
+- Datenbank: SQLite via better-sqlite3, Schema und Queries mit Drizzle ORM,
+  Migrationen mit drizzle-kit
+- Validierung: zod (Config, KI-Antworten, API-Payloads)
+- Logging: pino (pretty im Dev-Modus)
+- Frontend: Vite + React + TypeScript + Tailwind CSS
+- Charts: lightweight-charts (TradingView, Open Source) für Kerzen, Marker und Linien
+- Tests: Vitest
+- Docker: Dockerfile (multi-stage) + docker-compose.yml, ein Container, SQLite-Datei in
+  einem Volume
+- Indikatoren: selbst implementieren (keine Library), mit Unit-Tests
+
+Ordnerstruktur:
+  /apps/server        Backend (Marktdaten, Broker, Strategien, DB, API, WS-Push)
+  /apps/web           Dashboard
+  /packages/shared    Gemeinsame Typen und zod-Schemas
+  /prompts            Prompt-Vorlagen für die KI (Textdateien)
+  /data               SQLite-Datei (gitignored)
+
+
+-------------------------------------------------------------------------
+3. KONFIGURATION
+-------------------------------------------------------------------------
+Alle Werte über .env, validiert mit zod beim Start. .env.example mitliefern.
+
+  PORT=3000
+  QUOTE_CURRENCY=EUR
+  STARTING_BALANCE_EUR=100
+  TOP_N_PAIRS=20
+  DECISION_INTERVAL_MINUTES=15
+  TAKER_FEE_RATE=0.004            # Kraken Pro Basis-Stufe Taker. Vor Start auf
+                                  # kraken.com/features/fee-schedule prüfen.
+  SIMULATED_LATENCY_MS_MIN=300
+  SIMULATED_LATENCY_MS_MAX=900
+  MAX_BOOK_AGE_MS=5000            # Älteres Orderbuch = kein Trade
+  MAX_POSITION_PCT=0.30           # max. Anteil des Kontowerts pro Coin
+  MAX_OPEN_POSITIONS=4
+  MIN_ORDER_EUR=10
+  DEFAULT_STOP_LOSS_PCT=0.05
+  DEFAULT_TAKE_PROFIT_PCT=0.10
+  MAX_TRADES_PER_DAY=10           # pro Konto
+  COIN_COOLDOWN_MINUTES=60        # nach Verkauf kein Wiedereinstieg in denselben Coin
+  MAX_DRAWDOWN_PCT=0.25           # Konto pausiert bei -25 % vom Höchststand
+  AI_ENABLED=false
+  AI_PROVIDER=none                # später: claude
+  AI_MODEL=                       # später setzen
+  ANTHROPIC_API_KEY=              # bleibt leer, wird in dieser Version nicht verwendet
+  LOG_LEVEL=info
+  TZ_DISPLAY=Europe/Zurich
+
+
+-------------------------------------------------------------------------
+4. MARKTDATEN (KRAKEN)
+-------------------------------------------------------------------------
+4.1 Paar-Auswahl
+- Beim Start und danach täglich um 00:05 UTC: alle Spot-Paare über REST AssetPairs laden.
+- Nur Paare mit Quote EUR. Stablecoins und Fiat ausschliessen (z.B. USDT, USDC, EURT, DAI,
+  PYUSD, GBP, USD, CHF). Liste der Ausschlüsse als Konstante.
+- Über REST Ticker das 24h-Volumen in EUR berechnen (Volumen * VWAP) und die TOP_N_PAIRS
+  mit dem höchsten EUR-Volumen wählen. BTC/EUR ist immer dabei.
+- Für jedes Paar speichern: Symbol (WS-Format, z.B. "BTC/EUR"), REST-Name, ordermin,
+  costmin, lot_decimals, pair_decimals (Preisgenauigkeit), Status.
+- Paare mit offenen Positionen bleiben aktiv, auch wenn sie aus den Top-N fallen.
+
+4.2 Live-Streams (WebSocket v2, öffentlich, kein Konto nötig)
+- Kanal "ticker" für alle aktiven Paare (Bid, Ask, Last, Volumen, 24h-Change).
+- Kanal "book" mit Tiefe 10 für alle aktiven Paare. Orderbuch lokal korrekt pflegen
+  (Snapshot + Updates, Checksumme gemäss Kraken-Doku prüfen; bei Fehler neu abonnieren).
+- Kanal "ohlc" mit Intervall 15 und 60 Minuten.
+- Reconnect mit exponentiellem Backoff (1s bis 60s), danach alle Kanäle neu abonnieren.
+- Nach einem Reconnect Kerzenlücken über REST OHLC nachladen.
+- Jeder Datenpunkt bekommt einen Empfangs-Zeitstempel. Status "Daten veraltet", wenn für
+  ein Paar länger als MAX_BOOK_AGE_MS kein Buch-Update kam.
+
+4.3 Historie
+- Beim ersten Start für jedes Paar die letzten 720 Kerzen (15m und 60m) per REST laden,
+  damit Indikatoren sofort berechnet werden können.
+- Kerzen in SQLite speichern, ältere als 90 Tage täglich löschen.
+
+
+-------------------------------------------------------------------------
+5. INDIKATOREN (pro Paar, auf geschlossenen 15m-Kerzen, zusätzlich 60m-Trend)
+-------------------------------------------------------------------------
+Selbst implementieren, jeweils mit Unit-Test gegen bekannte Referenzwerte:
+- EMA 20 und EMA 50 (15m), EMA 50 (60m)
+- RSI 14 (Wilder-Glättung)
+- ATR 14 und ATR in % des Preises
+- Volumen-Verhältnis: Volumen letzte Kerze / Durchschnitt der letzten 20 Kerzen
+- Preisänderung 1h, 4h, 24h in %
+- Spread in % aus aktuellem Bid/Ask
+- Abstand Preis zu EMA 50 in %
+
+Ergebnis pro Paar als "FeatureSnapshot"-Objekt (zod-Schema in /packages/shared).
+
+
+-------------------------------------------------------------------------
+6. PAPER-BROKER (HERZSTÜCK, MUSS EXTREM REALISTISCH SEIN)
+-------------------------------------------------------------------------
+Interface ExecutionAdapter mit Methoden placeMarketOrder(...) und getBalances(...).
+Implementierung in dieser Version: PaperExecutionAdapter.
+Zusätzlich eine Datei KrakenLiveExecutionAdapter.ts, die nur das Interface erfüllt und bei
+jedem Aufruf einen Fehler "Live-Handel ist in dieser Version nicht implementiert" wirft.
+
+Nur Market-Orders. Kein Hebel, kein Short, kein negativer Kontostand.
+
+Ablauf einer Order:
+1. Eingang: Konto, Paar, Seite (buy/sell), Betrag (buy: EUR-Betrag; sell: Menge oder Anteil
+   der Position), Grund, Entscheidungs-ID.
+2. Vorab-Prüfung: Datenalter ok, Konto nicht pausiert, Risikoregeln (Kapitel 7) erfüllt.
+   Sonst Ablehnung mit klarem Grund (wird gespeichert und im Dashboard angezeigt).
+3. Mittelkurs zum Entscheidungszeitpunkt merken (für Slippage-Messung).
+4. Simulierte Latenz: zufällig zwischen SIMULATED_LATENCY_MS_MIN und _MAX warten.
+5. Danach das AKTUELLE Orderbuch nehmen (nicht das zum Entscheidungszeitpunkt) und die
+   Order Stufe für Stufe durch das Buch "laufen" lassen:
+   - Kauf frisst die Ask-Seite von unten nach oben, Verkauf die Bid-Seite von oben nach unten.
+   - Ausführungspreis = volumengewichteter Durchschnitt (VWAP) der gefressenen Stufen.
+   - Reicht die Buchtiefe (10 Stufen) nicht, wird die Order abgelehnt (bei 100 EUR praktisch
+     nie, aber korrekt behandeln).
+6. Menge auf lot_decimals abrunden. Prüfen: Menge >= ordermin, Kosten >= costmin und
+   >= MIN_ORDER_EUR. Sonst Ablehnung.
+7. Gebühr = Kosten * TAKER_FEE_RATE, in EUR, wird bei Kauf zusätzlich vom Cash abgezogen
+   (Kaufbetrag so berechnen, dass Kosten + Gebühr <= verfügbares Cash), bei Verkauf vom
+   Erlös abgezogen.
+8. Speichern: Fill-Preis, Menge, Gebühr, Mittelkurs bei Entscheidung, Slippage in
+   Basispunkten (Fill vs. Mittelkurs), Latenz, Zeitstempel, Grund, Entscheidungs-ID.
+9. Position aktualisieren (Durchschnittseinstand inkl. Gebühren), Cash aktualisieren,
+   Event ans Dashboard pushen.
+
+Stop-Loss und Take-Profit:
+- Werden bei jedem Ticker-Update gegen den Bid geprüft.
+- Auslösung erzeugt eine normale Market-Sell-Order durch denselben Ablauf (inkl. Latenz und
+  Buch), damit Kurslücken realistisch Slippage verursachen.
+
+Kontowert (Equity) = Cash + Summe aller Positionen bewertet zum aktuellen Bid
+(Liquidationswert, nicht Mittelkurs). Jede Minute als Snapshot speichern.
+
+
+-------------------------------------------------------------------------
+7. RISIKOREGELN (HART IM CODE, KEINE STRATEGIE KANN SIE ÜBERSTIMMEN)
+-------------------------------------------------------------------------
+Gelten für "KI" und "Regeln", nicht für "Buy & Hold".
+- Positionswert pro Coin nach Kauf <= MAX_POSITION_PCT des Kontowerts. Zu grosse
+  Kaufwünsche werden auf das Maximum gekürzt (nicht abgelehnt) und die Kürzung geloggt.
+- Höchstens MAX_OPEN_POSITIONS gleichzeitig.
+- Höchstens MAX_TRADES_PER_DAY Ausführungen pro Konto und Kalendertag (UTC).
+- COIN_COOLDOWN_MINUTES nach einem Verkauf kein Kauf desselben Coins.
+- Jede neue Position hat zwingend einen Stop-Loss. Erlaubter Bereich 2–15 %. Fehlt er oder
+  liegt er ausserhalb, wird DEFAULT_STOP_LOSS_PCT verwendet. Take-Profit optional, 3–40 %.
+- Kill-Switch: Fällt der Kontowert um MAX_DRAWDOWN_PCT unter seinen bisherigen Höchststand,
+  wird das Konto auf "pausiert" gesetzt. Offene Positionen bleiben mit Stop-Loss bestehen,
+  aber es gibt keine neuen Käufe. Fortsetzen nur manuell über das Dashboard.
+
+
+-------------------------------------------------------------------------
+8. STRATEGIEN
+-------------------------------------------------------------------------
+Gemeinsames Interface DecisionProvider:
+  decide(context: DecisionContext): Promise<DecisionResult>
+
+Ein Scheduler löst alle DECISION_INTERVAL_MINUTES aus, ausgerichtet auf den Kerzenschluss
+(:00, :15, :30, :45 UTC + 5 Sekunden Puffer), und ruft für jedes aktive Konto dessen Provider
+auf. Ergebnis wird validiert, durch die Risikoregeln geschickt und ausgeführt.
+
+8.1 Regel-Strategie (RuleBasedProvider, voll funktionsfähig)
+Kauf eines Coins, wenn ALLE Bedingungen gelten:
+  - EMA20 hat EMA50 auf 15m in der letzten geschlossenen Kerze von unten gekreuzt
+  - Preis über EMA50 auf 60m
+  - RSI14 zwischen 45 und 70
+  - Volumen-Verhältnis >= 1.2
+  - Spread <= 0.3 %
+Gibt es mehrere Kandidaten: höchstes Volumen-Verhältnis zuerst.
+Kaufbetrag: 25 % des Kontowerts (Risikoregeln kürzen falls nötig).
+Stop-Loss 5 %, Take-Profit 10 %.
+Verkauf der ganzen Position, wenn EMA20 unter EMA50 kreuzt (15m) oder RSI14 > 80.
+Jede Entscheidung bekommt eine automatisch erzeugte deutsche Begründung mit den Werten,
+z.B. "EMA20 über EMA50 gekreuzt, RSI 58, Volumen 1.6x Durchschnitt".
+
+8.2 Buy & Hold (BuyAndHoldProvider)
+Beim allerersten Start: kompletter Betrag (abzüglich Gebühr) in BTC/EUR über den normalen
+Broker-Ablauf. Danach nie wieder handeln. Kein Stop-Loss.
+
+8.3 KI (AiProvider, in dieser Version Platzhalter)
+- Wenn AI_ENABLED=false (Standard): Konto-Status "inaktiv – kein API-Key". Das Konto behält
+  seine 100 EUR, handelt nicht.
+- Trotzdem läuft bei jedem Zyklus die komplette Vorbereitung:
+  1. DecisionContext bauen (Kapitel 9)
+  2. Ähnliche frühere Situationen aus dem Gedächtnis holen (Kapitel 10)
+  3. Den vollständigen Prompt-Text aus der Vorlage /prompts/trader-system.md und
+     /prompts/trader-user.md zusammensetzen
+  4. Als Entscheidung mit Status "nicht gesendet (KI inaktiv)" speichern, inkl. Prompt-Text
+  So sieht man im Dashboard schon jetzt genau, was die KI später bekommen würde.
+- Lege die Datei ClaudeDecisionProvider.ts an, die das Interface erfüllt und nur einen
+  Fehler "Noch nicht implementiert" wirft. KEIN Anthropic-SDK installieren, KEINE
+  API-Aufrufe.
+- Das erwartete Antwortformat der KI ist trotzdem jetzt schon als zod-Schema definiert und
+  getestet (Kapitel 11), inklusive eines Parsers, der Testantworten validiert.
+- Zusätzlich ein MockAiProvider (nur aktiv mit AI_PROVIDER=mock), der aus dem Kontext eine
+  zufällige aber gültige Antwort im KI-Format erzeugt. Damit lässt sich die ganze Pipeline
+  (Validierung, Risikoregeln, Ausführung, Gedächtnis, Dashboard) ohne API-Key testen.
+  Im Dashboard klar als "MOCK" markieren.
+
+
+-------------------------------------------------------------------------
+9. ENTSCHEIDUNGS-KONTEXT (DecisionContext)
+-------------------------------------------------------------------------
+Pro Zyklus und Konto:
+- Zeitpunkt (UTC und Europe/Zurich)
+- Konto: Cash, Kontowert, Höchststand, aktueller Drawdown, Trades heute, Status
+- Offene Positionen: Paar, Menge, Einstand, aktueller Wert, unrealisierter Gewinn/Verlust in
+  EUR und %, Haltedauer, Stop-Loss, Take-Profit
+- Pro aktivem Paar der FeatureSnapshot (Kapitel 5), kompakt als Tabelle
+- Letzte 10 Trades dieses Kontos mit Ergebnis
+- Aktive Regeln und Limits (damit die KI weiss, was erlaubt ist)
+- Gedächtnis-Treffer (Kapitel 10)
+
+Den Kontext ZWEIMAL ausgeben: als JSON (für DB und spätere Auswertung) und als kompakten,
+gut lesbaren Text für den Prompt. Ziel: Prompt-Text unter ca. 4000 Wörtern.
+
+
+-------------------------------------------------------------------------
+10. GEDÄCHTNIS
+-------------------------------------------------------------------------
+Zweck: Die KI soll später aus früheren Situationen lernen.
+
+10.1 Speichern
+Bei jeder Entscheidung (auch "halten" und auch bei der Regel-Strategie) pro betrachtetem Paar
+einen Feature-Vektor speichern:
+  [RSI14/100, EMA20-vs-EMA50 in %, Preis-vs-EMA50(60m) in %, Change 1h %, Change 4h %,
+   Change 24h %, ATR %, Volumen-Verhältnis]
+
+10.2 Ergebnis nachtragen
+Ein Job läuft alle 5 Minuten und trägt für ältere Einträge nach, wie sich der Preis nach
+1h, 4h und 24h entwickelt hat (in %), und bei ausgeführten Trades den tatsächlichen
+Gewinn/Verlust nach Verkauf.
+
+10.3 Abrufen
+Für jedes Paar im aktuellen Kontext die 5 ähnlichsten früheren Situationen finden:
+- Merkmale mit z-Score normalisieren (Mittelwert/Standardabweichung über alle gespeicherten
+  Einträge, täglich neu berechnet)
+- Euklidische Distanz, nur Einträge mit nachgetragenem 4h-Ergebnis
+- Ausgabe pro Treffer: Datum, Paar, kurze Situationsbeschreibung, was damals entschieden
+  wurde, Preisentwicklung danach (1h/4h/24h), bei Trades das Ergebnis
+- Zusätzlich eine Zusammenfassung pro Paar: "Bei ähnlichen Situationen stieg der Preis in
+  X von 5 Fällen nach 4h, im Schnitt Y %."
+Implementierung in TypeScript reicht, keine Vektor-Datenbank.
+
+10.4 Lektionen
+Tabelle "lessons" (Text, Erstellungsdatum, Quelle, aktiv ja/nein). In dieser Version nur
+manuell über das Dashboard pflegbar. Aktive Lektionen werden in den Prompt eingefügt.
+
+
+-------------------------------------------------------------------------
+11. KI-ANTWORTFORMAT (zod-Schema, jetzt schon bauen und testen)
+-------------------------------------------------------------------------
+{
+  "marketView": string,            // 1–3 Sätze Einschätzung des Gesamtmarkts
+  "actions": [
+    {
+      "type": "buy" | "sell" | "hold",
+      "pair": string,              // muss ein aktives Paar sein (bei hold optional)
+      "amountEur": number,         // nur bei buy, > 0
+      "sellFraction": number,      // nur bei sell, 0 < x <= 1
+      "stopLossPct": number,       // nur bei buy, 0.02–0.15
+      "takeProfitPct": number,     // optional bei buy, 0.03–0.40
+      "confidence": number,        // 0–1
+      "reasoning": string          // Begründung auf Deutsch, max. 400 Zeichen
+    }
+  ]
+}
+- Maximal 3 Aktionen pro Zyklus.
+- Ungültige Antwort = alle Aktionen verwerfen, als "ungültige KI-Antwort" loggen, nichts tun.
+- Einzelne ungültige Aktionen verwerfen, gültige ausführen.
+- Verkäufe vor Käufen ausführen.
+
+Die Prompt-Vorlagen in /prompts schreiben:
+- trader-system.md: Rolle (vorsichtiger Krypto-Trader mit kleinem Konto), Regeln und Limits,
+  Hinweis dass Gebühren hoch sind und "halten" oft die beste Entscheidung ist, Pflicht zu
+  ehrlicher Begründung, exaktes JSON-Format, keine Erklärungen ausserhalb des JSON.
+- trader-user.md: Platzhalter wie {{account}}, {{positions}}, {{market_table}},
+  {{memory}}, {{lessons}}, {{recent_trades}}, {{limits}}, {{time}}.
+
+
+-------------------------------------------------------------------------
+12. DATENBANK-SCHEMA (Drizzle, SQLite)
+-------------------------------------------------------------------------
+Tabellen (alle Zeitstempel als UTC Unix-Millisekunden):
+- pairs (symbol PK, rest_name, base, quote, ordermin, costmin, lot_decimals,
+  pair_decimals, active, volume_24h_eur, updated_at)
+- candles (pair, interval, ts, open, high, low, close, volume; PK pair+interval+ts)
+- accounts (id PK, name, strategy, starting_balance, cash, peak_equity, status
+  [active|paused|inactive], created_at)
+- positions (id PK, account_id, pair, qty, avg_entry_price, cost_basis_eur, stop_loss_price,
+  take_profit_price, opened_at)
+- trades (id PK, account_id, pair, side, qty, fill_price, cost_eur, fee_eur,
+  mid_price_at_decision, slippage_bps, latency_ms, reason, decision_id, realized_pnl_eur,
+  ts)
+- rejected_orders (id PK, account_id, pair, side, requested, reason, decision_id, ts)
+- decisions (id PK, account_id, provider, ts, status [executed|partially|rejected|hold|
+  not_sent|invalid], market_view, actions_json, context_json, prompt_text, raw_response)
+- memory_entries (id PK, decision_id, account_id, pair, ts, features_json, action,
+  price_at_ts, change_1h, change_4h, change_24h, trade_pnl_eur)
+- lessons (id PK, text, source, active, created_at)
+- equity_snapshots (account_id, ts, equity, cash; PK account_id+ts)
+
+Beim Neustart wird der komplette Zustand aus der DB geladen. Konten laufen weiter.
+Skript "pnpm reset": setzt alle Konten auf Startbetrag zurück, löscht Positionen, Trades,
+Entscheidungen und Snapshots, behält Kerzen und Gedächtnis (Flag --full löscht alles).
+
+
+-------------------------------------------------------------------------
+13. BACKEND-API
+-------------------------------------------------------------------------
+REST (JSON):
+  GET  /api/status          Verbindungsstatus, Datenalter pro Paar, Version, Config (ohne Keys)
+  GET  /api/pairs           aktive Paare mit Live-Werten und Features
+  GET  /api/candles?pair=&interval=&from=&to=
+  GET  /api/accounts        alle Konten mit Kennzahlen
+  GET  /api/accounts/:id/positions
+  GET  /api/trades?accountId=&pair=&limit=
+  GET  /api/decisions?accountId=&limit=
+  GET  /api/decisions/:id   inkl. Kontext und Prompt-Text
+  GET  /api/equity?accountId=&from=
+  GET/POST/PATCH /api/lessons
+  POST /api/accounts/:id/pause und /resume
+
+WebSocket /ws (Server -> Dashboard), Events als JSON {type, payload}:
+  ticker, book_top (nur beste Stufe + Spread), candle, trade, order_rejected, decision,
+  equity, account_status, system_status
+
+Nur an localhost binden (127.0.0.1), ausser in Docker.
+
+
+-------------------------------------------------------------------------
+14. DASHBOARD (React, Deutsch, Dark Mode, responsive)
+-------------------------------------------------------------------------
+Kopfzeile immer sichtbar: Verbindungsstatus Kraken (grün/gelb/rot), Zeit Europe/Zurich,
+nächster Entscheidungszyklus als Countdown, deutlicher Hinweis "PAPER-TRADING – kein echtes
+Geld".
+
+Seite "Übersicht":
+- Drei Kontokarten: Kontowert, Gewinn/Verlust EUR und %, Cash, Anzahl Positionen, bezahlte
+  Gebühren total, Status. KI-Karte zeigt "inaktiv – kein API-Key" bzw. "MOCK".
+- Ein Linienchart mit dem Kontowert-Verlauf aller drei Konten übereinander.
+- Liste offener Positionen aller Konten mit Live-Gewinn/Verlust.
+
+Seite "Märkte":
+- Tabelle aller aktiven Paare: Preis, Bid, Ask, Spread %, Change 1h/24h, RSI, Volumen-
+  Verhältnis. Preise blinken kurz grün/rot bei Änderung. Sortierbar.
+- Klick auf ein Paar öffnet die Detailseite.
+
+Seite "Coin-Detail":
+- Kerzenchart (15m, umschaltbar auf 60m) mit EMA20/EMA50.
+- Marker für Käufe (Pfeil hoch) und Verkäufe (Pfeil runter), Farbe pro Konto, Konten per
+  Checkbox ein-/ausblendbar. Tooltip mit Preis, Menge, Gebühr, Slippage, Grund.
+- Aktuelle Indikatorwerte und Top-5-Orderbuch beider Seiten.
+
+Seite "Entscheidungen":
+- Live-Feed aller Entscheidungen (neueste oben): Zeit, Konto, Aktion, Paar, Begründung,
+  Status (ausgeführt, abgelehnt mit Grund, gehalten, nicht gesendet).
+- Klick öffnet Details: Kontext, Gedächtnis-Treffer und kompletter Prompt-Text.
+
+Seite "Trades":
+- Tabelle aller Trades mit Filter nach Konto und Paar, inkl. Gebühr, Slippage in bps,
+  Latenz, realisiertem Gewinn/Verlust. Summenzeile. CSV-Export.
+
+Seite "Gedächtnis":
+- Anzahl gespeicherter Situationen, Anteil mit Ergebnis.
+- Lektionen anzeigen, hinzufügen, aktivieren/deaktivieren.
+
+Seite "Einstellungen" (nur Anzeige):
+- Aktuelle Config-Werte ohne Keys, Konten pausieren/fortsetzen.
+
+Zahlen: Schweizer Format (Tausendertrennzeichen ', Dezimalpunkt), EUR mit 2 Stellen,
+Krypto-Mengen mit lot_decimals. Gewinn grün, Verlust rot.
+
+
+-------------------------------------------------------------------------
+15. TESTS (Vitest, Pflicht)
+-------------------------------------------------------------------------
+- Indikatoren: EMA, RSI, ATR gegen bekannte Referenzwerte.
+- Broker: Kauf läuft korrekt durchs Buch (VWAP über mehrere Stufen), Gebühren korrekt,
+  Rundung auf lot_decimals, Ablehnung bei ordermin/costmin/MIN_ORDER_EUR, Ablehnung bei
+  veraltetem Buch, kein negativer Cash, Verkauf mit sellFraction.
+- Stop-Loss löst bei Bid unter Schwelle aus und läuft durch denselben Broker.
+- Risikoregeln: Kürzung auf MAX_POSITION_PCT, Positionslimit, Tageslimit, Cooldown,
+  Kill-Switch.
+- KI-Antwort-Parser: gültige, teilweise ungültige und komplett ungültige Antworten.
+- Gedächtnis: Normalisierung und Nachbarsuche liefern erwartete Treffer.
+- Regel-Strategie: erzeugt bei konstruierten Kerzen genau die erwarteten Signale.
+
+
+-------------------------------------------------------------------------
+16. BETRIEB
+-------------------------------------------------------------------------
+- "pnpm dev": Server und Dashboard mit Hot Reload.
+- "pnpm build" und "pnpm start": Produktion, Server liefert das gebaute Dashboard aus.
+- "docker compose up -d": läuft dauerhaft, SQLite im Volume, Neustart "unless-stopped".
+- Graceful Shutdown: offene Verbindungen schliessen, DB sauber schliessen.
+- Bei Absturz einer Komponente nicht den ganzen Prozess beenden, sondern loggen und neu
+  starten (z.B. Marktdaten-Verbindung).
+
+
+-------------------------------------------------------------------------
+17. README (Deutsch)
+-------------------------------------------------------------------------
+- Was das Projekt macht und was nicht (kein echtes Geld, keine Gewinngarantie)
+- Installation, Start lokal und mit Docker
+- Erklärung der Realismus-Simulation (Buch, Latenz, Gebühren, Mindestgrössen)
+- Erklärung der drei Konten und der Risikoregeln
+- Wie man später die KI aktiviert: welche Datei (ClaudeDecisionProvider.ts) implementiert
+  werden muss, welche .env-Werte gesetzt werden, wo die Prompts liegen
+- Reset-Skript
+- Abschnitt "Eigene Entscheidungen"
+
+
+-------------------------------------------------------------------------
+18. VORGEHEN UND ABNAHME
+-------------------------------------------------------------------------
+Baue in dieser Reihenfolge und teste jeden Schritt, bevor du weitergehst:
+  1. Projektgerüst, Config, DB-Schema, Migrationen
+  2. Kraken-Paarauswahl, REST-Historie, WebSocket mit Reconnect und Orderbuch
+  3. Indikatoren + Tests
+  4. Paper-Broker + Risikoregeln + Tests
+  5. Buy & Hold und Regel-Strategie, Scheduler
+  6. Kontext-Builder, Gedächtnis, Prompt-Vorlagen, KI-Platzhalter, Mock-Provider, Parser
+  7. Backend-API und WebSocket-Push
+  8. Dashboard
+  9. Docker, README
+
+Fertig ist das Projekt erst, wenn:
+- "pnpm test" komplett grün ist
+- der Bot nach dem Start innerhalb einer Minute Live-Kurse von mindestens 15 EUR-Paaren zeigt
+- Buy & Hold beim ersten Start einen realistischen BTC-Kauf mit Gebühr und Slippage ausführt
+- die Regel-Strategie im 15-Minuten-Takt Entscheidungen mit Begründung erzeugt
+- das KI-Konto bei jedem Zyklus einen gespeicherten, im Dashboard lesbaren Prompt-Text hat
+- mit AI_PROVIDER=mock das KI-Konto Trades ausführt, die durch alle Risikoregeln laufen
+- nach Neustart alle Konten mit identischem Stand weiterlaufen
+- der Bot eine getrennte Internetverbindung übersteht und danach von selbst weiterläuft
+- im ganzen Code kein Weg existiert, echtes Geld zu handeln

@@ -1,0 +1,15 @@
+{
+  "version": "actual-public-ws-capture-independent-v1",
+  "verifiedAt": "2026-11-03T18:29:50.568998+01:00",
+  "report": {
+    "path": "docs/public-ws-capture-audit-4d3d6666b0a5bf31.json",
+    "hash": "4d3d6666b0a5bf310beb939200b3664f418dff6314f552f99909e352a5d6107d"
+  },
+  "reportFileSha256": "60f78f7dc1a41cff8090e2059bdc745eb9a41bf04e06cf727c832d3af09eb7b5",
+  "verifierSha256": "7a88d13987cff0a9b9d107727f89249c9bacaf18e0fd400479989687797290cc",
+  "actualRawMessagesVerified": 0,
+  "publicSessionHeadersVerified": 1,
+  "auditedState": "enabled-awaiting-first-native-final-message",
+  "profitabilityEstablished": false,
+  "scope": "Independent SQLite/native raw JSON/Decimal/hash/session/deployment checks of audit snapshot only. No fixture insertion, historical backfill, model call or market request. Zero messages proves setup only; counts are not independent trials or bot trades."
+}

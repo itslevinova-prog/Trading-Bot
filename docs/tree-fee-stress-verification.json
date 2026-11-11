@@ -1,0 +1,32 @@
+{
+  "verifiedAt": "2026-11-02T17:34:18.364Z",
+  "factsHash": "44fc4391adc37a684ff3c93605d570ddaa9cae7630623d715a0199ad5c0c75f4",
+  "variants": [
+    {
+      "name": "frozen-intents-base",
+      "fee": 0.001,
+      "rawPaidFillsVerified": 48,
+      "curvePointsVerified": 15744,
+      "returnPct": 0.4984195488457077,
+      "closedTrades": 24,
+      "fees": 0.7163450394141787,
+      "allFrozenEntryOriginsAndLedgerPricesVerified": true
+    },
+    {
+      "name": "frozen-intents-double-fee",
+      "fee": 0.002,
+      "rawPaidFillsVerified": 48,
+      "curvePointsVerified": 15744,
+      "returnPct": -0.5420899488958186,
+      "closedTrades": 24,
+      "fees": 1.4217011652346851,
+      "allFrozenEntryOriginsAndLedgerPricesVerified": true
+    }
+  ],
+  "baseFullResultExactlyMatched": true,
+  "newModelsOrThresholdsChosen": false,
+  "modelActivated": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false
+}

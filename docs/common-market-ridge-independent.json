@@ -1,0 +1,30 @@
+{
+  "version": "common-market-ridge-independent-v1",
+  "reportHash": "715ac8f62f16c17e04cc7dfa46f2422f877ca0d5baf31a6150e15ffd44c00b80",
+  "reportFileSha256": "c225d2887176715a6e06e6277effa7ac4bb4b67d061e232391bb4446cb600135",
+  "verifierHash": "62069a08cc020d17260d5d80de9d4f44546ebf8d80b7438fd84560dd9a3a9fd5",
+  "featureBindingsVerified": 7280,
+  "foldsVerified": 41,
+  "normalEquationCoefficientsVerified": 697,
+  "maxNormalEquationResidual": 1.5543122344752192e-15,
+  "rawQueriesVerified": 26240,
+  "guardedForecastsVerified": 65600,
+  "clockChoicesVerified": 1968,
+  "fairParentWithoutNewFeature": {
+    "knownTestLabels": 6559,
+    "mae": 0.014845219946604404,
+    "mse": 0.0003388927611322991,
+    "coverage": 0.9972560975609757,
+    "opportunityClocks": 6,
+    "noTradeClocks": 322,
+    "knownOpportunityLabels": 6,
+    "meanKnownOpportunityLabel": -0.007225203331142978
+  },
+  "parentVersusExtendedChangedClockKeys": 4,
+  "fairParentScope": "Additional descriptive control audit using exactly the same MSE rule and existing candidate library minus market. Computed after primary result, no retraining or strategy activation. Do not compare the prior aggressor-library selector as if only this feature changed.",
+  "actualFirstReceiptObserved": false,
+  "modelActivated": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false
+}

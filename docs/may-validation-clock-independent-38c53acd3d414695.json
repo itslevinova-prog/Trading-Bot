@@ -1,0 +1,18 @@
+{
+  "version": "may-validation-clock-independent-v1",
+  "verifiedAt": "2026-11-03T20:36:41.596740+00:00",
+  "report": {
+    "path": "docs/may-validation-readiness-3238fb0707a18f4e.json",
+    "hash": "3238fb0707a18f4efe45d8cd696c3ccd2c0fe182182c66b55b3466f26047f3d4"
+  },
+  "reportFileSha256": "46d50bca671c7dd270368dee3d3a87480cab2e4d86b717c1bf5c09d039e5995c",
+  "trainingIndexRows": 7280,
+  "missingAprilIndexRows": 1200,
+  "validationClocks": 62,
+  "actualTrainingDateEligibleClocks": 0,
+  "completeAprilHypotheticalDateEligibleClocks": 20,
+  "modelTrained": false,
+  "mayLabelsRead": false,
+  "profitabilityEstablished": false,
+  "scope": "Independent UTC index/set/maturity/model-age arithmetic. Existing training label values ignored; no May labels, fit, forecasts or outcomes computed. Hypothetical April coverage is an upper bound, not model availability or accuracy."
+}

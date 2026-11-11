@@ -1,0 +1,22 @@
+{
+  "version": "directional-ridge-verification-v1",
+  "verifiedAt": "2026-11-02T18:59:15.776Z",
+  "report": "docs/directional-ridge-walkforward-bf3f0f7644d7fe9c.json",
+  "factsHash": "bf3f0f7644d7fe9cc15acf4cf69343fa5098d778fda664115bc04996bd1a9dea",
+  "verifierHash": "b280391c7c33457d785134c636faea68d948619868d8db69e8387bcb23667f9e",
+  "folds": 41,
+  "trainOnlyNormalEquationsChecked": 738,
+  "maximumAbsoluteResidual": 6.1179360189012044e-15,
+  "nativeRawPredictionsChecked": 26240,
+  "testForecastValuesChecked": 26240,
+  "maximumEightDimensionalControlError": 3.608224830031759e-16,
+  "trainingLabelsStrictlyMature": true,
+  "queryPayloadHasNoLabels": true,
+  "oldMetricsExact": true,
+  "originalEightDimensionalSchemaUnchanged": true,
+  "independentSamples": null,
+  "modelActivated": false,
+  "julyLoaded": false,
+  "portfolioReturn": null,
+  "profitabilityEstablished": false
+}

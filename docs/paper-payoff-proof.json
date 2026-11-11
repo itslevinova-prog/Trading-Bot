@@ -1,0 +1,17 @@
+{
+  "verifiedAt": "2026-10-30T20:11:34.683182+00:00",
+  "buildId": "d98518eda9df0fdd167f6f33d0ad42012f1e43ee28040578fd39ff1c7e31e696",
+  "mainTests": 594,
+  "offlineTests": 15,
+  "payoffTests": 9,
+  "mockIntegrationComplete": false,
+  "actualWinProbabilityEstimated": false,
+  "realAiProviderUsed": false,
+  "realOrders": 0,
+  "paidCalls": 0,
+  "sourceHashes": {
+    "apps\\server\\src\\strategy\\paper-payoff.ts": "2174c6109d20d30dc9c625e8da7d44836c724f68c05991305eebcd1587ad4e78",
+    "apps\\server\\test\\paper-payoff.test.ts": "4104537142be6cd4deb64aa4b3706b53e6063bffa8375b3f76b5c87171ae96a4",
+    "data\\verify-paper-payoff-2026-10-30.log": "be7a0fee07e0ca582bca6868b51fac6a449e3a7ada0013aa22ece71e939e939f"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "registeredAt": "2026-10-27T21:53:19.718Z",
+  "firstForwardDecisionAt": "2026-10-27T22:15:05.000Z",
+  "strategyHash": "084e3c4cf8a22ff4c1f7ee4399d2c4b4af7a458da7d05e1fa8764e9745a6b891",
+  "sourceFiles": [
+    "strategy/providers.ts",
+    "strategy/quality.ts",
+    "market/indicators.ts",
+    "broker/risk.ts",
+    "broker/executionGuards.ts",
+    "research/portfolio.ts"
+  ],
+  "options": {
+    "startingBalance": 100,
+    "feeRate": 0.001,
+    "spreadBps": 10,
+    "slippageBps": 8,
+    "fromTs": 1790803800000,
+    "toTs": 1793136600000,
+    "decisionIntervalMinutes": 15,
+    "maxDrawdownPct": 0.25,
+    "minOrderQuote": 10,
+    "risk": {
+      "maxPositionPct": 0.3,
+      "maxOpenPositions": 4,
+      "maxTradesPerDay": 10,
+      "cooldownMinutes": 60,
+      "maxPortfolioRiskPct": 0.025,
+      "feeRate": 0.001
+    },
+    "entry": {
+      "maxSpreadBps": 20,
+      "maxSlippageBps": 30
+    }
+  },
+  "universe": [
+    "BTC/EUR",
+    "ETH/EUR",
+    "XRP/EUR",
+    "SOL/EUR",
+    "PEPE/EUR",
+    "BNB/EUR",
+    "ADA/EUR",
+    "TRX/EUR",
+    "DOGE/EUR",
+    "DOT/EUR",
+    "XLM/EUR",
+    "WIN/EUR",
+    "SUI/EUR",
+    "NEAR/EUR",
+    "LINK/EUR",
+    "VET/EUR",
+    "LTC/EUR",
+    "BCH/EUR",
+    "ICP/EUR",
+    "POL/EUR"
+  ],
+  "method": "Immutable first registration. Future source/config changes require a new registered version; do not overwrite this file. Only data after deployment and cutoff can be independent forward evidence.",
+  "historicalDataAlreadyInspected": true,
+  "profitabilityEstablished": false
+}

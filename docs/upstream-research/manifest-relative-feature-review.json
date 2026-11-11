@@ -1,0 +1,35 @@
+{
+  "existingArchivedSourcesReverified": [
+    {
+      "project": "freqtrade",
+      "path": "freqtrade/freqai/data_kitchen.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/freqai/data_kitchen.py",
+      "sha256": "00a0d1089dab1a8ae47ef5282ca6aa1c1fbb71cb95dc27193fee61c1d1bce82e",
+      "bytes": 44308
+    },
+    {
+      "project": "freqtrade",
+      "path": "freqtrade/freqai/freqai_interface.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/freqai/freqai_interface.py",
+      "sha256": "fa0c3d1835ea3e2804d23617095d877d760b357bfd02ec30a954b4ae16154065",
+      "bytes": 47293
+    },
+    {
+      "project": "freqtrade",
+      "path": "freqtrade/strategy/strategy_helper.py",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/7fea5ea24b3c3193cfdd4143b243f7baab66d661/freqtrade/strategy/strategy_helper.py",
+      "bytes": 9343,
+      "sha256": "5435fb6752df7c8af2101e81b8ef86d0f3d8f17d285f63d895b2570732faa4e5",
+      "retrievedAt": "2026-10-31T23:23:26.013058+00:00"
+    },
+    {
+      "project": "jesse",
+      "path": "jesse/strategies/Strategy.py",
+      "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/strategies/Strategy.py",
+      "sha256": "e2f89664377714d87c5971fdfe13ad244845eda2e1daa449b8bf182de8e660ab",
+      "bytes": 75743
+    }
+  ],
+  "newFilesFetched": 0,
+  "foreignCodeExecutedOrPorted": false
+}

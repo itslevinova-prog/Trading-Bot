@@ -1,0 +1,3580 @@
+{
+  "version": "actual-public-ws-capture-audit-v1",
+  "auditedAt": "2026-11-03T20:19:57.790Z",
+  "runnerHash": "02a2d38bbb5c26ec92cc28ed463dd1ae9f851cc46d7e3fc525b1d2c787b1c66d",
+  "captureFile": "C:\\Users\\user\\Documents\\Projekte\\Buisness\\New_Trading_AI\\kraken-paper-bot\\data\\public-ws-activity\\binance-EUR.db",
+  "activeSession": {
+    "buildId": "0fd91e5ce649ac184dbf727ba44ce41806ce7598c76b00bb8f04a43876fe561e",
+    "id": "8d75b9614d71f59bedca84e3c5b497ac060643cdd8b6f23e06d46ecacc9107cd",
+    "kind": "public-ws",
+    "producer": "binance-market-observer-v1",
+    "quote": "EUR",
+    "runId": "08475ef7-8699-46f7-8f36-2a5ef9ecbac0",
+    "startedAt": 1793737170402,
+    "transport": "wss://data-stream.binance.vision/stream",
+    "version": "ws-capture-session-v1"
+  },
+  "total": {
+    "n": 240,
+    "firstAt": 1793726998949,
+    "lastAt": 1793736900237
+  },
+  "perPair": [
+    {
+      "pair": "ADA/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    },
+    {
+      "pair": "APT/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    },
+    {
+      "pair": "AVAX/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    },
+    {
+      "pair": "BCH/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    },
+    {
+      "pair": "BNB/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    },
+    {
+      "pair": "BTC/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    },
+    {
+      "pair": "DOGE/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    },
+    {
+      "pair": "ETH/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    },
+    {
+      "pair": "LINK/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    },
+    {
+      "pair": "LTC/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    },
+    {
+      "pair": "NEAR/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    },
+    {
+      "pair": "PEPE/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    },
+    {
+      "pair": "POL/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    },
+    {
+      "pair": "SHIB/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    },
+    {
+      "pair": "SOL/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    },
+    {
+      "pair": "SUI/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    },
+    {
+      "pair": "TRX/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    },
+    {
+      "pair": "WIN/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    },
+    {
+      "pair": "XLM/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    },
+    {
+      "pair": "XRP/EUR",
+      "n": 12,
+      "lastOpenAt": 1793736000000
+    }
+  ],
+  "rawSampleLimit": 384,
+  "rawRowsChecked": 240,
+  "usedCaptureSessionsChecked": 1,
+  "sourceRows": [
+    {
+      "id": "8351d6dc9408242bd60bf6b890991f2ec1bd5e62ca4142bec938aa0203f4deea",
+      "pair": "DOGE/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900237,
+      "eventAt": 1793736900111,
+      "availableAfter": 1793736900237,
+      "rawHash": "47f171fcee3d00d4741b22d926ea41c1004f3fb82b84aad3c57e7f141b50b561",
+      "barFactsHash": "ef9de1449543a4b2f40d9cc57f98885a6dca5ae8cbbb750bcf03a28badbe73e3",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "cae8ac8a95f2defc7c0d660d48fb7920aed272caed58d35decb108ea36cab428",
+      "pair": "SOL/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900224,
+      "eventAt": 1793736900110,
+      "availableAfter": 1793736900224,
+      "rawHash": "0a9c3dd10bc2c81a8c6c1f3fb969ba6b3198063851837099d74748710334234c",
+      "barFactsHash": "0c37e3d90255065546129cce8bb0a036347d399d4e75f0a0add9aabfa0f5d820",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "5edb80a9e4fe6851f2fedad796e20046ef86895395b67eb2178cafae707be12b",
+      "pair": "PEPE/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900219,
+      "eventAt": 1793736900109,
+      "availableAfter": 1793736900219,
+      "rawHash": "dea9eff27b62a6b174b90dc4e62103292ab2a61a6a988eee8f5fa4f1830e3f4f",
+      "barFactsHash": "9ba0a0b18ad5c8b0496242d7fd5dca385c13d5b48efa2cf3293e42207c7975c3",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "56a44bcf646286f86a1a9ace40ecf610ce962fc63dcc2fb43fc51318ad06ddb4",
+      "pair": "ADA/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900212,
+      "eventAt": 1793736900076,
+      "availableAfter": 1793736900212,
+      "rawHash": "20047394dc0dbbade7184268fe3592ffc3b89a5b1947856018f58ae908f23bd6",
+      "barFactsHash": "9bf84b6d1903f5ea1c5177a7bd71fe4aad40f8bb0f734a10163f6fafcfb470bd",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "4b9c59f504c0d5e67c9fc7a7cb77d08ca4bbcaf717af0088dd3b33e9d7bdb4c5",
+      "pair": "LTC/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900205,
+      "eventAt": 1793736900075,
+      "availableAfter": 1793736900205,
+      "rawHash": "c85a929722a0fa77dd8a4f2d1f816c66998ca8e175cc5281d21d21a8011b2709",
+      "barFactsHash": "c76464d86671c61ac6b79b076ce463ca0dd38b6459a15ca643290ad83c646221",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "0f9ed01ceb93deaa892550da6518ce241716291520cfcaf154440643db0fac29",
+      "pair": "POL/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900200,
+      "eventAt": 1793736900075,
+      "availableAfter": 1793736900200,
+      "rawHash": "47fb979bf34c995480ac29755568e793379e4d6239e6d3f60062fb225c0f7546",
+      "barFactsHash": "18a746a84687c7c97657d60f70316c9ae53778161ddc5ceb46099af741462c1c",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "de3a85a00151ca1d4fff53c608a98cb1af2c69155abda3c8697e2a17b0294976",
+      "pair": "AVAX/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900182,
+      "eventAt": 1793736900073,
+      "availableAfter": 1793736900182,
+      "rawHash": "1ad297cabfb32f6966474439685c32956c12f4b3d07b9cfee87021746c5f4f84",
+      "barFactsHash": "f009dcfb239d084e7bd519f8f06322fce128c9b258c1534d91923bf805e1da79",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "21c3536ed53837d4f6f681e53b965718c5cb903c6d108af2f6fd4ff0868eeabb",
+      "pair": "SHIB/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900178,
+      "eventAt": 1793736900073,
+      "availableAfter": 1793736900178,
+      "rawHash": "a7fed84f8fe0877d02eef3fe9a4c1374952f7031ae95c2c81ca7455e84698e16",
+      "barFactsHash": "2ccb1969fc94749237f020858d45fa1d39490591f88acefa94430623a269b931",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "b25eef72565ff28a68a336c7df3914edae346d1a0319e7a785ca0b27c6db1807",
+      "pair": "APT/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900174,
+      "eventAt": 1793736900072,
+      "availableAfter": 1793736900174,
+      "rawHash": "89450a1b1dd1593b290cb4edd0757338120c5d906290ca0b1d06589ef20226d5",
+      "barFactsHash": "aa3d325545130484cb986d458c84166611c212ec60e9784f920107599e9baf7b",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "dfb7cfa57716b6a5fc328ca29fca78b851285b91dd012802f18addcd44c87242",
+      "pair": "SUI/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900164,
+      "eventAt": 1793736900047,
+      "availableAfter": 1793736900164,
+      "rawHash": "b9c2feef0d796b54683145e8aea13883f23dfe7ce1ab953f88818616c98736c0",
+      "barFactsHash": "d239a7716be7953f3b37863945aecd680f9709d092157ef4905c72826925fefb",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "0dfc1bd1c2fce699fb5694f115db7ac8165042b742cea56e900a7bac74147fc5",
+      "pair": "TRX/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900159,
+      "eventAt": 1793736900047,
+      "availableAfter": 1793736900159,
+      "rawHash": "fe2f6ab6466c66936fce263452cceea4a5ffcbdc295a5c724ae3d74b396e942f",
+      "barFactsHash": "09ed8feb416640dbf017fbbcb4f7aa210fe14dedc3cb28b7e1939cbd11cd64a6",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "0a139d21de0901197a9b12aa68d35b20607e3c98aaff7ce4b2eaf79278e5645f",
+      "pair": "LINK/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900153,
+      "eventAt": 1793736900046,
+      "availableAfter": 1793736900153,
+      "rawHash": "4330330ef7e2f743628a1deb18574d05b21c4be9c80713358fdf104e2c043b0e",
+      "barFactsHash": "3ea1c7036df1bb03546f45b480a9d5802f0bb8f92b1578c31ae37af2b83fab3b",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "1077ea11998ca464d1e7b9b69745bf9f10383f69be9ca69a9cb21b19219995ad",
+      "pair": "XLM/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900142,
+      "eventAt": 1793736900036,
+      "availableAfter": 1793736900142,
+      "rawHash": "818ab0c9ae5a64d57f8a57719a0ca6f5f312a13ce9035ce54d0a06a926737084",
+      "barFactsHash": "5f3c5eafc8c2a3901cb4082bc2b4a1718c61d7d6126f9587f8850c5960b7ad4b",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "2b829737147f3628e79f5a259d9415c942c0780cdb9ac29f3e71157baaa799cc",
+      "pair": "XRP/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900123,
+      "eventAt": 1793736900033,
+      "availableAfter": 1793736900123,
+      "rawHash": "c1a848e3c12fe78fb4abf1596c907d07ae4acfb91fa85fb442ae793830d83a4c",
+      "barFactsHash": "44db42604a4aba057f1ae42f35cf82d3686f3803e1dc6d74ba86d4bc1cd7a6c8",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "abfa207bfdba2abe7aea455a1fd626c84d5c5890c19d8a6c325a946622948459",
+      "pair": "BNB/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900119,
+      "eventAt": 1793736900033,
+      "availableAfter": 1793736900119,
+      "rawHash": "63449adcbaf8801a4af9c338d5487ca4ab645f166568df37cc81b347849cab2d",
+      "barFactsHash": "7e0e2157beb3fd3d09d9c45c708360bc81db18e7ba0d87f91575f399cf777bc7",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "50ba24c29a097be5dc19bf44e81db2fae995ee9c6002569e1be5040a1371e57f",
+      "pair": "BCH/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900115,
+      "eventAt": 1793736900033,
+      "availableAfter": 1793736900115,
+      "rawHash": "45ecac59fb1489b9366f2c9e231c22ede1f27bdcf003b63976b91f0433d8028a",
+      "barFactsHash": "77f269f3a3a63d8d41106d6a32657928c9d134cf1decb2197122e1c34e0b2ec9",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "a27a4215dc3b1ef31bf8e6980d2aace6be72c4e1523d1d3db216998fc1c6ef0c",
+      "pair": "ETH/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900111,
+      "eventAt": 1793736900033,
+      "availableAfter": 1793736900111,
+      "rawHash": "727368c1875ee7ff39ce6fc5149c6edad2c03a7c417e9506a61f76082d254e99",
+      "barFactsHash": "a28c914c2e739f1bb2d0275d7421afac2bc62877818f4141eff37a1e45a8f26c",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "53fd2c86369604d7027d56d1067fcef48682243c9859a79ad0ceacfbc76c00e4",
+      "pair": "BTC/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900107,
+      "eventAt": 1793736900032,
+      "availableAfter": 1793736900107,
+      "rawHash": "93ed8b04e5c18bc1c1813b5ecb6370258c8653083ddfbaa0f49e54207e289ee8",
+      "barFactsHash": "815bcff5d07feb0c3857a3d09dba2c28615d0689dc52c4977f26e7469d331143",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "0bf5ae5a855e615ce7904d7df3ea9ec7ffc252873771d0d03e8096676d9353d8",
+      "pair": "WIN/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900103,
+      "eventAt": 1793736900032,
+      "availableAfter": 1793736900103,
+      "rawHash": "43c5de5177906fe834c22666ef1f57076827c396b9297cb1163ef33ef4aeffd7",
+      "barFactsHash": "22c22ded6ac4765bf66a50988a88d1325ae5237298adf3a08505a721fbeb5c68",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "1a31777917e96b9cbbf85d41edadd01f474e1299b02a7934ed810b77b0e5de18",
+      "pair": "NEAR/EUR",
+      "openAt": 1793736000000,
+      "receivedAt": 1793736900098,
+      "eventAt": 1793736900032,
+      "availableAfter": 1793736900098,
+      "rawHash": "c45a13f66293bc30b23ee7c1a168757a0c885b8979a70b98fc0fa669c8c65c64",
+      "barFactsHash": "f21e290edfe2c1b42f23d15a85d0e35d3df08b3cab4aaf2771887d32f86c6000",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "57b34de49d5babd428a13e8665021c083d7b65181a53da0d3939c4b54c5ecfa6",
+      "pair": "DOGE/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000344,
+      "eventAt": 1793736000112,
+      "availableAfter": 1793736000344,
+      "rawHash": "b2b4380ab5d89b50128fb25939a8868eb4d8d78827c7e41dbb0ac4c03bbaae61",
+      "barFactsHash": "c4726b9f1f8f0e310901c78e37a013b55455afece6c16fe59dabfc4c60a9dc06",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "03b8ffd20863e51de6d439c8ff3d9a7ca2aa21c54407ff2d7090983a4cebe2e0",
+      "pair": "SOL/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000319,
+      "eventAt": 1793736000078,
+      "availableAfter": 1793736000319,
+      "rawHash": "cdadf7036967a64b510bc888e05792068fcd9194dbf35a17f2a7636e5f7b42d5",
+      "barFactsHash": "81ea3af71fe6ac0fe753ece60fe1207e118e967dfaf3fc51dddf00e04971e8f6",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "06a6315471b1e8c08310d1a7da41f1262f636591c97cc88c014462e4f2dca739",
+      "pair": "PEPE/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000312,
+      "eventAt": 1793736000078,
+      "availableAfter": 1793736000312,
+      "rawHash": "80668fb6b0cc5acd7b438acc498841307a379f097e33a688441d538f03cfd75f",
+      "barFactsHash": "a90671f6eaae078149c4f3c2f81c00a44fcaaf01eb7bae5a6f3528b33ffae2e8",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "bfcb0629192ca98766c9d2a54577a026b2396042328650f6f7c2e1678b4a1acc",
+      "pair": "ADA/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000299,
+      "eventAt": 1793736000076,
+      "availableAfter": 1793736000299,
+      "rawHash": "b568144d51d6701e28f71d9222ef0c6c18c3d4b7cfdecfb88415e2678c211900",
+      "barFactsHash": "db19be8a7eac1f0f15aa32fe38ebcda473e89d708696f29330b3257c8a225735",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "9fb805e947e757481eca46652c875d522af10dc1219952f44cbec2cfa397b17f",
+      "pair": "LTC/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000285,
+      "eventAt": 1793736000069,
+      "availableAfter": 1793736000285,
+      "rawHash": "a44931c892335347f0aafbe689e1931a2d04ab5ed010b410f7dce02b392c78bb",
+      "barFactsHash": "78b6401b6dcb246bd3e164cbbdb34151e2718cbc0062318c6294547010d44bb4",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "6b74aa70906a96d26ebfd2dbd0a6abf7e57e3c65d38830ae208bf6a955260d06",
+      "pair": "POL/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000278,
+      "eventAt": 1793736000068,
+      "availableAfter": 1793736000278,
+      "rawHash": "b650f521a6dd507ff11f2996e35c31b7fb43d0b9244172d551c21f19038a5efb",
+      "barFactsHash": "ba396b487463e6b57e0d9224aef9fb78e1405d102c0a9c919e31228558100e07",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "02617e8dae0e5927d9090d1b09069b27ca3d7e3e91bd605d5a1efa4fada1f136",
+      "pair": "AVAX/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000243,
+      "eventAt": 1793736000052,
+      "availableAfter": 1793736000243,
+      "rawHash": "047aede3c6775d013d081d055be29fea75d1e401652c43f8b98ceaa251aca537",
+      "barFactsHash": "c0f2e700e178c41e37ce99bee1727591b2791a25fa2d8a460b61500df5d30b7e",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "589467a5477bd9432ab1781df496aa1a5ef3491d119dd108d82a91cd94bebfd4",
+      "pair": "SHIB/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000236,
+      "eventAt": 1793736000052,
+      "availableAfter": 1793736000236,
+      "rawHash": "74e65debb6994f86864ccadded62e93984c0e82dc991f2d8a7d0cb165b17345d",
+      "barFactsHash": "2830d911745d7cd9a69ae5efa35cb53c7ad128188165abd014848dcfc30bcf9a",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "67c7273f35668ec961ae628c51390034bf7afb6a68d770b05022bbae640ab087",
+      "pair": "APT/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000229,
+      "eventAt": 1793736000051,
+      "availableAfter": 1793736000229,
+      "rawHash": "8a82c53b1ac53b4af276509c5c2e0af153776a5bed062332def50cf1f44fc12c",
+      "barFactsHash": "11a9e3253c5a299a69ae97c0e28bbedf31220a1cf39ebbdb59f8081a631b1dfb",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "4bae42d6f4bf830564be97b5987e43138f34284f18fcc083670c5fec7878770e",
+      "pair": "SUI/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000209,
+      "eventAt": 1793736000041,
+      "availableAfter": 1793736000209,
+      "rawHash": "8a38060518f2f3ccdbf494e341d1a9ace8ef798e178236635df96f5c7fb8523e",
+      "barFactsHash": "c8a7f724cec8c861096148568e37a313533e6f4a5f424a34071847c06f8a999d",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "3bf1af8a69f0f1dacd40447c64febf7ec2b9ebcdb33f87f14159a6548642fb56",
+      "pair": "TRX/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000203,
+      "eventAt": 1793736000040,
+      "availableAfter": 1793736000203,
+      "rawHash": "4b5e6c80f25aa52a84d0ace9572e135ce6b8d612c5a2323bc9a49d2b06db4525",
+      "barFactsHash": "199b5ab17bd90c8487e267513bab2c29f5287bf6e2fcdf3c735a3097b738e228",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "06fe5f9935fa285348be0f6366a5289cdf753d53f888aad1fa8830bd665443d4",
+      "pair": "LINK/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000191,
+      "eventAt": 1793736000037,
+      "availableAfter": 1793736000191,
+      "rawHash": "d62f5d8fa9f896c4b1a230e6fd69e5a510f24a60cd045f288b49adcee436373d",
+      "barFactsHash": "40493d6954315ab56f814492a99ea0139a8637aa8b107280b501df44a6acf80b",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "5979763a966f18230a4705fae941aa012029899c22009a90dd496090f0a0c9e1",
+      "pair": "XLM/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000166,
+      "eventAt": 1793736000031,
+      "availableAfter": 1793736000166,
+      "rawHash": "ac94530fa7cdca7ecdfd51c4d3a36e8fb80bd2662bfc4d88f693bc31c23642c5",
+      "barFactsHash": "c37099887c57775e2774e6e04ec18ef9ac56eca146b01f3b893c4f733e8942ed",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "29a0e3f3eb5cf8bf3feae8e8424228b087bb7ff0e9d645793486b1d6906825f5",
+      "pair": "XRP/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000139,
+      "eventAt": 1793736000015,
+      "availableAfter": 1793736000139,
+      "rawHash": "3dc2d487ab4e77c471fb45891ea96813f82e5363a265592009addb70bf3ba861",
+      "barFactsHash": "a1ef0797d09ff976d9c69c6aa1cf4ee98b326f3645b7496fcbe21c396147abdd",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "ec1004a0bf99c20814491430f6a6e21b885121254c0483aeef37882aadb609a2",
+      "pair": "BNB/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000133,
+      "eventAt": 1793736000015,
+      "availableAfter": 1793736000133,
+      "rawHash": "b59baa0b9646014ebf45a565266190c4b2ff4b51779fe965af5bbc66718ff3bf",
+      "barFactsHash": "daa938796e96859667bebaf643217b03e23404124c8e0c3d9800f10d6a4655c0",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "12b9364070fead413e2ea237978460c96d2864c297e1f165b0ac18562c81324b",
+      "pair": "BCH/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000127,
+      "eventAt": 1793736000014,
+      "availableAfter": 1793736000127,
+      "rawHash": "3a78a5e3bfd22800082b60bfc234cc80ddbe03fbe663a7310375cfc4282737ae",
+      "barFactsHash": "66297423f3fe67c26e07d36a1afaea9ca3f3e64ab166a1acba107c080fc30a90",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "7c5e08cdd277db3beaac01b76cde9d65a3737bb0c93bc21f63e217665f8f2248",
+      "pair": "ETH/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000120,
+      "eventAt": 1793736000014,
+      "availableAfter": 1793736000120,
+      "rawHash": "fb33b98b22eb55fc4f8eccb2e7de3e260837ecb888c86161885c3a6ac43a143c",
+      "barFactsHash": "64a8a212c8c45273f4c759eef6601d2549f8c78f0fb097d367293ff78a1762e8",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "53ec7c01fa1662232dc335019542fc190fb7785f2eb9e2453ebee6b085b65d60",
+      "pair": "BTC/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000114,
+      "eventAt": 1793736000014,
+      "availableAfter": 1793736000114,
+      "rawHash": "3c45ff90a62233629015a5d004069739709690a52a1341ff226c8cecc342c302",
+      "barFactsHash": "cd3edd43c84ade8be72a81f30472f59614e7cffbb61ff500d932ecb1fc7420b6",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "fe6c10113aebb0ba17aa3d53ad2dee84218b0dfdbab989f1310941fd82a91304",
+      "pair": "WIN/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000104,
+      "eventAt": 1793736000013,
+      "availableAfter": 1793736000104,
+      "rawHash": "7a0c5137ddcd24b5394f1539678b2f39ebc67aced54bffc88cc42eadc9755159",
+      "barFactsHash": "de1444ad9239686943f497de3a540319c71444f307bd27ef44fb92c2f6b5b45d",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "0f35ad8563f9c0a2f5ac2a7c736a992faefef1a8a69093e9e6a06eb1d67db108",
+      "pair": "NEAR/EUR",
+      "openAt": 1793735100000,
+      "receivedAt": 1793736000097,
+      "eventAt": 1793736000013,
+      "availableAfter": 1793736000097,
+      "rawHash": "76c28c61be045f60aa7a34755c697ab81f6103195fb5aae376865e1c0b126e6a",
+      "barFactsHash": "05a4bd3b582ef12700d79387040702982d5dbf8303a8840e7c9f2027ba49c861",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "84c1493813208f0099d73e9776be671e4307394e7b07ff554314e8bc59c3d74c",
+      "pair": "DOGE/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100273,
+      "eventAt": 1793735100092,
+      "availableAfter": 1793735100273,
+      "rawHash": "078673ac9d81e285ffad03c3799566a5fc3f3a49396307f7f3d4f4e0117b5957",
+      "barFactsHash": "4a8a09973bb78edb364818101bc9c689e783de54356c5e8520d39e9c8b42b9d6",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "9052c26cd2dc2cd98b5ec2de0f8365548096a0c194082ed79520e2be316f096b",
+      "pair": "SOL/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100263,
+      "eventAt": 1793735100091,
+      "availableAfter": 1793735100263,
+      "rawHash": "fdf7881975b6e8e5f3777f9fa88865d703b0dd8dacf09fa381a87ad8d55e3a91",
+      "barFactsHash": "8a97fc5b3c997a520e77aecb7b2cd3e67138706a5bda8661d26b54e92f2ff8b9",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "31d3d0359ac4a0369d1fba9dae4b2f3fca8050eb2f2da5b7a2378018f9aec66d",
+      "pair": "PEPE/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100258,
+      "eventAt": 1793735100090,
+      "availableAfter": 1793735100258,
+      "rawHash": "005655c5a28948e1cb7511e929f9e8d1f9758abd8831b053c5b3768690644b01",
+      "barFactsHash": "31669bfbd5750bdc140d3e34e548ac9cba412ef98eaae28238204b41f749c4f9",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "08b8926e466085cd5889c944979b526eb82055fd349cae9f81f0ca20b6d3df7b",
+      "pair": "ADA/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100247,
+      "eventAt": 1793735100090,
+      "availableAfter": 1793735100247,
+      "rawHash": "ef50c60290e2131049d902493ea82bb785e7ccfcebf2f0b8d95237c31e4dc8ec",
+      "barFactsHash": "aa44c28187f13d0318e48e2f34141cd7a6a5d13565db78d77f25449bb6285697",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "26e2971d8b09ffb23c8cbc66e007943ca6c9dccc7e5f66b29acddf862952c7fd",
+      "pair": "LTC/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100241,
+      "eventAt": 1793735100065,
+      "availableAfter": 1793735100241,
+      "rawHash": "e987a33dcc366ac32d7c992d3628c92d44040d0bdd338d083384aba88caa82ca",
+      "barFactsHash": "c1f34f8d89974f4c3ffd774fc9bea749f6ad769a3a470ef3d50846932db6eac0",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "6da1f558d505e5bb782b459cd0ad7406d2a042ca9d27d27a3a35fc0145699579",
+      "pair": "POL/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100236,
+      "eventAt": 1793735100065,
+      "availableAfter": 1793735100236,
+      "rawHash": "40c8472321434964a7101b2fc25cafdaedc4271856457cdcb5347df6341830cd",
+      "barFactsHash": "6d1b43e364333d947e7a7ecd158f3c8b4ad471b9996a69f7c9196116a79cf69f",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "7c0f04c510e5b8b92501c881b56faa28786a208cdcefff69a95095e4665c197c",
+      "pair": "AVAX/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100217,
+      "eventAt": 1793735100063,
+      "availableAfter": 1793735100217,
+      "rawHash": "962bcf7b46bec065014089bfeae4600b4a950e9ad1fc68b703f4f6a56460caf5",
+      "barFactsHash": "eded49700a5570e91e55f2bfca564493aa6ea64ac8f0637da5cb91c975e31b8e",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "dfb97edbcee20bfbf6348fcf5a14d82025a16759c006a841e958055cfd997fef",
+      "pair": "SHIB/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100213,
+      "eventAt": 1793735100058,
+      "availableAfter": 1793735100213,
+      "rawHash": "ed8d0e6dc3fcda6e3836a5ee699712ccaa13557a401535cbab06e475faed946e",
+      "barFactsHash": "3d551f5c070ed169926761b35a199a92e1b5c1fea0936b67d361063f8944df6e",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "26708b0a5ffd3375c6a3412963b808dcec2125142efd92ecbfd5e1bbbdf24a0a",
+      "pair": "APT/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100209,
+      "eventAt": 1793735100058,
+      "availableAfter": 1793735100209,
+      "rawHash": "91afeab61db2bfb237e575427f3bfd3686b65a84da707ea935d576348e7f8ab8",
+      "barFactsHash": "2fd40b26760a672c7b12b599a7e3500dfe86dc25889515f142113776f6da720b",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "b83374403a8cccfcece0ea660466975eabd6414aa620a32fc471f899de5812be",
+      "pair": "SUI/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100199,
+      "eventAt": 1793735100056,
+      "availableAfter": 1793735100199,
+      "rawHash": "556dbc29cafd82395cb5681c5062ac56e820ebb479ba777c456b75e4c4737489",
+      "barFactsHash": "d99da8c6c9ec0744d47c342e6d944c6d22bada3a44eb83fa1ef2febfbc352ac0",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "74f954fdfe506ae946c1a5ad9509a3b7817311cad583e7cd1b582450119857d9",
+      "pair": "TRX/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100194,
+      "eventAt": 1793735100056,
+      "availableAfter": 1793735100194,
+      "rawHash": "9431dbd709f7ee79811f226120606f4c3d43eb2eff2ea51c17cef9dc01fd9420",
+      "barFactsHash": "479168213e9a8a55a8dfdbce3ad41cdc379604593f6e8e839cea2700cf9017d0",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "e28635b8e05d8e2f78fa2887b48bc5f773102f41c392ffedf358411971f0f27b",
+      "pair": "LINK/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100188,
+      "eventAt": 1793735100055,
+      "availableAfter": 1793735100188,
+      "rawHash": "7a914ab1db5c3f6bc5f0a0c324f2981a39d6f8fac6900b33972bda5b4f4fa294",
+      "barFactsHash": "f680751f1fc668ef0c6c34fe101557761a62941d83c31418f35f304b8623eec7",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "60b7dc0fab8132083051f76e103fdd108a213968f6120f539650ae8bf9866431",
+      "pair": "XLM/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100178,
+      "eventAt": 1793735100054,
+      "availableAfter": 1793735100178,
+      "rawHash": "2cc8d9430285de2cddbbcefa435cc68c98a1b4f017f4d6d5beba6c728eeb1b01",
+      "barFactsHash": "49151d9c06d650a9a77d7502ae2333395c82c416c0d167e25ddfca6565e230ef",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "a286b35c33b24d901d7d10f8f2baa88c8a0f757a767f6780dd9f4299e98afa02",
+      "pair": "XRP/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100163,
+      "eventAt": 1793735100051,
+      "availableAfter": 1793735100163,
+      "rawHash": "ba757973d2cb04675e06be5ce2328826a6b828f13c36e00c3eeaeeaadff9fc0b",
+      "barFactsHash": "0fc396d10d4aa40c28acf3c33000168322c346bc8cccb17188db7144404039bb",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "0435cce2b87a7b960a5dc8533f357534d820f80de19c8c723886c9d989f241ee",
+      "pair": "BNB/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100159,
+      "eventAt": 1793735100050,
+      "availableAfter": 1793735100159,
+      "rawHash": "ea66b8cf6bec0bd698c3563c616447297192071bc4846325331212f972b09891",
+      "barFactsHash": "f8131d35c3d60f088acf24bed8afc8e6b7aa79d7eed3e0abe4b57a3194aa80f3",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "fd642ad47c9a396be05095f273675baef1a98bdd907e152fe3e5a06182e5b64f",
+      "pair": "BCH/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100155,
+      "eventAt": 1793735100050,
+      "availableAfter": 1793735100155,
+      "rawHash": "10f61190ceca956f4c1898a7d193531925c923b25e1d7a3fd5e2683df0e77858",
+      "barFactsHash": "0dfc063078e82a2d1efe406c0c3265a499cbf2069d0dffd41b425dda6846c76a",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "d9bef27de864f2f653e1f04bf81b7519b199e7adf7d4c5cba4ae6ecac98c85c1",
+      "pair": "ETH/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100151,
+      "eventAt": 1793735100050,
+      "availableAfter": 1793735100151,
+      "rawHash": "09d6568e8befbad4ece8ac878e74dc3de4d2fac1f8147b99528528c12f828596",
+      "barFactsHash": "d43b4c0931961c27b73392fe7af901a86d4dad1f39b200a062038d980e4bfde6",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "d09df28f2f6ed080e030bada20f4b39a5ede3f1920e306daf3b1398852083f16",
+      "pair": "BTC/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100147,
+      "eventAt": 1793735100050,
+      "availableAfter": 1793735100147,
+      "rawHash": "73c3d779eaf2815d2fd893c2debeea748187daf0d52e30054339ce5366b5efff",
+      "barFactsHash": "063e31f9e3d05e0980a7baf0892ae1851beb6a5d9b4948e418c04c3fea23f230",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "4b12ba84b3aac371a38b8215dbab3505d347b858c0a297198d3a3c1cdf2819a2",
+      "pair": "WIN/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100143,
+      "eventAt": 1793735100050,
+      "availableAfter": 1793735100143,
+      "rawHash": "a49d6ceecc52617d986052a78632637169744fe2e6fa1299b6122d1aac637322",
+      "barFactsHash": "820e9c4bd193d6553ef91e9901308dc8f293883dd1fd1ddafcad220253ee7dd4",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "3e2ad007d6645155db53439b698d6a1affb7be194485afabffc99b090769ec08",
+      "pair": "NEAR/EUR",
+      "openAt": 1793734200000,
+      "receivedAt": 1793735100138,
+      "eventAt": 1793735100049,
+      "availableAfter": 1793735100138,
+      "rawHash": "d73e5b5111af034257836e72eb3e182e579b183b7548f491dc83d003aef5c8a8",
+      "barFactsHash": "5bc54356bfc2a1591388aea2d6518025dac651d2dd1e918d3591e45fd3bbd0d1",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "6566c9ee5b07a4a2415e6a12ff229915a3e2aabf2649065ae4eef12f6bb4d8e1",
+      "pair": "DOGE/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200287,
+      "eventAt": 1793734200124,
+      "availableAfter": 1793734200287,
+      "rawHash": "132907ba3e862b3c79908f5b76b027dddf789a44a585975b168fa79aac4d8d8b",
+      "barFactsHash": "98b7043b5d42665eddc78df6dbd5d7cd328f82bf24ec5d4cba0561aa893bb706",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "b973f02b3038659ccc52d9d7ff3c1a6e6b23a763831dacc13c5f69f4674386f0",
+      "pair": "SOL/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200272,
+      "eventAt": 1793734200122,
+      "availableAfter": 1793734200272,
+      "rawHash": "f735231032c932462667f6e3a151d4a11428c649c3da54fcca02ea4f83e5726d",
+      "barFactsHash": "07d46580f2fd542700ea2b89fe61ee9dca7a4ec1692e3a70d343cbb5c27e8eb5",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "625cd349144c46ba5dd91e6452afc8345af12c721486245cbdb9494a8b56829f",
+      "pair": "PEPE/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200268,
+      "eventAt": 1793734200122,
+      "availableAfter": 1793734200268,
+      "rawHash": "14e9deef6c5e797d3f6d61d37f6e9cee4b982e42ed92e84558f9bd6bf1ca5901",
+      "barFactsHash": "86e5ba8bd82ba6b76886b5f2ce3d4c4c3c7c89fb7d28292393ed9ff335e8ac6b",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "a209d5bd6971d7e350f8ec3d2dff69b749313313da1c3a29dca8008a0940dc07",
+      "pair": "ADA/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200260,
+      "eventAt": 1793734200121,
+      "availableAfter": 1793734200260,
+      "rawHash": "f289a8faf8018f962bfad30c0ab60e49920e698b15f3a79a2d44434d04c0d66c",
+      "barFactsHash": "3b76938c0e04998d1218a2a5a16d11a7b355549bdb573ef7db724b6c35d7fd7b",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "384d86150f16b209f51a122b4722f916b0243050de5896c902af51fd8b37e028",
+      "pair": "LTC/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200249,
+      "eventAt": 1793734200120,
+      "availableAfter": 1793734200249,
+      "rawHash": "e16cec990d90fc3ef985931f9510374e10db2450a74769a4008ff165319af69c",
+      "barFactsHash": "15bdea424770bea79ab304c95d166c5bf7c70aceae813ae41c4df73d14ac9324",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "9d3d35bd97bf14471230757555c2ddeabb6dc50c1560ba64a6a99e9b455c3e9e",
+      "pair": "POL/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200246,
+      "eventAt": 1793734200120,
+      "availableAfter": 1793734200246,
+      "rawHash": "a1d4e8e65a32c95f5f20935d8a732fe0ad742533de4587cfdb9c01480a3070fd",
+      "barFactsHash": "b0ba96de0b75cb7e495ef16ab95ba250e35a3febb1d78cf957e0c9b8238081bc",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "6b031f7d4265182e74716f3260a9e7f23a4e6312e596309adca7ef296f9a2937",
+      "pair": "AVAX/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200224,
+      "eventAt": 1793734200117,
+      "availableAfter": 1793734200224,
+      "rawHash": "7fc4d9fe6450b5fcd145a842144ac827bfe113535ae4a8ba1e07cbb82b8a4a1c",
+      "barFactsHash": "7f0ef7dcd0441ee7c8e97cc0b7cbfdd72b5f82a917fd799f674329b6bdf6f9a3",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "83d6e34aebffcc6ce014d73ecc54476b335b8ede5e9b790f6d3bc92c6008135b",
+      "pair": "SHIB/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200221,
+      "eventAt": 1793734200117,
+      "availableAfter": 1793734200221,
+      "rawHash": "3842f60f40ec910a768cb2c996a5986cba6a473a991b71657ccb6711c48bd405",
+      "barFactsHash": "3054165b25dd4451d9ef86468bae4164b8bcfe9611c70c3c3d872d98f4b35c8d",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "1f222bd7fc972924f86f44ac817ced5f84d61afa0e484cb28d15d2173aefb29d",
+      "pair": "APT/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200216,
+      "eventAt": 1793734200049,
+      "availableAfter": 1793734200216,
+      "rawHash": "4887b1d31c1071c52e703da68a253c8908be652c3d67dd9bdb4323772910fa3f",
+      "barFactsHash": "476a38b5869f0d8389782f9cb67d88927272b1bd50c55d888d0f74c8bddda154",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "2b81d4ef309cdb6318e14332bf6b4c86e1095d7eb479f4ec7c12b40c2a6d4e4d",
+      "pair": "SUI/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200202,
+      "eventAt": 1793734200048,
+      "availableAfter": 1793734200202,
+      "rawHash": "4d461c38bfa627efa11abbeefb60330be8fe1e2360907047c2de4a06ca8a617b",
+      "barFactsHash": "a9e0e9af4607b2842f07940114c5922f64574c0e1f28608ec21db1479cf6354d",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "b9ec588c5831c3a49bafd9a583819ebbca75993de02f2c482f8eb452a6e40c93",
+      "pair": "TRX/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200198,
+      "eventAt": 1793734200047,
+      "availableAfter": 1793734200198,
+      "rawHash": "ffc23740115823941282aeec72221707d11eadfdc5231f40abec0e28c1e183c5",
+      "barFactsHash": "233103eb8238bb45fa48f7ed67854d9c3d52c754ae580239b47ba0520575cedf",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "dfc83f030f53fb48795c5c534e2cedd9fde065c2d422755eed3afb2a8be772a0",
+      "pair": "LINK/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200191,
+      "eventAt": 1793734200047,
+      "availableAfter": 1793734200191,
+      "rawHash": "1d226f775a3639baab86b78b29551320fee0c0d51fa5238ee7a3fb42a122d19e",
+      "barFactsHash": "bc8e0a107585597495f8f88af8a8b1136c847a759daf14cdcc93a62ac30b6995",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "01145a93dc9355abded3604d916f6e1eb6851ca777370f1988d8f196bc9bb027",
+      "pair": "XLM/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200175,
+      "eventAt": 1793734200045,
+      "availableAfter": 1793734200175,
+      "rawHash": "3a79a36044890d7b335036ea0c32c2c378c7d2f0b048f3e30048998e4ad476c9",
+      "barFactsHash": "3cf75af6b8b2c8df48e42d2ef68c5cc26ddb982057ac2625eb0fd22be4534904",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "ac0f0a0f04870884494b01817b18b7dc217f74df04bd5f8d6c733b8a66d2b0ac",
+      "pair": "XRP/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200153,
+      "eventAt": 1793734200042,
+      "availableAfter": 1793734200153,
+      "rawHash": "97e172e2d241682b12e950ff91972471130de42573e898133eec20847672e228",
+      "barFactsHash": "8c6bfb50552bb864dbe1ff25b2b3e52454f5368588e90e01321b9be53bacf5e1",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "6a5a23ab1add536cfc83080326866780e173d0cd97e26ab87d66e718d8854d68",
+      "pair": "BNB/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200148,
+      "eventAt": 1793734200041,
+      "availableAfter": 1793734200148,
+      "rawHash": "5d647e4bd0d22056912710698248108329352406d47c2c6ac631f636f612b269",
+      "barFactsHash": "332237b444f2a634086924acc3fb6a8d09a0ae43a579331f0c4bd933a13c63ba",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "2e8e9d3ea4ea23964545fa198934a42b84e2b05abaf389b05e3cc04045bab924",
+      "pair": "BCH/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200145,
+      "eventAt": 1793734200041,
+      "availableAfter": 1793734200145,
+      "rawHash": "df7f5227f753a0e6b699da71c1a7bc34ff408ca32b3f9f921d9b00fbb193a2e3",
+      "barFactsHash": "96ed106099bcedd994cd03e448dbe8c8e565c91867cdc074af7b7f6ce5a18879",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "5cc068c16db402de23024fa47d295614e4798dbc643a9f0197da1e218f3b1760",
+      "pair": "ETH/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200141,
+      "eventAt": 1793734200041,
+      "availableAfter": 1793734200141,
+      "rawHash": "947ebdc95b7cd319f53d92a8714e44cc60bdd1357ac441f5bb759d04e3a0b224",
+      "barFactsHash": "ba4d9937abc85c99e9ca38c81f98c134307b221d92b5ae0858ddfdca3b600d58",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "6d83e5ff90eb3b5907adb4093d07c8ba63350553b04eb368801cd967e2a69f8b",
+      "pair": "BTC/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200137,
+      "eventAt": 1793734200041,
+      "availableAfter": 1793734200137,
+      "rawHash": "5c7d3b36ff79f07c7e45c68ceeabfd08ac57023ab94e90c3bc3f0b0ce5885c5b",
+      "barFactsHash": "3f8516f955f92918cbf980a12af96d46ca05ad68fb42acc2dfb154cef073867e",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "fd7368bc430fb0f843ae6dec3d3bb84167ad419c852ffc310978591f868ed233",
+      "pair": "WIN/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200133,
+      "eventAt": 1793734200041,
+      "availableAfter": 1793734200133,
+      "rawHash": "b88499c2d8d53812b50a17d837252e4ba84dd36b88a7df44083454bf2cc560c2",
+      "barFactsHash": "90b4d78a1de303e1bc14de0e6f9b2109abd28eaa782deb74886d02eed99d7b87",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "2b68eb269ca921fc3a0be9fe1af18a66dc3acfa83b55b29d7cfd6be4e80c0d81",
+      "pair": "NEAR/EUR",
+      "openAt": 1793733300000,
+      "receivedAt": 1793734200107,
+      "eventAt": 1793734200010,
+      "availableAfter": 1793734200107,
+      "rawHash": "b691ebea9ae951ebcd27c527c6ee805feb31a96e8ed6fb3771a2a5c50ed2a740",
+      "barFactsHash": "e405e88a2d6a0e73e2c12ec9b867880a1c958031f0f409ecf7357da7585d828e",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "9c1a58a5888b9dadb9b5677ea18aed3862b90103834686ccd7ba704249d3bacb",
+      "pair": "DOGE/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300248,
+      "eventAt": 1793733300091,
+      "availableAfter": 1793733300248,
+      "rawHash": "6664dea882cfc5f4375465cf1fbf95ba6a787750e6541a73e62db9fa7dcacaee",
+      "barFactsHash": "f80b2fb45a590a0b8d8a3c2b7ff9017294214a2c95aa8bcbd835fc78f5a6df90",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "58bd4a1eb7e6f5937bef0179eb5d82803137f471a734b951533d86478bc366f3",
+      "pair": "SOL/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300237,
+      "eventAt": 1793733300089,
+      "availableAfter": 1793733300237,
+      "rawHash": "8e2bbdaf36d3f29f599638862b45abb3dae9903cb5031fb182f238ece73b4074",
+      "barFactsHash": "ac1c903b2d2572e0d437dc55ba553bbb089635f4b4f6a6220003bd8bc0701e64",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "0732441a245d1a7895f6e16f951366de6562ddc85fafd4d78853faf0a6036467",
+      "pair": "PEPE/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300232,
+      "eventAt": 1793733300089,
+      "availableAfter": 1793733300232,
+      "rawHash": "7d3f2fe31d68e3cbf20b0532de150e143876a7404dec607591901bd3075c204e",
+      "barFactsHash": "8bfc0594bdc05dfdf7522aaecb5bd01a03d61a8e5350caab6f228494002cdaf6",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "d128dba95aaf50e4db8a0ddbe10db1267a2f77a2f0bbd83b6893bfbc09a0ac85",
+      "pair": "ADA/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300224,
+      "eventAt": 1793733300089,
+      "availableAfter": 1793733300224,
+      "rawHash": "e5288188b145548586fbde4adf0a56e7ad4ebd54e4ac7ddc77e3e0cd2cbc87eb",
+      "barFactsHash": "e0beb4cb12cab019cdbcb10f63b9e33099ec42e3071c17c17452e29835163526",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "9854b760e61d2e4f7f85b02a048b0b957ca6c3efcec0cce7152192eb952ca664",
+      "pair": "LTC/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300216,
+      "eventAt": 1793733300088,
+      "availableAfter": 1793733300216,
+      "rawHash": "fc59db5e4d34833c50cd8320920be9ab1656f61ce556c6ad5d98c5d20244edfb",
+      "barFactsHash": "4f0de855244ce927f82a1728829b254ea8e79aca5a3b6fc45d336b1711b6dcd4",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "85a7567411139d03da952da349e26d926f40f33f3bcf71804fb686ae0a32191c",
+      "pair": "POL/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300212,
+      "eventAt": 1793733300088,
+      "availableAfter": 1793733300212,
+      "rawHash": "821f45bc93610b5fc69b9cea00dbab2f4abb328bc314bea34cd3bd92508bc3ad",
+      "barFactsHash": "0dbab02f5fd4a0d03860cb4bc507161f6caff27e1a80bb5a467418beb4f87190",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "15aeefb69a690d8f8c94f8a60f7f602a7e45dd563bc6718850c12e96f9eed395",
+      "pair": "AVAX/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300198,
+      "eventAt": 1793733300053,
+      "availableAfter": 1793733300198,
+      "rawHash": "7c27b9c4ffe1b1b3662dcd72e76273f2506b96c0b2cb2223095c02b0613f12c1",
+      "barFactsHash": "4096f58f72cdf66d3d7f2c4ab5d49664777ade77db552261bc2f590e38309570",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "5554b778936554008252196a4c87fb50d64ab9889065bf9572a2aca13edae1e9",
+      "pair": "SHIB/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300192,
+      "eventAt": 1793733300053,
+      "availableAfter": 1793733300192,
+      "rawHash": "36cdc43b46bbf299098a438a0172fb8b8ca483960345f2cc04fcd76c48a23882",
+      "barFactsHash": "f57fd1dc59bc03375532be251a394950c07b94f8c8df9fc79ab70a8cc57fe139",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "66e7cd314ef83e5f5f9b97e5e0896f91fc82e121fb3f89e2299cb919b16af448",
+      "pair": "APT/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300185,
+      "eventAt": 1793733300053,
+      "availableAfter": 1793733300185,
+      "rawHash": "4cbd682f204c216b269c33641a1cec7e5cefd1c1d6c2426fdf0b53fe230d643c",
+      "barFactsHash": "09337c5bdc35cd7eafffc254f30e0c7fa102d1bc18de493dac1ccabf24ad984d",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "dc96a9ddc4fb78a0102afde8dd50a0f3e186923ab135f6f9057503e24cd494d4",
+      "pair": "SUI/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300176,
+      "eventAt": 1793733300052,
+      "availableAfter": 1793733300176,
+      "rawHash": "13014777e6b015fbb4a5fc846a6b7f4a541e19a3ec0c73cd5850487ffaea4341",
+      "barFactsHash": "0b855f66fde151f7027222be6a1ff5cafa0cd4453286842b2af3b22c16e4d42c",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "ea5388721d57bcd1e6aab37ed03090d79bcdea63e9a41dd0953f12cdf73ab235",
+      "pair": "TRX/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300172,
+      "eventAt": 1793733300051,
+      "availableAfter": 1793733300172,
+      "rawHash": "dba07bd6ec2a0761b1986f38f3cebabcb46f87221ec760ae888cefdad7aac2e3",
+      "barFactsHash": "6de83bd2a8f79651777f77a2ca0f5aa8144fd5ca654d49f50df5a16dd0dcb0a0",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "97ad33eb1806a159ac77e22a1054b3af4a136295dfdcf6a6a19b840665abf70d",
+      "pair": "LINK/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300166,
+      "eventAt": 1793733300051,
+      "availableAfter": 1793733300166,
+      "rawHash": "46a63e21aa8b94277b3ea92b35b6d504bb2bc189c6a86c7b439e0808159964b3",
+      "barFactsHash": "dcf448d32272476e30992c8664967fe18a7161dd4c875cad5322beb9e532fed0",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "59c78c2f9fb82e8f8975a7c8fcbf1e57516a87be479ea52488faaf8e6d0b2c46",
+      "pair": "XLM/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300152,
+      "eventAt": 1793733300035,
+      "availableAfter": 1793733300152,
+      "rawHash": "55c6cdee568e45a77e991a56053ba41491f679010e421289ca8c278f22fb231c",
+      "barFactsHash": "14e396806a88b6f88ebf2e123d09203c56694f9ffe79f60e3e30df490908963c",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "970b72ccb75625c76adeaa342b9f2e564a36d9922daf24befe88c633c5d3b6d9",
+      "pair": "XRP/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300137,
+      "eventAt": 1793733300017,
+      "availableAfter": 1793733300137,
+      "rawHash": "0dfbcf450775937fab5923ac22a9a80c95a5ae9976e1c331d7bceb1cc69ebb75",
+      "barFactsHash": "1cf9f16252af102c5355c14c15f56f8a9d73299b933b578c492d5f7f283aecf6",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "cabf65b8f94a4a4d12a5c12cf598833755ff3c4666151cf76c4c0b057b47a479",
+      "pair": "BNB/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300133,
+      "eventAt": 1793733300017,
+      "availableAfter": 1793733300133,
+      "rawHash": "3ff56b2837de28f02749856f0afb7aba650696ee2ea7a1b9f61454af117977aa",
+      "barFactsHash": "00e85a43d8e13510e311e510d4c025b077da415ff67519b97cff604b4f3f4689",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "72b1af056cbcf5ee37a7fd6821447db8861509017c165b471753ecb573b6280b",
+      "pair": "BCH/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300129,
+      "eventAt": 1793733300017,
+      "availableAfter": 1793733300129,
+      "rawHash": "933ae9410c9374a35c587c050494d589633fd6090c8bf90c434635026758cb44",
+      "barFactsHash": "6569060051ca6f20d5833cbed44bbd057e98a346ff7858e724196e57961e413f",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "05f579ce8e64be6c981f47f11a1ea326d913a99837c6059cd6da2a7268aa7858",
+      "pair": "ETH/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300125,
+      "eventAt": 1793733300017,
+      "availableAfter": 1793733300125,
+      "rawHash": "55f0baa25f5acfec676903832f0fc4fc9c734368178c83e70c574d4476240352",
+      "barFactsHash": "41d2c6dc387fe7d9ff5b12993276ddacbcd67ed63f2f5711d3cc36c15bb19ccd",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "f5a5ddca58a2bae1e53b85b3ecfc4f02c67993eac0923f3700dee806de7f6875",
+      "pair": "BTC/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300121,
+      "eventAt": 1793733300017,
+      "availableAfter": 1793733300121,
+      "rawHash": "d1d230987380e26488874ec057be91619a336b93b2b0b678221e4c0f3a8c8b8d",
+      "barFactsHash": "4a4a773c3d85a479ed1a27dcbc894d49d10732ca11e1e82c5d9feaafb84f9383",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "903466d9971fa10e8ed710e7a69728dd30098083f1567157feb47c12bddb9b63",
+      "pair": "WIN/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300117,
+      "eventAt": 1793733300010,
+      "availableAfter": 1793733300117,
+      "rawHash": "8f4255802ed144dab7de30d3bcefb812b969817c7d8f14662301b3d87fda39fb",
+      "barFactsHash": "c56eb3fc6d91782ef3ef84290c2703cb529091213d773f5817e5c21d3d43c56f",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "aaf6424ad38f0561e1aa5ffdc1b8c4635271210a1e20c922d9d355a8823a8916",
+      "pair": "NEAR/EUR",
+      "openAt": 1793732400000,
+      "receivedAt": 1793733300112,
+      "eventAt": 1793733300009,
+      "availableAfter": 1793733300112,
+      "rawHash": "132c4e4cf4bfafbbb715f1e90e7f8dc674109cb00c14b0174594dfebb5bf6db1",
+      "barFactsHash": "b85b6e3c16129272c5caf874fc2f9de18d40219a99f56635ba016174b8d5bd42",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "b879f23af9fd1504f6faddf39ab64b3a1ef3bae68f4462296fbbf88ffc89126a",
+      "pair": "DOGE/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732399058,
+      "eventAt": 1793732400093,
+      "availableAfter": 1793732400093,
+      "rawHash": "aad92a8bdef43abd702ba6b61c69f7b9c1f543a59824eb3de165e1ba24a93daf",
+      "barFactsHash": "0c0965da49cd0248b125772bebb452da2ddc5bfb1028cd3203d89015f70b585c",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "0069a327671663e7ad6bedc7e72171284e3a936c3066a5fef69df03b509a1136",
+      "pair": "SOL/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732399032,
+      "eventAt": 1793732400091,
+      "availableAfter": 1793732400091,
+      "rawHash": "1580899fced994622bd32ef7f7e63290d6a623740fabb5ab1d44fb6bc54f0466",
+      "barFactsHash": "4ad0f925dac072ef83218be9214794ca3abb84b1c5e4ee08224f243f738bb0c1",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "7b3120028275a33af13c7eec2a017e391a5e1398dbce431689d77e980632fad8",
+      "pair": "PEPE/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732399029,
+      "eventAt": 1793732400091,
+      "availableAfter": 1793732400091,
+      "rawHash": "21234f6ba15ff63dd2af7256d8b2b35f569e43130f8e1bd04d14ff6c05ddae6e",
+      "barFactsHash": "5b28a0fc3af27cd7ba6a18a592aa45ae1b725a3288c6e4b7b61ce004fd86ebd0",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "33d297af1dd0e8988219e4b33815d8450685e2dc825d70ef981fe6d09e360e6c",
+      "pair": "ADA/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732399026,
+      "eventAt": 1793732400090,
+      "availableAfter": 1793732400090,
+      "rawHash": "4b2e5e4240c8bfe6c3bd852ac7a8de5320ae91a03e112c388c10bbeaff943ec3",
+      "barFactsHash": "92382d0575a7073241c15d63868bca6d4f21f7d66918cd0cda3495d5c04dbf73",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "458ede5273b4ae1fb1aaae0b386bd0e373973e5cada7f347eb82da547b622f6b",
+      "pair": "LTC/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732399014,
+      "eventAt": 1793732400088,
+      "availableAfter": 1793732400088,
+      "rawHash": "d77a51dd66c5a66766e16249bd8f60637408fa88d1f3c110f5ba47fafb879ef9",
+      "barFactsHash": "8acb81cc1bb1df0427b1e4598fa2d494d3aeb8aa01bb5a864a72c76e8bb863a8",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "024b32256c52b6f7c50b97870c954a441cc1374ff3014b9e6196f3366115d83d",
+      "pair": "POL/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732399012,
+      "eventAt": 1793732400088,
+      "availableAfter": 1793732400088,
+      "rawHash": "2516af601450ef19ab63e80f800d62ffd27ad1d7bd61bbc859b1c79fa28845d8",
+      "barFactsHash": "37d771b10410f023e4b3c408362f0cea643b50f93b04cfa5e9378a06764c7963",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "855ba3e2b8d8cae537244e8643f10ec819c0c1ccd50a52329dbc1dca87414248",
+      "pair": "AVAX/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732398992,
+      "eventAt": 1793732400052,
+      "availableAfter": 1793732400052,
+      "rawHash": "0e2f9304f82bc73d8ab6891f837d590c1636eeb83d24ec7cbd6eb72add231a16",
+      "barFactsHash": "cec6d4b81dee8685aa11753fe25a3edeb92f9eaf4d119250e173392a92de73b7",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "1445215aa31b14b870b9b74eea735ee3e4bd64efc8848580ff6f76cf1affc88b",
+      "pair": "SHIB/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732398991,
+      "eventAt": 1793732400052,
+      "availableAfter": 1793732400052,
+      "rawHash": "599381f2247c64823655aa590f6389c71307cde2d2335e37b339461ec35c5214",
+      "barFactsHash": "d0a6169b25cc086b6e5e72b342cebd27ba19f6f15771b4fa5966cad0f39835d9",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "9ae3f73535af35a9926ae0e7d110ed907717c8a712817686e4defb1007651c3c",
+      "pair": "APT/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732398986,
+      "eventAt": 1793732400052,
+      "availableAfter": 1793732400052,
+      "rawHash": "166110cb90c958d1cc07408ee2e90c1f946236bfb5eea8f3b9db0bfcc663b2d8",
+      "barFactsHash": "af0333adae81e16eecad3b346f1c464a54b2d8a0ce9ec4e46feded2072e05677",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "bdc6255f14099244ef9cafc195e931f54a9a0f1d3362e6056937543644af57fc",
+      "pair": "SUI/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732398970,
+      "eventAt": 1793732400042,
+      "availableAfter": 1793732400042,
+      "rawHash": "417bda4d018360f0ed6a092acb1e71c8b9d69fab18e8e4dec04ea38b690a48dd",
+      "barFactsHash": "e5ff6a000dbeaa5a44fb522d190367dcbf2d4101ce173c0a264972af41284788",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "0e3b5eb703ea6e177389154621b9ed4ed3464688b9fa175d3a04340f52fef028",
+      "pair": "TRX/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732398968,
+      "eventAt": 1793732400042,
+      "availableAfter": 1793732400042,
+      "rawHash": "193a39a678a38725a64d4937bf5ed601260118fad799418ba84a1aa38d5f293d",
+      "barFactsHash": "fcecb5921fbc0448e0850f6426195b29fe5eb7ac43bef32ba9b670010649ba07",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "2c347872e11b50b08f742e48565a59e8acd1a8aab42454a6b1dd93bf7f40c424",
+      "pair": "LINK/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732398963,
+      "eventAt": 1793732400041,
+      "availableAfter": 1793732400041,
+      "rawHash": "8425e9884909de6014a45c5f1141c49acecc92d90f146749be22463605f7b8fc",
+      "barFactsHash": "04382d8b6a054e2c52e181b88d9b5e6239a26ef3e0cc95a32a1ce068d2fc7fb1",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "200c4e571a4237fef1b0ab3af722d63b1d160a52881af3879303677fad8554ca",
+      "pair": "XLM/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732398930,
+      "eventAt": 1793732400036,
+      "availableAfter": 1793732400036,
+      "rawHash": "5af13c921ed73917f49fc638fd88d10270dcb4884b915542d45a84ffd295670f",
+      "barFactsHash": "4d4a0b938823ddf752b24057a2a55adcb441ce54b6d2caaf96b14832842609db",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "a463fa31ee80167bad4b65d30ba76a05a5ba09cc68c0258b7db4c57d8eef88e5",
+      "pair": "XRP/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732398895,
+      "eventAt": 1793732400019,
+      "availableAfter": 1793732400019,
+      "rawHash": "0cbef3ebd77e2bc1e7def5bccb4c75630f86d7ea107eb02a042578f008dc6091",
+      "barFactsHash": "f2002afcffa3b0fbdd8d64a073a2dde1c32d78d1443f9e792bb47f71dfb22c1e",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "d886727a3a2043cc6a119aa0a1aae0467d4f67a7daa03956aceef95e13c6211a",
+      "pair": "BNB/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732398893,
+      "eventAt": 1793732400019,
+      "availableAfter": 1793732400019,
+      "rawHash": "4fb4b0986a595ad005f415ba7826ef691d82540b1531f76ec6b3f72e0d90822d",
+      "barFactsHash": "72d90f5614d079ac54600e675bd3938862ecdcbe585b4f2daf3e356d4c4f2dd9",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "9973847d28787a517bd30705946a3abac9b2c0478fe913def93cd1aa427e571a",
+      "pair": "BCH/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732398892,
+      "eventAt": 1793732400019,
+      "availableAfter": 1793732400019,
+      "rawHash": "6f082829a6a954e7d542796a3b212b372c50de91930b94e4a9e70083f7777261",
+      "barFactsHash": "ff97b1d0719b9b22bd006b0fe3e2702bfcd07b7fa14b7c8d365d95255c5e3fb1",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "95e75cb3a6322ec09a6effdb82e7adbe7d1b840a235c0083247b9c27085de8db",
+      "pair": "ETH/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732398890,
+      "eventAt": 1793732400019,
+      "availableAfter": 1793732400019,
+      "rawHash": "d13bc9defdb2963a59db387eac8ebc52feab54fc265c53c8b302aee6ef78f020",
+      "barFactsHash": "4a2a8a389477932bafa5c57e88d0b2bc6b1fffb8c2321cb47b6616fff03f5188",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "7d5a22d3e4ca5bfb4a4402fe8a39ea582f80cc1019f0c82a1b372242d3ce4ac8",
+      "pair": "BTC/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732398876,
+      "eventAt": 1793732400018,
+      "availableAfter": 1793732400018,
+      "rawHash": "27036a6b92b0a4f1f8e38509082cf83e08dc1df455cc9a19d083084acca75e7e",
+      "barFactsHash": "bed890bd3c6195bcc21fef503c581e84213d8f4eb50fab999ff3c77d565447be",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "00500643d034dbfa6064dd12fa60759b6b0b041c20efcfdedc814ac8c19c75fb",
+      "pair": "WIN/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732398873,
+      "eventAt": 1793732400018,
+      "availableAfter": 1793732400018,
+      "rawHash": "e2561ac2df64b5ad9c8f4099dcafeb9dd5aed3cdb1beaa7b655b8ede7e3c6867",
+      "barFactsHash": "c656a0f8668e5ebf49b68d47dd782898c7446ab9c1612292d0c3d0afac97315c",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "4b75a77b365a61f60c8a7fc76838ef9144419f8197da6c540fe10326cbed1c2a",
+      "pair": "NEAR/EUR",
+      "openAt": 1793731500000,
+      "receivedAt": 1793732398869,
+      "eventAt": 1793732400018,
+      "availableAfter": 1793732400018,
+      "rawHash": "3b1a063c86b5d131b907516324cb8f019d09e94dbf59b16a21c8306d2dddf89e",
+      "barFactsHash": "cc967916bb2f4372dbf390016a094c4186c6aa277eec556eba8e3c44252d9d89",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "296e6f94d9442ac851a2b90d7173bb265eb03ca32f21e910ed68b13ca32d7ff2",
+      "pair": "DOGE/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731499023,
+      "eventAt": 1793731500090,
+      "availableAfter": 1793731500090,
+      "rawHash": "1a3c5494f4a8f9460169cb2c7155f0bfad9d8ffc3207c3a505dc4b03822aef26",
+      "barFactsHash": "8374c48af2bc3212f5ab2abfb93fbd14dddbccf53021ef415fda132640d5319c",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "505d4702af2f7721b0dc5dae48ac7ced859f7c2323f82c903434c3b825a6164e",
+      "pair": "SOL/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731499008,
+      "eventAt": 1793731500089,
+      "availableAfter": 1793731500089,
+      "rawHash": "aa37082f2182cf40b37f85d56d12a7a274b8f809e0fe4e57f92f815d2c98a48f",
+      "barFactsHash": "ad5a60e74c227b8f87e17aa9e23af288e5626073811b9a2e90c0afdeab051b56",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "3dc04bf75edd770aec937555a35dec2ac84ea11fd1c11060823e1f98d039f3ab",
+      "pair": "PEPE/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731499006,
+      "eventAt": 1793731500089,
+      "availableAfter": 1793731500089,
+      "rawHash": "14fee265c2efd5110f9601f4873e7cf44cc9a7b1365bdb9044410d9b96a63cf1",
+      "barFactsHash": "055813be3afe009098d42c8d3205ac6097c057f37f3344c55683d20c2dc3c251",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "f017592641cbaacc0145ea382c8cd5f79a60736bcc48364c50aee8969165d21f",
+      "pair": "ADA/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731498997,
+      "eventAt": 1793731500088,
+      "availableAfter": 1793731500088,
+      "rawHash": "28c95a36819915a431426916cf46f6961f1e8c5d81c83839cbd6030a89514a91",
+      "barFactsHash": "b0a68bb568a8c481df65d273ae93a5a8ebff322f8f086ecba0922914d45433f4",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "f6978961305a24772c25b41cf95de73efff1c7c6ff0d49bc17de4b634f0852ff",
+      "pair": "LTC/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731498990,
+      "eventAt": 1793731500066,
+      "availableAfter": 1793731500066,
+      "rawHash": "567e16961da4cd7f64394cdc5bb48f93d886118a8f2e47b2f2e48363ab623377",
+      "barFactsHash": "7555669452038d921576b2f6247c5ad6919db312344a4ccd975ed8f1ee3e1f2e",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "dec4833e016ba5c4dccde9fd1f97ac93ddb9ce79ebef810680b5f8268949a646",
+      "pair": "POL/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731498986,
+      "eventAt": 1793731500066,
+      "availableAfter": 1793731500066,
+      "rawHash": "a3d22d03cf2afc1bb7e35e6e99d2467ab6be16917abbf006aa83a0d4d1330c0b",
+      "barFactsHash": "529feda343ac94a688b49d8b05f9df57c37e3355faff9cd293d5972efbd846b3",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "ea5466f092800df85d6360d90f3e3cf2441e75b8947a08076623414573a18432",
+      "pair": "AVAX/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731498964,
+      "eventAt": 1793731500064,
+      "availableAfter": 1793731500064,
+      "rawHash": "ee49ad10743b098ce723d6192d74775e7226ee9abaa9695bc106f27b26d3d56f",
+      "barFactsHash": "5e2b606db8454451d0c3e23ac98b9eeed3780eb760a88a6375b698896554e691",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "9991f59613e31fe6d75ebe4546ce01972ba3d8be8ca95fb5f94982fbccf45cc8",
+      "pair": "SHIB/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731498962,
+      "eventAt": 1793731500050,
+      "availableAfter": 1793731500050,
+      "rawHash": "b665260ade8add736789fd86f21e5173f44c92232c07daeae81e89b6466872eb",
+      "barFactsHash": "3ea483ac9d6623900788cd1159f227cba4dd6b44411907eabcf4f8a171638555",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "f6928315d79e01be0a6a62e30769953b3580e81e0c6895a442b43caf065edcbe",
+      "pair": "APT/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731498959,
+      "eventAt": 1793731500050,
+      "availableAfter": 1793731500050,
+      "rawHash": "b8b6e87f53b757a0715b1480e8ca9a10496dc89c24cbe14a40c3b007173f3d83",
+      "barFactsHash": "5b96302fef7caec8bafd60ed423d9b5cd439c2acac7c74d4512ef4737110c273",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "4938729e7d8528e396f3b47662f776b36ce2f4c6027d8d74344fc3e2be06c270",
+      "pair": "SUI/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731498949,
+      "eventAt": 1793731500046,
+      "availableAfter": 1793731500046,
+      "rawHash": "ab441fe9f3fed96bbc75a26da3b8dbf0b061b8ed9255a499b31622fe1e4ac91f",
+      "barFactsHash": "bffc1a16045323e44ed431083ac6b3c09c142d7ce87c7b749fa16784fc68c5b0",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "7efae45df1092284812d9507eb25f4ace25cc2632087172f919688bc27cb2fbb",
+      "pair": "TRX/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731498946,
+      "eventAt": 1793731500046,
+      "availableAfter": 1793731500046,
+      "rawHash": "cbd92ce7127832827fc3cc449a5ae116b6e18ed96f8b241675144485a0ed0db3",
+      "barFactsHash": "e34cbd567ce5912c95e18076995a73060c4cd7196a705af61ae2a46e9e241355",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "02842f1948f7a43fa2a8bdbb76530aff86b190ced9396c4d0f42d1501c9e0a4a",
+      "pair": "LINK/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731498940,
+      "eventAt": 1793731500045,
+      "availableAfter": 1793731500045,
+      "rawHash": "94a81ee282fc313a38d89adcdf77e4a1eb9d47d93758c136d4fee757308a22f5",
+      "barFactsHash": "3d8b46fdff49d7406c41974530bafd24ca12a15432296cde55d68f985f0d890f",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "a7c1ee203ed8e30ed1922036ee3608ac6da515410139b47f843285c5aa454522",
+      "pair": "XLM/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731498926,
+      "eventAt": 1793731500030,
+      "availableAfter": 1793731500030,
+      "rawHash": "5d9fe37f30fc98211f95eb79075ed109923f2d4ea906eab4567323b0efd2d16e",
+      "barFactsHash": "ee00bbefc21f2b8246e42bc9cf79eef773208a7285c375cc3e2972e306d26e1c",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "7b58c7090bd6e57ac3e1aaff1c02b226d978b5d904f389b75a9f877b9eb0b875",
+      "pair": "XRP/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731498899,
+      "eventAt": 1793731500027,
+      "availableAfter": 1793731500027,
+      "rawHash": "2e8a4ef1e184457d9bd4dc7d9897a7e90b13ff6165f11db4392776cd14b7a3f3",
+      "barFactsHash": "7b9e6d42c99e881f1a9b48eece8d2be7d26f3cd7fef3e4f747a372d28afc47d3",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "9974440fe02b8d0e0b216f189a305218f86d284f6b90d11942e6238a58fa1ef5",
+      "pair": "BNB/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731498897,
+      "eventAt": 1793731500027,
+      "availableAfter": 1793731500027,
+      "rawHash": "9c7b5fa7c2076f1bf81ad8b685066f031a838ea418f8d14be94f05f09c58c452",
+      "barFactsHash": "a0d4d1bcc37f8b9bfae0694a97d5b85c12f856580794b3fc905d83a5b42e8b3e",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "0c694781e7d62a3548e29cb9c569b1250fba9d6962bc44f41286575e7be393f7",
+      "pair": "BCH/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731498895,
+      "eventAt": 1793731500027,
+      "availableAfter": 1793731500027,
+      "rawHash": "3eb0aa9cda15c4fd7e70ea7cfda76270b089b59ebad0fd4967d4f81111d068de",
+      "barFactsHash": "59ea5da8862d7176986c6636b5836057260af862461cd87a718edf98f0d5a5c5",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "3e2d0e902f2e3007f1be4bba2f50d39bc1bb52229b0de43133c3640e5f70607d",
+      "pair": "ETH/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731498894,
+      "eventAt": 1793731500027,
+      "availableAfter": 1793731500027,
+      "rawHash": "4a202d4a74846eb6e5b4eea6c9eb8adb44ceeb731c1aaeb831418f38f8f727d7",
+      "barFactsHash": "e2295446c884b4ba94ae5463ff1a4165c183e60846b50a0f5fb7ebf5d21dbbe6",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "167c7f696498e79f62fca93733764afca75b53fefc40ae3e7f96a5523e4186ff",
+      "pair": "BTC/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731498891,
+      "eventAt": 1793731500027,
+      "availableAfter": 1793731500027,
+      "rawHash": "5169d128d1b8065d9a6b61cc8ab2541e732148df7144ad1de39b36ef651449d9",
+      "barFactsHash": "f8141819a8de2c78d9960043169f24954c4ec7195b1ba18debb55c6af652ab80",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "57b63110b727ccdcabde8d92d1ed301ed05d951dc0e3fcbe4e6fe6e28dc80b2e",
+      "pair": "WIN/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731498889,
+      "eventAt": 1793731500025,
+      "availableAfter": 1793731500025,
+      "rawHash": "45e99d80a1471d3f25c85970cf30baefc7c7e3d7507a68046dcabfab0c055643",
+      "barFactsHash": "4499f62f99b528fdc6d040181006d0b7b8061ccb574087ec629fdbbee66f721f",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "34f68a3dfb6da4d4f55352f99502910ebac15067c995b3bb9d6af9cdf0e086a7",
+      "pair": "NEAR/EUR",
+      "openAt": 1793730600000,
+      "receivedAt": 1793731498887,
+      "eventAt": 1793731500025,
+      "availableAfter": 1793731500025,
+      "rawHash": "357e0f190324590a62c871a2a0d1b6eacab14e1af5fa43dc6883c6d485c43d22",
+      "barFactsHash": "29d1b8a3c7db89a1cc35ddad6357dc44f9dbbfae3d0a977677cb2ada57da01ac",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "1cc856a3b5196739f014d7c663c981436150c1be087d73fd1e2149daf4c32cf8",
+      "pair": "DOGE/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730599040,
+      "eventAt": 1793730600088,
+      "availableAfter": 1793730600088,
+      "rawHash": "ece31440d75fb02f5b1da8675e11e158fc52a6a1d8510d6a0d122487781c0795",
+      "barFactsHash": "2914fa9686694f9028b76b33ce78e2298fdc57b269abfc9f5af1e569693d8122",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "1d73b32247abf172249e08d6b03f15a52ed4c383c7d06c6e3d55a5ad4bd72a49",
+      "pair": "SOL/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730599025,
+      "eventAt": 1793730600086,
+      "availableAfter": 1793730600086,
+      "rawHash": "3a4441c93da465285bd7b358c1a3f4f62e7492b67470531025ce6474a663a660",
+      "barFactsHash": "64cbe455853ec2cb9bef162de03109508de0c90a3c223f2ae4261cc23a530aa4",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "d1ebcfe4729fa92f47097f727af1a92964d7516745d315266b31e8b9606829c5",
+      "pair": "PEPE/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730599022,
+      "eventAt": 1793730600086,
+      "availableAfter": 1793730600086,
+      "rawHash": "bb66539a86d3c43217eb5b9fc212e32e6951ca1b3e468cebfe86c6f21dc36a8f",
+      "barFactsHash": "6558f4a4299a63eb3e336ca3e66ddc94e7bdecf805a63a19efc24ec81b4fd08f",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "e3c73d9868260f11e45e5f6f355db91e3835cbd4bba8385656bfb6a74d35595b",
+      "pair": "ADA/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730599013,
+      "eventAt": 1793730600085,
+      "availableAfter": 1793730600085,
+      "rawHash": "3bb3dc60f5243ff08e75f94b2c67e78c023cb54770b852ebd01ccbc0b190773a",
+      "barFactsHash": "8bac19c6510e017522970e6fd23c89776791bcbfa5d728255cead30e6378fe13",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "917e001141bb79afbc2d497a9a2debd4ab1d5e8c5bd7dc760d7574f6ece3f937",
+      "pair": "LTC/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730599001,
+      "eventAt": 1793730600066,
+      "availableAfter": 1793730600066,
+      "rawHash": "422ce4fd7cd2dc35a2571a56bafd240dd9acee5812ee5e47f6fda0a5add11979",
+      "barFactsHash": "1854ef5317b3176a85282b206c75396ff77844706ec4dfb708fcb4bb291f782b",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "8c9b75659b5ac43a664128a1e94f89946faaec5565a75cbab962e8c797fa4301",
+      "pair": "POL/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730599000,
+      "eventAt": 1793730600066,
+      "availableAfter": 1793730600066,
+      "rawHash": "9ede5369a91595677a59ca14e6cda58e239d39e62c1a327e04f3b4eb57a8a29a",
+      "barFactsHash": "113b124d3e3fdd4f2597a9aa7b94131e65c6f631c8de32fc6e2f873fc8a1c67c",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "a54cc26846a27976afc1a51e051623d75732634480efe0e9602b60151f523c39",
+      "pair": "AVAX/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730598976,
+      "eventAt": 1793730600061,
+      "availableAfter": 1793730600061,
+      "rawHash": "604f9b4d0ea81eca003407177a04b8184d8977379791be39a22a0fa00c8ba63a",
+      "barFactsHash": "e05dc838c9cab9af2d99a30be19aaeeef6bd4783c5bb343ab4c432c88282ad0c",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "0212d47d2bec0b55dcdaaa51cbcd27ca01634b4bc61df146e84e4d3679b2a161",
+      "pair": "SHIB/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730598974,
+      "eventAt": 1793730600061,
+      "availableAfter": 1793730600061,
+      "rawHash": "f9eb8590e0d5595aec1dbcc6e46a82c364c7b3fa2d0642fef7a5e0c42ca2477a",
+      "barFactsHash": "59e18ab787ac7644c8995f1f697f54c70f9b800fbb3042729d203bafbeb0f978",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "bf820e241cbf85b564326a5eb8ced4eb9d67aa12813c244f25e18354a9ee1109",
+      "pair": "APT/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730598968,
+      "eventAt": 1793730600061,
+      "availableAfter": 1793730600061,
+      "rawHash": "73d701a68be3678d6091fb4cafc61b7577058118be3c743393d5b2aacb03025c",
+      "barFactsHash": "cb71eb26ea060ef449df9e9a08db87f45a4cb82b9610d15ae05ecec59f81e9e1",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "4f7b5e7026cea14ffd0aa29f2ef988f2ece7f9ec7160258c1c788785326ac6fd",
+      "pair": "SUI/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730598953,
+      "eventAt": 1793730600059,
+      "availableAfter": 1793730600059,
+      "rawHash": "305b25131c762c61df8cca806f479b6b37dc33327778d0a0c37d6a01d53b90b6",
+      "barFactsHash": "0f68f2f13610f79058de27885bcacafcf3ae4549b4f79b5c4074481b3413f202",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "1cfc2cdfdf50bbcadea78d92878c17325abcee1382b4bf628e13a75f4157bc08",
+      "pair": "TRX/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730598951,
+      "eventAt": 1793730600042,
+      "availableAfter": 1793730600042,
+      "rawHash": "f7a9e129527090459f5b0688f9b69fb13f73a7c9be7451759a2b82204e63692d",
+      "barFactsHash": "dda52d4e49aa81c083986c63dbb4362d1365ded38b0ab68d5c09d651f3e8a3ab",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "240ef11be2c01d1b7e2b2e3a03bfb23ee0bc6e0244e40b99c50ea5dfac378435",
+      "pair": "LINK/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730598944,
+      "eventAt": 1793730600041,
+      "availableAfter": 1793730600041,
+      "rawHash": "cb73104e18f598f7a77a4557d9b6ee16d0902e439ed3f365e2728812f4a71bf8",
+      "barFactsHash": "60665fd13ad50c0c3edd8e88b6a81b73af1b1eb20ca7be649c84fa09acd0b139",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "1c285734eb6eee65a0e4ceb5da7aabc15b928337137c88a4564b55cae1058ca1",
+      "pair": "XLM/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730598928,
+      "eventAt": 1793730600040,
+      "availableAfter": 1793730600040,
+      "rawHash": "ee5815b6f5bb5c73496e129816cf339c5edf9616d479881dc08f1bc7d3db91a3",
+      "barFactsHash": "4c1c0e43c553a53f2081fcc0f0fce54a2284f1a3eda27057c486910cb91b1164",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "44d20156e532885c1798b3da560ae8ac5ac2c67009190fdeb1442e944f46f066",
+      "pair": "XRP/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730598897,
+      "eventAt": 1793730600024,
+      "availableAfter": 1793730600024,
+      "rawHash": "8defb88e6306bf2455dd2ec6c16f95eb0bf37b0fe19673ed544c981429d1de7f",
+      "barFactsHash": "b6dcee833a3496d60668846cd13bfbf07326dcdc05d657913ed15e8b07a45205",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "d72ab410e3e74ea86e9416634a366292a60294bc8558b087e13129952a32f452",
+      "pair": "BNB/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730598895,
+      "eventAt": 1793730600012,
+      "availableAfter": 1793730600012,
+      "rawHash": "349ee5a75976bc352f770919fa73a5199bff12336710422c90391c5f0b324ed3",
+      "barFactsHash": "2aa763b0716832033668b88a6eb1698cfdbbe23e6eb51ea18c4d90f02ccd878e",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "c68349a2404725506b8d8ec1bb57b261c2edc8946ef23e06e9a0af2e1d0ac3ea",
+      "pair": "BCH/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730598893,
+      "eventAt": 1793730600011,
+      "availableAfter": 1793730600011,
+      "rawHash": "b7bb7c92c3e26ef1dfecc7aa1a72ba3910024dd798d2288d50fb6e63611e8e93",
+      "barFactsHash": "3f90b563b0540b1294fd82ba0c9dace91674fb54bf626566f6283e18b6f56b90",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "003481b78d8a3114ccf06a58c8b9400dc2a045e7b13815b59a17d140be843b2f",
+      "pair": "ETH/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730598891,
+      "eventAt": 1793730600011,
+      "availableAfter": 1793730600011,
+      "rawHash": "f2a002aea4d1726e7068b3490ae7e98be563aa46efc75c4c7e387b371d6f85d0",
+      "barFactsHash": "84f8f8b4758ac6de1e7ffe74b141577f3c9ced897ca19741c6e3e25dc179f8af",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "76a648057bbc439d618b71a388f217e240dc65e9d2617f26ce34f1b7b15f2a3f",
+      "pair": "BTC/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730598888,
+      "eventAt": 1793730600011,
+      "availableAfter": 1793730600011,
+      "rawHash": "4c0d6ca40fa07d792164fc75029504b9c8ff965ba425134f26e6fe9a71aba436",
+      "barFactsHash": "f45fd2e5077df0a56db82e72e19e8d059cdfbbfbd11398590f3e70b7852a61fb",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "4dbccc41d5ead6e962bc7967af8b3a40de42e9eb1997302b4732c6a07a32b959",
+      "pair": "WIN/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730598885,
+      "eventAt": 1793730600011,
+      "availableAfter": 1793730600011,
+      "rawHash": "e731c804d53e76975f50861ca62684683aa0f04d4709cdc9a23bc3acf408c161",
+      "barFactsHash": "88b123453dd60d5ef3109dccb27245fb7e1bffd5787795b5e64709faa69dc751",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "17cf63897e2e196adf9e1be435aaf8ae588635c3c9d6f8d07034857e16b2c45e",
+      "pair": "NEAR/EUR",
+      "openAt": 1793729700000,
+      "receivedAt": 1793730598883,
+      "eventAt": 1793730600011,
+      "availableAfter": 1793730600011,
+      "rawHash": "5cbb8594477b18e175eb65ae8bfea64d47484c3b3407498d828ce82aa8945709",
+      "barFactsHash": "22c81f31e68d64478182e6a9b751c6736a1a040d52f6426ee920033099b0feaf",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "324c028cf902adba675e70b063d816436534de0165bb06adb9ccd9e8998b90a4",
+      "pair": "DOGE/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729699036,
+      "eventAt": 1793729700088,
+      "availableAfter": 1793729700088,
+      "rawHash": "22de4c7c524a4b06cdab851e63314eb395024af1c288ddc55f9f83d344801b87",
+      "barFactsHash": "f2690feca5dfcc7a4a43fab2340e73e9a3a9f667af359f51e8726fa29cec6ce9",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "50df5c29f4e7ba5ce6d857ba31f0edb962547b035b9739f81442c83e35aea7e4",
+      "pair": "SOL/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729699022,
+      "eventAt": 1793729700083,
+      "availableAfter": 1793729700083,
+      "rawHash": "03de19a5fbe2e4c2d29178d95fe45f17dc49fd4a9a9faa8de79979b37060f165",
+      "barFactsHash": "100806a3fc017e97d0c01a4f47937f704a44705b954480a0bb73e8edc97cf655",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "bcc2081e3a5059e8e75e8e06b17effac180a7e87752bba00b9870b387c964385",
+      "pair": "PEPE/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729699021,
+      "eventAt": 1793729700083,
+      "availableAfter": 1793729700083,
+      "rawHash": "02ac77087c67b509e4e7b79df1cd2ef615ca30552d3f451d18daad5dd2fd2ce3",
+      "barFactsHash": "fe210696e9f7b61c9498b04ae315b7ca741fef4c287bb46791d274d3de52e5d2",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "ff57972911a1e28b878b40784f1e02d89354419ed2a155b01a9d01f1967ee57e",
+      "pair": "ADA/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729699014,
+      "eventAt": 1793729700082,
+      "availableAfter": 1793729700082,
+      "rawHash": "b21f2b88dbfa3e07ed893fe7645cb157877679724c5c2f7d09dac1beb5bb3f2f",
+      "barFactsHash": "524a2fe9037124ec365a84df564e869835fb393d66b183a1c35e16f462c4a46c",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "577fb352a6f4c323a7ad1f9aca15069bd90e09eb1f96027b66ae7a43de9b4d9d",
+      "pair": "LTC/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729699011,
+      "eventAt": 1793729700081,
+      "availableAfter": 1793729700081,
+      "rawHash": "091d957104be2176878114fbc9407fed39512c105047207758bfffa9ba5ea93c",
+      "barFactsHash": "1a2d1da365b1f425f1901c54715e78854a6a102a5ad3fdb29d67086ea4979821",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "5f6cf8919fe82447c634c925042c9464a98773153d3a31eaecfb536665f03f0e",
+      "pair": "POL/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729699009,
+      "eventAt": 1793729700081,
+      "availableAfter": 1793729700081,
+      "rawHash": "0819ed2748ba5aa463086d5bacaf30d55ccfc6cd171443f64edc257f7fbc62c6",
+      "barFactsHash": "8d38e07cc7086abfc17d37bbc6f0efbc329f081ecbcf19428822be3007b08e90",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "51559d4c578dcc77ec587c55685c933cf2490dbfd094734c73356bc619113d3e",
+      "pair": "AVAX/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729698989,
+      "eventAt": 1793729700079,
+      "availableAfter": 1793729700079,
+      "rawHash": "8b7a70ce6bae56525fa9dc6ebf62b8935a8cf8ada323ef8b878e57b8aaa7a819",
+      "barFactsHash": "e8aca933443dcc551fa74a79960ef10d56a60a4dc81dca9daecd23ace0201d41",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "3a0c4265a14922df637660338c344503e5fb27f6ba0ec0e3f9c7e3ebdafd2949",
+      "pair": "SHIB/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729698986,
+      "eventAt": 1793729700079,
+      "availableAfter": 1793729700079,
+      "rawHash": "0cf6499f4f9fec5baef8789aa9b8b3581d04981bda8e494e305b771454c8ed05",
+      "barFactsHash": "f3f0700b082304ba5bf5919c33c63fa45e475d4bfc0f160ce5b616b289487aec",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "8c2b51fa199aebe2d425dc919f0515613382e56a82c7208dab18fadd7d40c08d",
+      "pair": "APT/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729698985,
+      "eventAt": 1793729700052,
+      "availableAfter": 1793729700052,
+      "rawHash": "6d50e9b7189e13a7f925eef99269466c57132b3ed7989aa00d5cc118cf44c5ea",
+      "barFactsHash": "8889a408cad88a93be364bdbc571e31eb8b841c67b6b7af87f152cc103fe14f3",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "d446d8d6be7a747d20df61230d29dab2524bb7e22e2cf3fbd0e04c675c8b1e02",
+      "pair": "SUI/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729698972,
+      "eventAt": 1793729700051,
+      "availableAfter": 1793729700051,
+      "rawHash": "559ce0fffbd66825bda1dedc766e7e27de4d11f7a99973a89605df7fd45d849f",
+      "barFactsHash": "8b413bc0465b7c54781c7b1e08eb7224c5014f1d40189d801ec13198e0e5d87c",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "ba290e69d343d55957226b77f59b17fda4d1c520766db8f19df3c1fbcaf49c7d",
+      "pair": "TRX/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729698970,
+      "eventAt": 1793729700051,
+      "availableAfter": 1793729700051,
+      "rawHash": "42e067382059787e0322d44c83a97950d1b4e61f3485dc18314ecf753b09d294",
+      "barFactsHash": "b470af105d7c281385d29e5f10022f38d04f425484c9baf7e1891b0f3e099a87",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "57763595dbc90c25b991fd86de43769d94521d92f46010478d7ad28c9a6f670d",
+      "pair": "LINK/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729698958,
+      "eventAt": 1793729700050,
+      "availableAfter": 1793729700050,
+      "rawHash": "6be0477ec0004cbadfe6f4dab9bf206648b2793394ebb3d3938dacd1501f3a54",
+      "barFactsHash": "be721be098b9936217e2a2c5f5490a9ae3e31af4cc638bff8957cc82463d1a61",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "7d42fbe7ad619d185d9c66f88262cdae2d1f48ce539876c4a6b328c6ef1bd3de",
+      "pair": "XLM/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729698945,
+      "eventAt": 1793729700049,
+      "availableAfter": 1793729700049,
+      "rawHash": "ee29d06e27764146697117ab673af494fa0623a85f3587549668ee1730b9c14b",
+      "barFactsHash": "35091645443026c5342b513fc24d6c6e1710972910ed0887c4e14e037d106516",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "e7adb7ceea4dde20400deec7ecb3663edbb65b9585caa383914c61b8879be365",
+      "pair": "XRP/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729698904,
+      "eventAt": 1793729700013,
+      "availableAfter": 1793729700013,
+      "rawHash": "d0f8c4b43489d8242d94944b8f413b3ac1ce57965b464a3aed6f5ef6713b1b03",
+      "barFactsHash": "e65fd8f0c94684b156b61cfae94185559f73318e19e4d434d6136350d3337318",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "e0bac4d838dd7bb4da12f0dd21e7cf09a094e0996eab85005ee2734b52650bac",
+      "pair": "BNB/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729698902,
+      "eventAt": 1793729700012,
+      "availableAfter": 1793729700012,
+      "rawHash": "85f8bc7aa1e66ab0c19da9f7b224d12bb2c5a2cfd670024335febabdf7a5a563",
+      "barFactsHash": "ee15b6e45ff64f8274fbdf1e5b776fe883dd0a9ab235b4c24a19e8ad57e529b3",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "0d23eb030e42ab45e299bc213665622a66d90dd1a840931c343b04ddf1cf88c2",
+      "pair": "BCH/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729698900,
+      "eventAt": 1793729700012,
+      "availableAfter": 1793729700012,
+      "rawHash": "77cd8b747723c79197ff866b425aff6544166c8dcbecddc29f3e73dc3019a7e7",
+      "barFactsHash": "9987a3530bc83bde60835a993362050cd519d9bf06b8901b5f26d96e0db313f7",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "2a8e46c9c3b64fe8aea70fce570b609a9a50dec1d32f3c4d761d5be65ef606ac",
+      "pair": "ETH/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729698899,
+      "eventAt": 1793729700012,
+      "availableAfter": 1793729700012,
+      "rawHash": "1c1b486c8534317e417e97234e52c45a817a0241fb39b3275cc01a40a3511e88",
+      "barFactsHash": "bc67b96dc9ccf3cb4bbf694f4e6335f08d55b4a9bf5e68fb143ccffacd143e40",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "912cad4689b5c0896bf0cc75f3acc39e785d4434e18fd8a3ae8cda28d777d446",
+      "pair": "BTC/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729698896,
+      "eventAt": 1793729700012,
+      "availableAfter": 1793729700012,
+      "rawHash": "70cdfec01bd364d7bd607b8c4266499ae62316c8cdcab0559603050d55aa326f",
+      "barFactsHash": "389edf87fbea670342addbe1dc2a03615b7cf33f9d282da5209d8f645786b66e",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "6a9413650e47d72c2740aee75ed0a0eb1196848493fa33df74f0e145638f180a",
+      "pair": "WIN/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729698893,
+      "eventAt": 1793729700012,
+      "availableAfter": 1793729700012,
+      "rawHash": "f0a182058605d95f9e9ad1a101d82f599d9e8860b4366fa5d14916d43b22fafc",
+      "barFactsHash": "0e8334c6b5fd46ff6f2969220b154b6e855bd311638bbc4061f93b52d873b051",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "f9039e29c839e4dd3bb3236948ad23566c4fe5451aba9fffce6676d412db0758",
+      "pair": "NEAR/EUR",
+      "openAt": 1793728800000,
+      "receivedAt": 1793729698890,
+      "eventAt": 1793729700012,
+      "availableAfter": 1793729700012,
+      "rawHash": "22ec40ccb488260a8cc5b7e498c8892b3e7da2d2ac0cf3d28e278a23f8dd06d2",
+      "barFactsHash": "5b074efa7314ed289cb02255abc29999576b141c1e9c2cda00c62d66ef5c3d90",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "5848c3662b2aca0bb5d12a7c79aa4e2b6c15375a923628f91a048dc683816a18",
+      "pair": "DOGE/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728799151,
+      "eventAt": 1793728800085,
+      "availableAfter": 1793728800085,
+      "rawHash": "0438f1ea747044b0dc0d635d42a80d76733d7144f9fd9536c2f4686b24db3a7d",
+      "barFactsHash": "8ca81aef400613d55734092cfcc9d55326645aa116315fb3202142e2150cee9e",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "aaae14e89021db80261ced0673497b02de1b0e8265f4240578d4e0931ae91ea6",
+      "pair": "SOL/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728799125,
+      "eventAt": 1793728800082,
+      "availableAfter": 1793728800082,
+      "rawHash": "7f79053dcfe8e23d5aaec91dd610118be465d59281c85f77185fc6127e92f241",
+      "barFactsHash": "73625eb0c036ea326ba35182e6a1f0ae9f6b2fe7ecc9a333171bf63afdfb377d",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "0001ce901e08a03d7ffe7d2dd5fa3be63ef474a445a171809057366923d6c8ed",
+      "pair": "PEPE/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728799122,
+      "eventAt": 1793728800081,
+      "availableAfter": 1793728800081,
+      "rawHash": "d23b891bcea89fa22cab711504aba6bcfb6dcbfd64736ab0099df2f787ed2743",
+      "barFactsHash": "16bc1d898451045a7d0381e5172f2d4f0e6248b6fe3fa5b08daca73b21419139",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "e197797949370563d910630d2560eced75d2def4b94dfc842b9fd6425a3d62b6",
+      "pair": "ADA/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728799110,
+      "eventAt": 1793728800076,
+      "availableAfter": 1793728800076,
+      "rawHash": "36411c91a5f2ba4492e6ed9224a6ec5c5fd77af6657464319aae3d9c1536899e",
+      "barFactsHash": "cdc0bb30df9ad0aaddabfc0fa78937d8d6fdb90d32df4c0d2f2d35f67ed4b779",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "4c8dfdd0aaa0738bc4a14bbae04493112ed0e07373e77757760e52afb029b296",
+      "pair": "LTC/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728799092,
+      "eventAt": 1793728800074,
+      "availableAfter": 1793728800074,
+      "rawHash": "6185dfc77ad1243d9e6ca0957b31f1a873111509dab2ad01f4f0e3193919e4d7",
+      "barFactsHash": "be1d410af8157658c1184b5311653024b5382a0002184039679e1720c18397d0",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "6d1c0bf30f040d6b235b2e6f2fe140ef0f54d167518ccaf6771c76b300f96a21",
+      "pair": "POL/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728799089,
+      "eventAt": 1793728800074,
+      "availableAfter": 1793728800074,
+      "rawHash": "37e4faa46a47529df5a2f08bd942ed473befc3b87697602a9220228199365047",
+      "barFactsHash": "6f1e650494a81415ef92b373543dcfdd8d6d974c0f29e963d680face0105cab6",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "56aacdc0a7dc1814be4a3c5674cd2e86904094edeecdec44a18f9e5e6f102aaf",
+      "pair": "AVAX/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728799052,
+      "eventAt": 1793728800057,
+      "availableAfter": 1793728800057,
+      "rawHash": "56d9ce693963a3ad84947262170bfc8a1c6079cef4281c362e2c9b1e8208a526",
+      "barFactsHash": "c3e9b595e3f00beb673cfb2e85182cf079973946473001eb9593e77b10c67bc5",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "ea6eb8d5ecfe32e2146e7fb471dcabf1e8e99633a7c69c2e422d036d6e0566f2",
+      "pair": "SHIB/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728799049,
+      "eventAt": 1793728800056,
+      "availableAfter": 1793728800056,
+      "rawHash": "d3c64ed952b87c84dd03452529a6b92b825ef56b66a1fc4031404c0bd01308f7",
+      "barFactsHash": "c24eac23ea5ef2765d1447ac16233e8d2b2ed223dc8457f229b3b5f0385a8ae3",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "4813955d8a95d62017357b583a6e75e4baeb52ea259613c4166d2fea712620c1",
+      "pair": "APT/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728799044,
+      "eventAt": 1793728800056,
+      "availableAfter": 1793728800056,
+      "rawHash": "e42e614703043e6de43c8c3ea11d9df55fd6747cf39e7440b3657876f7fca1fc",
+      "barFactsHash": "dcfc75d410593d62522f36515fc8e8fa96c5099bc4b78963fd3c956bc63b31df",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "e9d410c3d3e16bf6451db52231a215ae3d4ac48cc2f43a18ef28c750a22e7c2f",
+      "pair": "SUI/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728799023,
+      "eventAt": 1793728800043,
+      "availableAfter": 1793728800043,
+      "rawHash": "4119f01b050e787e82a4265fb777cc322978e65f26e0ea46be3d63eb66abbcd1",
+      "barFactsHash": "5c1881e34ab10056bfbd6058fa7da969452024decb5c825d1712283cff290317",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "cdd22ee833b1a972fd56e3f1b24e3663fa65e770a3f5aba67fdbfa3629eceb57",
+      "pair": "TRX/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728799020,
+      "eventAt": 1793728800043,
+      "availableAfter": 1793728800043,
+      "rawHash": "b498e2dddb9bc6cac53cc0a951f044c7a6a33da44e82560ad3049e9ee136805e",
+      "barFactsHash": "f5163b295d52adb1418fabcf86791a9e9155700291ed4ac06f8342e50ad33a73",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "8fd054c89d6d112130223859cc405112bdb713cb54083be510bbf45504d73a1c",
+      "pair": "LINK/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728799010,
+      "eventAt": 1793728800036,
+      "availableAfter": 1793728800036,
+      "rawHash": "cd3168dbb16ab8107f944a86b937709ae08b51ab36fd97a37532eb268a8a87c7",
+      "barFactsHash": "448af210a35bc9956d985ac83901959ad7d3cdd1db6d11bbcd776d6c7eb310e2",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "365ceabc9cb1ab744c16846685b97eb561e84283476c5e1b65d8f01f946e55fc",
+      "pair": "XLM/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728798986,
+      "eventAt": 1793728800032,
+      "availableAfter": 1793728800032,
+      "rawHash": "be46477cb55c62322b9e0bd31c2ab1f3ee88c996ce78b93b3ec4076104d1720c",
+      "barFactsHash": "ab4a25526a94a900c24e7c7554b5ce0134ee4c5e80db29ad5c1395388b5568e4",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "d581920e964b736d78fdfa92111d7ff969a6d3ba2b384cd0978a5372310e1984",
+      "pair": "XRP/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728798938,
+      "eventAt": 1793728800027,
+      "availableAfter": 1793728800027,
+      "rawHash": "a67945338811917a1b336c5789d55c0974acc632a600a4ea6640c6cf85ea92fc",
+      "barFactsHash": "c48c4b12cb91a2b28c6df9868545938e5d8767061d7126a769246ad9e2a1c0a5",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "828042f5e8c93e344d0baef9f859002dca210a31e89194f69d064a586dac7ba6",
+      "pair": "BNB/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728798936,
+      "eventAt": 1793728800027,
+      "availableAfter": 1793728800027,
+      "rawHash": "6defe3b98c19b27964faa30fb076e045e38e8f180c212bf42dee2ecd5a16a7cd",
+      "barFactsHash": "ee0e1a3598a27bd5958388a8335190039a6c319806a68439904fe6e78238781c",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "f8f09fd55b440b2087c7e3148db4ae745c7b9e49a096695841013fd776aa8bb0",
+      "pair": "BCH/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728798935,
+      "eventAt": 1793728800026,
+      "availableAfter": 1793728800026,
+      "rawHash": "e59a562a0e248e3b37473bd0bddd33a0a5f9a4b8f2a5bae0c7d40f1bed167a0a",
+      "barFactsHash": "e93c46c43d4e746dc0eab26748b7f38ab342e9bbe247dbd091ce002cee7069c8",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "f44fab2fd6ab4b0ca052306e9f277379e0f0a169374997d1ee9b15eed119282c",
+      "pair": "ETH/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728798933,
+      "eventAt": 1793728800026,
+      "availableAfter": 1793728800026,
+      "rawHash": "579bc15a54c5a5d3684cf35ecd23888671bed0bb42f4fb3a1a1902c94c046e16",
+      "barFactsHash": "d66a77e392c436f3bff8dceeec46eedf396f5d240449d7d0fefbfe62bb1ee151",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "0a221179177dc07abe86b36c7b5ed399e7944a44cf0f28d59aeacbe74425a2e9",
+      "pair": "BTC/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728798928,
+      "eventAt": 1793728800026,
+      "availableAfter": 1793728800026,
+      "rawHash": "0d24dffb294eb67bd8763a04690439e2923ff788485f7ecd43a910f583b9bfd6",
+      "barFactsHash": "5a82a6ab0d41f7aeb2883d6ab47f32914a88a73af0824874ce310b3c8ab52230",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "2dde770dd770235c4d10a5f2b7391822c40f495e44c229923a6aff9c670f8591",
+      "pair": "WIN/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728798925,
+      "eventAt": 1793728800026,
+      "availableAfter": 1793728800026,
+      "rawHash": "a9b03161df52935b5e8682aa47acba54d34c883fd25ce17c9fdb8fd02826799f",
+      "barFactsHash": "1d30957f2f72d4f80181b616114a5ca782ab8974501ff31b165f039a7571c8a5",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "aec46acb3a7aeafd659897906d6f29c12e690499bac6a4803d75eb8ac7d97a04",
+      "pair": "NEAR/EUR",
+      "openAt": 1793727900000,
+      "receivedAt": 1793728798921,
+      "eventAt": 1793728800025,
+      "availableAfter": 1793728800025,
+      "rawHash": "521acf8fe3f94d97142b58dac33a757bd22c37dd0fff83a64e6b61fc0d1c09ee",
+      "barFactsHash": "63dff2448d1f83be830206e68e4d52d0a840a340728377b4cb180010a31d32a5",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "5210a1043a0dac93c6bca1a0b15503857104145fd3866a2f476814adc3d1d309",
+      "pair": "DOGE/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727899060,
+      "eventAt": 1793727900109,
+      "availableAfter": 1793727900109,
+      "rawHash": "d73a80ed8a28c7f638e42cd858f7b310dcf590841f323f1685818571a404a507",
+      "barFactsHash": "7bc9c621d5b19532b22ab9d89f77f6d1afbab9eb149e9cb20fb1091dab08364e",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "7a27a6824da090aae453c55b7103ef197a7a445d0e1cce2b1b85ff9a5399bd3a",
+      "pair": "SOL/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727899050,
+      "eventAt": 1793727900108,
+      "availableAfter": 1793727900108,
+      "rawHash": "2b495e3dbbdc8aca847ddc389a7d90d1a7aa47c123a350f36883312b3739cc52",
+      "barFactsHash": "27d127a8898174a04e40ade80860b416bbe87efefb5d64ef6dbb3be23e06adce",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "64dfcf4c7f8f293bbf7b7d3670c465f4c340cf0de3cf306d1e0331f0b748766b",
+      "pair": "PEPE/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727899043,
+      "eventAt": 1793727900108,
+      "availableAfter": 1793727900108,
+      "rawHash": "463fa0d612037f6009e8d8f6e1b9313993a4798219bbd3ef9dd119dfb6088e3e",
+      "barFactsHash": "1dedf156f7a937ad7859c2f2ceaa5a2984b976a6fe7d998c7c4c6e990244f030",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "c782be39930b9bbd692296fa42808c17a57c40511460359bda64b6adf92d9e99",
+      "pair": "ADA/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727899037,
+      "eventAt": 1793727900107,
+      "availableAfter": 1793727900107,
+      "rawHash": "36a100a65491d102032a79d76146f34f59a5dd3a3c4aee2112f2283067d136f4",
+      "barFactsHash": "9eee590f880464937103bbd2a4068c175ee31c24b60333add799d7c7a88da54f",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "3ac5abb798755bac681016abe70609891d7b78458faa47bd7f61beaad0d0d745",
+      "pair": "LTC/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727899026,
+      "eventAt": 1793727900106,
+      "availableAfter": 1793727900106,
+      "rawHash": "60f8bca4b8ad6871412470fba2230ce3bf39d675978964c605bf97dfdd70deb3",
+      "barFactsHash": "84701250aee85b6c966adf987451e95f6f4ea7f572a9cb3bc88d58fe528dd783",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "62fcae8e2ec79eeed3133363f6ca295000657dcd0e6f1ea6a2587c3b715adc34",
+      "pair": "POL/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727899025,
+      "eventAt": 1793727900106,
+      "availableAfter": 1793727900106,
+      "rawHash": "f8f87a3e427ecfc53d146e389bf1340798d23e8590f8332addcbaf47a9dd65bf",
+      "barFactsHash": "21a3d26b2cd4d6bb7179309e130e4d77ad0488bab029740cc3004b23da793468",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "eb40159fe78ba1b684936ea77ab9fd1f299a308f4f4b4614fa49372523f360e0",
+      "pair": "AVAX/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727899003,
+      "eventAt": 1793727900065,
+      "availableAfter": 1793727900065,
+      "rawHash": "17e671e448c4a67a54b761cd89c44479cde5670627cdb691fc24be5cbc0adee9",
+      "barFactsHash": "10ad2020f2ad93afd0725dbe4bf9dd266aaf4d4e36a581aa056393e80011c18f",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "ca2a181d85a967f525dbc9a85128b1b3f649366a8e757f28feeb761b9a25091d",
+      "pair": "SHIB/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727899001,
+      "eventAt": 1793727900064,
+      "availableAfter": 1793727900064,
+      "rawHash": "857603f00a1820486ea1f0c4c1a2f5413b6996335dcbcb2661d6e35adc22775b",
+      "barFactsHash": "5c8785971e354357b41930417caf5f7769829bcf1575cfaa63a0927053040da0",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "dc6e5b21b9740ca61a36691361bb6a731079a404ae4e9044c3c20899ba2bdf8b",
+      "pair": "APT/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727898998,
+      "eventAt": 1793727900064,
+      "availableAfter": 1793727900064,
+      "rawHash": "ed4083d5adfc5d25e0349da83097a470b9d7bd4173d201e6a30808f7f98ae0dc",
+      "barFactsHash": "acc26a31ca4d8b0f65a667f7baedb5bf60f29b1d3214a82320ac23d6d9a98257",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "29f9e56cfce56e964b6543fb843b89e09cd21ea7c90b6dfe1665f80aac0a34fd",
+      "pair": "SUI/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727898987,
+      "eventAt": 1793727900063,
+      "availableAfter": 1793727900063,
+      "rawHash": "d8259d8d5c8508e3c79b502c465f4895094799157b985341795f3a8c0c299cff",
+      "barFactsHash": "1ade06654ad2b04760073aa6db0e1ecca7f8f58f011e0009d6ec0892693456c5",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "5f2594c7b9cf22ab40f8045349eb0f078f80cd5e1992f0b803a862b2701ccb2b",
+      "pair": "TRX/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727898985,
+      "eventAt": 1793727900063,
+      "availableAfter": 1793727900063,
+      "rawHash": "5d704e06e5ad5082f4f743813a5573138b6057e3c3545d3fe838dca238095a81",
+      "barFactsHash": "77d425b33c158b02b47796d9671a83bbd9d7ae94c4671ec692515847167f110d",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "9366c39c6cd8fd78f71ca57d6b560ac3e2fe1927fa931977f6a91f697e738fda",
+      "pair": "LINK/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727898978,
+      "eventAt": 1793727900062,
+      "availableAfter": 1793727900062,
+      "rawHash": "025300e2beb068ca3a258e8fb59947fd03b8f39d2bfb9587d8654f16fe7581fb",
+      "barFactsHash": "faa5b1a393616ebe60606c5216fdfcaeba31bfdebc12cb378c96dc6403efd3fb",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "03663182fb4255a5a17adbfa662ef15a9497c26be4aeb9040749a977affffa73",
+      "pair": "XLM/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727898964,
+      "eventAt": 1793727900030,
+      "availableAfter": 1793727900030,
+      "rawHash": "992af2786a42d5570e92cd4f1febc44b1c600f8415081726a4a9c371a7b9bfab",
+      "barFactsHash": "862bd877616ab80c0e57306ca1fa78c7071a0c517e76d0db170ee50ac13c2ffd",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "f2371918d1e7db99a8762d6edb32e0c5ff37336f5e82ba819c711d720b3a8031",
+      "pair": "XRP/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727898937,
+      "eventAt": 1793727900026,
+      "availableAfter": 1793727900026,
+      "rawHash": "c7e7e5eefa47fff5ecb4f5d420bb55e674cd2f7ada22c3adabe4cd6cae48f564",
+      "barFactsHash": "81b6b5111882db00fc5d9d4e0fd139cfe0de4480a56ec4cbac58e8af64035332",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "81b35b60d77bb0b086fbcaa8b84f5b12faedb508b29ebf318515d3a35ef5d1cb",
+      "pair": "BNB/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727898935,
+      "eventAt": 1793727900026,
+      "availableAfter": 1793727900026,
+      "rawHash": "d3514bdaf3dfe0c409083ba7d0506c2d275f0739d474440dbbcc670d6d64c73e",
+      "barFactsHash": "caa144e1eab2ca3bd4fad1d43af2f9bb3e49f34c753d7c0280270d59e13dd314",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "cfb04e75fc64dcd550dcce92bb1ad6bebde5b9cfac2c557d0d950f0f7a4d471e",
+      "pair": "BCH/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727898934,
+      "eventAt": 1793727900026,
+      "availableAfter": 1793727900026,
+      "rawHash": "91b509f9f0544c3671ca0e92acfdfe4782cf3506256ec7ae457a744558ff9c0c",
+      "barFactsHash": "7a1918932862a46f915d078bb5498f9d2ada9d1fb7b65a7da5464408335c82c5",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "d5e587831d36246f1b0f65941a48524983bc58d9131406361de24caf9c6f8b8c",
+      "pair": "ETH/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727898932,
+      "eventAt": 1793727900026,
+      "availableAfter": 1793727900026,
+      "rawHash": "47c78bc4af9158944a86df58e7a7c62bfc49bbfc279027725ed87040a1bf53af",
+      "barFactsHash": "8895b07b1ffe14de8bf27bab6598a053bdee9326587b13abe965938b04168d39",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "2b98c5e30fba9892a6695e788f76c4c4f955b2a764a331b47a1f6444e3264e35",
+      "pair": "BTC/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727898929,
+      "eventAt": 1793727900026,
+      "availableAfter": 1793727900026,
+      "rawHash": "6cea6d3d891d65e054d5c006864d32b8bbd4685a6de50855e69398378da7b924",
+      "barFactsHash": "d52496c85040c02ef7ad7a63c6c124af25ad1f62c5ab4aee9937ef746518a587",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "c5f43970cf1c51bd2c2d2966b5927179c79d3107f657311d329399c96598f447",
+      "pair": "WIN/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727898927,
+      "eventAt": 1793727900025,
+      "availableAfter": 1793727900025,
+      "rawHash": "a85f14dc7a9e22121a445457c6e21942d9caf3f3e86ad8c7edd3caf9470d9f96",
+      "barFactsHash": "fbe964e713d657bf3d36541ae59b735f27c017e3232b36f1dda27c831e51ff08",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "d110686972853e8c44194f941610998363427d5479b88747f93c6cc98538147e",
+      "pair": "NEAR/EUR",
+      "openAt": 1793727000000,
+      "receivedAt": 1793727898925,
+      "eventAt": 1793727900025,
+      "availableAfter": 1793727900025,
+      "rawHash": "f56e5d93f571a1ff93c495579c4151c4934c55bde5676198a841e2070fde9c47",
+      "barFactsHash": "559e72be21e33ad20ddf480ba50f993b1d6bbda2c115e91d33c4a643c9f0a453",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "cb47fad99ebcb3e911a36ff9bacd2b7f889d78f5df37064cf8d5e1c25278f844",
+      "pair": "DOGE/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999110,
+      "eventAt": 1793727000100,
+      "availableAfter": 1793727000100,
+      "rawHash": "6bcc6b2833fb7c204bf6a23919a8a8be6ff3342ffd46d2b75a4ce4574f011515",
+      "barFactsHash": "2e7bfbcf9cf3bb11755a0927816bd6e5d8916bc87e04bd0f1c37074ff0560084",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "5bb8f80f22c1f61cb5d655e77fef1727fdb45b1231ec6dec4f431e591b57d879",
+      "pair": "SOL/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999091,
+      "eventAt": 1793727000098,
+      "availableAfter": 1793727000098,
+      "rawHash": "00711d61d622f0880f25782ca193e76aea4b472f71e6a752732d7071297c759f",
+      "barFactsHash": "0ff5f38a78afa195e8356dcf04514ec0a03c921986d21f876dc68814025e15d2",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "d68f0f7396b39f605adb8ac15e3e0a652e7872866075803c8246e7da9713d5ca",
+      "pair": "PEPE/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999089,
+      "eventAt": 1793727000098,
+      "availableAfter": 1793727000098,
+      "rawHash": "89441390fa8bdbb2baae3ff52873b55fa503b508df5ed09a6da96596f9a827a2",
+      "barFactsHash": "9e4ac8a4b87e99a9df870a65b83c0406a35df315165684340e3932c4c6e259c9",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "ecf5bbeb4fd7cef87f97017ac0ec053e8f33d38c1e4fd8641268d0ebdbed9b73",
+      "pair": "ADA/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999081,
+      "eventAt": 1793727000097,
+      "availableAfter": 1793727000097,
+      "rawHash": "d74e594cf196e589f87796534aeec280fc012e6bbb9129eb443071b328949e34",
+      "barFactsHash": "e4302ea676734723d97b8ea6c0d146dcef201d1c5a47bcbadf3a5bd093a2d3d1",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "014a2ead8c058389395a78acb8b7cd2d84dbf89e1da86da6bc84875e7a9ceccf",
+      "pair": "LTC/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999069,
+      "eventAt": 1793727000096,
+      "availableAfter": 1793727000096,
+      "rawHash": "4924a994dae915e7ff5cbcdd3c539e6a5b1eb9b05fdb97302fb64147ff4a6bc5",
+      "barFactsHash": "1d357b026c54bc4b6607fde8a31e8b3181a7affed076c8fc8cdffe29c4171a65",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "ec23d5fe170231c8a61ba7781b231aa41227e66f9f08b987c8aef217996785f1",
+      "pair": "POL/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999067,
+      "eventAt": 1793727000096,
+      "availableAfter": 1793727000096,
+      "rawHash": "5eda7f153349f94ec4ccb8fe60fc1c17ebc3be588e4ff83d4e03cdf988c9ec7e",
+      "barFactsHash": "dae24c38e36b0cdb182df9921282becaee3218d672caf067e52067190199624d",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "4c4ce1f38280bab5cb3de3e7572f08675f1a39411d8b285e33b8abda0d28b61d",
+      "pair": "AVAX/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999041,
+      "eventAt": 1793727000054,
+      "availableAfter": 1793727000054,
+      "rawHash": "c17842783e069b0b72b328ba2131a143159e97f04402efa604794907cdc1c903",
+      "barFactsHash": "0af7eb2ef36b629dca1c68bf91dc9cee700681317f1be41967b0b980fdaf7343",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "6c80a8d1c2fce6ec819883185d37b73afa469b99d62c5c6954e5e2149b56a265",
+      "pair": "SHIB/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999039,
+      "eventAt": 1793727000054,
+      "availableAfter": 1793727000054,
+      "rawHash": "cb526073a59266e355d95bedc9b0e1d203d57ef7fa28caa013f27f0c521185c0",
+      "barFactsHash": "60d873a7ce9e2752b7c280cfb7c02da5ced36afa24d2bfa6fc229f2b06ac78d8",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "87a738f1ef90adf7f1f8fa8b4b799bcf4e30fc633dc12640158ea24a6d99ae25",
+      "pair": "APT/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999035,
+      "eventAt": 1793727000054,
+      "availableAfter": 1793727000054,
+      "rawHash": "56253e51d7d935c8f7ac33e08c88ae9aed8420e7712e8889250ba9b6b36e0cc7",
+      "barFactsHash": "cf1a540e9ba2b744d933864130b4215e1f99652d78202c838c70947fcf8e7048",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "b50b4ebe72aa1e84f2a5c8f1c13a326a42f3efe6521ef97a9ed5b7a30861a5af",
+      "pair": "SUI/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999021,
+      "eventAt": 1793727000052,
+      "availableAfter": 1793727000052,
+      "rawHash": "7c7fdd04b90b28b77acde793dc773878618077b9f19b00306f537bc81b537f13",
+      "barFactsHash": "d95845f149d8d0381d258d7aabd17a6ff92951fac322d84152eb374d3362b5a6",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "f3e7e8762259cdff4420e9381557f42081955085e83ae2202fc0cb7dc8238398",
+      "pair": "TRX/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999018,
+      "eventAt": 1793727000052,
+      "availableAfter": 1793727000052,
+      "rawHash": "c0a642c0d3563b1552d37c3a246bf0c090e852c56e7c1019e9b1e541cc941a7e",
+      "barFactsHash": "506bf9ff2ce362a706c77a8f1a27b594b871edb3e34298cd53775863773bb19f",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "2ab0fcac44938d2a9a22894306954c5d9014717ee02bfc7ed03c62d05c4968bd",
+      "pair": "LINK/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726999011,
+      "eventAt": 1793727000045,
+      "availableAfter": 1793727000045,
+      "rawHash": "8ca8a4ab14a75789953398ed2e80fe42300be57b60fc40c3e7a55db1e88dfe5c",
+      "barFactsHash": "ac40cdf2cb04b88287b3be94bb87e68d176ac756a09cad4694dd91bec7c57cfa",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "0f3c56680f8d497b4009274256c506d9c3057d86583cfa37af46036854929d9c",
+      "pair": "XLM/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726998994,
+      "eventAt": 1793727000043,
+      "availableAfter": 1793727000043,
+      "rawHash": "ce728b9a759c16449204a2e91aeaef877470bfbcc3625b42c491477c5a1fb0a3",
+      "barFactsHash": "a7a0d27678d84ff52fdddb9a2e1ec0febc5ab9cebd87eb4c300fe5e88e6c20e7",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "dbfd209c548ef6166d625d97a2a2e3c5d6a22b9b0e0ddf4d981ff517f1061157",
+      "pair": "XRP/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726998963,
+      "eventAt": 1793727000040,
+      "availableAfter": 1793727000040,
+      "rawHash": "0e0d7d41c77800feea3f35bc35682ccbc2ed409b3e9cba2698c626f49ecfd042",
+      "barFactsHash": "be89017487b203193d54cc4527cb6b61db986a48962b50fe555eca82c9a6fb9a",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "02232d8cb9e4cf64a0ca6f3ba1989148509eccf10f64ce4e2c39ae95ff364a5d",
+      "pair": "BNB/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726998961,
+      "eventAt": 1793727000040,
+      "availableAfter": 1793727000040,
+      "rawHash": "8115f0a4392de5cbbd989b6956e64951c9af1e80f41f836f42dfebde204c61c4",
+      "barFactsHash": "61b5bbf69e2de548c3fb2b09e5cd3f9d828620aba996e654cc133a2fd8995780",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "56feb4cdd1307e107261fd348089700f50dc24f6e6257417aa9fde9ea9abcf93",
+      "pair": "BCH/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726998959,
+      "eventAt": 1793727000040,
+      "availableAfter": 1793727000040,
+      "rawHash": "70c638779398cc79bd223be98e239017f08134fdc1f840ae486643a2e890bff9",
+      "barFactsHash": "a9e6228fa0f38ca4707ef854001f1be33178699eada1630445982bed17eacd65",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "79d61fff8137cae52d7e6471e7bf801676b5714ccdd84233a3758ddd42d42ca5",
+      "pair": "ETH/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726998957,
+      "eventAt": 1793727000040,
+      "availableAfter": 1793727000040,
+      "rawHash": "7b5728399cfe75ad212c8f9e319cbc85183e10d2edca47cd3085b0306fc4cff4",
+      "barFactsHash": "2d57f64f08fd75e6aa31955378b67d26f76eb7bb6aa91d2d1d9d33a2399a17bc",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "32b9e04d24db418f9f05825d813729624f09460870c7bbcc8e72edaa35619591",
+      "pair": "BTC/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726998954,
+      "eventAt": 1793727000039,
+      "availableAfter": 1793727000039,
+      "rawHash": "9efdfa959fef2b38285ddf1367339572a2c289ec34388a66f0a0bc5dba718df2",
+      "barFactsHash": "e5383661e4efd7e1afb5f95f07c4c6bbde644ac90883d405a6ab3f77f8f13a44",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "70205e38979b10234d6dcd7363a8dcdf5293185fca76e8a983a85a491973deba",
+      "pair": "WIN/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726998952,
+      "eventAt": 1793727000039,
+      "availableAfter": 1793727000039,
+      "rawHash": "f83b5486e4dcc9be3245645181adc22e01776c6077ecb41ee185bd5fd5139674",
+      "barFactsHash": "6a8848b7d7e47166e7173915125b5fa864c1a592b4bb9a6cd9f82b39b00362c2",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    },
+    {
+      "id": "a3dacf12aca18c17015bcbf3b9362f76475e948833692b490ddae89a5943bae0",
+      "pair": "NEAR/EUR",
+      "openAt": 1793726100000,
+      "receivedAt": 1793726998949,
+      "eventAt": 1793727000039,
+      "availableAfter": 1793727000039,
+      "rawHash": "ce2f024209bcf4d12b3ef84d5327dcf7a30a592e07466da80544eebfa53d8587",
+      "barFactsHash": "6f30c9d03e53b40d8ff216d733e604462721434c649cc54963251d994b3ddfac",
+      "sessionId": "5493d27abe5439d88bf27dae748da05a49a551d694ac11e519ee03e6ab574548",
+      "knownByAudit": true
+    }
+  ],
+  "marketWindows": [
+    {
+      "pair": "ADA/EUR",
+      "windows": {
+        "h1": {
+          "available": true,
+          "sourceHash": "173baf60d98bd3e2b38a744e003f28a47420192ad19f2217e9964b88c7ab2bda",
+          "firstCompleteAfter": 1793736900212,
+          "summary": {
+            "from": 1793733300000,
+            "to": 1793736900000,
+            "baseVolume": 3254.3,
+            "quoteVolume": 551.9861,
+            "trades": 12,
+            "takerBuyBaseShare": 0,
+            "takerBuyQuoteShare": 0,
+            "takerQuoteImbalance": -1,
+            "executionVwap": 0.1696174599760317
+          }
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "AVAX/EUR",
+      "windows": {
+        "h1": {
+          "available": true,
+          "sourceHash": "1824233517b228fc07d3a13269486fca73a057287a6f051b8fc7fbf75990a199",
+          "firstCompleteAfter": 1793736900182,
+          "summary": {
+            "from": 1793733300000,
+            "to": 1793736900000,
+            "baseVolume": 63.83,
+            "quoteVolume": 488.06919,
+            "trades": 9,
+            "takerBuyBaseShare": 0.29030236565878115,
+            "takerBuyQuoteShare": 0.29040110071279035,
+            "takerQuoteImbalance": -0.4191977985744193,
+            "executionVwap": 7.64639182202726
+          }
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "BNB/EUR",
+      "windows": {
+        "h1": {
+          "available": true,
+          "sourceHash": "84d6288d15f48ef3bae1e30fe97d1e8ea25bfab6c0af5bcbd0ff6f29fc40f82e",
+          "firstCompleteAfter": 1793736900119,
+          "summary": {
+            "from": 1793733300000,
+            "to": 1793736900000,
+            "baseVolume": 7.275,
+            "quoteVolume": 4525.17907,
+            "trades": 50,
+            "takerBuyBaseShare": 0.005635738831615119,
+            "takerBuyQuoteShare": 0.005640108292996237,
+            "takerQuoteImbalance": -0.9887197834140076,
+            "executionVwap": 622.017741580756
+          }
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "BTC/EUR",
+      "windows": {
+        "h1": {
+          "available": true,
+          "sourceHash": "2f7e16c3ba6b3fe31f53ff7a0843c00a0cea40bd64dfb31351020e0323b357ea",
+          "firstCompleteAfter": 1793736900107,
+          "summary": {
+            "from": 1793733300000,
+            "to": 1793736900000,
+            "baseVolume": 2.38452,
+            "quoteVolume": 165178.81846550002,
+            "trades": 1115,
+            "takerBuyBaseShare": 0.43625132102058267,
+            "takerBuyQuoteShare": 0.43621667751273735,
+            "takerQuoteImbalance": -0.1275666449745253,
+            "executionVwap": 69271.30762815996
+          }
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "DOGE/EUR",
+      "windows": {
+        "h1": {
+          "available": true,
+          "sourceHash": "d41986860b38baf06e133c64ff458670e4d7ee17f57ca76ecaae742f685bbfd0",
+          "firstCompleteAfter": 1793736900237,
+          "summary": {
+            "from": 1793733300000,
+            "to": 1793736900000,
+            "baseVolume": 129349,
+            "quoteVolume": 8667.0915,
+            "trades": 27,
+            "takerBuyBaseShare": 0.23764389365205763,
+            "takerBuyQuoteShare": 0.23750404388831017,
+            "takerQuoteImbalance": -0.5249919122233797,
+            "executionVwap": 0.06700547742928048
+          }
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "DOT/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "EGLD/EUR",
+      "windows": {
+        "h1": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "ETH/EUR",
+      "windows": {
+        "h1": {
+          "available": true,
+          "sourceHash": "42b81ae4bb834584475b8b4c9e43afd967feabd74f5742b715fc99e12861afe0",
+          "firstCompleteAfter": 1793736900111,
+          "summary": {
+            "from": 1793733300000,
+            "to": 1793736900000,
+            "baseVolume": 54.6972,
+            "quoteVolume": 111691.81671,
+            "trades": 506,
+            "takerBuyBaseShare": 0.5299613142903109,
+            "takerBuyQuoteShare": 0.5300641240684498,
+            "takerQuoteImbalance": 0.060128248136899654,
+            "executionVwap": 2042.0024555187467
+          }
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "LINK/EUR",
+      "windows": {
+        "h1": {
+          "available": true,
+          "sourceHash": "c93c2e1f5407b06e42f1cd677bbcbf3d4d40cffaa4e492e85c5d69fc3686972a",
+          "firstCompleteAfter": 1793736900153,
+          "summary": {
+            "from": 1793733300000,
+            "to": 1793736900000,
+            "baseVolume": 86.39,
+            "quoteVolume": 852.7333100000001,
+            "trades": 8,
+            "takerBuyBaseShare": 0.23347609677045955,
+            "takerBuyQuoteShare": 0.23355630378740566,
+            "takerQuoteImbalance": -0.5328873924251887,
+            "executionVwap": 9.870740942238687
+          }
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "LTC/EUR",
+      "windows": {
+        "h1": {
+          "available": true,
+          "sourceHash": "29351f0b932ada4e955746fc2174ae247f48fdb54e3c3c53f1e9f84f6df12b2e",
+          "firstCompleteAfter": 1793736900205,
+          "summary": {
+            "from": 1793733300000,
+            "to": 1793736900000,
+            "baseVolume": 14.278,
+            "quoteVolume": 690.455,
+            "trades": 6,
+            "takerBuyBaseShare": 0.2026894523042443,
+            "takerBuyQuoteShare": 0.2029045774163414,
+            "takerQuoteImbalance": -0.5941908451673172,
+            "executionVwap": 48.3579633001821
+          }
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "NEAR/EUR",
+      "windows": {
+        "h1": {
+          "available": true,
+          "sourceHash": "d15c22d013d6f47cd49b88debaba8901da795410017e29e75e2cc2c88bc2737d",
+          "firstCompleteAfter": 1793736900098,
+          "summary": {
+            "from": 1793733300000,
+            "to": 1793736900000,
+            "baseVolume": 501.90000000000003,
+            "quoteVolume": 1706.5998,
+            "trades": 9,
+            "takerBuyBaseShare": 0.008368200836820083,
+            "takerBuyQuoteShare": 0.0083957000346537,
+            "takerQuoteImbalance": -0.9832085999306927,
+            "executionVwap": 3.4002785415421397
+          }
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "PEPE/EUR",
+      "windows": {
+        "h1": {
+          "available": true,
+          "sourceHash": "92f5e18313fb598e8f647ba376f4bd7215e66d1be28d654eb9b738b31c00b9b2",
+          "firstCompleteAfter": 1793736900219,
+          "summary": {
+            "from": 1793733300000,
+            "to": 1793736900000,
+            "baseVolume": 2517162,
+            "quoteVolume": 10.99999794,
+            "trades": 1,
+            "takerBuyBaseShare": 1,
+            "takerBuyQuoteShare": 1,
+            "takerQuoteImbalance": 1,
+            "executionVwap": 0.00000437
+          }
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "POL/EUR",
+      "windows": {
+        "h1": {
+          "available": true,
+          "sourceHash": "098345ce55993cf5a03727962f6f90f66aa233806c5cf28fd3817040b14b0b5a",
+          "firstCompleteAfter": 1793736900200,
+          "summary": {
+            "from": 1793733300000,
+            "to": 1793736900000,
+            "baseVolume": 606.3,
+            "quoteVolume": 49.940946,
+            "trades": 2,
+            "takerBuyBaseShare": 0.500247402276101,
+            "takerBuyQuoteShare": 0.5005509106695737,
+            "takerQuoteImbalance": 0.0011018213391473797,
+            "executionVwap": 0.08237002474022762
+          }
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "SHIB/EUR",
+      "windows": {
+        "h1": {
+          "available": true,
+          "sourceHash": "d6c0ee087eec1d40832c2be9a9d755d0fba869231295248ce3c997078ff46bb2",
+          "firstCompleteAfter": 1793736900178,
+          "summary": {
+            "from": 1793733300000,
+            "to": 1793736900000,
+            "baseVolume": 0,
+            "quoteVolume": 0,
+            "trades": 0,
+            "takerBuyBaseShare": null,
+            "takerBuyQuoteShare": null,
+            "takerQuoteImbalance": null,
+            "executionVwap": null
+          }
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "SOL/EUR",
+      "windows": {
+        "h1": {
+          "available": true,
+          "sourceHash": "97ea5ea2ea44499e150a4b5b5c8936513346c5985d68525ebe653e78c68778d6",
+          "firstCompleteAfter": 1793736900224,
+          "summary": {
+            "from": 1793733300000,
+            "to": 1793736900000,
+            "baseVolume": 206.027,
+            "quoteVolume": 17151.24003,
+            "trades": 152,
+            "takerBuyBaseShare": 0.2545054774374233,
+            "takerBuyQuoteShare": 0.2545137250930305,
+            "takerQuoteImbalance": -0.490972549813939,
+            "executionVwap": 83.24753566280148
+          }
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "SUI/EUR",
+      "windows": {
+        "h1": {
+          "available": true,
+          "sourceHash": "db7213e1c654a14613d6903eaf544f5d5f9f4894ad7aa716c7f4015726a5bee6",
+          "firstCompleteAfter": 1793736900164,
+          "summary": {
+            "from": 1793733300000,
+            "to": 1793736900000,
+            "baseVolume": 40.5,
+            "quoteVolume": 32.33925,
+            "trades": 1,
+            "takerBuyBaseShare": 0,
+            "takerBuyQuoteShare": 0,
+            "takerQuoteImbalance": -1,
+            "executionVwap": 0.7985
+          }
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "TRX/EUR",
+      "windows": {
+        "h1": {
+          "available": true,
+          "sourceHash": "fb6743a8f7026d30abc08f4134ec9ed613ff9d0008f7e3906748cfe7a73edd9a",
+          "firstCompleteAfter": 1793736900159,
+          "summary": {
+            "from": 1793733300000,
+            "to": 1793736900000,
+            "baseVolume": 15881,
+            "quoteVolume": 4592.8465,
+            "trades": 65,
+            "takerBuyBaseShare": 0.5905799382910396,
+            "takerBuyQuoteShare": 0.5907369645382228,
+            "takerQuoteImbalance": 0.18147392907644555,
+            "executionVwap": 0.2892038599584409
+          }
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "WIN/EUR",
+      "windows": {
+        "h1": {
+          "available": true,
+          "sourceHash": "94416148c8353e847781d47bd5c6c7a51c6043607748d1bcf1fec33d7aa1f304",
+          "firstCompleteAfter": 1793736900103,
+          "summary": {
+            "from": 1793733300000,
+            "to": 1793736900000,
+            "baseVolume": 4734562,
+            "quoteVolume": 283.90701129,
+            "trades": 17,
+            "takerBuyBaseShare": 0.7846009831532462,
+            "takerBuyQuoteShare": 0.7854206633954101,
+            "takerQuoteImbalance": 0.5708413267908201,
+            "executionVwap": 0.00005996478898998472
+          }
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "XLM/EUR",
+      "windows": {
+        "h1": {
+          "available": true,
+          "sourceHash": "81e4fd1c96103380571ea29254ea24c494ec4eaff93fc9f527f219a8a4b6c16d",
+          "firstCompleteAfter": 1793736900142,
+          "summary": {
+            "from": 1793733300000,
+            "to": 1793736900000,
+            "baseVolume": 0,
+            "quoteVolume": 0,
+            "trades": 0,
+            "takerBuyBaseShare": null,
+            "takerBuyQuoteShare": null,
+            "takerQuoteImbalance": null,
+            "executionVwap": null
+          }
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    },
+    {
+      "pair": "XRP/EUR",
+      "windows": {
+        "h1": {
+          "available": true,
+          "sourceHash": "373bacdbe6ff9b54d44f5458bf61633a1e70299f53b6cf745161c55c44e2131b",
+          "firstCompleteAfter": 1793736900123,
+          "summary": {
+            "from": 1793733300000,
+            "to": 1793736900000,
+            "baseVolume": 15600,
+            "quoteVolume": 17780.21146,
+            "trades": 252,
+            "takerBuyBaseShare": 0.7071217948717949,
+            "takerBuyQuoteShare": 0.706990380754448,
+            "takerQuoteImbalance": 0.41398076150889596,
+            "executionVwap": 1.1397571448717947
+          }
+        },
+        "h4": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        },
+        "h24": {
+          "available": false,
+          "reason": "no-observed-public-session-source"
+        }
+      }
+    }
+  ],
+  "windowCounts": {
+    "h1": 18,
+    "h4": 0,
+    "h24": 0
+  },
+  "state": "actual-source-observations-present",
+  "extraMarketRequestsIntroduced": 0,
+  "modelCalls": 0,
+  "realOrders": 0,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "scope": "Read-only audit of controller-owned actual main public WS journal and its captured deployment identities. Only latest384rawrecords checked if larger; totalrowcountisnotanindependentsample/trade/profitcount. Incompletecurrentwindowsremainunknown; no firstreceiptbackfill or model/riskchange.",
+  "factsHash": "161ebbbdd62540ea976465179605eefe9289ac671cecce6fae507b2cf88f30d7"
+}

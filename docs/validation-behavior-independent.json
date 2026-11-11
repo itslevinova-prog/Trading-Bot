@@ -1,0 +1,16 @@
+{
+  "version": "validation-behavior-independent-v1",
+  "reportHash": "c5b7ab4d63adbdd7ae8c0f7db5fd7e2e3d2d9d41ae12314d4cdb0861f761cf19",
+  "reportFileSha256": "2c85772dea86110cc8c2ac94342baad9d5b341dc7cebf116f78af0d174a464e0",
+  "verifierHash": "c020dd19df65a19ddf19e8e34ba20ab4685b2ffd6bf49d1ec04b07db643af43c",
+  "clockRemovalCasesVerified": 328,
+  "candidateClockComparisonsVerified": 2624,
+  "modeChanges": 44,
+  "casesWithChangedDecisions": 9,
+  "uniqueChangedEconomicClocks": 15,
+  "testPayoffsUsed": false,
+  "actualSelectorChanged": false,
+  "newModelFitted": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false
+}

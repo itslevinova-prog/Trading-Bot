@@ -1,0 +1,61 @@
+{
+  "verifiedAt": "2026-10-31T22:54:08.701Z",
+  "verifierHash": "566abb3b964b0db4a3eb71244e5f63e0ab45449a540cb0a493fdab2bce99feb7",
+  "artifact": "docs/policy-training-corpus-85f5e747b5597813.json",
+  "factsHash": "85f5e747b55978133361c7fa35a267b74d6635d9e40105ce23b750be6608bebd",
+  "scopeId": "e2c04b4b52b3cd08ea52e6c2df97c70a6c5bda4619f175ef668765469ff6f088",
+  "months": [
+    {
+      "id": "2025-10",
+      "entries": 33,
+      "returnPct": -3.2801199382230917,
+      "closedTrades": 33,
+      "fullFillLabelsVerified": true
+    },
+    {
+      "id": "2025-11",
+      "entries": 38,
+      "returnPct": -4.787414526429757,
+      "closedTrades": 38,
+      "fullFillLabelsVerified": true
+    },
+    {
+      "id": "2025-12",
+      "entries": 29,
+      "returnPct": -3.0908539604405094,
+      "closedTrades": 29,
+      "fullFillLabelsVerified": true
+    },
+    {
+      "id": "2026-01",
+      "entries": 44,
+      "returnPct": -3.0733853928499144,
+      "closedTrades": 44,
+      "fullFillLabelsVerified": true
+    },
+    {
+      "id": "2026-02",
+      "entries": 26,
+      "returnPct": -3.5165163607449257,
+      "closedTrades": 26,
+      "fullFillLabelsVerified": true
+    },
+    {
+      "id": "2026-03",
+      "entries": 28,
+      "returnPct": -0.633919600973798,
+      "closedTrades": 28,
+      "fullFillLabelsVerified": true
+    }
+  ],
+  "selectedEntries": 198,
+  "matureLabels": 196,
+  "independentSamples": null,
+  "allCaptureHashesAndClocksValidated": true,
+  "allTargetsRebuiltFromFullPaidFillLedgers": true,
+  "januaryFullResultsMatched": true,
+  "numericalMinimumMet": false,
+  "modelTrained": false,
+  "julyLoaded": false,
+  "profitabilityEstablished": false
+}

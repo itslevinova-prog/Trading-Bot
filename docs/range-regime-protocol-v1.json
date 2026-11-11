@@ -1,0 +1,28 @@
+{
+  "version": "range-regime-research-v1",
+  "registeredAt": "2026-10-31T18:32:28.366784+00:00",
+  "scope": "Causal descriptive market regime and non-executable range-reversion setup only. No new DecisionProvider, Action, quantity, deployed policy or order.",
+  "alreadyInspectedHistory": true,
+  "parameterSearch": false,
+  "independentOutOfSample": false,
+  "profitabilityEstablished": false,
+  "definitions": {
+    "closedWindow": 21,
+    "priorRangeCandles": 20,
+    "boundaryZones": "bottom/top quarter of prior OHLC span; signal excluded",
+    "minimumAlternatingCloseTransitions": 4,
+    "maximumPriorPathEfficiency": 0.2,
+    "entryConfirmation": "signal wick below old support, close back above support inside lower quarter, bullish body and close above preceding close; two-sided sweep veto",
+    "stop": "max(2%,2*prior ATR14/fee-inclusive basis, distance to one prior ATR below old support); reject above selected limit, never clip",
+    "target": "prior resistance converted to fill-based target; reject outside 3%..40%",
+    "netPayoffFloor": 1.5,
+    "bookMaximumAgeMs": 5000,
+    "noClaims": "No stationarity, probability, edge, risk budget, depth or fill permission inferred."
+  },
+  "audit": "Existing frozen dataset and original Safe replay clocks/quotes, cash-only observer. Both original fee scenarios. Classifications/counts only, no strategy fills or return comparison. Uncertainty and same-universe dependence retained.",
+  "sourceFiles": {
+    "apps/server/src/context/range-regime.ts": "8b305ffecabb92581eab43ad4c82b6b5f4ede7efa7e34083b5075f8c2ae23945",
+    "apps/server/src/strategy/range-entry.ts": "4205c9f9aa1ba540df96aab3b88ef954ae0a993a4c788913ededb1282dfa4028",
+    "apps/server/test/range-regime.test.ts": "c22fb93755a7efc1d9ddd12fe07cd501c5db60e0cd578bec444c967cb9f35323"
+  }
+}

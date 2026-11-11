@@ -1,0 +1,20 @@
+{
+  "version": "entry-support-study-v1",
+  "registeredAt": "2026-10-31T19:09:18.618469+00:00",
+  "historyAlreadyInspected": true,
+  "independentOutOfSample": false,
+  "parameterSearch": false,
+  "baselineReport": "docs/structure-exit-study-5e7a4bf0170e6610.json",
+  "baselineReportHash": "5e7a4bf0170e66101ad724fac8cafb79d73c82efa3484c3bef10297a9936dc99",
+  "hypothesis": "Preserve every existing structure/covariance/bearish exit and entry limit. For one scoped/owned/non-compound actually filled trend-continuation entry, after a new closed observation: close below support recorded in the original entry context AND current EMA20 AND negative1h -> additional full sell. Original support is a fact; the old strategy never explicitly promised this exit intent. Missing/mixed scope/future/legacy/compound source produces no extra exit.",
+  "simulation": "Original fixed dataset, Safe capital/fees/spread/slippage/depth/protective stop semantics and both adaptive fee scenarios unchanged. Optional onBuyFill hook copies source before provider mutation and only records accepted fills, isolated from economic state. Original source/receipt/capture clocks are explicitly modelled, with separate actual report materialization timestamp.",
+  "validation": "Full structure-exit baseline must match old result exactly including fills/curve. Shared exogenous inputs must match across variants. No new parameter threshold or tuning on results.",
+  "sources": {
+    "apps/server/src/context/position-entry.ts": "d70667faffaca0c98ba8df11d6142efd26ff1c5df113a3c94d6ea31138acf132",
+    "apps/server/src/research/portfolio.ts": "7fe1a66cdd49139e3b0abce23b4f5b105e8e8ae3c1f6ff8d67f7a6e6f4ff698d",
+    "apps/server/src/research/entry-support-replay.ts": "b3efb84c591766fcbcf3d32615e1660cde8b1db821874bd71a73433360d81203",
+    "apps/server/src/strategy/entry-support-paper.ts": "c2cf0f87d92e76e164f4d80ce386309abd07eb0c0bfc45b194825e2a8f79fe0c",
+    "apps/server/src/strategy/structure-exit-paper.ts": "a930b6676bab40c75a3ab399e3ccb9387df6b70671ffd882d833066a83d10313"
+  },
+  "profitabilityEstablished": false
+}

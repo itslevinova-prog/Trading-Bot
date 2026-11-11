@@ -1,0 +1,730 @@
+{
+  "version": "paper-market-breadth-april-replay-v1",
+  "generatedAt": "2026-11-04T15:21:37.853Z",
+  "build": {
+    "verified": true,
+    "buildId": "9091422646e6d99527b03a65363ad8b85d0dcd92304c4a3cc349d498caa34ae6",
+    "builtAt": "2026-11-04T15:20:27.509Z",
+    "sourceFiles": 161,
+    "runtimeFiles": 151,
+    "reasons": []
+  },
+  "baselineId": "d9a4a8b7cea171e8d8224b620eaa03427564587b426e88f64b329bf4b8b3f7b5",
+  "scope": [
+    {
+      "now": 1775044800000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 13,
+        "positive24h": 17,
+        "medianChange24h": 2.0038167938931206
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1775044800000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 13,
+        "return24hKnown": 20,
+        "positive24h": 17,
+        "medianChange24h": 2.002695041470648,
+        "complete": true
+      }
+    },
+    {
+      "now": 1775131200000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 1,
+        "positive24h": 1,
+        "medianChange24h": -3.691779351792246
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1775131200000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 1,
+        "return24hKnown": 20,
+        "positive24h": 1,
+        "medianChange24h": -3.71679706598031,
+        "complete": true
+      }
+    },
+    {
+      "now": 1775217600000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 12,
+        "positive24h": 18,
+        "medianChange24h": 2.131099353321564
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1775217600000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 12,
+        "return24hKnown": 20,
+        "positive24h": 18,
+        "medianChange24h": 1.788888557725954,
+        "complete": true
+      }
+    },
+    {
+      "now": 1775304000000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 9,
+        "positive24h": 7,
+        "medianChange24h": -0.14091122592766459
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1775304000000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 9,
+        "return24hKnown": 20,
+        "positive24h": 7,
+        "medianChange24h": -0.1484993174383331,
+        "complete": true
+      }
+    },
+    {
+      "now": 1775390400000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 2,
+        "positive24h": 2,
+        "medianChange24h": -0.940733772342428
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1775390400000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 2,
+        "return24hKnown": 20,
+        "positive24h": 2,
+        "medianChange24h": -1.1210175368218667,
+        "complete": true
+      }
+    },
+    {
+      "now": 1775476800000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 18,
+        "positive24h": 19,
+        "medianChange24h": 3.754940711462451
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1775476800000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 18,
+        "return24hKnown": 20,
+        "positive24h": 19,
+        "medianChange24h": 3.671436821894114,
+        "complete": true
+      }
+    },
+    {
+      "now": 1775563200000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 0,
+        "positive24h": 0,
+        "medianChange24h": -3.243474540008562
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1775563200000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 0,
+        "return24hKnown": 20,
+        "positive24h": 0,
+        "medianChange24h": -3.5264991747661845,
+        "complete": true
+      }
+    },
+    {
+      "now": 1775649600000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 18,
+        "positive24h": 19,
+        "medianChange24h": 4.210153900583746
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1775649600000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 18,
+        "return24hKnown": 20,
+        "positive24h": 19,
+        "medianChange24h": 3.904112552994543,
+        "complete": true
+      }
+    },
+    {
+      "now": 1775736000000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 2,
+        "positive24h": 1,
+        "medianChange24h": -2.5623268698061086
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1775736000000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 2,
+        "return24hKnown": 20,
+        "positive24h": 1,
+        "medianChange24h": -2.7102181923463196,
+        "complete": true
+      }
+    },
+    {
+      "now": 1775822400000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 8,
+        "positive24h": 16,
+        "medianChange24h": 0.6880733944954365
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1775822400000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 8,
+        "return24hKnown": 20,
+        "positive24h": 16,
+        "medianChange24h": 0.6807370339480534,
+        "complete": true
+      }
+    },
+    {
+      "now": 1775908800000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 7,
+        "positive24h": 11,
+        "medianChange24h": 0.36681222707424244
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1775908800000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 7,
+        "return24hKnown": 20,
+        "positive24h": 11,
+        "medianChange24h": 0.22142892722533114,
+        "complete": true
+      }
+    },
+    {
+      "now": 1775995200000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 1,
+        "positive24h": 1,
+        "medianChange24h": -1.7887213066893337
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1775995200000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 1,
+        "return24hKnown": 20,
+        "positive24h": 1,
+        "medianChange24h": -1.8494777392076334,
+        "complete": true
+      }
+    },
+    {
+      "now": 1776081600000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 2,
+        "positive24h": 5,
+        "medianChange24h": -0.5265185565686337
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1776081600000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 2,
+        "return24hKnown": 20,
+        "positive24h": 5,
+        "medianChange24h": -0.5295708628382467,
+        "complete": true
+      }
+    },
+    {
+      "now": 1776168000000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 16,
+        "positive24h": 19,
+        "medianChange24h": 2.445302445302455
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1776168000000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 16,
+        "return24hKnown": 20,
+        "positive24h": 19,
+        "medianChange24h": 2.363620385646825,
+        "complete": true
+      }
+    },
+    {
+      "now": 1776254400000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 16,
+        "positive24h": 8,
+        "medianChange24h": -0.25673940949936247
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1776254400000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 16,
+        "return24hKnown": 20,
+        "positive24h": 8,
+        "medianChange24h": -0.2618868035523414,
+        "complete": true
+      }
+    },
+    {
+      "now": 1776340800000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 20,
+        "positive24h": 18,
+        "medianChange24h": 2.1855209238792916
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1776340800000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 20,
+        "return24hKnown": 20,
+        "positive24h": 18,
+        "medianChange24h": 2.1414496005164207,
+        "complete": true
+      }
+    },
+    {
+      "now": 1776427200000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 19,
+        "positive24h": 19,
+        "medianChange24h": 2.9099307159353494
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1776427200000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 19,
+        "return24hKnown": 20,
+        "positive24h": 19,
+        "medianChange24h": 2.754263486309916,
+        "complete": true
+      }
+    },
+    {
+      "now": 1776513600000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 2,
+        "positive24h": 5,
+        "medianChange24h": -1.172227231740297
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1776513600000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 2,
+        "return24hKnown": 20,
+        "positive24h": 5,
+        "medianChange24h": -1.267650171012652,
+        "complete": true
+      }
+    },
+    {
+      "now": 1776600000000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 2,
+        "positive24h": 3,
+        "medianChange24h": -0.988875154511748
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1776600000000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 2,
+        "return24hKnown": 20,
+        "positive24h": 3,
+        "medianChange24h": -1.0825493184867085,
+        "complete": true
+      }
+    },
+    {
+      "now": 1776686400000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 0,
+        "positive24h": 2,
+        "medianChange24h": -0.6904010440445862
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1776686400000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 0,
+        "return24hKnown": 20,
+        "positive24h": 2,
+        "medianChange24h": -0.7430057346423269,
+        "complete": true
+      }
+    },
+    {
+      "now": 1776772800000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 18,
+        "positive24h": 19,
+        "medianChange24h": 1.6124999999999945
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1776772800000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 18,
+        "return24hKnown": 20,
+        "positive24h": 19,
+        "medianChange24h": 1.5457538167938933,
+        "complete": true
+      }
+    },
+    {
+      "now": 1776859200000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 20,
+        "positive24h": 19,
+        "medianChange24h": 2.111324376199608
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1776859200000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 20,
+        "return24hKnown": 20,
+        "positive24h": 19,
+        "medianChange24h": 2.056376984382857,
+        "complete": true
+      }
+    },
+    {
+      "now": 1776945600000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 5,
+        "positive24h": 0,
+        "medianChange24h": -2.3399014778325067
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1776945600000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 5,
+        "return24hKnown": 20,
+        "positive24h": 0,
+        "medianChange24h": -2.3854130130926574,
+        "complete": true
+      }
+    },
+    {
+      "now": 1777032000000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 17,
+        "positive24h": 17,
+        "medianChange24h": 1.0382255781028915
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1777032000000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 17,
+        "return24hKnown": 20,
+        "positive24h": 17,
+        "medianChange24h": 0.9791973451320213,
+        "complete": true
+      }
+    },
+    {
+      "now": 1777118400000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 8,
+        "positive24h": 4,
+        "medianChange24h": -0.3112678979041217
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1777118400000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 8,
+        "return24hKnown": 20,
+        "positive24h": 4,
+        "medianChange24h": -0.32033983130500543,
+        "complete": true
+      }
+    },
+    {
+      "now": 1777204800000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 15,
+        "positive24h": 14,
+        "medianChange24h": 0.49226819043577397
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1777204800000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 15,
+        "return24hKnown": 20,
+        "positive24h": 14,
+        "medianChange24h": 0.4444975963336817,
+        "complete": true
+      }
+    },
+    {
+      "now": 1777291200000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 1,
+        "positive24h": 1,
+        "medianChange24h": -1.851851851851849
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1777291200000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 1,
+        "return24hKnown": 20,
+        "positive24h": 1,
+        "medianChange24h": -1.8657755499860762,
+        "complete": true
+      }
+    },
+    {
+      "now": 1777377600000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 1,
+        "positive24h": 4,
+        "medianChange24h": -0.531107738998482
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1777377600000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 1,
+        "return24hKnown": 20,
+        "positive24h": 4,
+        "medianChange24h": -0.6929042968496613,
+        "complete": true
+      }
+    },
+    {
+      "now": 1777464000000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 18,
+        "positive24h": 19,
+        "medianChange24h": 2.0460358056265893
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1777464000000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 18,
+        "return24hKnown": 20,
+        "positive24h": 19,
+        "medianChange24h": 1.9329795886370404,
+        "complete": true
+      }
+    },
+    {
+      "now": 1777550400000,
+      "old": {
+        "tracked": 20,
+        "ready": 20,
+        "aboveHourlyTrend": 5,
+        "positive24h": 2,
+        "medianChange24h": -2.302158273381305
+      },
+      "next": {
+        "version": "aligned-market-breadth-v1",
+        "closedAt": 1777550400000,
+        "tracked": 20,
+        "ready": 20,
+        "hourlyTrendKnown": 20,
+        "aboveHourlyTrend": 5,
+        "return24hKnown": 20,
+        "positive24h": 2,
+        "medianChange24h": -2.340065369481642,
+        "complete": true
+      }
+    }
+  ],
+  "markets": 20,
+  "hourlyPatchInputsUnchangedFromBaseline": [
+    {
+      "path": "packages/shared/src/index.ts",
+      "hash": "3ee0a952dd7ffdfb30e2df5924d4569cbac2fdb619945b1ca5383c1d7a73f4d4",
+      "matchesOriginalHourlyPatch": false
+    },
+    {
+      "path": "apps/server/src/market/indicators.ts",
+      "hash": "09162f1e8aaad80a0c1885533ca63c3c6c0132ab9563fd57c5f6003f3cef3bb0",
+      "matchesOriginalHourlyPatch": true
+    },
+    {
+      "path": "apps/server/src/context/hourly-trend.ts",
+      "hash": "5baf9052f29a16074ef283428d7b144b8a4a6d7071aa3d74d2782c82115af003",
+      "matchesOriginalHourlyPatch": true
+    },
+    {
+      "path": "apps/server/src/context/market-context.ts",
+      "hash": "c5e51285360b62717e71103245b55ab11227af00479e414d5c78ff2a27dc6883",
+      "matchesOriginalHourlyPatch": false
+    },
+    {
+      "path": "apps/server/src/research/mock-replay-context.ts",
+      "hash": "793068bceb009f4e49cba2ff0b3f02f94f8d160be9e446caa9c9877021452fbb",
+      "matchesOriginalHourlyPatch": true
+    },
+    {
+      "path": "packages/shared/dist/index.js",
+      "hash": "359829dce1a2eb956f1e9599b1b6543a94190e5840a40e6352576b40738b6316",
+      "matchesOriginalHourlyPatch": true
+    },
+    {
+      "path": "apps/server/dist/market/indicators.js",
+      "hash": "27fd59bc681dbfbf480fb28ff6295c88568974acf1a21052a90de35141383c00",
+      "matchesOriginalHourlyPatch": true
+    },
+    {
+      "path": "apps/server/dist/context/hourly-trend.js",
+      "hash": "b1c8aab20fbcd0bfed984b73890f5700b2cf0840418e41b02e3c710f681374ea",
+      "matchesOriginalHourlyPatch": true
+    },
+    {
+      "path": "apps/server/dist/context/market-context.js",
+      "hash": "1909b545f9c7c4b06debc7a197fae3cb5cc9612f44061bfa3362b90d94715369",
+      "matchesOriginalHourlyPatch": false
+    },
+    {
+      "path": "apps/server/dist/research/mock-replay-context.js",
+      "hash": "67613bb47e2249a53750df6e2e4d611171838c00611414bceb740110991d34d3",
+      "matchesOriginalHourlyPatch": true
+    }
+  ],
+  "nonBreadthContextIdentical": true,
+  "source": "Already-inspected sealed April candles at fixed daily noon UTC. Descriptive context arithmetic only."
+}

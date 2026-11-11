@@ -1,0 +1,415 @@
+{
+  "version": "replay-bid-sensitivity-v1",
+  "verifiedAt": "2026-11-04T16:13:21.624Z",
+  "build": {
+    "verified": true,
+    "buildId": "2eac94e50132177f534c3fb71294b419c284eae60b1b234e0fc2307c001fec9d",
+    "builtAt": "2026-11-04T16:11:20.439Z",
+    "sourceFiles": 162,
+    "runtimeFiles": 152,
+    "reasons": []
+  },
+  "referenceCases": [
+    {
+      "month": "2026-05",
+      "study": "evidence-post-april",
+      "reference": "docs/may-frozen-portfolio-f53b0d90fa77fffc.json",
+      "sha": "f53b0d90fa77fffc406b9e0399c8c3920958cdf7bda42311cd51a5a71122878d"
+    },
+    {
+      "month": "2026-06",
+      "study": "june-timing-holdout",
+      "reference": "docs/june-frozen-portfolio-13ca4ea0ac9938e5.json",
+      "sha": "13ca4ea0ac9938e59717972a4fae74a4fd7ca37d311f815ff9d15c3793f23b77"
+    }
+  ],
+  "checked": [
+    {
+      "month": "2026-05",
+      "name": "rules",
+      "multiplier": 1,
+      "bars": 960,
+      "fills": 0,
+      "ambiguousFills": 0,
+      "resultSha": "e63c0923fdddb20f8a782151e5d5489cc675ef3efe8099ac30061660b7b875e4",
+      "sensitivity": {
+        "spreadBps": 10,
+        "baseline": {
+          "returnPct": 0,
+          "drawdownPct": 0,
+          "fees": 0,
+          "fills": 0,
+          "closedTrades": 0,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "syntheticBid": {
+          "returnPct": 0,
+          "drawdownPct": 0,
+          "fees": 0,
+          "fills": 0,
+          "closedTrades": 0,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "returnDeltaPp": 0,
+        "sameFillSchedule": true,
+        "syntheticBidSha": "1c76af8e9e52782b5781961ac5d7c0acc8ddd5779156f03e576c50314e326fcd"
+      }
+    },
+    {
+      "month": "2026-05",
+      "name": "ungated",
+      "multiplier": 1,
+      "bars": 960,
+      "fills": 40,
+      "ambiguousFills": 0,
+      "resultSha": "006601a9029d4cbbf9720be0b35f0b859a6a1351a6a76ea055d250a3af081054",
+      "sensitivity": {
+        "spreadBps": 10,
+        "baseline": {
+          "returnPct": 1.5684593766977395,
+          "drawdownPct": 1.2246304527196845,
+          "fees": 0.6031630678994776,
+          "fills": 40,
+          "closedTrades": 20,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "syntheticBid": {
+          "returnPct": 1.6616515675480281,
+          "drawdownPct": 1.2172470899030985,
+          "fees": 0.6038714744626444,
+          "fills": 40,
+          "closedTrades": 20,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "returnDeltaPp": 0.09319219085028863,
+        "sameFillSchedule": true,
+        "syntheticBidSha": "9f5c90b8a7a3774a544c92f572724db6df96cbea761031f2fbf0aad32df13049"
+      }
+    },
+    {
+      "month": "2026-05",
+      "name": "btc",
+      "multiplier": 1,
+      "bars": 960,
+      "fills": 16,
+      "ambiguousFills": 0,
+      "resultSha": "bc1acecae3da4e49e887a77f43e907e9f2e9db23d730358ab1856446dd35f27f",
+      "sensitivity": {
+        "spreadBps": 10,
+        "baseline": {
+          "returnPct": -0.014300652427889915,
+          "drawdownPct": 0.9105027519074139,
+          "fees": 0.23841787010183713,
+          "fills": 16,
+          "closedTrades": 8,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "syntheticBid": {
+          "returnPct": 0.015402688501398032,
+          "drawdownPct": 0.8958259947089875,
+          "fees": 0.23844760317584043,
+          "fills": 16,
+          "closedTrades": 8,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "returnDeltaPp": 0.029703340929287947,
+        "sameFillSchedule": true,
+        "syntheticBidSha": "ca9d4d4c800aa150fa349622efefa45c345aec3e360cce380a275828ea91bbc0"
+      }
+    },
+    {
+      "month": "2026-05",
+      "name": "breadth",
+      "multiplier": 1,
+      "bars": 960,
+      "fills": 14,
+      "ambiguousFills": 0,
+      "resultSha": "0f9cc76563783d39e5ca4cb7ca3b8a5bac121c8f3a416dabe0dd023e6053f31c",
+      "sensitivity": {
+        "spreadBps": 10,
+        "baseline": {
+          "returnPct": -0.4829661152747744,
+          "drawdownPct": 1.2047011809665806,
+          "fees": 0.2081857576687171,
+          "fills": 14,
+          "closedTrades": 7,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "syntheticBid": {
+          "returnPct": -0.45326277434548645,
+          "drawdownPct": 1.1827974114441493,
+          "fees": 0.20821549074272042,
+          "fills": 14,
+          "closedTrades": 7,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "returnDeltaPp": 0.029703340929287947,
+        "sameFillSchedule": true,
+        "syntheticBidSha": "cca189aef535e214e98399d320455497e6a09d39ebb3e38d41b18d9ca9b8634d"
+      }
+    },
+    {
+      "month": "2026-05",
+      "name": "ungated",
+      "multiplier": 2,
+      "bars": 960,
+      "fills": 0,
+      "ambiguousFills": 0,
+      "resultSha": "99449037c43cc3cc23b73653ad101a6b81931001b9f8c0a260e396c14f6a859f",
+      "sensitivity": {
+        "spreadBps": 20,
+        "baseline": {
+          "returnPct": 0,
+          "drawdownPct": 0,
+          "fees": 0,
+          "fills": 0,
+          "closedTrades": 0,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "syntheticBid": {
+          "returnPct": 0,
+          "drawdownPct": 0,
+          "fees": 0,
+          "fills": 0,
+          "closedTrades": 0,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "returnDeltaPp": 0,
+        "sameFillSchedule": true,
+        "syntheticBidSha": "14169f9f387b4224861a08464c95995d8e6014c1752b22e73fb5219160bfde7c"
+      }
+    },
+    {
+      "month": "2026-06",
+      "name": "rules",
+      "multiplier": 1,
+      "bars": 2880,
+      "fills": 22,
+      "ambiguousFills": 0,
+      "resultSha": "afda269e115b87e9d0f1e3aa3b7a6c9e5e78cb49cfc2dd2bd57aec1374a69d83",
+      "sensitivity": {
+        "spreadBps": 10,
+        "baseline": {
+          "returnPct": 0.4908199291545179,
+          "drawdownPct": 3.188360758683485,
+          "fees": 0.3259738789420165,
+          "fills": 22,
+          "closedTrades": 11,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "syntheticBid": {
+          "returnPct": 0.5128814152251415,
+          "drawdownPct": 3.1811338063409025,
+          "fees": 0.32599596251165674,
+          "fills": 22,
+          "closedTrades": 11,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "returnDeltaPp": 0.022061486070623637,
+        "sameFillSchedule": true,
+        "syntheticBidSha": "5a10e073a10f271270f4ada5505a93ecaa3952d241219efb1efb4848fe76d93f"
+      }
+    },
+    {
+      "month": "2026-06",
+      "name": "ungated",
+      "multiplier": 1,
+      "bars": 2880,
+      "fills": 110,
+      "ambiguousFills": 0,
+      "resultSha": "569ea9eea1edcfab3a084d4aca277eb0a5604d52c5b399c1086daf1c9f6f6d1f",
+      "sensitivity": {
+        "spreadBps": 10,
+        "baseline": {
+          "returnPct": -7.668730179293338,
+          "drawdownPct": 8.818541440772771,
+          "fees": 1.5818203048400095,
+          "fills": 110,
+          "closedTrades": 55,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "syntheticBid": {
+          "returnPct": -7.508624879768632,
+          "drawdownPct": 8.681094716507145,
+          "fees": 1.5835784149530487,
+          "fills": 110,
+          "closedTrades": 55,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "returnDeltaPp": 0.1601052995247052,
+        "sameFillSchedule": false,
+        "syntheticBidSha": "99d721ad21a32fc14a35763e1a79693a5964a5b15c73806341f8263294698549"
+      }
+    },
+    {
+      "month": "2026-06",
+      "name": "btc",
+      "multiplier": 1,
+      "bars": 2880,
+      "fills": 50,
+      "ambiguousFills": 0,
+      "resultSha": "633570b581813992c0c0136b4e04200370b0c17c6cbfc05fe4ad61010aadc946",
+      "sensitivity": {
+        "spreadBps": 10,
+        "baseline": {
+          "returnPct": -4.612596084085608,
+          "drawdownPct": 4.673446193762055,
+          "fees": 0.7273883286844701,
+          "fills": 50,
+          "closedTrades": 25,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "syntheticBid": {
+          "returnPct": -4.5492092539851425,
+          "drawdownPct": 4.6100997997716515,
+          "fees": 0.7276032613423501,
+          "fills": 50,
+          "closedTrades": 25,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "returnDeltaPp": 0.0633868301004652,
+        "sameFillSchedule": false,
+        "syntheticBidSha": "43a1d3a3c9abb32a16a013096e0553ac33d20d758380d39c9d06bd6d93d8fc46"
+      }
+    },
+    {
+      "month": "2026-06",
+      "name": "breadth",
+      "multiplier": 1,
+      "bars": 2880,
+      "fills": 38,
+      "ambiguousFills": 0,
+      "resultSha": "274a89553151c82d4850522223d727cc0972de83a811ce0afff0e3b2d89f654c",
+      "sensitivity": {
+        "spreadBps": 10,
+        "baseline": {
+          "returnPct": -3.757346593244193,
+          "drawdownPct": 3.818742288848989,
+          "fees": 0.5542812358037796,
+          "fills": 38,
+          "closedTrades": 19,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "syntheticBid": {
+          "returnPct": -3.7145470842505857,
+          "drawdownPct": 3.775970082777038,
+          "fees": 0.5543485542668483,
+          "fills": 38,
+          "closedTrades": 19,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "returnDeltaPp": 0.042799508993607294,
+        "sameFillSchedule": false,
+        "syntheticBidSha": "3d8cd9e472dfb20743d677a98c60857a4ea6ad96dc0fa4100d5902a6e13ecb81"
+      }
+    },
+    {
+      "month": "2026-06",
+      "name": "cash",
+      "multiplier": 1,
+      "bars": 2880,
+      "fills": 0,
+      "ambiguousFills": 0,
+      "resultSha": "c862b3f37f6ce81fb9cc5db65344596c21742decde43734ddc9ff9417e3c0875",
+      "sensitivity": {
+        "spreadBps": 10,
+        "baseline": {
+          "returnPct": 0,
+          "drawdownPct": 0,
+          "fees": 0,
+          "fills": 0,
+          "closedTrades": 0,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "syntheticBid": {
+          "returnPct": 0,
+          "drawdownPct": 0,
+          "fees": 0,
+          "fills": 0,
+          "closedTrades": 0,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "returnDeltaPp": 0,
+        "sameFillSchedule": true,
+        "syntheticBidSha": "dee5e3a5df9253baf7f5d704b7d90bce8b00cbb3ed0fe947a69f4c8cfef857a7"
+      }
+    },
+    {
+      "month": "2026-06",
+      "name": "ungated",
+      "multiplier": 2,
+      "bars": 2880,
+      "fills": 0,
+      "ambiguousFills": 0,
+      "resultSha": "59e5e0b3ddde6b5644d1d30cddf9ff28f9b3d04385057d60054a8f97d594bb03",
+      "sensitivity": {
+        "spreadBps": 20,
+        "baseline": {
+          "returnPct": 0,
+          "drawdownPct": 0,
+          "fees": 0,
+          "fills": 0,
+          "closedTrades": 0,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "syntheticBid": {
+          "returnPct": 0,
+          "drawdownPct": 0,
+          "fees": 0,
+          "fills": 0,
+          "closedTrades": 0,
+          "missingValuationBars": 0,
+          "unliquidatedPositions": 0,
+          "ambiguousFills": 0
+        },
+        "returnDeltaPp": 0,
+        "sameFillSchedule": true,
+        "syntheticBidSha": "d13f46f7b9c7d5712f1ebe63bf701fda8515b46b8effb8e6bce1f9e838b2595c"
+      }
+    }
+  ],
+  "runnerSha": "de4e68dcf92022a09ac45ea9d23851ed20855c5a87a1757eb4c6d034d17d814e",
+  "scope": "Complete data parity on consumed windows. Full results including fill and drawdown paths match after removing only the new ambiguity annotation. No new strategy evaluation. Synthetic-bid sensitivity only, with the same frozen choices and costs. Constant spread proxy, not observed historical quotes."
+}

@@ -1,0 +1,63 @@
+{
+  "verifiedAt": "2026-10-31T18:17:13.470Z",
+  "sameRegisteredContract": true,
+  "registeredAt": 1793470079478,
+  "registeredExperimentId": "e6349285072901ca91f9260144452d71af2ffcc0faa79fb4e123f8ba834d90df",
+  "epochs": [
+    {
+      "account_id": "ai",
+      "started_at": 1793470079478,
+      "baseline_equity": 1000,
+      "evaluation_version": "ae1f7950f5c86116ac722a8125dc56e27a92346ba0c31b9b1f031eaf2e87e582"
+    },
+    {
+      "account_id": "hold",
+      "started_at": 1793470079478,
+      "baseline_equity": 1000,
+      "evaluation_version": "cf0174b1eb26ef4f3c8e8d4454d1853af588b11b7a28eaf5cb706c6fd2947051"
+    },
+    {
+      "account_id": "rules",
+      "started_at": 1793470079478,
+      "baseline_equity": 1000,
+      "evaluation_version": "cf0174b1eb26ef4f3c8e8d4454d1853af588b11b7a28eaf5cb706c6fd2947051"
+    }
+  ],
+  "holdBenchmarkFillUnchanged": true,
+  "holdFillCount": 1,
+  "registeredRuns": [
+    {
+      "run_id": "61bf3f02-298f-43f2-8b46-7e215beb9ec4",
+      "first_seen": 1793470079478
+    },
+    {
+      "run_id": "197a613c-3df9-4789-aa1c-424c3176bfc0",
+      "first_seen": 1793470426108
+    }
+  ],
+  "actualMockDecisions": [
+    {
+      "id": "c31191d8-b8a8-415a-89e0-ab873ef6a8e3",
+      "ts": 1793470505934,
+      "provider": "mock:structure-exit-v1",
+      "status": "hold",
+      "actions": [
+        {
+          "type": "hold"
+        }
+      ],
+      "contextAsOf": 1793470505277,
+      "requiredReturns": 192,
+      "completeAssets": 20,
+      "contextHash": "1f97b131f2154eb7c8eed89cfe489d83e25cf4cfa1513d383de1a88c44eb7033",
+      "evidenceVersion": "structure-exit-paper-v1"
+    }
+  ],
+  "modelDecisionObserved": true,
+  "root": "C:\\Users\\user\\Documents\\Projekte\\Buisness\\New_Trading_AI\\kraken-paper-bot\\data\\paper-experiments\\2026-10-31T18-04-59.890Z-cc12379e164c",
+  "runId": "197a613c-3df9-4789-aa1c-424c3176bfc0",
+  "operationalRestartOnly": true,
+  "baselineReset": false,
+  "profitabilityEstablished": false,
+  "independentSamples": null
+}

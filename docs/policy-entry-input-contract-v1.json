@@ -1,0 +1,10 @@
+{
+  "version": "policy-entry-inputs-v1",
+  "registeredAt": "2026-10-31T12:16:39.479844+00:00",
+  "sourceReportHash": "7e873da81fec4c98e37988a4ce02d0b04ad8098a2fe73bfcd77ba32981597cc4",
+  "method": "Recapture provider inputs under byte-identical replay/context/feature/risk dependencies and identical complete result; no claim of originally observed live input",
+  "join": "Executed entry bar+pair+feature close, never rejected proposal; exact scoped policy outcome ID",
+  "inputs": "Explicit market/structure/cost whitelist only. Target, exit, availability and later result metadata kept outside feature vector. Unknown correlation/structure stays null.",
+  "training": "Existing eligiblePolicyLabels gate controls per-scope outcome maturity before validating/using vectors. Scaling/class weights only on eligible prefix. No model trained/activated, no live memory updates.",
+  "history": "Same already consumed retrospective study, no new independent OOS evidence."
+}

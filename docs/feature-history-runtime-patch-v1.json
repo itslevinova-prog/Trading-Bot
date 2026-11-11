@@ -1,0 +1,17 @@
+{
+  "version": "feature-history-runtime-patch-v1",
+  "registeredAt": "2026-10-31T23:17:14.726821+00:00",
+  "runtimeModule": "market/indicators.js",
+  "oldRuntimeHash": "77bb2ad6811c329c19fd12b6fe2cf9e99ba5336b99c6a58b4905b86a62b1bb46",
+  "newRuntimeHash": "4a78e5b62965f67cb645c8616a6cd80788d80c33f19d8fb7d3b3a30940f53b31",
+  "newSourceHash": "a548dfdd16c511b4adf468042c65ff79ab786327619aded0509bc79ffe59e421",
+  "sourceContractProtocolHash": "cf85c742d7c881bb2d230212698bb84f27b91633242c5a772499d31a282e4b20",
+  "runnerHash": "ee6433702428d0946d52a7fec5f786b4c0bf0e69441efe54efa27bb566790f0d",
+  "previousReport": "docs/breakout-entry-study-ad773aa0759f0716.json",
+  "previousReportHash": "ad773aa0759f0716b70ac0b2da8c95aa97a1ad247118c37c0322317845371734",
+  "purpose": "Exact full economic compatibility of old source and breakout variants on all seven complete known months and two fees. No threshold change or new alpha evaluation. Default runtime guards stay strict; only explicit feature-history-v2 override may replace this one approved module.",
+  "julyOutcomesLocked": true,
+  "baselineOverridesAllowed": [
+    "market/indicators.js"
+  ]
+}

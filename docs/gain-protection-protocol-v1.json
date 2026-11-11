@@ -1,0 +1,18 @@
+{
+  "version": "closed-gain-protection-study-v1",
+  "registeredAt": "2026-10-31T22:25:15.303235+00:00",
+  "historicalDevelopmentValidationAlreadyConsumed": true,
+  "julyLocked": true,
+  "hypothesis": "After a uniquely owned/scoped/noncompound original trend entry, a prior closed price within48h with hypothetical conservative net mark>=1R, then a later current fresh bid with hypothetical net mark<=0 ->extra full exit.1R is original actual fill+bought fee basis minus original bid stop proceeds with fee/slipcap. Past closes marked under midpoint spread cap, current bid under fee/slipcap. These cost caps are hypotheses, not exit-fill guarantees.",
+  "fixedRiskMultiple": 1,
+  "lookbackHours": 48,
+  "closedOnly": "Exclude current signal from prior witness; bar close may qualify only after actual position open. No high/low peaks. Missing/conflicting selected grid unknown; any verified recent witness is enough, without claiming entire holding history observed.",
+  "costAndBaseline": "Same registered100fakeEUR/10bpssyntheticspread/8bpsfillslip/.001and.002fees/1000depth/Safe limits. Baseline actual structure-exit. All prior exits prioritized, all original entry/portfolio/covariance/native stops unchanged. No native trailing stop or stop amendment.",
+  "validation": "Full baseline must exactly equal current preserved January/April reports; candidate reentries/cash/fees/winners must be simulated, not losing-trade arithmetic. No gridsearch or threshold tuning after outcome.",
+  "sources": {
+    "apps/server/src/strategy/gain-protection-paper.ts": "964340b8fe73a2ae45af5cd3b19f7caafc071c00a805a4f70051eb0fa198f38a",
+    "apps/server/src/research/gain-protection-replay.ts": "acda96fb8a8e5ed7c6ae7750e8915b1b1c027b263fa075725773f56acf5608a6"
+  },
+  "realAiUsed": false,
+  "profitabilityEstablished": false
+}

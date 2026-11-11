@@ -1,0 +1,47 @@
+{
+  "verifiedAt": "2026-10-31T22:54:07.923864+00:00",
+  "files": [
+    {
+      "project": "freqtrade",
+      "path": "freqtrade/freqai/data_kitchen.py",
+      "sha256": "00a0d1089dab1a8ae47ef5282ca6aa1c1fbb71cb95dc27193fee61c1d1bce82e",
+      "matchesArchivedManifests": [
+        "docs\\upstream-research\\freqtrade\\manifest.json"
+      ]
+    },
+    {
+      "project": "freqtrade",
+      "path": "freqtrade/freqai/freqai_interface.py",
+      "sha256": "fa0c3d1835ea3e2804d23617095d877d760b357bfd02ec30a954b4ae16154065",
+      "matchesArchivedManifests": [
+        "docs\\upstream-research\\freqtrade\\manifest.json"
+      ]
+    },
+    {
+      "project": "jesse",
+      "path": "jesse/research/monte_carlo/monte_carlo_trades.py",
+      "sha256": "e5b91c03bbe4a161eec188bd378a474ea0b724ca3578e83f19208cddefa6a7a1",
+      "matchesArchivedManifests": [
+        "docs\\upstream-research\\jesse\\manifest-pass3.json"
+      ]
+    },
+    {
+      "project": "jesse",
+      "path": "jesse/research/monte_carlo/monte_carlo_candles.py",
+      "sha256": "7eb2fe91410db430bcf66f30613c28f5a2798125c1715de15907ab3659c05949",
+      "matchesArchivedManifests": [
+        "docs\\upstream-research\\jesse\\manifest-pass3.json"
+      ]
+    },
+    {
+      "project": "OctoBot",
+      "path": "packages/tentacles/Evaluator/Strategies/mixed_strategies_evaluator/mixed_strategies.py",
+      "sha256": "6ad600f312614b6509ef239488d66cddb45a487a6d66c37e8d1feeb0881b78c8",
+      "matchesArchivedManifests": [
+        "docs\\upstream-research\\OctoBot\\manifest-pass3.json"
+      ]
+    }
+  ],
+  "newFilesArchived": 0,
+  "reviewScope": "Targeted sections only, broader audit remains incomplete"
+}

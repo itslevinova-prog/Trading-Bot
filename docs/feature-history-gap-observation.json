@@ -1,0 +1,20 @@
+{
+  "observedAt": "2026-10-31T23:09:14.930Z",
+  "domain": "Synthetic counterexamples, not observed runtime trades or economic backtest",
+  "source": "apps/server/src/market/indicators.ts",
+  "insufficientHistory": {
+    "quarterBars": 60,
+    "featureReturned": true,
+    "change24h": 0,
+    "measured24hOffsetSpanHours": null
+  },
+  "gapInside24hButOutsideLast60": {
+    "quarterBars": 109,
+    "featureReturned": true,
+    "change24h": 9.58498023715415,
+    "measured24hOffsetSpanHours": 24.25
+  },
+  "futureCandleCorrectlyIgnored": true,
+  "finding": "Current feature min60/contiguity60 permits unavailable24h->0 and non24h array offset across older gap. Actual historical study full grids/warmups unaffected; do not modify source during pinned comparison.",
+  "next": "Tighten complete24h feature-history contract and add adversarial tests in subsequent explicitly versioned change; inspect existing frozen-module pin compatibility and preserve prior reports."
+}

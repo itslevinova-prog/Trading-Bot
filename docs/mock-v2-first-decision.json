@@ -1,0 +1,42 @@
+{
+  "verifiedAt": "2026-10-31T11:01:00.511Z",
+  "experimentId": "2026-10-31T10-48-16.729Z-5cadb6de7c67",
+  "decisionId": "5d4bdf0f-b1f3-464b-bbba-4549871cf3a5",
+  "status": "hold",
+  "decisionAt": 1793444406983,
+  "contextTime": 1793444405478,
+  "marketClockOffsetsMs": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "assessments": 20,
+  "freshEvidencePassed": 11,
+  "freshEvidenceRejected": 9,
+  "evidenceVersion": "paper-intelligence-v1",
+  "estimatedWinProbability": null,
+  "performanceValidated": false,
+  "trades": [
+    {
+      "account_id": "hold",
+      "n": 1
+    }
+  ]
+}

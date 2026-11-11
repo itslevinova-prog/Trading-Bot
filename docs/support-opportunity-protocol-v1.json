@@ -1,0 +1,26 @@
+{
+  "version": "support-opportunity-protocol-v1",
+  "registeredAt": "2026-11-02T21:10:13.875Z",
+  "runnerHash": "bac170a7ae756505f46c3b11499eb2b1157d16b74e87d8557ac3758af5b56545",
+  "support": "docs/feature-support-bb7c60d0ce2dd8e9.json",
+  "supportHash": "bb7c60d0ce2dd8e92b1aa4bf3bec0f3a2d79e2e61da2bc2a9eeb0b5687da99e5",
+  "models": "docs/aggressor-ridge-walkforward-9e6096906eea1521.json",
+  "modelsHash": "9e6096906eea152134caed8459188588a1beb4af80cf0a5aff2daf8d4bf5a916",
+  "ranking": "docs/aggressor-ranking-audit-fbcfb4343dd6bd93.json",
+  "rankingHash": "fbcfb4343dd6bd93fb8041dcffe32e78521ead2873cc7344a46f23b753e719a2",
+  "groups": [
+    "allQueries",
+    "sourceAvailable",
+    "forecastEligible",
+    "aboveMargin",
+    "rankedWinners",
+    "eligibleNonwinners"
+  ],
+  "groupDefinition": "Source completeness and frozen forecast/null/strict0.005ranking keys only; never errors/outcomes",
+  "quantiles": "Nearest-rank ceil(p*n)-1, same predefined median/p90/max",
+  "thresholdChosen": false,
+  "filterApplied": false,
+  "newFit": false,
+  "newSelectorChosen": false,
+  "julyLoaded": false
+}

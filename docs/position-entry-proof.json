@@ -1,0 +1,95 @@
+{
+  "version": "position-entry-proof-v1",
+  "verifiedAt": "2026-10-31T19:01:57.509852+00:00",
+  "buildId": "cd420ddd8e582a0aad02a2ad3ad5a332367fa3368dc6ca90c823ae2442b659bd",
+  "files": {
+    "apps/server/src/context/position-entry.ts": "7c44afd5c6b2dc923a1a318bdd213004fa2a468691e44d39da29d43d42815e3f",
+    "apps/server/src/broker/PaperExecutionAdapter.ts": "ac5bcc608b27257c77da4327fece4fbbe34ea7ed208a9efb2b5cc6763b5373f5",
+    "apps/server/src/db.ts": "e1fa414351ff7edceff5df67ea80852fe4eebdf438e029154142a4312aefe806",
+    "apps/server/src/strategy/scheduler.ts": "9f3efb0620f6d6859d64e7953722cf5895cf195de633bee67daafc307d9bc30f",
+    "apps/server/test/position-entry.test.ts": "7dbaca6e849fd24a50a400790de9b6216b8bdd66694de55447b0f3c309008578",
+    "apps/server/test/broker.test.ts": "ab303ee280aac088d9b415a1f224201c466a6b9f092bab88506def382d1e8309"
+  },
+  "tests": {
+    "main": 945,
+    "offline": 15,
+    "newTests": 27,
+    "newDedicatedCases": 25,
+    "newActualBrokerCases": 2,
+    "typechecksBuildPassed": true,
+    "log": "data/verify-position-entry-scope-final-2026-10-31.log"
+  },
+  "parity": {
+    "proof": "docs/fixed-replay-parity.json",
+    "status": "passed",
+    "fullBaseAndFeeStressResultsExactlyMatched": true,
+    "returnPct": 0,
+    "closedTrades": 0,
+    "independentOutOfSample": false
+  },
+  "sourceIsolation": {
+    "sources": {
+      "previous": 110,
+      "current": 113,
+      "changedExisting": [
+        "apps/server/src/broker/PaperExecutionAdapter.ts",
+        "apps/server/src/db.ts",
+        "apps/server/src/strategy/scheduler.ts"
+      ],
+      "added": [
+        "apps/server/src/context/position-entry.ts",
+        "apps/server/src/context/range-regime.ts",
+        "apps/server/src/strategy/range-entry.ts"
+      ],
+      "frozenTreeByteIdentical": true
+    },
+    "runtimeFiles": {
+      "previous": 100,
+      "current": 103,
+      "changedExisting": [
+        "apps/server/dist/broker/PaperExecutionAdapter.js",
+        "apps/server/dist/db.js",
+        "apps/server/dist/strategy/scheduler.js"
+      ],
+      "added": [
+        "apps/server/dist/context/position-entry.js",
+        "apps/server/dist/context/range-regime.js",
+        "apps/server/dist/strategy/range-entry.js"
+      ],
+      "frozenTreeByteIdentical": true
+    }
+  },
+  "deployment": {
+    "newCodeDeployed": false,
+    "frozenV3Build": "cc12379e164c46d708a93bf730899eca00cbdc8378051ff580b05f49f03fc210",
+    "frozenV3Run": "197a613c-3df9-4789-aa1c-424c3176bfc0",
+    "frozenV3HasNewEntryTable": false,
+    "noRestartsOrUpgrades": true
+  },
+  "originalAttributionSemantics": {
+    "atomicWithFillCashPosition": true,
+    "originalRawContextAndEvidenceHashes": true,
+    "sourceAssessmentSnapshotBeforeFinalDecisionUpdate": true,
+    "actualProtectionPricesCaptured": true,
+    "missingLegacyOrManualSourceRemainsUnknown": true,
+    "scopeMustMatchCurrentPolicy": true,
+    "scaleInsCompoundNoWholePositionPromotion": true,
+    "snapshotIsNotTradePermission": true,
+    "noDatabaseTamperAttestation": true
+  },
+  "oss": {
+    "manifest": "docs/upstream-research/freqtrade/manifest-entry-review.json",
+    "review": "docs/upstream-research/REVIEW-PASS9.md",
+    "selectedArchiveFiles": 43,
+    "licenceFiles": 5,
+    "reviewStillPartial": true,
+    "foreignCodeCopiedOrExecuted": false
+  },
+  "prospectiveObservation": "docs/mock-v3-first-buy-observation.json",
+  "profitabilityEstablished": false,
+  "externalAiCalls": 0,
+  "paidCalls": 0,
+  "privateExchangeCalls": 0,
+  "realOrders": 0,
+  "next": "Implement and causally test a separately versioned original-recorded-support exit hypothesis and simulated entry/lot attribution; do not infer an original exit rule that the old strategy did not explicitly specify."
+}

@@ -1,0 +1,1307 @@
+{
+  "version": "closed-regime-error-audit-v1",
+  "protocolHash": "f0cf85209de8f14c6f65f501e69deebb08174e4325fa80b0b4b84f5a1540b6ca",
+  "runnerHash": "be3f559ec28e00d34daa264bf43ebd4730a727b6c182cc7b97f3aacd873762e8",
+  "buildId": "cd8a81d810cdb22697b1761edf8dc639ad52d0819e9d98119ffd7d94ee8f017c",
+  "corpusHash": "3262b4fb3be9b47e7edf0954e93d52f85fda6dfedf7159178c440fa6300a7414",
+  "modelReportHash": "4898631417b16e07db860acf1342af2160ab138bd98ea0dfece8a341ba37facc",
+  "rows": 6560,
+  "summary": {
+    "rows": 6560,
+    "decisionClocks": 328,
+    "pairs": 20,
+    "outcomes": {
+      "stop": 2206,
+      "target": 509,
+      "timeout": 3844,
+      "ambiguous": 1
+    },
+    "medianFixedStopAtrMultiple": 5.838183056623606,
+    "medianAssumedCostOverAtr": 1.3458755628951853,
+    "models": {
+      "zero": {
+        "knownLabels": 6559,
+        "unknownLabels": 1,
+        "coverage": 1,
+        "mae": 0.015381640349557992,
+        "meanEffectiveForecast": 0,
+        "meanOutcome": -0.0048040262746490495,
+        "meanSignedError": 0.0048040262746490495,
+        "aboveFixedMarginRows": 0,
+        "aboveMarginMeanOutcome": null,
+        "aboveMarginNegativeOutcomes": 0
+      },
+      "mean": {
+        "knownLabels": 6559,
+        "unknownLabels": 1,
+        "coverage": 1,
+        "mae": 0.014350822607371434,
+        "meanEffectiveForecast": -0.005110575355630284,
+        "meanOutcome": -0.0048040262746490495,
+        "meanSignedError": -0.0003065490809816046,
+        "aboveFixedMarginRows": 0,
+        "aboveMarginMeanOutcome": null,
+        "aboveMarginNegativeOutcomes": 0
+      },
+      "ridge": {
+        "knownLabels": 6559,
+        "unknownLabels": 1,
+        "coverage": 0.9824695121951219,
+        "mae": 0.014676210501318008,
+        "meanEffectiveForecast": -0.005234937250710125,
+        "meanOutcome": -0.0048040262746490495,
+        "meanSignedError": -0.00043091097606111323,
+        "aboveFixedMarginRows": 174,
+        "aboveMarginMeanOutcome": -0.003137736838209964,
+        "aboveMarginNegativeOutcomes": 109
+      },
+      "selected": {
+        "knownLabels": 6559,
+        "unknownLabels": 1,
+        "coverage": 0.9954268292682927,
+        "mae": 0.014741606338894491,
+        "meanEffectiveForecast": -0.003909446493472317,
+        "meanOutcome": -0.0048040262746490495,
+        "meanSignedError": 0.0008945797811767083,
+        "aboveFixedMarginRows": 26,
+        "aboveMarginMeanOutcome": -0.004254239222065299,
+        "aboveMarginNegativeOutcomes": 18
+      }
+    },
+    "independentSamples": null
+  },
+  "groups": {
+    "direction": {
+      "bearish": {
+        "rows": 2023,
+        "decisionClocks": 258,
+        "pairs": 20,
+        "outcomes": {
+          "stop": 760,
+          "target": 140,
+          "timeout": 1122,
+          "ambiguous": 1
+        },
+        "medianFixedStopAtrMultiple": 5.622052332192433,
+        "medianAssumedCostOverAtr": 1.2960509757622534,
+        "models": {
+          "zero": {
+            "knownLabels": 2022,
+            "unknownLabels": 1,
+            "coverage": 1,
+            "mae": 0.015838158539778244,
+            "meanEffectiveForecast": 0,
+            "meanOutcome": -0.005153245322536215,
+            "meanSignedError": 0.005153245322536215,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "mean": {
+            "knownLabels": 2022,
+            "unknownLabels": 1,
+            "coverage": 1,
+            "mae": 0.014938173096046847,
+            "meanEffectiveForecast": -0.005105504290775812,
+            "meanOutcome": -0.005153245322536215,
+            "meanSignedError": 0.00004774103176046578,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "ridge": {
+            "knownLabels": 2022,
+            "unknownLabels": 1,
+            "coverage": 0.9762728620860108,
+            "mae": 0.015222435036997115,
+            "meanEffectiveForecast": -0.0052954719712074985,
+            "meanOutcome": -0.005153245322536215,
+            "meanSignedError": -0.00014222664867132094,
+            "aboveFixedMarginRows": 28,
+            "aboveMarginMeanOutcome": -0.01003557022376155,
+            "aboveMarginNegativeOutcomes": 22
+          },
+          "selected": {
+            "knownLabels": 2022,
+            "unknownLabels": 1,
+            "coverage": 0.9930795847750865,
+            "mae": 0.015536375289535942,
+            "meanEffectiveForecast": -0.004060387851193822,
+            "meanOutcome": -0.005153245322536215,
+            "meanSignedError": 0.0010928574713423515,
+            "aboveFixedMarginRows": 6,
+            "aboveMarginMeanOutcome": 0.00875279509831354,
+            "aboveMarginNegativeOutcomes": 3
+          }
+        },
+        "independentSamples": null
+      },
+      "bullish": {
+        "rows": 1480,
+        "decisionClocks": 235,
+        "pairs": 20,
+        "outcomes": {
+          "stop": 435,
+          "target": 140,
+          "timeout": 905,
+          "ambiguous": 0
+        },
+        "medianFixedStopAtrMultiple": 6.128324827371989,
+        "medianAssumedCostOverAtr": 1.4127619066836616,
+        "models": {
+          "zero": {
+            "knownLabels": 1480,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.015098043645769976,
+            "meanEffectiveForecast": 0,
+            "meanOutcome": -0.004134394958368039,
+            "meanSignedError": 0.004134394958368039,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "mean": {
+            "knownLabels": 1480,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.014014437303360012,
+            "meanEffectiveForecast": -0.005151940632454212,
+            "meanOutcome": -0.004134394958368039,
+            "meanSignedError": -0.0010175456740861588,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "ridge": {
+            "knownLabels": 1480,
+            "unknownLabels": 0,
+            "coverage": 0.9716216216216216,
+            "mae": 0.014136616571849921,
+            "meanEffectiveForecast": -0.005018387528383143,
+            "meanOutcome": -0.004134394958368039,
+            "meanSignedError": -0.0008839925700151036,
+            "aboveFixedMarginRows": 46,
+            "aboveMarginMeanOutcome": 0.00037964231894369884,
+            "aboveMarginNegativeOutcomes": 23
+          },
+          "selected": {
+            "knownLabels": 1480,
+            "unknownLabels": 0,
+            "coverage": 0.9939189189189189,
+            "mae": 0.01416212137933901,
+            "meanEffectiveForecast": -0.003617687748184265,
+            "meanOutcome": -0.004134394958368039,
+            "meanSignedError": 0.0005167072101837726,
+            "aboveFixedMarginRows": 7,
+            "aboveMarginMeanOutcome": 0.009708682926246302,
+            "aboveMarginNegativeOutcomes": 3
+          }
+        },
+        "independentSamples": null
+      },
+      "mixed": {
+        "rows": 3057,
+        "decisionClocks": 323,
+        "pairs": 20,
+        "outcomes": {
+          "stop": 1011,
+          "target": 229,
+          "timeout": 1817,
+          "ambiguous": 0
+        },
+        "medianFixedStopAtrMultiple": 5.839449820914419,
+        "medianAssumedCostOverAtr": 1.3461675898985215,
+        "models": {
+          "zero": {
+            "knownLabels": 3057,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.015216983280858836,
+            "meanEffectiveForecast": 0,
+            "meanOutcome": -0.004897233155011492,
+            "meanSignedError": 0.004897233155011492,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "mean": {
+            "knownLabels": 3057,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.014125185565119273,
+            "meanEffectiveForecast": -0.005093903155250401,
+            "meanOutcome": -0.004897233155011492,
+            "meanSignedError": -0.00019667000023891235,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "ridge": {
+            "knownLabels": 3057,
+            "unknownLabels": 0,
+            "coverage": 0.9918220477592411,
+            "mae": 0.014576155874058961,
+            "meanEffectiveForecast": -0.005299736852999391,
+            "meanOutcome": -0.004897233155011492,
+            "meanSignedError": -0.0004025036979879359,
+            "aboveFixedMarginRows": 100,
+            "aboveMarginMeanOutcome": -0.0028243379025462046,
+            "aboveMarginNegativeOutcomes": 64
+          },
+          "selected": {
+            "knownLabels": 3057,
+            "unknownLabels": 0,
+            "coverage": 0.9977101733725875,
+            "mae": 0.014496468923763967,
+            "meanEffectiveForecast": -0.003950859485854918,
+            "meanOutcome": -0.004897233155011492,
+            "meanSignedError": 0.0009463736691565757,
+            "aboveFixedMarginRows": 13,
+            "aboveMarginMeanOutcome": -0.017775982372869474,
+            "aboveMarginNegativeOutcomes": 12
+          }
+        },
+        "independentSamples": null
+      }
+    },
+    "volume": {
+      "at-least1.2": {
+        "rows": 1354,
+        "decisionClocks": 306,
+        "pairs": 20,
+        "outcomes": {
+          "stop": 475,
+          "target": 122,
+          "timeout": 756,
+          "ambiguous": 1
+        },
+        "medianFixedStopAtrMultiple": 6.087826866887289,
+        "medianAssumedCostOverAtr": 1.4034259172439998,
+        "models": {
+          "zero": {
+            "knownLabels": 1353,
+            "unknownLabels": 1,
+            "coverage": 1,
+            "mae": 0.016053239396334205,
+            "meanEffectiveForecast": 0,
+            "meanOutcome": -0.00452743483858063,
+            "meanSignedError": 0.00452743483858063,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "mean": {
+            "knownLabels": 1353,
+            "unknownLabels": 1,
+            "coverage": 1,
+            "mae": 0.015018085342044173,
+            "meanEffectiveForecast": -0.004935598135528149,
+            "meanOutcome": -0.00452743483858063,
+            "meanSignedError": -0.0004081632969474968,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "ridge": {
+            "knownLabels": 1353,
+            "unknownLabels": 1,
+            "coverage": 0.94903988183161,
+            "mae": 0.015118610532627934,
+            "meanEffectiveForecast": -0.004639303162538748,
+            "meanOutcome": -0.00452743483858063,
+            "meanSignedError": -0.00011186832395812781,
+            "aboveFixedMarginRows": 55,
+            "aboveMarginMeanOutcome": -0.0002861659144744748,
+            "aboveMarginNegativeOutcomes": 29
+          },
+          "selected": {
+            "knownLabels": 1353,
+            "unknownLabels": 1,
+            "coverage": 0.983751846381093,
+            "mae": 0.015414415367942661,
+            "meanEffectiveForecast": -0.0037112918405652,
+            "meanOutcome": -0.00452743483858063,
+            "meanSignedError": 0.0008161429980154277,
+            "aboveFixedMarginRows": 10,
+            "aboveMarginMeanOutcome": 0.0004336792168572856,
+            "aboveMarginNegativeOutcomes": 6
+          }
+        },
+        "independentSamples": null
+      },
+      "below1.2": {
+        "rows": 5206,
+        "decisionClocks": 328,
+        "pairs": 20,
+        "outcomes": {
+          "stop": 1731,
+          "target": 387,
+          "timeout": 3088,
+          "ambiguous": 0
+        },
+        "medianFixedStopAtrMultiple": 5.759263079467502,
+        "medianAssumedCostOverAtr": 1.3276821510668013,
+        "models": {
+          "zero": {
+            "knownLabels": 5206,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.015207096840091163,
+            "meanEffectiveForecast": 0,
+            "meanOutcome": -0.004875910295586545,
+            "meanSignedError": 0.004875910295586545,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "mean": {
+            "knownLabels": 5206,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.014177406072601477,
+            "meanEffectiveForecast": -0.005156050610874116,
+            "meanOutcome": -0.004875910295586545,
+            "meanSignedError": -0.00028014031528780927,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "ridge": {
+            "knownLabels": 5206,
+            "unknownLabels": 0,
+            "coverage": 0.9911640414905878,
+            "mae": 0.014561234081348308,
+            "meanEffectiveForecast": -0.005389738042353598,
+            "meanOutcome": -0.004875910295586545,
+            "meanSignedError": -0.0005138277467671022,
+            "aboveFixedMarginRows": 119,
+            "aboveMarginMeanOutcome": -0.004455689786154938,
+            "aboveMarginNegativeOutcomes": 80
+          },
+          "selected": {
+            "knownLabels": 5206,
+            "unknownLabels": 0,
+            "coverage": 0.9984633115635805,
+            "mae": 0.014566748364191877,
+            "meanEffectiveForecast": -0.0039609453880907345,
+            "meanOutcome": -0.004875910295586545,
+            "meanSignedError": 0.0009149649074958021,
+            "aboveFixedMarginRows": 16,
+            "aboveMarginMeanOutcome": -0.007184188246391915,
+            "aboveMarginNegativeOutcomes": 12
+          }
+        },
+        "independentSamples": null
+      }
+    },
+    "referenceSourceFloor": {
+      "binding": {
+        "rows": 6392,
+        "decisionClocks": 328,
+        "pairs": 20,
+        "outcomes": {
+          "stop": 2084,
+          "target": 480,
+          "timeout": 3828,
+          "ambiguous": 0
+        },
+        "medianFixedStopAtrMultiple": 5.937180494950504,
+        "medianAssumedCostOverAtr": 1.368697429174666,
+        "models": {
+          "zero": {
+            "knownLabels": 6392,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.015157033481901675,
+            "meanEffectiveForecast": 0,
+            "meanOutcome": -0.0046774676001709765,
+            "meanSignedError": 0.0046774676001709765,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "mean": {
+            "knownLabels": 6392,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.01417148782182478,
+            "meanEffectiveForecast": -0.005101973422944073,
+            "meanOutcome": -0.0046774676001709765,
+            "meanSignedError": -0.0004245058227734901,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "ridge": {
+            "knownLabels": 6392,
+            "unknownLabels": 0,
+            "coverage": 0.990613266583229,
+            "mae": 0.01444727716332543,
+            "meanEffectiveForecast": -0.005324057115678658,
+            "meanOutcome": -0.0046774676001709765,
+            "meanSignedError": -0.0006465895155077106,
+            "aboveFixedMarginRows": 147,
+            "aboveMarginMeanOutcome": -0.0023299374076139598,
+            "aboveMarginNegativeOutcomes": 89
+          },
+          "selected": {
+            "knownLabels": 6392,
+            "unknownLabels": 0,
+            "coverage": 0.9967146433041302,
+            "mae": 0.01456791420808278,
+            "meanEffectiveForecast": -0.003888665894013496,
+            "meanOutcome": -0.0046774676001709765,
+            "meanSignedError": 0.0007888017061574595,
+            "aboveFixedMarginRows": 24,
+            "aboveMarginMeanOutcome": -0.005205461657137843,
+            "aboveMarginNegativeOutcomes": 17
+          }
+        },
+        "independentSamples": null
+      },
+      "not-binding": {
+        "rows": 168,
+        "decisionClocks": 76,
+        "pairs": 19,
+        "outcomes": {
+          "stop": 122,
+          "target": 29,
+          "timeout": 16,
+          "ambiguous": 1
+        },
+        "medianFixedStopAtrMultiple": 1.6430844564217986,
+        "medianAssumedCostOverAtr": 0.3787800410201472,
+        "models": {
+          "zero": {
+            "knownLabels": 167,
+            "unknownLabels": 1,
+            "coverage": 1,
+            "mae": 0.023978569080456397,
+            "meanEffectiveForecast": 0,
+            "meanOutcome": -0.00964811637802524,
+            "meanSignedError": 0.00964811637802524,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "mean": {
+            "knownLabels": 167,
+            "unknownLabels": 1,
+            "coverage": 1,
+            "mae": 0.021214942063744056,
+            "meanEffectiveForecast": -0.005439818192337752,
+            "meanOutcome": -0.00964811637802524,
+            "meanSignedError": 0.004208298185687488,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "ridge": {
+            "knownLabels": 167,
+            "unknownLabels": 1,
+            "coverage": 0.6726190476190477,
+            "mae": 0.023438736827357903,
+            "meanEffectiveForecast": -0.001823834395148124,
+            "meanOutcome": -0.00964811637802524,
+            "meanSignedError": 0.007824281982877119,
+            "aboveFixedMarginRows": 27,
+            "aboveMarginMeanOutcome": -0.007535755960343764,
+            "aboveMarginNegativeOutcomes": 20
+          },
+          "selected": {
+            "knownLabels": 167,
+            "unknownLabels": 1,
+            "coverage": 0.9464285714285714,
+            "mae": 0.02138975065115938,
+            "meanEffectiveForecast": -0.004704833270363211,
+            "meanOutcome": -0.00964811637802524,
+            "meanSignedError": 0.004943283107662033,
+            "aboveFixedMarginRows": 2,
+            "aboveMarginMeanOutcome": 0.007160429998805229,
+            "aboveMarginNegativeOutcomes": 1
+          }
+        },
+        "independentSamples": null
+      }
+    },
+    "joint": {
+      "bearish|confirmed|reference-2ATR": {
+        "rows": 12,
+        "decisionClocks": 5,
+        "pairs": 8,
+        "outcomes": {
+          "stop": 8,
+          "target": 1,
+          "timeout": 2,
+          "ambiguous": 1
+        },
+        "medianFixedStopAtrMultiple": 1.782184251663637,
+        "medianAssumedCostOverAtr": 0.4108466983010143,
+        "models": {
+          "zero": {
+            "knownLabels": 11,
+            "unknownLabels": 1,
+            "coverage": 1,
+            "mae": 0.020237683634956885,
+            "meanEffectiveForecast": 0,
+            "meanOutcome": -0.012129348207952285,
+            "meanSignedError": 0.012129348207952285,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "mean": {
+            "knownLabels": 11,
+            "unknownLabels": 1,
+            "coverage": 1,
+            "mae": 0.018130282831768322,
+            "meanEffectiveForecast": -0.006047735858789789,
+            "meanOutcome": -0.012129348207952285,
+            "meanSignedError": 0.006081612349162497,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "ridge": {
+            "knownLabels": 11,
+            "unknownLabels": 1,
+            "coverage": 0.6666666666666666,
+            "mae": 0.023334334600916305,
+            "meanEffectiveForecast": -0.0015175466111040739,
+            "meanOutcome": -0.012129348207952285,
+            "meanSignedError": 0.010611801596848212,
+            "aboveFixedMarginRows": 3,
+            "aboveMarginMeanOutcome": -0.02225233439200003,
+            "aboveMarginNegativeOutcomes": 3
+          },
+          "selected": {
+            "knownLabels": 11,
+            "unknownLabels": 1,
+            "coverage": 1,
+            "mae": 0.018130282831768322,
+            "meanEffectiveForecast": -0.006047735858789789,
+            "meanOutcome": -0.012129348207952285,
+            "meanSignedError": 0.006081612349162497,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          }
+        },
+        "independentSamples": null
+      },
+      "bearish|confirmed|reference-floor": {
+        "rows": 421,
+        "decisionClocks": 145,
+        "pairs": 20,
+        "outcomes": {
+          "stop": 161,
+          "target": 35,
+          "timeout": 225,
+          "ambiguous": 0
+        },
+        "medianFixedStopAtrMultiple": 5.926807473823717,
+        "medianAssumedCostOverAtr": 1.3663061379951102,
+        "models": {
+          "zero": {
+            "knownLabels": 421,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.016507660944677448,
+            "meanEffectiveForecast": 0,
+            "meanOutcome": -0.004843339885478302,
+            "meanSignedError": 0.004843339885478302,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "mean": {
+            "knownLabels": 421,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.015539604151663208,
+            "meanEffectiveForecast": -0.004714628574791676,
+            "meanOutcome": -0.004843339885478302,
+            "meanSignedError": 0.0001287113106866016,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "ridge": {
+            "knownLabels": 421,
+            "unknownLabels": 0,
+            "coverage": 0.9311163895486936,
+            "mae": 0.015401012400004285,
+            "meanEffectiveForecast": -0.0046963966670622,
+            "meanOutcome": -0.004843339885478302,
+            "meanSignedError": 0.00014694321841609973,
+            "aboveFixedMarginRows": 12,
+            "aboveMarginMeanOutcome": 0.003428683838224154,
+            "aboveMarginNegativeOutcomes": 7
+          },
+          "selected": {
+            "knownLabels": 421,
+            "unknownLabels": 0,
+            "coverage": 0.9691211401425178,
+            "mae": 0.0161339389237266,
+            "meanEffectiveForecast": -0.0034223587400801013,
+            "meanOutcome": -0.004843339885478302,
+            "meanSignedError": 0.0014209811453981952,
+            "aboveFixedMarginRows": 6,
+            "aboveMarginMeanOutcome": 0.00875279509831354,
+            "aboveMarginNegativeOutcomes": 3
+          }
+        },
+        "independentSamples": null
+      },
+      "bearish|not-confirmed|reference-2ATR": {
+        "rows": 48,
+        "decisionClocks": 15,
+        "pairs": 15,
+        "outcomes": {
+          "stop": 40,
+          "target": 6,
+          "timeout": 2,
+          "ambiguous": 0
+        },
+        "medianFixedStopAtrMultiple": 1.7161287179172044,
+        "medianAssumedCostOverAtr": 0.39561892489941475,
+        "models": {
+          "zero": {
+            "knownLabels": 48,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.023796558134658904,
+            "meanEffectiveForecast": 0,
+            "meanOutcome": -0.013406139690096451,
+            "meanSignedError": 0.013406139690096451,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "mean": {
+            "knownLabels": 48,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.019871220777548573,
+            "meanEffectiveForecast": -0.00633640111561012,
+            "meanOutcome": -0.013406139690096451,
+            "meanSignedError": 0.007069738574486332,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "ridge": {
+            "knownLabels": 48,
+            "unknownLabels": 0,
+            "coverage": 0.7083333333333334,
+            "mae": 0.02403006507208782,
+            "meanEffectiveForecast": -0.0027943585196964394,
+            "meanOutcome": -0.013406139690096451,
+            "meanSignedError": 0.010611781170400016,
+            "aboveFixedMarginRows": 5,
+            "aboveMarginMeanOutcome": -0.0228066088148255,
+            "aboveMarginNegativeOutcomes": 5
+          },
+          "selected": {
+            "knownLabels": 48,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.0202065373359745,
+            "meanEffectiveForecast": -0.006671717674036047,
+            "meanOutcome": -0.013406139690096451,
+            "meanSignedError": 0.006734422016060403,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          }
+        },
+        "independentSamples": null
+      },
+      "bearish|not-confirmed|reference-floor": {
+        "rows": 1542,
+        "decisionClocks": 247,
+        "pairs": 20,
+        "outcomes": {
+          "stop": 551,
+          "target": 98,
+          "timeout": 893,
+          "ambiguous": 0
+        },
+        "medianFixedStopAtrMultiple": 5.654463570944703,
+        "medianAssumedCostOverAtr": 1.3035227343174003,
+        "models": {
+          "zero": {
+            "knownLabels": 1542,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.015376252917817298,
+            "meanEffectiveForecast": 0,
+            "meanOutcome": -0.004931192227606825,
+            "meanSignedError": 0.004931192227606825,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "mean": {
+            "knownLabels": 1542,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.01459764004142985,
+            "meanEffectiveForecast": -0.005167184629030685,
+            "meanOutcome": -0.004931192227606825,
+            "meanSignedError": -0.00023599240142383149,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "ridge": {
+            "knownLabels": 1542,
+            "unknownLabels": 0,
+            "coverage": 0.9993514915693904,
+            "mae": 0.014841645019673215,
+            "meanEffectiveForecast": -0.005563838590973281,
+            "meanOutcome": -0.004931192227606825,
+            "meanSignedError": -0.000632646363366483,
+            "aboveFixedMarginRows": 8,
+            "aboveMarginMeanOutcome": -0.01766876563423571,
+            "aboveMarginNegativeOutcomes": 7
+          },
+          "selected": {
+            "knownLabels": 1542,
+            "unknownLabels": 0,
+            "coverage": 0.9993514915693904,
+            "mae": 0.015209348667494557,
+            "meanEffectiveForecast": -0.004139120403851973,
+            "meanOutcome": -0.004931192227606825,
+            "meanSignedError": 0.000792071823754814,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          }
+        },
+        "independentSamples": null
+      },
+      "bullish|confirmed|reference-2ATR": {
+        "rows": 9,
+        "decisionClocks": 8,
+        "pairs": 5,
+        "outcomes": {
+          "stop": 6,
+          "target": 2,
+          "timeout": 1,
+          "ambiguous": 0
+        },
+        "medianFixedStopAtrMultiple": 1.6089462850548746,
+        "medianAssumedCostOverAtr": 0.3709101729192242,
+        "models": {
+          "zero": {
+            "knownLabels": 9,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.024978387117666336,
+            "meanEffectiveForecast": 0,
+            "meanOutcome": -0.004691392071667034,
+            "meanSignedError": 0.004691392071667034,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "mean": {
+            "knownLabels": 9,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.022009430654355414,
+            "meanEffectiveForecast": -0.005695604038262594,
+            "meanOutcome": -0.004691392071667034,
+            "meanSignedError": -0.0010042119665955593,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "ridge": {
+            "knownLabels": 9,
+            "unknownLabels": 0,
+            "coverage": 0.4444444444444444,
+            "mae": 0.023725923190544087,
+            "meanEffectiveForecast": 0.0025047399775254306,
+            "meanOutcome": -0.004691392071667034,
+            "meanSignedError": 0.007196132049192465,
+            "aboveFixedMarginRows": 2,
+            "aboveMarginMeanOutcome": -0.0020536227321121814,
+            "aboveMarginNegativeOutcomes": 1
+          },
+          "selected": {
+            "knownLabels": 9,
+            "unknownLabels": 0,
+            "coverage": 0.8888888888888888,
+            "mae": 0.023062804683793993,
+            "meanEffectiveForecast": -0.0046422300088240125,
+            "meanOutcome": -0.004691392071667034,
+            "meanSignedError": 0.00004916206284302243,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          }
+        },
+        "independentSamples": null
+      },
+      "bullish|confirmed|reference-floor": {
+        "rows": 358,
+        "decisionClocks": 137,
+        "pairs": 20,
+        "outcomes": {
+          "stop": 97,
+          "target": 23,
+          "timeout": 238,
+          "ambiguous": 0
+        },
+        "medianFixedStopAtrMultiple": 6.36817083368067,
+        "medianAssumedCostOverAtr": 1.4680535745909618,
+        "models": {
+          "zero": {
+            "knownLabels": 358,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.013411931520677552,
+            "meanEffectiveForecast": 0,
+            "meanOutcome": -0.0049206081172032635,
+            "meanSignedError": 0.0049206081172032635,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "mean": {
+            "knownLabels": 358,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.012288598783748977,
+            "meanEffectiveForecast": -0.005248368419637585,
+            "meanOutcome": -0.0049206081172032635,
+            "meanSignedError": -0.0003277603024343332,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "ridge": {
+            "knownLabels": 358,
+            "unknownLabels": 0,
+            "coverage": 0.952513966480447,
+            "mae": 0.012622840427504613,
+            "meanEffectiveForecast": -0.004857309487279937,
+            "meanOutcome": -0.0049206081172032635,
+            "meanSignedError": 0.00006329862992332446,
+            "aboveFixedMarginRows": 14,
+            "aboveMarginMeanOutcome": -0.006590751073571742,
+            "aboveMarginNegativeOutcomes": 8
+          },
+          "selected": {
+            "knownLabels": 358,
+            "unknownLabels": 0,
+            "coverage": 0.9860335195530726,
+            "mae": 0.01250429505059488,
+            "meanEffectiveForecast": -0.003914764175466973,
+            "meanOutcome": -0.0049206081172032635,
+            "meanSignedError": 0.0010058439417362872,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          }
+        },
+        "independentSamples": null
+      },
+      "bullish|not-confirmed|reference-2ATR": {
+        "rows": 29,
+        "decisionClocks": 28,
+        "pairs": 10,
+        "outcomes": {
+          "stop": 16,
+          "target": 12,
+          "timeout": 1,
+          "ambiguous": 0
+        },
+        "medianFixedStopAtrMultiple": 1.5253561220165697,
+        "medianAssumedCostOverAtr": 0.35164014376108704,
+        "models": {
+          "zero": {
+            "knownLabels": 29,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.02819887671958785,
+            "meanEffectiveForecast": 0,
+            "meanOutcome": 0.003644576700829206,
+            "meanSignedError": -0.003644576700829206,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "mean": {
+            "knownLabels": 29,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.028104698174001824,
+            "meanEffectiveForecast": -0.00509486479136383,
+            "meanOutcome": 0.003644576700829206,
+            "meanSignedError": -0.00873944149219304,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "ridge": {
+            "knownLabels": 29,
+            "unknownLabels": 0,
+            "coverage": 0.3793103448275862,
+            "mae": 0.028482445748736825,
+            "meanEffectiveForecast": -0.001387828906933831,
+            "meanOutcome": 0.003644576700829206,
+            "meanSignedError": -0.005032405607763039,
+            "aboveFixedMarginRows": 2,
+            "aboveMarginMeanOutcome": 0.007160429998805229,
+            "aboveMarginNegativeOutcomes": 1
+          },
+          "selected": {
+            "knownLabels": 29,
+            "unknownLabels": 0,
+            "coverage": 0.896551724137931,
+            "mae": 0.02731464609173167,
+            "meanEffectiveForecast": -0.0016721904702430592,
+            "meanOutcome": 0.003644576700829206,
+            "meanSignedError": -0.005316767171072264,
+            "aboveFixedMarginRows": 2,
+            "aboveMarginMeanOutcome": 0.007160429998805229,
+            "aboveMarginNegativeOutcomes": 1
+          }
+        },
+        "independentSamples": null
+      },
+      "bullish|not-confirmed|reference-floor": {
+        "rows": 1084,
+        "decisionClocks": 209,
+        "pairs": 20,
+        "outcomes": {
+          "stop": 316,
+          "target": 103,
+          "timeout": 665,
+          "ambiguous": 0
+        },
+        "medianFixedStopAtrMultiple": 6.179399484402093,
+        "medianAssumedCostOverAtr": 1.4245361405700216,
+        "models": {
+          "zero": {
+            "knownLabels": 1084,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.0152223802605257,
+            "meanEffectiveForecast": 0,
+            "meanOutcome": -0.004078226040687241,
+            "meanSignedError": 0.004078226040687241,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "mean": {
+            "knownLabels": 1084,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.014141077233815053,
+            "meanEffectiveForecast": -0.005117107681280476,
+            "meanOutcome": -0.004078226040687241,
+            "meanSignedError": -0.0010388816405932347,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "ridge": {
+            "knownLabels": 1084,
+            "unknownLabels": 0,
+            "coverage": 0.9981549815498155,
+            "mae": 0.014173147064449209,
+            "meanEffectiveForecast": -0.005231173770348224,
+            "meanOutcome": -0.004078226040687241,
+            "meanSignedError": -0.0011529477296609851,
+            "aboveFixedMarginRows": 28,
+            "aboveMarginMeanOutcome": 0.003554301684572444,
+            "aboveMarginNegativeOutcomes": 13
+          },
+          "selected": {
+            "knownLabels": 1084,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.014283867190492974,
+            "meanEffectiveForecast": -0.0035631168807925,
+            "meanOutcome": -0.004078226040687241,
+            "meanSignedError": 0.0005151091598947392,
+            "aboveFixedMarginRows": 5,
+            "aboveMarginMeanOutcome": 0.010727984097222731,
+            "aboveMarginNegativeOutcomes": 2
+          }
+        },
+        "independentSamples": null
+      },
+      "mixed|confirmed|reference-2ATR": {
+        "rows": 7,
+        "decisionClocks": 6,
+        "pairs": 5,
+        "outcomes": {
+          "stop": 4,
+          "target": 1,
+          "timeout": 2,
+          "ambiguous": 0
+        },
+        "medianFixedStopAtrMultiple": 1.647012353592907,
+        "medianAssumedCostOverAtr": 0.3796855386321418,
+        "models": {
+          "zero": {
+            "knownLabels": 7,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.022329666048793433,
+            "meanEffectiveForecast": 0,
+            "meanOutcome": -0.006778146696337599,
+            "meanSignedError": 0.006778146696337599,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "mean": {
+            "knownLabels": 7,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.019507187103509932,
+            "meanEffectiveForecast": -0.0044190533868081975,
+            "meanOutcome": -0.006778146696337599,
+            "meanSignedError": 0.0023590933095294017,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "ridge": {
+            "knownLabels": 7,
+            "unknownLabels": 0,
+            "coverage": 0.5714285714285714,
+            "mae": 0.0178691174481734,
+            "meanEffectiveForecast": -0.002679978659291229,
+            "meanOutcome": -0.006778146696337599,
+            "meanSignedError": 0.0040981680370463704,
+            "aboveFixedMarginRows": 2,
+            "aboveMarginMeanOutcome": -0.00219760552400744,
+            "aboveMarginNegativeOutcomes": 1
+          },
+          "selected": {
+            "knownLabels": 7,
+            "unknownLabels": 0,
+            "coverage": 0.8571428571428571,
+            "mae": 0.020513849183231653,
+            "meanEffectiveForecast": -0.002902281052523469,
+            "meanOutcome": -0.006778146696337599,
+            "meanSignedError": 0.003875865643814131,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          }
+        },
+        "independentSamples": null
+      },
+      "mixed|confirmed|reference-floor": {
+        "rows": 547,
+        "decisionClocks": 235,
+        "pairs": 20,
+        "outcomes": {
+          "stop": 199,
+          "target": 60,
+          "timeout": 288,
+          "ambiguous": 0
+        },
+        "medianFixedStopAtrMultiple": 6.1354385990083555,
+        "medianAssumedCostOverAtr": 1.4144018435120456,
+        "models": {
+          "zero": {
+            "knownLabels": 547,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.01712085648033505,
+            "meanEffectiveForecast": 0,
+            "meanOutcome": -0.003842601742317375,
+            "meanSignedError": 0.003842601742317375,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "mean": {
+            "knownLabels": 547,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.016168024604369814,
+            "meanEffectiveForecast": -0.004872707218744528,
+            "meanOutcome": -0.003842601742317375,
+            "meanSignedError": -0.001030105476427175,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "ridge": {
+            "knownLabels": 547,
+            "unknownLabels": 0,
+            "coverage": 0.979890310786106,
+            "mae": 0.016192654745402123,
+            "meanEffectiveForecast": -0.0046580752871957344,
+            "meanOutcome": -0.003842601742317375,
+            "meanSignedError": -0.0008154735448783592,
+            "aboveFixedMarginRows": 22,
+            "aboveMarginMeanOutcome": 0.005029392880157171,
+            "aboveMarginNegativeOutcomes": 9
+          },
+          "selected": {
+            "knownLabels": 547,
+            "unknownLabels": 0,
+            "coverage": 0.9963436928702011,
+            "mae": 0.016519529762775757,
+            "meanEffectiveForecast": -0.003748552329067707,
+            "meanOutcome": -0.003842601742317375,
+            "meanSignedError": 0.00009404941324965243,
+            "aboveFixedMarginRows": 4,
+            "aboveMarginMeanOutcome": -0.012044994605327097,
+            "aboveMarginNegativeOutcomes": 3
+          }
+        },
+        "independentSamples": null
+      },
+      "mixed|not-confirmed|reference-2ATR": {
+        "rows": 63,
+        "decisionClocks": 31,
+        "pairs": 17,
+        "outcomes": {
+          "stop": 48,
+          "target": 7,
+          "timeout": 8,
+          "ambiguous": 0
+        },
+        "medianFixedStopAtrMultiple": 1.6277512850056417,
+        "medianAssumedCostOverAtr": 0.37524528705465177,
+        "models": {
+          "zero": {
+            "knownLabels": 63,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.022868113566975556,
+            "meanEffectiveForecast": 0,
+            "meanOutcome": -0.013497477278139538,
+            "meanSignedError": 0.013497477278139538,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "mean": {
+            "knownLabels": 63,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.019682098151010366,
+            "meanEffectiveForecast": -0.0048862285892517406,
+            "meanOutcome": -0.013497477278139538,
+            "meanSignedError": 0.008611248688887798,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "ridge": {
+            "knownLabels": 63,
+            "unknownLabels": 0,
+            "coverage": 0.8253968253968254,
+            "mae": 0.021262542675126908,
+            "meanEffectiveForecast": -0.0018618078286313016,
+            "meanOutcome": -0.013497477278139538,
+            "meanSignedError": 0.011635669449508232,
+            "aboveFixedMarginRows": 13,
+            "aboveMarginMeanOutcome": -0.002191828243425018,
+            "aboveMarginNegativeOutcomes": 9
+          },
+          "selected": {
+            "knownLabels": 63,
+            "unknownLabels": 0,
+            "coverage": 0.9365079365079365,
+            "mae": 0.019991341783657197,
+            "meanEffectiveForecast": -0.004576984956604906,
+            "meanOutcome": -0.013497477278139538,
+            "meanSignedError": 0.008920492321534631,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          }
+        },
+        "independentSamples": null
+      },
+      "mixed|not-confirmed|reference-floor": {
+        "rows": 2440,
+        "decisionClocks": 318,
+        "pairs": 20,
+        "outcomes": {
+          "stop": 760,
+          "target": 161,
+          "timeout": 1519,
+          "ambiguous": 0
+        },
+        "medianFixedStopAtrMultiple": 5.891135316873104,
+        "medianAssumedCostOverAtr": 1.3580826404017752,
+        "models": {
+          "zero": {
+            "knownLabels": 2440,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.014572217449910305,
+            "meanEffectiveForecast": 0,
+            "meanOutcome": -0.004906209223944813,
+            "meanSignedError": 0.004906209223944813,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "mean": {
+            "knownLabels": 2440,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.013508303410139757,
+            "meanEffectiveForecast": -0.005150789066441317,
+            "meanOutcome": -0.004906209223944813,
+            "meanSignedError": -0.0002445798424964476,
+            "aboveFixedMarginRows": 0,
+            "aboveMarginMeanOutcome": null,
+            "aboveMarginNegativeOutcomes": 0
+          },
+          "ridge": {
+            "knownLabels": 2440,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.014031681291226722,
+            "meanEffectiveForecast": -0.005539866653157503,
+            "meanOutcome": -0.004906209223944813,
+            "meanSignedError": -0.0006336574292127065,
+            "aboveFixedMarginRows": 63,
+            "aboveMarginMeanOutcome": -0.005717324688976795,
+            "aboveMarginNegativeOutcomes": 45
+          },
+          "selected": {
+            "knownLabels": 2440,
+            "unknownLabels": 0,
+            "coverage": 1,
+            "mae": 0.01388379968977666,
+            "meanEffectiveForecast": -0.003983054633042894,
+            "meanOutcome": -0.004906209223944813,
+            "meanSignedError": 0.0009231545909019314,
+            "aboveFixedMarginRows": 9,
+            "aboveMarginMeanOutcome": -0.020323088047332752,
+            "aboveMarginNegativeOutcomes": 9
+          }
+        },
+        "independentSamples": null
+      }
+    }
+  },
+  "newModelFitted": false,
+  "newRuleSelected": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "scope": "Post-outcome descriptive error audit on known retrospective predictions. All axes fixed from existing source predicates, not learned regimes. Multiple dependent groups, no significance or causal claim, no selecting best group or activation. Above-margin rows are not accepted broker trades. Ambiguous labels counted, never imputed as zero. Fixed2percent model stop is distinct from reference2ATR/floor source geometry.",
+  "factsHash": "492008f3707d9ae11c7dc9069ecb00c248efd78f55452449c0713f47f3084917",
+  "generatedAt": "2026-11-02T15:23:40.281Z"
+}

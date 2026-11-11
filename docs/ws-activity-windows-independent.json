@@ -1,0 +1,14 @@
+{
+  "version": "ws-activity-windows-independent-v1",
+  "fixtureOnly": true,
+  "reportHash": "02dbfa64fda04d72ec97683c6dd658146580c9d3b8e2140103d173e385eafb01",
+  "reportFileSha256": "9e0e09f4a3cd06c90c4811c8c2ebbcd01a9e5eb72c5df938379f431945d3af28",
+  "verifierHash": "376cb300e9e2223e4df3d94af3f96fec9d9ca17cc90b7519917c65271de04c54",
+  "persistentSourceRowsVerified": 193,
+  "captureSessionRowsVerified": 4,
+  "decisionQueriesVerified": 10,
+  "completeWindowsVerified": 5,
+  "actualLiveMessagesCaptured": 0,
+  "scope": "All source messages and runtime identities here are mocked; internal public-session eligibility markers exercise policy logic only, not empirical first receipt or transport authentication.",
+  "profitabilityEstablished": false
+}

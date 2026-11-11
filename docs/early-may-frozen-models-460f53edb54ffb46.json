@@ -1,0 +1,108 @@
+{
+  "version": "early-may-frozen-models-v1",
+  "createdAt": "2026-11-03T20:41:05.647Z",
+  "registration": {
+    "path": "docs/early-may-fit-registration-467888dabe7d69d6.json",
+    "hash": "467888dabe7d69d63da7f400a5d82e64bbe1f48f1f926bf3f4290e95322b05d3"
+  },
+  "protocol": {
+    "path": "docs/early-may-learning-protocol-3b082fa23406b6e1.json",
+    "hash": "3b082fa23406b6e108be5cb30b511f2d38f2420c428e891b76e3c23fa7d130b7"
+  },
+  "trainingCorpus": {
+    "path": "docs/training-through-april-671bd04d6f9f77d2.json",
+    "hash": "671bd04d6f9f77d257527d70448a1ca12577746cf37440fed97f83c589aa49b4"
+  },
+  "build": {
+    "verified": true,
+    "buildId": "0fd91e5ce649ac184dbf727ba44ce41806ce7598c76b00bb8f04a43876fe561e",
+    "builtAt": "2026-11-03T19:45:55.434Z",
+    "sourceFiles": 157,
+    "runtimeFiles": 147,
+    "reasons": []
+  },
+  "models": {
+    "zero": {
+      "kind": "abstain",
+      "value": 0
+    },
+    "trainingMean": {
+      "version": "early-may-training-mean-v1",
+      "trainedAt": 1777593600000,
+      "lastLabelEnd": 1777580100000,
+      "targetHash": "d81e5385db6002a16bba334d0520422ba8908b9ddb9d37b8b3df71cc462384fe",
+      "knownLabels": 8479,
+      "value": -0.004912131126673943,
+      "hash": "79c993f08957324ce85ccbd66bc7c01e74de75963d4ed4d25a5cce79faef2a48"
+    },
+    "ridge": {
+      "version": "barrier-net-ridge-v1",
+      "featureSchema": "closed-bounded750-vector8-v1",
+      "target": {
+        "dataScope": "0507fd6ae56a401da29022f1debc4a0e184b6a6d4c8c06d9529e2b0d53d5f686",
+        "horizonBars": 32,
+        "stopLossPct": 0.02,
+        "takeProfitPct": 0.04,
+        "costs": {
+          "feeRate": 0.001,
+          "spreadBps": 10,
+          "slippageBps": 8
+        }
+      },
+      "knownLabels": 8479,
+      "ambiguousLabels": 1,
+      "ridge": {
+        "version": "local-ridge-v1",
+        "trainedAt": 1777593600000,
+        "lastLabelEnd": 1777580100000,
+        "rows": 8479,
+        "lambda": 10,
+        "means": [
+          0.4935850217178862,
+          -0.0586545803027379,
+          -0.3862651057576264,
+          -0.044150748866786306,
+          -0.047961028419287385,
+          -0.2890266952686117,
+          0.39008985570216337,
+          1.4239980747075105
+        ],
+        "stds": [
+          0.11911277892194204,
+          0.7635388401060366,
+          2.7489376929992897,
+          0.7188725996130905,
+          1.5383476655062898,
+          4.076844519927052,
+          0.4194446150897832,
+          14.372865187462113
+        ],
+        "weights": [
+          -0.00041850210045806094,
+          0.0018717224696279228,
+          -0.001629685826711232,
+          0.0004597466158447881,
+          0.0009693170600729794,
+          -0.00017724648607213563,
+          -0.00009548869746247905,
+          -0.000019008508920061107
+        ],
+        "intercept": -0.004912131126673943
+      },
+      "hash": "cedb88b009aa5405489eb65652fa41402b7f1b0d7daea4f727e672d15ff4569c"
+    }
+  },
+  "knownLabels": 8479,
+  "ambiguousLabels": 1,
+  "sharedTrainingClocks": 424,
+  "modelFitted": true,
+  "mayFeaturesOrLabelsRead": false,
+  "juneLoaded": false,
+  "julyLoaded": false,
+  "activeModelChanged": false,
+  "externalAiCalls": 0,
+  "networkCalls": 0,
+  "profitabilityEstablished": false,
+  "scope": "Frozen local8D numerical ridge/constant baselines fitted only on strictly pre-May mature training labels under preregistered fixed geometry/lambda. Training is not validation or profit evidence; no active provider registration.",
+  "factsHash": "460f53edb54ffb46c29832db61b606e80233cc2b7b96ca17e93c399ed45d17e6"
+}

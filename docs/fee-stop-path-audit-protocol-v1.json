@@ -1,0 +1,13 @@
+{
+  "registeredAt": "2026-11-02T17:53:56.992Z",
+  "version": "fee-inclusive-stop-path-audit-v1",
+  "runnerHash": "aca9dece8b20c135f53f7230aa193c59d110b42925ff82b68285d209ee08b4bb",
+  "report": "docs/tree-fee-stress-44fc4391adc37a68.json",
+  "reportHash": "44fc4391adc37a684ff3c93605d570ddaa9cae7630623d715a0199ad5c0c75f4",
+  "corpus": "docs/barrier-clock-corpus-3262b4fb3be9b47e.json",
+  "purpose": "Post-outcome audit of all24known pairs, independent first-trigger derivation and raw stop-band witnesses for fee-induced clock/reason differences; no strategy/price changes",
+  "rules": "Same original gap-open priority, first8hdecision timeout, conservative intrabar stop-first and targets",
+  "thresholdSearch": false,
+  "newStrategyChosen": false,
+  "julyLoaded": false
+}

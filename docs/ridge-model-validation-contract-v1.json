@@ -1,0 +1,10 @@
+{
+  "registeredAt": "2026-11-01T12:21:24.944540+00:00",
+  "observation": "docs/malformed-ridge-observation.json",
+  "oldSource": "data\\ridge-model-reference-v1\\local-learning.ts",
+  "oldSourceHash": "ee115a1dea6c74fc3cbef193552f4b4226dbe40d519623a643fd983f77ac48b4",
+  "newSourceHash": "5a127d54bdf3faa0f8628bb6baecebc6947af1709c0353693c51e54793fef690",
+  "scope": "Fail-closed structural model and dense input validation only. No new fit/model/feature/target/math/active provider or fee change. Valid forecast arithmetic unchanged. Not cryptographic model authentication.",
+  "hourlyStudyCompletedBeforeSourceChange": true,
+  "hourlyStudy": "docs/hourly-entry-study-fd783d6c607d1d30.json"
+}

@@ -1,0 +1,18 @@
+{
+  "verifiedAt": "2026-11-01T13:03:31.912Z",
+  "verifierHash": "cdec964b8025694687337d77265a9b811dafc595941743360a1a9cb05a180009",
+  "corpus": "docs/fixed-target-observations-ba81ecdea43bae6d.json",
+  "factsHash": "ba81ecdea43bae6db3a5d31a941b8782e5fdacb9c1ec85f9d5db75d0befd03ee",
+  "allTargetsAndFeaturesVerified": 7280,
+  "referenceFeatureHash": "77bb2ad6811c329c19fd12b6fe2cf9e99ba5336b99c6a58b4905b86a62b1bb46",
+  "independentUtcHourAggregation": true,
+  "exactCompleteTargetPaths": true,
+  "declaredSourceScopeAndContractVerified": true,
+  "commonMainRuntimeModulesUnchanged": 113,
+  "workingBuild": "c01e02b963fef7ca3d4fd0c11f6d10ffe2dd140580b12ce454c51445d462de11",
+  "mainLoadedBuild": "c2f35b6dabc00fa3ceb306cf9daad4b7b6b3dd124e627819d5f15e3b905aadff",
+  "modelFitted": false,
+  "independentSamples": null,
+  "julyLoaded": false,
+  "profitabilityEstablished": false
+}

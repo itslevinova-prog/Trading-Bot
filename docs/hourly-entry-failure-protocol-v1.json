@@ -1,0 +1,25 @@
+{
+  "version": "hourly-entry-failure-protocol-v1",
+  "registeredAt": "2026-11-01T12:28:23.125865+00:00",
+  "runnerHash": "6711593e7652bc29676ff6cebbd8cfcc07e01def627eae0236e5948cde689ff1",
+  "diagnosticModuleHash": "d40de0f0517a66040106792f5301328fb490a425e1db4c8050a28f126a29e32b",
+  "sourceReport": "docs/hourly-entry-study-fd783d6c607d1d30.json",
+  "sourceReportHash": "fd783d6c607d1d30daf3d2364b94554fbff298227ba92d5877f7a0ec353a26f0",
+  "periods": [
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04"
+  ],
+  "feeRates": [
+    0.001,
+    0.002
+  ],
+  "postOutcomeOnly": true,
+  "exitThresholdSearch": false,
+  "modelTraining": false,
+  "julyLoaded": false
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "path": "jesse/research/monte_carlo/monte_carlo_trades.py",
+    "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/research/monte_carlo/monte_carlo_trades.py",
+    "sha256": "e5b91c03bbe4a161eec188bd378a474ea0b724ca3578e83f19208cddefa6a7a1",
+    "bytes": 23741
+  },
+  {
+    "path": "jesse/research/monte_carlo/monte_carlo_candles.py",
+    "url": "https://raw.githubusercontent.com/jesse-ai/jesse/aded4b9d51d432d411a8f7fbf45e47572dff6629/jesse/research/monte_carlo/monte_carlo_candles.py",
+    "sha256": "7eb2fe91410db430bcf66f30613c28f5a2798125c1715de15907ab3659c05949",
+    "bytes": 20255
+  }
+]

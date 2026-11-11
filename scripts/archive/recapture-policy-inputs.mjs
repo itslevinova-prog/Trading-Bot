@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync,existsSync} from 'node:fs';import{join}from'node:path';import{pathToFileURL}from'node:url';
+import {inspectBuild,digest} from '../apps/server/dist/provenance/build.js';
+import {defaultDataset,datasetReplay,canonicalJson} from '../apps/server/dist/research/dataset.js';
+import {replayRulesPortfolio} from '../apps/server/dist/research/portfolio.js';import {mockReplayStudy} from '../apps/server/dist/research/mock-replay-context.js';
+import {MockAiProvider} from '../apps/server/dist/strategy/providers.js';
+import {capturePolicyEntry,joinPolicyInputs,eligiblePolicyInputs,POLICY_INPUT_FIELDS} from '../apps/server/dist/research/policy-inputs.js';
+import {policyScopeId} from '../apps/server/dist/research/policy-labels.js';import{inspectMockExperiment}from'./mock-experiment-files.mjs';
+const root=process.cwd(),read=p=>JSON.parse(readFileSync(p,'utf8')),build=inspectBuild(root);assert.equal(build.verified,true);
+const pointer=read('docs/mock-structure-study-latest.json'),report=read(pointer.path),{reportHash,generatedAt,...reportBody}=report;assert.equal(digest(canonicalJson(reportBody)),reportHash);
+const contractFile='docs/policy-entry-input-contract-v1.json',contract=read(contractFile),contractHash=digest(readFileSync(contractFile));assert.equal(contract.sourceReportHash,reportHash);
+const labelsPointer=read('docs/policy-labels-latest.json'),labels=read(labelsPointer.path);assert.equal(labels.sourceReportHash,reportHash);const labelFacts=labels.groups.map(g=>({...g,labels:g.labels.map(({materializedAt,...rest})=>rest)}));assert.equal(digest(canonicalJson(labelFacts)),labels.factsHash);assert.equal(labelsPointer.factsHash,labels.factsHash);
+const archive=read(join(root,'data/build-archives',report.buildId,'manifest.json')),closure=['apps/server/dist/research/portfolio.js','apps/server/dist/research/mock-replay-context.js','apps/server/dist/research/dataset.js','apps/server/dist/market/indicators.js','apps/server/dist/context/market-context.js','apps/server/dist/context/window-metrics.js','apps/server/dist/context/market-structure.js','apps/server/dist/context/long-horizons.js','apps/server/dist/broker/risk.js','apps/server/dist/broker/executionGuards.js','apps/server/dist/strategy/trading-policy.js','apps/server/dist/strategy/paper-payoff.js','packages/shared/dist/index.js'];
+const dependencyProof=closure.map(path=>{const f=archive.runtimeFiles.find(f=>f.path===path);assert.ok(f,'Missing archived dependency '+path);assert.equal(digest(readFileSync(path)),f.sha256,'Replay dependency changed '+path);return {path,sha256:f.sha256};});
+assert.equal(digest(readFileSync('apps/server/dist/strategy/paper-intelligence.js')),report.candidate.decisionModuleHash);
+const frozen=inspectMockExperiment(root,'v2');assert.equal(frozen.record.buildId,report.baseline.buildId);const providerPath=join(frozen.root,'apps/server/dist/strategy/providers.js');assert.equal(digest(readFileSync(providerPath)),report.baseline.providerHash);const baseline=await import(pathToFileURL(providerPath).href);
+const dataset=defaultDataset(root,'binance','EUR');assert.equal(dataset.datasetId,report.datasetId);const markets=datasetReplay(dataset),protocol=read('docs/mock-structure-study-protocol-v1.json');assert.equal(digest(readFileSync('docs/mock-structure-study-protocol-v1.json')),report.protocolHash);
+const groups=[];for(const scenario of report.scenarios)for(const variant of scenario.variants){
+ const g=labels.groups.find(g=>g.scenario===scenario.scenario.name&&g.variant===variant.name);assert.ok(g);assert.equal(policyScopeId(g.scope),g.scopeId);
+ const delegate=variant.name==='mock-v1'?new baseline.MockAiProvider():new MockAiProvider(),captures=[];
+ const provider={decide:async c=>{const answer=await delegate.decide(c);for(const a of answer.actions)if(a.type==='buy')captures.push(capturePolicyEntry(c,a.pair,g.scopeId));return answer;}};
+ const result=await replayRulesPortfolio(markets,scenario.options,provider,mockReplayStudy(scenario.options,{venue:'binance',quoteCurrency:'EUR',visibleDepthQuote:protocol.visibleDepthQuotePerSide,stopLossPct:protocol.stopLossPct}));
+ const resultHash=digest(canonicalJson(result));assert.equal(resultHash,digest(canonicalJson(variant.result)),'Recapture changed complete historical result');
+ const rows=joinPolicyInputs(g.labels,captures,g.scopeId),cutoffs=g.maturity.map(m=>({asOf:m.asOf,eligible:eligiblePolicyInputs(rows,{mode:'historical-simulation',scopeId:g.scopeId,asOf:m.asOf}).length}));assert.deepEqual(cutoffs,g.maturity);
+ groups.push({scenario:scenario.scenario.name,variant:variant.name,scope:g.scope,scopeId:g.scopeId,rows,resultHash,matchedOriginalResult:true,proposalCaptureCount:captures.length,joinedExecutedEntries:rows.length,maturity:cutoffs});
+ console.log(JSON.stringify({scenario:scenario.scenario.name,variant:variant.name,joined:rows.length,proposals:captures.length,resultHash,originalResultIdentical:true}));
+}
+const moduleHash=digest(readFileSync('apps/server/dist/research/policy-inputs.js')),factsHash=digest(canonicalJson(groups)),key=digest(canonicalJson({reportHash,labelFactsHash:labels.factsHash,contractHash,moduleHash,factsHash})),path='docs/policy-inputs-'+key.slice(0,16)+'.json';
+const artifact={version:'policy-entry-input-dataset-v1',materializedAt:new Date().toISOString(),builderBuildId:build.buildId,sourceReportHash:reportHash,sourceLabelFactsHash:labels.factsHash,contractHash,moduleHash,featureFields:POLICY_INPUT_FIELDS,dependencyProof,factsHash,groups,historicalSimulationOnly:true,originalLiveInputsObserved:false,modelTrained:false,independentSamples:null};
+if(existsSync(path)){const old=read(path);assert.equal(digest(canonicalJson(old.groups)),old.factsHash);assert.equal(old.factsHash,factsHash);}else writeFileSync(path,JSON.stringify(artifact,null,2),{flag:'wx'});
+writeFileSync('docs/policy-inputs-latest.json',JSON.stringify({path,key,factsHash,moduleHash,sourceReportHash:reportHash,sourceLabelFactsHash:labels.factsHash,verifiedAt:new Date().toISOString(),modelTrained:false},null,2));console.log(JSON.stringify({path,factsHash,groups:groups.map(g=>({scenario:g.scenario,variant:g.variant,entries:g.joinedExecutedEntries,maturity:g.maturity})),modelTrained:false,independentSamples:null}));

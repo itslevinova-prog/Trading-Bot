@@ -1,0 +1,27 @@
+{
+  "registeredAt": "2026-11-01T10:21:55.050471+00:00",
+  "previousSources": [
+    {
+      "source": "packages/shared/src/index.ts",
+      "snapshot": "data\\hourly-trend-reference-v1\\packages__shared__src__index.ts",
+      "sha256": "4524754e29197d1cb6f20c5e51f0cde95c7067d4d253adeb3ca69275c3d58b59"
+    },
+    {
+      "source": "apps/server/src/market/indicators.ts",
+      "snapshot": "data\\hourly-trend-reference-v1\\apps__server__src__market__indicators.ts",
+      "sha256": "a548dfdd16c511b4adf468042c65ff79ab786327619aded0509bc79ffe59e421"
+    },
+    {
+      "source": "apps/server/src/context/market-context.ts",
+      "snapshot": "data\\hourly-trend-reference-v1\\apps__server__src__context__market-context.ts",
+      "sha256": "11df6c6781dd62592d7c00734cb721e5e0f904840fd411a97157fc7fef2263ff"
+    },
+    {
+      "source": "apps/server/src/research/mock-replay-context.ts",
+      "snapshot": "data\\hourly-trend-reference-v1\\apps__server__src__research__mock-replay-context.ts",
+      "sha256": "a089d2b2a3c263f4f83fb5cefa8655e1636f3bd760961c0630931bbd3255b36e"
+    }
+  ],
+  "purpose": "Shared closedH1EMA50 direction evidence only; no entry-rule activation or profitability/model claim. Explicit source endpoint/previous EMA avoids reseeding750hour EMA from72hour replay tail.",
+  "julyOutcomesLocked": true
+}

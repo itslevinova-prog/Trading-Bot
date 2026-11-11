@@ -1,0 +1,10 @@
+{
+  "version": "aligned-covariance-paper-v1",
+  "historyAlreadyInspected": true,
+  "registeredBeforeEvaluation": true,
+  "baseline": "unchanged mock-v2; original report7e873da8",
+  "window": "193contiguous closed m15 candles ->192synchronous log returns in last48h, sample covariance denominator191; no pairwise deletion/older replacement",
+  "sizing": "Candidate marked bid exposure B from modeled fee/slippage-inclusive qty. Held marked bid exposures H. A=B^2*Cii; cross=B*sum(Hj*Cij); z=max(0,cross/A); factor=1/(hypot(1,z)+z). Therefore new modeled variance <=existing held variance +original standalone candidate variance. Negative covariance never increases cash budget. Empty/unknown/zero-variance required inputs=>NO TRADE.",
+  "scope": "Historical sampled log-linear currency-PnL variance approximation only, not calibrated forecast/VaR/tail/stop-loss bound. Existing broker hardlimits independent.",
+  "evaluation": "same frozen dataset/Safe/capital1000/spread-slip5bps/fees.001and.002. Whole baseline exact original result. No parameter sweep/holdout claim/no automatic promotion."
+}

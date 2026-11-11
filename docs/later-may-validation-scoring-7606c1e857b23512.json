@@ -1,0 +1,29 @@
+{
+  "version": "later-may-validation-scoring-v1",
+  "registeredAt": "2026-11-03T20:57:02.311Z",
+  "runnerHash": "8de7dc6a308b7fb0e4b112eddb8e9127f715460c2fa46a2b0aa9b648464e0cc4",
+  "protocol": {
+    "path": "docs/later-may-calendar-protocol-5d866bb485aba283.json",
+    "hash": "5d866bb485aba28375c0c5426c82806c398cd0eff6372a88d6703d872b06d6bd"
+  },
+  "frozenModels": {
+    "path": "docs/later-may-frozen-models-5d81da40dcc2f7d6.json",
+    "hash": "5d81da40dcc2f7d662013b0988a164325b81c48478ea5c1d44a34ce870d324ad"
+  },
+  "frozenModelFileSha256": "62682c694c83bb2bc72ef14f6ad8d73f3e33bbee0abbe731a12b82d171823d8e",
+  "maySourceProof": {
+    "path": "docs/may-evidence-source-proof-38927056120e7ed3.json",
+    "sha256": "3a3e5ec3d9da0c82e022a19d217576e257c91c9b53ce25e5dbe219cbccf219b7"
+  },
+  "sourcePolicy": "Strict original May+April raw archive reconstruction; exact overlapping warmup equality; featureinputsclosedasof, bounded75015m/hourly; no laterMayoutcomes",
+  "predictionPolicy": "All400pairslots/20sharedclocks preserved. Nullforecastsremainnull. Zero is abstainbaseline,meanrequiresdate+source, ridgerequiresdate+source+z6. No refit.",
+  "lossPolicy": "For knownlabels only, absolute/squared loss of prediction; nullforecasts incur explicit zero-abstention loss without becoming numericzero predictions. Source/predictioncoverage denominator all400slots; ambiguouslabels excludedfromerror butcounted.",
+  "selectionPolicy": "ExistingMAE stablezero/mean/ridge/clockmean/clockridge, min40knownlabels, minimum95pctcoverage, improvementmorethan1e-12. No threshold/windowsearch.",
+  "rankingMargin": 0.005,
+  "rankingScope": "Score-only opportunity diagnostics, not portfolio/trades/profit or permission",
+  "laterMayLabelsReadBeforeRegistration": false,
+  "modelRefitAllowed": false,
+  "juneLoaded": false,
+  "julyLoaded": false,
+  "hash": "7606c1e857b23512fc813c4ddfa967dd0ee7d458ea116021973bc054c6336a52"
+}

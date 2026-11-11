@@ -1,0 +1,53 @@
+{
+  "verifiedAt": "2026-10-31T22:49:41.471Z",
+  "protocolHash": "f983c759ff02eb84d312d87051b56d978959973e7a25d7708d67446c802ca9e2",
+  "periods": [
+    {
+      "id": "2025-10",
+      "markets": 20,
+      "bars": 74880,
+      "complete": true,
+      "dataHash": "3b8515ca08310b4d6d6a271ba54b23a4ca0c2161d535669d24407a07b2b1fa80"
+    },
+    {
+      "id": "2025-11",
+      "markets": 20,
+      "bars": 72960,
+      "complete": true,
+      "dataHash": "f445128ba3ff681944b3967fddf566609ec35696b8c1828724e7bb30d29a79b9"
+    },
+    {
+      "id": "2025-12",
+      "markets": 20,
+      "bars": 74880,
+      "complete": true,
+      "dataHash": "fc88dc83de64f07e6601858ce7e940ef0e2ca1e4731d0fb352fae9dc90a62749"
+    },
+    {
+      "id": "2026-02",
+      "markets": 20,
+      "bars": 69120,
+      "complete": true,
+      "dataHash": "b918130a55fcc333027fd4c8a1346678ed6f2d49265cddd6a81a0a93f28f687c"
+    },
+    {
+      "id": "2026-03",
+      "markets": 20,
+      "bars": 74880,
+      "complete": true,
+      "dataHash": "c9fc9d6a8b40be25c640efd99c43bce8eca2946c6a2bb91e84a63e39fc26a9b1"
+    }
+  ],
+  "totalBars": 366720,
+  "publicRequestsReserved": 400,
+  "requestCap": 500,
+  "originalBudgetNotReset": 240,
+  "sourceBytesReconstructed": true,
+  "normalizedRowsEqualOriginalPages": true,
+  "completeFrozenUniverseEveryMonth": true,
+  "julyOutcomesEvaluated": false,
+  "modelTrained": false,
+  "captureRunnerHash": "7dc4c9d902a5d1c6fc397e7688d5d42cd7bfaf914fae23efe825b004ca893d3e",
+  "verifierHelperHash": "5266ec36b25ec3ebc45586dcd5acec1f182febee2ee8ed2e6eadd4e85f866001",
+  "note": "Additional registration guards were added to helper while capture was already running; actual pages independently revalidated using final full raw reconstruction. Helpers do not establish predictive intelligence or historical deployability."
+}

@@ -1,0 +1,62 @@
+{
+  "formatVersion": 1,
+  "hypotheses": {
+    "H-001": {
+      "variantsTested": 1,
+      "baselineVerified": false
+    },
+    "BENCHMARK-BTC": {
+      "variantsTested": 1,
+      "baselineVerified": false
+    }
+  },
+  "strategies": [
+    {
+      "id": "rules",
+      "hypothesisId": "H-001",
+      "description": "EMA/volume-based rules provider; hypothesis mapping pending #6",
+      "benchmark": false,
+      "versions": [
+        {
+          "version": "v1",
+          "configHash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "codeHash": "74f948b8df40a646214b41eac3245547004d5c054819afa711ef7f86db5f2903",
+          "createdAt": "2026-11-05T21:55:17.844Z",
+          "stage": 1,
+          "status": "failed",
+          "variantsTested": 1,
+          "config": {},
+          "consumedStages": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hold",
+      "hypothesisId": "BENCHMARK-BTC",
+      "description": "BTC buy-and-hold comparison; benchmark only",
+      "benchmark": true,
+      "versions": [
+        {
+          "version": "v1",
+          "configHash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "codeHash": "74f948b8df40a646214b41eac3245547004d5c054819afa711ef7f86db5f2903",
+          "createdAt": "2026-11-05T21:55:17.844Z",
+          "stage": 1,
+          "status": "registered",
+          "variantsTested": 1,
+          "config": {},
+          "consumedStages": []
+        }
+      ]
+    },
+    {
+      "id": "dca",
+      "hypothesisId": "BENCHMARK-DCA",
+      "description": "Recurring paper savings benchmark, not a promoted strategy",
+      "benchmark": true,
+      "versions": []
+    }
+  ]
+}

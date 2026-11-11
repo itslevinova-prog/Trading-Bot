@@ -1,0 +1,19 @@
+{
+  "version": "executed-activity-decimal-proof-v1",
+  "reportHash": "e508cdb67cd641c74b9ad323ba7dd07a9dad226d5b6278080c506e280db1ec13",
+  "reportFileSha256": "b80014da93da8eb28f52c09d46c4fefc5e6f31d35c1e18c093190cb7234285ac",
+  "captureHash": "1297df4a2e853c038d09a485b1c18c2d6d0a23672035f8eea397a18e53b076be",
+  "verifierSha256": "3966f9b9458ca1a501d531b479df022e300d4a66a6c8bfc3f9ea7dc23391d66c",
+  "precisionDigits": 60,
+  "windowsVerified": 6,
+  "numericFieldsChecked": 42,
+  "maximumVolumeOrPriceDifference": 9.313225746154785e-10,
+  "maximumParticipationDifference": 2.636779683484747e-16,
+  "relativeTolerance": 1e-12,
+  "sourceClocksAndCaptureIdentityVerified": true,
+  "newNetworkRequests": 0,
+  "independentSamples": null,
+  "modelFitted": false,
+  "activeContextChanged": false,
+  "profitabilityEstablished": false
+}

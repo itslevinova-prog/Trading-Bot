@@ -1,0 +1,24 @@
+{
+  "version": "policy-failure-audit-v1",
+  "registeredAt": "2026-10-31T22:08:24.845852+00:00",
+  "periods": [
+    "2026-01",
+    "2026-04"
+  ],
+  "knownConsumedResults": true,
+  "scope": "Exploratory failure attribution and causal entry/label recapture, no parameter selection or model fitting. July untouched.",
+  "variants": [
+    "programmed-mock-trend-v2",
+    "programmed-mock-structure-exit-v1"
+  ],
+  "feeRates": [
+    0.001,
+    0.002
+  ],
+  "method": "Confirmed-fill source snapshots using shared interpreter; full economics must match corrected reports. Existing scoped full-roundtrip labels retain censoring/availability. Strict interior closed-bar marks only, never decision-time inputs or attainable exit returns.",
+  "sourceModule": "apps/server/src/research/policy-failure.ts",
+  "sourceHash": "6b8d6a1ea69b78a6faf90a5072589042293c72e8016418dca0396b509fee5d72",
+  "modelTrained": false,
+  "independentSamplesClaim": false,
+  "profitabilityEstablished": false
+}

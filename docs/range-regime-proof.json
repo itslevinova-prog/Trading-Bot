@@ -1,0 +1,73 @@
+{
+  "verifiedAt": "2026-10-31T18:40:35.256532+00:00",
+  "version": "range-research-proof-v1",
+  "buildId": "c2aabc912434f6b8deb8f1c77d80575882eff1226c6fb3e18ea77d59422fb71d",
+  "protocol": "docs/range-regime-protocol-v1.json",
+  "audit": {
+    "path": "docs/range-setup-audit-093d73fac87b6f28.json",
+    "hash": "093d73fac87b6f286ec0438f72abc19c100563b9921b1186d8905bba7cad5cd6",
+    "protocolHash": "b45bc87f1f9240a4befc859155a6e2108eb1cbf6ad81398877f9b68655f24b58",
+    "buildId": "c2aabc912434f6b8deb8f1c77d80575882eff1226c6fb3e18ea77d59422fb71d"
+  },
+  "previousAudit": "docs/range-setup-audit-1aa536bb2d3faea1.json",
+  "reproducedCountsAndSnapshotHashes": true,
+  "tests": {
+    "main": 918,
+    "offline": 15,
+    "newCausalTests": 30,
+    "typechecksAndBuildPassed": true,
+    "log": "data/verify-range-regime-2026-10-31.log"
+  },
+  "existingCodeIsolation": {
+    "sources": {
+      "oldCount": 110,
+      "newCount": 112,
+      "allPreviousFilesByteIdentical": true,
+      "added": [
+        "apps/server/src/context/range-regime.ts",
+        "apps/server/src/strategy/range-entry.ts"
+      ]
+    },
+    "runtimeFiles": {
+      "oldCount": 100,
+      "newCount": 102,
+      "allPreviousFilesByteIdentical": true,
+      "added": [
+        "apps/server/dist/context/range-regime.js",
+        "apps/server/dist/strategy/range-entry.js"
+      ]
+    }
+  },
+  "deployment": {
+    "newRangeModulesActivated": false,
+    "frozenV3BuildId": "cc12379e164c46d708a93bf730899eca00cbdc8378051ff580b05f49f03fc210",
+    "sameV3RunId": "197a613c-3df9-4789-aa1c-424c3176bfc0",
+    "registeredRuns": 2,
+    "holdFills": 1,
+    "starterResult": "reused:true; no restart or new epoch",
+    "mainPid": 6708,
+    "mainStartUTC": "2026-10-31T18:04:22.6932421Z",
+    "v3Pid": 28888,
+    "v3StartUTC": "2026-10-31T18:13:44.8412327Z",
+    "hostPortOwnershipVerified": [
+      3000,
+      3200
+    ]
+  },
+  "processObservationCorrection": "Unprivileged sandbox Get-Process could not see known host PIDs. Host-context inspection and guarded reuse plus HTTP verification proved both alive. No process killed/restarted; do not treat cross-context PID absence as terminal.",
+  "historicalResult": {
+    "overlappingAssetWindowsPerScenario": 51860,
+    "decisionTimes": 2593,
+    "repeatedRanges": 334,
+    "reclaimCandidates": 1,
+    "eligibleSetups": 0,
+    "onlyCandidatePair": "BNB/EUR",
+    "onlyCandidateUTC": "2026-10-16T09:30:05.000Z",
+    "observedResistanceTargetPct": 0.0014822792614768154,
+    "rejection": "Observed resistance is only about0.148% above assumed entry including15bps capped slippage; below existing3% minimum target distance. No after-cost payoff was accepted/calculated for that failed target.",
+    "independentSamples": null,
+    "rangePolicyReturn": null,
+    "profitabilityEstablished": false
+  },
+  "next": "Do not activate an order-capable range policy or tune thresholds to consumed history based on these zero eligible setups. Prioritize reusable regime explanations, entry-thesis provenance, meaningful prospective outcomes and more OSS/causal decision research. Existing trend/covariance/structure-exit hypotheses remain unchanged."
+}

@@ -1,0 +1,107 @@
+{
+  "version": "risk-execution-ledger-independent-v1",
+  "verifiedAt": "2026-11-03T20:25:28.204028+00:00",
+  "report": {
+    "path": "docs/risk-execution-comparison-e69d48544a22cbd2.json",
+    "hash": "e69d48544a22cbd242c167b7e895fbdcf944004c6da38820f4fd88cdbe88df6b"
+  },
+  "reportFileSha256": "cb6a6523a0b3246c8b0dcec46f669ca5d2d72f0145bc03c377b21a0368e3ba65",
+  "verifierSha256": "9bf26465c70aa5b1912d1c30b4c976c4e2657ce00c79e50024bdf5d73d319454",
+  "variantsVerified": 8,
+  "fillsVerified": 364,
+  "feesVerified": 364,
+  "closedPnlsVerified": 182,
+  "fullyLiquidatedCashChecks": 8,
+  "summary": [
+    {
+      "period": "2026-01",
+      "fee": 0.001,
+      "variant": "prior-loaded-executor",
+      "fills": 88,
+      "closedTrades": 44,
+      "unliquidated": 0,
+      "computedCash": "96.9266146071500875384855",
+      "reportedFinalEquity": 96.92661460715009,
+      "returnPct": -3.0733853928499144
+    },
+    {
+      "period": "2026-01",
+      "fee": 0.001,
+      "variant": "current-executor",
+      "fills": 88,
+      "closedTrades": 44,
+      "unliquidated": 0,
+      "computedCash": "96.9266146071500875384855",
+      "reportedFinalEquity": 96.92661460715009,
+      "returnPct": -3.0733853928499144
+    },
+    {
+      "period": "2026-01",
+      "fee": 0.002,
+      "variant": "prior-loaded-executor",
+      "fills": 4,
+      "closedTrades": 2,
+      "unliquidated": 0,
+      "computedCash": "99.293809414168665216543",
+      "reportedFinalEquity": 99.29380941416866,
+      "returnPct": -0.7061905858313344
+    },
+    {
+      "period": "2026-01",
+      "fee": 0.002,
+      "variant": "current-executor",
+      "fills": 4,
+      "closedTrades": 2,
+      "unliquidated": 0,
+      "computedCash": "99.293809414168665216543",
+      "reportedFinalEquity": 99.29380941416866,
+      "returnPct": -0.7061905858313344
+    },
+    {
+      "period": "2026-04",
+      "fee": 0.001,
+      "variant": "prior-loaded-executor",
+      "fills": 90,
+      "closedTrades": 45,
+      "unliquidated": 0,
+      "computedCash": "97.1398838995989721129231",
+      "reportedFinalEquity": 97.139883899599,
+      "returnPct": -2.860116100401
+    },
+    {
+      "period": "2026-04",
+      "fee": 0.001,
+      "variant": "current-executor",
+      "fills": 90,
+      "closedTrades": 45,
+      "unliquidated": 0,
+      "computedCash": "97.1398838995989721129231",
+      "reportedFinalEquity": 97.139883899599,
+      "returnPct": -2.860116100401
+    },
+    {
+      "period": "2026-04",
+      "fee": 0.002,
+      "variant": "prior-loaded-executor",
+      "fills": 0,
+      "closedTrades": 0,
+      "unliquidated": 0,
+      "computedCash": "100",
+      "reportedFinalEquity": 100,
+      "returnPct": 0
+    },
+    {
+      "period": "2026-04",
+      "fee": 0.002,
+      "variant": "current-executor",
+      "fills": 0,
+      "closedTrades": 0,
+      "unliquidated": 0,
+      "computedCash": "100",
+      "reportedFinalEquity": 100,
+      "returnPct": 0
+    }
+  ],
+  "profitabilityEstablished": false,
+  "scope": "Independent80digitDecimal fill cost/fee/cash/position basis/realized PNL/return/winrate reconstruction. Float tolerance is explicit. Does not re-evaluate entry intelligence, historical source availability or order-book realism; same historical scenarios are dependent/descriptive."
+}

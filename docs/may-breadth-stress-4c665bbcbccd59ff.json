@@ -1,0 +1,2924 @@
+{
+  "version": "may-breadth-cost-delay-sensitivity-v1",
+  "generatedAt": "2026-11-04T15:33:46.047Z",
+  "build": {
+    "verified": true,
+    "buildId": "9091422646e6d99527b03a65363ad8b85d0dcd92304c4a3cc349d498caa34ae6",
+    "builtAt": "2026-11-04T15:20:27.509Z",
+    "sourceFiles": 161,
+    "runtimeFiles": 151,
+    "reasons": []
+  },
+  "baselineFile": "docs/may-breadth-timing-result-cbed1f1786e6f1ee.json",
+  "baselineSha": "cbed1f1786e6f1eec4e2d30eddce6c9a829d0f7b1818ca1ede0646376bb785cb",
+  "runnerSha": "863d37139f38015cf8e351b25aa1d40837e8cbc86e95da4fde8c094a0814b37b",
+  "results": [
+    {
+      "name": "baseline",
+      "costMultiplier": 1,
+      "extraDelayBars": 0,
+      "target": {
+        "dataScope": "df5ed748ced1b3730c976d79c1542adea04b8d46fb08b611468da75047e290e4",
+        "horizonBars": 32,
+        "stopLossPct": 0.02,
+        "takeProfitPct": 0.04,
+        "costs": {
+          "feeRate": 0.001,
+          "spreadBps": 10,
+          "slippageBps": 8
+        }
+      },
+      "rows": [
+        {
+          "decisionAt": 1779321600000,
+          "pair": "SUI/EUR",
+          "entryAt": 1779322500000,
+          "end": 1779351300000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779322500000,
+            "availableAt": 1779351300000,
+            "eventBarTs": 1779329700000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.9346137933599998,
+            "entryBasis": 0.9355484071533597,
+            "stopPrice": 0.9168374390102926,
+            "targetPrice": 0.9719983450943999,
+            "exitReference": 0.9719983450943999,
+            "netReturn": 0.036573194389610375
+          }
+        },
+        {
+          "decisionAt": 1779364800000,
+          "pair": "WIN/EUR",
+          "entryAt": 1779365700000,
+          "end": 1779394500000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779365700000,
+            "availableAt": 1779394500000,
+            "eventBarTs": 1779393600000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.000016861898736,
+            "entryBasis": 0.000016878760634735996,
+            "stopPrice": 0.000016541185422041277,
+            "targetPrice": 0.00001753637468544,
+            "exitReference": 0.00001709,
+            "netReturn": 0.010188035433958964
+          }
+        },
+        {
+          "decisionAt": 1779408000000,
+          "pair": "BCH/EUR",
+          "entryAt": 1779408900000,
+          "end": 1779437700000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779408900000,
+            "availableAt": 1779437700000,
+            "eventBarTs": 1779436800000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 327.7256209199999,
+            "entryBasis": 328.0533465409199,
+            "stopPrice": 321.4922796101015,
+            "targetPrice": 340.83464575679994,
+            "exitReference": 326.7,
+            "netReturn": -0.006414204591378647
+          }
+        },
+        {
+          "decisionAt": 1779451200000,
+          "pair": "DOT/EUR",
+          "entryAt": 1779452100000,
+          "end": 1779480900000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779452100000,
+            "availableAt": 1779480900000,
+            "eventBarTs": 1779462000000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 1.1484915587999998,
+            "entryBasis": 1.1496400503587996,
+            "stopPrice": 1.1266472493516235,
+            "targetPrice": 1.1944312211519998,
+            "exitReference": 1.1266472493516235,
+            "netReturn": -0.02225233439200014
+          }
+        },
+        {
+          "decisionAt": 1779494400000,
+          "pair": "ETH/EUR",
+          "entryAt": 1779495300000,
+          "end": 1779524100000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779495300000,
+            "availableAt": 1779524100000,
+            "eventBarTs": 1779522300000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 1782.6151021199996,
+            "entryBasis": 1784.3977172221194,
+            "stopPrice": 1748.709762877677,
+            "targetPrice": 1853.9197062047997,
+            "exitReference": 1748.709762877677,
+            "netReturn": -0.02225233439200003
+          }
+        },
+        {
+          "decisionAt": 1779537600000,
+          "pair": "ICP/EUR",
+          "entryAt": 1779538500000,
+          "end": 1779567300000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779538500000,
+            "availableAt": 1779567300000,
+            "eventBarTs": 1779548400000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 2.1157477451999993,
+            "entryBasis": 2.117863492945199,
+            "stopPrice": 2.075506223086295,
+            "targetPrice": 2.2003776550079994,
+            "exitReference": 2.2003776550079994,
+            "netReturn": 0.036573194389610375
+          }
+        },
+        {
+          "decisionAt": 1779580800000,
+          "pair": "ETH/EUR",
+          "entryAt": 1779581700000,
+          "end": 1779610500000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779581700000,
+            "availableAt": 1779610500000,
+            "eventBarTs": 1779609600000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 1823.8386395879995,
+            "entryBasis": 1825.6624782275874,
+            "stopPrice": 1789.1492286630355,
+            "targetPrice": 1896.7921851715196,
+            "exitReference": 1824.38,
+            "netReturn": -0.0029991587035600453
+          }
+        },
+        {
+          "decisionAt": 1779624000000,
+          "pair": "SUI/EUR",
+          "entryAt": 1779624900000,
+          "end": 1779653700000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779624900000,
+            "availableAt": 1779653700000,
+            "eventBarTs": 1779631200000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 0.9118842742799997,
+            "entryBasis": 0.9127961585542796,
+            "stopPrice": 0.894540235383194,
+            "targetPrice": 0.9483596452511998,
+            "exitReference": 0.894540235383194,
+            "netReturn": -0.02225233439200003
+          }
+        },
+        {
+          "decisionAt": 1779667200000,
+          "pair": "XLM/EUR",
+          "entryAt": 1779668100000,
+          "end": 1779696900000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779668100000,
+            "availableAt": 1779696900000,
+            "eventBarTs": 1779696000000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.12706502075999998,
+            "entryBasis": 0.12719208578075997,
+            "stopPrice": 0.12464824406514477,
+            "targetPrice": 0.13214762159039997,
+            "exitReference": 0.1319,
+            "netReturn": 0.03463083704808878
+          }
+        },
+        {
+          "decisionAt": 1779710400000,
+          "pair": "ICP/EUR",
+          "entryAt": 1779711300000,
+          "end": 1779740100000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779711300000,
+            "availableAt": 1779740100000,
+            "eventBarTs": 1779727500000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 2.2839662123999998,
+            "entryBasis": 2.2862501786123994,
+            "stopPrice": 2.2405251750401516,
+            "targetPrice": 2.375324860896,
+            "exitReference": 2.375324860896,
+            "netReturn": 0.0365731943896106
+          }
+        },
+        {
+          "decisionAt": 1779753600000,
+          "pair": "BCH/EUR",
+          "entryAt": 1779754500000,
+          "end": 1779783300000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779754500000,
+            "availableAt": 1779783300000,
+            "eventBarTs": 1779764400000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 302.0923306799999,
+            "entryBasis": 302.3944230106799,
+            "stopPrice": 296.3465345504663,
+            "targetPrice": 314.1760239071999,
+            "exitReference": 296.3465345504663,
+            "netReturn": -0.02225233439200003
+          }
+        },
+        {
+          "decisionAt": 1779796800000,
+          "pair": "APT/EUR",
+          "entryAt": 1779797700000,
+          "end": 1779826500000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779797700000,
+            "availableAt": 1779826500000,
+            "eventBarTs": 1779816600000,
+            "outcome": "stop",
+            "execution": "gap-open",
+            "entryFill": 0.8541092411999998,
+            "entryBasis": 0.8549633504411996,
+            "stopPrice": 0.8378640834323756,
+            "targetPrice": 0.8882736108479998,
+            "exitReference": 0.828,
+            "netReturn": -0.033763252141162936
+          }
+        },
+        {
+          "decisionAt": 1779840000000,
+          "pair": "WIN/EUR",
+          "entryAt": 1779840900000,
+          "end": 1779869700000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779840900000,
+            "availableAt": 1779869700000,
+            "eventBarTs": 1779868800000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.000017122236839999994,
+            "entryBasis": 0.00001713935907683999,
+            "stopPrice": 0.00001679657189530319,
+            "targetPrice": 0.000017807126313599995,
+            "exitReference": 0.00001695,
+            "netReturn": -0.013321108893068812
+          }
+        },
+        {
+          "decisionAt": 1779883200000,
+          "pair": "WIN/EUR",
+          "entryAt": 1779884100000,
+          "end": 1779912900000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779884100000,
+            "availableAt": 1779912900000,
+            "eventBarTs": 1779912000000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.000017052145812,
+            "entryBasis": 0.000017069197957811996,
+            "stopPrice": 0.000016727813998655756,
+            "targetPrice": 0.00001773423164448,
+            "exitReference": 0.00001707,
+            "netReturn": -0.0022514207014868726
+          }
+        },
+        {
+          "decisionAt": 1779926400000,
+          "pair": "XLM/EUR",
+          "entryAt": 1779927300000,
+          "end": 1779956100000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779927300000,
+            "availableAt": 1779956100000,
+            "eventBarTs": 1779930000000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.14408712755999997,
+            "entryBasis": 0.14423121468755995,
+            "stopPrice": 0.14134659039380876,
+            "targetPrice": 0.1498506126624,
+            "exitReference": 0.1498506126624,
+            "netReturn": 0.0365731943896106
+          }
+        },
+        {
+          "decisionAt": 1779969600000,
+          "pair": "XLM/EUR",
+          "entryAt": 1779970500000,
+          "end": 1779999300000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779970500000,
+            "availableAt": 1779999300000,
+            "eventBarTs": 1779971400000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.15510143195999998,
+            "entryBasis": 0.15525653339195997,
+            "stopPrice": 0.15215140272412075,
+            "targetPrice": 0.1613054892384,
+            "exitReference": 0.1613054892384,
+            "netReturn": 0.0365731943896106
+          }
+        },
+        {
+          "decisionAt": 1780012800000,
+          "pair": "XLM/EUR",
+          "entryAt": 1780013700000,
+          "end": 1780042500000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1780013700000,
+            "availableAt": 1780042500000,
+            "eventBarTs": 1780013700000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 0.17672952059999994,
+            "entryBasis": 0.17690625012059993,
+            "stopPrice": 0.17336812511818794,
+            "targetPrice": 0.18379870142399996,
+            "exitReference": 0.17336812511818794,
+            "netReturn": -0.02225233439200003
+          }
+        },
+        {
+          "decisionAt": 1780056000000,
+          "pair": "WIN/EUR",
+          "entryAt": 1780056900000,
+          "end": 1780085700000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1780056900000,
+            "availableAt": 1780085700000,
+            "eventBarTs": 1780084800000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.000016631599643999992,
+            "entryBasis": 0.00001664823124364399,
+            "stopPrice": 0.00001631526661877111,
+            "targetPrice": 0.000017296863629759993,
+            "exitReference": 0.00001682,
+            "netReturn": 0.007995524670455945
+          }
+        },
+        {
+          "decisionAt": 1780099200000,
+          "pair": "XLM/EUR",
+          "entryAt": 1780100100000,
+          "end": 1780128900000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1780100100000,
+            "availableAt": 1780128900000,
+            "eventBarTs": 1780103700000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.22579324019999997,
+            "entryBasis": 0.22601903344019994,
+            "stopPrice": 0.22149865277139594,
+            "targetPrice": 0.23482496980799997,
+            "exitReference": 0.23482496980799997,
+            "netReturn": 0.0365731943896106
+          }
+        },
+        {
+          "decisionAt": 1780142400000,
+          "pair": "TRX/EUR",
+          "entryAt": 1780143300000,
+          "end": 1780172100000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1780143300000,
+            "availableAt": 1780172100000,
+            "eventBarTs": 1780171200000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.29518335791999994,
+            "entryBasis": 0.2954785412779199,
+            "stopPrice": 0.28956897045236146,
+            "targetPrice": 0.3069906922368,
+            "exitReference": 0.2976,
+            "netReturn": 0.004864937118015833
+          }
+        }
+      ],
+      "policies": {
+        "ungated": {
+          "selected": 20,
+          "unknown": 0,
+          "meanPerClock": 0.0053553841808762544
+        },
+        "btc": {
+          "selected": 8,
+          "unknown": 0,
+          "meanPerClock": -0.000005069895761194987
+        },
+        "breadth": {
+          "selected": 7,
+          "unknown": 0,
+          "meanPerClock": -0.001736611748165634
+        },
+        "cash": {
+          "selected": 0,
+          "unknown": 0,
+          "meanPerClock": 0
+        }
+      },
+      "changedBarrierOutcomes": 0
+    },
+    {
+      "name": "double-cost",
+      "costMultiplier": 2,
+      "extraDelayBars": 0,
+      "target": {
+        "dataScope": "df5ed748ced1b3730c976d79c1542adea04b8d46fb08b611468da75047e290e4",
+        "horizonBars": 32,
+        "stopLossPct": 0.02,
+        "takeProfitPct": 0.04,
+        "costs": {
+          "feeRate": 0.002,
+          "spreadBps": 20,
+          "slippageBps": 16
+        }
+      },
+      "rows": [
+        {
+          "decisionAt": 1779321600000,
+          "pair": "SUI/EUR",
+          "entryAt": 1779322500000,
+          "end": 1779351300000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779322500000,
+            "availableAt": 1779351300000,
+            "eventBarTs": 1779329700000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.9358283334399999,
+            "entryBasis": 0.93769999010688,
+            "stopPrice": 0.9189459903047423,
+            "targetPrice": 0.9732614667776,
+            "exitReference": 0.9732614667776,
+            "netReturn": 0.03315675516167649
+          }
+        },
+        {
+          "decisionAt": 1779364800000,
+          "pair": "WIN/EUR",
+          "entryAt": 1779365700000,
+          "end": 1779394500000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779365700000,
+            "availableAt": 1779394500000,
+            "eventBarTs": 1779393600000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.000016883810943999998,
+            "entryBasis": 0.000016917578565888,
+            "stopPrice": 0.00001657922699457024,
+            "targetPrice": 0.000017559163381759997,
+            "exitReference": 0.00001709,
+            "netReturn": 0.005551834209500006
+          }
+        },
+        {
+          "decisionAt": 1779408000000,
+          "pair": "BCH/EUR",
+          "entryAt": 1779408900000,
+          "end": 1779437700000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779408900000,
+            "availableAt": 1779437700000,
+            "eventBarTs": 1779436800000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 328.15150367999996,
+            "entryBasis": 328.80780668735997,
+            "stopPrice": 322.2316505536128,
+            "targetPrice": 341.27756382719997,
+            "exitReference": 326.7,
+            "netReturn": -0.010974210768149195
+          }
+        },
+        {
+          "decisionAt": 1779451200000,
+          "pair": "DOT/EUR",
+          "entryAt": 1779452100000,
+          "end": 1779480900000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779452100000,
+            "availableAt": 1779480900000,
+            "eventBarTs": 1779461100000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 1.1499840352000001,
+            "entryBasis": 1.1522840032704,
+            "stopPrice": 1.129238323204992,
+            "targetPrice": 1.1959833966080002,
+            "exitReference": 1.129238323204992,
+            "netReturn": -0.024501339136000055
+          }
+        },
+        {
+          "decisionAt": 1779494400000,
+          "pair": "ETH/EUR",
+          "entryAt": 1779495300000,
+          "end": 1779524100000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779495300000,
+            "availableAt": 1779524100000,
+            "eventBarTs": 1779522300000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 1784.93162848,
+            "entryBasis": 1788.50149173696,
+            "stopPrice": 1752.7314619022206,
+            "targetPrice": 1856.3288936192,
+            "exitReference": 1752.7314619022206,
+            "netReturn": -0.024501339136000055
+          }
+        },
+        {
+          "decisionAt": 1779537600000,
+          "pair": "ICP/EUR",
+          "entryAt": 1779538500000,
+          "end": 1779567300000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779538500000,
+            "availableAt": 1779567300000,
+            "eventBarTs": 1779548400000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 2.1184971808,
+            "entryBasis": 2.1227341751616,
+            "stopPrice": 2.080279491658368,
+            "targetPrice": 2.203237068032,
+            "exitReference": 2.203237068032,
+            "netReturn": 0.03315675516167671
+          }
+        },
+        {
+          "decisionAt": 1779580800000,
+          "pair": "ETH/EUR",
+          "entryAt": 1779581700000,
+          "end": 1779610500000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779581700000,
+            "availableAt": 1779610500000,
+            "eventBarTs": 1779609600000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 1826.208736352,
+            "entryBasis": 1829.861153824704,
+            "stopPrice": 1793.2639307482098,
+            "targetPrice": 1899.25708580608,
+            "exitReference": 1824.38,
+            "netReturn": -0.007574838041535803
+          }
+        },
+        {
+          "decisionAt": 1779624000000,
+          "pair": "SUI/EUR",
+          "entryAt": 1779624900000,
+          "end": 1779653700000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779624900000,
+            "availableAt": 1779653700000,
+            "eventBarTs": 1779631200000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 0.91306927712,
+            "entryBasis": 0.9148954156742399,
+            "stopPrice": 0.8965975073607552,
+            "targetPrice": 0.9495920482048,
+            "exitReference": 0.8965975073607552,
+            "netReturn": -0.024501339135999944
+          }
+        },
+        {
+          "decisionAt": 1779667200000,
+          "pair": "XLM/EUR",
+          "entryAt": 1779668100000,
+          "end": 1779696900000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779668100000,
+            "availableAt": 1779696900000,
+            "eventBarTs": 1779696000000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.12723014304,
+            "entryBasis": 0.12748460332608,
+            "stopPrice": 0.1249349112595584,
+            "targetPrice": 0.1323193487616,
+            "exitReference": 0.1319,
+            "netReturn": 0.02988245695910363
+          }
+        },
+        {
+          "decisionAt": 1779710400000,
+          "pair": "ICP/EUR",
+          "entryAt": 1779711300000,
+          "end": 1779740100000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779711300000,
+            "availableAt": 1779740100000,
+            "eventBarTs": 1779739200000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 2.2869342496000002,
+            "entryBasis": 2.2915081180992,
+            "stopPrice": 2.245677955737216,
+            "targetPrice": 2.3784116195840004,
+            "exitReference": 2.342,
+            "netReturn": 0.017339934208637997
+          }
+        },
+        {
+          "decisionAt": 1779753600000,
+          "pair": "BCH/EUR",
+          "entryAt": 1779754500000,
+          "end": 1779783300000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779754500000,
+            "availableAt": 1779783300000,
+            "eventBarTs": 1779760800000,
+            "outcome": "stop",
+            "execution": "gap-open",
+            "entryFill": 302.48490272,
+            "entryBasis": 303.08987252544,
+            "stopPrice": 297.0280750749312,
+            "targetPrice": 314.5842988288,
+            "exitReference": 296.7,
+            "netReturn": -0.025578802255193378
+          }
+        },
+        {
+          "decisionAt": 1779796800000,
+          "pair": "APT/EUR",
+          "entryAt": 1779797700000,
+          "end": 1779826500000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779797700000,
+            "availableAt": 1779826500000,
+            "eventBarTs": 1779816600000,
+            "outcome": "stop",
+            "execution": "gap-open",
+            "entryFill": 0.8552191647999999,
+            "entryBasis": 0.8569296031296,
+            "stopPrice": 0.8397910110670079,
+            "targetPrice": 0.8894279313919999,
+            "exitReference": 0.828,
+            "netReturn": -0.03819774140099308
+          }
+        },
+        {
+          "decisionAt": 1779840000000,
+          "pair": "WIN/EUR",
+          "entryAt": 1779840900000,
+          "end": 1779869700000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779840900000,
+            "availableAt": 1779869700000,
+            "eventBarTs": 1779868800000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.000017144487359999996,
+            "entryBasis": 0.000017178776334719997,
+            "stopPrice": 0.000016835200808025597,
+            "targetPrice": 0.000017830266854399997,
+            "exitReference": 0.00001695,
+            "netReturn": -0.01784941622065761
+          }
+        },
+        {
+          "decisionAt": 1779883200000,
+          "pair": "WIN/EUR",
+          "entryAt": 1779884100000,
+          "end": 1779912900000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779884100000,
+            "availableAt": 1779912900000,
+            "eventBarTs": 1779912000000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.000017074305248000002,
+            "entryBasis": 0.000017108453858496002,
+            "stopPrice": 0.000016766284781326083,
+            "targetPrice": 0.00001775727745792,
+            "exitReference": 0.00001707,
+            "netReturn": -0.0068305317410064514
+          }
+        },
+        {
+          "decisionAt": 1779926400000,
+          "pair": "XLM/EUR",
+          "entryAt": 1779927300000,
+          "end": 1779956100000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779927300000,
+            "availableAt": 1779956100000,
+            "eventBarTs": 1779930000000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.14427437023999998,
+            "entryBasis": 0.14456291898048,
+            "stopPrice": 0.14167166060087039,
+            "targetPrice": 0.1500453450496,
+            "exitReference": 0.1500453450496,
+            "netReturn": 0.03315675516167671
+          }
+        },
+        {
+          "decisionAt": 1779969600000,
+          "pair": "XLM/EUR",
+          "entryAt": 1779970500000,
+          "end": 1779999300000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779970500000,
+            "availableAt": 1779999300000,
+            "eventBarTs": 1779972300000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.15530298784,
+            "entryBasis": 0.15561359381568,
+            "stopPrice": 0.15250132193936639,
+            "targetPrice": 0.1615151073536,
+            "exitReference": 0.1615151073536,
+            "netReturn": 0.03315675516167671
+          }
+        },
+        {
+          "decisionAt": 1780012800000,
+          "pair": "XLM/EUR",
+          "entryAt": 1780013700000,
+          "end": 1780042500000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1780013700000,
+            "availableAt": 1780042500000,
+            "eventBarTs": 1780013700000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 0.17695918239999997,
+            "entryBasis": 0.17731310076479997,
+            "stopPrice": 0.17376683874950397,
+            "targetPrice": 0.18403754969599997,
+            "exitReference": 0.17376683874950397,
+            "netReturn": -0.024501339136000055
+          }
+        },
+        {
+          "decisionAt": 1780056000000,
+          "pair": "WIN/EUR",
+          "entryAt": 1780056900000,
+          "end": 1780085700000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1780056900000,
+            "availableAt": 1780085700000,
+            "eventBarTs": 1780084800000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.000016653212575999997,
+            "entryBasis": 0.000016686519001151998,
+            "stopPrice": 0.000016352788621128956,
+            "targetPrice": 0.000017319341079039996,
+            "exitReference": 0.00001682,
+            "netReturn": 0.003369385850944928
+          }
+        },
+        {
+          "decisionAt": 1780099200000,
+          "pair": "XLM/EUR",
+          "entryAt": 1780100100000,
+          "end": 1780128900000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1780100100000,
+            "availableAt": 1780128900000,
+            "eventBarTs": 1780103700000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.2260866608,
+            "entryBasis": 0.2265388341216,
+            "stopPrice": 0.222008057439168,
+            "targetPrice": 0.23513012723200002,
+            "exitReference": 0.23513012723200002,
+            "netReturn": 0.03315675516167671
+          }
+        },
+        {
+          "decisionAt": 1780142400000,
+          "pair": "TRX/EUR",
+          "entryAt": 1780143300000,
+          "end": 1780172100000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1780143300000,
+            "availableAt": 1780172100000,
+            "eventBarTs": 1780171200000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.29556695167999997,
+            "entryBasis": 0.29615808558336,
+            "stopPrice": 0.2902349238716928,
+            "targetPrice": 0.30738962974719997,
+            "exitReference": 0.2976,
+            "netReturn": 0.0002531659541635811
+          }
+        }
+      ],
+      "policies": {
+        "ungated": {
+          "selected": 20,
+          "unknown": 0,
+          "meanPerClock": 0.0008584828009598922
+        },
+        "btc": {
+          "selected": 8,
+          "unknown": 0,
+          "meanPerClock": -0.0014919075630967337
+        },
+        "breadth": {
+          "selected": 7,
+          "unknown": 0,
+          "meanPerClock": -0.0029860304110519154
+        },
+        "cash": {
+          "selected": 0,
+          "unknown": 0,
+          "meanPerClock": 0
+        }
+      },
+      "changedBarrierOutcomes": 1
+    },
+    {
+      "name": "quadruple-cost",
+      "costMultiplier": 4,
+      "extraDelayBars": 0,
+      "target": {
+        "dataScope": "df5ed748ced1b3730c976d79c1542adea04b8d46fb08b611468da75047e290e4",
+        "horizonBars": 32,
+        "stopLossPct": 0.02,
+        "takeProfitPct": 0.04,
+        "costs": {
+          "feeRate": 0.004,
+          "spreadBps": 40,
+          "slippageBps": 32
+        }
+      },
+      "rows": [
+        {
+          "decisionAt": 1779321600000,
+          "pair": "SUI/EUR",
+          "entryAt": 1779322500000,
+          "end": 1779351300000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1779322500000,
+            "availableAt": 1779351300000,
+            "eventBarTs": 1779329700000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.9382596537600002,
+            "entryBasis": 0.9420126923750402,
+            "stopPrice": 0.9231724385275394,
+            "targetPrice": 0.9757900399104003,
+            "exitReference": 0.9757900399104003,
+            "netReturn": 0.026354842007968227
+          }
+        },
+        {
+          "decisionAt": 1779364800000,
+          "pair": "WIN/EUR",
+          "entryAt": 1779365700000,
+          "end": 1779394500000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1779365700000,
+            "availableAt": 1779394500000,
+            "eventBarTs": 1779393600000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.000016927675776,
+            "entryBasis": 0.000016995386479104002,
+            "stopPrice": 0.00001665547874952192,
+            "targetPrice": 0.00001760478280704,
+            "exitReference": 0.00001709,
+            "netReturn": -0.0036568788055756363
+          }
+        },
+        {
+          "decisionAt": 1779408000000,
+          "pair": "BCH/EUR",
+          "entryAt": 1779408900000,
+          "end": 1779437700000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1779408900000,
+            "availableAt": 1779437700000,
+            "eventBarTs": 1779436800000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 329.00405472000006,
+            "entryBasis": 330.32007093888006,
+            "stopPrice": 323.7136695201025,
+            "targetPrice": 342.1642169088001,
+            "exitReference": 326.7,
+            "netReturn": -0.020031580411062566
+          }
+        },
+        {
+          "decisionAt": 1779451200000,
+          "pair": "DOT/EUR",
+          "entryAt": 1779452100000,
+          "end": 1779480900000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1779452100000,
+            "availableAt": 1779480900000,
+            "eventBarTs": 1779459300000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 1.1529717408000002,
+            "entryBasis": 1.1575836277632001,
+            "stopPrice": 1.134431955207936,
+            "targetPrice": 1.1990906104320003,
+            "exitReference": 1.134431955207936,
+            "netReturn": -0.028989369087999983
+          }
+        },
+        {
+          "decisionAt": 1779494400000,
+          "pair": "ETH/EUR",
+          "entryAt": 1779495300000,
+          "end": 1779524100000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1779495300000,
+            "availableAt": 1779524100000,
+            "eventBarTs": 1779522300000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 1789.56895392,
+            "entryBasis": 1796.72722973568,
+            "stopPrice": 1760.7926851409666,
+            "targetPrice": 1861.1517120768,
+            "exitReference": 1760.7926851409666,
+            "netReturn": -0.028989369087999872
+          }
+        },
+        {
+          "decisionAt": 1779537600000,
+          "pair": "ICP/EUR",
+          "entryAt": 1779538500000,
+          "end": 1779567300000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1779538500000,
+            "availableAt": 1779567300000,
+            "eventBarTs": 1779548400000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 2.1240011232000002,
+            "entryBasis": 2.1324971276928,
+            "stopPrice": 2.089847185138944,
+            "targetPrice": 2.2089611681280004,
+            "exitReference": 2.2089611681280004,
+            "netReturn": 0.026354842007968227
+          }
+        },
+        {
+          "decisionAt": 1779580800000,
+          "pair": "ETH/EUR",
+          "entryAt": 1779581700000,
+          "end": 1779610500000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1779581700000,
+            "availableAt": 1779610500000,
+            "eventBarTs": 1779609600000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 1830.9533014080002,
+            "entryBasis": 1838.2771146136322,
+            "stopPrice": 1801.5115723213596,
+            "targetPrice": 1904.1914334643204,
+            "exitReference": 1824.38,
+            "netReturn": -0.016663338698093
+          }
+        },
+        {
+          "decisionAt": 1779624000000,
+          "pair": "SUI/EUR",
+          "entryAt": 1779624900000,
+          "end": 1779653700000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1779624900000,
+            "availableAt": 1779653700000,
+            "eventBarTs": 1779630300000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 0.9154414684800001,
+            "entryBasis": 0.91910323435392,
+            "stopPrice": 0.9007211696668417,
+            "targetPrice": 0.9520591272192002,
+            "exitReference": 0.9007211696668417,
+            "netReturn": -0.028989369087999872
+          }
+        },
+        {
+          "decisionAt": 1779667200000,
+          "pair": "XLM/EUR",
+          "entryAt": 1779668100000,
+          "end": 1779696900000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1779668100000,
+            "availableAt": 1779696900000,
+            "eventBarTs": 1779696000000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.12756069216000002,
+            "entryBasis": 0.12807093492864002,
+            "stopPrice": 0.12550951623006723,
+            "targetPrice": 0.13266311984640003,
+            "exitReference": 0.1319,
+            "netReturn": 0.020450927262921414
+          }
+        },
+        {
+          "decisionAt": 1779710400000,
+          "pair": "ICP/EUR",
+          "entryAt": 1779711300000,
+          "end": 1779740100000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1779711300000,
+            "availableAt": 1779740100000,
+            "eventBarTs": 1779739200000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 2.2928757984000003,
+            "entryBasis": 2.3020473015936003,
+            "stopPrice": 2.2560063555617282,
+            "targetPrice": 2.3845908303360006,
+            "exitReference": 2.342,
+            "netReturn": 0.008023267305764747
+          }
+        },
+        {
+          "decisionAt": 1779753600000,
+          "pair": "BCH/EUR",
+          "entryAt": 1779754500000,
+          "end": 1779783300000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1779754500000,
+            "availableAt": 1779783300000,
+            "eventBarTs": 1779756300000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 303.27077088,
+            "entryBasis": 304.48385396352,
+            "stopPrice": 298.3941768842496,
+            "targetPrice": 315.4016017152,
+            "exitReference": 298.3941768842496,
+            "netReturn": -0.028989369087999983
+          }
+        },
+        {
+          "decisionAt": 1779796800000,
+          "pair": "APT/EUR",
+          "entryAt": 1779797700000,
+          "end": 1779826500000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1779797700000,
+            "availableAt": 1779826500000,
+            "eventBarTs": 1779812100000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 0.8574410592000001,
+            "entryBasis": 0.8608708234368001,
+            "stopPrice": 0.8436534069680641,
+            "targetPrice": 0.8917387015680002,
+            "exitReference": 0.8436534069680641,
+            "netReturn": -0.028989369087999983
+          }
+        },
+        {
+          "decisionAt": 1779840000000,
+          "pair": "WIN/EUR",
+          "entryAt": 1779840900000,
+          "end": 1779869700000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1779840900000,
+            "availableAt": 1779869700000,
+            "eventBarTs": 1779868800000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.00001718902944,
+            "entryBasis": 0.00001725778555776,
+            "stopPrice": 0.0000169126298466048,
+            "targetPrice": 0.0000178765906176,
+            "exitReference": 0.00001695,
+            "netReturn": -0.026843823625545715
+          }
+        },
+        {
+          "decisionAt": 1779883200000,
+          "pair": "WIN/EUR",
+          "entryAt": 1779884100000,
+          "end": 1779912900000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1779884100000,
+            "availableAt": 1779912900000,
+            "eventBarTs": 1779912000000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.000017118664992,
+            "entryBasis": 0.000017187139651968002,
+            "stopPrice": 0.000016843396858928642,
+            "targetPrice": 0.00001780341159168,
+            "exitReference": 0.00001707,
+            "netReturn": -0.015925848657932895
+          }
+        },
+        {
+          "decisionAt": 1779926400000,
+          "pair": "XLM/EUR",
+          "entryAt": 1779927300000,
+          "end": 1779956100000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1779927300000,
+            "availableAt": 1779956100000,
+            "eventBarTs": 1779930000000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.14464920096,
+            "entryBasis": 0.14522779776384,
+            "stopPrice": 0.1423232418085632,
+            "targetPrice": 0.1504351689984,
+            "exitReference": 0.1504351689984,
+            "netReturn": 0.026354842007968227
+          }
+        },
+        {
+          "decisionAt": 1779969600000,
+          "pair": "XLM/EUR",
+          "entryAt": 1779970500000,
+          "end": 1779999300000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1779970500000,
+            "availableAt": 1779999300000,
+            "eventBarTs": 1779972300000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.15570647136000004,
+            "entryBasis": 0.15632929724544004,
+            "stopPrice": 0.15320271130053123,
+            "targetPrice": 0.16193473021440005,
+            "exitReference": 0.16193473021440005,
+            "netReturn": 0.026354842007968227
+          }
+        },
+        {
+          "decisionAt": 1780012800000,
+          "pair": "XLM/EUR",
+          "entryAt": 1780013700000,
+          "end": 1780042500000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1780013700000,
+            "availableAt": 1780042500000,
+            "eventBarTs": 1780013700000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 0.1774189296,
+            "entryBasis": 0.1781286053184,
+            "stopPrice": 0.17456603321203198,
+            "targetPrice": 0.18451568678400002,
+            "exitReference": 0.17456603321203198,
+            "netReturn": -0.028989369088000094
+          }
+        },
+        {
+          "decisionAt": 1780056000000,
+          "pair": "WIN/EUR",
+          "entryAt": 1780056900000,
+          "end": 1780085700000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1780056900000,
+            "availableAt": 1780085700000,
+            "eventBarTs": 1780084800000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.000016696478304,
+            "entryBasis": 0.000016763264217216,
+            "stopPrice": 0.00001642799893287168,
+            "targetPrice": 0.000017364337436160003,
+            "exitReference": 0.00001682,
+            "netReturn": -0.005819340585696331
+          }
+        },
+        {
+          "decisionAt": 1780099200000,
+          "pair": "XLM/EUR",
+          "entryAt": 1780100100000,
+          "end": 1780128900000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1780100100000,
+            "availableAt": 1780128900000,
+            "eventBarTs": 1780103700000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.2266740432,
+            "entryBasis": 0.22758073937280002,
+            "stopPrice": 0.22302912458534402,
+            "targetPrice": 0.23574100492800001,
+            "exitReference": 0.23574100492800001,
+            "netReturn": 0.026354842007968005
+          }
+        },
+        {
+          "decisionAt": 1780142400000,
+          "pair": "TRX/EUR",
+          "entryAt": 1780143300000,
+          "end": 1780172100000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "8e77fa1aa9e78aa4348b3a7c40cc690156dff42253771dfceed7bf1edf9055d7",
+            "entryAt": 1780143300000,
+            "availableAt": 1780172100000,
+            "eventBarTs": 1780171200000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.29633484672000004,
+            "entryBasis": 0.29752018610688,
+            "stopPrice": 0.2915697823847424,
+            "targetPrice": 0.30818824058880007,
+            "exitReference": 0.2976,
+            "netReturn": -0.008907022545650234
+          }
+        }
+      ],
+      "policies": {
+        "ungated": {
+          "selected": 20,
+          "unknown": 0,
+          "meanPerClock": -0.005576782162451455
+        },
+        "btc": {
+          "selected": 8,
+          "unknown": 0,
+          "meanPerClock": -0.0042882139823958
+        },
+        "breadth": {
+          "selected": 7,
+          "unknown": 0,
+          "meanPerClock": -0.005310760345541871
+        },
+        "cash": {
+          "selected": 0,
+          "unknown": 0,
+          "meanPerClock": 0
+        }
+      },
+      "changedBarrierOutcomes": 1
+    },
+    {
+      "name": "one-more-bar",
+      "costMultiplier": 1,
+      "extraDelayBars": 1,
+      "target": {
+        "dataScope": "df5ed748ced1b3730c976d79c1542adea04b8d46fb08b611468da75047e290e4",
+        "horizonBars": 32,
+        "stopLossPct": 0.02,
+        "takeProfitPct": 0.04,
+        "costs": {
+          "feeRate": 0.001,
+          "spreadBps": 10,
+          "slippageBps": 8
+        }
+      },
+      "rows": [
+        {
+          "decisionAt": 1779321600000,
+          "pair": "SUI/EUR",
+          "entryAt": 1779323400000,
+          "end": 1779352200000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779323400000,
+            "availableAt": 1779352200000,
+            "eventBarTs": 1779329700000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.9396202953599998,
+            "entryBasis": 0.9405599156553597,
+            "stopPrice": 0.9217487173422525,
+            "targetPrice": 0.9772051071743998,
+            "exitReference": 0.9772051071743998,
+            "netReturn": 0.0365731943896106
+          }
+        },
+        {
+          "decisionAt": 1779364800000,
+          "pair": "WIN/EUR",
+          "entryAt": 1779366600000,
+          "end": 1779395400000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779366600000,
+            "availableAt": 1779395400000,
+            "eventBarTs": 1779394500000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.000016861898736,
+            "entryBasis": 0.000016878760634735996,
+            "stopPrice": 0.000016541185422041277,
+            "targetPrice": 0.00001753637468544,
+            "exitReference": 0.00001701,
+            "netReturn": 0.005459244162179466
+          }
+        },
+        {
+          "decisionAt": 1779408000000,
+          "pair": "BCH/EUR",
+          "entryAt": 1779409800000,
+          "end": 1779438600000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779409800000,
+            "availableAt": 1779438600000,
+            "eventBarTs": 1779437700000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 327.1248406799999,
+            "entryBasis": 327.4519655206799,
+            "stopPrice": 320.9029262102663,
+            "targetPrice": 340.2098343071999,
+            "exitReference": 327.5,
+            "netReturn": -0.002151945860393467
+          }
+        },
+        {
+          "decisionAt": 1779451200000,
+          "pair": "DOT/EUR",
+          "entryAt": 1779453000000,
+          "end": 1779481800000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779453000000,
+            "availableAt": 1779481800000,
+            "eventBarTs": 1779474600000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 1.1444863571999997,
+            "entryBasis": 1.1456308435571996,
+            "stopPrice": 1.1227182266860556,
+            "targetPrice": 1.1902658114879998,
+            "exitReference": 1.1227182266860556,
+            "netReturn": -0.022252334391999917
+          }
+        },
+        {
+          "decisionAt": 1779494400000,
+          "pair": "ETH/EUR",
+          "entryAt": 1779496200000,
+          "end": 1779525000000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779496200000,
+            "availableAt": 1779525000000,
+            "eventBarTs": 1779522300000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 1783.5963765119998,
+            "entryBasis": 1785.3799728885115,
+            "stopPrice": 1749.6723734307411,
+            "targetPrice": 1854.94023157248,
+            "exitReference": 1749.6723734307411,
+            "netReturn": -0.02225233439200003
+          }
+        },
+        {
+          "decisionAt": 1779537600000,
+          "pair": "ICP/EUR",
+          "entryAt": 1779539400000,
+          "end": 1779568200000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779539400000,
+            "availableAt": 1779568200000,
+            "eventBarTs": 1779559200000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 2.1377763539999997,
+            "entryBasis": 2.1399141303539992,
+            "stopPrice": 2.0971158477469194,
+            "targetPrice": 2.2232874081599996,
+            "exitReference": 2.2232874081599996,
+            "netReturn": 0.0365731943896106
+          }
+        },
+        {
+          "decisionAt": 1779580800000,
+          "pair": "ETH/EUR",
+          "entryAt": 1779582600000,
+          "end": 1779611400000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779582600000,
+            "availableAt": 1779611400000,
+            "eventBarTs": 1779610500000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 1823.3980674119996,
+            "entryBasis": 1825.2214654794113,
+            "stopPrice": 1788.7170361698231,
+            "targetPrice": 1896.3339901084796,
+            "exitReference": 1825.94,
+            "netReturn": -0.00190553539806948
+          }
+        },
+        {
+          "decisionAt": 1779624000000,
+          "pair": "SUI/EUR",
+          "entryAt": 1779625800000,
+          "end": 1779654600000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779625800000,
+            "availableAt": 1779654600000,
+            "eventBarTs": 1779632100000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 0.9070780323599998,
+            "entryBasis": 0.9079851103923597,
+            "stopPrice": 0.8898254081845125,
+            "targetPrice": 0.9433611536543999,
+            "exitReference": 0.8898254081845125,
+            "netReturn": -0.02225233439200003
+          }
+        },
+        {
+          "decisionAt": 1779667200000,
+          "pair": "XLM/EUR",
+          "entryAt": 1779669000000,
+          "end": 1779697800000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779669000000,
+            "availableAt": 1779697800000,
+            "eventBarTs": 1779696900000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.12706502075999998,
+            "entryBasis": 0.12719208578075997,
+            "stopPrice": 0.12464824406514477,
+            "targetPrice": 0.13214762159039997,
+            "exitReference": 0.1318,
+            "netReturn": 0.033846431561320056
+          }
+        },
+        {
+          "decisionAt": 1779710400000,
+          "pair": "ICP/EUR",
+          "entryAt": 1779712200000,
+          "end": 1779741000000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779712200000,
+            "availableAt": 1779741000000,
+            "eventBarTs": 1779740100000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 2.2909753151999994,
+            "entryBasis": 2.293266290515199,
+            "stopPrice": 2.247400964704895,
+            "targetPrice": 2.3826143278079996,
+            "exitReference": 2.342,
+            "netReturn": 0.018903644172200362
+          }
+        },
+        {
+          "decisionAt": 1779753600000,
+          "pair": "BCH/EUR",
+          "entryAt": 1779755400000,
+          "end": 1779784200000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779755400000,
+            "availableAt": 1779784200000,
+            "eventBarTs": 1779783300000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 299.9895998399999,
+            "entryBasis": 300.2895894398399,
+            "stopPrice": 294.28379765104313,
+            "targetPrice": 311.98918383359995,
+            "exitReference": 300.4,
+            "netReturn": -0.0019314651602870825
+          }
+        },
+        {
+          "decisionAt": 1779796800000,
+          "pair": "APT/EUR",
+          "entryAt": 1779798600000,
+          "end": 1779827400000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779798600000,
+            "availableAt": 1779827400000,
+            "eventBarTs": 1779816600000,
+            "outcome": "stop",
+            "execution": "gap-open",
+            "entryFill": 0.8541092411999998,
+            "entryBasis": 0.8549633504411996,
+            "stopPrice": 0.8378640834323756,
+            "targetPrice": 0.8882736108479998,
+            "exitReference": 0.828,
+            "netReturn": -0.033763252141162936
+          }
+        },
+        {
+          "decisionAt": 1779840000000,
+          "pair": "WIN/EUR",
+          "entryAt": 1779841800000,
+          "end": 1779870600000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779841800000,
+            "availableAt": 1779870600000,
+            "eventBarTs": 1779869700000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.000017132249844,
+            "entryBasis": 0.000017149382093843996,
+            "stopPrice": 0.000016806394451967117,
+            "targetPrice": 0.00001781753983776,
+            "exitReference": 0.00001695,
+            "netReturn": -0.013897776859817745
+          }
+        },
+        {
+          "decisionAt": 1779883200000,
+          "pair": "WIN/EUR",
+          "entryAt": 1779885000000,
+          "end": 1779913800000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779885000000,
+            "availableAt": 1779913800000,
+            "eventBarTs": 1779912900000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.000017052145812,
+            "entryBasis": 0.000017069197957811996,
+            "stopPrice": 0.000016727813998655756,
+            "targetPrice": 0.00001773423164448,
+            "exitReference": 0.00001707,
+            "netReturn": -0.0022514207014868726
+          }
+        },
+        {
+          "decisionAt": 1779926400000,
+          "pair": "XLM/EUR",
+          "entryAt": 1779928200000,
+          "end": 1779957000000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779928200000,
+            "availableAt": 1779957000000,
+            "eventBarTs": 1779933600000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.14578933823999998,
+            "entryBasis": 0.14593512757823995,
+            "stopPrice": 0.14301642502667516,
+            "targetPrice": 0.1516209117696,
+            "exitReference": 0.1516209117696,
+            "netReturn": 0.03657319438961082
+          }
+        },
+        {
+          "decisionAt": 1779969600000,
+          "pair": "XLM/EUR",
+          "entryAt": 1779971400000,
+          "end": 1780000200000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1779971400000,
+            "availableAt": 1780000200000,
+            "eventBarTs": 1779972300000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.15690377267999997,
+            "entryBasis": 0.15706067645267996,
+            "stopPrice": 0.15391946292362635,
+            "targetPrice": 0.1631799235872,
+            "exitReference": 0.1631799235872,
+            "netReturn": 0.0365731943896106
+          }
+        },
+        {
+          "decisionAt": 1780012800000,
+          "pair": "XLM/EUR",
+          "entryAt": 1780014600000,
+          "end": 1780043400000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1780014600000,
+            "availableAt": 1780043400000,
+            "eventBarTs": 1780015500000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 0.17412613955999998,
+            "entryBasis": 0.17430026569955995,
+            "stopPrice": 0.17081426038556874,
+            "targetPrice": 0.18109118514239997,
+            "exitReference": 0.17081426038556874,
+            "netReturn": -0.02225233439200003
+          }
+        },
+        {
+          "decisionAt": 1780056000000,
+          "pair": "WIN/EUR",
+          "entryAt": 1780057800000,
+          "end": 1780086600000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1780057800000,
+            "availableAt": 1780086600000,
+            "eventBarTs": 1780085700000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.000016631599643999992,
+            "entryBasis": 0.00001664823124364399,
+            "stopPrice": 0.00001631526661877111,
+            "targetPrice": 0.000017296863629759993,
+            "exitReference": 0.00001682,
+            "netReturn": 0.007995524670455945
+          }
+        },
+        {
+          "decisionAt": 1780099200000,
+          "pair": "XLM/EUR",
+          "entryAt": 1780101000000,
+          "end": 1780129800000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1780101000000,
+            "availableAt": 1780129800000,
+            "eventBarTs": 1780103700000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.22669441055999995,
+            "entryBasis": 0.22692110497055992,
+            "stopPrice": 0.2223826828711487,
+            "targetPrice": 0.23576218698239995,
+            "exitReference": 0.23576218698239995,
+            "netReturn": 0.036573194389610375
+          }
+        },
+        {
+          "decisionAt": 1780142400000,
+          "pair": "TRX/EUR",
+          "entryAt": 1780144200000,
+          "end": 1780173000000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "933805e550b135109fafcaa9e61748edbe2098d281bf998459c2d178a2d8bdc2",
+            "entryAt": 1780144200000,
+            "availableAt": 1780173000000,
+            "eventBarTs": 1780172100000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.29508322787999997,
+            "entryBasis": 0.29537831110787993,
+            "stopPrice": 0.28947074488572233,
+            "targetPrice": 0.30688655699519996,
+            "exitReference": 0.2976,
+            "netReturn": 0.005205916058333981
+          }
+        }
+      ],
+      "policies": {
+        "ungated": {
+          "selected": 20,
+          "unknown": 0,
+          "meanPerClock": 0.00546829994416626
+        },
+        "btc": {
+          "selected": 8,
+          "unknown": 0,
+          "meanPerClock": 0.0012565963403257329
+        },
+        "breadth": {
+          "selected": 7,
+          "unknown": 0,
+          "meanPerClock": -0.00043572523774026983
+        },
+        "cash": {
+          "selected": 0,
+          "unknown": 0,
+          "meanPerClock": 0
+        }
+      },
+      "changedBarrierOutcomes": 2
+    },
+    {
+      "name": "double-cost-and-one-more-bar",
+      "costMultiplier": 2,
+      "extraDelayBars": 1,
+      "target": {
+        "dataScope": "df5ed748ced1b3730c976d79c1542adea04b8d46fb08b611468da75047e290e4",
+        "horizonBars": 32,
+        "stopLossPct": 0.02,
+        "takeProfitPct": 0.04,
+        "costs": {
+          "feeRate": 0.002,
+          "spreadBps": 20,
+          "slippageBps": 16
+        }
+      },
+      "rows": [
+        {
+          "decisionAt": 1779321600000,
+          "pair": "SUI/EUR",
+          "entryAt": 1779323400000,
+          "end": 1779352200000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779323400000,
+            "availableAt": 1779352200000,
+            "eventBarTs": 1779329700000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.94084134144,
+            "entryBasis": 0.94272302412288,
+            "stopPrice": 0.9238685636404224,
+            "targetPrice": 0.9784749950976,
+            "exitReference": 0.9784749950976,
+            "netReturn": 0.03315675516167671
+          }
+        },
+        {
+          "decisionAt": 1779364800000,
+          "pair": "WIN/EUR",
+          "entryAt": 1779366600000,
+          "end": 1779395400000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779366600000,
+            "availableAt": 1779395400000,
+            "eventBarTs": 1779394500000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.000016883810943999998,
+            "entryBasis": 0.000016917578565888,
+            "stopPrice": 0.00001657922699457024,
+            "targetPrice": 0.000017559163381759997,
+            "exitReference": 0.00001701,
+            "netReturn": 0.0008447454595434944
+          }
+        },
+        {
+          "decisionAt": 1779408000000,
+          "pair": "BCH/EUR",
+          "entryAt": 1779409800000,
+          "end": 1779438600000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779409800000,
+            "availableAt": 1779438600000,
+            "eventBarTs": 1779437700000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 327.54994272,
+            "entryBasis": 328.20504260544,
+            "stopPrice": 321.64094175333116,
+            "targetPrice": 340.6519404288,
+            "exitReference": 327.5,
+            "netReturn": -0.006731513434106495
+          }
+        },
+        {
+          "decisionAt": 1779451200000,
+          "pair": "DOT/EUR",
+          "entryAt": 1779453000000,
+          "end": 1779481800000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779453000000,
+            "availableAt": 1779481800000,
+            "eventBarTs": 1779472800000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 1.1459736288,
+            "entryBasis": 1.1482655760576,
+            "stopPrice": 1.1253002645364478,
+            "targetPrice": 1.191812573952,
+            "exitReference": 1.1253002645364478,
+            "netReturn": -0.024501339136000166
+          }
+        },
+        {
+          "decisionAt": 1779494400000,
+          "pair": "ETH/EUR",
+          "entryAt": 1779496200000,
+          "end": 1779525000000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779496200000,
+            "availableAt": 1779525000000,
+            "eventBarTs": 1779522300000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 1785.914178048,
+            "entryBasis": 1789.4860064040959,
+            "stopPrice": 1753.696286276014,
+            "targetPrice": 1857.35074516992,
+            "exitReference": 1753.696286276014,
+            "netReturn": -0.024501339135999944
+          }
+        },
+        {
+          "decisionAt": 1779537600000,
+          "pair": "ICP/EUR",
+          "entryAt": 1779539400000,
+          "end": 1779568200000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779539400000,
+            "availableAt": 1779568200000,
+            "eventBarTs": 1779559200000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 2.1405544159999996,
+            "entryBasis": 2.1448355248319997,
+            "stopPrice": 2.1019388143353597,
+            "targetPrice": 2.22617659264,
+            "exitReference": 2.22617659264,
+            "netReturn": 0.03315675516167671
+          }
+        },
+        {
+          "decisionAt": 1779580800000,
+          "pair": "ETH/EUR",
+          "entryAt": 1779582600000,
+          "end": 1779611400000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779582600000,
+            "availableAt": 1779611400000,
+            "eventBarTs": 1779610500000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 1825.767591648,
+            "entryBasis": 1829.419126831296,
+            "stopPrice": 1792.83074429467,
+            "targetPrice": 1898.79829531392,
+            "exitReference": 1825.94,
+            "netReturn": -0.006486233858753243
+          }
+        },
+        {
+          "decisionAt": 1779624000000,
+          "pair": "SUI/EUR",
+          "entryAt": 1779625800000,
+          "end": 1779654600000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779625800000,
+            "availableAt": 1779654600000,
+            "eventBarTs": 1779632100000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 0.90825678944,
+            "entryBasis": 0.91007330301888,
+            "stopPrice": 0.8918718369585024,
+            "targetPrice": 0.9445870610176,
+            "exitReference": 0.8918718369585024,
+            "netReturn": -0.024501339136000055
+          }
+        },
+        {
+          "decisionAt": 1779667200000,
+          "pair": "XLM/EUR",
+          "entryAt": 1779669000000,
+          "end": 1779697800000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779669000000,
+            "availableAt": 1779697800000,
+            "eventBarTs": 1779696900000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.12723014304,
+            "entryBasis": 0.12748460332608,
+            "stopPrice": 0.1249349112595584,
+            "targetPrice": 0.1323193487616,
+            "exitReference": 0.1318,
+            "netReturn": 0.029101651457239308
+          }
+        },
+        {
+          "decisionAt": 1779710400000,
+          "pair": "ICP/EUR",
+          "entryAt": 1779712200000,
+          "end": 1779741000000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779712200000,
+            "availableAt": 1779741000000,
+            "eventBarTs": 1779740100000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 2.2939524607999995,
+            "entryBasis": 2.2985403657215997,
+            "stopPrice": 2.252569558407168,
+            "targetPrice": 2.3857105592319994,
+            "exitReference": 2.342,
+            "netReturn": 0.014227443151181518
+          }
+        },
+        {
+          "decisionAt": 1779753600000,
+          "pair": "BCH/EUR",
+          "entryAt": 1779755400000,
+          "end": 1779784200000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779755400000,
+            "availableAt": 1779784200000,
+            "eventBarTs": 1779783300000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 300.37943936,
+            "entryBasis": 300.98019823872,
+            "stopPrice": 294.96059427394556,
+            "targetPrice": 312.3946169344,
+            "exitReference": 300.4,
+            "netReturn": -0.006512044617783985
+          }
+        },
+        {
+          "decisionAt": 1779796800000,
+          "pair": "APT/EUR",
+          "entryAt": 1779798600000,
+          "end": 1779827400000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779798600000,
+            "availableAt": 1779827400000,
+            "eventBarTs": 1779816600000,
+            "outcome": "stop",
+            "execution": "gap-open",
+            "entryFill": 0.8552191647999999,
+            "entryBasis": 0.8569296031296,
+            "stopPrice": 0.8397910110670079,
+            "targetPrice": 0.8894279313919999,
+            "exitReference": 0.828,
+            "netReturn": -0.03819774140099308
+          }
+        },
+        {
+          "decisionAt": 1779840000000,
+          "pair": "WIN/EUR",
+          "entryAt": 1779841800000,
+          "end": 1779870600000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779841800000,
+            "availableAt": 1779870600000,
+            "eventBarTs": 1779869700000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.000017154513376,
+            "entryBasis": 0.000017188822402752,
+            "stopPrice": 0.00001684504595469696,
+            "targetPrice": 0.000017840693911040003,
+            "exitReference": 0.00001695,
+            "netReturn": -0.018423437602177017
+          }
+        },
+        {
+          "decisionAt": 1779883200000,
+          "pair": "WIN/EUR",
+          "entryAt": 1779885000000,
+          "end": 1779913800000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779885000000,
+            "availableAt": 1779913800000,
+            "eventBarTs": 1779912900000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.000017074305248000002,
+            "entryBasis": 0.000017108453858496002,
+            "stopPrice": 0.000016766284781326083,
+            "targetPrice": 0.00001775727745792,
+            "exitReference": 0.00001707,
+            "netReturn": -0.0068305317410064514
+          }
+        },
+        {
+          "decisionAt": 1779926400000,
+          "pair": "XLM/EUR",
+          "entryAt": 1779928200000,
+          "end": 1779957000000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779928200000,
+            "availableAt": 1779957000000,
+            "eventBarTs": 1779933600000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.14597879296000002,
+            "entryBasis": 0.14627075054592,
+            "stopPrice": 0.14334533553500162,
+            "targetPrice": 0.1518179446784,
+            "exitReference": 0.1518179446784,
+            "netReturn": 0.03315675516167671
+          }
+        },
+        {
+          "decisionAt": 1779969600000,
+          "pair": "XLM/EUR",
+          "entryAt": 1779971400000,
+          "end": 1780000200000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1779971400000,
+            "availableAt": 1780000200000,
+            "eventBarTs": 1779972300000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.15710767072,
+            "entryBasis": 0.15742188606144,
+            "stopPrice": 0.1542734483402112,
+            "targetPrice": 0.16339197754880003,
+            "exitReference": 0.16339197754880003,
+            "netReturn": 0.03315675516167671
+          }
+        },
+        {
+          "decisionAt": 1780012800000,
+          "pair": "XLM/EUR",
+          "entryAt": 1780014600000,
+          "end": 1780043400000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1780014600000,
+            "availableAt": 1780043400000,
+            "eventBarTs": 1780015500000,
+            "outcome": "stop",
+            "execution": "barrier",
+            "entryFill": 0.17435241824,
+            "entryBasis": 0.17470112307648,
+            "stopPrice": 0.1712071006149504,
+            "targetPrice": 0.1813265149696,
+            "exitReference": 0.1712071006149504,
+            "netReturn": -0.024501339136000055
+          }
+        },
+        {
+          "decisionAt": 1780056000000,
+          "pair": "WIN/EUR",
+          "entryAt": 1780057800000,
+          "end": 1780086600000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1780057800000,
+            "availableAt": 1780086600000,
+            "eventBarTs": 1780085700000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.000016653212575999997,
+            "entryBasis": 0.000016686519001151998,
+            "stopPrice": 0.000016352788621128956,
+            "targetPrice": 0.000017319341079039996,
+            "exitReference": 0.00001682,
+            "netReturn": 0.003369385850944928
+          }
+        },
+        {
+          "decisionAt": 1780099200000,
+          "pair": "XLM/EUR",
+          "entryAt": 1780101000000,
+          "end": 1780129800000,
+          "actions": {
+            "ungated": true,
+            "btc": false,
+            "breadth": false,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1780101000000,
+            "availableAt": 1780129800000,
+            "eventBarTs": 1780103700000,
+            "outcome": "target",
+            "execution": "barrier",
+            "entryFill": 0.22698900224,
+            "entryBasis": 0.22744298024447998,
+            "stopPrice": 0.22289412063959038,
+            "targetPrice": 0.2360685623296,
+            "exitReference": 0.2360685623296,
+            "netReturn": 0.03315675516167671
+          }
+        },
+        {
+          "decisionAt": 1780142400000,
+          "pair": "TRX/EUR",
+          "entryAt": 1780144200000,
+          "end": 1780173000000,
+          "actions": {
+            "ungated": true,
+            "btc": true,
+            "breadth": true,
+            "cash": false
+          },
+          "outcome": {
+            "version": "first-barrier-outcome-v1",
+            "targetHash": "0d7446868b085e5991f7d433a01f003aafe5715c55076874a8fe29eb1df6b766",
+            "entryAt": 1780144200000,
+            "availableAt": 1780173000000,
+            "eventBarTs": 1780172100000,
+            "outcome": "timeout",
+            "execution": "horizon-close",
+            "entryFill": 0.29546669152,
+            "entryBasis": 0.29605762490304,
+            "stopPrice": 0.2901364724049792,
+            "targetPrice": 0.3072853591808,
+            "exitReference": 0.2976,
+            "netReturn": 0.0005925799907955387
+          }
+        }
+      ],
+      "policies": {
+        "ungated": {
+          "selected": 20,
+          "unknown": 0,
+          "meanPerClock": 0.0016366361259633922
+        },
+        "btc": {
+          "selected": 8,
+          "unknown": 0,
+          "meanPerClock": -0.00029407417864661943
+        },
+        "breadth": {
+          "selected": 7,
+          "unknown": 0,
+          "meanPerClock": -0.001749156751508585
+        },
+        "cash": {
+          "selected": 0,
+          "unknown": 0,
+          "meanPerClock": 0
+        }
+      },
+      "changedBarrierOutcomes": 2
+    }
+  ],
+  "scope": "Descriptive stress on consumed May labels. Delay scenarios shift entry and its full 32-bar path by one 15-minute bar, not a latency estimate. All choices and gates are fixed. Spread, slippage and fee scale together. No portfolio execution, observed depth, new holdout or strategy selection.",
+  "profitabilityEstablished": false
+}

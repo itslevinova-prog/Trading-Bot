@@ -1,0 +1,160 @@
+{
+  "version": "may-evidence-source-independent-v1",
+  "verifiedAt": "2026-11-03T20:30:11.746013+00:00",
+  "protocolFile": "docs/historical-evidence-post-april-protocol-v1.json",
+  "protocolSha256": "03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54",
+  "verifierSha256": "0551d09edc27d5a859113cbb166d1b7e4a9ac00abc1d112c15020e5de95765fe",
+  "markets": 20,
+  "barsIncludingWarmup": 74880,
+  "rawPagesVerified": 80,
+  "networkRequestsReserved": 80,
+  "role": "validation-source-only",
+  "modelTrained": false,
+  "economicOutcomesEvaluated": false,
+  "juneLoaded": false,
+  "julyLoaded": false,
+  "files": [
+    {
+      "pair": "BTC/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/BTC-EUR.json.gz",
+      "sha256": "f8218191b3e26dd03e38c6638b4f1153fcd2fd558104a1c364e232c800bce531",
+      "bars": 3744,
+      "pages": 4
+    },
+    {
+      "pair": "ETH/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/ETH-EUR.json.gz",
+      "sha256": "dfdc62e55387cacbac98de2de8653e7f66f81acd9cc76b0f5e33b5b4618fe02b",
+      "bars": 3744,
+      "pages": 4
+    },
+    {
+      "pair": "XRP/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/XRP-EUR.json.gz",
+      "sha256": "c2c228a130e6acb1d74ab875b6271125958fc8c4c052dc44c38080f48944ff8a",
+      "bars": 3744,
+      "pages": 4
+    },
+    {
+      "pair": "SOL/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/SOL-EUR.json.gz",
+      "sha256": "b214475e234e002cc758e52850f11baedd20cd3cc6a15d4f04143a531c893cab",
+      "bars": 3744,
+      "pages": 4
+    },
+    {
+      "pair": "PEPE/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/PEPE-EUR.json.gz",
+      "sha256": "c2e4caa1717ed6426bbfdd096e651adb8249cfb586955b3b60999d22646ee537",
+      "bars": 3744,
+      "pages": 4
+    },
+    {
+      "pair": "BNB/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/BNB-EUR.json.gz",
+      "sha256": "2069540821c2027b393bc1304b5d19110d49c6c8b1baaa68b280032f46035863",
+      "bars": 3744,
+      "pages": 4
+    },
+    {
+      "pair": "ADA/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/ADA-EUR.json.gz",
+      "sha256": "b8b477737cd01bdc4200b11e4db82881f6c1e1e14eeb7a13bf2f38935ddeb470",
+      "bars": 3744,
+      "pages": 4
+    },
+    {
+      "pair": "TRX/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/TRX-EUR.json.gz",
+      "sha256": "707f2f25377a81f1b1d9926c9fc6596fe7323ceb4e24c905c46755dcf5d0c60f",
+      "bars": 3744,
+      "pages": 4
+    },
+    {
+      "pair": "DOGE/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/DOGE-EUR.json.gz",
+      "sha256": "22f7b7fec761447ce10e6dbbbe3a2308c3e3813d7715304a0a1405c001e0f6ff",
+      "bars": 3744,
+      "pages": 4
+    },
+    {
+      "pair": "DOT/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/DOT-EUR.json.gz",
+      "sha256": "b6aa92dea05e6543d5263a97195d6426cf4cbbc8e6d2d392187e1b29c35f90df",
+      "bars": 3744,
+      "pages": 4
+    },
+    {
+      "pair": "XLM/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/XLM-EUR.json.gz",
+      "sha256": "30d9bca56a7e3f00d89bd53e9e649d7a968703825cc2d0cd5afdd5725a341f99",
+      "bars": 3744,
+      "pages": 4
+    },
+    {
+      "pair": "WIN/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/WIN-EUR.json.gz",
+      "sha256": "f29e3a0dcb887d38c5dfbe75a777086a1d6ff9b173c19873106fb382dda95b42",
+      "bars": 3744,
+      "pages": 4
+    },
+    {
+      "pair": "SUI/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/SUI-EUR.json.gz",
+      "sha256": "982411a02aa2c950faf2df60f88d0cbcf0d3c7f9de94f4ee6ff7a100fe8a5450",
+      "bars": 3744,
+      "pages": 4
+    },
+    {
+      "pair": "LINK/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/LINK-EUR.json.gz",
+      "sha256": "990271b3925bed52300a768fb33588bd1c65773e2404fc7d97de6d387a2ee64a",
+      "bars": 3744,
+      "pages": 4
+    },
+    {
+      "pair": "LTC/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/LTC-EUR.json.gz",
+      "sha256": "475ee01fc0694e0a374070c475a962b962e9faf489cf7a02f7f97b4b37803dfe",
+      "bars": 3744,
+      "pages": 4
+    },
+    {
+      "pair": "BCH/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/BCH-EUR.json.gz",
+      "sha256": "0acbde8770c1ed52086c554bb21c39611bad16365b3f57f11d25abc4540d025b",
+      "bars": 3744,
+      "pages": 4
+    },
+    {
+      "pair": "ICP/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/ICP-EUR.json.gz",
+      "sha256": "8ede32397b3c3ed6a91d25653d01d1dfe2aac1e34fddb035cff63f5ba120a72f",
+      "bars": 3744,
+      "pages": 4
+    },
+    {
+      "pair": "AVAX/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/AVAX-EUR.json.gz",
+      "sha256": "179c4a05ee669d245d89eca933f90500b3f5309cbcabe038b5207898de8c4069",
+      "bars": 3744,
+      "pages": 4
+    },
+    {
+      "pair": "SHIB/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/SHIB-EUR.json.gz",
+      "sha256": "8e7ce4b4e6502944f37c89f255ffa00271bb0fa7e0f25f10cbfe838539a7850b",
+      "bars": 3744,
+      "pages": 4
+    },
+    {
+      "pair": "APT/EUR",
+      "file": "data/historical-evidence-post-april-v1/03b2a544bc280ec9e17bdcfb5e7387f632fce96bc9f42663fa274759b59a3b54/2026-05/APT-EUR.json.gz",
+      "sha256": "0f329a6acee8d780cd7ad8d5ab2a00dad4ee664295fd5ffd8dfc1ba84e7a18af",
+      "bars": 3744,
+      "pages": 4
+    }
+  ],
+  "profitabilityEstablished": false,
+  "scope": "Independent original raw page checksum/UTC15mgrid/OHLCV/normalized row reconciliation, including8daywarmup; current survivor universe/metadata and later retrieval do not establish historical tradability or first receipt. No labels, return summaries, training or strategy selection computed."
+}

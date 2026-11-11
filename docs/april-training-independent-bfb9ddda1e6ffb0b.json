@@ -1,0 +1,25 @@
+{
+  "version": "april-training-independent-v1",
+  "verifiedAt": "2026-11-03T20:40:01.932349+00:00",
+  "report": {
+    "path": "docs/training-through-april-671bd04d6f9f77d2.json",
+    "hash": "671bd04d6f9f77d257527d70448a1ca12577746cf37440fed97f83c589aa49b4"
+  },
+  "reportFileSha256": "68370d7c14e3195eeeee9cf063068c8f17741df4f9c9fbb132aceda568b85677",
+  "verifierSha256": "2d1ca3075b50b9a29960854504f8a014fac4f591f1df03d9e61ab759922cb92f",
+  "oldFeatureAndPayoffRowsExactlyMatched": 7280,
+  "aprilRawPagesVerified": 80,
+  "aprilRawBarsVerified": 72960,
+  "aprilBarrierLabelsVerified": 1200,
+  "aprilClasses": {
+    "target": 32,
+    "timeout": 976,
+    "stop": 192
+  },
+  "modelFitted": false,
+  "mayLabelsRead": false,
+  "juneLoaded": false,
+  "julyLoaded": false,
+  "profitabilityEstablished": false,
+  "scope": "Independent original April raw-page/normalized reconstruction and80digitDecimal fixed barrier/fee/slippage/horizon labels; exact old7280feature/payoff preservation. Historical idealized targets are not executable PNL or independent samples."
+}

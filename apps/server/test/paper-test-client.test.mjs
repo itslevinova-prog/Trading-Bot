@@ -1,0 +1,4 @@
+import {afterEach,expect,test,vi} from 'vitest';import {post} from '../../web/src/api.js';
+afterEach(()=>vi.unstubAllGlobals());
+test('dashboard bodyless actions send a valid JSON object instead of empty application/json',async()=>{const fetch=vi.fn(async(_url,options)=>{expect(options.headers).toEqual({'Content-Type':'application/json'});expect(options.body).toBe('{}');return {ok:true,json:async()=>({checked:true})};});vi.stubGlobal('fetch',fetch);expect(await post('/paper-test/check')).toEqual({checked:true});await post('/accounts/ai/pause');expect(fetch).toHaveBeenCalledTimes(2);});
+test('dashboard preserves structured server errors for direct user feedback',async()=>{vi.stubGlobal('fetch',async()=>({ok:false,text:async()=>JSON.stringify({error:'Paper-Test zuerst starten.'})}));await expect(post('/paper-test/check')).rejects.toThrow('Paper-Test zuerst starten.');});

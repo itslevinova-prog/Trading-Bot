@@ -1,0 +1,10 @@
+{
+  "path": "docs/policy-inputs-27fab3ba239bc6c7.json",
+  "key": "27fab3ba239bc6c78800b0b38344dd7a3006054d0d46d452035cb442a498e402",
+  "factsHash": "ea2bb7642d52d94f9e99742930aa4fe875f5c95ae1ef10624609a834dc0de66d",
+  "moduleHash": "e475457f65a4201cc927c2a9e7cf2ac8f81145a256aa7bb7a51799ea0a904a30",
+  "sourceReportHash": "7e873da81fec4c98e37988a4ce02d0b04ad8098a2fe73bfcd77ba32981597cc4",
+  "sourceLabelFactsHash": "36f127c80f92ffe0fdd2ebccdad6c57adb9a61c78b516d35808c424c04efab0d",
+  "verifiedAt": "2026-10-31T16:12:41.931Z",
+  "modelTrained": false
+}

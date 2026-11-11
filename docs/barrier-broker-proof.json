@@ -1,0 +1,31 @@
+{
+  "verifiedAt": "2026-11-02T14:53:21.351Z",
+  "documentation": "docs/BARRIER-BROKER-COMPARISON.md",
+  "report": "docs/barrier-broker-study-41357259f1631864.json",
+  "factsHash": "41357259f1631864199767b38b395aba3f2b4db5505c87505549d55a1e0c39a4",
+  "independentVerification": "docs/barrier-broker-verification.json",
+  "alignment": "docs/barrier-label-broker-alignment.json",
+  "buildId": "e0ec7f7af9ac946947a1e8ea94cfd93d373b3d094a0ecc0c142fe18e945dba85",
+  "mainTests": 1238,
+  "offlineTests": 15,
+  "directTests": 16,
+  "rawPaidFillsVerified": 332,
+  "curvePointsVerified": 47232,
+  "signalFeaturesAndPredictionsVerified": 13120,
+  "baselineReturnPct": -8.940894477014783,
+  "ridgeReturnPct": -4.39065250498153,
+  "selectedReturnPct": -0.8745618249965004,
+  "allBeatCash": false,
+  "modelActivated": false,
+  "julyLoaded": false,
+  "independentSamples": null,
+  "profitabilityEstablished": false,
+  "sourceReview": "docs/upstream-research/REVIEW-PASS21.md",
+  "runtimeObservation": "data/barrier-broker-runtime-observation-2026-11-02.json",
+  "sources": {
+    "apps/server/src/research/barrier-broker-provider.ts": "3a57476859e5638aae6b2e8b59711acd87bcc26d9032cd01384ddd3a18f4fd75",
+    "apps/server/test/barrier-broker-provider.test.ts": "efc74100cc42ccb4267bbe177427d523f265bafc70ca6727d8ca461f2fec60e7",
+    "scripts/run-barrier-broker-study.mjs": "28747d1185772d0f6bcc9f862487eae77c4370c288c5873bdc3b365bbc030ae4",
+    "scripts/verify-barrier-broker-study.mjs": "9e729786ea7753a3468887105dd47281874b7810b1b631e3aaac1ab6840e17f7"
+  }
+}

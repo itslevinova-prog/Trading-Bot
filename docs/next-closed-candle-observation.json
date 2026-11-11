@@ -1,0 +1,99 @@
+{
+  "startedAt": "2026-10-31T11:13:26.351Z",
+  "targetClose": 1793445300000,
+  "buildId": "0b5876971d7be8c206e9e7edd3eb4a75fabbe756e595ebfc625cec19fd5993c1",
+  "runId": "8bbd9815-c45f-4a93-a78d-fc01ff8a13ca",
+  "observations": [
+    {
+      "at": 1793445206399,
+      "completeMarkets": 0,
+      "missing": [
+        "BTC/EUR",
+        "ETH/EUR",
+        "PEPE/EUR",
+        "SOL/EUR",
+        "XRP/EUR",
+        "BNB/EUR",
+        "XLM/EUR",
+        "TRX/EUR",
+        "ADA/EUR",
+        "VET/EUR",
+        "SUI/EUR",
+        "DOGE/EUR",
+        "NEAR/EUR",
+        "SHIB/EUR",
+        "LINK/EUR",
+        "POL/EUR",
+        "BCH/EUR",
+        "EGLD/EUR",
+        "LTC/EUR",
+        "WIN/EUR"
+      ],
+      "future": []
+    },
+    {
+      "at": 1793445298112,
+      "completeMarkets": 0,
+      "missing": [
+        "BTC/EUR",
+        "ETH/EUR",
+        "PEPE/EUR",
+        "SOL/EUR",
+        "XRP/EUR",
+        "BNB/EUR",
+        "XLM/EUR",
+        "TRX/EUR",
+        "ADA/EUR",
+        "VET/EUR",
+        "SUI/EUR",
+        "DOGE/EUR",
+        "NEAR/EUR",
+        "SHIB/EUR",
+        "LINK/EUR",
+        "POL/EUR",
+        "BCH/EUR",
+        "EGLD/EUR",
+        "LTC/EUR",
+        "WIN/EUR"
+      ],
+      "future": []
+    },
+    {
+      "at": 1793445299149,
+      "completeMarkets": 0,
+      "missing": [
+        "BTC/EUR",
+        "ETH/EUR",
+        "PEPE/EUR",
+        "SOL/EUR",
+        "XRP/EUR",
+        "BNB/EUR",
+        "XLM/EUR",
+        "TRX/EUR",
+        "ADA/EUR",
+        "VET/EUR",
+        "SUI/EUR",
+        "DOGE/EUR",
+        "NEAR/EUR",
+        "SHIB/EUR",
+        "LINK/EUR",
+        "POL/EUR",
+        "BCH/EUR",
+        "EGLD/EUR",
+        "LTC/EUR",
+        "WIN/EUR"
+      ],
+      "future": []
+    },
+    {
+      "at": 1793445300187,
+      "completeMarkets": 20,
+      "missing": [],
+      "future": []
+    }
+  ],
+  "status": "observed-current-close",
+  "developmentTimeCredited": 0,
+  "scope": "Actual stored public candle availability; no orders/providers, no reconstructed receipt times or independent samples",
+  "finishedAt": "2026-10-31T11:15:00.222Z"
+}

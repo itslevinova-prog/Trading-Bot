@@ -1,0 +1,14 @@
+{
+  "version": "historical-learning-partition-v1",
+  "registeredAt": "2026-10-31T21:47:26.334294+00:00",
+  "scope": "Potential local causal learner only; no external AI/provider, no new fitted model claimed.",
+  "developmentPeriod": "2026-01",
+  "validationPeriod": "2026-04",
+  "lockedTestPeriod": "2026-07",
+  "januaryAlreadyEvaluated": true,
+  "aprilOutcomesNotYetInspected": true,
+  "julyOutcomesNotYetInspected": true,
+  "rule": "July collection may validate timestamps/coverage/source integrity only. Do not evaluate July outcomes until a concrete candidate/model design is frozen using development/validation only. A failed test becomes consumed; never silently reuse as untouched.",
+  "adequacy": "Current programmed mock had zero executed January trades; no policy-PnL learner may be fit on nonexistent labels or invented samples. Assess data adequacy and causal target/availability before any training.",
+  "limitations": "Earlier-period data/selected survivor universe plus strategy design informed by later October2026: no historically deployable WFO claim. No profitable or calibrated learner established."
+}

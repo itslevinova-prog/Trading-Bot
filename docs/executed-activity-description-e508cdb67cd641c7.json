@@ -1,0 +1,136 @@
+{
+  "version": "executed-activity-description-v1",
+  "capture": "docs/public-activity-capture-1297df4a2e853c03.json",
+  "captureHash": "1297df4a2e853c038d09a485b1c18c2d6d0a23672035f8eea397a18e53b076be",
+  "buildId": "3b1460b5e4f169ee760965870c76655d54b684a827be3110b2a707eccc0da83f",
+  "sources": {
+    "apps/server/src/research/public-activity.ts": "ade94f87fc1c0d68f804865823b322bd4674726aab21060181fc7189413cfb2a",
+    "apps/server/dist/research/public-activity.js": "a722e924d07634c52f28123c5f747ba5cd3143132c3903bc15b91ddf99fbb66c",
+    "apps/server/src/research/executed-activity.ts": "8fd753e529c5a9e80dfa1d671b8f79fc04a2fd797de7e16c81e77017b968a05a",
+    "apps/server/dist/research/executed-activity.js": "f65a973602ed9468f2fd603bd0ee327fd4ffdc65ab08fcfca01614da70b12546"
+  },
+  "deriverHash": "15e20b4851374dbe79b735915ff9c237d306a203e8e3b7abf7bd901f6fbc6b91",
+  "summaries": [
+    {
+      "pair": "BTC/EUR",
+      "rawHash": "efbdf075940cc6430b251b90f0bc5e9bf51b357a2d7a0d2a5e18ce6acb14a4c9",
+      "summary": {
+        "version": "executed-activity96-v1",
+        "pair": "BTC/EUR",
+        "closedAt": 1793648700000,
+        "capturedAt": 1793649164077,
+        "sourceComplete": true,
+        "quoteCurrency": "EUR",
+        "scope": "One-venue actual public aggregate executions. Quote turnover and quote/base execution VWAP use retained source fields, not OHLC approximations. Taker imbalance is aggressor participation, not net capital flow, book depth, forecast confidence or profit probability. No-trade/unknown decisions require separate policy and risk validation.",
+        "windows": {
+          "h1": {
+            "from": 1793645100000,
+            "to": 1793648700000,
+            "expectedBars": 4,
+            "complete": true,
+            "reason": null,
+            "baseVolume": 3.72003,
+            "quoteVolume": 255158.6418364,
+            "trades": 1124,
+            "takerBuyBaseShare": 0.29937392978013616,
+            "takerBuyQuoteShare": 0.2994638215012615,
+            "takerQuoteImbalance": -0.401072356997477,
+            "executionVwap": 68590.47960269138
+          },
+          "h4": {
+            "from": 1793634300000,
+            "to": 1793648700000,
+            "expectedBars": 16,
+            "complete": true,
+            "reason": null,
+            "baseVolume": 21.00609,
+            "quoteVolume": 1446386.0404611996,
+            "trades": 5671,
+            "takerBuyBaseShare": 0.3886025433576644,
+            "takerBuyQuoteShare": 0.38893164252651724,
+            "takerQuoteImbalance": -0.22213671494696552,
+            "executionVwap": 68855.55762453648
+          },
+          "h24": {
+            "from": 1793562300000,
+            "to": 1793648700000,
+            "expectedBars": 96,
+            "complete": true,
+            "reason": null,
+            "baseVolume": 104.43968000000001,
+            "quoteVolume": 7250716.836768401,
+            "trades": 31669,
+            "takerBuyBaseShare": 0.44331378648421743,
+            "takerBuyQuoteShare": 0.4438204061567448,
+            "takerQuoteImbalance": -0.11235918768651043,
+            "executionVwap": 69424.9239060135
+          }
+        }
+      }
+    },
+    {
+      "pair": "ETH/EUR",
+      "rawHash": "4e4e3c950f431995f1e998adbf7cac88c8973f81b295c556cccad86d55bf525a",
+      "summary": {
+        "version": "executed-activity96-v1",
+        "pair": "ETH/EUR",
+        "closedAt": 1793648700000,
+        "capturedAt": 1793649164307,
+        "sourceComplete": true,
+        "quoteCurrency": "EUR",
+        "scope": "One-venue actual public aggregate executions. Quote turnover and quote/base execution VWAP use retained source fields, not OHLC approximations. Taker imbalance is aggressor participation, not net capital flow, book depth, forecast confidence or profit probability. No-trade/unknown decisions require separate policy and risk validation.",
+        "windows": {
+          "h1": {
+            "from": 1793645100000,
+            "to": 1793648700000,
+            "expectedBars": 4,
+            "complete": true,
+            "reason": null,
+            "baseVolume": 50.4403,
+            "quoteVolume": 101157.17155,
+            "trades": 746,
+            "takerBuyBaseShare": 0.35026754400747023,
+            "takerBuyQuoteShare": 0.35027581324262524,
+            "takerQuoteImbalance": -0.2994483735147495,
+            "executionVwap": 2005.4831464126898
+          },
+          "h4": {
+            "from": 1793634300000,
+            "to": 1793648700000,
+            "expectedBars": 16,
+            "complete": true,
+            "reason": null,
+            "baseVolume": 409.1761,
+            "quoteVolume": 825847.1555079997,
+            "trades": 4439,
+            "takerBuyBaseShare": 0.24904582647911253,
+            "takerBuyQuoteShare": 0.24874742077017437,
+            "takerQuoteImbalance": -0.5025051584596513,
+            "executionVwap": 2018.31718790027
+          },
+          "h24": {
+            "from": 1793562300000,
+            "to": 1793648700000,
+            "expectedBars": 96,
+            "complete": true,
+            "reason": null,
+            "baseVolume": 1533.3954,
+            "quoteVolume": 3112658.991327001,
+            "trades": 18068,
+            "takerBuyBaseShare": 0.36945447990779157,
+            "takerBuyQuoteShare": 0.3701557875949023,
+            "takerQuoteImbalance": -0.2596884248101954,
+            "executionVwap": 2029.9128270027422
+          }
+        }
+      }
+    }
+  ],
+  "newNetworkRequests": 0,
+  "modelFitted": false,
+  "activeContextChanged": false,
+  "profitabilityEstablished": false,
+  "scope": "Fixed arithmetic1h4h24h descriptions of one192bar public capture. Actual quote/base volumes and taker aggregates, not price-colour proxies. No learned threshold, strategy change, book-depth or future-profit inference.",
+  "factsHash": "e508cdb67cd641c74b9ad323ba7dd07a9dad226d5b6278080c506e280db1ec13",
+  "generatedAt": "2026-11-02T19:56:16.610Z"
+}

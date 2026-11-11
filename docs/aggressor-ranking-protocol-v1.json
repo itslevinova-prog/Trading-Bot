@@ -1,0 +1,35 @@
+{
+  "version": "aggressor-ranking-protocol-v1",
+  "registeredAt": "2026-11-02T20:55:14.198Z",
+  "runnerHash": "7738f2b316612e9159d719bdb6a216a731be60b6e8ed1641e8f664f8cc5c7107",
+  "sources": {
+    "apps/server/src/research/clock-ranking.ts": "71c2a6fbaf54d421bdc3c39b4a81a73176f783173e899f8ee1fdb0aa2a227930",
+    "apps/server/dist/research/clock-ranking.js": "827887963a7a2c855ad98cdb81129e039000a86a891bc43a7ff43a4ea1840320",
+    "apps/server/src/research/local-learning.ts": "5a127d54bdf3faa0f8628bb6baecebc6947af1709c0353693c51e54793fef690",
+    "apps/server/dist/research/local-learning.js": "eebd8828b1f64d20829eb8c8f9383bc99567aea8c5e34ae44d59c4a315af5e16"
+  },
+  "models": "docs/aggressor-ridge-walkforward-9e6096906eea1521.json",
+  "modelsHash": "9e6096906eea152134caed8459188588a1beb4af80cf0a5aff2daf8d4bf5a916",
+  "corpus": "docs/barrier-clock-corpus-3262b4fb3be9b47e.json",
+  "corpusHash": "3262b4fb3be9b47e7edf0954e93d52f85fda6dfedf7159178c440fa6300a7414",
+  "oldRanking": "docs/clock-ranking-audit-b599b7f4d444621d.json",
+  "oldRankingHash": "b599b7f4d444621d8e06bc2cfc6646e396b1997fc8ed94e95db72e095a7dc057",
+  "margin": 0.005,
+  "selection": "One highest strictlyabove-margin forecast per clock, lexical stable ties; outcome-blind existing function",
+  "modes": [
+    "zero",
+    "mean",
+    "ridge",
+    "common",
+    "aggressor",
+    "prior-selected",
+    "extended-selected"
+  ],
+  "scope": "All6560originaltestrows/328clocks/41folds, no dropped bad source clocks or labels",
+  "controls": "Exact entire original zero/mean/ridge/selected testchoice records",
+  "diagnostic": "Forecast optimism and costed opportunity labels/bounds, common8Dversus9D matched-clock changes; no portfolio/independent-trial/probability inference",
+  "newFit": false,
+  "newSelectorChosen": false,
+  "parameterSearch": false,
+  "julyLoaded": false
+}
