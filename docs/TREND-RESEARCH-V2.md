@@ -1,0 +1,39 @@
+# H-025 v2: Entwicklungs-Backtest mit Mengenregel-Annahmen
+
+## Getrennte Variante, getrennte Belege
+
+Der manuelle Research-Workflow bietet zusätzlich `run_trend_v2=false` an. Für den vollständigen Lauf setzen: `run_trend_v2=true`, `symbols` leer, `from=2020-01`, `to=2023-12`, `intervals=1d,1h`. `run_trend` und `run_spike` können unabhängig ausgeschaltet werden. Abweichende v2-Eingaben werden vor dem Download abgewiesen. Der Workflow lädt das vollständige historische USDT-Archiv, einschließlich früherer Coins; er schneidet es nicht auf heute gelistete Märkte oder Top-N ab.
+
+Der Modus verwendet `trend-vol-target-v1-binance-lots-v2` aus `engine-v2.ts` und die gemeinsame exakte Dezimalrundung aus `lots.ts`. Es ist dieselbe bereits registrierte zweite H-025-Variante, kein neuer Parametervergleich: `variantsTested` bleibt **2**. Die alte Ganzcoin-Variante, ihre Registrierung, CLI und Ergebnisse werden nicht verändert.
+
+Lokal nach vorhandenem vollständigem Entwicklungsarchiv:
+
+```bash
+LIVE_ENABLED=false AI_ALLOW_REMOTE=false pnpm --filter @paper/shared build
+LIVE_ENABLED=false AI_ALLOW_REMOTE=false pnpm --filter @paper/server exec tsx src/backtest/trend-research-v2-cli.ts
+```
+
+Ergebnisse liegen ausschließlich unter `data/trend-research-v2/`: `report.json` mit Ledger, Kennzahlen, Rejections, Universum, Konfiguration, Code- und Daten-Fingerprints, aktuellem Exchange-Snapshot und dessen Zeitpunkt/Hash sowie `summary.md`. Der bisherige Ordner `data/trend-research/` bleibt unangetastet. Der Workflow sichert eigene v2-Artefakte und postet nach erfolgreichem Lauf den datenschutzgeprüften v2-Bericht in Issue #3. In dieser Implementierungssession wird kein Actions-Forschungslauf ausgelöst und kein Forward-Test gestartet.
+
+## Mengenregeln sind rückwirkende Annahmen
+
+Nur der öffentliche, kostenlose Endpunkt `https://data-api.binance.vision/api/v3/exchangeInfo` wird für aktuelle Metadaten abgefragt; kein Account, kein Schlüssel. `LOT_SIZE.stepSize`, `LOT_SIZE.minQty` und das strengere `MIN_NOTIONAL`/`NOTIONAL` werden als heutige, **nicht historische** Regeln gespeichert. Beliebige unterstützte Dezimalschritte werden am tatsächlichen Fill abgerundet. Der v1-Brokerpfad ohne `stepSize` behält seine bisherige Dezimalrundung. Das neue Mindestnotional stammt aus den jeweiligen angenommenen Börsenfiltern statt aus einer zusätzlichen pauschalen 10-USDT-Grenze.
+
+Historische Mengenregeln und damalige Handelbarkeit sind damit nicht rekonstruiert. Insbesondere delistete Coins ohne aktuell verwendbare Regeln bleiben im historischen Universum und in der Abdeckungsstatistik, dürfen jedoch keine Einstiege erzeugen. Fehlende Regeln werden im Bericht aufgelistet. Keine erfundenen Ersatz-Lots und keine fingierten Liquidationen bei Datenende. Diese konservative Zugangssperre kann die Ergebniswahl dennoch verzerren; das Ergebnis ist kein survivorship-freier Ausführungsnachweis und kein Beleg für Profitabilität.
+
+## Daten- und Ausführungsgrenzen
+
+Alle Kerzenabfragen gehen durch einen Entwicklungsadapter: frühestens 2020-01-01, exklusives Ende 2024-01-01. Auch Indikator- und Risikovorlauf wird auf diese Grenze beschränkt; 2024 und der Holdout werden nie geladen. Rückgaben außerhalb des erlaubten Fensters werden abgewiesen. Die ersten Monate dienen dem Aufbau der unveränderten Alters-/Indikatorhistorie; es werden keine Daten vor 2020 erfunden.
+
+Universum und Qualitätsannahmen verwenden ausschließlich frühere Archivkerzen. Strategieparameter kommen explizit aus der v2-Konfiguration. Gebühren 0,1 %, Spread 10 bps und Slippage 5 bps sowie Startkapital 10 000 USDT bleiben gleich. Der vorhandene Backtest-Broker, seine Schutzregeln und die Portfolio-RiskEngine werden weiterverwendet. Damit wird keine vollständige Ausführungsparität mit dem Forward-Adapter behauptet. Fehlende Risikohistorie kann Einstiege blockieren; Null-Trades und negative Ergebnisse bleiben sichtbar.
+
+Die unveränderten BTC-/DCA-Referenzen des bisherigen Forschungslaufs werden zusätzlich mit gleichen Kosten ausgegeben. Ihre synthetische Rundung ist ausdrücklich keine Simulation der v2-Börsenlots. DCA verwendet zusätzliche Einzahlungen und eine cashflow-neutrale Rendite; Endvermögen ist nicht direkt vergleichbar.
+
+Keine Änderung an Pipeline-Gates oder v1-Datensplits, keine Paper-Freigabe, keine Gewinnprognose, keine Holdout-Auswertung. Ein tatsächlicher vollständiger Forschungslauf und seine Ergebnisse müssen nach Ausführung separat beurteilt werden.
+
+## Entscheidungen
+
+- Vorhandene v2-Registrierung weiterführen statt dieselbe Strategie doppelt zu zählen.
+- Historisches Universum erhalten; fehlende aktuelle Regeln sperren Eintritte statt unbekannte Lots zu erfinden.
+- Gemeinsamen Backtest-Broker optional um exakte Schrittweiten erweitern, den v1-Pfad unverändert lassen.
+- Provenance und Daten-/Kostenannahmen sichtbar berichten; keine rückwirkende Umdeutung alter Ergebnisse.

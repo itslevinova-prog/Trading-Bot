@@ -1,3 +1,4 @@
+import {floorLot,validateRule} from '../forward/lots.js';
 import type {Action,BrokerOrder} from '@paper/shared';
 import {validateRisk,positionStopRisk,entryDrawdownGuard} from '../broker/risk.js';
 import {entryQuoteGuard,entryFillGuard} from '../broker/executionGuards.js';
@@ -7,7 +8,7 @@ import type {Candle,IntervalMinutes} from './candle-source.js';
 import {candleStep} from './candle-source.js';
 import type {FillModel,FillQuote} from './fill-models.js';
 import {FeeSchedule,type FeeLiquidity} from './fee-schedule.js';
-export type MarketConstraints={symbol:string;ordermin:number;costmin:number;lotDecimals:number;pairDecimals?:number};
+export type MarketConstraints={symbol:string;ordermin:number;costmin:number;lotDecimals:number;stepSize?:string;pairDecimals?:number};
 /** fee is always a quote-valued equivalent for reporting. When the buy fee
  * is paid in base, grossQty differs from the credited qty and no quote fee
  * is subtracted from cash. The venue's actual fee asset remains unknown. */
@@ -45,6 +46,7 @@ export class SimulatedBroker {
     if(participation&&(!Number.isFinite(participation.maxQuoteVolumeFraction)||
       participation.maxQuoteVolumeFraction<=0||participation.maxQuoteVolumeFraction>1))
       throw Error('Invalid quote-volume participation limit');
+    for(const pair of pairs.values())if(pair.stepSize)validateRule({stepSize:pair.stepSize,minQty:pair.ordermin.toFixed(8),minNotional:pair.costmin.toFixed(8)});
     this.cash=startingCash;this.peak=startingCash;
   }
   get rejected(){return this.rejectionReasons.length;}
@@ -230,11 +232,12 @@ export class SimulatedBroker {
       .filter(o=>o.side==='buy').reduce((sum,o)=>
         sum+o.qty*o.limitPrice*(1+o.makerFeeRate),0);
     const cashAvailable=Math.max(0,this.cash-reserved);
-    const qty=action.type==='buy'?
+    let qty=action.type==='buy'?
       Math.floor(Math.min(pending.action.type==='buy'?pending.action.amountEur:0,cashAvailable)/
         (price*(this.feeAsset==='quote'?1+makerFeeRate:1))*scale+1e-9)/scale:
       Math.floor(((this.positions.get(action.pair)?.qty??0)*
         (pending.action.type==='sell'?pending.action.sellFraction:0))*scale+1e-9)/scale;
+    if(pair.stepSize)qty=floorLot(qty,{stepSize:pair.stepSize,minQty:String(pair.ordermin),minNotional:String(pair.costmin)});
     const notional=qty*price;
     if(!Number.isFinite(qty)||qty<=0||qty+1e-9<pair.ordermin||
       notional+1e-9<Math.max(pair.costmin,this.limits.minOrderEur)){
@@ -343,8 +346,9 @@ export class SimulatedBroker {
     const budget=Math.min(action.amountEur,this.cash);
     const rate=this.feeSchedule?.select(action.pair,candle.ts,maker?'maker':'taker').rate??
       (maker?.feeRate??this.limits.feeRate);
-    const grossQty=maker?.qty??Math.floor(budget/
-      (quote.price*(this.feeAsset==='quote'?1+rate:1))*10**pair.lotDecimals+1e-9)/10**pair.lotDecimals;
+    const rawQty=budget/(quote.price*(this.feeAsset==='quote'?1+rate:1));
+    const grossQty=maker?.qty??(pair.stepSize?floorLot(rawQty,{stepSize:pair.stepSize,minQty:String(pair.ordermin),minNotional:String(pair.costmin)}):
+      Math.floor(rawQty*10**pair.lotDecimals+1e-9)/10**pair.lotDecimals);
     const notional=grossQty*quote.price;
     const charged=this.chargedFee(action.pair,candle.ts,notional,
       maker?'maker':'taker',maker?.feeRate);
@@ -379,6 +383,7 @@ export class SimulatedBroker {
     reason:string,liquidity:FeeLiquidity='taker',fallbackMakerRate?:number,makerOrderId?:string):void {
     const p=this.positions.get(symbol),lot=this.pairs.get(symbol);
     if(!p||!lot||qty<=0||qty>p.qty+1e-9)return;
+    if(lot.stepSize)qty=floorLot(qty,{stepSize:lot.stepSize,minQty:String(lot.ordermin),minNotional:String(lot.costmin)});
     const notional=qty*quote.price,charged=this.chargedFee(symbol,ts,notional,
       liquidity,fallbackMakerRate),fee=charged.fee;
     if(qty+1e-9<lot.ordermin||notional+1e-9<Math.max(lot.costmin,this.limits.minOrderEur)){this.reject('Minimum exit order');return;}

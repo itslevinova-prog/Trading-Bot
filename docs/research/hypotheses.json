@@ -465,9 +465,18 @@
         "dataSource": "https://data-api.binance.vision",
         "evidence": [
           "docs/PAPER-FORWARD.md",
-          "apps/server/src/forward/engine-v2.ts"
+          "apps/server/src/forward/engine-v2.ts",
+          "docs/TREND-RESEARCH-V2.md"
         ],
-        "pipelineEligible": false
+        "pipelineEligible": false,
+        "developmentResearch": {
+          "mode": "run_trend_v2",
+          "from": "2020-01",
+          "to": "2023-12",
+          "lotRules": "current-exchangeInfo-assumption",
+          "missingRules": "no-entry-retain-historical-universe",
+          "status": "implementation-fixture-validation-only"
+        }
       }
     ]
   },
