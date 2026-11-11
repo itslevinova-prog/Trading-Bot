@@ -1,6 +1,6 @@
 # Zuordnung alter und neuer Issue-Nummern
 
-Dieses öffentliche Repository wurde am 11.11.2026 aus einem früheren privaten Arbeits-Repository erstellt.
+Dieses öffentliche Repository wurde am 11.11.2026 aus einem früheren privaten Arbeits-Repository erstellt. Geprüft durch einen Probelauf.
 Ältere Dokumente, Code-Kommentare und Commit-Texte nennen Issues und PRs mit den **alten** Nummern (#1–#148).
 Die offenen Issues wurden hierher übernommen und dabei neu nummeriert:
 
