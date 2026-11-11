@@ -3,12 +3,14 @@ import {resolve,join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {digest} from '../provenance/build.js';
 import type {Candle} from '../backtest/candle-source.js';
-import {advance,initialState,seriesId,DAY,LABEL,summary,type State} from './engine.js';
+import {advance,initialState,seriesId,DAY,LABEL,summary,type State} from './engine-v2.js';
+import {exchangeLots,type ExchangeInfo,type LotRules} from './lots.js';
 const root=fileURLToPath(new URL('../../../../',import.meta.url));
-async function request(path:string):Promise<unknown>{
+export async function request(path:string):Promise<unknown>{
  for(let attempt=0;attempt<4;attempt++){
-  const r=await fetch('https://api.binance.com/api/v3/'+path,{headers:{'User-Agent':'paper-forward-research/1'},signal:AbortSignal.timeout(30000)});
+  const r=await fetch('https://data-api.binance.vision/api/v3/'+path,{headers:{'User-Agent':'paper-forward-research/1'},signal:AbortSignal.timeout(30000)});
   if(r.ok)return r.json();
+  if(r.status===451)throw Error('Öffentliche Binance-Marktdaten sind an diesem Standort aus rechtlichen Gründen gesperrt (HTTP 451, data-api.binance.vision); kein Fallback auf Handelsendpunkte.');
   if(r.status!==429&&r.status<500)throw Error('Public data HTTP '+r.status);
   const delay=Math.max(Number(r.headers.get('retry-after')??0)*1000,1000*2**attempt);
   if(delay>60000)throw Error('Public data rate limit; retry next run');
@@ -26,18 +28,20 @@ export async function main(){
  const codeFiles=['strategy/trend-vol-target-v1.ts','backtest/trend-research.ts','backtest/fill-models.ts','coin-quality/contracts.ts','dca/paper.ts','provenance/build.ts',
   ...readdirSync(join(root,'apps/server/src/forward')).filter(x=>x.endsWith('.ts')).map(x=>'forward/'+x)].sort();
  const hash=digest(JSON.stringify(codeFiles.map(p=>[p,digest(readFileSync(join(root,'apps/server/src',p)))])));
- const fresh=initialState(start,hash),id=seriesId(fresh),base=resolve(arg('--output')??join(root,'forward'));
+ const fixtureData=fixture?JSON.parse(readFileSync(fixture,'utf8')):undefined;
+ const exchange=fixture?undefined:await request('exchangeInfo') as ExchangeInfo;
+ const lotRules:LotRules=fixture?fixtureData.lotRules:exchangeLots(exchange!);
+ const fresh=initialState(start,hash,lotRules),id=seriesId(fresh),base=resolve(arg('--output')??join(root,'forward'));
  const directory=join(base,id),stateFile=join(directory,'state.json');
  if(!fixture&&!existsSync(stateFile)&&start<until)throw Error('New real-data series must start prospectively today or later');
  const input:State=existsSync(stateFile)?JSON.parse(readFileSync(stateFile,'utf8')):fresh;
  if(input.codeHash!==hash||input.configHash!==fresh.configHash||input.start!==start)throw Error('Series identity mismatch');
  let rows:Record<string,Candle[]>;
  let end=until;
- if(fixture){const data=JSON.parse(readFileSync(fixture,'utf8'));rows=data.rows;end=data.until;}
+ if(fixture){rows=fixtureData.rows;end=fixtureData.until;}
  else{
-  const exchange=await request('exchangeInfo') as {symbols:{symbol:string;quoteAsset:string;status:string;isSpotTradingAllowed:boolean}[]};
   await request('ticker/24hr'); // Current observation is never used to rank a historical day.
-  const symbols=new Set([...exchange.symbols.filter(s=>s.quoteAsset==='USDT'&&s.status==='TRADING'&&s.isSpotTradingAllowed).map(s=>s.symbol),
+  const symbols=new Set([...Object.keys(lotRules),
    ...Object.values(input.accounts).flatMap(w=>Object.keys(w.positions)),'BTCUSDT','ETHUSDT']);
   rows={};
   const from=(input.lastDay===null?start:input.lastDay+DAY)-260*DAY;

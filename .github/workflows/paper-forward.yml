@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: '17 0 * * *'
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Nur prüfen, keine Ergebnisse schreiben oder pushen
+        type: boolean
+        default: true
 permissions:
   contents: read
 concurrency:
@@ -10,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   forward:
-    if: vars.FORWARD_ENABLED == 'true'
+    if: (github.event_name == 'workflow_dispatch' && inputs.dry_run) || vars.FORWARD_ENABLED == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
@@ -20,16 +25,19 @@ jobs:
       AI_ALLOW_REMOTE: 'false'
       FORWARD_ENABLED: ${{ vars.FORWARD_ENABLED }}
       FORWARD_START: ${{ vars.FORWARD_START }}
+      FORWARD_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: ${{ !(github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - run: corepack enable && corepack prepare pnpm@11.25.0 --activate
       - run: pnpm install --frozen-lockfile
       - name: Ergebnisbranch laden
+        if: env.FORWARD_DRY_RUN != 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -41,8 +49,20 @@ jobs:
             mkdir -p /tmp/forward-output
           fi
       - name: Tageslauf nur mit Spielgeld
-        run: pnpm forward:run --start "$FORWARD_START" --output /tmp/forward-output/forward
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "$FORWARD_DRY_RUN" == 'true' ]]; then
+            start="$(date -u +%F)"
+            pnpm forward:run --dry-run --start "$start" --output /tmp/forward-output/forward
+          else
+            test "$FORWARD_ENABLED" = 'true'
+            pnpm forward:run --start "$FORWARD_START" --output /tmp/forward-output/forward
+          fi
       - name: Datenschutz prüfen und Ergebnisse speichern
+        if: env.FORWARD_DRY_RUN != 'true' && vars.FORWARD_ENABLED == 'true'
+        env:
+          PRIVACY_BLOCKLIST: ${{ secrets.PRIVACY_BLOCKLIST }}
         shell: bash
         run: |
           set -euo pipefail
