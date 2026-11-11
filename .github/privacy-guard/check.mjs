@@ -108,9 +108,24 @@ function scanFull() {
 }
 
 function scanText() {
+  const texts = {};
+  // Im Workflow kommen die Texte aus der Ereignis-Datei (GITHUB_EVENT_PATH), nicht
+  // aus Umgebungsvariablen: GitHub schreibt Step-Umgebungsvariablen ins öffentliche Log.
+  if (process.env.GITHUB_EVENT_PATH) {
+    const ev = JSON.parse(readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'));
+    const name = process.env.GITHUB_EVENT_NAME;
+    if (ev.pull_request) Object.assign(texts, { pr_titel: ev.pull_request.title, pr_text: ev.pull_request.body });
+    if (ev.issue) texts.issue_titel = ev.issue.title;
+    if (ev.issue && name === 'issues') texts.issue_text = ev.issue.body;
+    if (ev.comment) texts.kommentar = ev.comment.body;
+    if (ev.review) texts.review = ev.review.body;
+  }
+  // Lokal/Tests: PG_TEXT_*-Variablen.
   for (const [key, value] of Object.entries(process.env)) {
-    if (!key.startsWith('PG_TEXT_') || !value) continue;
-    value.split('\n').forEach((l, i) => report(`${key.slice(8).toLowerCase()} Zeile ${i + 1}`, violations(l)));
+    if (key.startsWith('PG_TEXT_')) texts[key.slice(8).toLowerCase()] = value;
+  }
+  for (const [key, value] of Object.entries(texts)) {
+    if (value) String(value).split('\n').forEach((l, i) => report(`${key} Zeile ${i + 1}`, violations(l)));
   }
 }
 

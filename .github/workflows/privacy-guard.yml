@@ -3,6 +3,8 @@ name: Datenschutz-Wächter
 # Verhindert, dass private Daten (Namen, E-Mails, Benutzerpfade, Chat-Links,
 # Schlüssel) in dieses öffentliche Repository gelangen. Private Wörter stehen nur
 # im Secret PRIVACY_BLOCKLIST, nie im Repository; Logs zeigen nie den gefundenen Text.
+# Texte (PR, Issue, Kommentar) werden aus GITHUB_EVENT_PATH gelesen und NIE als
+# Umgebungsvariable übergeben, weil GitHub Step-Umgebungsvariablen ins Log schreibt.
 on:
   pull_request:
     types: [opened, synchronize, reopened, edited]
@@ -53,8 +55,6 @@ jobs:
         env:
           PG_MODE: text
           PRIVACY_BLOCKLIST: ${{ secrets.PRIVACY_BLOCKLIST }}
-          PG_TEXT_TITLE: ${{ github.event.pull_request.title }}
-          PG_TEXT_BODY: ${{ github.event.pull_request.body }}
         run: node .github/privacy-guard/check.mjs
 
   text:
@@ -70,10 +70,6 @@ jobs:
         env:
           PG_MODE: text
           PRIVACY_BLOCKLIST: ${{ secrets.PRIVACY_BLOCKLIST }}
-          PG_TEXT_ISSUE_TITLE: ${{ github.event.issue.title }}
-          PG_TEXT_ISSUE_BODY: ${{ github.event_name == 'issues' && github.event.issue.body || '' }}
-          PG_TEXT_COMMENT: ${{ github.event.comment.body }}
-          PG_TEXT_REVIEW: ${{ github.event.review.body }}
         run: node .github/privacy-guard/check.mjs
 
   selftest:
