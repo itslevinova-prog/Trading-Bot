@@ -1,0 +1,12 @@
+{
+  "version": "forward-addendum-v1",
+  "createdAt": "2026-11-11",
+  "hypothesis": "H-025",
+  "issue": 32,
+  "base": "docs/data-splits-v1.json",
+  "startDateSource": "FORWARD_START, vom Repo-Besitzer vor Aktivierung als UTC-Datum YYYY-MM-DD festgelegt und in jeder Serie als start gespeichert",
+  "holdoutEndExclusive": "S",
+  "forwardStartInclusive": "S",
+  "reason": "Prospektive Forschungsdaten ab S werden exklusiv dem Forward-Test zugeordnet. Stufe 3 endet spätestens am Vortag von S. v1 bleibt unverändert; Indikator-Vorlauf vor S erzeugt keine Ergebnisse.",
+  "pipelineApproved": false
+}

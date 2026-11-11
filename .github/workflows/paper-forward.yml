@@ -1,0 +1,60 @@
+name: Paper-Forward-Forschung
+on:
+  schedule:
+    - cron: '17 0 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: paper-forward
+  cancel-in-progress: false
+jobs:
+  forward:
+    if: vars.FORWARD_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    env:
+      LIVE_ENABLED: 'false'
+      AI_ALLOW_REMOTE: 'false'
+      FORWARD_ENABLED: ${{ vars.FORWARD_ENABLED }}
+      FORWARD_START: ${{ vars.FORWARD_START }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: corepack enable && corepack prepare pnpm@11.25.0 --activate
+      - run: pnpm install --frozen-lockfile
+      - name: Ergebnisbranch laden
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$FORWARD_START"
+          if git show-ref --verify --quiet refs/remotes/origin/paper-forward; then
+            mkdir -p /tmp/forward-output
+            git archive origin/paper-forward forward | tar -x -C /tmp/forward-output
+          else
+            mkdir -p /tmp/forward-output
+          fi
+      - name: Tageslauf nur mit Spielgeld
+        run: pnpm forward:run --start "$FORWARD_START" --output /tmp/forward-output/forward
+      - name: Datenschutz prüfen und Ergebnisse speichern
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git show-ref --verify --quiet refs/remotes/origin/paper-forward; then
+            git checkout --detach origin/paper-forward
+          fi
+          mkdir -p forward
+          cp -R /tmp/forward-output/forward/. ./forward/
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- forward/
+          if git diff --cached --quiet; then exit 0; fi
+          node "$GITHUB_WORKSPACE/.github/privacy-guard/check.mjs"
+          git commit -m 'docs: Tagesstand der Forward-Forschung'
+          git push origin HEAD:refs/heads/paper-forward

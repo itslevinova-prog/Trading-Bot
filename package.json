@@ -47,7 +47,8 @@
     "pipeline:preflight": "pnpm --filter @paper/server exec tsx src/pipeline/cli.ts preflight",
     "pipeline:incidents": "pnpm --filter @paper/server exec tsx src/pipeline/cli.ts incidents",
     "pipeline:verify-integrity": "pnpm --filter @paper/server exec tsx src/pipeline/integrity-cli.ts",
-    "cost:report": "pnpm --filter @paper/server exec tsx src/recorder/cost-report-cli.ts"
+    "cost:report": "pnpm --filter @paper/server exec tsx src/recorder/cost-report-cli.ts",
+    "forward:run": "pnpm --filter @paper/shared build && pnpm --filter @paper/server exec tsx src/forward/cli.ts"
   },
   "devDependencies": {
     "typescript": "^5.8.3"
