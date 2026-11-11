@@ -32,3 +32,7 @@ Die BTC-Referenz investiert einmalig; der klassische Sparplan verwendet die vorh
 ## Noch offene Validierung
 
 Der API-Probelauf benötigt freigegebenen Zugriff auf `api.binance.com`. Die offizielle [GitHub-Dokumentation](https://github.com/github/docs/blob/main/data/reusables/actions/scheduled-workflows-disabled.md) nennt 60 Tage ohne Repository-Aktivität, ohne Branch-Einschränkung. Sie garantiert die konkrete Aktivitätszählung für `paper-forward` nicht ausdrücklich. Deshalb keine Behauptung dauerhafter Cron-Aktivität: Der Repo-Besitzer prüft monatlich den Workflow-Status und reaktiviert ihn nötigenfalls. Ein automatischer Push auf `main` ist nicht eingerichtet; die Anforderung einer monatlichen Statusaktualisierung bleibt bis zur eindeutigen Klärung offen.
+
+## Umsetzungsstand vor Aktivierung
+
+Die Definition of Done von #32 ist noch nicht vollständig erfüllt. Zusätzlich zum echten API-Probelauf fehlen ein belastbarer Nachweis der Ausführungsparität mit dem Forschungs-Backtest einschließlich Portfolio-RiskEngine sowie historische Point-in-Time-Metadaten für nachgeholte Tage. Der Adapter bildet derzeit den reinen Strategieplaner und synthetische Fills ab. Er darf nicht als validierter Ersatz des vollständigen Backtest-Brokers ausgegeben werden. Bis diese Punkte geklärt und geprüft sind, `FORWARD_ENABLED` ungesetzt lassen.
