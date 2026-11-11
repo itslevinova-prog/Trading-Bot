@@ -28,6 +28,11 @@ on:
         type: boolean
         default: false
 
+      run_trend_v2:
+        description: H-025 v2 mit aktuellen Mengenregeln als historischer Annahme
+        type: boolean
+        default: false
+
 permissions:
   contents: read
   issues: write
@@ -73,9 +78,13 @@ jobs:
           IMPORT_TO: ${{ inputs.to }}
           IMPORT_INTERVALS: ${{ inputs.intervals }}
           RUN_TREND: ${{ inputs.run_trend }}
+          RUN_TREND_V2: ${{ inputs.run_trend_v2 }}
           IMPORT_SYMBOLS: ${{ inputs.symbols }}
         run: |
           pnpm --filter @paper/shared build
+          if [[ "$RUN_TREND_V2" == 'true' ]]; then
+            pnpm --filter @paper/server exec tsx -e "import {validateV2Inputs} from './src/backtest/trend-research-v2.ts'; validateV2Inputs(process.env.IMPORT_FROM!,process.env.IMPORT_TO!,process.env.IMPORT_INTERVALS!,process.env.IMPORT_SYMBOLS!);"
+          fi
           pnpm --filter @paper/server exec tsx -e "import {validateResearchMonths} from './src/backtest/trend-research.ts'; validateResearchMonths(process.env.IMPORT_FROM!,process.env.IMPORT_TO!); if(process.env.RUN_TREND==='true'&&(process.env.IMPORT_FROM!=='2020-01'||process.env.IMPORT_TO!=='2023-12'||process.env.IMPORT_INTERVALS!=='1d,1h'||process.env.IMPORT_SYMBOLS!=='')) throw Error('H-025 requires fixed 2020-01..2023-12 and 1d,1h with empty symbols');"
       - name: Öffentliche Binance-Kerzen importieren
         env:
@@ -87,6 +96,9 @@ jobs:
       - name: Trendfolge H-025 mit vorregistrierten Forschungsannahmen
         if: ${{ inputs.run_trend }}
         run: pnpm --filter @paper/server exec tsx src/backtest/trend-research-cli.ts | tee trend.txt
+      - name: Trendfolge H-025 v2 mit Mengenregel-Annahme
+        if: ${{ inputs.run_trend_v2 }}
+        run: pnpm --filter @paper/server exec tsx src/backtest/trend-research-v2-cli.ts | tee trend-v2.txt
       - name: Datenbericht
         run: pnpm data:report | tee data-report.txt
       - name: Schnelltest #33
@@ -101,6 +113,8 @@ jobs:
             data-report.txt
             spike.txt
             trend.txt
+            trend-v2.txt
+            data/trend-research-v2/
             data/trend-research/
             data/archive/report.json
             docs/spikes/
@@ -128,3 +142,16 @@ jobs:
             cat data/trend-research/summary.md
           } > trend-comment.md
           gh issue comment 3 --repo "${{ github.repository }}" --body-file trend-comment.md
+      - name: Forschungsergebnis v2 in Issue #3 kommentieren
+        if: ${{ inputs.run_trend_v2 && success() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PRIVACY_BLOCKLIST: ${{ secrets.PRIVACY_BLOCKLIST }}
+        run: |
+          {
+            echo "**H-025 v2: automatischer Forschungslauf mit Annahmen** (${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+            echo
+            cat data/trend-research-v2/summary.md
+          } > trend-v2-comment.md
+          PG_MODE=text PG_TEXT_BODY="$(cat trend-v2-comment.md)" node .github/privacy-guard/check.mjs
+          gh issue comment 3 --repo "${{ github.repository }}" --body-file trend-v2-comment.md

@@ -1,0 +1,36 @@
+import Database from 'better-sqlite3';
+import {mkdirSync,writeFileSync,readFileSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {resolve} from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {ArchiveCandleSource} from '../archive/candle-source.js';
+import {ArchiveUniverse} from '../archive/universe.js';
+import {ARCHIVE_DB,PROJECT_ROOT} from '../archive/paths.js';
+import {request} from '../forward/cli.js';
+import {exchangeLots,type ExchangeInfo} from '../forward/lots.js';
+import {CONFIG} from '../forward/engine-v2.js';
+import {TREND_RESEARCH_ASSUMPTIONS,researchHash} from './trend-research.js';
+import {runTrendResearchV2,v2Markdown} from './trend-research-v2.js';
+
+export async function main(){
+ const registration=JSON.parse(readFileSync(PROJECT_ROOT+'/docs/research/hypotheses.json','utf8')).find((x:{id:string})=>x.id==='H-025');
+ if(researchHash(registration.researchAssumptions)!==researchHash(TREND_RESEARCH_ASSUMPTIONS)||
+  !registration.forwardVariants?.some((x:{version:string})=>x.version===CONFIG.strategy))throw Error('H-025 v1/v2 registration mismatch');
+ const db=new Database(ARCHIVE_DB,{readonly:true,fileMustExist:true});
+ const archive=new ArchiveCandleSource({databasePath:ARCHIVE_DB});
+ try{
+  const exchange=await request('exchangeInfo') as ExchangeInfo,lotSnapshotAt=new Date().toISOString();
+  const lotRules=exchangeLots(exchange),universe=new ArchiveUniverse(db);
+  const count=(await archive.listSymbols()).length;if(!count)throw Error('Historical archive is empty');
+  const codeBuild=execFileSync('git',['rev-parse','HEAD'],{cwd:PROJECT_ROOT,encoding:'utf8'}).trim();
+  const report=await runTrendResearchV2({source:archive,lotRules,lotSnapshotAt,codeBuild,
+   universeAt:day=>universe.universeAt(day,{quote:'USDT',topN:count}).map(x=>x.symbol)});
+  const artifact={...report,exchangeInfo:exchange,archiveManifestHash:researchHash(db.prepare('SELECT path,sha256 FROM files ORDER BY path').all())};
+  const directory=PROJECT_ROOT+'/data/trend-research-v2';mkdirSync(directory,{recursive:true});
+  // Separate outputs: never overwrite the v1 evidence directory.
+  writeFileSync(directory+'/report.json',JSON.stringify(artifact,null,2)+'\n');
+  const md=v2Markdown(report);writeFileSync(directory+'/summary.md',md);console.log(md);
+ }finally{archive.close();db.close();}
+}
+if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href)
+ main().catch(error=>{console.error(error instanceof Error?error.message:'H-025 v2 failed');process.exitCode=1;});
