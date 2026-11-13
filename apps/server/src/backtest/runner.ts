@@ -185,9 +185,13 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
    diagnostics.days.push({day:new Date(now-1).toISOString().slice(0,10),asOf:now,
     equity:value,cash:broker.cash,investedPct:Math.max(0,Math.min(1,(value-broker.cash)/value)),
     allCash:broker.positions.size===0,
-    riskStatus:portfolioRisk?(portfolioRisk.researchV3State?.status??
-     diagnosticRiskStatus(value,peak,portfolioRisk.limits,portfolioRisk.halted)):'ok',
-    riskLatched:portfolioRisk?.halted??false,plannerBuySignal:buySignal,executedBuy});
+    riskStatus:v5?(broker.researchV5PausedAt!==null?'halted':
+     broker.researchV5EntryScale(now)===0?'exit-only':
+     broker.researchV5EntryScale(now)<1?'caution':'ok'):
+     portfolioRisk?(portfolioRisk.researchV3State?.status??
+      diagnosticRiskStatus(value,peak,portfolioRisk.limits,portfolioRisk.halted)):'ok',
+    riskLatched:v5?broker.researchV5PausedAt!==null:(portfolioRisk?.halted??false),
+    plannerBuySignal:buySignal,executedBuy});
   };
   const membership=new Map(universeHistory.map(day=>[day.dateMs,new Set(day.symbols)]));
   for(const [now,group] of [...events.entries()].sort(([a],[b])=>a-b)){
@@ -204,6 +208,7 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
     const tradesBeforeCandles=broker.trades.length;
     for(const {symbol,candle} of group.sort((a,b)=>a.symbol.localeCompare(b.symbol)))broker.onCandle(symbol,candle,intervalMinutes);
     const executedBuy=broker.trades.slice(tradesBeforeCandles).some(t=>t.side==='buy');
+    if(v5)broker.researchV5EntryScale(now);
     if(options.researchDrawdownV3){
      // Observe every closed day, including those without a buy signal. The final
      // valuation does not get a new entry or access to a 2024 market observation.
@@ -279,6 +284,21 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
        }
       }
       if(random()<dropSignalPct)continue;
+      if(v5&&a.type==='buy'){
+       v5RiskChecks++;
+       const verdict=checkV5DailyRisk(now,
+        all.get('BTCUSDT')?.trendDaily??[],all.get(a.pair)?.trendDaily??[]);
+       if(verdict.btcAnnualVol!==null&&verdict.assetAnnualVol!==null){
+        v5VolCount++;v5BtcVolSum+=verdict.btcAnnualVol;v5AssetVolSum+=verdict.assetAnnualVol;
+       }
+       if(!verdict.allowed){
+        if(verdict.reason==='missing-daily-history')v5MissingDailyBlocked++;
+        else v5ShockBlocked++;
+        broker.rejectionReasons.push('H-025 v5 daily-only risk: '+verdict.reason);
+        if(diagnostics)rejectionSource.set(broker.rejectionReasons.length-1,'portfolioRisk');
+        continue;
+       }
+      }
       if(portfolioRisk&&a.type==='buy'){
        // Daily trend replay loads only the candidate, held coins and BTC hours.
        // Avoid retaining years of hourly bars for every delisted coin in RAM.
@@ -345,6 +365,8 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
     historicalTradability:'report-only-source-time-safe',
     coverageFingerprint:coverage?.fingerprint??null,
     coinQuality:options.coinQuality?'point-in-time-admission (external source fingerprint required)':'disabled',
+    researchV5:v5?{dailyRisk:V5_DAILY_RISK,brokerLimits:limits,
+     drawdown:{caution:.10,zeroEntry:.30,permanentInitialLoss:.30}}:null,
     portfolioRisk:options.enablePortfolioRisk?{enabled:true,limits:{...DEFAULT_RISK_LIMITS,...options.portfolioRiskLimits},
      ...(options.researchDrawdownV3?{researchV3:H025_V3_DRAWDOWN}:{})}:{enabled:false}
   }));
@@ -353,6 +375,12 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
   return {configuration:config,fingerprints:{data,configuration,codeBuild:options.buildId??null,combined},
     metrics:calculated.metrics,daily:calculated.daily,equity,trades:broker.trades,decisions,rejections:broker.rejectionReasons,
     universe:symbols,universeHistory,coverage,historicalTradability,...(diagnostics?{diagnostics}:{}),
+    ...(v5?{researchV5:{pausedAt:broker.researchV5PausedAt,
+     dailyRiskChecks:v5RiskChecks,dailyShockBlocked:v5ShockBlocked,
+     missingDailyBlocked:v5MissingDailyBlocked,
+     averageBtcAnnualVol:v5VolCount?v5BtcVolSum/v5VolCount:null,
+     averageAssetAnnualVol:v5VolCount?v5AssetVolSum/v5VolCount:null,
+     parameters:V5_DAILY_RISK}}:{}),
     ...(options.researchDrawdownV3?{researchV3:{resetEvents:portfolioRisk!.researchV3Resets,
      permanentStopAt:portfolioRisk!.researchV3PermanentStopAt,
      statusDays:diagnostics!.days.reduce((counts,day)=>{counts[day.riskStatus]++;return counts;},
@@ -366,5 +394,6 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
      'BuyAndHoldProvider follows the Paper scheduler initial-BTC order convention',
      ...(options.coinQuality?['Point-in-time quality source injected; independent archive and source fingerprint verification required; missing eligibility blocks entries']:[]),
      ...(portfolioRisk?['Portfolio RiskEngine applied only to completed hourly history; missing observations deny entries']:[]),
+     ...(v5?['H-025 v5 risk uses 60 closed daily returns only; hourly gaps do not block entries','2019 warm-up only, trades and results from 2020; research-only drawdown entry sizing']:[]),
      ...(trendMode?['Trend v1 is an unvalidated daily development-only strategy; PIT coin quality and exchange lots are required; no 2024+/holdout or live/paper account promotion']:[])]};
 }
