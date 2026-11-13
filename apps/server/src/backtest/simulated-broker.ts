@@ -122,7 +122,7 @@ export class SimulatedBroker {
       maxOpenPositions:this.limits.maxOpenPositions,
       maxTradesPerDay:this.limits.maxTradesPerDay,
       cooldownMinutes:this.limits.cooldownMinutes,
-      maxPortfolioRiskPct:this.limits.maxPortfolioRiskPct,
+      maxPortfolioRiskPct:this.researchV5?undefined:this.limits.maxPortfolioRiskPct,
       feeRate
     });
     if(!approval.allowed||!Number.isFinite(approval.amountEur)||
@@ -140,7 +140,7 @@ export class SimulatedBroker {
     const newRisk=positionStopRisk(netQty,fillPrice,stop,feeRate,
       Math.max(this.limits.minOrderEur,pair.costmin))+feeQuoteValue;
     if(!Number.isFinite(existingRisk+newRisk)||
-      existingRisk+newRisk>postEquity*this.limits.maxPortfolioRiskPct+1e-7)
+      (!this.researchV5&&existingRisk+newRisk>postEquity*this.limits.maxPortfolioRiskPct+1e-7))
       return 'Post-fill aggregate stop-risk budget exceeded';
     return null;
   }
@@ -196,7 +196,7 @@ export class SimulatedBroker {
         const state={equity:this.equity,cash:this.cash,status:'active',positions:[...this.positions.values()].map(p=>({pair:p.symbol,value:p.qty*(this.marks.get(p.symbol)??p.entryPrice),stopRisk:positionStopRisk(p.qty,this.marks.get(p.symbol)??p.entryPrice,p.stop,this.riskFeeRate(),this.limits.minOrderEur)})),tradesToday:this.trades.filter(t=>t.side==='buy'&&new Date(t.ts).toISOString().slice(0,10)===new Date(decisionTs).toISOString().slice(0,10)).length,lastSellAt:this.trades.filter(t=>t.symbol===action.pair&&t.side==='sell').at(-1)?.ts,now:decisionTs};
         const guard=entryDrawdownGuard(state.equity,this.peak,this.limits.maxDrawdownPct);
         if(guard)return this.reject(guard);
-        const risk=validateRisk({accountId:'backtest',pair:action.pair,side:'buy',amountEur:action.amountEur,stopLossPct:action.stopLossPct,reason:action.reasoning,decisionId:'backtest'} satisfies BrokerOrder,state,{maxPositionPct:this.limits.maxPositionPct,maxOpenPositions:this.limits.maxOpenPositions,maxTradesPerDay:this.limits.maxTradesPerDay,cooldownMinutes:this.limits.cooldownMinutes,maxPortfolioRiskPct:this.limits.maxPortfolioRiskPct,feeRate:this.riskFeeRate()});
+        const risk=validateRisk({accountId:'backtest',pair:action.pair,side:'buy',amountEur:action.amountEur,stopLossPct:action.stopLossPct,reason:action.reasoning,decisionId:'backtest'} satisfies BrokerOrder,state,{maxPositionPct:this.limits.maxPositionPct,maxOpenPositions:this.limits.maxOpenPositions,maxTradesPerDay:this.limits.maxTradesPerDay,cooldownMinutes:this.limits.cooldownMinutes,maxPortfolioRiskPct:this.researchV5?undefined:this.limits.maxPortfolioRiskPct,feeRate:this.riskFeeRate()});
         if(!risk.allowed)return this.reject(risk.reason);
         action={...action,amountEur:risk.amountEur??action.amountEur};
       }
