@@ -211,7 +211,7 @@ test('v5 remains manual-off, preregistered +4 with immutable split and privacy c
  expect(readFileSync('../../docs/data-splits-v1.json','utf8')).toContain('"immutable": true');
  const workflow=readFileSync('../../.github/workflows/research-data.yml','utf8');
  expect(workflow).toContain('run_v5:');
- expect(workflow).toMatch(/run_v5:[\\s\\S]*?default: false/);
+ expect(workflow.slice(workflow.indexOf('      run_v5:'),workflow.indexOf('      run_v5:')+180)).toContain('default: false');
  expect(workflow).toContain('RUN_V5: '+'$'+'{{ inputs.run_v5 }}');
  expect(workflow).toContain('"$RUN_V5" == '+ "'true'");
  expect(workflow).toContain('validateV5Inputs(process.env.IMPORT_FROM!');
