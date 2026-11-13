@@ -17,6 +17,7 @@ import {makeFillModel} from './fill-models.js';
 import {SimulatedBroker,type MarketConstraints,type RiskConfiguration,type SimulatedTrade} from './simulated-broker.js';
 import {assertLedgerInvariant} from './ledger-invariant.js';
 import {calculateMetrics,type EquityPoint} from './metrics.js';
+import {countDiagnosticReason,diagnosticRiskStatus,emptyDiagnosticReasons,type DiagnosticTrace,type DiagnosticSource} from './trend-diagnostics.js';
 import type {PerformanceMetrics,DailyPoint} from './metrics.js';
 type Strategy='rules'|'hold'|'trend-vol-target';
 export type RecordedDecision={ts:number;symbol:string;actions:Action[]};
@@ -39,6 +40,10 @@ export type BacktestOptions={
   coinQuality?: Pick<CoinQualityProvider,'check'>;
   /** Reporting-only historical observations; never fed into order admission. */
   historicalTradabilityEvidence?: readonly HistoricalTradabilityObservation[];
+  /** Passive H-025 v2 observations only; never alters any admission decision. */
+  collectResearchDiagnostics?:boolean;
+  /** Current-only lot rules missing from the historical archive; report-only. */
+  missingLotSymbols?:readonly string[];
 };
 export type BacktestResult={
   configuration:{strategy:Strategy;fromMs:number;toMs:number;intervalMinutes:IntervalMinutes;fillModel:FillModelName;feeRate:number;spreadBps:number;slippageBps:number;trials:number;seed:number;executionDelayBars:number;dropSignalPct:number};
@@ -49,6 +54,7 @@ export type BacktestResult={
   universeHistory:Array<{dateMs:number;symbols:string[]}>;
   coverage:CoveragePreflight|null;
   historicalTradability:HistoricalTradabilitySummary;
+  diagnostics?:DiagnosticTrace;
 };
 export class ResearchCoverageBlocked extends Error {
   constructor(readonly coverage: CoveragePreflight) {
@@ -144,6 +150,20 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
     options.strategy==='rules'?new RuleBasedProvider():new BuyAndHoldProvider());
   const random=nextRandom(seed),decisions:RecordedDecision[]=[],equity:EquityPoint[]=[{ts:fromMs,equity:broker.equity,exposed:false}];
   let holdQueued=false,lastTrendRebalanceAt:number|null=null;
+  const diagnostics:DiagnosticTrace|undefined=options.collectResearchDiagnostics?
+   {days:[],reasons:emptyDiagnosticReasons()}:undefined;
+  const missingLotSymbols=new Set(options.missingLotSymbols??[]);
+  const rejectionSource=new Map<number,DiagnosticSource>();
+  const recordDiagnosticDay=(now:number,buySignal:boolean,executedBuy:boolean)=>{
+   if(!diagnostics)return;
+   const value=broker.equity,peak=Math.max(broker.peak,value);
+   if(!Number.isFinite(value)||value<=0)throw Error('Invalid diagnostic account valuation');
+   diagnostics.days.push({day:new Date(now-1).toISOString().slice(0,10),asOf:now,
+    equity:value,cash:broker.cash,investedPct:Math.max(0,Math.min(1,(value-broker.cash)/value)),
+    allCash:broker.positions.size===0,
+    riskStatus:portfolioRisk?diagnosticRiskStatus(value,peak,portfolioRisk.limits,portfolioRisk.halted):'ok',
+    riskLatched:portfolioRisk?.halted??false,plannerBuySignal:buySignal,executedBuy});
+  };
   const membership=new Map(universeHistory.map(day=>[day.dateMs,new Set(day.symbols)]));
   for(const [now,group] of [...events.entries()].sort(([a],[b])=>a-b)){
     const eligible=options.universeAt?(membership.get(Math.floor(now/DAY)*DAY)??new Set<string>()):new Set(symbols);
@@ -156,8 +176,13 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
      }
     }
     // Process bars only once they have closed; execution prices are modeled from their opens.
+    const tradesBeforeCandles=broker.trades.length;
     for(const {symbol,candle} of group.sort((a,b)=>a.symbol.localeCompare(b.symbol)))broker.onCandle(symbol,candle,intervalMinutes);
-    if(trendMode&&now>=toMs){equity.push({ts:now,equity:broker.equity,exposed:broker.positions.size>0});continue;}
+    const executedBuy=broker.trades.slice(tradesBeforeCandles).some(t=>t.side==='buy');
+    if(trendMode&&now>=toMs){
+     recordDiagnosticDay(now,false,executedBuy);
+     equity.push({ts:now,equity:broker.equity,exposed:broker.positions.size>0});continue;
+    }
     const inputs=[...all.entries()].filter(([pair])=>eligible.has(pair)||broker.positions.has(pair)).map(([pair,series])=>{
       // Closed-only binary cutoffs avoid quadratic scans over years of history.
       const closed=(rows:Candle[],minutes:number,limit:number)=>{
@@ -177,6 +202,9 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
       [...all.entries()].filter(([pair])=>eligible.has(pair)||broker.positions.has(pair))
       .map(async([pair,series])=>{
         const quality=await requireCoinQualityEntry(options.coinQuality!,pair,now,'backtest');
+        if(diagnostics&&!quality.allowed)
+         countDiagnosticReason(diagnostics.reasons,missingLotSymbols.has(pair)?'missingLot':'coinQuality',
+          'Markt-Tag ohne Einstiegsfreigabe: '+quality.reason);
         return {pair,daily:series.trendDaily??[],
           constraints:constraints.get(pair)??null,
           quality:quality.allowed?'allowed' as const:'unknown' as const};
@@ -200,6 +228,9 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
     const output=await provider.decide(ctx);
     if(!output||!Array.isArray(output.actions))throw Error('Invalid provider result');
     const actions:Action[]=output.actions;
+    const plannerBuySignal=actions.some(a=>a.type==='buy');
+    if(diagnostics&&!plannerBuySignal)
+     countDiagnosticReason(diagnostics.reasons,'planner','Tag ohne Kaufsignal: '+output.marketView);
     for(const a of actions){
       if(a.type==='hold')continue;
       if(a.type==='buy'&&!eligible.has(a.pair)){
@@ -209,7 +240,10 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
       if(a.type==='buy'&&options.coinQuality){
        const quality=await requireCoinQualityEntry(options.coinQuality,a.pair,now,'backtest');
        if(!quality.allowed){
-        broker.rejectionReasons.push(quality.reason);continue;
+        broker.rejectionReasons.push(quality.reason);
+        if(diagnostics)rejectionSource.set(broker.rejectionReasons.length-1,
+         missingLotSymbols.has(a.pair)?'missingLot':'coinQuality');
+        continue;
        }
       }
       if(random()<dropSignalPct)continue;
@@ -227,6 +261,7 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
        const verdict=portfolioRisk.evaluateBuy(a.pair,a.amountEur,snapshot);
        if(!verdict.allowed){
         broker.rejectionReasons.push('Portfolio-RiskEngine: '+verdict.reasons.join('; '));
+        if(diagnostics)rejectionSource.set(broker.rejectionReasons.length-1,'portfolioRisk');
         continue;
        }
        broker.queue({...a,amountEur:Math.min(a.amountEur,verdict.approvedAmount)},now,options.strategy==='hold'?'hold':'rules');
@@ -248,6 +283,7 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
       }
     }
     decisions.push({ts:now,symbol:'*',actions:actions.map(a=>({...a}))});
+    recordDiagnosticDay(now,plannerBuySignal,executedBuy);
     equity.push({ts:now,equity:broker.equity,exposed:broker.positions.size>0});
   }
   if(options.universeAt){
@@ -259,6 +295,9 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
    if(broker.orders.length)throw Error('Unfilled orders remain after historic candles ended; refusing to invent fills');
   }
   assertLedgerInvariant(broker,feeRate);
+  if(diagnostics)for(let index=0;index<broker.rejectionReasons.length;index++)
+   countDiagnosticReason(diagnostics.reasons,rejectionSource.get(index)??'broker',
+    'Orderablehnung: '+broker.rejectionReasons[index]!);
   const historicalTradability=summarizeHistoricalTradability({
     fromMs,toMs,universeHistory,trades:broker.trades,
     observations:options.historicalTradabilityEvidence
@@ -280,7 +319,7 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
   const calculated=calculateMetrics(equity,broker.trades,fromMs,toMs,trials,options.variants,broker.rejected);
   return {configuration:config,fingerprints:{data,configuration,codeBuild:options.buildId??null,combined},
     metrics:calculated.metrics,daily:calculated.daily,equity,trades:broker.trades,decisions,rejections:broker.rejectionReasons,
-    universe:symbols,universeHistory,coverage,historicalTradability,limitations:['Synthetic spread and slippage replace unavailable historic order-book data','No gap filling or look-ahead',
+    universe:symbols,universeHistory,coverage,historicalTradability,...(diagnostics?{diagnostics}:{}),limitations:['Synthetic spread and slippage replace unavailable historic order-book data','No gap filling or look-ahead',
      options.universeAt?'Historic UTC-day universe from prior 30 daily candles; delisted pairs are included only where Binance public ZIPs exist. Missing delistings or archive gaps remain a limitation.':
       'Static source symbols: point-in-time membership unavailable; survivorship bias prevents historical promotion.',
      ...(options.universeAt&&!options.constraints?['Historical exchange lot and minimum-order rules unavailable; synthetic precision assumptions used']:[]),
