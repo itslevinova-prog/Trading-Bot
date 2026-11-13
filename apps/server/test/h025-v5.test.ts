@@ -199,7 +199,7 @@ test('four sealed v5 reports share daily-only 2019 warmup with no pre-2020 trade
 test('v5 remains manual-off, preregistered +4 with immutable split and privacy comment to #3',()=>{
  const registration=JSON.parse(readFileSync('../../docs/research/hypotheses.json','utf8'))
   .find((x:{id:string})=>x.id==='H-025');
- expect(registration.variantsTested).toBe(21);
+ expect(registration.variantsTested).toBe(25);
  expect(registration.drawdownV5).toMatchObject({
   mode:'run_v5',variantsRegistered:4,historicalRunsCompleted:0,
   historicalRunStatus:'not-executed',noPaperOrForward:true
