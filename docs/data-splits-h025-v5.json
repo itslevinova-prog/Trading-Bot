@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "registeredAt": "2026-11-13",
+  "hypothesis": "H-025",
+  "variant": "v5",
+  "immutable": true,
+  "scope": "Indicator warm-up addendum; docs/data-splits-v1.json remains unchanged",
+  "timezone": "UTC",
+  "indicatorsOnlyWarmup": {
+    "fromInclusive": "2019-01-01",
+    "toExclusive": "2020-01-01",
+    "allowedUse": [
+      "EMA20/50/100/200",
+      "BTC-200d market regime",
+      "30/60-day volatility and daily shock risk history",
+      "PIT quality prerequisites"
+    ],
+    "prohibitedUse": [
+      "trades",
+      "orders",
+      "equity evaluations",
+      "performance attribution",
+      "benchmark scoring"
+    ]
+  },
+  "developmentEvaluation": {
+    "fromInclusive": "2020-01-01",
+    "toExclusive": "2024-01-01"
+  },
+  "validation": {
+    "fromInclusive": "2024-01-01",
+    "status": "sealed"
+  },
+  "holdout": {
+    "fromInclusive": "2025-01-01",
+    "status": "sealed"
+  },
+  "execution": "Only the manual run_v5 workflow may import 2019 daily candles; all research decisions and reported metrics begin in 2020."
+}
