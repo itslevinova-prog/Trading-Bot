@@ -99,14 +99,7 @@ test('the manual v4 workflow gates date range, comments on #3 through privacy ev
  expect(workflow).toContain('"$RUN_V4" == '+"'true'");
  expect(workflow).toContain('pnpm trend:spike');
  expect(workflow).toContain('src/backtest/trend-research-v2-cli.ts --v4');
- expect(workflow).toContain('if: '+');
- const section=workflow.split('      - name: H-025 v4 – Datenschutzprüfung und Kommentar in Issue #3')[1]!;
- expect(section).toContain('GITHUB_EVENT_NAME=issue_comment GITHUB_EVENT_PATH="$PWD/v4-comment-event.json"');
- expect(section.indexOf('node .github/privacy-guard/check.mjs'))
-  .toBeLessThan(section.indexOf('gh issue comment 3'));
- expect(readFileSync('../../.github/workflows/paper-forward.yml','utf8')).not.toContain('run_v4');
-});
-+'{{ inputs.run_v5 || inputs.run_v4 || (inputs.run_spike && !inputs.run_v3) }}');
+ expect(workflow).toContain('inputs.run_v5 || inputs.run_v4 || (inputs.run_spike && !inputs.run_v3)');
  const section=workflow.split('      - name: H-025 v4 – Datenschutzprüfung und Kommentar in Issue #3')[1]!;
  expect(section).toContain('GITHUB_EVENT_NAME=issue_comment GITHUB_EVENT_PATH="$PWD/v4-comment-event.json"');
  expect(section.indexOf('node .github/privacy-guard/check.mjs'))
