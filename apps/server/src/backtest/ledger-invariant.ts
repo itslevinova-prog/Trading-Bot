@@ -9,9 +9,16 @@ export function assertLedgerInvariant(broker:Pick<SimulatedBroker,'trades'|'posi
  const inventory=new Map<string,{qty:number;basis:number}>();
  const fillIds=new Set<string>();
  for(const trade of broker.trades as readonly SimulatedTrade[]){
+  // The broker fills one pending signal at the bar open, then may close its
+  // remaining inventory via one protective stop/target inside that same bar.
+  // Keep the original strict time/symbol/side identity for ordinary orders:
+  // a second signal still fails even when its quantity or price differs.
   const id=[trade.ts,trade.decisionTs,trade.symbol,trade.side].join('|');
-  if(fillIds.has(id))throw Error('Ledger duplicate fill: '+id);
-  fillIds.add(id);
+  const kind=trade.side==='sell'&&
+   (trade.reason==='stop'||trade.reason==='target')?'protective':'signal';
+  const key=id+'|'+kind;
+  if(fillIds.has(key))throw Error('Ledger duplicate fill: '+id);
+  fillIds.add(key);
   if(!Number.isFinite(trade.qty)||trade.qty<=0||!Number.isFinite(trade.price)||trade.price<=0||
     !near(trade.notional,trade.qty*trade.price)||!near(trade.fee,trade.notional*feeRate)||
     !Number.isFinite(trade.spreadCost)||trade.spreadCost<0||
