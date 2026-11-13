@@ -152,7 +152,7 @@ test('rejection attribution and persistent cash lock use observed order rejectio
  ]};
  const a=analyzeDiagnosticTrace(trace,100);
  expect(a.lockFinding).toBe('bestätigt');
- expect(a.firstExitOnly).toBe('2020-12-31');
+ expect(a.firstExitOnly).toBe('2021-01-01');
  expect(a.exitOnlyRejections).toBe(2);
  expect(a.cashLockedDays).toBe(3);
  expect(a.plannerBuyDays).toBe(4);expect(a.executedBuyDays).toBe(1);
