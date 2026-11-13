@@ -158,7 +158,7 @@ test('four sealed v5 reports share daily-only 2019 warmup with no pre-2020 trade
  const options={source,lotRules:{BTCUSDT:LOT,ETHUSDT:LOT},
   lotSnapshotAt:'2026-11-13T00:00:00Z',codeBuild:'h025-v5-fixture',
   universeAt:(_day:number)=>['BTCUSDT','ETHUSDT']};
- const reports=[];
+ const reports:Awaited<ReturnType<typeof runTrendResearchV5>>[]=[];
  for(const profileName of V5_PROFILES)
   reports.push(await runTrendResearchV5({...options,...(profileName?{profileName}:{})}));
  for(const r of reports){
