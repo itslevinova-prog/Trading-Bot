@@ -418,7 +418,7 @@
     "successThreshold": "Robustere risikoadjustierte Kennzahlen als BTC Buy & Hold, Top-10 Equal Weight, 60/40 BTC/Cash und bestehende Regeln unter vollständiger Kostenrechnung; Parameterumgebung stabil.",
     "killCriterion": "Kein überprüfbarer Nettovorteil nach Kosten oder starke Parameterempfindlichkeit; historische Datenlücken oder aktuelle Qualitätslabels statt Point-in-Time-Daten.",
     "status": "open",
-    "variantsTested": 17,
+    "variantsTested": 21,
     "result": "Ein Forschungslauf mit Annahmen wurde technisch erfolgreich ausgeführt, jedoch nur auf BTC/ETH: GitHub ersetzte leere Symbols durch den alten Standard. Kein vollständiger USDT-Test, keine Pipeline-/Paper-Freigabe. Universum wird vor Wiederholung korrigiert; unveränderte Strategie und Annahmen.",
     "evidence": [
       "docs/TREND-VOL-TARGET-V1.md",
@@ -606,6 +606,106 @@
         "docs/H-025-V4.md",
         "apps/server/src/backtest/trend-research-v4.ts",
         "apps/server/test/h025-v4.test.ts"
+      ]
+    },
+    "drawdownV5": {
+      "version": "H-025-research-btc-eth-full-exposure-v5",
+      "mode": "run_v5",
+      "registeredAt": "2026-11-13",
+      "variantsRegistered": 4,
+      "historicalRunsCompleted": 0,
+      "historicalRunStatus": "not-executed",
+      "fixedCandidates": [
+        "basis",
+        "vorsichtig",
+        "normal",
+        "aggressiv"
+      ],
+      "independentOf": "v1-v4 and the daily Paper forward test; explicit manual opt-in only",
+      "universe": "BTCUSDT and ETHUSDT, each admitted only with point-in-time historical daily membership",
+      "timeframe": {
+        "warmupFrom": "2019-01-01",
+        "warmupToExclusive": "2020-01-01",
+        "warmupPurpose": "EMA, regime and closed-day eligibility indicators only; zero warmup performance/trades/results",
+        "evaluationFrom": "2020-01-01",
+        "evaluationToExclusive": "2024-01-01",
+        "post2023Data": false,
+        "readValidation": false,
+        "readHoldout": false
+      },
+      "strategy": "Unchanged trend-vol-target-v1 20/50/100/200d EMA ensemble and BTC200d regime, ATR trailing exits",
+      "sizing": {
+        "targetInvestment": "inverse-volatility-weighted average trend strength times maxInvestedPct",
+        "inverseWeight": "1 / 30-day annualized daily volatility",
+        "fixedMaxInvestedPct": {
+          "basis": 1,
+          "vorsichtig": 0.5,
+          "normal": 0.8,
+          "aggressiv": 1
+        },
+        "noVolatilityTargetShrink": true,
+        "topK": 2,
+        "perAssetLimit": 1,
+        "relativeRebalanceTolerance": 0.2
+      },
+      "drawdown": {
+        "reference": "account historic equity peak; no reset",
+        "normalUntil": 0.1,
+        "linearFrom": 0.1,
+        "linearTo": 0.3,
+        "entryScale": "max(0,min(1,(0.30 - peakDrawdown)/0.20))",
+        "permanentEntryPauseAt": "equity <= 0.70 * original initial capital",
+        "pauseCannotAutomaticallyReset": true,
+        "manualRelease": "owner explicitly in real-world operational mode; not available in research replay",
+        "legacyPortfolioExitOnlyDisabled": true,
+        "brokerStopRiskBudgetDisabled": true,
+        "exitPolicy": "original EMA signal or ATR trailing stop; ordinary order and lot checks remain"
+      },
+      "dailyRisk": {
+        "hourlyDataRequired": false,
+        "missingHourlyDoesNotBlock": true,
+        "returns": "60 contiguous closed UTC daily returns for BTC and asset; no synthetic interpolation",
+        "shock": "BTC absolute most recent daily log return > empirical P99 from preceding 59 daily returns blocks entry",
+        "volatility": "daily log-return sample SD annualized by sqrt(365)",
+        "failClosedOnMissingDaily": true,
+        "reportCountsAndVolatility": true
+      },
+      "execution": {
+        "initialCash": 10000,
+        "feeRate": 0.001,
+        "spreadBps": 10,
+        "slippageBps": 5,
+        "lotRules": "current exchangeInfo LOT_SIZE and min notional as historical assumption",
+        "missingLot": "entry blocked; no fabricated historical lot"
+      },
+      "comparators": [
+        "BTC holding from original v2 matched-cost benchmark",
+        "BTC/ETH 50/50 holding with current exchange lots and matched costs",
+        "DCA from v2 cashflow-neutral matched-cost benchmark",
+        "pre-existing SMA200 Issue #18 development spike"
+      ],
+      "reporting": [
+        "net return",
+        "CAGR",
+        "maximum drawdown",
+        "Sharpe",
+        "Calmar",
+        "trades",
+        "mean invested capital percentage",
+        "sum of fee/spread/slippage",
+        "daily shock/missing history blockers",
+        "drawdown and permanent pause diagnostics"
+      ],
+      "noOptimizationAfterResults": true,
+      "negativeResultsPublished": true,
+      "noPaperOrForward": true,
+      "pipelineEligible": false,
+      "historicalRunTrigger": "manual workflow_dispatch run_v5=false by default; no run during implementation",
+      "evidence": [
+        "docs/H-025-V5.md",
+        "docs/data-splits-h025-v5.json",
+        "apps/server/src/backtest/trend-research-v5.ts",
+        "apps/server/test/h025-v5.test.ts"
       ]
     }
   },
