@@ -1,4 +1,6 @@
 import {PortfolioRiskEngine,DEFAULT_RISK_LIMITS,type RiskLimits} from '../risk-engine/engine.js';
+import {H025_V3_DRAWDOWN,type ResearchV3Reset} from '../risk-engine/research-drawdown-v3.js';
+import type {Regime} from '../regime/types.js';
 import {assessResearchCoverage,type CoveragePreflight,type CoverageInterval} from '../archive/report.js';
 import {requireCoinQualityEntry} from '../coin-quality/admission.js';
 import {summarizeHistoricalTradability,type HistoricalTradabilityObservation,type HistoricalTradabilitySummary} from '../coin-quality/archive-contract.js';
@@ -44,6 +46,8 @@ export type BacktestOptions={
   collectResearchDiagnostics?:boolean;
   /** Current-only lot rules missing from the historical archive; report-only. */
   missingLotSymbols?:readonly string[];
+  /** Opt-in H-025 v3 development only. Caller supplies causally closed market-regime states. */
+  researchDrawdownV3?:{regimeAt:(utcDayMs:number)=>Regime|Promise<Regime>};
 };
 export type BacktestResult={
   configuration:{strategy:Strategy;fromMs:number;toMs:number;intervalMinutes:IntervalMinutes;fillModel:FillModelName;feeRate:number;spreadBps:number;slippageBps:number;trials:number;seed:number;executionDelayBars:number;dropSignalPct:number};
@@ -55,6 +59,9 @@ export type BacktestResult={
   coverage:CoveragePreflight|null;
   historicalTradability:HistoricalTradabilitySummary;
   diagnostics?:DiagnosticTrace;
+  researchV3?:{resetEvents:ResearchV3Reset[];permanentStopAt:number|null;
+   statusDays:Record<'ok'|'caution'|'exit-only'|'halted',number>;
+   parameters:typeof H025_V3_DRAWDOWN};
 };
 export class ResearchCoverageBlocked extends Error {
   constructor(readonly coverage: CoveragePreflight) {
@@ -77,6 +84,9 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
     toMs>Date.UTC(2024,0,1)||!options.universeAt||!options.coinQuality||
     !options.constraints?.size||options.enablePortfolioRisk!==true))
     throw Error('Trend v1 requires sealed daily development, PIT universe/quality, historic lots and portfolio-risk gate');
+  if(options.researchDrawdownV3&&(!trendMode||!options.enablePortfolioRisk||
+    !options.collectResearchDiagnostics||fromMs!==Date.UTC(2020,0,1)||toMs!==Date.UTC(2024,0,1)))
+   throw Error('H-025 v3 is sealed to the full 2020–2023 daily diagnostic research replay');
   if(options.enforceResearchCoverage && (toMs > Date.UTC(2024,0,1) || !options.universeAt))
    throw Error('Research coverage requires sealed pre-2024 development range and point-in-time membership');
   if(!Number.isSafeInteger(fromMs)||!Number.isSafeInteger(toMs)||fromMs<0||fromMs>=toMs||![15,60,240,1440].includes(intervalMinutes))
@@ -145,7 +155,8 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
   if(model.name==='maker-queue')throw Error('maker-queue not implemented (issue #2)');
   const broker=new SimulatedBroker(options.initialCash??100,constraints,model,limits,executionDelayBars);
   const portfolioRisk=options.enablePortfolioRisk?
-   new PortfolioRiskEngine({...DEFAULT_RISK_LIMITS,...options.portfolioRiskLimits}):null;
+   new PortfolioRiskEngine({...DEFAULT_RISK_LIMITS,...options.portfolioRiskLimits},
+    options.researchDrawdownV3?{researchV3InitialCash:options.initialCash??100} :{}):null;
   const provider=options.provider??(trendMode?new TrendVolTargetV1Provider():
     options.strategy==='rules'?new RuleBasedProvider():new BuyAndHoldProvider());
   const random=nextRandom(seed),decisions:RecordedDecision[]=[],equity:EquityPoint[]=[{ts:fromMs,equity:broker.equity,exposed:false}];
@@ -161,7 +172,8 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
    diagnostics.days.push({day:new Date(now-1).toISOString().slice(0,10),asOf:now,
     equity:value,cash:broker.cash,investedPct:Math.max(0,Math.min(1,(value-broker.cash)/value)),
     allCash:broker.positions.size===0,
-    riskStatus:portfolioRisk?diagnosticRiskStatus(value,peak,portfolioRisk.limits,portfolioRisk.halted):'ok',
+    riskStatus:portfolioRisk?(portfolioRisk.researchV3State?.status??
+     diagnosticRiskStatus(value,peak,portfolioRisk.limits,portfolioRisk.halted)):'ok',
     riskLatched:portfolioRisk?.halted??false,plannerBuySignal:buySignal,executedBuy});
   };
   const membership=new Map(universeHistory.map(day=>[day.dateMs,new Set(day.symbols)]));
@@ -179,6 +191,13 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
     const tradesBeforeCandles=broker.trades.length;
     for(const {symbol,candle} of group.sort((a,b)=>a.symbol.localeCompare(b.symbol)))broker.onCandle(symbol,candle,intervalMinutes);
     const executedBuy=broker.trades.slice(tradesBeforeCandles).some(t=>t.side==='buy');
+    if(options.researchDrawdownV3){
+     // Observe every closed day, including those without a buy signal. The final
+     // valuation does not get a new entry or access to a 2024 market observation.
+     const regime=now>=toMs?'neutral':await options.researchDrawdownV3.regimeAt(now);
+     portfolioRisk!.observeResearchV3Day({asOf:now,equity:broker.equity,
+      openPositions:broker.positions.size,regime});
+    }
     if(trendMode&&now>=toMs){
      recordDiagnosticDay(now,false,executedBuy);
      equity.push({ts:now,equity:broker.equity,exposed:broker.positions.size>0});continue;
@@ -313,13 +332,19 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
     historicalTradability:'report-only-source-time-safe',
     coverageFingerprint:coverage?.fingerprint??null,
     coinQuality:options.coinQuality?'point-in-time-admission (external source fingerprint required)':'disabled',
-    portfolioRisk:options.enablePortfolioRisk?{enabled:true,limits:{...DEFAULT_RISK_LIMITS,...options.portfolioRiskLimits}}:{enabled:false}
+    portfolioRisk:options.enablePortfolioRisk?{enabled:true,limits:{...DEFAULT_RISK_LIMITS,...options.portfolioRiskLimits},
+     ...(options.researchDrawdownV3?{researchV3:H025_V3_DRAWDOWN}:{})}:{enabled:false}
   }));
   const combined=digest(data+configuration+(options.buildId??'unverified-build'));
   const calculated=calculateMetrics(equity,broker.trades,fromMs,toMs,trials,options.variants,broker.rejected);
   return {configuration:config,fingerprints:{data,configuration,codeBuild:options.buildId??null,combined},
     metrics:calculated.metrics,daily:calculated.daily,equity,trades:broker.trades,decisions,rejections:broker.rejectionReasons,
-    universe:symbols,universeHistory,coverage,historicalTradability,...(diagnostics?{diagnostics}:{}),limitations:['Synthetic spread and slippage replace unavailable historic order-book data','No gap filling or look-ahead',
+    universe:symbols,universeHistory,coverage,historicalTradability,...(diagnostics?{diagnostics}:{}),
+    ...(options.researchDrawdownV3?{researchV3:{resetEvents:portfolioRisk!.researchV3Resets,
+     permanentStopAt:portfolioRisk!.researchV3PermanentStopAt,
+     statusDays:diagnostics!.days.reduce((counts,day)=>{counts[day.riskStatus]++;return counts;},
+      {'ok':0,caution:0,'exit-only':0,halted:0} as Record<'ok'|'caution'|'exit-only'|'halted',number>),
+     parameters:H025_V3_DRAWDOWN}}:{}),limitations:['Synthetic spread and slippage replace unavailable historic order-book data','No gap filling or look-ahead',
      options.universeAt?'Historic UTC-day universe from prior 30 daily candles; delisted pairs are included only where Binance public ZIPs exist. Missing delistings or archive gaps remain a limitation.':
       'Static source symbols: point-in-time membership unavailable; survivorship bias prevents historical promotion.',
      ...(options.universeAt&&!options.constraints?['Historical exchange lot and minimum-order rules unavailable; synthetic precision assumptions used']:[]),
