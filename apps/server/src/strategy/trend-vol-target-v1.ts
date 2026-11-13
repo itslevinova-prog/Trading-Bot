@@ -25,6 +25,8 @@ export type TrendV1Input={
  targetAnnualVol?:number;topK?:number;rebalanceTolerance?:number;atrMultiple?:number;
  /** Optional stricter entry sizing for a pre-registered paper risk profile. */
  maxPositionPct?:number;maxInvestedPct?:number;
+ /** Only the explicitly opted-in H-025 v5 research replay uses full-investment weights. */
+ researchV5?:true;
 };
 export type TrendRank={pair:string;strength:number;annualVol:number;score:number;weight:number};
 export type TrendPlan={status:'ready'|'blocked';reason:string;actions:Action[];ranked:TrendRank[]};
@@ -99,7 +101,7 @@ export function planTrendVolTargetV1(input:TrendV1Input):TrendPlan {
   !Number.isSafeInteger(cfg.topK)||cfg.topK<1||cfg.topK>10||
   !valid(cfg.rebalanceTolerance)||cfg.rebalanceTolerance<.10||cfg.rebalanceTolerance>1||
   !valid(cfg.atrMultiple)||cfg.atrMultiple<1||cfg.atrMultiple>8||
-  !positive(cfg.maxPositionPct)||cfg.maxPositionPct>MAX_POSITION_WEIGHT||
+  !positive(cfg.maxPositionPct)||cfg.maxPositionPct>(input.researchV5?1:MAX_POSITION_WEIGHT)||
   !positive(cfg.maxInvestedPct)||cfg.maxInvestedPct>1)
   return empty('Ungültige, nicht vorregistrierte Strategieparameter');
  const currentDay=Math.floor(input.asOf/DAY)*DAY;
@@ -136,10 +138,17 @@ export function planTrendVolTargetV1(input:TrendV1Input):TrendPlan {
   x.m.assumedRoundtripBps<=MAX_ROUNDTRIP_BPS&&
   x.strength>0&&x.score>0)
   .sort((a,b)=>b.score-a.score||a.m.pair.localeCompare(b.m.pair)).slice(0,cfg.topK);
- const weights=new Map(ranks.map(x=>[x.m.pair,riskOn?
-  Math.min(MAX_POSITION_WEIGHT,cfg.maxPositionPct,x.strength*cfg.targetAnnualVol/x.vol):0]));
+ // v5 deliberately changes sizing, NOT the EMA, BTC regime, trend ranking or ATR exit.
+ // Inverse-vol allocation sums to trend strength × profile investment ceiling.
+ const inverseVol=ranks.reduce((sum,x)=>sum+1/x.vol,0);
+ const trendStrength=inverseVol>0?
+  ranks.reduce((sum,x)=>sum+x.strength/x.vol,0)/inverseVol:0;
+ const v5Budget=riskOn?cfg.maxInvestedPct*trendStrength:0;
+ const weights=new Map(ranks.map(x=>[x.m.pair,input.researchV5?
+  (inverseVol>0?v5Budget*(1/x.vol)/inverseVol:0):
+  riskOn?Math.min(MAX_POSITION_WEIGHT,cfg.maxPositionPct,x.strength*cfg.targetAnnualVol/x.vol):0]));
  const total=[...weights.values()].reduce((n,x)=>n+x,0);
- if(total>cfg.maxInvestedPct)
+ if(!input.researchV5&&total>cfg.maxInvestedPct)
   for(const [pair,w] of weights)weights.set(pair,w*cfg.maxInvestedPct/total);
  const actions:Action[]=[];
  for(const holding of input.positions){
@@ -179,7 +188,7 @@ export function planTrendVolTargetV1(input:TrendV1Input):TrendPlan {
   cashLeft-=roundedQuote;
   actions.push({type:'buy',pair:row.m.pair,amountEur:roundedQuote,
    stopLossPct:row.trailPct,confidence:row.strength,
-   reasoning:'Geschlossener Tagestrend 20/50/100/200 EMA; Volatilitätsziel, BTC-200d-Regime und Kostenannahme geprüft'});
+   reasoning:input.researchV5?'H-025 v5: geschlossener EMA-Trend, BTC-Regime, inverse Tagesvolatilität und Kostenannahme geprüft':'Geschlossener Tagestrend 20/50/100/200 EMA; Volatilitätsziel, BTC-200d-Regime und Kostenannahme geprüft'});
  }
  return {status:'ready',reason:riskOn?'BTC 200d EMA bestätigt; tägliches Rebalancing':'BTC unter 200d EMA; Cash-Regime',
   actions:actions.slice(0,MAX_ACTIONS).length?actions.slice(0,MAX_ACTIONS):[hold('Kein täglicher Rebalancingbedarf oder Einstieg konservativ gesperrt')],
