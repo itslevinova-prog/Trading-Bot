@@ -39,11 +39,11 @@ export class ResearchDrawdownV3 {
  observe(input:ResearchV3Observation,limits:RiskLimits):ResearchV3Day {
   const {asOf,equity,openPositions,regime}=input;
   if(!Number.isSafeInteger(asOf)||asOf<0||asOf%DAY!==0||
-   this.lastDay!==null&&asOf<=this.lastDay||
+   this.lastDay!==null&&asOf!==this.lastDay+DAY||
    !Number.isFinite(equity)||equity<=0||
    !Number.isSafeInteger(openPositions)||openPositions<0||
    !(['risk-on','neutral','risk-off'] as const).includes(regime))
-   throw Error('Invalid or non-monotonic H-025 v3 closed-day observation');
+   throw Error('Invalid or non-contiguous H-025 v3 closed-day observation');
   this.lastDay=asOf;
   this.flatSince=openPositions===0?(this.flatSince??asOf):null;
   this.referencePeak=Math.max(this.referencePeak,equity);
