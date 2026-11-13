@@ -119,7 +119,7 @@ export async function runTrendResearchV2(options:V2RunOptions){
   caveats:[
    ...(v4?[
     'H-025 '+v4+': Diagnoselauf, nie Paper-, Forward- oder Pipeline-Kandidat.',
-    'Nur die drei Portfolio-RiskEngine-Drawdown-Schwellen 97/98/99 Prozent sind ueberschrieben; andere RiskEngine-Pruefungen, Coin-Qualitaet und aktuelle Mengenregeln bleiben aktiv.',
+    'Nur die drei Portfolio-RiskEngine-Drawdown-Schwellen 97/98/99 Prozent sind überschrieben; andere RiskEngine-Prüfungen, Coin-Qualität und aktuelle Mengenregeln bleiben aktiv.',
     'Keine v3-Reentry-/Reset-Logik, kein lineares v3-Sizing, kein v3-Toleranzband.',
     ...(v4==='v4b'?['BTC/ETH werden nur bei point-in-time belegter Universumszugehoerigkeit zugelassen.']:[])
    ]:[]),

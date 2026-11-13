@@ -50,10 +50,10 @@ export function v4Markdown(reports:readonly V4Report[],spike:V4SpikeComparison):
   (investedDays??'n/a')+' | '+fmt(costPct,true)+' |';
  const lines=[
   '# H-025 v4 – Ursachen-Trennung: acht Diagnosevarianten / Issue #3','',
-  '**Ausschliesslich Entwicklung 2020–2023, kein 2024-/Holdout-Zugriff und keine Freigabe fuer Paper, Forward oder Pipeline.**','',
+  '**Ausschliesslich Entwicklung 2020–2023, kein 2024-/Holdout-Zugriff und keine Freigabe für Paper, Forward oder Pipeline.**','',
   'v4a = v2-Strategie und volles historisches USDT-Universum; v4b = identische Strategie, Universum nur BTC/ETH mit historischer Tageszugehoerigkeit.',
-  'Beide: nur Drawdown-Schwellen 97/98/99 % in der Portfolio-RiskEngine; alle anderen Risikopruefungen, Coin-Qualitaet und aktuelle Lots bleiben aktiv. Kein v3-Reset und keine Optimierung.',
-  'Profile: effektiv gekappte Standardprofile, ohne Paper-Konfigurationsaenderungen; nur die drei Drawdown-Schwellen sind fuer diese Diagnose ueberschrieben.','',
+  'Beide: nur Drawdown-Schwellen 97/98/99 % in der Portfolio-RiskEngine; alle anderen Risikopruefungen, Coin-Qualität und aktuelle Lots bleiben aktiv. Kein v3-Reset und keine Optimierung.',
+  'Profile: effektiv gekappte Standardprofile, ohne Paper-Konfigurationsänderungen; nur die drei Drawdown-Schwellen sind für diese Diagnose überschrieben.','',
   '| Lauf | Netto-Rendite | CAGR | Max-Drawdown | Sharpe | Calmar | Trades | Investierte Tage | Kosten / Start |',
   '|---|---:|---:|---:|---:|---:|---:|---:|---:|'
  ];
@@ -77,11 +77,11 @@ export function v4Markdown(reports:readonly V4Report[],spike:V4SpikeComparison):
  lines.push(row('SMA200 (Issue #18, 50/50 BTC/ETH)',null,sma.cagr,sma.maxDrawdown,
   sma.sharpe,sma.calmar,sma.trades,null,sma.costsPctOfInitial/100));
  lines.push('',
-  'Investierte Tage = Anzahl Tagesbewertungen mit offenen Positionen; fuer die Referenzen nicht vergleichbar ausgewiesen.',
-  'SMA200 stammt aus dem bestehenden vorregistrierten Issue-#18-Schnelltest auf BTC/ETH: 1 000 Startkapital, 10 bps Gebuehr und 5 bps Slippage je Seite, OHNE die v2-Spread- und Mengenregeln. Nettorendite und Tage mit Position sind im Spike-Beleg nicht separat erfasst (n/a).',
+  'Investierte Tage = Anzahl Tagesbewertungen mit offenen Positionen; für die Referenzen nicht vergleichbar ausgewiesen.',
+  'SMA200 stammt aus dem bestehenden vorregistrierten Issue-#18-Schnelltest auf BTC/ETH: 1 000 Startkapital, 10 bps Gebühr und 5 bps Slippage je Seite, OHNE die v2-Spread- und Mengenregeln. Nettorendite und Tage mit Position sind im Spike-Beleg nicht separat erfasst (n/a).',
   'BTC-Halten und monatlicher 70/30-BTC/ETH-Sparplan stammen aus dem bisherigen v2-Benchmark. Der Sparplan ist eine Cashflow-neutrale TWR-Serie mit Nachzahlungen, kein direkt vergleichbares Endvermoegen. Kosten/Start beim Sparplan deshalb n/a.','',
   '## Diagnose: Marktteilnahme und Schwellenstatus','',
-  'Status ist eine passive Tagesbeobachtung. Ablehnungen zaehlen Orders; fehlende Regeln/Qualitaet dagegen auch Markt-Tage; diese Werte duerfen nicht summiert werden.','',
+  'Status ist eine passive Tagesbeobachtung. Ablehnungen zaehlen Orders; fehlende Regeln/Qualität dagegen auch Markt-Tage; diese Werte duerfen nicht summiert werden.','',
   '| Lauf | Tage | Tage mit Position | Cash-Tage | Mittel investiert | ok | caution | exit-only | halted | Planer-Kaufsignaltage | Ausgefuehrte Kauftage |',
   '|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|');
  for(const r of reports){
@@ -99,18 +99,18 @@ export function v4Markdown(reports:readonly V4Report[],spike:V4SpikeComparison):
    '; importiert: '+r.importedCoins+' Coins; gehandelt: '+r.tradedCoins+
    '; Coins ohne aktuelle Mengenregel: '+r.missingRules.length+'.');
   for(const source of ['portfolioRisk','broker','coinQuality','missingLot','planner'] as const){
-   const names={portfolioRisk:'Portfolio-RiskEngine',broker:'Broker',coinQuality:'Coin-Qualitaet',
+   const names={portfolioRisk:'Portfolio-RiskEngine',broker:'Broker',coinQuality:'Coin-Qualität',
     missingLot:'Mengenregeln',planner:'Planer'};
    const top=Object.entries(t.reasons[source]).sort((x,y)=>y[1]-x[1]||x[0].localeCompare(y[0])).slice(0,5);
    lines.push('','**'+names[source]+' – Top 5**','','| Grund | Anzahl |','|---|---:|',
     ...(top.length?top.map(([reason,n])=>
       '| '+reason.replace(/\|/g,'/').replace(/[\r\n]/g,' ')+' | '+n+' |'):
-     ['| Keine erfassten Gruende | 0 |']));
+     ['| Keine erfassten Gründe | 0 |']));
   }
  }
  lines.push('','## Grenzen','',
   'Keine Parametersuche, kein nachtraegliches Aussortieren negativer Resultate, kein Zugriff auf Daten aus 2024 oder dem Holdout.',
-  'Gegenwartige exchangeInfo-Mengenregeln werden rueckwirkend angenommen. Coins ohne diese Regeln bleiben im v4a-Universum, koennen aber nicht gekauft werden; das ist kein vollstaendiger Survivorship-Bias-Ausschluss.',
-  'Der Vergleich isoliert die Drawdown-Bremse und die BTC/ETH-Auswahl, nicht die historische Handelbarkeit. Kein Entwicklungsergebnis allein genuegt fuer eine Freigabe.','');
+  'Gegenwartige exchangeInfo-Mengenregeln werden rückwirkend angenommen. Coins ohne diese Regeln bleiben im v4a-Universum, koennen aber nicht gekauft werden; das ist kein vollstaendiger Survivorship-Bias-Ausschluss.',
+  'Der Vergleich isoliert die Drawdown-Bremse und die BTC/ETH-Auswahl, nicht die historische Handelbarkeit. Kein Entwicklungsergebnis allein genuegt für eine Freigabe.','');
  return lines.join('\n');
 }
