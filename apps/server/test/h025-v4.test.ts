@@ -88,7 +88,7 @@ test('v4a keeps historical full PIT universe; v4b intersects BTC/ETH each day; n
 test('the manual v4 workflow gates date range, comments on #3 through privacy event and does not touch forward',()=>{
  const h=JSON.parse(readFileSync('../../docs/research/hypotheses.json','utf8'))
   .find((x:{id:string})=>x.id==='H-025');
- expect(h.variantsTested).toBe(17);
+ expect(h.variantsTested).toBe(21);
  expect(h.drawdownV4).toMatchObject({
   mode:'run_v4',variantsRegistered:8,historicalRunsCompleted:0,
   noPaperOrForward:true,drawdownThresholds:V4_DRAWDOWN_THRESHOLDS
