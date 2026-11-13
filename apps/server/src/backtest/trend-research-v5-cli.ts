@@ -18,7 +18,7 @@ import type {V4SpikeComparison} from './trend-research-v4.js';
 export async function main(){
  const registration=JSON.parse(readFileSync(PROJECT_ROOT+'/docs/research/hypotheses.json','utf8'))
   .find((h:{id:string})=>h.id==='H-025');
- if(registration?.variantsTested!==21||registration.drawdownV5?.mode!=='run_v5'||
+ if(registration?.variantsTested!==25||registration.drawdownV5?.mode!=='run_v5'||
   registration.drawdownV5?.variantsRegistered!==4||
   registration.drawdownV5?.historicalRunsCompleted!==0||
   registration.drawdownV5?.historicalRunStatus!=='not-executed')

@@ -10,6 +10,7 @@ import {calculateMetrics,type EquityPoint} from './metrics.js';
 import {resolvePaperRiskProfile,type RiskProfileName} from '../risk-engine/profiles.js';
 import {DEFAULT_RISK_LIMITS} from '../risk-engine/engine.js';
 import {H025_V3_DRAWDOWN} from '../risk-engine/research-drawdown-v3.js';
+import {H025_V51_REENTRY} from './research-v51-drawdown.js';
 import type {Regime} from '../regime/types.js';
 import {diagnosticsMarkdown} from './trend-diagnostics.js';
 import type {MarketConstraints} from './simulated-broker.js';
@@ -46,6 +47,10 @@ export const V5_RESEARCH=Object.freeze({...V2_RESEARCH,
  dailyShock:'60d-absolute-close-returns-P99',hourlyRiskRequired:false,
  maxInvestedByProfile:{basis:1,vorsichtig:.5,normal:.8,aggressiv:1},
  historicalRunStatus:'not-executed',pipelineEligible:false});
+/** New sealed candidate: every v5 assumption remains fixed except the peak reset. */
+export const V51_RESEARCH=Object.freeze({...V5_RESEARCH,
+ version:'H-025-research-btc-eth-reentry-v5.1',
+ reentry:H025_V51_REENTRY});
 export function v5DevelopmentSource(source:CandleSource):CandleSource{
  return {listSymbols:()=>source.listSymbols(),getCandles:async(symbol,minutes,from,to)=>{
   if(!['BTCUSDT','ETHUSDT'].includes(symbol)||minutes!==1440||
@@ -79,14 +84,18 @@ export type V2RunOptions={source:CandleSource;lotRules:LotRules;lotSnapshotAt:st
  researchV4?:V4DiagnosticVariant;
  /** Opt-in research only: H-025 v5, never used by Paper or Forward. */
  researchV5?:true;
+ /** Isolated optional H-025 v5.1; v5 runs are still the untouched default. */
+ researchV51?:true;
 };
 export async function runTrendResearchV2(options:V2RunOptions){
  if(!Number.isFinite(Date.parse(options.lotSnapshotAt)))throw Error('Lot snapshot timestamp required');
  const profile=options.profileName?resolvePaperRiskProfile(options.profileName):null;
- const v3=options.researchV3??null,v4=options.researchV4??null,v5=options.researchV5===true;
- if(Number(Boolean(v3))+Number(Boolean(v4))+Number(v5)>1)throw Error('H-025 research modes are mutually exclusive');
+ const v3=options.researchV3??null,v4=options.researchV4??null,
+  v51=options.researchV51===true,v5=options.researchV5===true||v51;
+ if(Number(Boolean(v3))+Number(Boolean(v4))+Number(Boolean(options.researchV5))+Number(v51)>1)
+  throw Error('H-025 research modes are mutually exclusive');
  if(v4&&v4!=='v4a'&&v4!=='v4b')throw Error('Unknown H-025 v4 variant');
- const assumptions=v5?V5_RESEARCH:v4?V4_RESEARCH[v4]:v3?V3_RESEARCH:V2_RESEARCH;
+ const assumptions=v51?V51_RESEARCH:v5?V5_RESEARCH:v4?V4_RESEARCH[v4]:v3?V3_RESEARCH:V2_RESEARCH;
  const rules=configLots(options.lotRules),sealed=v5?v5DevelopmentSource(options.source):developmentSource(options.source);
  const daily=new Map<string,Candle[]>();
  // Discover from the historical archive, never intersect with current exchange symbols.
@@ -113,7 +122,7 @@ export async function runTrendResearchV2(options:V2RunOptions){
   ...(v4?{portfolioRiskLimits:{...(profile?.engineLimits??DEFAULT_RISK_LIMITS),...V4_DRAWDOWN_THRESHOLDS}}:
    profile?{portfolioRiskLimits:profile.engineLimits}:{}),
   ...(v3?{researchDrawdownV3:v3}:{}),
-  ...(v5?{researchV5:true as const}:{}),
+  ...(v51?{researchV51:true as const}:v5?{researchV5:true as const}:{}),
   provider:{decide:async context=>{
    const input=(context.execution as {trendV1?:TrendV1Input}|undefined)?.trendV1;
    if(!input)throw Error('Missing closed daily v2 context');
@@ -136,19 +145,24 @@ export async function runTrendResearchV2(options:V2RunOptions){
   }},buildId:options.codeBuild});
  const benchmarks=await matchedCostBenchmarks({source,fromMs:a.fromMs,toMs:a.toMs,quote:'USDT',costs:{initialCash:a.initialCash,feeRate:a.feeRate,spreadBps:a.spreadBps,slippageBps:a.slippageBps,minOrderEur:a.minNotional,fillModel:'conservative-ohlc'}});
  const snapshot={assumption:V2_RESEARCH.lotAssumption,fetchedAt:options.lotSnapshotAt,rules};
- return {label:v5?'H-025 v5 – BTC/ETH voll investierte Trendfolge (Research)':
+ return {label:v51?'H-025 v5.1 – BTC/ETH Wiedereinstieg (Research)':
+  v5?'H-025 v5 – BTC/ETH voll investierte Trendfolge (Research)':
   v4?'H-025 '+v4+' – isolierte Diagnose ohne Drawdown-Bremse':
   v3?'H-025 v3 – Drawdown-Reentry (separate Forschung)':
   'H-025 v2 – Forschungslauf mit aktuellen Mengenregeln als historischer Annahme',
   hypothesis:'H-025',strategy:CONFIG.strategy,pipelineEligible:false,paperApproved:false,
   profile,
   ...(v4?{diagnosticVariant:v4}:{}),
-  ...(v5?{researchVariant:'v5' as const}:{}),
+  ...(v5?{researchVariant:v51?'v5.1' as const:'v5' as const}:{}),
   assumptions,lotSnapshot:snapshot,lotSnapshotHash:researchHash(snapshot),benchmarks,
   importedCoins:imported.length,universeCoins:result.universe.length,tradedCoins:new Set(result.trades.map(t=>t.symbol)).size,
   missingRules,coveredRuleCoins:imported.length-missingRules.length,
   fingerprints:{configuration:researchHash({assumptions,lotSnapshot:snapshot,...(profile?{profile}:{})}),codeBuild:options.codeBuild},backtest:result,
   caveats:[
+   ...(v51?[
+    'H-025 v5.1: Neuer Referenz-Höchststand nur nach mindestens 30 vollen Cash-Kalendertagen und geschlossenem BTC-200d-risk-on; historische Equity-Peaks bleiben unverändert.',
+    'Kein Peak-Reset hebt die bei höchstens 70 Prozent des ursprünglichen Startkapitals ausgelöste dauerhafte Einstiegspause auf.'
+   ]:[]),
    ...(v5?[
     'H-025 v5: Nur Forschung, kein Paper-/Forward-/Pipeline-Kandidat.',
     '2019-01 bis 2019-12 sind ausschliesslich Indikator-Warm-up; Trades, Bewertung und Kennzahlen erst ab 2020.',
