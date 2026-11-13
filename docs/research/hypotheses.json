@@ -418,11 +418,12 @@
     "successThreshold": "Robustere risikoadjustierte Kennzahlen als BTC Buy & Hold, Top-10 Equal Weight, 60/40 BTC/Cash und bestehende Regeln unter vollständiger Kostenrechnung; Parameterumgebung stabil.",
     "killCriterion": "Kein überprüfbarer Nettovorteil nach Kosten oder starke Parameterempfindlichkeit; historische Datenlücken oder aktuelle Qualitätslabels statt Point-in-Time-Daten.",
     "status": "open",
-    "variantsTested": 2,
+    "variantsTested": 5,
     "result": "Ein Forschungslauf mit Annahmen wurde technisch erfolgreich ausgeführt, jedoch nur auf BTC/ETH: GitHub ersetzte leere Symbols durch den alten Standard. Kein vollständiger USDT-Test, keine Pipeline-/Paper-Freigabe. Universum wird vor Wiederholung korrigiert; unveränderte Strategie und Annahmen.",
     "evidence": [
       "docs/TREND-VOL-TARGET-V1.md",
-      "apps/server/src/backtest/trend-research.ts"
+      "apps/server/src/backtest/trend-research.ts",
+      "docs/TREND-RESEARCH-V2.md"
     ],
     "researchAssumptions": {
       "version": "H-025-research-v1",
@@ -478,7 +479,27 @@
           "status": "implementation-fixture-validation-only"
         }
       }
-    ]
+    ],
+    "riskProfileVariants": {
+      "registered": [
+        "vorsichtig",
+        "normal",
+        "aggressiv"
+      ],
+      "mode": "run_profiles",
+      "window": {
+        "from": "2020-01",
+        "to": "2023-12"
+      },
+      "technicalStatus": "offline-fixture-checked",
+      "historicalRunStatus": "not-executed-in-this-change",
+      "corePct": "not-implemented-and-explicitly-disclosed",
+      "evidence": [
+        "apps/server/test/trend-research-v2.test.ts",
+        "docs/TREND-RESEARCH-V2.md",
+        "apps/server/src/backtest/trend-research-v2.ts"
+      ]
+    }
   },
   {
     "id": "H-026",

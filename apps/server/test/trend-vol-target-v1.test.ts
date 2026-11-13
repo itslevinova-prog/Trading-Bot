@@ -77,3 +77,13 @@ test('DecisionProvider requires a matching closed-day payload',async()=>{
  const withData=await provider.decide({...context,execution:{trendV1:input()}});
  expect(withData.actions.some(a=>a.type==='buy')).toBe(true);
 });
+
+test('profile-specific per-coin and invested-weight caps are enforced in the plan',()=>{
+ const plan=planTrendVolTargetV1(input({targetAnnualVol:.30,topK:2,
+  maxPositionPct:.12,maxInvestedPct:.18}));
+ expect(plan.status).toBe('ready');
+ expect(plan.ranked.every(x=>x.weight<=.12+1e-10)).toBe(true);
+ expect(plan.ranked.reduce((n,x)=>n+x.weight,0)).toBeLessThanOrEqual(.18+1e-10);
+ expect(planTrendVolTargetV1(input({maxPositionPct:.40})).status).toBe('blocked');
+ expect(planTrendVolTargetV1(input({maxInvestedPct:1.01})).status).toBe('blocked');
+});

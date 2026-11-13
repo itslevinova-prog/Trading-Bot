@@ -37,3 +37,50 @@ Keine Änderung an Pipeline-Gates oder v1-Datensplits, keine Paper-Freigabe, kei
 - Historisches Universum erhalten; fehlende aktuelle Regeln sperren Eintritte statt unbekannte Lots zu erfinden.
 - Gemeinsamen Backtest-Broker optional um exakte Schrittweiten erweitern, den v1-Pfad unverändert lassen.
 - Provenance und Daten-/Kostenannahmen sichtbar berichten; keine rückwirkende Umdeutung alter Ergebnisse.
+
+## Vergleich der drei Risikoprofile (Issue #7)
+
+Zusätzlich kann der manuelle Workflow mit `run_profiles=true` gestartet werden. Die Eingaben
+müssen **exakt** `symbols` leer, `from=2020-01`, `to=2023-12`, `intervals=1d,1h`
+sein. `run_spike`, `run_trend` und `run_trend_v2` für einen ausschliesslichen Profilvergleich
+ausschalten. Das Entwicklungsarchiv wird einmal importiert; die Profile `vorsichtig`,
+`normal`, `aggressiv` werden danach in der fest vorregistrierten Reihenfolge mit demselben
+aktuellen Mengenregel-Snapshot ausgeführt. Kein Zugriff auf 2024 oder den Holdout.
+
+Lokal (bereits importiertes Archiv vorausgesetzt):
+
+```bash
+LIVE_ENABLED=false AI_ALLOW_REMOTE=false pnpm --filter @paper/server exec tsx src/backtest/trend-research-v2-cli.ts --profiles
+```
+
+Die JSON-Belege (`data/trend-research-v2/profiles-report.json`) und die gemeinsame Markdown-
+Tabelle (`data/trend-research-v2/profiles-summary.md`) werden separat gespeichert und im
+Workflow als Artefakt hochgeladen. Nach erfolgreicher Datenschutzprüfung wird der
+Markdown-Inhalt über die **Ereignis-Datei** (`GITHUB_EVENT_PATH`), niemals als
+Text-Umgebungsvariable, geprüft und in Issue #7 gepostet.
+
+Die Risikoprofile werden mit `resolvePaperRiskProfile()` ohne Überschreibungen aufgelöst.
+Die bereits geltenden absoluten Caps dürfen Profile nur **verschärfen**. `engineLimits`
+gehen an die Portfolio-RiskEngine, die gekappten `maxOpenPositions` und `maxPositionPct`
+zusätzlich an den Broker. Im Trend-Planer gelten die gekappten `targetAnnualVol`,
+`maxOpenPositions` als `topK`, `maxPositionPct` und `maxInvestedPct` als Zielgrenzen.
+`cappedFields` sowie angeforderte und wirksame Profile erscheinen in jedem JSON-Ergebnis;
+die Kappungen stehen zusätzlich im Markdown.
+
+**Unvollständiges Profil:** Der separat langfristig gehaltene BTC/ETH-`corePct`-Kern
+ist in diesem Backtest **nicht implementiert**. Die Ergebnisse sind daher nur ein
+Vergleich des aktiven Trend-Satelliten mit unterschiedlichen Limits, **kein vollwertiger
+Test** der Profilkonzepte. `universeTopN`, `riskPerTradePct` und
+`minimumEdgeMultiple` werden im v2-Planer nicht als eigene Profilregeln umgesetzt.
+`maxInvestedPct` ist ein Zielgewicht und kein jederzeit garantierter Mark-to-Market-Deckel.
+Exposure in der Tabelle ist der Zeitanteil mit offenen Positionen, nicht der gemittelte
+investierte Kapitalanteil. Die passiven BTC-/DCA-Vergleiche bleiben synthetische Referenzen. Der Kostenanteil
+ist nur bei positivem Brutto-PnL definiert; für passive Benchmarks wird kein
+vergleichbarer Kostenanteil erfunden. DCA ist cashflow-neutral, nicht direkt mit
+einer einmaligen Anfangsanlage gleichzusetzen.
+
+Die drei Vergleichsprofile zählen als drei zusätzliche registrierte/geprüfte Varianten
+von H-025, **nicht** als nachgewiesene rentable Strategien. Die Eintragung in
+`hypotheses.json` ist kein Nachweis, dass ein Lauf auf realem Archiv bereits beendet
+wurde. Erst ein erfolgreicher Workflow liefert empirische Kennzahlen; kein Paper-/Live-
+Freigabeschritt wird daraus abgeleitet.
