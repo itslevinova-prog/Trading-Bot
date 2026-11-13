@@ -9,7 +9,10 @@ export function assertLedgerInvariant(broker:Pick<SimulatedBroker,'trades'|'posi
  const inventory=new Map<string,{qty:number;basis:number}>();
  const fillIds=new Set<string>();
  for(const trade of broker.trades as readonly SimulatedTrade[]){
-  const id=[trade.ts,trade.decisionTs,trade.symbol,trade.side].join('|');
+  // A same-bar signal exit and protective stop are two legitimate partial fills.
+  // Keep exact duplicates blocked, but identify the execution rather than only its clock.
+  const id=[trade.ts,trade.decisionTs,trade.symbol,trade.side,trade.reason,
+   trade.qty,trade.price,trade.makerOrderId??''].join('|');
   if(fillIds.has(id))throw Error('Ledger duplicate fill: '+id);
   fillIds.add(id);
   if(!Number.isFinite(trade.qty)||trade.qty<=0||!Number.isFinite(trade.price)||trade.price<=0||
