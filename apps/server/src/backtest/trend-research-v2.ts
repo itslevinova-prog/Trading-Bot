@@ -8,6 +8,7 @@ import {matchedCostBenchmarks} from './benchmark-costs.js';
 import {runBacktest} from './runner.js';
 import {calculateMetrics,type EquityPoint} from './metrics.js';
 import {resolvePaperRiskProfile,type RiskProfileName} from '../risk-engine/profiles.js';
+import {diagnosticsMarkdown} from './trend-diagnostics.js';
 import type {MarketConstraints} from './simulated-broker.js';
 
 export const V2_RESEARCH=Object.freeze({hypothesis:'H-025',strategy:CONFIG.strategy,
@@ -67,6 +68,7 @@ export async function runTrendResearchV2(options:V2RunOptions){
    return {marketView:CONFIG.strategy+': '+plan.reason,actions:plan.actions};
   }},
   constraints,universeAt:options.universeAt,quoteCurrency:'USDT',venue:'binance',enablePortfolioRisk:true,
+  collectResearchDiagnostics:true,missingLotSymbols:missingRules,
   coinQuality:{check:async(symbol,asOf)=>{
    const quality=researchQuality(symbol,asOf,daily.get(symbol)??[]);
    return rules[symbol]?quality:{...quality,status:'unknown',reasons:['Keine aktuelle Mengenregel; historische Zugehörigkeit bleibt erhalten, Einstieg gesperrt']};
@@ -105,6 +107,8 @@ export function v2Markdown(report:Awaited<ReturnType<typeof runTrendResearchV2>>
   '|---|---:|---:|---:|---:|---:|---:|---:|---:|',
   `| ${report.strategy} | ${fmt(m.netReturn)} | ${fmt(m.cagr)} | ${fmt(m.maxDrawdown)} | ${fmt(m.sharpe)} | ${fmt(m.calmar)} | ${m.tradeCount} | ${m.turnover} | ${report.backtest.trades.reduce((n,t)=>n+t.fee+t.spreadCost+t.slippageCost,0)} |`,'',
   'Kennzahlen als Dezimalwerte; n/a bedeutet nicht berechenbar. Vollständiger Ledger, Rejections, Snapshot und Fingerprints im JSON-Artefakt.','',
+  ...(report.backtest.diagnostics?diagnosticsMarkdown(report.backtest.diagnostics,a.initialCash):
+   ['## Diagnose nicht vorhanden','','Der historische Ergebnisbeleg enthält keine Tages- und Ursachendiagnose. Der Cash-Lock ist daraus nicht belegt.','']),
   '## Unveränderte synthetische Referenzen',...report.benchmarks.map(b=>`- ${b.name}: Nettorendite ${b.netReturn===null?'n/a':b.netReturn}; ${b.note}`),'',
   '## Annahmen und Grenzen',...report.caveats.map(s=>'- '+s),'',
   'Fehlende Regeln: '+(report.missingRules.join(', ')||'keine'),''
@@ -141,6 +145,11 @@ export function v2ProfilesMarkdown(reports:readonly Awaited<ReturnType<typeof ru
   'DCA-Renditen sind Cashflow-neutral (TWR), monatliche Einzahlungen; kein direkter Endvermögensvergleich mit einer Einmalanlage.',
   'Exposure = Anteil der Bewertungstage mit mindestens einer Position, nicht durchschnittlich investierter Kapitalanteil.',
   'Benchmark-Exposure für DCA nicht ermittelt; BTC Buy & Hold nach einmaligem Einstieg näherungsweise vollständig investiert.','',
+  '## Diagnose je Profil','',
+  ...reports.flatMap(r=>['### Profil '+r.profile!.name,'',
+   ...(r.backtest.diagnostics?diagnosticsMarkdown(r.backtest.diagnostics,a.initialCash)
+    .map(line=>line.replace(/^(#{2,3})(?= )/,x=>'#'+x)):
+    ['Keine Tagesdiagnose im vorhandenen Ergebnis.']),'']),
   '## Absolute Kappungen je Profil',
   ...reports.map(r=>`- ${r.profile!.name}: cappedFields = ${r.profile!.cappedFields.join(', ')||'keine'}; `+
    `effektive Volatilität ${fmt(r.profile!.effective.targetAnnualVol,true)}, `+

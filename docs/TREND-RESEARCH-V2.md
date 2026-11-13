@@ -84,3 +84,38 @@ von H-025, **nicht** als nachgewiesene rentable Strategien. Die Eintragung in
 `hypotheses.json` ist kein Nachweis, dass ein Lauf auf realem Archiv bereits beendet
 wurde. Erst ein erfolgreicher Workflow liefert empirische Kennzahlen; kein Paper-/Live-
 Freigabeschritt wird daraus abgeleitet.
+
+## Ursachendiagnose des bestehenden H-025-v2-Laufs
+
+Die nachträgliche Auswertung des **Originalartefakts** aus Run
+[43380362062](https://github.com/itslevinova-prog/Trading-Bot/actions/runs/43380362062)
+hat die Exit-only-/Cash-Sperre **bestätigt**: 2'090 von 2'106 abgelehnten
+Käufen wurden wegen der 10-%-Drawdown-Grenze verweigert. Die Schwelle
+wurde am **06.09.2020** erreicht (Drawdown 10,0527 %). Nach dem 05.09.2020
+erfolgte kein weiterer Trade; 1'456 von 1'461 Tagen blieb das Konto
+vollständig in Cash, obwohl an 706 Tagen mindestens ein Kaufsignal
+des Planers vorlag. Die 188 fehlenden Mengenregeln sind eine zusätzliche
+unbekannte Zugangsbeschränkung, aber nicht der dominante dokumentierte
+Ausführungsengpass.
+
+**Der vollständige, überprüfbare Quellenbericht** mit Datenfingerprint,
+Ablehnungsstatistik, Tagesstatus, Exposure-Rekonstruktion und Equity
+2020–2023 liegt unter
+[`docs/research/H-025-v2-run-43380362062-diagnosis.md`](research/H-025-v2-run-43380362062-diagnosis.md).
+Dieser Bericht wurde **ohne neuen Forschungslauf** aus dem vorhandenen
+Actions-JSON erstellt.
+
+Der v2- und der Dreiprofil-Backtest erhalten zusätzlich **passive**
+Diagnosefelder, damit künftige `summary.md`/`profiles-summary.md` die
+Entscheidungsquellen und den Statuswechsel unmittelbar ausweisen:
+Top-15-Gründe pro Quelle mit unterschiedlichen Zähleinheiten,
+Planer-Signaltage gegenüber tatsächlichen Fill-Tagen, in Cash verbrachte
+Tage, investierter Kapitalanteil, jährliche Equity und Drawdowns.
+Dabei werden Schwellenstatus (alle Tage) und Hard-Stop-Latch (nur nach
+tatsächlicher Evaluierung) unterschieden. Der erste Schwellenwechsel
+wird am UTC-Zeitpunkt der darauffolgenden Auswertungs-/Entscheidungsuhr
+datiert; jährliche Werte beziehen sich auf die abgeschlossenen
+Tageskerzen. **Strategie, Planer, Risikogrenzen und Broker-Ausführung
+bleiben unverändert.** Es wird nicht auf 2024/Holdout zugegriffen, und
+die neue Instrumentierung ist weder eine weitere Strategievariante
+noch ein Anlass zur Änderung der Risikosperre.
