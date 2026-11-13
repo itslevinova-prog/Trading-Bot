@@ -12,10 +12,10 @@ export const TREND_RESEARCH_ASSUMPTIONS=Object.freeze({
  lotDecimals:0,minNotional:10,initialCash:10_000,feeRate:.001,spreadBps:10,slippageBps:5,
  quote:'USDT',historicalTradabilityVerified:false
 });
-export function researchQuality(symbol:string,asOf:number,rows:readonly Candle[]):QualityVerdict{
+export function researchQuality(symbol:string,asOf:number,rows:readonly Candle[],warmupFromMs:number=TREND_RESEARCH_ASSUMPTIONS.fromMs):QualityVerdict{
  const a=TREND_RESEARCH_ASSUMPTIONS;
- if(asOf<a.fromMs||asOf>a.toMs||asOf%DAY!==0)throw Error('Sealed UTC development range required');
- const closed=rows.filter(c=>c.ts+DAY<=asOf&&c.ts>=a.fromMs);
+ if(asOf<a.fromMs||asOf>a.toMs||asOf%DAY!==0||![a.fromMs,Date.UTC(2019,0,1)].includes(warmupFromMs))throw Error('Sealed UTC development range required');
+ const closed=rows.filter(c=>c.ts+DAY<=asOf&&c.ts>=warmupFromMs);
  const tail=closed.slice(-a.consecutiveDailyBars);
  const volumes=tail.slice(-30).map(c=>c.quoteVolume??NaN);
  const allowed=symbol.endsWith('USDT')&&!excludedBase(symbol.slice(0,-4))&&
