@@ -113,7 +113,8 @@ test('four v5.1 runs preserve sealed v5 strategy and benchmark comparison, never
  const options={source,lotRules:{BTCUSDT:lot,ETHUSDT:lot},
   lotSnapshotAt:'2026-11-13T00:00:00Z',codeBuild:'v51-offline-fixture',
   universeAt:(_day:number)=>['BTCUSDT','ETHUSDT']};
- const reports=[];const baseline=[];
+ const reports:Awaited<ReturnType<typeof runTrendResearchV51>>[]=[];
+ const baseline:Awaited<ReturnType<typeof runTrendResearchV5>>[]=[];
  for(const profileName of V51_PROFILES){
   const input={...options,...(profileName?{profileName}:{})};
   reports.push(await runTrendResearchV51(input));
