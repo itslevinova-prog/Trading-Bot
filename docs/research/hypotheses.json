@@ -418,7 +418,7 @@
     "successThreshold": "Robustere risikoadjustierte Kennzahlen als BTC Buy & Hold, Top-10 Equal Weight, 60/40 BTC/Cash und bestehende Regeln unter vollständiger Kostenrechnung; Parameterumgebung stabil.",
     "killCriterion": "Kein überprüfbarer Nettovorteil nach Kosten oder starke Parameterempfindlichkeit; historische Datenlücken oder aktuelle Qualitätslabels statt Point-in-Time-Daten.",
     "status": "open",
-    "variantsTested": 5,
+    "variantsTested": 9,
     "result": "Ein Forschungslauf mit Annahmen wurde technisch erfolgreich ausgeführt, jedoch nur auf BTC/ETH: GitHub ersetzte leere Symbols durch den alten Standard. Kein vollständiger USDT-Test, keine Pipeline-/Paper-Freigabe. Universum wird vor Wiederholung korrigiert; unveränderte Strategie und Annahmen.",
     "evidence": [
       "docs/TREND-VOL-TARGET-V1.md",
@@ -498,6 +498,57 @@
         "apps/server/test/trend-research-v2.test.ts",
         "docs/TREND-RESEARCH-V2.md",
         "apps/server/src/backtest/trend-research-v2.ts"
+      ]
+    },
+    "drawdownV3": {
+      "version": "H-025-research-drawdown-reentry-v3",
+      "mode": "run_v3",
+      "registeredAt": "2026-11-13",
+      "candidateVariants": [
+        "basis",
+        "vorsichtig",
+        "normal",
+        "aggressiv"
+      ],
+      "variantsRegistered": 4,
+      "historicalRunsCompleted": 0,
+      "historicalRunStatus": "not-executed",
+      "period": {
+        "from": "2020-01",
+        "to": "2023-12",
+        "exclusiveEndUtc": "2024-01-01T00:00:00Z",
+        "read2024Candles": false,
+        "readHoldout": false
+      },
+      "profileDrawdownThresholds": "Existing effective cautionDrawdown and exitOnlyDrawdown of each resolved profile; paper absolute safety caps remain in force",
+      "sizing": "New-entry approval multiplied by max(0,min(1,(exitOnlyDrawdown-currentDrawdown)/(exitOnlyDrawdown-cautionDrawdown))) between the two thresholds, with factor 1 before caution and 0 at/after exitOnly. No automatic liquidation.",
+      "rebalanceToleranceRelative": 0.2,
+      "rebalanceToleranceApplication": "Existing daily trend planner target-weight deviation gate; no automated reshuffle for relative deviations below 20%. Independently enforce exact linear new-entry safety cap.",
+      "resetOnlyWhen": "At or beyond exitOnly/halted; completely flat for at least 30 whole UTC days; ArchiveRegimeProvider three-component PIT daily market light == risk-on, no fallback to BTC-only optimism.",
+      "flatDays": 30,
+      "regimeRequired": "risk-on",
+      "resetAction": "Reset only the research drawdown reference peak to current observed equity, clear v3 recoverable hard-stop latch, record asOf date, equity, oldPeak, newPeak and reason. Broker/account historical peak is never rewritten.",
+      "absoluteEmergencyStop": "Equity <= 70% of original initialCash: permanently disallow any buy, no automatic or manual reset",
+      "absoluteLossFromInitial": 0.3,
+      "safetyScope": "Research-only explicit RiskEngine option, off by default; no paper/forward/v1/v2 switch and no live orders",
+      "baselineForComparison": "Unmodified H-025 v2 strategy, current exchangeInfo lot assumptions, existing capped risk profiles, same 2020–2023 daily archive, fees/spread/slippage",
+      "successAndKillRules": "Report full net return/Sharpe/Calmar/DD/trade costs and all resets/status days against same-cost passive comparators; do not tune after development results, no positive claim without independent Stage gates and 2x cost hurdle.",
+      "references": [
+        {
+          "citation": "Grossman & Zhou (1993), Optimal Investment Strategies for Controlling Drawdowns, Mathematical Finance 3(3):241–276",
+          "doi": "10.1111/j.1467-9965.1993.tb00044.x",
+          "note": "Motivates risk exposure linked to distance from peak/wealth floor; the exact linear schedule and thresholds here are independently preregistered research choices, not claimed as a theorem."
+        },
+        {
+          "citation": "Kaminski & Lo (2014), When do stop-loss rules stop losses?, Journal of Financial Markets 18:234–254",
+          "doi": "10.1016/j.finmar.2013.07.001",
+          "note": "Examines stop-loss exposures and trend/momentum regimes; the exact 30-day re-entry is a preregistered implementation choice, not an empirical optimum claimed by the paper."
+        }
+      ],
+      "evidence": [
+        "docs/H-025-V3.md",
+        "apps/server/src/risk-engine/research-drawdown-v3.ts",
+        "apps/server/test/h025-v3.test.ts"
       ]
     }
   },

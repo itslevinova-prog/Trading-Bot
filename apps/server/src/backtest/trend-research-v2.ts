@@ -8,6 +8,8 @@ import {matchedCostBenchmarks} from './benchmark-costs.js';
 import {runBacktest} from './runner.js';
 import {calculateMetrics,type EquityPoint} from './metrics.js';
 import {resolvePaperRiskProfile,type RiskProfileName} from '../risk-engine/profiles.js';
+import {H025_V3_DRAWDOWN} from '../risk-engine/research-drawdown-v3.js';
+import type {Regime} from '../regime/types.js';
 import {diagnosticsMarkdown} from './trend-diagnostics.js';
 import type {MarketConstraints} from './simulated-broker.js';
 
@@ -16,6 +18,10 @@ export const V2_RESEARCH=Object.freeze({hypothesis:'H-025',strategy:CONFIG.strat
  feeRate:a.feeRate,spreadBps:a.spreadBps,slippageBps:a.slippageBps,initialCash:a.initialCash,
  parameters:CONFIG.parameters,lotAssumption:'current-exchangeInfo-not-historical',
  missingLotPolicy:'no-entry-retain-historical-universe',historicalTradabilityVerified:false,pipelineEligible:false});
+export const V3_RESEARCH=Object.freeze({...V2_RESEARCH,
+ version:'H-025-research-drawdown-reentry-v3',
+ drawdown:H025_V3_DRAWDOWN,regimeProvider:'ArchiveRegimeProvider-risk-on-only',
+ historicalRunStatus:'not-executed'});
 export function validateV2Inputs(from:string,to:string,intervals:string,symbols:string){
  if(from!=='2020-01'||to!=='2023-12'||intervals!=='1d,1h'||symbols!=='')
   throw Error('H-025 v2 requires fixed 2020-01..2023-12 and 1d,1h with empty symbols');
@@ -32,10 +38,14 @@ export function developmentSource(source:CandleSource):CandleSource{
 export type V2RunOptions={source:CandleSource;lotRules:LotRules;lotSnapshotAt:string;codeBuild:string;
  universeAt:(day:number)=>readonly string[]|Promise<readonly string[]>;
  /** Absent preserves the existing unprofiled v2 research baseline. */
- profileName?:RiskProfileName};
+ profileName?:RiskProfileName;
+ /** Explicit research-only v3 switch; legacy v2 is unchanged without it. */
+ researchV3?:{regimeAt:(asOf:number)=>Regime|Promise<Regime>};
+};
 export async function runTrendResearchV2(options:V2RunOptions){
  if(!Number.isFinite(Date.parse(options.lotSnapshotAt)))throw Error('Lot snapshot timestamp required');
  const profile=options.profileName?resolvePaperRiskProfile(options.profileName):null;
+ const v3=options.researchV3??null;
  const rules=configLots(options.lotRules),sealed=developmentSource(options.source);
  const daily=new Map<string,Candle[]>();
  // Discover from the historical archive, never intersect with current exchange symbols.
@@ -58,13 +68,15 @@ export async function runTrendResearchV2(options:V2RunOptions){
   riskLimits:{minOrderEur:Math.min(...Object.values(rules).map(r=>Number(r.minNotional))),
    ...(profile?{maxOpenPositions:profile.effective.maxOpenPositions,maxPositionPct:profile.effective.maxPositionPct}:{})},
   ...(profile?{portfolioRiskLimits:profile.engineLimits}:{}),
+  ...(v3?{researchDrawdownV3:v3}:{}),
   provider:{decide:async context=>{
    const input=(context.execution as {trendV1?:TrendV1Input}|undefined)?.trendV1;
    if(!input)throw Error('Missing closed daily v2 context');
    const plan=planTrendVolTargetV1({...input,...CONFIG.parameters,
     ...(profile?{targetAnnualVol:profile.effective.targetAnnualVol,
      topK:profile.effective.maxOpenPositions,maxPositionPct:profile.effective.maxPositionPct,
-     maxInvestedPct:profile.effective.maxInvestedPct}:{})});
+     maxInvestedPct:profile.effective.maxInvestedPct}:{}),
+    ...(v3?{rebalanceTolerance:H025_V3_DRAWDOWN.rebalanceTolerance}:{})});
    return {marketView:CONFIG.strategy+': '+plan.reason,actions:plan.actions};
   }},
   constraints,universeAt:options.universeAt,quoteCurrency:'USDT',venue:'binance',enablePortfolioRisk:true,
@@ -75,14 +87,22 @@ export async function runTrendResearchV2(options:V2RunOptions){
   }},buildId:options.codeBuild});
  const benchmarks=await matchedCostBenchmarks({source,fromMs:a.fromMs,toMs:a.toMs,quote:'USDT',costs:{initialCash:a.initialCash,feeRate:a.feeRate,spreadBps:a.spreadBps,slippageBps:a.slippageBps,minOrderEur:a.minNotional,fillModel:'conservative-ohlc'}});
  const snapshot={assumption:V2_RESEARCH.lotAssumption,fetchedAt:options.lotSnapshotAt,rules};
- return {label:'H-025 v2 – Forschungslauf mit aktuellen Mengenregeln als historischer Annahme',
+ return {label:v3?'H-025 v3 – Drawdown-Reentry (separate Forschung)':
+  'H-025 v2 – Forschungslauf mit aktuellen Mengenregeln als historischer Annahme',
   hypothesis:'H-025',strategy:CONFIG.strategy,pipelineEligible:false,paperApproved:false,
   profile,
-  assumptions:V2_RESEARCH,lotSnapshot:snapshot,lotSnapshotHash:researchHash(snapshot),benchmarks,
+  assumptions:v3?V3_RESEARCH:V2_RESEARCH,lotSnapshot:snapshot,lotSnapshotHash:researchHash(snapshot),benchmarks,
   importedCoins:imported.length,universeCoins:result.universe.length,tradedCoins:new Set(result.trades.map(t=>t.symbol)).size,
   missingRules,coveredRuleCoins:imported.length-missingRules.length,
-  fingerprints:{configuration:researchHash({assumptions:V2_RESEARCH,lotSnapshot:snapshot,...(profile?{profile}:{})}),codeBuild:options.codeBuild},backtest:result,
+  fingerprints:{configuration:researchHash({assumptions:v3?V3_RESEARCH:V2_RESEARCH,lotSnapshot:snapshot,...(profile?{profile}:{})}),codeBuild:options.codeBuild},backtest:result,
   caveats:[
+   ...(v3?[
+    'H-025 v3 verwendet nur eine explizit aktivierte Research-RiskEngine. Paper/Forward/v1/v2 bleiben unverändert.',
+    'Die 20-%-Toleranz gilt im Planer für relative Zielgewichtsabweichungen. Der lineare Entry-Cap liquidiert keine gehaltenen Positionen.',
+    'Reset nur nach 30 vollen UTC-Cash-Tagen im exit-only/halted-Zustand mit der bestehenden dreiteiligen Regime-Ampel risk-on. Neutral und unvollständige Daten erlauben keinen Reset.',
+    'Die 30-%-Startkapital-Notbremse bleibt dauerhaft; Research-Reset verändert den Broker-Peak und die wirkliche Performancehistorie nicht.',
+    'Die bestehenden absoluten Paper-Obergrenzen kappen auch die drei Profile; effektive Drawdown-Schwellen können deshalb identisch sein.'
+   ]:[]),
    'Aktuelle exchangeInfo-Mengenregeln werden rückwirkend angenommen; keine kostenlos belegten historischen Börsenfilter.',
    'Coins ohne verwendbare aktuelle Filter (insbesondere delistete Coins) bleiben im historischen Universum, bekommen aber keine Einstiege. Das kann die Performanceauswahl verzerren; kein survivorship-freier Ausführungsnachweis.',
    'Handelbarkeit, Tags und Lots sind historisch nicht verifiziert. Keine Pipeline- oder Paper-Freigabe.',

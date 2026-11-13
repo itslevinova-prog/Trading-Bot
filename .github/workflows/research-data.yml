@@ -38,6 +38,11 @@ on:
         type: boolean
         default: false
 
+      run_v3:
+        description: H-025 v3 – vier feste Drawdown-Reentry-Varianten (nur Entwicklung 2020–2023)
+        type: boolean
+        default: false
+
 permissions:
   contents: read
   issues: write
@@ -85,10 +90,11 @@ jobs:
           RUN_TREND: ${{ inputs.run_trend }}
           RUN_TREND_V2: ${{ inputs.run_trend_v2 }}
           RUN_PROFILES: ${{ inputs.run_profiles }}
+          RUN_V3: ${{ inputs.run_v3 }}
           IMPORT_SYMBOLS: ${{ inputs.symbols }}
         run: |
           pnpm --filter @paper/shared build
-          if [[ "$RUN_TREND_V2" == 'true' || "$RUN_PROFILES" == 'true' ]]; then
+          if [[ "$RUN_TREND_V2" == 'true' || "$RUN_PROFILES" == 'true' || "$RUN_V3" == 'true' ]]; then
             pnpm --filter @paper/server exec tsx -e "import {validateV2Inputs} from './src/backtest/trend-research-v2.ts'; validateV2Inputs(process.env.IMPORT_FROM!,process.env.IMPORT_TO!,process.env.IMPORT_INTERVALS!,process.env.IMPORT_SYMBOLS!);"
           fi
           pnpm --filter @paper/server exec tsx -e "import {validateResearchMonths} from './src/backtest/trend-research.ts'; validateResearchMonths(process.env.IMPORT_FROM!,process.env.IMPORT_TO!); if(process.env.RUN_TREND==='true'&&(process.env.IMPORT_FROM!=='2020-01'||process.env.IMPORT_TO!=='2023-12'||process.env.IMPORT_INTERVALS!=='1d,1h'||process.env.IMPORT_SYMBOLS!=='')) throw Error('H-025 requires fixed 2020-01..2023-12 and 1d,1h with empty symbols');"
@@ -108,10 +114,13 @@ jobs:
       - name: H-025 v2 – drei Risikoprofile nacheinander
         if: ${{ inputs.run_profiles }}
         run: pnpm --filter @paper/server exec tsx src/backtest/trend-research-v2-cli.ts --profiles | tee trend-profiles.txt
+      - name: H-025 v3 – Basis und drei Risikoprofile, ein Datenimport
+        if: ${{ inputs.run_v3 }}
+        run: pnpm --filter @paper/server exec tsx src/backtest/trend-research-v2-cli.ts --v3 | tee trend-v3.txt
       - name: Datenbericht
         run: pnpm data:report | tee data-report.txt
       - name: Schnelltest #33
-        if: ${{ inputs.run_spike }}
+        if: ${{ inputs.run_spike && !inputs.run_v3 }}
         run: pnpm trend:spike | tee spike.txt
       - name: Ergebnisse als Artefakt sichern
         if: always()
@@ -124,6 +133,8 @@ jobs:
             trend.txt
             trend-v2.txt
             trend-profiles.txt
+            trend-v3.txt
+            data/trend-research-v3/
             data/trend-research-v2/
             data/trend-research/
             data/archive/report.json
@@ -131,7 +142,7 @@ jobs:
             docs/DATA-ARCHIVE.md
           if-no-files-found: ignore
       - name: Ergebnis in Issue #18 kommentieren (alt #33)
-        if: ${{ inputs.run_spike && success() }}
+        if: ${{ inputs.run_spike && !inputs.run_v3 && success() }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -162,6 +173,16 @@ jobs:
           node --input-type=module -e 'import {readFileSync,writeFileSync} from "node:fs"; writeFileSync("profile-comment-event.json",JSON.stringify({comment:{body:readFileSync("profile-comment.md","utf8")}}));'
           PG_MODE=text GITHUB_EVENT_NAME=issue_comment GITHUB_EVENT_PATH="$PWD/profile-comment-event.json" node .github/privacy-guard/check.mjs
           gh issue comment 7 --repo "${{ github.repository }}" --body-file profile-comment.md
+      - name: H-025 v3 – vor Kommentar Datenschutz-Wächter und Ergebnis in Issue #7
+        if: ${{ inputs.run_v3 && success() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PRIVACY_BLOCKLIST: ${{ secrets.PRIVACY_BLOCKLIST }}
+        run: |
+          cp data/trend-research-v3/summary.md v3-comment.md
+          node --input-type=module -e 'import {readFileSync,writeFileSync} from "node:fs"; writeFileSync("v3-comment-event.json",JSON.stringify({comment:{body:readFileSync("v3-comment.md","utf8")}}));'
+          PG_MODE=text GITHUB_EVENT_NAME=issue_comment GITHUB_EVENT_PATH="$PWD/v3-comment-event.json" node .github/privacy-guard/check.mjs
+          gh issue comment 7 --repo "${{ github.repository }}" --body-file v3-comment.md
       - name: Forschungsergebnis v2 in Issue #3 kommentieren
         if: ${{ inputs.run_trend_v2 && success() }}
         env:
