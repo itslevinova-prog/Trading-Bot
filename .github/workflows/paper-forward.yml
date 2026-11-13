@@ -15,7 +15,9 @@ concurrency:
   cancel-in-progress: false
 jobs:
   forward:
-    if: (github.event_name == 'workflow_dispatch' && inputs.dry_run) || vars.FORWARD_ENABLED == 'true'
+    # Aktiviert durch den Repo-Besitzer am 13.11.2026 (Start 14.11.2026).
+    # Stoppen: Repository-Variable FORWARD_ENABLED=false setzen.
+    if: (github.event_name == 'workflow_dispatch' && inputs.dry_run) || vars.FORWARD_ENABLED != 'false'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
@@ -23,8 +25,8 @@ jobs:
     env:
       LIVE_ENABLED: 'false'
       AI_ALLOW_REMOTE: 'false'
-      FORWARD_ENABLED: ${{ vars.FORWARD_ENABLED }}
-      FORWARD_START: ${{ vars.FORWARD_START }}
+      FORWARD_ENABLED: ${{ vars.FORWARD_ENABLED != 'false' && 'true' || 'false' }}
+      FORWARD_START: ${{ vars.FORWARD_START || '2026-11-14' }}
       FORWARD_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
     steps:
       - uses: actions/checkout@v4
@@ -60,7 +62,7 @@ jobs:
             pnpm forward:run --start "$FORWARD_START" --output /tmp/forward-output/forward
           fi
       - name: Datenschutz prüfen und Ergebnisse speichern
-        if: env.FORWARD_DRY_RUN != 'true' && vars.FORWARD_ENABLED == 'true'
+        if: env.FORWARD_DRY_RUN != 'true' && vars.FORWARD_ENABLED != 'false'
         env:
           PRIVACY_BLOCKLIST: ${{ secrets.PRIVACY_BLOCKLIST }}
         shell: bash

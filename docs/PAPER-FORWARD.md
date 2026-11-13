@@ -56,3 +56,7 @@ Ein echter Tageslauf (`dry_run=false` oder Cron) bleibt strikt an `FORWARD_ENABL
 Fixtures für die CLI brauchen jetzt zusätzlich `lotRules`, zum Beispiel `{"BTCUSDT":{"stepSize":"0.00001000","minQty":"0.00001000","minNotional":"5.00000000"},"ETHUSDT":{"stepSize":"0.00010000","minQty":"0.00010000","minNotional":"5.00000000"}}`. Das sind ausschließlich synthetische Testregeln, keine verbindlichen aktuellen Börsenwerte.
 
 Entscheidung: Die Ganzcoin-Referenz wird aus Gründen der Nachvollziehbarkeit nicht nachträglich korrigiert. v2 bekommt eigene Hashes und Serien; weder die Pipeline-Freigabe noch die Aktivierung des Forward-Tests ist Bestandteil dieses PR-Nachtrags.
+
+## Aktivierung (13.11.2026)
+
+Der Repo-Besitzer hat den Forward-Test aktiviert. Statt Repository-Variablen stehen die Standardwerte im Workflow: Start `2026-11-14`, aktiv, solange `FORWARD_ENABLED` nicht auf `false` gesetzt ist. Zum Stoppen die Repository-Variable `FORWARD_ENABLED=false` anlegen. Eine gesetzte Variable `FORWARD_START` überschreibt den Standard und beginnt eine neue Serie.

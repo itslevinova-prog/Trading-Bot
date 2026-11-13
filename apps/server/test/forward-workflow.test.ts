@@ -7,11 +7,13 @@ const workflow=readFileSync(new URL('../../../.github/workflows/paper-forward.ym
 const step=workflow.split('      - name: Tageslauf nur mit Spielgeld\n')[1]!.split('      - name:')[0]!;
 const script=step.split('        run: |\n')[1]!.split('\n').map(line=>line.replace(/^          /,'')).join('\n');
 describe('forward workflow modes',()=>{
- it('defaults to manual dry-run and separately gates persistence and its secret',()=>{
+ it('keeps manual dry-run default, is enabled by the owner unless FORWARD_ENABLED=false, and gates persistence and its secret',()=>{
   expect(workflow).toMatch(/dry_run:[\s\S]*?type: boolean\n\s+default: true/);
-  expect(workflow).toContain("if: (github.event_name == 'workflow_dispatch' && inputs.dry_run) || vars.FORWARD_ENABLED == 'true'");
+  expect(workflow).toContain("if: (github.event_name == 'workflow_dispatch' && inputs.dry_run) || vars.FORWARD_ENABLED != 'false'");
+  expect(workflow).toContain("FORWARD_ENABLED: ${{ vars.FORWARD_ENABLED != 'false' && 'true' || 'false' }}");
+  expect(workflow).toContain("FORWARD_START: ${{ vars.FORWARD_START || '2026-11-14' }}");
   const storage=workflow.split('      - name: Datenschutz prüfen und Ergebnisse speichern')[1]!;
-  expect(storage).toContain("if: env.FORWARD_DRY_RUN != 'true' && vars.FORWARD_ENABLED == 'true'");
+  expect(storage).toContain("if: env.FORWARD_DRY_RUN != 'true' && vars.FORWARD_ENABLED != 'false'");
   expect(storage).toContain('PRIVACY_BLOCKLIST: ${{ secrets.PRIVACY_BLOCKLIST }}');
  });
  it('runs only --dry-run with forward disabled and fails a disabled real run',()=>{
