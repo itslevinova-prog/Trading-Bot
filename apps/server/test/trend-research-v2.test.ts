@@ -6,6 +6,8 @@ import {ConservativeOhlcModel} from '../src/backtest/fill-models.js';
 import {defaultRisk} from '../src/backtest/runner.js';
 import {floorLot} from '../src/forward/lots.js';
 import {resolvePaperRiskProfile} from '../src/risk-engine/profiles.js';
+import {DEFAULT_RISK_LIMITS} from '../src/risk-engine/engine.js';
+import {diagnosticRiskStatus,analyzeDiagnosticTrace,diagnosticsMarkdown,emptyDiagnosticReasons,countDiagnosticReason,type DiagnosticTrace} from '../src/backtest/trend-diagnostics.js';
 
 import type {CandleSource} from '../src/backtest/candle-source.js';
 
@@ -54,6 +56,9 @@ test('complete development fixture retains delisted history without granting fab
  expect(report.backtest.trades.length).toBeGreaterThan(0);
  expect(requests.every(r=>r.from>=a.fromMs&&r.to<=a.toMs)).toBe(true);
  expect(report.pipelineEligible).toBe(false);expect(report.lotSnapshot.assumption).toContain('not-historical');
+ expect(report.backtest.diagnostics?.days.length).toBeGreaterThan(1400);
+ expect(report.backtest.diagnostics?.days.every(d=>d.day<'2024-01-01')).toBe(true);
+ expect(v2Markdown(report)).toContain('Diagnose: Entscheidungs- und Ausführungsengpässe');
  for(const t of report.backtest.trades)expect(floorLot(t.qty,rule)).toBeCloseTo(t.qty,8);
  expect(v2Markdown(report)).toContain('Keine Pipeline-Freigabe');expect(v2Markdown(report)).toContain('DEADUSDT');
  const cautious=await runTrendResearchV2({...options,profileName:'vorsichtig'});
@@ -115,4 +120,66 @@ test('profile comparison never manufactures benchmark fees, core or missing expo
  expect(md).toContain('| vorsichtig |');expect(md).toContain('| normal |');expect(md).toContain('| aggressiv |');
  expect(md).toContain('cappedFields =');expect(md).toContain('corePct');expect(md).toContain('n/a');
  expect(()=>v2ProfilesMarkdown(fake.slice(0,2))).toThrow();
+});
+
+test('daily risk threshold observations are read-only and distinguish actual hard-stop latch',()=>{
+ const l=DEFAULT_RISK_LIMITS;
+ expect(diagnosticRiskStatus(100,100,l,false)).toBe('ok');
+ expect(diagnosticRiskStatus(94,100,l,false)).toBe('caution');
+ expect(diagnosticRiskStatus(89.9,100,l,false)).toBe('exit-only');
+ expect(diagnosticRiskStatus(84.9,100,l,false)).toBe('halted');
+ expect(diagnosticRiskStatus(100,100,l,true)).toBe('halted');
+ // Calling the pure observer cannot reset or latch a PortfolioRiskEngine.
+ expect(l.exitOnlyDrawdown).toBe(.10);
+});
+
+test('rejection attribution and persistent cash lock use observed order rejections, not guesses',()=>{
+ const reasons=emptyDiagnosticReasons();
+ const blocked='Orderablehnung: Portfolio-RiskEngine: Portfolio drawdown >= exit-only threshold';
+ countDiagnosticReason(reasons,'portfolioRisk',blocked);
+ countDiagnosticReason(reasons,'portfolioRisk',blocked);
+ countDiagnosticReason(reasons,'missingLot','Markt-Tag ohne Einstiegsfreigabe: Keine aktuelle Mengenregel');
+ countDiagnosticReason(reasons,'planner','Tag ohne Kaufsignal: Kein täglicher Rebalancingbedarf');
+ const row=(day:string,equity:number,cash:number,status:'ok'|'exit-only',buy:boolean,filled:boolean)=>({
+  day,asOf:Date.parse(day+'T00:00:00Z')+86400000,equity,cash,investedPct:(equity-cash)/equity,
+  allCash:cash===equity,riskStatus:status,riskLatched:false,plannerBuySignal:buy,executedBuy:filled
+ });
+ const trace:DiagnosticTrace={reasons,days:[
+  row('2020-12-30',100,0,'ok',true,true),
+  row('2020-12-31',89,89,'exit-only',true,false),
+  row('2021-01-01',89,89,'exit-only',true,false),
+  row('2021-01-02',89,89,'exit-only',true,false)
+ ]};
+ const a=analyzeDiagnosticTrace(trace,100);
+ expect(a.lockFinding).toBe('bestätigt');
+ expect(a.firstExitOnly).toBe('2020-12-31');
+ expect(a.exitOnlyRejections).toBe(2);
+ expect(a.cashLockedDays).toBe(3);
+ expect(a.plannerBuyDays).toBe(4);expect(a.executedBuyDays).toBe(1);
+ expect(a.years.map(y=>y.year)).toEqual([2020,2021]);
+ expect(a.years[0]!.endEquity).toBe(89);
+ expect(a.years[0]!.maxDrawdownPct).toBeCloseTo(.11);
+ const markdown=diagnosticsMarkdown(trace,100).join('\n');
+ expect(markdown).toContain('Befund: bestätigt');
+ expect(markdown).toContain('2020-12-31');
+ expect(markdown).toContain('188 profitable').toBe(false);
+ // An exit-only threshold without a rejected buy does not establish causation.
+ const inconclusive:DiagnosticTrace={...trace,reasons:{...reasons,portfolioRisk:{}}};
+ expect(analyzeDiagnosticTrace(inconclusive,100).lockFinding).toBe('offen');
+ // A later reopening contradicts the permanent-lock hypothesis.
+ const reopened:DiagnosticTrace={...trace,days:[...trace.days,
+  row('2021-01-03',100,0,'ok',true,true)]};
+ expect(analyzeDiagnosticTrace(reopened,100).lockFinding).toBe('widerlegt');
+ expect(()=>analyzeDiagnosticTrace({...trace,days:[...trace.days,row('2024-01-01',89,89,'exit-only',false,false)]},100))
+  .toThrow('sealed development');
+});
+
+test('diagnostic Markdown separates non-order market-day counts from real rejections',()=>{
+ const trace:DiagnosticTrace={days:[],reasons:emptyDiagnosticReasons()};
+ countDiagnosticReason(trace.reasons,'missingLot','Markt-Tag ohne Einstiegsfreigabe: Mengenregel fehlt');
+ countDiagnosticReason(trace.reasons,'coinQuality','Markt-Tag ohne Einstiegsfreigabe: Qualität unbekannt');
+ const md=diagnosticsMarkdown(trace,100).join('\n');
+ expect(md).toContain('Top 15');expect(md).toContain('keine addierbare Gesamtzahl');
+ expect(md).toContain('Befund: widerlegt');
+ expect(md).toContain('n/a');
 });
