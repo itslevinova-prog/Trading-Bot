@@ -4,6 +4,7 @@ import {pathToFileURL} from 'node:url';
 import {setTimeout as delay} from 'node:timers/promises';
 import {importLocalZip, openArchive, parseChecksum, sha256, updateRegimes} from './store.js';
 import {ARCHIVE_RAW} from './paths.js';
+import {excludedBase} from '../coin-quality/contracts.js';
 
 const BUCKET = 'https://s3-ap-northeast-1.amazonaws.com/data.binance.vision';
 const PUBLIC = 'https://data.binance.vision/';
@@ -11,6 +12,15 @@ const PUBLIC = 'https://data.binance.vision/';
 export type Interval = '15m' | '1h' | '1d';
 export type ArchiveObject = {key: string; size: number; interval: Interval; symbol: string; date: string};
 export type DownloadResult = 'downloaded' | 'skipped';
+
+/** Selects archive objects. Without an explicit symbol list and with a fixed quote,
+ * stablecoin/fiat bases and leveraged tokens are skipped: they never enter the
+ * research universe, and some of their public archives contain invalid candles. */
+export function selectEntries(items: ArchiveObject[], symbols: string[], quote: string): ArchiveObject[] {
+  return items.filter(i => (!symbols.length || symbols.includes(i.symbol)) &&
+    (quote === 'all' || (i.symbol.endsWith(quote) &&
+      (symbols.length > 0 || !excludedBase(i.symbol.slice(0, -quote.length))))));
+}
 
 function xmlValue(body: string, tag: string): string | undefined {
   const found = new RegExp('<' + tag + '>([\\s\\S]*?)</' + tag + '>').exec(body);
@@ -139,7 +149,7 @@ export async function runImport(args = process.argv.slice(2), fetcher: typeof fe
   const monthly = await listObjects('monthly', intervals, from, to, fetcher, now, symbols);
   const daily = args.includes('--include-current')
     ? await listObjects('daily', intervals, now.toISOString().slice(0,7), now.toISOString().slice(0,7), fetcher, now, symbols) : [];
-  const entries = [...monthly, ...daily].filter(i => (!symbols.length || symbols.includes(i.symbol)) && (quote==='all'||i.symbol.endsWith(quote)));
+  const entries = selectEntries([...monthly, ...daily], symbols, quote);
   if (!entries.length) throw Error('No public archive ZIPs matched selection');
   const db = openArchive();
   try {
