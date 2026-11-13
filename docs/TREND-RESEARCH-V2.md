@@ -84,3 +84,50 @@ von H-025, **nicht** als nachgewiesene rentable Strategien. Die Eintragung in
 `hypotheses.json` ist kein Nachweis, dass ein Lauf auf realem Archiv bereits beendet
 wurde. Erst ein erfolgreicher Workflow liefert empirische Kennzahlen; kein Paper-/Live-
 Freigabeschritt wird daraus abgeleitet.
+
+## Diagnose des schwachen H-025-v2-Laufs (ohne Parameteränderung)
+
+Der Workflow-Run 43380362062 meldete für den unveränderten v2-Basislauf 2020–2023
+eine Nettorendite von −8,705 %, 14 Trades auf 5 Coins, 10,0527 % Max-Drawdown
+und 188 historische Coins ohne verwendbare aktuelle Mengenregeln. Die synthetische
+BTC-Buy-and-Hold-Referenz meldete +486,49 %. Diese **Endergebniszahlen können die
+Ursache nicht eindeutig belegen**: Der alte Bericht enthält keine tägliche
+RiskEngine-/Cash-Zeitreihe mit getrennten Ablehnungsursachen.
+
+Die unveränderte Portfolio-RiskEngine verwendet im Basismodell 5 % als
+Vorsichtsschwelle, **10 % als Exit-only-Schwelle** und 15 % als Hard-Stop.
+Ab 10 % werden Kaufanfragen in `evaluateBuy` abgewiesen. Eine
+vollständige Cash-Position kann ohne neue Einzahlungen oder Bestände den
+vorherigen Equity-Höchststand nicht von selbst wieder erreichen. Das macht einen
+dauerhaften Exit-only-/Cash-Lock **technisch plausibel**, aber der alte Max-Drawdown
+von 10,0527 % allein beweist nicht, **wann** die Schwelle erreicht wurde,
+ob danach Kaufsignale kamen und ob solche Signale tatsächlich abgewiesen wurden.
+Auch 188 fehlende aktuelle Mengenregeln sind keine 188 nachgewiesenen verpassten
+Kauforders.
+
+Nach dem Merge liefern **beide** v2-Modi im vorhandenen `summary.md` bzw.
+`profiles-summary.md` eine unverändernde Diagnose mit:
+
+- Top 15 Gründe nach Broker, Portfolio-RiskEngine, Coin-Qualität, fehlenden
+  Mengenregeln und Planer, mit jeweils erklärter Zähleinheit. Reale
+  Orderablehnungen und vorab gesperrte Markt-Tage werden nicht vermischt.
+- Tageszahlen für die passiv aus Schwellen **abgeleiteten** Status
+  `ok`, `caution`, `exit-only` und `halted`; erster Schwellentag,
+  getrennt von Tagen mit tatsächlich gesetzter Hard-Stop-Latch.
+- Tage mit geplantem Kaufsignal gegenüber Tagen mit tatsächlichem Buy-Fill.
+  Fills auf der nächsten Kerze werden nicht fälschlich derselben Entscheidung
+  zugeordnet.
+- Mark-to-Market-Investitionsquote, Cash-Tage, Jahres-Equity, jährliche
+  Rendite und jährliche sowie globale Drawdown-Werte.
+- Einen evidenzbasierten Befund (`bestätigt`, `widerlegt` oder `offen`)
+  für den Exit-only-/Cash-Lock. `bestätigt` setzt tatsächliche
+  Exit-only-Ablehnungen, andauernde Schwellenüberschreitung,
+  Cash-Tage und keinen Wiedereinstieg voraus.
+
+**Wichtig:** Diese Zahlen entstehen erst beim nächsten vom Repo-Besitzer
+gestarteten Forschungslauf. Bis dahin lautet die historische Ursache
+`offen`. Die Instrumentierung ist passiv; weder Signalberechnung noch
+RiskEngine-Entscheide, Broker-Grenzen, Profile oder Kostenannahmen werden
+angepasst. Der Entwicklungsadapter sperrt Kerzen ab 2024 weiterhin aus.
+Eine Erklärung, warum die Strategie nicht BTC-Halten erreichte, ist
+nicht gleichbedeutend mit einem Beleg für eine profitablere Alternative.
