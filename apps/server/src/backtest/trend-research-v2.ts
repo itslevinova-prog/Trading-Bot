@@ -6,6 +6,8 @@ import {CONFIG} from '../forward/engine-v2.js';
 import {configLots,lotDecimals,type LotRules} from '../forward/lots.js';
 import {matchedCostBenchmarks} from './benchmark-costs.js';
 import {runBacktest} from './runner.js';
+import {calculateMetrics,type EquityPoint} from './metrics.js';
+import {resolvePaperRiskProfile,type RiskProfileName} from '../risk-engine/profiles.js';
 import type {MarketConstraints} from './simulated-broker.js';
 
 export const V2_RESEARCH=Object.freeze({hypothesis:'H-025',strategy:CONFIG.strategy,
@@ -27,9 +29,12 @@ export function developmentSource(source:CandleSource):CandleSource{
  }};
 }
 export type V2RunOptions={source:CandleSource;lotRules:LotRules;lotSnapshotAt:string;codeBuild:string;
- universeAt:(day:number)=>readonly string[]|Promise<readonly string[]>};
+ universeAt:(day:number)=>readonly string[]|Promise<readonly string[]>;
+ /** Absent preserves the existing unprofiled v2 research baseline. */
+ profileName?:RiskProfileName};
 export async function runTrendResearchV2(options:V2RunOptions){
  if(!Number.isFinite(Date.parse(options.lotSnapshotAt)))throw Error('Lot snapshot timestamp required');
+ const profile=options.profileName?resolvePaperRiskProfile(options.profileName):null;
  const rules=configLots(options.lotRules),sealed=developmentSource(options.source);
  const daily=new Map<string,Candle[]>();
  // Discover from the historical archive, never intersect with current exchange symbols.
@@ -49,11 +54,16 @@ export async function runTrendResearchV2(options:V2RunOptions){
  const result=await runBacktest({source,strategy:'trend-vol-target',fromMs:a.fromMs,toMs:a.toMs,intervalMinutes:1440,
   initialCash:a.initialCash,feeRate:a.feeRate,spreadBps:a.spreadBps,slippageBps:a.slippageBps,
   // Each pair still applies its actual assumed minimum; no additional fixed 10-USDT v1 floor.
-  riskLimits:{minOrderEur:Math.min(...Object.values(rules).map(r=>Number(r.minNotional)))},
+  riskLimits:{minOrderEur:Math.min(...Object.values(rules).map(r=>Number(r.minNotional))),
+   ...(profile?{maxOpenPositions:profile.effective.maxOpenPositions,maxPositionPct:profile.effective.maxPositionPct}:{})},
+  ...(profile?{portfolioRiskLimits:profile.engineLimits}:{}),
   provider:{decide:async context=>{
    const input=(context.execution as {trendV1?:TrendV1Input}|undefined)?.trendV1;
    if(!input)throw Error('Missing closed daily v2 context');
-   const plan=planTrendVolTargetV1({...input,...CONFIG.parameters});
+   const plan=planTrendVolTargetV1({...input,...CONFIG.parameters,
+    ...(profile?{targetAnnualVol:profile.effective.targetAnnualVol,
+     topK:profile.effective.maxOpenPositions,maxPositionPct:profile.effective.maxPositionPct,
+     maxInvestedPct:profile.effective.maxInvestedPct}:{})});
    return {marketView:CONFIG.strategy+': '+plan.reason,actions:plan.actions};
   }},
   constraints,universeAt:options.universeAt,quoteCurrency:'USDT',venue:'binance',enablePortfolioRisk:true,
@@ -65,10 +75,11 @@ export async function runTrendResearchV2(options:V2RunOptions){
  const snapshot={assumption:V2_RESEARCH.lotAssumption,fetchedAt:options.lotSnapshotAt,rules};
  return {label:'H-025 v2 – Forschungslauf mit aktuellen Mengenregeln als historischer Annahme',
   hypothesis:'H-025',strategy:CONFIG.strategy,pipelineEligible:false,paperApproved:false,
+  profile,
   assumptions:V2_RESEARCH,lotSnapshot:snapshot,lotSnapshotHash:researchHash(snapshot),benchmarks,
   importedCoins:imported.length,universeCoins:result.universe.length,tradedCoins:new Set(result.trades.map(t=>t.symbol)).size,
   missingRules,coveredRuleCoins:imported.length-missingRules.length,
-  fingerprints:{configuration:researchHash({assumptions:V2_RESEARCH,lotSnapshot:snapshot}),codeBuild:options.codeBuild},backtest:result,
+  fingerprints:{configuration:researchHash({assumptions:V2_RESEARCH,lotSnapshot:snapshot,...(profile?{profile}:{})}),codeBuild:options.codeBuild},backtest:result,
   caveats:[
    'Aktuelle exchangeInfo-Mengenregeln werden rückwirkend angenommen; keine kostenlos belegten historischen Börsenfilter.',
    'Coins ohne verwendbare aktuelle Filter (insbesondere delistete Coins) bleiben im historischen Universum, bekommen aber keine Einstiege. Das kann die Performanceauswahl verzerren; kein survivorship-freier Ausführungsnachweis.',
@@ -76,7 +87,12 @@ export async function runTrendResearchV2(options:V2RunOptions){
    'Alter/Volumen und Universum stammen nur aus Entwicklungsdaten. Warm-up beginnt 2020; vorherige Kerzen werden nicht geladen.',
    'Der bestehende Backtest-Broker und seine Portfolio-RiskEngine bleiben aktiv. Vollständige Ausführungsparität mit dem Forward-Adapter ist damit nicht behauptet.',
    'BTC/DCA-Referenzen verwenden unverändert die synthetische Rundung des bestehenden Forschungslaufs, nicht die aktuellen v2-Lots. Gebühren/Spread/Slippage bleiben gleich; keine Behauptung identischer Mengenregeln für diese Vergleichsreihen.',
-   'Offene Positionen nach Datenende blockieren den Lauf statt erfundener Liquidation. Negative Ergebnisse und Null-Trades werden unverändert ausgewiesen.'
+   'Offene Positionen nach Datenende blockieren den Lauf statt erfundener Liquidation. Negative Ergebnisse und Null-Trades werden unverändert ausgewiesen.',
+   ...(profile?[
+    'corePct ('+profile.requested.corePct+') ist nicht umgesetzt: kein separater BTC/ETH-Buy-and-Hold-Kern, keine Core-Umschichtung; das Profil ist nur ein aktiver Satellite-Proxy.',
+    'maxInvestedPct und maxPositionPct begrenzen die vom Planer angezielten Einstiegsgewichte; zwischen Rebalancings können Marktbewegungen die tatsächliche Quote verändern.',
+    'universeTopN, riskPerTradePct und minimumEdgeMultiple sind im v2-Planer nicht gesondert operationalisiert; sie werden nicht als erfüllt ausgegeben.'
+   ]:[])
   ]};
 }
 export function v2Markdown(report:Awaited<ReturnType<typeof runTrendResearchV2>>){
@@ -93,4 +109,51 @@ export function v2Markdown(report:Awaited<ReturnType<typeof runTrendResearchV2>>
   '## Annahmen und Grenzen',...report.caveats.map(s=>'- '+s),'',
   'Fehlende Regeln: '+(report.missingRules.join(', ')||'keine'),''
  ].join('\n');
+}
+
+/** Fixed three-profile comparison: the same archive, cost assumptions and strategy. */
+export function v2ProfilesMarkdown(reports:readonly Awaited<ReturnType<typeof runTrendResearchV2>>[]){
+ const order=['vorsichtig','normal','aggressiv'] as const;
+ if(reports.length!==order.length||reports.some((r,i)=>r.profile?.name!==order[i]))
+  throw Error('The three pre-registered profiles must be reported in fixed order');
+ const fmt=(n:number|null|undefined,percent=false)=>n==null||!Number.isFinite(n)?'n/a':
+  (percent?n*100:n).toFixed(3)+(percent?' %':'');
+ const row=(name:string,m:ReturnType<typeof calculateMetrics>['metrics']|null,trades:number|null,
+  costShare:number|null,exposure:number|null)=>
+  `| ${name} | ${fmt(m?.cagr,true)} | ${fmt(m?.maxDrawdown,true)} | ${fmt(m?.sharpe)} | ${fmt(m?.calmar)} | ${trades??'n/a'} | ${fmt(costShare,true)} | ${fmt(exposure,true)} |`;
+ const rows=reports.map(r=>row(r.profile!.name,r.backtest.metrics,
+  r.backtest.metrics.tradeCount,r.backtest.metrics.costShare,r.backtest.metrics.exposureTime));
+ const first=reports[0]!;
+ for(const b of first.benchmarks){
+  if(b.netReturn===null){rows.push(row(b.name,null,null,null,null));continue;}
+  const points:EquityPoint[]=[{ts:a.fromMs,equity:b.name.startsWith('DCA')?1:a.initialCash,exposed:false},
+   ...b.equity.map(p=>({...p,exposed:true}))];
+  const metrics=calculateMetrics(points,[],a.fromMs,a.toMs).metrics;
+  // Benchmarks report absolute costs, not the strategy's gross-PnL cost share.
+  rows.push(row(b.name,metrics,b.name.startsWith('DCA')?b.cashflows.length*2:1,null,
+   b.name.startsWith('DCA')?null:metrics.exposureTime));
+ }
+ return ['# H-025 v2 – drei vorregistrierte Risikoprofile / Issue #7','',
+  '**Nur Entwicklung 2020-01 bis 2023-12; kein 2024/kein Holdout, keine Pipeline-/Paper-Freigabe.**','',
+  '| Profil | CAGR | Max-Drawdown | Sharpe | Calmar | Trades | Kostenanteil | Exposure |',
+  '|---|---:|---:|---:|---:|---:|---:|',...rows,'',
+  'Kostenanteil = Anteil der Ausführungskosten am positiven Brutto-PnL der Strategie (bei nicht positivem Brutto-PnL n/a). Für Benchmarks ist dieser Nenner nicht separat belegt: n/a.',
+  'DCA-Renditen sind Cashflow-neutral (TWR), monatliche Einzahlungen; kein direkter Endvermögensvergleich mit einer Einmalanlage.',
+  'Exposure = Anteil der Bewertungstage mit mindestens einer Position, nicht durchschnittlich investierter Kapitalanteil.',
+  'Benchmark-Exposure für DCA nicht ermittelt; BTC Buy & Hold nach einmaligem Einstieg näherungsweise vollständig investiert.','',
+  '## Absolute Kappungen je Profil',
+  ...reports.map(r=>`- ${r.profile!.name}: cappedFields = ${r.profile!.cappedFields.join(', ')||'keine'}; `+
+   `effektive Volatilität ${fmt(r.profile!.effective.targetAnnualVol,true)}, `+
+   `Top-K ${r.profile!.effective.maxOpenPositions}, maximale Position ${fmt(r.profile!.effective.maxPositionPct,true)}, `+
+   `maximal investiert ${fmt(r.profile!.effective.maxInvestedPct,true)}.`),'',
+  '## Grenzen',
+  'Die Parameter corePct (BTC/ETH-Buy-and-Hold-Kern) sind in diesem Backtest **nicht abbildbar und nicht implementiert**; nur der aktive Teil wird verglichen.',
+  'universeTopN, riskPerTradePct und minimumEdgeMultiple sind keine separat durchgesetzten Profilregeln dieses H-025-v2-Laufs.',
+  'Die Planer-Gewichte sind Zielgrössen; Kursveränderungen und ausstehende Orders können die tatsächliche Exposure von der Investitionsquote abweichen lassen.',
+  'Mengenregeln sind aktuelle Börsenregeln als rückwirkende Annahme. Historische Handelbarkeit ist nicht bestätigt.',
+  'Fehlende Coins/Filter sperren Eintritte statt fiktiver Ausführungen; unveränderte Gebühren, Spread und Slippage.','',
+  `Importierte Coins: ${first.importedCoins}; historisches Universum: ${first.universeCoins}; `+
+   `fehlende aktuelle Filter: ${first.missingRules.length}.`,
+  'Ergebnisse aus drei separaten Backtests, identischer Archivstand und Lot-Snapshot; vollständige JSON-Belege enthalten Trades und Fingerprints.',
+  '' ].join('\n');
 }

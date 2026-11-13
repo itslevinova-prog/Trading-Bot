@@ -33,6 +33,11 @@ on:
         type: boolean
         default: false
 
+      run_profiles:
+        description: H-025 v2 mit drei vorregistrierten Risikoprofilen (nur Entwicklung)
+        type: boolean
+        default: false
+
 permissions:
   contents: read
   issues: write
@@ -79,10 +84,11 @@ jobs:
           IMPORT_INTERVALS: ${{ inputs.intervals }}
           RUN_TREND: ${{ inputs.run_trend }}
           RUN_TREND_V2: ${{ inputs.run_trend_v2 }}
+          RUN_PROFILES: ${{ inputs.run_profiles }}
           IMPORT_SYMBOLS: ${{ inputs.symbols }}
         run: |
           pnpm --filter @paper/shared build
-          if [[ "$RUN_TREND_V2" == 'true' ]]; then
+          if [[ "$RUN_TREND_V2" == 'true' || "$RUN_PROFILES" == 'true' ]]; then
             pnpm --filter @paper/server exec tsx -e "import {validateV2Inputs} from './src/backtest/trend-research-v2.ts'; validateV2Inputs(process.env.IMPORT_FROM!,process.env.IMPORT_TO!,process.env.IMPORT_INTERVALS!,process.env.IMPORT_SYMBOLS!);"
           fi
           pnpm --filter @paper/server exec tsx -e "import {validateResearchMonths} from './src/backtest/trend-research.ts'; validateResearchMonths(process.env.IMPORT_FROM!,process.env.IMPORT_TO!); if(process.env.RUN_TREND==='true'&&(process.env.IMPORT_FROM!=='2020-01'||process.env.IMPORT_TO!=='2023-12'||process.env.IMPORT_INTERVALS!=='1d,1h'||process.env.IMPORT_SYMBOLS!=='')) throw Error('H-025 requires fixed 2020-01..2023-12 and 1d,1h with empty symbols');"
@@ -99,6 +105,9 @@ jobs:
       - name: Trendfolge H-025 v2 mit Mengenregel-Annahme
         if: ${{ inputs.run_trend_v2 }}
         run: pnpm --filter @paper/server exec tsx src/backtest/trend-research-v2-cli.ts | tee trend-v2.txt
+      - name: H-025 v2 – drei Risikoprofile nacheinander
+        if: ${{ inputs.run_profiles }}
+        run: pnpm --filter @paper/server exec tsx src/backtest/trend-research-v2-cli.ts --profiles | tee trend-profiles.txt
       - name: Datenbericht
         run: pnpm data:report | tee data-report.txt
       - name: Schnelltest #33
@@ -114,6 +123,7 @@ jobs:
             spike.txt
             trend.txt
             trend-v2.txt
+            trend-profiles.txt
             data/trend-research-v2/
             data/trend-research/
             data/archive/report.json
@@ -142,6 +152,16 @@ jobs:
             cat data/trend-research/summary.md
           } > trend-comment.md
           gh issue comment 3 --repo "${{ github.repository }}" --body-file trend-comment.md
+      - name: Forschungsergebnis aller Profile in Issue #7 kommentieren
+        if: ${{ inputs.run_profiles && success() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PRIVACY_BLOCKLIST: ${{ secrets.PRIVACY_BLOCKLIST }}
+        run: |
+          cp data/trend-research-v2/profiles-summary.md profile-comment.md
+          node --input-type=module -e 'import {readFileSync,writeFileSync} from "node:fs"; writeFileSync("profile-comment-event.json",JSON.stringify({comment:{body:readFileSync("profile-comment.md","utf8")}}));'
+          PG_MODE=text GITHUB_EVENT_NAME=issue_comment GITHUB_EVENT_PATH="$PWD/profile-comment-event.json" node .github/privacy-guard/check.mjs
+          gh issue comment 7 --repo "${{ github.repository }}" --body-file profile-comment.md
       - name: Forschungsergebnis v2 in Issue #3 kommentieren
         if: ${{ inputs.run_trend_v2 && success() }}
         env:
@@ -153,5 +173,6 @@ jobs:
             echo
             cat data/trend-research-v2/summary.md
           } > trend-v2-comment.md
-          PG_MODE=text PG_TEXT_BODY="$(cat trend-v2-comment.md)" node .github/privacy-guard/check.mjs
+          node --input-type=module -e 'import {readFileSync,writeFileSync} from "node:fs"; writeFileSync("trend-v2-comment-event.json",JSON.stringify({comment:{body:readFileSync("trend-v2-comment.md","utf8")}}));'
+          PG_MODE=text GITHUB_EVENT_NAME=issue_comment GITHUB_EVENT_PATH="$PWD/trend-v2-comment-event.json" node .github/privacy-guard/check.mjs
           gh issue comment 3 --repo "${{ github.repository }}" --body-file trend-v2-comment.md

@@ -1,10 +1,12 @@
 import {test,expect,vi} from 'vitest';
-import {developmentSource,runTrendResearchV2,validateV2Inputs,v2Markdown} from '../src/backtest/trend-research-v2.js';
+import {developmentSource,runTrendResearchV2,validateV2Inputs,v2Markdown,v2ProfilesMarkdown} from '../src/backtest/trend-research-v2.js';
 import {TREND_RESEARCH_ASSUMPTIONS as a,DAY} from '../src/backtest/trend-research.js';
 import {SimulatedBroker} from '../src/backtest/simulated-broker.js';
 import {ConservativeOhlcModel} from '../src/backtest/fill-models.js';
 import {defaultRisk} from '../src/backtest/runner.js';
 import {floorLot} from '../src/forward/lots.js';
+import {resolvePaperRiskProfile} from '../src/risk-engine/profiles.js';
+
 import type {CandleSource} from '../src/backtest/candle-source.js';
 
 const rule={stepSize:'0.00500000',minQty:'0.00500000',minNotional:'5.00000000'};
@@ -54,7 +56,13 @@ test('complete development fixture retains delisted history without granting fab
  expect(report.pipelineEligible).toBe(false);expect(report.lotSnapshot.assumption).toContain('not-historical');
  for(const t of report.backtest.trades)expect(floorLot(t.qty,rule)).toBeCloseTo(t.qty,8);
  expect(v2Markdown(report)).toContain('Keine Pipeline-Freigabe');expect(v2Markdown(report)).toContain('DEADUSDT');
-},30000);
+ const cautious=await runTrendResearchV2({...options,profileName:'vorsichtig'});
+ expect(cautious.profile?.name).toBe('vorsichtig');
+ expect(cautious.profile?.engineLimits.targetAnnualVol).toBe(cautious.profile?.effective.targetAnnualVol);
+ expect(cautious.profile?.cappedFields).toEqual([]);
+ expect(cautious.backtest.fingerprints.configuration).not.toBe(report.backtest.fingerprints.configuration);
+ expect(requests.every(r=>r.from>=a.fromMs&&r.to<=a.toMs)).toBe(true);
+},90000);
 
 test('Actions preflight wires v2 to full-history validation before download and keeps artifacts/comments isolated',async()=>{
  const {readFileSync}=await import('node:fs');
@@ -65,8 +73,46 @@ test('Actions preflight wires v2 to full-history validation before download and 
  const rejected=spawnSync('bash',['-e','-o','pipefail','-c',script],{cwd:new URL('../../../',import.meta.url),encoding:'utf8',env:{...process.env,
   LIVE_ENABLED:'false',AI_ALLOW_REMOTE:'false',RUN_TREND:'false',RUN_TREND_V2:'true',IMPORT_FROM:'2020-01',IMPORT_TO:'2023-12',IMPORT_INTERVALS:'1d,1h',IMPORT_SYMBOLS:'BTCUSDT'}});
  expect(rejected.status).not.toBe(0);expect(rejected.stderr).toContain('H-025 v2 requires fixed');
+ const profileRejected=spawnSync('bash',['-e','-o','pipefail','-c',script],{cwd:new URL('../../../',import.meta.url),encoding:'utf8',env:{...process.env,
+  LIVE_ENABLED:'false',AI_ALLOW_REMOTE:'false',RUN_TREND:'false',RUN_TREND_V2:'false',RUN_PROFILES:'true',IMPORT_FROM:'2024-01',IMPORT_TO:'2024-12',IMPORT_INTERVALS:'1d,1h',IMPORT_SYMBOLS:''}});
+ expect(profileRejected.status).not.toBe(0);
  expect(preflight).toContain('RUN_TREND_V2: ${{ inputs.run_trend_v2 }}');
+ expect(workflow).toContain('run_profiles:');
+ expect(preflight).toContain('RUN_PROFILES: ${{ inputs.run_profiles }}');
+ expect(preflight).toContain(`"$RUN_PROFILES" == 'true'`);
+ const profiles=workflow.split('      - name: Forschungsergebnis aller Profile in Issue #7 kommentieren')[1]!.split('      - name: Forschungsergebnis v2')[0]!;
+ expect(profiles).toContain('gh issue comment 7');
+ expect(profiles).toContain('GITHUB_EVENT_PATH=');
+ expect(profiles).not.toContain('PG_TEXT_BODY');
+ expect(profiles.indexOf('node .github/privacy-guard/check.mjs')).toBeLessThan(profiles.indexOf('gh issue comment 7'));
  const post=workflow.split('      - name: Forschungsergebnis v2 in Issue #3 kommentieren')[1]!;
  expect(post).toContain('inputs.run_trend_v2 && success()');expect(post).toContain('data/trend-research-v2/summary.md');expect(post).toContain('gh issue comment 3');
  expect(post.indexOf('node .github/privacy-guard/check.mjs')).toBeLessThan(post.indexOf('gh issue comment 3'));
+});
+
+test('three frozen profile mappings use capped targets without mutating source profiles',()=>{
+ const names=['vorsichtig','normal','aggressiv'] as const;
+ const resolved=names.map(name=>resolvePaperRiskProfile(name));
+ expect(resolved.map(p=>p.name)).toEqual(names);
+ for(const p of resolved){
+  expect(p.engineLimits.targetAnnualVol).toBe(p.effective.targetAnnualVol);
+  expect(p.engineLimits.maxPositionPct).toBe(p.effective.maxPositionPct);
+  expect(p.effective.maxOpenPositions).toBeLessThanOrEqual(4);
+  expect(p.effective.maxInvestedPct).toBeLessThanOrEqual(1);
+  expect(p.requested.corePct).toBeGreaterThanOrEqual(0);
+ }
+ expect(resolved[1]!.cappedFields).toContain('maxOpenPositions');
+ expect(resolved[2]!.cappedFields).toContain('maxPositionPct');
+ expect(resolved[2]!.effective.targetAnnualVol).toBeLessThan(resolved[2]!.requested.targetAnnualVol);
+});
+
+test('profile comparison never manufactures benchmark fees, core or missing exposure',()=>{
+ const p=['vorsichtig','normal','aggressiv'].map(name=>resolvePaperRiskProfile(name as 'vorsichtig'|'normal'|'aggressiv'));
+ const metric={cagr:.1,maxDrawdown:.2,sharpe:.5,calmar:.5,tradeCount:10,costShare:null,exposureTime:.4};
+ const fake=p.map(profile=>({profile,backtest:{metrics:metric},importedCoins:2,universeCoins:2,missingRules:[],
+  benchmarks:[{name:'BTC Buy & Hold',netReturn:null},{name:'DCA 70/30',netReturn:null}]})) as unknown as Parameters<typeof v2ProfilesMarkdown>[0];
+ const md=v2ProfilesMarkdown(fake);
+ expect(md).toContain('| vorsichtig |');expect(md).toContain('| normal |');expect(md).toContain('| aggressiv |');
+ expect(md).toContain('cappedFields =');expect(md).toContain('corePct');expect(md).toContain('n/a');
+ expect(()=>v2ProfilesMarkdown(fake.slice(0,2))).toThrow();
 });
