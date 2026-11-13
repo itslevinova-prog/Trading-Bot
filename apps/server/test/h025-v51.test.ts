@@ -77,8 +77,9 @@ test('BTC-200d risk-on matches closed planner regime, ignores future candles and
  expect(closedBtc200Regime([...bars,future],AT)).toBe('risk-on');
  expect(closedBtc200Regime(bars.filter((_,i)=>i!==50),AT)).toBeNull();
  expect(closedBtc200Regime(bars.slice(-200),AT)).toBeNull();
- expect(closedBtc200Regime(bars.map(c=>({...c,close:300-(c.close-100)})),AT))
-  .toBe('risk-off');
+ const riskOff=bars.map((c,i)=>{const price=300-i*.3;return {...c,
+  open:price,high:price+1,low:price-1,close:price};});
+ expect(closedBtc200Regime(riskOff,AT)).toBe('risk-off');
 });
 
 test('v5.1 accepts no Paper-mode, mixed v5 switch, unsealed range or missing PIT evidence',async()=>{
