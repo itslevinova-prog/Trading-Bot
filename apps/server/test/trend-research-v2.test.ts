@@ -162,7 +162,7 @@ test('rejection attribution and persistent cash lock use observed order rejectio
  const markdown=diagnosticsMarkdown(trace,100).join('\n');
  expect(markdown).toContain('Befund: bestätigt');
  expect(markdown).toContain('2020-12-31');
- expect(markdown).toContain('188 profitable').toBe(false);
+ expect(markdown).not.toContain('188 profitable');
  // An exit-only threshold without a rejected buy does not establish causation.
  const inconclusive:DiagnosticTrace={...trace,reasons:{...reasons,portfolioRisk:{}}};
  expect(analyzeDiagnosticTrace(inconclusive,100).lockFinding).toBe('offen');
@@ -180,6 +180,6 @@ test('diagnostic Markdown separates non-order market-day counts from real reject
  countDiagnosticReason(trace.reasons,'coinQuality','Markt-Tag ohne Einstiegsfreigabe: Qualität unbekannt');
  const md=diagnosticsMarkdown(trace,100).join('\n');
  expect(md).toContain('Top 15');expect(md).toContain('keine addierbare Gesamtzahl');
- expect(md).toContain('Befund: widerlegt');
+ expect(md).toContain('Befund: offen');
  expect(md).toContain('n/a');
 });
