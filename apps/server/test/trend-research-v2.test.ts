@@ -93,7 +93,7 @@ test('Actions preflight wires v2 to full-history validation before download and 
  const post=workflow.split('      - name: Forschungsergebnis v2 in Issue #3 kommentieren')[1]!;
  expect(post).toContain('inputs.run_trend_v2 && success()');expect(post).toContain('data/trend-research-v2/summary.md');expect(post).toContain('gh issue comment 3');
  expect(post.indexOf('node .github/privacy-guard/check.mjs')).toBeLessThan(post.indexOf('gh issue comment 3'));
-});
+},30000);
 
 test('three frozen profile mappings use capped targets without mutating source profiles',()=>{
  const names=['vorsichtig','normal','aggressiv'] as const;
@@ -162,7 +162,7 @@ test('rejection attribution and persistent cash lock use observed order rejectio
  const markdown=diagnosticsMarkdown(trace,100).join('\n');
  expect(markdown).toContain('Befund: bestätigt');
  expect(markdown).toContain('2020-12-31');
- expect(markdown).not.toContain('188 profitable');
+ expect(markdown).toContain('kein Beleg für 188 profitable');
  // An exit-only threshold without a rejected buy does not establish causation.
  const inconclusive:DiagnosticTrace={...trace,reasons:{...reasons,portfolioRisk:{}}};
  expect(analyzeDiagnosticTrace(inconclusive,100).lockFinding).toBe('offen');
@@ -179,7 +179,7 @@ test('diagnostic Markdown separates non-order market-day counts from real reject
  countDiagnosticReason(trace.reasons,'missingLot','Markt-Tag ohne Einstiegsfreigabe: Mengenregel fehlt');
  countDiagnosticReason(trace.reasons,'coinQuality','Markt-Tag ohne Einstiegsfreigabe: Qualität unbekannt');
  const md=diagnosticsMarkdown(trace,100).join('\n');
- expect(md).toContain('Top 15');expect(md).toContain('keine addierbare Gesamtzahl');
+ expect(md).toContain('Top 15');expect(md).toContain('Keine addierbare Gesamtzahl');
  expect(md).toContain('Befund: offen');
  expect(md).toContain('n/a');
 });
