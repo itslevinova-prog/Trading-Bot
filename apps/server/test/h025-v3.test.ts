@@ -116,7 +116,7 @@ test('research v3 remains disabled for non-trend backtests, unsealed ranges and 
 test('v3 is preregistered with immutable values and manually dispatched behind privacy guard',()=>{
  const registration=JSON.parse(readFileSync('..'+'/..'+'/docs/research/hypotheses.json','utf8'));
  const h=registration.find((r:{id:string})=>r.id==='H-025');
- expect(h.variantsTested).toBe(9);
+ expect(h.variantsTested).toBe(17);
  expect(h.drawdownV3).toMatchObject({
   mode:'run_v3',historicalRunsCompleted:0,flatDays:30,
   rebalanceToleranceRelative:.2,absoluteLossFromInitial:.3,regimeRequired:'risk-on'
