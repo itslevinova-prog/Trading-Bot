@@ -21,7 +21,7 @@ export type RiskConfiguration={maxPositionPct:number;maxOpenPositions:number;max
 /** Conservative capacity assumption, NOT a measured market impact or fill model.
  * Only a previously fully closed quote-volume bar can authorize a new entry. */
 export type QuoteParticipationLimit=Readonly<{maxQuoteVolumeFraction:number}>;
-type Pending={action:Exclude<Action,{type:'hold'}>;decisionTs:number;strategy:'rules'|'hold'};
+type Pending={action:Exclude<Action,{type:'hold'}>;decisionTs:number;strategy:'rules'|'hold';v5RequestedAmount?:number};
 export class SimulatedBroker {
   readonly trades:SimulatedTrade[]=[];
   readonly positions=new Map<string,SimulatedPosition>();
@@ -33,6 +33,7 @@ export class SimulatedBroker {
   readonly makerQueue=new PaperMakerQueue();
   private readonly makerActions=new Map<string,{pending:Pending;feeRate:number}>();
   private makerSerial=0;
+  private v5PausedAt:number|null=null;
   private readonly lastClosedQuoteVolume=new Map<string,{
     closedAt:number;quoteVolume:number|null;intervalMs:number
   }>();
@@ -40,7 +41,7 @@ export class SimulatedBroker {
   peak:number;
   /** feeAsset applies to buy-side commissions. Sell-side commissions remain
    * in quote, never silently deducting additional base inventory. */
-  constructor(readonly startingCash:number,private readonly pairs:Map<string,MarketConstraints>,readonly model:FillModel,readonly limits:RiskConfiguration,private readonly delayBars=0,private readonly feeSchedule?:FeeSchedule,readonly feeAsset:'base'|'quote'='quote',readonly participation?:QuoteParticipationLimit) {
+  constructor(readonly startingCash:number,private readonly pairs:Map<string,MarketConstraints>,readonly model:FillModel,readonly limits:RiskConfiguration,private readonly delayBars=0,private readonly feeSchedule?:FeeSchedule,readonly feeAsset:'base'|'quote'='quote',readonly participation?:QuoteParticipationLimit,private readonly researchV5=false) {
     if(startingCash<=0||!Number.isFinite(startingCash)||!Number.isSafeInteger(delayBars)||delayBars<0)throw Error('Invalid starting cash/delay');
     if(feeAsset!=='base'&&feeAsset!=='quote')throw Error('Unknown fee asset');
     if(participation&&(!Number.isFinite(participation.maxQuoteVolumeFraction)||
@@ -48,6 +49,18 @@ export class SimulatedBroker {
       throw Error('Invalid quote-volume participation limit');
     for(const pair of pairs.values())if(pair.stepSize)validateRule({stepSize:pair.stepSize,minQty:pair.ordermin.toFixed(8),minNotional:pair.costmin.toFixed(8)});
     this.cash=startingCash;this.peak=startingCash;
+  }
+  /** Research-only irreversible entry pause. No Paper or production reset path. */
+  get researchV5PausedAt(){return this.v5PausedAt;}
+  researchV5EntryScale(asOf:number):number {
+    if(!this.researchV5)throw Error('H-025 v5 not enabled on this broker');
+    if(!Number.isSafeInteger(asOf)||asOf<0)throw Error('Invalid research daily clock');
+    const equity=this.equity;
+    if(!Number.isFinite(equity)||equity<=0)throw Error('Invalid research account equity');
+    if(equity<=this.startingCash*.70+1e-8&&this.v5PausedAt===null)this.v5PausedAt=asOf;
+    if(this.v5PausedAt!==null)return 0;
+    const dd=Math.max(0,1-equity/Math.max(this.peak,equity));
+    return dd<=.10?1:dd>=.30?0:(.30-dd)/.20;
   }
   get rejected(){return this.rejectionReasons.length;}
   get missedMakerFills(){return this.makerQueue.missed.length;}
@@ -67,6 +80,8 @@ export class SimulatedBroker {
       ![fillPrice,netQty,notional,quoteFee,feeQuoteValue,debit].every(Number.isFinite)||
       fillPrice<=0||netQty<=0||notional<=0||quoteFee<0||feeQuoteValue<0||debit<=0)
       return 'Invalid fill clock, quantity or costs after lot rounding';
+    if(this.researchV5&&this.researchV5EntryScale(atMs)<=0)
+      return 'H-025 v5 permanent pause or 30% peak drawdown at fill';
     if(debit>action.amountEur+1e-7)
       return 'Post-rounding debit including fees exceeds approved order budget';
     if(debit>this.cash+1e-8)
@@ -107,7 +122,7 @@ export class SimulatedBroker {
       maxOpenPositions:this.limits.maxOpenPositions,
       maxTradesPerDay:this.limits.maxTradesPerDay,
       cooldownMinutes:this.limits.cooldownMinutes,
-      maxPortfolioRiskPct:this.limits.maxPortfolioRiskPct,
+      maxPortfolioRiskPct:this.researchV5?undefined:this.limits.maxPortfolioRiskPct,
       feeRate
     });
     if(!approval.allowed||!Number.isFinite(approval.amountEur)||
@@ -125,7 +140,7 @@ export class SimulatedBroker {
     const newRisk=positionStopRisk(netQty,fillPrice,stop,feeRate,
       Math.max(this.limits.minOrderEur,pair.costmin))+feeQuoteValue;
     if(!Number.isFinite(existingRisk+newRisk)||
-      existingRisk+newRisk>postEquity*this.limits.maxPortfolioRiskPct+1e-7)
+      (!this.researchV5&&existingRisk+newRisk>postEquity*this.limits.maxPortfolioRiskPct+1e-7))
       return 'Post-fill aggregate stop-risk budget exceeded';
     return null;
   }
@@ -168,18 +183,25 @@ export class SimulatedBroker {
     if(!this.pairs.has(action.pair))return this.reject('Unknown pair');
     if(this.orders.some(o=>o.action.pair===action.pair)||[...this.makerQueue.pending.values()].some(o=>o.symbol===action.pair))return this.reject('Order already pending');
     if(action.type==='sell'&&!this.positions.has(action.pair))return this.reject('No position');
+    let v5RequestedAmount:number|undefined;
     if(action.type==='buy') {
-      if(this.positions.has(action.pair))return this.reject('Existing position');
+      if(this.positions.has(action.pair)&&!this.researchV5)return this.reject('Existing position');
+      if(this.researchV5){
+        v5RequestedAmount=action.amountEur;
+        const scale=this.researchV5EntryScale(decisionTs);
+        if(scale<=0)return this.reject('H-025 v5 peak drawdown or permanent entry pause');
+        action={...action,amountEur:action.amountEur*scale};
+      }
       if(strategy==='rules') {
         const state={equity:this.equity,cash:this.cash,status:'active',positions:[...this.positions.values()].map(p=>({pair:p.symbol,value:p.qty*(this.marks.get(p.symbol)??p.entryPrice),stopRisk:positionStopRisk(p.qty,this.marks.get(p.symbol)??p.entryPrice,p.stop,this.riskFeeRate(),this.limits.minOrderEur)})),tradesToday:this.trades.filter(t=>t.side==='buy'&&new Date(t.ts).toISOString().slice(0,10)===new Date(decisionTs).toISOString().slice(0,10)).length,lastSellAt:this.trades.filter(t=>t.symbol===action.pair&&t.side==='sell').at(-1)?.ts,now:decisionTs};
         const guard=entryDrawdownGuard(state.equity,this.peak,this.limits.maxDrawdownPct);
         if(guard)return this.reject(guard);
-        const risk=validateRisk({accountId:'backtest',pair:action.pair,side:'buy',amountEur:action.amountEur,stopLossPct:action.stopLossPct,reason:action.reasoning,decisionId:'backtest'} satisfies BrokerOrder,state,{maxPositionPct:this.limits.maxPositionPct,maxOpenPositions:this.limits.maxOpenPositions,maxTradesPerDay:this.limits.maxTradesPerDay,cooldownMinutes:this.limits.cooldownMinutes,maxPortfolioRiskPct:this.limits.maxPortfolioRiskPct,feeRate:this.riskFeeRate()});
+        const risk=validateRisk({accountId:'backtest',pair:action.pair,side:'buy',amountEur:action.amountEur,stopLossPct:action.stopLossPct,reason:action.reasoning,decisionId:'backtest'} satisfies BrokerOrder,state,{maxPositionPct:this.limits.maxPositionPct,maxOpenPositions:this.limits.maxOpenPositions,maxTradesPerDay:this.limits.maxTradesPerDay,cooldownMinutes:this.limits.cooldownMinutes,maxPortfolioRiskPct:this.researchV5?undefined:this.limits.maxPortfolioRiskPct,feeRate:this.riskFeeRate()});
         if(!risk.allowed)return this.reject(risk.reason);
         action={...action,amountEur:risk.amountEur??action.amountEur};
       }
     }
-    this.orders.push({action,decisionTs,strategy});
+    this.orders.push({action,decisionTs,strategy,...(v5RequestedAmount!==undefined?{v5RequestedAmount}:{})});
     return true;
   }
   /** Require a received, non-stale book and an assumption-based 2x edge gate.
@@ -343,7 +365,10 @@ export class SimulatedBroker {
       const bid=spread*(1-this.model.spreadBps/20000),ask=spread*(1+this.model.spreadBps/20000);
       if(!entryQuoteGuard(bid,ask,{maxSpreadBps:this.limits.maxSpreadBps,maxSlippageBps:this.limits.maxSlippageBps}).allowed||!entryFillGuard(quote.price,spread,{maxSpreadBps:this.limits.maxSpreadBps,maxSlippageBps:this.limits.maxSlippageBps}).allowed){this.reject('Entry cost guards');return;}
     }
-    const budget=Math.min(action.amountEur,this.cash);
+    const v5Scale=this.researchV5?this.researchV5EntryScale(candle.ts):1;
+    if(this.researchV5&&v5Scale<=0){this.reject('H-025 v5 permanent pause or peak drawdown at fill');return;}
+    const budget=Math.min(action.amountEur,this.cash,
+      pending.v5RequestedAmount===undefined?Infinity:pending.v5RequestedAmount*v5Scale);
     const rate=this.feeSchedule?.select(action.pair,candle.ts,maker?'maker':'taker').rate??
       (maker?.feeRate??this.limits.feeRate);
     const rawQty=budget/(quote.price*(this.feeAsset==='quote'?1+rate:1));
@@ -372,7 +397,13 @@ export class SimulatedBroker {
       qty,notional,quoteFee,fee,stop);
     if(finalRisk){this.reject(finalRisk);return;}
     this.cash-=notional+quoteFee;
-    this.positions.set(action.pair,{symbol:action.pair,qty,basis:notional+quoteFee,entryPrice:quote.price,stop,target,openedAt:candle.ts});
+    const existing=this.researchV5?this.positions.get(action.pair):undefined;
+    this.positions.set(action.pair,existing?{
+      symbol:action.pair,qty:existing.qty+qty,basis:existing.basis+notional+quoteFee,
+      entryPrice:(existing.entryPrice*existing.qty+quote.price*qty)/(existing.qty+qty),
+      stop:existing.stop===null?stop:stop===null?existing.stop:Math.max(existing.stop,stop),
+      target:null,openedAt:existing.openedAt
+    }:{symbol:action.pair,qty,basis:notional+quoteFee,entryPrice:quote.price,stop,target,openedAt:candle.ts});
     this.trades.push({ts:candle.ts,decisionTs:pending.decisionTs,symbol:action.pair,side:'buy',qty,price:quote.price,
       ...charged,fee,feeAsset:this.feeAsset,grossQty,feeBaseQty,
       feeRounding:this.feeAsset==='base'?'round-up-base-8dp':charged.feeRounding,

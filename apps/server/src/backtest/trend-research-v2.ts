@@ -32,6 +32,30 @@ export const V4_RESEARCH=Object.freeze({
  v4b:Object.freeze({...V2_RESEARCH,version:'H-025-diagnostic-BTC-ETH-only-v4b',
   diagnosticOnly:true,drawdownThresholds:V4_DRAWDOWN_THRESHOLDS,universe:'point-in-time-BTCUSDT-ETHUSDT'})
 });
+/** V5 is deliberately not a relaxation of the v1–v4 data boundary. */
+export function validateV5Inputs(from:string,to:string,intervals:string,symbols:string){
+ if(from!=='2019-01'||to!=='2023-12'||intervals!=='1d'||symbols!=='BTCUSDT,ETHUSDT')
+  throw Error('H-025 v5 requires fixed 2019-01..2023-12, 1d and BTCUSDT,ETHUSDT');
+}
+export const V5_WARMUP_FROM=Date.UTC(2019,0,1);
+export const V5_RESEARCH=Object.freeze({...V2_RESEARCH,
+ version:'H-025-research-btc-eth-full-exposure-v5',universe:'PIT-BTCUSDT-ETHUSDT',
+ warmupFromMs:V5_WARMUP_FROM,warmupOnly:true,weightedBy:'inverse-daily-vol',
+ portfolioExposure:'trend-strength-times-profile-max-invested',rebalanceTolerance:.20,
+ drawdown:{caution:.10,zeroEntries:.30,permanentInitialLoss:.30},
+ dailyShock:'60d-absolute-close-returns-P99',hourlyRiskRequired:false,
+ maxInvestedByProfile:{basis:1,vorsichtig:.5,normal:.8,aggressiv:1},
+ historicalRunStatus:'not-executed',pipelineEligible:false});
+export function v5DevelopmentSource(source:CandleSource):CandleSource{
+ return {listSymbols:()=>source.listSymbols(),getCandles:async(symbol,minutes,from,to)=>{
+  if(!['BTCUSDT','ETHUSDT'].includes(symbol)||minutes!==1440||
+   !Number.isSafeInteger(from)||!Number.isSafeInteger(to)||from>=to||
+   from<V5_WARMUP_FROM||to>a.toMs)
+   throw Error('H-025 v5 source sealed to BTC/ETH daily 2019 warm-up and pre-2024 development');
+  const rows=await source.getCandles(symbol,minutes,from,to);
+  validateCandles(rows,minutes,from,to);return rows;
+ }};
+}
 export function validateV2Inputs(from:string,to:string,intervals:string,symbols:string){
  if(from!=='2020-01'||to!=='2023-12'||intervals!=='1d,1h'||symbols!=='')
   throw Error('H-025 v2 requires fixed 2020-01..2023-12 and 1d,1h with empty symbols');
@@ -53,20 +77,22 @@ export type V2RunOptions={source:CandleSource;lotRules:LotRules;lotSnapshotAt:st
  researchV3?:{regimeAt:(asOf:number)=>Regime|Promise<Regime>};
  /** Only explicitly registered, non-operational H-025 v4 diagnostics. */
  researchV4?:V4DiagnosticVariant;
+ /** Opt-in research only: H-025 v5, never used by Paper or Forward. */
+ researchV5?:true;
 };
 export async function runTrendResearchV2(options:V2RunOptions){
  if(!Number.isFinite(Date.parse(options.lotSnapshotAt)))throw Error('Lot snapshot timestamp required');
  const profile=options.profileName?resolvePaperRiskProfile(options.profileName):null;
- const v3=options.researchV3??null,v4=options.researchV4??null;
- if(v3&&v4)throw Error('H-025 v3 and v4 must not be combined');
+ const v3=options.researchV3??null,v4=options.researchV4??null,v5=options.researchV5===true;
+ if(Number(Boolean(v3))+Number(Boolean(v4))+Number(v5)>1)throw Error('H-025 research modes are mutually exclusive');
  if(v4&&v4!=='v4a'&&v4!=='v4b')throw Error('Unknown H-025 v4 variant');
- const assumptions=v4?V4_RESEARCH[v4]:v3?V3_RESEARCH:V2_RESEARCH;
- const rules=configLots(options.lotRules),sealed=developmentSource(options.source);
+ const assumptions=v5?V5_RESEARCH:v4?V4_RESEARCH[v4]:v3?V3_RESEARCH:V2_RESEARCH;
+ const rules=configLots(options.lotRules),sealed=v5?v5DevelopmentSource(options.source):developmentSource(options.source);
  const daily=new Map<string,Candle[]>();
  // Discover from the historical archive, never intersect with current exchange symbols.
  for(const symbol of (await sealed.listSymbols()).filter(s=>s.endsWith('USDT')&&
-  (v4!=='v4b'||s==='BTCUSDT'||s==='ETHUSDT')).sort()){
-  const rows=await sealed.getCandles(symbol,1440,a.fromMs,a.toMs);
+  ((v4!=='v4b'&&!v5)||s==='BTCUSDT'||s==='ETHUSDT')).sort()){
+  const rows=await sealed.getCandles(symbol,1440,v5?V5_WARMUP_FROM:a.fromMs,a.toMs);
   if(rows.length)daily.set(symbol,rows);
  }
  const imported=[...daily.keys()];if(!imported.length)throw Error('No historical USDT candles');
@@ -82,10 +108,12 @@ export async function runTrendResearchV2(options:V2RunOptions){
   initialCash:a.initialCash,feeRate:a.feeRate,spreadBps:a.spreadBps,slippageBps:a.slippageBps,
   // Each pair still applies its actual assumed minimum; no additional fixed 10-USDT v1 floor.
   riskLimits:{minOrderEur:Math.min(...Object.values(rules).map(r=>Number(r.minNotional))),
-   ...(profile?{maxOpenPositions:profile.effective.maxOpenPositions,maxPositionPct:profile.effective.maxPositionPct}:{})},
+   ...(v5?{maxOpenPositions:2,maxPositionPct:1,maxPortfolioRiskPct:1,maxDrawdownPct:1}:
+    profile?{maxOpenPositions:profile.effective.maxOpenPositions,maxPositionPct:profile.effective.maxPositionPct}:{})},
   ...(v4?{portfolioRiskLimits:{...(profile?.engineLimits??DEFAULT_RISK_LIMITS),...V4_DRAWDOWN_THRESHOLDS}}:
    profile?{portfolioRiskLimits:profile.engineLimits}:{}),
   ...(v3?{researchDrawdownV3:v3}:{}),
+  ...(v5?{researchV5:true as const}:{}),
   provider:{decide:async context=>{
    const input=(context.execution as {trendV1?:TrendV1Input}|undefined)?.trendV1;
    if(!input)throw Error('Missing closed daily v2 context');
@@ -93,30 +121,41 @@ export async function runTrendResearchV2(options:V2RunOptions){
     ...(profile?{targetAnnualVol:profile.effective.targetAnnualVol,
      topK:profile.effective.maxOpenPositions,maxPositionPct:profile.effective.maxPositionPct,
      maxInvestedPct:profile.effective.maxInvestedPct}:{}),
-    ...(v3?{rebalanceTolerance:H025_V3_DRAWDOWN.rebalanceTolerance}:{})});
+    ...(v3?{rebalanceTolerance:H025_V3_DRAWDOWN.rebalanceTolerance}:{}),
+    ...(v5?{researchV5:true as const,maxPositionPct:1,topK:2,
+     maxInvestedPct:profile?.effective.maxInvestedPct??1,rebalanceTolerance:.20}: {})});
    return {marketView:CONFIG.strategy+': '+plan.reason,actions:plan.actions};
   }},
-  constraints,universeAt:v4==='v4b'?async(day:number)=>(await options.universeAt(day)).filter(
+  constraints,universeAt:(v4==='v4b'||v5)?async(day:number)=>(await options.universeAt(day)).filter(
    s=>s==='BTCUSDT'||s==='ETHUSDT'):options.universeAt,
-  quoteCurrency:'USDT',venue:'binance',enablePortfolioRisk:true,
+  quoteCurrency:'USDT',venue:'binance',enablePortfolioRisk:!v5,
   collectResearchDiagnostics:true,missingLotSymbols:missingRules,
   coinQuality:{check:async(symbol,asOf)=>{
-   const quality=researchQuality(symbol,asOf,daily.get(symbol)??[]);
+   const quality=researchQuality(symbol,asOf,daily.get(symbol)??[],v5?V5_WARMUP_FROM:a.fromMs);
    return rules[symbol]?quality:{...quality,status:'unknown',reasons:['Keine aktuelle Mengenregel; historische Zugehörigkeit bleibt erhalten, Einstieg gesperrt']};
   }},buildId:options.codeBuild});
  const benchmarks=await matchedCostBenchmarks({source,fromMs:a.fromMs,toMs:a.toMs,quote:'USDT',costs:{initialCash:a.initialCash,feeRate:a.feeRate,spreadBps:a.spreadBps,slippageBps:a.slippageBps,minOrderEur:a.minNotional,fillModel:'conservative-ohlc'}});
  const snapshot={assumption:V2_RESEARCH.lotAssumption,fetchedAt:options.lotSnapshotAt,rules};
- return {label:v4?'H-025 '+v4+' – isolierte Diagnose ohne Drawdown-Bremse':
+ return {label:v5?'H-025 v5 – BTC/ETH voll investierte Trendfolge (Research)':
+  v4?'H-025 '+v4+' – isolierte Diagnose ohne Drawdown-Bremse':
   v3?'H-025 v3 – Drawdown-Reentry (separate Forschung)':
   'H-025 v2 – Forschungslauf mit aktuellen Mengenregeln als historischer Annahme',
   hypothesis:'H-025',strategy:CONFIG.strategy,pipelineEligible:false,paperApproved:false,
   profile,
   ...(v4?{diagnosticVariant:v4}:{}),
+  ...(v5?{researchVariant:'v5' as const}:{}),
   assumptions,lotSnapshot:snapshot,lotSnapshotHash:researchHash(snapshot),benchmarks,
   importedCoins:imported.length,universeCoins:result.universe.length,tradedCoins:new Set(result.trades.map(t=>t.symbol)).size,
   missingRules,coveredRuleCoins:imported.length-missingRules.length,
   fingerprints:{configuration:researchHash({assumptions,lotSnapshot:snapshot,...(profile?{profile}:{})}),codeBuild:options.codeBuild},backtest:result,
   caveats:[
+   ...(v5?[
+    'H-025 v5: Nur Forschung, kein Paper-/Forward-/Pipeline-Kandidat.',
+    '2019-01 bis 2019-12 sind ausschliesslich Indikator-Warm-up; Trades, Bewertung und Kennzahlen erst ab 2020.',
+    'Forschungs-Drawdown ersetzt Portfolio-RiskEngine und Broker-Stop-Risikobudget; die alte Stunden-RiskEngine wird nicht ausgewertet.',
+    'V5 verwendet 60 geschlossene Tagesreturns für BTC-Schock-P99 und Coin-Volatilität; keine Stundenkerzen und keine Auffüllung von Tageslücken.',
+    'Equity <= 70 Prozent des Startkapitals sperrt neue Käufe im Backtest dauerhaft; kein automatisches Freischalten.'
+   ]:[]),
    ...(v4?[
     'H-025 '+v4+': Diagnoselauf, nie Paper-, Forward- oder Pipeline-Kandidat.',
     'Nur die drei Portfolio-RiskEngine-Drawdown-Schwellen 97/98/99 Prozent sind überschrieben; andere RiskEngine-Prüfungen, Coin-Qualität und aktuelle Mengenregeln bleiben aktiv.',
@@ -133,11 +172,11 @@ export async function runTrendResearchV2(options:V2RunOptions){
    'Aktuelle exchangeInfo-Mengenregeln werden rückwirkend angenommen; keine kostenlos belegten historischen Börsenfilter.',
    'Coins ohne verwendbare aktuelle Filter (insbesondere delistete Coins) bleiben im historischen Universum, bekommen aber keine Einstiege. Das kann die Performanceauswahl verzerren; kein survivorship-freier Ausführungsnachweis.',
    'Handelbarkeit, Tags und Lots sind historisch nicht verifiziert. Keine Pipeline- oder Paper-Freigabe.',
-   'Alter/Volumen und Universum stammen nur aus Entwicklungsdaten. Warm-up beginnt 2020; vorherige Kerzen werden nicht geladen.',
-   'Der bestehende Backtest-Broker und seine Portfolio-RiskEngine bleiben aktiv. Vollständige Ausführungsparität mit dem Forward-Adapter ist damit nicht behauptet.',
+   v5?'2019 wird nur als Indikator-Warm-up geladen; PIT-Universum und Performance beginnen 2020.':'Alter/Volumen und Universum stammen nur aus Entwicklungsdaten. Warm-up beginnt 2020; vorherige Kerzen werden nicht geladen.',
+   v5?'Separat aktivierter Forschungs-Broker mit erweitertem Nachkauf; keine Paper-/Forward-Parität behauptet.':'Der bestehende Backtest-Broker und seine Portfolio-RiskEngine bleiben aktiv. Vollständige Ausführungsparität mit dem Forward-Adapter ist damit nicht behauptet.',
    'BTC/DCA-Referenzen verwenden unverändert die synthetische Rundung des bestehenden Forschungslaufs, nicht die aktuellen v2-Lots. Gebühren/Spread/Slippage bleiben gleich; keine Behauptung identischer Mengenregeln für diese Vergleichsreihen.',
    'Offene Positionen nach Datenende blockieren den Lauf statt erfundener Liquidation. Negative Ergebnisse und Null-Trades werden unverändert ausgewiesen.',
-   ...(profile?[
+   ...(profile&&!v5?[
     'corePct ('+profile.requested.corePct+') ist nicht umgesetzt: kein separater BTC/ETH-Buy-and-Hold-Kern, keine Core-Umschichtung; das Profil ist nur ein aktiver Satellite-Proxy.',
     'maxInvestedPct und maxPositionPct begrenzen die vom Planer angezielten Einstiegsgewichte; zwischen Rebalancings können Marktbewegungen die tatsächliche Quote verändern.',
     'universeTopN, riskPerTradePct und minimumEdgeMultiple sind im v2-Planer nicht gesondert operationalisiert; sie werden nicht als erfüllt ausgegeben.'
