@@ -73,6 +73,12 @@ test('open position cancels flat counter; hard-stop can only clear via gated v3 
  expect(recovered.reset).not.toBeNull();
  expect(recovered.status).toBe('ok');
 });
+test('missing daily observations must not count as 30 uninterrupted flat days',()=>{
+ const controller=new ResearchDrawdownV3(10000);
+ observed(controller,0,8900,'risk-on');
+ expect(()=>observed(controller,30,8900,'risk-on')).toThrow(/non-contiguous/);
+ expect(controller.resets).toHaveLength(0);
+});
 test('loss 30 percent below ORIGINAL capital locks permanently, including later equity rebound',()=>{
  const control=new ResearchDrawdownV3(10000);
  expect(observed(control,0,7000,'risk-on').permanentStop).toBe(true);
