@@ -346,7 +346,7 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
    }
    if(broker.orders.length)throw Error('Unfilled orders remain after historic candles ended; refusing to invent fills');
   }
-  assertLedgerInvariant(broker,feeRate);
+  assertLedgerInvariant(broker,feeRate,v5?{researchV5Adds:true}:{});
   if(diagnostics)for(let index=0;index<broker.rejectionReasons.length;index++)
    countDiagnosticReason(diagnostics.reasons,rejectionSource.get(index)??'broker',
     'Orderablehnung: '+broker.rejectionReasons[index]!);
