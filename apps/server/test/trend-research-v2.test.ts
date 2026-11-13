@@ -161,7 +161,7 @@ test('rejection attribution and persistent cash lock use observed order rejectio
  expect(a.years[0]!.maxDrawdownPct).toBeCloseTo(.11);
  const markdown=diagnosticsMarkdown(trace,100).join('\n');
  expect(markdown).toContain('Befund: bestätigt');
- expect(markdown).toContain('2020-12-31');
+ expect(markdown).toContain('2021-01-01');
  expect(markdown).toContain('kein Beleg für 188 profitable');
  // An exit-only threshold without a rejected buy does not establish causation.
  const inconclusive:DiagnosticTrace={...trace,reasons:{...reasons,portfolioRisk:{}}};
