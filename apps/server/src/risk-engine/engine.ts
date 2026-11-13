@@ -1,3 +1,5 @@
+import {ResearchDrawdownV3,type ResearchV3Observation} from './research-drawdown-v3.js';
+
 /** Pure, deterministic risk engine: no exchange calls or order submission. */
 export type RiskCandle = {ts:number;close:number};
 export type RiskAsset = {pair:string;marketValue:number};
@@ -81,7 +83,8 @@ export function bitcoinShock(snapshot:RiskSnapshot):boolean|null {
 /** Circuit breaker remains latched until a documented local manual reset. */
 export class PortfolioRiskEngine {
  private latched=false;
- constructor(readonly limits:RiskLimits={...DEFAULT_RISK_LIMITS}) {
+ private readonly recovery:ResearchDrawdownV3|null;
+ constructor(readonly limits:RiskLimits={...DEFAULT_RISK_LIMITS},options:{researchV3InitialCash?:number}={}) {
   const l=limits;
   if(![l.targetAnnualVol,l.maxClusterPct,l.maxPortfolioBeta,l.maxPositionPct,
      l.cautionDrawdown,l.exitOnlyDrawdown,l.hardStopDrawdown,l.maxFeedAgeMs,l.maxReconnectsLastHour].every(finite)||
@@ -90,24 +93,46 @@ export class PortfolioRiskEngine {
     l.cautionDrawdown<0||l.cautionDrawdown>=l.exitOnlyDrawdown||
     l.exitOnlyDrawdown>=l.hardStopDrawdown||l.hardStopDrawdown>1)
     throw Error('Invalid risk limits');
+  this.recovery=options.researchV3InitialCash===undefined?null:
+   new ResearchDrawdownV3(options.researchV3InitialCash);
  }
+ /** Opt-in development research only; never called by Paper or Forward. */
+ observeResearchV3Day(observation:ResearchV3Observation){
+  if(!this.recovery)throw Error('H-025 v3 recovery not enabled');
+  const state=this.recovery.observe(observation,this.limits);
+  if(state.reset)this.latched=false;
+  if(state.status==='halted')this.latched=true;
+  return state;
+ }
+ get researchV3State(){return this.recovery?.state??null;}
+ get researchV3Resets(){return [...(this.recovery?.resets??[])];}
+ get researchV3PermanentStopAt(){return this.recovery?.permanentStopAt??null;}
  get halted(){return this.latched;}
  /** Restore an already persisted hard stop; never restore an unlocked state here. */
  restoreHaltFromStore(){this.latched=true;}
  /** Explicit human action; next risk evaluation still enforces all current checks. */
  resetByOwner(acknowledgement:string){
+  if(this.recovery)throw Error('H-025 v3 research recovery is automatic only; absolute emergency cannot reset');
   if(acknowledgement!=='I_ACKNOWLEDGE_MANUAL_RISK_RESET')throw Error('Manual risk reset requires explicit acknowledgement');
   this.latched=false;
  }
  evaluateBuy(pair:string,amount:number,s:RiskSnapshot):RiskVerdict {
   const reasons:string[]=[];
-  const dd=finite(s.peakEquity)&&s.peakEquity>0&&finite(s.equity)&&s.equity>=0?
+  const v3=this.recovery?.state;
+  const observed=!this.recovery||(v3!==null&&v3!==undefined&&v3.asOf===s.asOf&&v3.equity===s.equity);
+  const dd=this.recovery?(observed?v3!.drawdown:1):
+   finite(s.peakEquity)&&s.peakEquity>0&&finite(s.equity)&&s.equity>=0?
     Math.max(0,1-s.equity/Math.max(s.equity,s.peakEquity)):1;
   if(dd>=this.limits.hardStopDrawdown)this.latched=true;
-  const status=this.latched?'halted':dd>=this.limits.exitOnlyDrawdown?'exit-only':
+  const status=this.recovery&&observed?v3!.status:
+   this.latched?'halted':dd>=this.limits.exitOnlyDrawdown?'exit-only':
     dd>=this.limits.cautionDrawdown?'caution':'ok';
   const result=(approvedAmount:number,portfolioVol:number|null=null,portfolioBeta:number|null=null,clusterPct:number|null=null):RiskVerdict=>
    ({allowed:approvedAmount>0,approvedAmount,status,reasons,portfolioVol,portfolioBeta,clusterPct,drawdown:dd});
+  if(!observed){reasons.push('H-025 v3 closed-day observation missing or stale');return result(0);}
+  if(this.recovery&&this.recovery.permanentStopAt!==null){
+   reasons.push('H-025 v3 permanent 30% initial-capital emergency stop; no reset');return result(0);
+  }
   if(this.latched){reasons.push('Hard-stop drawdown latched; manual owner reset required');return result(0);}
   if(status==='exit-only'){reasons.push('Portfolio drawdown >= exit-only threshold');return result(0);}
   if(!Number.isSafeInteger(s.asOf)||s.asOf<0||!finite(s.equity)||s.equity<=0||
@@ -134,7 +159,10 @@ export class PortfolioRiskEngine {
   const candidate=byPair.get(pair)!;
   // Inverse volatility per-asset cap. Never multiply exposure by a positive estimate.
   cap=Math.min(cap,s.equity*this.limits.targetAnnualVol/candidate.vol);
-  if(status==='caution'){cap*=.5;reasons.push('Drawdown caution: new entry size halved');}
+  if(this.recovery){
+   cap*=v3!.entryScale;
+   if(v3!.entryScale<1)reasons.push('H-025 v3 linear drawdown entry cap');
+  }else if(status==='caution'){cap*=.5;reasons.push('Drawdown caution: new entry size halved');}
   const values=new Map(existing.map(p=>[p.pair,p.marketValue]));
   const riskStats=(additional:number)=>{
    const projected=[...values.entries()].map(([p,value])=>({pair:p,marketValue:value}));
