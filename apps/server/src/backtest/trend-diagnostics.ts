@@ -71,7 +71,7 @@ export function analyzeDiagnosticTrace(trace:DiagnosticTrace,initialEquity:numbe
  const stillLocked=after.length>0&&after.every(d=>d.riskStatus==='exit-only'||d.riskStatus==='halted');
  const noReentry=after.length>0&&after.every(d=>!d.executedBuy);
  let lockFinding:DiagnosticAnalysis['lockFinding']='offen';
- if(!after.length)lockFinding='widerlegt';
+ if(!after.length)lockFinding=days.length?'widerlegt':'offen';
  else if(exitOnlyRejections>0&&stillLocked&&noReentry&&cashLocked.length>0)lockFinding='bestätigt';
  else if(after.some(d=>d.executedBuy)||after.some(d=>d.riskStatus==='ok'||d.riskStatus==='caution'))
   lockFinding='widerlegt';
