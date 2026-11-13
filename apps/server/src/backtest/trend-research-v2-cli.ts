@@ -33,7 +33,7 @@ export async function main(){
   const directory=PROJECT_ROOT+'/data/trend-research-v2';mkdirSync(directory,{recursive:true});
   const archiveManifestHash=researchHash(db.prepare('SELECT path,sha256 FROM files ORDER BY path').all());
   if(process.argv.includes('--v4')){
-   if(registration.variantsTested!==17||registration.drawdownV4?.mode!=='run_v4'||
+   if(registration.variantsTested!==21||registration.drawdownV4?.mode!=='run_v4'||
     registration.drawdownV4?.variantsRegistered!==8||
     registration.drawdownV4?.historicalRunsCompleted!==0)
     throw Error('H-025 v4 eight fixed diagnostic runs must be registered before dispatch');
