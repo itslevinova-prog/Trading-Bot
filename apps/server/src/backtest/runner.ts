@@ -6,6 +6,7 @@ import {requireCoinQualityEntry} from '../coin-quality/admission.js';
 import {summarizeHistoricalTradability,type HistoricalTradabilityObservation,type HistoricalTradabilitySummary} from '../coin-quality/archive-contract.js';
 import type {CoinQualityProvider} from '../coin-quality/contracts.js';
 import {replayRiskSnapshot} from '../risk-engine/replay.js';
+import {checkV5DailyRisk,V5_DAILY_RISK} from './research-v5-daily-risk.js';
 import type {Action,DecisionContext,DecisionProvider} from '@paper/shared';
 import {RuleBasedProvider,BuyAndHoldProvider,TrendVolTargetV1Provider} from '../strategy/providers.js';
 import {buildClosedTrendV1Context,type TrendDailyEvidence} from './trend-daily-context.js';
@@ -48,6 +49,7 @@ export type BacktestOptions={
   missingLotSymbols?:readonly string[];
   /** Opt-in H-025 v3 development only. Caller supplies causally closed market-regime states. */
   researchDrawdownV3?:{regimeAt:(utcDayMs:number)=>Regime|Promise<Regime>};
+  researchV5?:true;
 };
 export type BacktestResult={
   configuration:{strategy:Strategy;fromMs:number;toMs:number;intervalMinutes:IntervalMinutes;fillModel:FillModelName;feeRate:number;spreadBps:number;slippageBps:number;trials:number;seed:number;executionDelayBars:number;dropSignalPct:number};
@@ -62,6 +64,9 @@ export type BacktestResult={
   researchV3?:{resetEvents:ResearchV3Reset[];permanentStopAt:number|null;
    statusDays:Record<'ok'|'caution'|'exit-only'|'halted',number>;
    parameters:typeof H025_V3_DRAWDOWN};
+  researchV5?:{pausedAt:number|null;dailyRiskChecks:number;dailyShockBlocked:number;
+   missingDailyBlocked:number;averageBtcAnnualVol:number|null;averageAssetAnnualVol:number|null;
+   parameters:typeof V5_DAILY_RISK};
 };
 export class ResearchCoverageBlocked extends Error {
   constructor(readonly coverage: CoveragePreflight) {
@@ -77,13 +82,17 @@ function nextRandom(seed:number):()=>number {
 }
 export async function runBacktest(options:BacktestOptions):Promise<BacktestResult> {
   const {source,fromMs,toMs,intervalMinutes}=options,step=candleStep(intervalMinutes);
-  const trendMode=options.strategy==='trend-vol-target';
+  const trendMode=options.strategy==='trend-vol-target',v5=options.researchV5===true;
   // This integration is development-only. Real Stage-2/holdout access remains gated
   // by the pipeline, and an unverified PIT market cannot be called tradable.
   if(trendMode&&(intervalMinutes!==1440||fromMs<Date.UTC(2020,0,1)||
     toMs>Date.UTC(2024,0,1)||!options.universeAt||!options.coinQuality||
-    !options.constraints?.size||options.enablePortfolioRisk!==true))
+    !options.constraints?.size||(!v5&&options.enablePortfolioRisk!==true)))
     throw Error('Trend v1 requires sealed daily development, PIT universe/quality, historic lots and portfolio-risk gate');
+  if(v5&&(!trendMode||options.enablePortfolioRisk||options.researchDrawdownV3||
+   !options.collectResearchDiagnostics||fromMs!==Date.UTC(2020,0,1)||
+   toMs!==Date.UTC(2024,0,1)||intervalMinutes!==1440))
+   throw Error('H-025 v5 requires sealed daily 2020–2023 research without legacy portfolio risk');
   if(options.researchDrawdownV3&&(!trendMode||!options.enablePortfolioRisk||
     !options.collectResearchDiagnostics||fromMs!==Date.UTC(2020,0,1)||toMs!==Date.UTC(2024,0,1)))
    throw Error('H-025 v3 is sealed to the full 2020–2023 daily diagnostic research replay');
@@ -117,7 +126,8 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
   if(!symbols.length)throw Error('No candle symbols in the requested historic universe');
   const config={strategy:options.strategy,fromMs,toMs,intervalMinutes,fillModel:options.fillModel??'conservative-ohlc',feeRate,spreadBps,slippageBps,trials,seed,executionDelayBars,dropSignalPct};
   const limits={...defaultRisk,...options.riskLimits,feeRate};
-  const warmup=Math.max((options.enablePortfolioRisk||options.riskHistoryWarmup)?62*86400000:10*86400000,100*candleStep(60)),start=Math.max(0,fromMs-warmup);
+  const warmup=Math.max((options.enablePortfolioRisk||options.riskHistoryWarmup)?62*86400000:10*86400000,100*candleStep(60)),
+    start=v5?Date.UTC(2019,0,1):Math.max(0,fromMs-warmup);
   const all=new Map<string,{primary:Candle[];m15:Candle[];h1:Candle[];trendDaily?:Candle[]}>();
   for(const symbol of symbols){
     const get=async(min:IntervalMinutes)=>{
@@ -129,7 +139,7 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
     const h1=trendMode?[]:intervalMinutes===60?primary:await get(60);
     if(options.universeAt&&!trendMode&&(!m15.length||!h1.length))
      throw Error('Point-in-time backtest requires actual archived 15m and 1h candles: '+symbol);
-    const trendFrom=Math.max(0,fromMs-260*DAY);
+    const trendFrom=v5?Date.UTC(2019,0,1):Math.max(0,fromMs-260*DAY);
     const trendDaily=trendMode?await source.getCandles(symbol,1440,trendFrom,toMs):undefined;
     if(trendDaily)validateCandles(trendDaily,1440,trendFrom,toMs);
     all.set(symbol,{primary,m15,h1,trendDaily});
@@ -153,7 +163,8 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
   const constraints=options.constraints??new Map(symbols.map(symbol=>[symbol,{symbol,ordermin:0,costmin:0,lotDecimals:8}]));
   const model=makeFillModel(config.fillModel,{spreadBps,slippageBps});
   if(model.name==='maker-queue')throw Error('maker-queue not implemented (issue #2)');
-  const broker=new SimulatedBroker(options.initialCash??100,constraints,model,limits,executionDelayBars);
+  const broker=new SimulatedBroker(options.initialCash??100,constraints,model,limits,
+    executionDelayBars,undefined,'quote',undefined,v5);
   const portfolioRisk=options.enablePortfolioRisk?
    new PortfolioRiskEngine({...DEFAULT_RISK_LIMITS,...options.portfolioRiskLimits},
     options.researchDrawdownV3?{researchV3InitialCash:options.initialCash??100} :{}):null;
@@ -161,6 +172,8 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
     options.strategy==='rules'?new RuleBasedProvider():new BuyAndHoldProvider());
   const random=nextRandom(seed),decisions:RecordedDecision[]=[],equity:EquityPoint[]=[{ts:fromMs,equity:broker.equity,exposed:false}];
   let holdQueued=false,lastTrendRebalanceAt:number|null=null;
+  let v5RiskChecks=0,v5ShockBlocked=0,v5MissingDailyBlocked=0,v5VolCount=0,
+   v5BtcVolSum=0,v5AssetVolSum=0;
   const diagnostics:DiagnosticTrace|undefined=options.collectResearchDiagnostics?
    {days:[],reasons:emptyDiagnosticReasons()}:undefined;
   const missingLotSymbols=new Set(options.missingLotSymbols??[]);
