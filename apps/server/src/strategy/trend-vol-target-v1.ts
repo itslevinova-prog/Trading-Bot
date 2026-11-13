@@ -23,6 +23,8 @@ export type TrendV1Input={
  lastRebalanceAt?:number|null;
  /** Four registered knobs; do not select using validation or holdout. */
  targetAnnualVol?:number;topK?:number;rebalanceTolerance?:number;atrMultiple?:number;
+ /** Optional stricter entry sizing for a pre-registered paper risk profile. */
+ maxPositionPct?:number;maxInvestedPct?:number;
 };
 export type TrendRank={pair:string;strength:number;annualVol:number;score:number;weight:number};
 export type TrendPlan={status:'ready'|'blocked';reason:string;actions:Action[];ranked:TrendRank[]};
@@ -89,12 +91,16 @@ export function planTrendVolTargetV1(input:TrendV1Input):TrendPlan {
   targetAnnualVol:input.targetAnnualVol??.20,
   topK:input.topK??3,
   rebalanceTolerance:input.rebalanceTolerance??.20,
-  atrMultiple:input.atrMultiple??3
+  atrMultiple:input.atrMultiple??3,
+  maxPositionPct:input.maxPositionPct??MAX_POSITION_WEIGHT,
+  maxInvestedPct:input.maxInvestedPct??1
  };
  if(!positive(cfg.targetAnnualVol)||cfg.targetAnnualVol>1||
   !Number.isSafeInteger(cfg.topK)||cfg.topK<1||cfg.topK>10||
   !valid(cfg.rebalanceTolerance)||cfg.rebalanceTolerance<.10||cfg.rebalanceTolerance>1||
-  !valid(cfg.atrMultiple)||cfg.atrMultiple<1||cfg.atrMultiple>8)
+  !valid(cfg.atrMultiple)||cfg.atrMultiple<1||cfg.atrMultiple>8||
+  !positive(cfg.maxPositionPct)||cfg.maxPositionPct>MAX_POSITION_WEIGHT||
+  !positive(cfg.maxInvestedPct)||cfg.maxInvestedPct>1)
   return empty('Ungültige, nicht vorregistrierte Strategieparameter');
  const currentDay=Math.floor(input.asOf/DAY)*DAY;
  if(input.lastRebalanceAt!==undefined&&input.lastRebalanceAt!==null&&
@@ -131,9 +137,10 @@ export function planTrendVolTargetV1(input:TrendV1Input):TrendPlan {
   x.strength>0&&x.score>0)
   .sort((a,b)=>b.score-a.score||a.m.pair.localeCompare(b.m.pair)).slice(0,cfg.topK);
  const weights=new Map(ranks.map(x=>[x.m.pair,riskOn?
-  Math.min(MAX_POSITION_WEIGHT,x.strength*cfg.targetAnnualVol/x.vol):0]));
+  Math.min(MAX_POSITION_WEIGHT,cfg.maxPositionPct,x.strength*cfg.targetAnnualVol/x.vol):0]));
  const total=[...weights.values()].reduce((n,x)=>n+x,0);
- if(total>1)for(const [pair,w] of weights)weights.set(pair,w/total);
+ if(total>cfg.maxInvestedPct)
+  for(const [pair,w] of weights)weights.set(pair,w*cfg.maxInvestedPct/total);
  const actions:Action[]=[];
  for(const holding of input.positions){
   if(holding.qty===0)continue;
