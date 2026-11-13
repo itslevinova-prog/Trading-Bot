@@ -123,29 +123,41 @@ test('independent ledger rejects a deliberately broken lot rounding adapter',()=
   .toThrow('Ledger cash/position reconciliation failed');
 });
 
-test('H-025 v4 regression: same-candle partial signal sale and stop are distinct ledger fills',()=>{
- const symbol='COMPUSDT',sellAt=T0+900_000;
+test('H-025 v4 regression: 2023-08-16 COMPUSDT signal trim and protective stop share the fill clock',()=>{
+ const symbol='COMPUSDT',sellAt=Date.UTC(2023,7,16),buyAt=sellAt-86_400_000;
  const broker=new SimulatedBroker(1000,new Map([[symbol,{
   symbol,ordermin:.01,costmin:10,lotDecimals:2
  }]]),new ConservativeOhlcModel({spreadBps:0,slippageBps:0}),
  {...defaultRisk,feeRate});
+ // H-025 uses the 'rules' broker strategy, unlike 'hold' which has no stop.
  expect(broker.queue({type:'buy',pair:symbol,amountEur:150,stopLossPct:.05,
-  confidence:1,reasoning:'offline regression fixture'},T0,'hold')).toBe(true);
- broker.onCandle(symbol,{ts:T0,open:100,high:100,low:100,close:100,volume:1000},15);
- expect(broker.positions.has(symbol)).toBe(true);
- expect(broker.queue({type:'sell',pair:symbol,sellFraction:.5,
-  confidence:1,reasoning:'partial rebalance'},sellAt,'hold')).toBe(true);
- // The signal sells at the open, then the stop closes the remaining position
- // inside the same bar. Their original four-part ledger IDs were identical.
- broker.onCandle(symbol,{ts:sellAt,open:100,high:110,low:90,close:95,volume:1000},15);
+  confidence:1,reasoning:'offline H-025 fixture'},buyAt,'rules')).toBe(true);
+ broker.onCandle(symbol,{ts:buyAt,open:100,high:100,low:100,close:100,volume:1000},1440);
+ expect(broker.positions.get(symbol)?.stop).toBeCloseTo(95);
+ const signal={type:'sell',pair:symbol,sellFraction:.5,confidence:1,
+  reasoning:'daily planner trims overweight position'} as const;
+ expect(broker.queue(signal,sellAt,'rules')).toBe(true);
+ // No two pending sells for one pair are admitted, even if a provider repeats one.
+ expect(broker.queue(signal,sellAt,'rules')).toBe(false);
+ expect(broker.orders).toHaveLength(1);
+ // Opening signal sells part of inventory, then the same daily candle crosses
+ // the still-active protective stop for the remainder.
+ broker.onCandle(symbol,{ts:sellAt,open:100,high:110,low:90,close:95,volume:1000},1440);
  expect(broker.trades.map(t=>t.reason)).toEqual(['signal','signal','stop']);
- expect(broker.trades.slice(1).map(t=>[t.ts,t.decisionTs,t.symbol,t.side])).toEqual([
+ const sales=broker.trades.slice(1);
+ expect(sales.map(t=>[t.ts,t.decisionTs,t.symbol,t.side])).toEqual([
   [sellAt,sellAt,symbol,'sell'],[sellAt,sellAt,symbol,'sell']
  ]);
+ expect(sales[0]!.qty).toBeGreaterThan(0);
+ expect(sales[1]!.qty).toBeGreaterThan(0);
  expect(broker.positions.size).toBe(0);
  expect(()=>assertLedgerInvariant(broker,feeRate)).not.toThrow();
- // The more precise identity must still reject a truly repeated execution.
- const repeated={startingCash:broker.startingCash,cash:broker.cash,positions:broker.positions,
-  trades:[...broker.trades,{...broker.trades[1]!}]};
- expect(()=>assertLedgerInvariant(repeated,feeRate)).toThrow('Ledger duplicate fill');
+ // Preserve strict duplicate checks for same-clock signal executions, even
+ // if a broken provider changes the size or price of the repeated sale.
+ const duplicateSignal={...sales[0]!,qty:sales[0]!.qty/2};
+ const duplicate={startingCash:broker.startingCash,cash:broker.cash,positions:broker.positions,
+  trades:[...broker.trades,duplicateSignal]};
+ expect(()=>assertLedgerInvariant(duplicate,feeRate)).toThrow('Ledger duplicate fill');
+ expect(()=>assertLedgerInvariant({...duplicate,trades:[...broker.trades,{...sales[1]!}]},feeRate))
+  .toThrow('Ledger duplicate fill');
 });
