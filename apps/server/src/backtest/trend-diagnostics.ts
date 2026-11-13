@@ -47,8 +47,11 @@ export function analyzeDiagnosticTrace(trace:DiagnosticTrace,initialEquity:numbe
   throw Error('Diagnostic days must be unique sealed development valuations');
  const counts:DiagnosticAnalysis['statusDays']={'ok':0,caution:0,'exit-only':0,halted:0};
  for(const d of days)counts[d.riskStatus]++;
- const firstExitOnly=days.find(d=>d.riskStatus==='exit-only')?.day??null;
- const firstHalted=days.find(d=>d.riskStatus==='halted')?.day??null;
+ const decisionDate=(d:DiagnosticDay)=>new Date(d.asOf).toISOString().slice(0,10);
+ const firstExitOnlyDay=days.find(d=>d.riskStatus==='exit-only');
+ const firstHaltedDay=days.find(d=>d.riskStatus==='halted');
+ const firstExitOnly=firstExitOnlyDay?decisionDate(firstExitOnlyDay):null;
+ const firstHalted=firstHaltedDay?decisionDate(firstHaltedDay):null;
  let prior=initialEquity,globalPeak=initialEquity;
  const years:DiagnosticYear[]=[];
  for(const year of [2020,2021,2022,2023]){
@@ -66,26 +69,28 @@ export function analyzeDiagnosticTrace(trace:DiagnosticTrace,initialEquity:numbe
  const exitOnlyRejections=Object.entries(trace.reasons.portfolioRisk).reduce((n,[reason,count])=>
   n+(reason.includes('Portfolio drawdown >= exit-only threshold')?count:0),0);
  const firstLockIndex=days.findIndex(d=>d.riskStatus==='exit-only'||d.riskStatus==='halted');
- const after=firstLockIndex<0?[]:days.slice(firstLockIndex);
- const cashLocked=after.filter(d=>d.allCash&&['exit-only','halted'].includes(d.riskStatus));
- const stillLocked=after.length>0&&after.every(d=>d.riskStatus==='exit-only'||d.riskStatus==='halted');
- const noReentry=after.length>0&&after.every(d=>!d.executedBuy);
+ const blockedPeriod=firstLockIndex<0?[]:days.slice(firstLockIndex);
+ // An opening fill in the bar that FIRST breaches the threshold predates its closing risk observation.
+ const subsequentDays=firstLockIndex<0?[]:days.slice(firstLockIndex+1);
+ const cashLocked=blockedPeriod.filter(d=>d.allCash&&['exit-only','halted'].includes(d.riskStatus));
+ const stillLocked=blockedPeriod.length>0&&blockedPeriod.every(d=>d.riskStatus==='exit-only'||d.riskStatus==='halted');
+ const noReentry=subsequentDays.length>0&&subsequentDays.every(d=>!d.executedBuy);
  let lockFinding:DiagnosticAnalysis['lockFinding']='offen';
- if(!after.length)lockFinding=days.length?'widerlegt':'offen';
+ if(!blockedPeriod.length)lockFinding=days.length?'widerlegt':'offen';
  else if(exitOnlyRejections>0&&stillLocked&&noReentry&&cashLocked.length>0)lockFinding='bestätigt';
- else if(after.some(d=>d.executedBuy)||after.some(d=>d.riskStatus==='ok'||d.riskStatus==='caution'))
+ else if(subsequentDays.some(d=>d.executedBuy)||subsequentDays.some(d=>d.riskStatus==='ok'||d.riskStatus==='caution'))
   lockFinding='widerlegt';
  const lockEvidence=lockFinding==='bestätigt'?
   'Exit-only hat Kaufversuche nachweislich abgewiesen, anschliessend blieb die Risikoschwelle durchgehend aktiv und es gab keinen erneuten Kauf.' :
   lockFinding==='widerlegt'?
-   (after.length?'Nach Erreichen der Schwelle gab es einen erneuten Kauf oder eine Rückkehr unter die Sperrschwelle.':'Die Sperrschwelle wurde im beobachteten Zeitraum nicht erreicht.') :
+   (blockedPeriod.length?'Nach Erreichen der Schwelle gab es einen erneuten Kauf oder eine Rückkehr unter die Sperrschwelle.':'Die Sperrschwelle wurde im beobachteten Zeitraum nicht erreicht.') :
    'Eine Schwellenüberschreitung allein beweist keine verhinderte Wiederanlage; dazu fehlen durchgehende Sperre und belegte Ablehnungen.';
  return {statusDays:counts,firstExitOnly,firstHalted,engineLatchDays:days.filter(d=>d.riskLatched).length,
   plannerBuyDays:days.filter(d=>d.plannerBuySignal).length,
   executedBuyDays:days.filter(d=>d.executedBuy).length,
   allCashDays:days.filter(d=>d.allCash).length,
   averageInvestedPct:days.length?days.reduce((n,d)=>n+d.investedPct,0)/days.length:0,
-  years,exitOnlyRejections,cashLockedDays:cashLocked.length,firstCashLockedDay:cashLocked[0]?.day??null,
+  years,exitOnlyRejections,cashLockedDays:cashLocked.length,firstCashLockedDay:cashLocked[0]?decisionDate(cashLocked[0]):null,
   lockFinding,lockEvidence};
 }
 export function diagnosticsMarkdown(trace:DiagnosticTrace,initialEquity:number):string[]{
@@ -103,7 +108,7 @@ export function diagnosticsMarkdown(trace:DiagnosticTrace,initialEquity:number):
    ...(entries.length?[]:['| Keine erfassten Ablehnungen | 0 |']),'');
  }
  lines.push('### RiskEngine-Status und Kaufaktivität','',
-  'Status = passiv aus Tages-Drawdown und beobachteter Hard-Stop-Latch abgeleitete Risikoschwelle. Die Engine wird tatsächlich nur bei Kaufanfragen ausgewertet; das ist kein fiktiver Engine-Aufruf.','',
+  'Status = passiv aus Tages-Drawdown und beobachteter Hard-Stop-Latch abgeleitete Risikoschwelle. Die Engine wird tatsächlich nur bei Kaufanfragen ausgewertet; das ist kein fiktiver Engine-Aufruf. Erste Übergänge sind mit dem anschliessenden UTC-Entscheidungszeitpunkt datiert, die Jahreswerte nach dem abgeschlossenen Kerzentag.','',
   '| Status | Tage | Anteil |','|---|---:|---:|',
   ...(['ok','caution','exit-only','halted'] as const).map(s=>`| ${s} | ${result.statusDays[s]} | ${ratio(result.statusDays[s])} |`),'',
   `Erster Tag exit-only: ${result.firstExitOnly??'nie'}; erster Tag halted (Schwelle oder Latch): ${result.firstHalted??'nie'}; Tage mit tatsächlich gesetzter Hard-Stop-Latch: ${result.engineLatchDays}.`,'',
