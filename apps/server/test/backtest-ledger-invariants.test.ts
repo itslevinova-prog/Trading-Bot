@@ -122,3 +122,30 @@ test('independent ledger rejects a deliberately broken lot rounding adapter',()=
  expect(()=>assertLedgerInvariant(brokenCash,feeRate))
   .toThrow('Ledger cash/position reconciliation failed');
 });
+
+test('H-025 v4 regression: same-candle partial signal sale and stop are distinct ledger fills',()=>{
+ const symbol='COMPUSDT',sellAt=T0+900_000;
+ const broker=new SimulatedBroker(1000,new Map([[symbol,{
+  symbol,ordermin:.01,costmin:10,lotDecimals:2
+ }]]),new ConservativeOhlcModel({spreadBps:0,slippageBps:0}),
+ {...defaultRisk,feeRate});
+ expect(broker.queue({type:'buy',pair:symbol,amountEur:150,stopLossPct:.05,
+  confidence:1,reasoning:'offline regression fixture'},T0,'hold')).toBe(true);
+ broker.onCandle(symbol,{ts:T0,open:100,high:100,low:100,close:100,volume:1000},15);
+ expect(broker.positions.has(symbol)).toBe(true);
+ expect(broker.queue({type:'sell',pair:symbol,sellFraction:.5,
+  confidence:1,reasoning:'partial rebalance'},sellAt,'hold')).toBe(true);
+ // The signal sells at the open, then the stop closes the remaining position
+ // inside the same bar. Their original four-part ledger IDs were identical.
+ broker.onCandle(symbol,{ts:sellAt,open:100,high:110,low:90,close:95,volume:1000},15);
+ expect(broker.trades.map(t=>t.reason)).toEqual(['signal','signal','stop']);
+ expect(broker.trades.slice(1).map(t=>[t.ts,t.decisionTs,t.symbol,t.side])).toEqual([
+  [sellAt,sellAt,symbol,'sell'],[sellAt,sellAt,symbol,'sell']
+ ]);
+ expect(broker.positions.size).toBe(0);
+ expect(()=>assertLedgerInvariant(broker,feeRate)).not.toThrow();
+ // The more precise identity must still reject a truly repeated execution.
+ const repeated={startingCash:broker.startingCash,cash:broker.cash,positions:broker.positions,
+  trades:[...broker.trades,{...broker.trades[1]!}]};
+ expect(()=>assertLedgerInvariant(repeated,feeRate)).toThrow('Ledger duplicate fill');
+});
