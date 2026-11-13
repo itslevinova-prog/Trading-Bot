@@ -3,7 +3,7 @@ import type {SimulatedBroker,SimulatedTrade} from './simulated-broker.js';
 const near=(a:number,b:number)=>Number.isFinite(a)&&Number.isFinite(b)&&
  Math.abs(a-b)<=1e-7*Math.max(1,Math.abs(a),Math.abs(b));
 /** Independently reconstruct cash, inventory and fees from executions. */
-export function assertLedgerInvariant(broker:Pick<SimulatedBroker,'trades'|'positions'|'cash'|'startingCash'>,feeRate:number):void {
+export function assertLedgerInvariant(broker:Pick<SimulatedBroker,'trades'|'positions'|'cash'|'startingCash'>,feeRate:number,options:{researchV5Adds?:true}={}):void {
  if(!Number.isFinite(feeRate)||feeRate<0)throw Error('Invalid fee rate for ledger audit');
  let cash=broker.startingCash;
  const inventory=new Map<string,{qty:number;basis:number}>();
@@ -26,8 +26,9 @@ export function assertLedgerInvariant(broker:Pick<SimulatedBroker,'trades'|'posi
    throw Error('Ledger cost invariant failed (notional, fee or execution costs)');
   const old=inventory.get(trade.symbol);
   if(trade.side==='buy'){
-   if(old)throw Error('Ledger duplicate buy before exit');
-   inventory.set(trade.symbol,{qty:trade.qty,basis:trade.notional+trade.fee});
+   if(old&&!options.researchV5Adds)throw Error('Ledger duplicate buy before exit');
+   inventory.set(trade.symbol,{qty:(old?.qty??0)+trade.qty,
+    basis:(old?.basis??0)+trade.notional+trade.fee});
    cash-=trade.notional+trade.fee;
   }else{
    if(!old||trade.qty>old.qty+1e-7)throw Error('Ledger sale exceeds inventory');
