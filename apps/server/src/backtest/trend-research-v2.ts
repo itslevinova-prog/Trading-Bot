@@ -153,7 +153,7 @@ export async function runTrendResearchV2(options:V2RunOptions){
   hypothesis:'H-025',strategy:CONFIG.strategy,pipelineEligible:false,paperApproved:false,
   profile,
   ...(v4?{diagnosticVariant:v4}:{}),
-  ...(v51?{researchVariant:'v5.1' as const}:v5?{researchVariant:'v5' as const}:{}),
+  ...(v5?{researchVariant:v51?'v5.1' as const:'v5' as const}:{}),
   assumptions,lotSnapshot:snapshot,lotSnapshotHash:researchHash(snapshot),benchmarks,
   importedCoins:imported.length,universeCoins:result.universe.length,tradedCoins:new Set(result.trades.map(t=>t.symbol)).size,
   missingRules,coveredRuleCoins:imported.length-missingRules.length,
