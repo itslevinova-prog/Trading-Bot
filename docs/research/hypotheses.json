@@ -418,7 +418,7 @@
     "successThreshold": "Robustere risikoadjustierte Kennzahlen als BTC Buy & Hold, Top-10 Equal Weight, 60/40 BTC/Cash und bestehende Regeln unter vollständiger Kostenrechnung; Parameterumgebung stabil.",
     "killCriterion": "Kein überprüfbarer Nettovorteil nach Kosten oder starke Parameterempfindlichkeit; historische Datenlücken oder aktuelle Qualitätslabels statt Point-in-Time-Daten.",
     "status": "open",
-    "variantsTested": 9,
+    "variantsTested": 17,
     "result": "Ein Forschungslauf mit Annahmen wurde technisch erfolgreich ausgeführt, jedoch nur auf BTC/ETH: GitHub ersetzte leere Symbols durch den alten Standard. Kein vollständiger USDT-Test, keine Pipeline-/Paper-Freigabe. Universum wird vor Wiederholung korrigiert; unveränderte Strategie und Annahmen.",
     "evidence": [
       "docs/TREND-VOL-TARGET-V1.md",
@@ -549,6 +549,63 @@
         "docs/H-025-V3.md",
         "apps/server/src/risk-engine/research-drawdown-v3.ts",
         "apps/server/test/h025-v3.test.ts"
+      ]
+    },
+    "drawdownV4": {
+      "version": "H-025-v4-diagnostic-no-drawdown-v4a-v4b",
+      "mode": "run_v4",
+      "registeredAt": "2026-11-13",
+      "variantsRegistered": 8,
+      "historicalRunsCompleted": 0,
+      "historicalRunStatus": "not-executed",
+      "variants": [
+        {
+          "id": "v4a",
+          "universe": "same full 2020–2023 PIT USDT universe as v2",
+          "risk": "all normal RiskEngine gates except fixed drawdown override"
+        },
+        {
+          "id": "v4b",
+          "universe": "BTCUSDT and ETHUSDT only where each belonged to historical PIT universe",
+          "risk": "same as v4a"
+        }
+      ],
+      "profiles": [
+        "baseline",
+        "vorsichtig",
+        "normal",
+        "aggressiv"
+      ],
+      "drawdownThresholds": {
+        "cautionDrawdown": 0.97,
+        "exitOnlyDrawdown": 0.98,
+        "hardStopDrawdown": 0.99
+      },
+      "profileLimits": "resolvePaperRiskProfile(name), all effective caps unchanged except research-only drawdown override",
+      "strategy": "Unchanged H-025 v2 trend-vol-target and current exchangeInfo-lot assumptions",
+      "noPaperOrForward": true,
+      "disableV3Reset": true,
+      "fixedDevelopment": {
+        "from": "2020-01-01",
+        "exclusiveEndUtc": "2024-01-01T00:00:00Z",
+        "reads2024Candles": false,
+        "readHoldout": false
+      },
+      "references": [
+        "BTC Buy & Hold from v2",
+        "DCA 70/30 BTC/ETH from v2",
+        "SMA200 from unchanged Issue #18 spike"
+      ],
+      "diagnostics": [
+        "days with positions and average invested capital",
+        "risk status days",
+        "broker/portfolio/quality/lots/planner reasons"
+      ],
+      "scope": "EIGHT preregistered diagnostics only; none historically executed when registered; no parameter tuning, no paper eligibility",
+      "evidence": [
+        "docs/H-025-V4.md",
+        "apps/server/src/backtest/trend-research-v4.ts",
+        "apps/server/test/h025-v4.test.ts"
       ]
     }
   },

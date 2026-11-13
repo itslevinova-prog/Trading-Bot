@@ -12,10 +12,13 @@ import {CONFIG} from '../forward/engine-v2.js';
 import {TREND_RESEARCH_ASSUMPTIONS,researchHash} from './trend-research.js';
 import {runTrendResearchV2,v2Markdown,v2ProfilesMarkdown,developmentSource} from './trend-research-v2.js';
 import {runTrendResearchV3,v3Markdown} from './trend-research-v3.js';
+import {runTrendResearchV4,v4Markdown,V4_ORDER,V4_PROFILES,type V4SpikeComparison} from './trend-research-v4.js';
 import {ArchiveRegimeProvider} from '../regime/providers.js';
 
 export async function main(){
  const registration=JSON.parse(readFileSync(PROJECT_ROOT+'/docs/research/hypotheses.json','utf8')).find((x:{id:string})=>x.id==='H-025');
+ if(['--v3','--v4','--profiles'].filter(flag=>process.argv.includes(flag)).length>1)
+  throw Error('H-025 research modes are mutually exclusive');
  if(researchHash(registration.researchAssumptions)!==researchHash(TREND_RESEARCH_ASSUMPTIONS)||
   !registration.forwardVariants?.some((x:{version:string})=>x.version===CONFIG.strategy))throw Error('H-025 v1/v2 registration mismatch');
  const db=new Database(ARCHIVE_DB,{readonly:true,fileMustExist:true});
@@ -29,7 +32,27 @@ export async function main(){
    universeAt:(day:number)=>universe.universeAt(day,{quote:'USDT',topN:count}).map(x=>x.symbol)};
   const directory=PROJECT_ROOT+'/data/trend-research-v2';mkdirSync(directory,{recursive:true});
   const archiveManifestHash=researchHash(db.prepare('SELECT path,sha256 FROM files ORDER BY path').all());
-  if(process.argv.includes('--v3')){
+  if(process.argv.includes('--v4')){
+   if(registration.variantsTested!==17||registration.drawdownV4?.mode!=='run_v4'||
+    registration.drawdownV4?.variantsRegistered!==8||
+    registration.drawdownV4?.historicalRunsCompleted!==0)
+    throw Error('H-025 v4 eight fixed diagnostic runs must be registered before dispatch');
+   const spike=JSON.parse(readFileSync(PROJECT_ROOT+
+    '/docs/spikes/trend-1d-2020-2023.json','utf8')) as V4SpikeComparison;
+   // Same single archive import and one current exchangeInfo snapshot for all eight runs.
+   const reports=[];
+   for(const variant of V4_ORDER)for(const profileName of V4_PROFILES)
+    reports.push(await runTrendResearchV4({...options,variant,
+     ...(profileName?{profileName}:{})}));
+   const artifact={hypothesis:'H-025',version:'v4',diagnosticOnly:true,
+    development:{from:'2020-01',to:'2023-12'},reports,spikeReference:spike,
+    exchangeInfo:exchange,archiveManifestHash};
+   const v4Directory=PROJECT_ROOT+'/data/trend-research-v4';
+   mkdirSync(v4Directory,{recursive:true});
+   writeFileSync(v4Directory+'/report.json',JSON.stringify(artifact,null,2)+'\n');
+   const md=v4Markdown(reports,spike);
+   writeFileSync(v4Directory+'/summary.md',md+'\n');console.log(md);
+  }else if(process.argv.includes('--v3')){
    if(registration.variantsTested<9||registration.drawdownV3?.mode!=='run_v3')
     throw Error('H-025 v3 must be pre-registered with four fixed candidates');
    // The archive, exchangeInfo snapshot and point-in-time universe are shared by all four runs.
