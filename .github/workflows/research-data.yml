@@ -58,6 +58,11 @@ on:
         type: boolean
         default: false
 
+      run_v5_cash_yield:
+        description: H-025 v5 – feste 0/3/6-Prozent-Cash-Zins-Sensitivitaet (nur Forschung)
+        type: boolean
+        default: false
+
 permissions:
   contents: read
   issues: write
@@ -109,14 +114,15 @@ jobs:
           RUN_V4: ${{ inputs.run_v4 }}
           RUN_V5: ${{ inputs.run_v5 }}
           RUN_V51: ${{ inputs.run_v51 }}
+          RUN_V5_CASH_YIELD: ${{ inputs.run_v5_cash_yield }}
           IMPORT_SYMBOLS: ${{ inputs.symbols }}
         run: |
           pnpm --filter @paper/shared build
           if [[ "$RUN_TREND_V2" == 'true' || "$RUN_PROFILES" == 'true' || "$RUN_V3" == 'true' || "$RUN_V4" == 'true' ]]; then
             pnpm --filter @paper/server exec tsx -e "import {validateV2Inputs} from './src/backtest/trend-research-v2.ts'; validateV2Inputs(process.env.IMPORT_FROM!,process.env.IMPORT_TO!,process.env.IMPORT_INTERVALS!,process.env.IMPORT_SYMBOLS!);"
           fi
-          if [[ "$RUN_V5" == 'true' || "$RUN_V51" == 'true' ]]; then
-            if [[ "$RUN_V5" == 'true' && "$RUN_V51" == 'true' || "$RUN_TREND" == 'true' || "$RUN_TREND_V2" == 'true' || "$RUN_PROFILES" == 'true' || "$RUN_V3" == 'true' || "$RUN_V4" == 'true' ]]; then
+          if [[ "$RUN_V5" == 'true' || "$RUN_V51" == 'true' || "$RUN_V5_CASH_YIELD" == 'true' ]]; then
+            if [[ "$RUN_V5" == 'true' && "$RUN_V51" == 'true' || "$RUN_V5_CASH_YIELD" == 'true' && ( "$RUN_V5" == 'true' || "$RUN_V51" == 'true' ) || "$RUN_TREND" == 'true' || "$RUN_TREND_V2" == 'true' || "$RUN_PROFILES" == 'true' || "$RUN_V3" == 'true' || "$RUN_V4" == 'true' ]]; then
               echo "H-025 v5/v5.1 must run independently of all other research modes"
               exit 1
             fi
@@ -146,7 +152,7 @@ jobs:
       - name: Datenbericht
         run: pnpm data:report | tee data-report.txt
       - name: Schnelltest #33 (SMA200-Vergleich fuer v4/v5 verpflichtend)
-        if: ${{ inputs.run_v51 || inputs.run_v5 || inputs.run_v4 || (inputs.run_spike && !inputs.run_v3) }}
+        if: ${{ inputs.run_v5_cash_yield || inputs.run_v51 || inputs.run_v5 || inputs.run_v4 || (inputs.run_spike && !inputs.run_v3) }}
         run: pnpm trend:spike | tee spike.txt
       - name: H-025 v4 – acht Diagnosen ohne Drawdown-Bremse
         if: ${{ inputs.run_v4 }}
@@ -157,6 +163,9 @@ jobs:
       - name: H-025 v5.1 – vier Wiedereinstiegsprofile und unveränderte v5-Referenzen
         if: ${{ inputs.run_v51 }}
         run: pnpm --filter @paper/server exec tsx src/backtest/trend-research-v51-cli.ts | tee trend-v51.txt
+      - name: H-025 v5 – Cash-Zins-Sensitivität 0/3/6 Prozent
+        if: ${{ inputs.run_v5_cash_yield }}
+        run: pnpm --filter @paper/server exec tsx src/backtest/trend-research-v5-cli.ts --cash-yield-sensitivity | tee trend-v5-cash-yield.txt
       - name: Ergebnisse als Artefakt sichern
         if: always()
         uses: actions/upload-artifact@v4
@@ -172,6 +181,8 @@ jobs:
             trend-v4.txt
             trend-v5.txt
             trend-v51.txt
+            trend-v5-cash-yield.txt
+            data/trend-research-v5-cash-yield/
             data/trend-research-v51/
             data/trend-research-v5/
             data/trend-research-v4/
@@ -183,7 +194,7 @@ jobs:
             docs/DATA-ARCHIVE.md
           if-no-files-found: ignore
       - name: Ergebnis in Issue #18 kommentieren (alt #33)
-        if: ${{ inputs.run_spike && !inputs.run_v3 && !inputs.run_v4 && !inputs.run_v5 && !inputs.run_v51 && success() }}
+        if: ${{ inputs.run_spike && !inputs.run_v3 && !inputs.run_v4 && !inputs.run_v5 && !inputs.run_v51 && !inputs.run_v5_cash_yield && success() }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -269,3 +280,14 @@ jobs:
           node --input-type=module -e 'import {readFileSync,writeFileSync} from "node:fs"; writeFileSync("v51-comment-event.json",JSON.stringify({comment:{body:readFileSync("v51-comment.md","utf8")}}));'
           PG_MODE=text GITHUB_EVENT_NAME=issue_comment GITHUB_EVENT_PATH="$PWD/v51-comment-event.json" node .github/privacy-guard/check.mjs
           gh issue comment 3 --repo "${{ github.repository }}" --body-file v51-comment.md
+
+      - name: H-025 v5 – Cash-Zins-Annahmen vor Ergebnis-Kommentar prüfen (Issue #43)
+        if: ${{ inputs.run_v5_cash_yield && success() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PRIVACY_BLOCKLIST: ${{ secrets.PRIVACY_BLOCKLIST }}
+        run: |
+          cp data/trend-research-v5-cash-yield/summary.md cash-yield-comment.md
+          node --input-type=module -e 'import {readFileSync,writeFileSync} from "node:fs"; writeFileSync("cash-yield-comment-event.json",JSON.stringify({comment:{body:readFileSync("cash-yield-comment.md","utf8")}}));'
+          PG_MODE=text GITHUB_EVENT_NAME=issue_comment GITHUB_EVENT_PATH="$PWD/cash-yield-comment-event.json" node .github/privacy-guard/check.mjs
+          gh issue comment 43 --repo "${{ github.repository }}" --body-file cash-yield-comment.md
