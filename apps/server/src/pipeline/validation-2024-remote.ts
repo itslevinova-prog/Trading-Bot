@@ -1,4 +1,4 @@
-import {validation2024PlanHash,type Validation2024Plan,type Validation2024Claim}
+import {validateValidation2024Plan,validation2024PlanHash,type Validation2024Plan,type Validation2024Claim}
  from './validation-2024-guard.js';
 
 /**
@@ -11,10 +11,11 @@ import {validation2024PlanHash,type Validation2024Plan,type Validation2024Claim}
  * reservation by updating/deleting the marker.
  */
 export async function reserveValidation2024InRepository(args:{
- owner:string;repo:string;token:string;commitSha:string;plan:Validation2024Plan;
+ owner:string;repo:string;token:string;commitSha:string;plan:Validation2024Plan;split:unknown;
  now?:Date;request?:typeof fetch;
 }):Promise<Validation2024Claim>{
- const {owner,repo,token,commitSha,plan}=args;
+ const {owner,repo,token,commitSha}=args;
+ const plan=validateValidation2024Plan(args.plan,args.split);
  if(!/^[A-Za-z0-9_.-]+$/.test(owner)||!/^[A-Za-z0-9_.-]+$/.test(repo)||
     !token||!/^[a-f0-9]{40}$/.test(commitSha))
   throw Error('Invalid repository credentials or immutable source commit for 2024 claim');
