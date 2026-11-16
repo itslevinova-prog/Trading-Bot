@@ -1,5 +1,6 @@
 import type {CandleSource,Candle} from './candle-source.js';
 import {validateCandles} from './candle-source.js';
+import {validateCashYieldApy,type CashYieldApy} from './cash-yield.js';
 import {TREND_RESEARCH_ASSUMPTIONS as a,researchQuality,researchHash} from './trend-research.js';
 import {planTrendVolTargetV1,type TrendV1Input} from '../strategy/trend-vol-target-v1.js';
 import {CONFIG} from '../forward/engine-v2.js';
@@ -86,9 +87,12 @@ export type V2RunOptions={source:CandleSource;lotRules:LotRules;lotSnapshotAt:st
  researchV5?:true;
  /** Isolated optional H-025 v5.1; v5 runs are still the untouched default. */
  researchV51?:true;
+ /** Optional, non-historical 0/3/6% quote-cash sensitivity (default zero). */
+ cashYieldApy?:CashYieldApy;
 };
 export async function runTrendResearchV2(options:V2RunOptions){
  if(!Number.isFinite(Date.parse(options.lotSnapshotAt)))throw Error('Lot snapshot timestamp required');
+ const cashYieldApy=validateCashYieldApy(options.cashYieldApy);
  const profile=options.profileName?resolvePaperRiskProfile(options.profileName):null;
  const v3=options.researchV3??null,v4=options.researchV4??null,
   v51=options.researchV51===true,v5=options.researchV5===true||v51;
@@ -115,6 +119,7 @@ export async function runTrendResearchV2(options:V2RunOptions){
  const missingRules=imported.filter(s=>!rules[s]);
  const result=await runBacktest({source,strategy:'trend-vol-target',fromMs:a.fromMs,toMs:a.toMs,intervalMinutes:1440,
   initialCash:a.initialCash,feeRate:a.feeRate,spreadBps:a.spreadBps,slippageBps:a.slippageBps,
+  ...(cashYieldApy!==0?{cashYieldApy}:{}),
   // Each pair still applies its actual assumed minimum; no additional fixed 10-USDT v1 floor.
   riskLimits:{minOrderEur:Math.min(...Object.values(rules).map(r=>Number(r.minNotional))),
    ...(v5?{maxOpenPositions:2,maxPositionPct:1,maxPortfolioRiskPct:1,maxDrawdownPct:1}:
@@ -157,8 +162,10 @@ export async function runTrendResearchV2(options:V2RunOptions){
   assumptions,lotSnapshot:snapshot,lotSnapshotHash:researchHash(snapshot),benchmarks,
   importedCoins:imported.length,universeCoins:result.universe.length,tradedCoins:new Set(result.trades.map(t=>t.symbol)).size,
   missingRules,coveredRuleCoins:imported.length-missingRules.length,
-  fingerprints:{configuration:researchHash({assumptions,lotSnapshot:snapshot,...(profile?{profile}:{})}),codeBuild:options.codeBuild},backtest:result,
+  fingerprints:{configuration:researchHash({assumptions,lotSnapshot:snapshot,...(profile?{profile}:{}),
+    ...(cashYieldApy!==0?{cashYieldApy}:{})}),codeBuild:options.codeBuild},backtest:result,
   caveats:[
+   ...(cashYieldApy!==0?['Annahme, kein belegter historischer Zins; Gegenparteirisiko nicht modelliert.']:[]),
    ...(v51?[
     'H-025 v5.1: Neuer Referenz-Höchststand nur nach mindestens 30 vollen Cash-Kalendertagen und geschlossenem BTC-200d-risk-on; historische Equity-Peaks bleiben unverändert.',
     'Kein Peak-Reset hebt die bei höchstens 70 Prozent des ursprünglichen Startkapitals ausgelöste dauerhafte Einstiegspause auf.'

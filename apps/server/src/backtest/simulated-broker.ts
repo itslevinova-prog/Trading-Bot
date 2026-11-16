@@ -1,5 +1,6 @@
 import {floorLot,validateRule} from '../forward/lots.js';
 import {ResearchV51Drawdown,type ResearchV51Observation} from './research-v51-drawdown.js';
+import {dailyCashYield,type CashYieldApy} from './cash-yield.js';
 import type {Action,BrokerOrder} from '@paper/shared';
 import {validateRisk,positionStopRisk,entryDrawdownGuard} from '../broker/risk.js';
 import {entryQuoteGuard,entryFillGuard} from '../broker/executionGuards.js';
@@ -34,6 +35,9 @@ export class SimulatedBroker {
   readonly makerQueue=new PaperMakerQueue();
   private readonly makerActions=new Map<string,{pending:Pending;feeRate:number}>();
   private makerSerial=0;
+  private lastYieldAt:number|null=null;
+  cashYieldTotal=0;
+  cashYieldDays=0;
   private v5PausedAt:number|null=null;
   private readonly v51Drawdown:ResearchV51Drawdown|null;
   private readonly lastClosedQuoteVolume=new Map<string,{
@@ -72,6 +76,21 @@ export class SimulatedBroker {
     if(this.v5PausedAt!==null)return 0;
     const dd=Math.max(0,1-equity/Math.max(this.peak,equity));
     return dd<=.10?1:dd>=.30?0:(.30-dd)/.20;
+  }
+  /** Research-only hypothetical daily quote-cash accrual; no order or fee is created. */
+  creditCashYield(asOf:number,apy:CashYieldApy):number {
+    if(!Number.isSafeInteger(asOf)||asOf%86400000!==0||
+       this.lastYieldAt!==null&&asOf<=this.lastYieldAt)
+      throw Error('Cash yield must be credited at most once per closed UTC day');
+    const credit=dailyCashYield(this.cash,apy);
+    if(!Number.isFinite(credit)||!Number.isFinite(this.cash+credit))
+      throw Error('Non-finite cash yield');
+    this.cash+=credit;
+    this.peak=Math.max(this.peak,this.equity);
+    this.cashYieldTotal+=credit;
+    this.cashYieldDays++;
+    this.lastYieldAt=asOf;
+    return credit;
   }
   get rejected(){return this.rejectionReasons.length;}
   get missedMakerFills(){return this.makerQueue.missed.length;}

@@ -11,6 +11,8 @@ import {exchangeLots,type ExchangeInfo} from '../forward/lots.js';
 import {researchHash} from './trend-research.js';
 import {v5DevelopmentSource,V5_RESEARCH} from './trend-research-v2.js';
 import {runTrendResearchV5,v5Markdown,V5_PROFILES} from './trend-research-v5.js';
+import {CASH_YIELD_SENSITIVITIES} from './cash-yield.js';
+import {cashYieldMarkdown} from './cash-yield-report.js';
 import {v5EqualWeightHold} from './research-v5-benchmark.js';
 import type {V4SpikeComparison} from './trend-research-v4.js';
 
@@ -40,6 +42,27 @@ export async function main(){
    // each evaluation day still comes from the causal, previous-30-day query.
    universeAt:(day:number)=>universe.universeAt(day,{quote:'USDT',topN:archived.length})
     .map(x=>x.symbol).filter(s=>s==='BTCUSDT'||s==='ETHUSDT')};
+  if(process.argv.includes('--cash-yield-sensitivity')){
+   const tiers=[];
+   for(const cashYieldApy of CASH_YIELD_SENSITIVITIES){
+    const group=[];
+    for(const profileName of V5_PROFILES)
+     group.push(await runTrendResearchV5({...options,cashYieldApy,...(profileName?{profileName}:{})}));
+    tiers.push(group);
+   }
+   const directory=PROJECT_ROOT+'/data/trend-research-v5-cash-yield';
+   mkdirSync(directory,{recursive:true});
+   const artifact={hypothesis:'H-025',researchOnly:true,pipelineEligible:false,
+    assumption:'fixed cash APY 0/3/6 percent, not historically observed',
+    evaluation:{from:'2020-01-01',toExclusive:'2024-01-01'},
+    tiers,codeBuild,lotSnapshotAt,
+    archiveManifestHash:researchHash(db.prepare('SELECT path,sha256 FROM files ORDER BY path').all())};
+   writeFileSync(directory+'/report.json',JSON.stringify(artifact,null,2)+'\n');
+   const markdown=cashYieldMarkdown(tiers);
+   writeFileSync(directory+'/summary.md',markdown+'\n');
+   console.log(markdown);
+   return;
+  }
   const reports=[];
   for(const profileName of V5_PROFILES)
    reports.push(await runTrendResearchV5({...options,...(profileName?{profileName}:{})}));

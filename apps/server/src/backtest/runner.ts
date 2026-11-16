@@ -7,6 +7,7 @@ import {summarizeHistoricalTradability,type HistoricalTradabilityObservation,typ
 import type {CoinQualityProvider} from '../coin-quality/contracts.js';
 import {replayRiskSnapshot} from '../risk-engine/replay.js';
 import {checkV5DailyRisk,V5_DAILY_RISK} from './research-v5-daily-risk.js';
+import {validateCashYieldApy,type CashYieldApy} from './cash-yield.js';
 import {H025_V51_REENTRY,type ResearchV51Reset} from './research-v51-drawdown.js';
 import {closedBtc200Regime} from '../strategy/trend-vol-target-v1.js';
 import type {Action,DecisionContext,DecisionProvider} from '@paper/shared';
@@ -54,6 +55,8 @@ export type BacktestOptions={
   researchV5?:true;
   /** Opt-in v5.1 only; cannot be combined with v5 or other research modes. */
   researchV51?:true;
+  /** Research sensitivity only: annual 0, 3 or 6 percent, default 0. */
+  cashYieldApy?:CashYieldApy;
 };
 export type BacktestResult={
   configuration:{strategy:Strategy;fromMs:number;toMs:number;intervalMinutes:IntervalMinutes;fillModel:FillModelName;feeRate:number;spreadBps:number;slippageBps:number;trials:number;seed:number;executionDelayBars:number;dropSignalPct:number};
@@ -74,6 +77,8 @@ export type BacktestResult={
   researchV51?:{resetEvents:ResearchV51Reset[];permanentStopAt:number|null;
    zeroEntryDays:number;cashDays:number;averageInvestedPct:number|null;
    parameters:typeof H025_V51_REENTRY};
+  /** Only present in explicitly yield-enabled sensitivity runs. */
+  cashYield?:{apy:CashYieldApy;total:number;days:number;historicalRateKnown:false};
 };
 export class ResearchCoverageBlocked extends Error {
   constructor(readonly coverage: CoveragePreflight) {
@@ -89,6 +94,9 @@ function nextRandom(seed:number):()=>number {
 }
 export async function runBacktest(options:BacktestOptions):Promise<BacktestResult> {
   const {source,fromMs,toMs,intervalMinutes}=options,step=candleStep(intervalMinutes);
+  const cashYieldApy=validateCashYieldApy(options.cashYieldApy);
+  if(cashYieldApy!==0&&intervalMinutes!==1440)
+    throw Error('Optional cash yield is sealed to daily research candles');
   const trendMode=options.strategy==='trend-vol-target',v51=options.researchV51===true,
     v5=options.researchV5===true||v51;
   if(options.researchV5&&v51)throw Error('H-025 v5 and v5.1 must run independently');
@@ -219,6 +227,8 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
     const tradesBeforeCandles=broker.trades.length;
     for(const {symbol,candle} of group.sort((a,b)=>a.symbol.localeCompare(b.symbol)))broker.onCandle(symbol,candle,intervalMinutes);
     const executedBuy=broker.trades.slice(tradesBeforeCandles).some(t=>t.side==='buy');
+    if(cashYieldApy!==0&&now>fromMs&&now<=toMs)
+      broker.creditCashYield(now,cashYieldApy);
     if(v51)broker.observeResearchV51Day({asOf:now,
      btcRegime:closedBtc200Regime(all.get('BTCUSDT')?.trendDaily??[],now)});
     if(v5)broker.researchV5EntryScale(now);
@@ -381,6 +391,7 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
     researchV5:v5?{dailyRisk:V5_DAILY_RISK,brokerLimits:limits,
      drawdown:{caution:.10,zeroEntry:.30,permanentInitialLoss:.30}}:null,
     ...(v51?{researchV51:H025_V51_REENTRY}:{}),
+    ...(cashYieldApy!==0?{cashYieldApy}:{}),
     portfolioRisk:options.enablePortfolioRisk?{enabled:true,limits:{...DEFAULT_RISK_LIMITS,...options.portfolioRiskLimits},
      ...(options.researchDrawdownV3?{researchV3:H025_V3_DRAWDOWN}:{})}:{enabled:false}
   }));
@@ -388,6 +399,8 @@ export async function runBacktest(options:BacktestOptions):Promise<BacktestResul
   const calculated=calculateMetrics(equity,broker.trades,fromMs,toMs,trials,options.variants,broker.rejected);
   return {configuration:config,fingerprints:{data,configuration,codeBuild:options.buildId??null,combined},
     metrics:calculated.metrics,daily:calculated.daily,equity,trades:broker.trades,decisions,rejections:broker.rejectionReasons,
+    ...(cashYieldApy!==0?{cashYield:{apy:cashYieldApy,total:broker.cashYieldTotal,
+      days:broker.cashYieldDays,historicalRateKnown:false as const}}:{}),
     universe:symbols,universeHistory,coverage,historicalTradability,...(diagnostics?{diagnostics}:{}),
     ...(v5?{researchV5:{pausedAt:broker.researchV5PausedAt,
      dailyRiskChecks:v5RiskChecks,dailyShockBlocked:v5ShockBlocked,

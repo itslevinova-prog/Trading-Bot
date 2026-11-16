@@ -4,6 +4,7 @@ import {fileURLToPath} from 'node:url';
 import {digest} from '../provenance/build.js';
 import type {Candle} from '../backtest/candle-source.js';
 import {advance,initialState,seriesId,DAY,LABEL,summary,type State} from './engine-v2.js';
+import {validateCashYieldApy,CASH_YIELD_WARNING} from '../backtest/cash-yield.js';
 import {exchangeLots,type ExchangeInfo,type LotRules} from './lots.js';
 const root=fileURLToPath(new URL('../../../../',import.meta.url));
 export async function request(path:string):Promise<unknown>{
@@ -21,6 +22,8 @@ export async function request(path:string):Promise<unknown>{
 export async function main(){
  const args=process.argv.slice(2),arg=(name:string)=>{const i=args.indexOf(name);return i<0?undefined:args[i+1];};
  const fixture=arg('--fixture'),dry=args.includes('--dry-run');
+ const requestedYield=arg('--cash-yield-apy');
+ const cashYieldApy=validateCashYieldApy(requestedYield===undefined?0:Number(requestedYield));
  if(!dry&&process.env.FORWARD_ENABLED!=='true')throw Error('Forward disabled; use --dry-run for validation');
  if(process.env.LIVE_ENABLED!=='false'||process.env.AI_ALLOW_REMOTE!=='false'||process.env.LIVE_ACK)throw Error('Unsafe environment');
  const start=Date.parse(arg('--start')??'');
@@ -31,7 +34,7 @@ export async function main(){
  const fixtureData=fixture?JSON.parse(readFileSync(fixture,'utf8')):undefined;
  const exchange=fixture?undefined:await request('exchangeInfo') as ExchangeInfo;
  const lotRules:LotRules=fixture?fixtureData.lotRules:exchangeLots(exchange!);
- const fresh=initialState(start,hash,lotRules),id=seriesId(fresh),base=resolve(arg('--output')??join(root,'forward'));
+ const fresh=initialState(start,hash,lotRules,cashYieldApy),id=seriesId(fresh),base=resolve(arg('--output')??join(root,'forward'));
  const directory=join(base,id),stateFile=join(directory,'state.json');
  if(!fixture&&!existsSync(stateFile)&&start<until)throw Error('New real-data series must start prospectively today or later');
  const input:State=existsSync(stateFile)?JSON.parse(readFileSync(stateFile,'utf8')):fresh;
@@ -71,7 +74,7 @@ export async function main(){
  writeFileSync(join(staged,'ledger.csv'),csv(result.fills,['day','account','symbol','side','qty','price','fee','spread','slippage','reason']));
  writeFileSync(join(staged,'equity.csv'),csv(result.points,['day','strategy','hold','dca','reason']));
  for(const point of result.points){const date=new Date(point.day).toISOString().slice(0,10);writeFileSync(join(staged,'days',date+'.md'),`# ${date}\n\n${LABEL}\n\n${point.reason}\n\nStrategie: ${point.strategy??'unbekannt'}; BTC: ${point.hold??'unbekannt'}; Sparplan: ${point.dca??'unbekannt'} USDT.\n`);}
- writeFileSync(join(staged,'README.md'),`# ${LABEL}\n\nSerie ${id}; seit ${new Date(start).toISOString().slice(0,10)}.\n\n${result.points.length} Tage; ${result.fills.length} simulierte Fills. Sparplan mit zusätzlichen monatlichen Einzahlungen; Endvermögen nicht direkt vergleichbar.\n`);
+ writeFileSync(join(staged,'README.md'),`# ${LABEL}\n\nSerie ${id}; seit ${new Date(start).toISOString().slice(0,10)}.\n\nCash-Zinssimulation: ${cashYieldApy*100} % APY (Standard 0 %). ${CASH_YIELD_WARNING}\n\n${result.points.length} Tage; ${result.fills.length} simulierte Fills. Sparplan mit zusätzlichen monatlichen Einzahlungen; Endvermögen nicht direkt vergleichbar.\n`);
  // The workflow commits only after successful completion. Failed local writes do not replace the prior state.
  for(const account of ['strategy','hold','dca'] as const){
   const metrics=summary(result,account);
