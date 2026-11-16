@@ -36,7 +36,7 @@ export function validateValidation2024Plan(plan:unknown,split:unknown):Validatio
   throw Error('Immutable 2024 data split changed: validation denied');
  if(!p||p.version!==1||(p.candidate!=='v5'&&p.candidate!=='v5.1')||
     !/^[a-f0-9]{64}$/.test(p.developmentResultSha256??'')||
-    !/^2026-[0-9]{2}-[0-9]{2}T/.test(p.preregisteredAt??'')||
+    !/^20[0-9]{2}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\\.[0-9]{1,3})?Z$/.test(p.preregisteredAt??'')||
     !Number.isFinite(Date.parse(p.preregisteredAt??''))||
     p.criteria?.maxDrawdownBelow!==.30||
     p.criteria?.calmarAboveBenchmark!=='BTC/ETH 50/50 halten'||
