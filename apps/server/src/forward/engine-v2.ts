@@ -7,6 +7,7 @@ import {ConservativeOhlcModel} from '../backtest/fill-models.js';
 import {excludedBase,median} from '../coin-quality/contracts.js';
 import {paperDcaBudget,loadPaperDcaSettings} from '../dca/paper.js';
 import {digest} from '../provenance/build.js';
+import {dailyCashYield,validateCashYieldApy,type CashYieldApy} from '../backtest/cash-yield.js';
 
 export const DAY=86_400_000;
 export const LABEL='Forschungs-Forward-Test, nicht freigegeben, keine Gewinnprognose';
@@ -17,12 +18,16 @@ export type Wallet={cash:number;positions:Record<string,{qty:number;highestClose
 export type Fill={day:number;account:string;symbol:string;side:'buy'|'sell';qty:number;price:number;fee:number;spread:number;slippage:number;reason:string};
 export type Point={day:number;strategy:number|null;hold:number|null;dca:number|null;reason:string};
 export type State={label:string;start:number;lastDay:number|null;configHash:string;codeHash:string;
- lotRules:LotRules;accounts:{strategy:Wallet;hold:Wallet;dca:Wallet};fills:Fill[];points:Point[];dcaPeriods:string[]};
-export function initialState(start:number,codeHash:string,rules:LotRules):State {
+ lotRules:LotRules;accounts:{strategy:Wallet;hold:Wallet;dca:Wallet};fills:Fill[];points:Point[];dcaPeriods:string[];
+ cashYieldApy?:CashYieldApy};
+export function initialState(start:number,codeHash:string,rules:LotRules,cashYieldApy:CashYieldApy=0):State {
+ cashYieldApy=validateCashYieldApy(cashYieldApy);
  if(!Number.isSafeInteger(start)||start%DAY!==0||start< Date.UTC(2025,0,1))throw Error('Invalid forward start');
  const lotRules=configLots(rules);
  const wallet=():Wallet=>({cash:10000,positions:{}});
- return {label:LABEL,start,lastDay:null,configHash:digest(JSON.stringify({config:CONFIG,lotRules})),codeHash,lotRules,
+ return {label:LABEL,start,lastDay:null,configHash:digest(JSON.stringify({config:CONFIG,lotRules,
+  ...(cashYieldApy!==0?{cashYieldApy}:{})})),codeHash,lotRules,
+ ...(cashYieldApy!==0?{cashYieldApy}:{}),
  accounts:{strategy:wallet(),hold:wallet(),dca:{cash:0,positions:{}}},fills:[],points:[],dcaPeriods:[]};
 }
 export const seriesId=(s:State)=>`${new Date(s.start).toISOString().slice(0,10)}-${s.configHash.slice(0,16)}-${s.codeHash.slice(0,16)}`;
@@ -30,7 +35,9 @@ const model=new ConservativeOhlcModel(TREND_RESEARCH_ASSUMPTIONS);
 const settings=loadPaperDcaSettings({DCA_AMOUNT:'10000',DCA_INTERVAL:'monthly',DCA_ALLOCATION:'70/30',DCA_VARIANT:'classic'});
 export function advance(input:State,data:Record<string,Candle[]>,until:number,now:number):State {
  if(!Number.isSafeInteger(until)||until%DAY!==0||until>Math.floor(now/DAY)*DAY)throw Error('Only completed days');
- if(input.configHash!==digest(JSON.stringify({config:CONFIG,lotRules:configLots(input.lotRules)})))throw Error('Changed config requires a new series');
+ const cashYieldApy=validateCashYieldApy(input.cashYieldApy);
+ if(input.configHash!==digest(JSON.stringify({config:CONFIG,lotRules:configLots(input.lotRules),
+  ...(cashYieldApy!==0?{cashYieldApy}:{})})))throw Error('Changed config requires a new series');
  const rows=Object.fromEntries(Object.entries(data).map(([symbol,candles])=>[symbol,candles.filter(c=>c.ts+DAY<=until)]));
  const s:State=structuredClone(input);
  const a=CONFIG.assumptions;
@@ -85,6 +92,8 @@ export function advance(input:State,data:Record<string,Candle[]>,until:number,no
    }
    for(const wallet of Object.values(s.accounts))for(const [symbol,p] of Object.entries(wallet.positions))
     p.highestCloseSinceEntry=Math.max(p.highestCloseSinceEntry??0,at(symbol,day)!.close);
+   // Only unused strategy quote cash accrues; benchmarks remain pure market controls.
+   if(cashYieldApy!==0)s.accounts.strategy.cash+=dailyCashYield(s.accounts.strategy.cash,cashYieldApy);
   }
   s.points.push({day,strategy:bad?null:value(s.accounts.strategy,'close'),hold:bad?null:value(s.accounts.hold,'close'),dca:bad?null:value(s.accounts.dca,'close'),reason});
   s.lastDay=day;
