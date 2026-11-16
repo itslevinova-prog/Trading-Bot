@@ -57,9 +57,12 @@ export async function main(){
    }
   }
  }
+ const newSeries=!existsSync(stateFile);
  const result=advance(input,rows,end,now);
  if(dry){console.log(JSON.stringify({label:LABEL,series:id,days:result.points.length,fills:result.fills.length,dryRun:true}));return;}
- if(JSON.stringify(result)===JSON.stringify(input))return;
+ // A new series always persists its initial state, even before its first completed day;
+ // otherwise the next run would see no series and reject the then-past start date.
+ if(!newSeries&&JSON.stringify(result)===JSON.stringify(input))return;
  mkdirSync(base,{recursive:true});
  const staged=join(base,'.staged-'+id);if(existsSync(staged))throw Error('Staged output already exists');
  mkdirSync(join(staged,'days'),{recursive:true});

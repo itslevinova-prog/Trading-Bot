@@ -28,3 +28,19 @@ describe('forward public data CLI',()=>{
   }finally{process.argv=argv;rmSync(dir,{recursive:true});}
  });
 });
+
+describe('forward first run',()=>{
+ it('persists the initial state of a new series before its first completed day',async()=>{
+  const {readdirSync}=await import('node:fs');
+  const dir=mkdtempSync(join(tmpdir(),'forward-first-')),fixture=join(dir,'fixture.json'),output=join(dir,'output'),argv=process.argv;
+  vi.stubGlobal('fetch',vi.fn());vi.stubEnv('FORWARD_ENABLED','true');vi.stubEnv('LIVE_ENABLED','false');vi.stubEnv('AI_ALLOW_REMOTE','false');vi.stubEnv('LIVE_ACK','');
+  writeFileSync(fixture,JSON.stringify({until:Date.UTC(2026,10,2),rows:{},lotRules:Object.fromEntries(['BTCUSDT','ETHUSDT'].map(s=>[s,{stepSize:'0.001',minQty:'0.001',minNotional:'5'}]))}));
+  try{
+   process.argv=['node','forward-cli','--start','2026-11-02','--fixture',fixture,'--output',output];
+   await main();
+   const series=readdirSync(output).filter(n=>!n.startsWith('.'));
+   expect(series).toHaveLength(1);
+   expect(existsSync(join(output,series[0]!,'state.json'))).toBe(true);
+  }finally{process.argv=argv;rmSync(dir,{recursive:true});}
+ });
+});
