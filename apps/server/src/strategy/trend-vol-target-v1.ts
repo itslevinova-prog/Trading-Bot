@@ -53,6 +53,14 @@ function ema(closes:readonly number[],days:number):number {
  for(let i=days;i<closes.length;i++)value=closes[i]! *rate+value*(1-rate);
  return value;
 }
+/** Read-only view of the exact BTC-200d regime used by the existing planner.
+ * Requires the same 240 contiguous completed daily candles, never future bars. */
+export function closedBtc200Regime(rows:readonly Candle[],asOf:number):'risk-on'|'risk-off'|null{
+ const bars=closedDaily(rows,asOf);
+ if(!bars)return null;
+ const closes=bars.map(c=>c.close);
+ return closes.at(-1)!>ema(closes,200)?'risk-on':'risk-off';
+}
 function annualVol(closes:readonly number[]):number|null {
  const subset=closes.slice(-(VOL_DAYS+1)),r:number[]=[];
  for(let i=1;i<subset.length;i++)r.push(Math.log(subset[i]!/subset[i-1]!));

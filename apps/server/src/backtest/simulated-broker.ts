@@ -1,4 +1,5 @@
 import {floorLot,validateRule} from '../forward/lots.js';
+import {ResearchV51Drawdown,type ResearchV51Observation} from './research-v51-drawdown.js';
 import type {Action,BrokerOrder} from '@paper/shared';
 import {validateRisk,positionStopRisk,entryDrawdownGuard} from '../broker/risk.js';
 import {entryQuoteGuard,entryFillGuard} from '../broker/executionGuards.js';
@@ -34,6 +35,7 @@ export class SimulatedBroker {
   private readonly makerActions=new Map<string,{pending:Pending;feeRate:number}>();
   private makerSerial=0;
   private v5PausedAt:number|null=null;
+  private readonly v51Drawdown:ResearchV51Drawdown|null;
   private readonly lastClosedQuoteVolume=new Map<string,{
     closedAt:number;quoteVolume:number|null;intervalMs:number
   }>();
@@ -41,22 +43,31 @@ export class SimulatedBroker {
   peak:number;
   /** feeAsset applies to buy-side commissions. Sell-side commissions remain
    * in quote, never silently deducting additional base inventory. */
-  constructor(readonly startingCash:number,private readonly pairs:Map<string,MarketConstraints>,readonly model:FillModel,readonly limits:RiskConfiguration,private readonly delayBars=0,private readonly feeSchedule?:FeeSchedule,readonly feeAsset:'base'|'quote'='quote',readonly participation?:QuoteParticipationLimit,private readonly researchV5=false) {
+  constructor(readonly startingCash:number,private readonly pairs:Map<string,MarketConstraints>,readonly model:FillModel,readonly limits:RiskConfiguration,private readonly delayBars=0,private readonly feeSchedule?:FeeSchedule,readonly feeAsset:'base'|'quote'='quote',readonly participation?:QuoteParticipationLimit,private readonly researchV5=false,private readonly researchV51=false) {
     if(startingCash<=0||!Number.isFinite(startingCash)||!Number.isSafeInteger(delayBars)||delayBars<0)throw Error('Invalid starting cash/delay');
     if(feeAsset!=='base'&&feeAsset!=='quote')throw Error('Unknown fee asset');
     if(participation&&(!Number.isFinite(participation.maxQuoteVolumeFraction)||
       participation.maxQuoteVolumeFraction<=0||participation.maxQuoteVolumeFraction>1))
       throw Error('Invalid quote-volume participation limit');
     for(const pair of pairs.values())if(pair.stepSize)validateRule({stepSize:pair.stepSize,minQty:pair.ordermin.toFixed(8),minNotional:pair.costmin.toFixed(8)});
+    if(researchV51&&!researchV5)throw Error('H-025 v5.1 requires isolated v5 research broker');
+    this.v51Drawdown=researchV51?new ResearchV51Drawdown(startingCash):null;
     this.cash=startingCash;this.peak=startingCash;
   }
   /** Research-only irreversible entry pause. No Paper or production reset path. */
-  get researchV5PausedAt(){return this.v5PausedAt;}
+  get researchV5PausedAt(){return this.v51Drawdown?.permanentStopAt??this.v5PausedAt;}
+  get researchV51Resets(){return this.v51Drawdown?.resets??[];}
+  observeResearchV51Day(input:Omit<ResearchV51Observation,'equity'|'historicalPeak'|'openPositions'>){
+    if(!this.v51Drawdown)throw Error('H-025 v5.1 not enabled on this broker');
+    return this.v51Drawdown.observeDay({...input,equity:this.equity,
+      historicalPeak:this.peak,openPositions:this.positions.size});
+  }
   researchV5EntryScale(asOf:number):number {
     if(!this.researchV5)throw Error('H-025 v5 not enabled on this broker');
     if(!Number.isSafeInteger(asOf)||asOf<0)throw Error('Invalid research daily clock');
     const equity=this.equity;
     if(!Number.isFinite(equity)||equity<=0)throw Error('Invalid research account equity');
+    if(this.v51Drawdown)return this.v51Drawdown.entryScale(asOf,equity,this.peak);
     if(equity<=this.startingCash*.70+1e-8&&this.v5PausedAt===null)this.v5PausedAt=asOf;
     if(this.v5PausedAt!==null)return 0;
     const dd=Math.max(0,1-equity/Math.max(this.peak,equity));

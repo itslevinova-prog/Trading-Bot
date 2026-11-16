@@ -53,6 +53,11 @@ on:
         type: boolean
         default: false
 
+      run_v51:
+        description: H-025 v5.1 – vier BTC/ETH-Profile mit 30-Tage-Wiedereinstieg und v5-Vergleich
+        type: boolean
+        default: false
+
 permissions:
   contents: read
   issues: write
@@ -103,15 +108,16 @@ jobs:
           RUN_V3: ${{ inputs.run_v3 }}
           RUN_V4: ${{ inputs.run_v4 }}
           RUN_V5: ${{ inputs.run_v5 }}
+          RUN_V51: ${{ inputs.run_v51 }}
           IMPORT_SYMBOLS: ${{ inputs.symbols }}
         run: |
           pnpm --filter @paper/shared build
           if [[ "$RUN_TREND_V2" == 'true' || "$RUN_PROFILES" == 'true' || "$RUN_V3" == 'true' || "$RUN_V4" == 'true' ]]; then
             pnpm --filter @paper/server exec tsx -e "import {validateV2Inputs} from './src/backtest/trend-research-v2.ts'; validateV2Inputs(process.env.IMPORT_FROM!,process.env.IMPORT_TO!,process.env.IMPORT_INTERVALS!,process.env.IMPORT_SYMBOLS!);"
           fi
-          if [[ "$RUN_V5" == 'true' ]]; then
-            if [[ "$RUN_TREND" == 'true' || "$RUN_TREND_V2" == 'true' || "$RUN_PROFILES" == 'true' || "$RUN_V3" == 'true' || "$RUN_V4" == 'true' ]]; then
-              echo "H-025 v5 must run independently of older research modes"
+          if [[ "$RUN_V5" == 'true' || "$RUN_V51" == 'true' ]]; then
+            if [[ "$RUN_V5" == 'true' && "$RUN_V51" == 'true' || "$RUN_TREND" == 'true' || "$RUN_TREND_V2" == 'true' || "$RUN_PROFILES" == 'true' || "$RUN_V3" == 'true' || "$RUN_V4" == 'true' ]]; then
+              echo "H-025 v5/v5.1 must run independently of all other research modes"
               exit 1
             fi
             pnpm --filter @paper/server exec tsx -e "import {validateV5Inputs} from './src/backtest/trend-research-v2.ts'; validateV5Inputs(process.env.IMPORT_FROM!,process.env.IMPORT_TO!,process.env.IMPORT_INTERVALS!,process.env.IMPORT_SYMBOLS!);"
@@ -140,7 +146,7 @@ jobs:
       - name: Datenbericht
         run: pnpm data:report | tee data-report.txt
       - name: Schnelltest #33 (SMA200-Vergleich fuer v4/v5 verpflichtend)
-        if: ${{ inputs.run_v5 || inputs.run_v4 || (inputs.run_spike && !inputs.run_v3) }}
+        if: ${{ inputs.run_v51 || inputs.run_v5 || inputs.run_v4 || (inputs.run_spike && !inputs.run_v3) }}
         run: pnpm trend:spike | tee spike.txt
       - name: H-025 v4 – acht Diagnosen ohne Drawdown-Bremse
         if: ${{ inputs.run_v4 }}
@@ -148,6 +154,9 @@ jobs:
       - name: H-025 v5 – vier BTC/ETH-Trendfolge-Risikoprofile
         if: ${{ inputs.run_v5 }}
         run: pnpm --filter @paper/server exec tsx src/backtest/trend-research-v5-cli.ts | tee trend-v5.txt
+      - name: H-025 v5.1 – vier Wiedereinstiegsprofile und unveränderte v5-Referenzen
+        if: ${{ inputs.run_v51 }}
+        run: pnpm --filter @paper/server exec tsx src/backtest/trend-research-v51-cli.ts | tee trend-v51.txt
       - name: Ergebnisse als Artefakt sichern
         if: always()
         uses: actions/upload-artifact@v4
@@ -162,6 +171,8 @@ jobs:
             trend-v3.txt
             trend-v4.txt
             trend-v5.txt
+            trend-v51.txt
+            data/trend-research-v51/
             data/trend-research-v5/
             data/trend-research-v4/
             data/trend-research-v3/
@@ -172,7 +183,7 @@ jobs:
             docs/DATA-ARCHIVE.md
           if-no-files-found: ignore
       - name: Ergebnis in Issue #18 kommentieren (alt #33)
-        if: ${{ inputs.run_spike && !inputs.run_v3 && !inputs.run_v4 && !inputs.run_v5 && success() }}
+        if: ${{ inputs.run_spike && !inputs.run_v3 && !inputs.run_v4 && !inputs.run_v5 && !inputs.run_v51 && success() }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -247,3 +258,14 @@ jobs:
           node --input-type=module -e 'import {readFileSync,writeFileSync} from "node:fs"; writeFileSync("v5-comment-event.json",JSON.stringify({comment:{body:readFileSync("v5-comment.md","utf8")}}));'
           PG_MODE=text GITHUB_EVENT_NAME=issue_comment GITHUB_EVENT_PATH="$PWD/v5-comment-event.json" node .github/privacy-guard/check.mjs
           gh issue comment 3 --repo "${{ github.repository }}" --body-file v5-comment.md
+
+      - name: H-025 v5.1 – Datenschutzprüfung und Kommentar in Issue #3
+        if: ${{ inputs.run_v51 && success() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PRIVACY_BLOCKLIST: ${{ secrets.PRIVACY_BLOCKLIST }}
+        run: |
+          cp data/trend-research-v51/summary.md v51-comment.md
+          node --input-type=module -e 'import {readFileSync,writeFileSync} from "node:fs"; writeFileSync("v51-comment-event.json",JSON.stringify({comment:{body:readFileSync("v51-comment.md","utf8")}}));'
+          PG_MODE=text GITHUB_EVENT_NAME=issue_comment GITHUB_EVENT_PATH="$PWD/v51-comment-event.json" node .github/privacy-guard/check.mjs
+          gh issue comment 3 --repo "${{ github.repository }}" --body-file v51-comment.md
