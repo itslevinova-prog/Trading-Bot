@@ -59,4 +59,8 @@ Entscheidung: Die Ganzcoin-Referenz wird aus Gründen der Nachvollziehbarkeit ni
 
 ## Aktivierung (13.11.2026)
 
-Der Repo-Besitzer hat den Forward-Test aktiviert. Statt Repository-Variablen stehen die Standardwerte im Workflow: Start `2026-11-14`, aktiv, solange `FORWARD_ENABLED` nicht auf `false` gesetzt ist. Zum Stoppen die Repository-Variable `FORWARD_ENABLED=false` anlegen. Eine gesetzte Variable `FORWARD_START` überschreibt den Standard und beginnt eine neue Serie.
+Der Repo-Besitzer hat den Forward-Test aktiviert. Statt Repository-Variablen stehen die Standardwerte im Workflow: Start `2026-11-17`, aktiv, solange `FORWARD_ENABLED` nicht auf `false` gesetzt ist. Zum Stoppen die Repository-Variable `FORWARD_ENABLED=false` anlegen. Eine gesetzte Variable `FORWARD_START` überschreibt den Standard und beginnt eine neue Serie.
+
+## Fehlerbehebung (16.11.2026)
+
+Die Serie mit Start 14.11.2026 kam nie zustande: Im ersten Lauf gab es noch keinen abgeschlossenen Tag, daher wurde kein Startzustand geschrieben und der Speicher-Schritt brach beim Kopieren ab. Folgeläufe sahen keine Serie und lehnten das inzwischen vergangene Startdatum ab. Jetzt wird der Startzustand einer neuen Serie immer gespeichert, der Speicher-Schritt beendet sich ohne Ausgabe sauber, und der Standardstart ist der 17.11.2026.

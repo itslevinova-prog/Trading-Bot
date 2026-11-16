@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   forward:
-    # Aktiviert durch den Repo-Besitzer am 13.11.2026 (Start 14.11.2026).
+    # Aktiviert durch den Repo-Besitzer am 13.11.2026; Start nach Fehlerbehebung am 17.11.2026.
     # Stoppen: Repository-Variable FORWARD_ENABLED=false setzen.
     if: (github.event_name == 'workflow_dispatch' && inputs.dry_run) || vars.FORWARD_ENABLED != 'false'
     runs-on: ubuntu-latest
@@ -26,7 +26,7 @@ jobs:
       LIVE_ENABLED: 'false'
       AI_ALLOW_REMOTE: 'false'
       FORWARD_ENABLED: ${{ vars.FORWARD_ENABLED != 'false' && 'true' || 'false' }}
-      FORWARD_START: ${{ vars.FORWARD_START || '2026-11-14' }}
+      FORWARD_START: ${{ vars.FORWARD_START || '2026-11-17' }}
       FORWARD_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
     steps:
       - uses: actions/checkout@v4
@@ -72,6 +72,7 @@ jobs:
             git checkout --detach origin/paper-forward
           fi
           mkdir -p forward
+          if [ ! -d /tmp/forward-output/forward ]; then echo 'Kein neuer Forward-Stand zu speichern.'; exit 0; fi
           cp -R /tmp/forward-output/forward/. ./forward/
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
