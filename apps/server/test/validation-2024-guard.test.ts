@@ -1,4 +1,6 @@
 import {test,expect} from 'vitest';
+import {reserveValidation2024InRepository} from '../src/pipeline/validation-2024-remote.js';
+
 import {mkdtempSync,readFileSync,rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
@@ -40,4 +42,27 @@ test('a 2024 validation attempt is consumed with an atomic create-only marker, e
   expect(()=>claimValidation2024Once(path,checked)).toThrow();
   expect(readFileSync(path,'utf8')).toContain(claim.planHash);
  }finally{rmSync(temp,{recursive:true,force:true});}
+});
+
+test('remote 2024 reservation creates only, never updates, and refuses second attempt',async()=>{
+ const calls:Array<{url:string;init:RequestInit}>=[];
+ const request=async(url:RequestInfo|URL,init?:RequestInit)=>{
+  calls.push({url:String(url),init:init!});
+  return new Response('',{status:calls.length===1?201:422});
+ };
+ const setup={owner:'example',repo:'repository',token:'fixture-token',
+  commitSha:'a'.repeat(40),plan:validateValidation2024Plan(plan(),split),
+  now:new Date('2026-11-16T12:00:00Z'),request:request as typeof fetch};
+ const record=await reserveValidation2024InRepository(setup);
+ expect(record).toMatchObject({status:'consumed',candidate:'v5.1'});
+ expect(calls[0]!.url).toContain('validation-2024-consumed.json');
+ expect(calls[0]!.init.method).toBe('PUT');
+ const payload=JSON.parse(String(calls[0]!.init.body));
+ expect(payload.branch).toBe('main');
+ expect(Object.hasOwn(payload,'sha')).toBe(false);
+ const persisted=JSON.parse(Buffer.from(payload.content,'base64').toString('utf8'));
+ expect(persisted.planHash).toBe(record.planHash);
+ expect(persisted.commitSha).toBe('a'.repeat(40));
+ await expect(reserveValidation2024InRepository(setup)).rejects.toThrow(/already consumed/);
+ expect(calls).toHaveLength(2);
 });
