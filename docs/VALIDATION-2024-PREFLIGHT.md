@@ -32,20 +32,21 @@ create-only-Dateiflag (`wx`) an. Tests prüfen Zweitversuche und
 abweichende Zeiträume. Die Guard-Funktion liest **keine** historischen Kerzen.
 
 Ein lokaler Marker allein **reicht bei GitHub Actions nicht aus**, weil
-jede Ausführung einen neuen temporären Runner bekommt. Vor einer
-produktiven Workflow-Freischaltung muss ein Marker deshalb zusätzlich
-**serverseitig atomar im Repository** angelegt werden (GitHub Contents API:
-Create ohne vorhandene SHA), und dies zwingend **vor dem ersten
-2024-Download**. Der Workflow muss bei einem existierenden Marker
-sofort abbrechen. Ein einfaches `exists` vor dem Import wäre keine
-sichere Einmal-Sperre.
+jede Ausführung einen neuen temporären Runner bekommt. Die Funktion `reserveValidation2024InRepository` erstellt den Marker
+**serverseitig atomar im Repository** über die GitHub Contents API
+(Create ohne vorhandene SHA) und lehnt eine erneute Reservierung ab.
+Sie ist bewusst noch mit **keinem** Job verbunden und wurde **nicht**
+gegen die reale API aufgerufen: Sie muss vor dem ersten 2024-Download
+und nur nach Besitzerfreigabe mit `contents:write` in eine separate,
+serialisierte Stage-2-Aktion eingebaut werden. Ein einfaches `exists`
+vor dem Import wäre keine sichere Einmal-Sperre.
 
 ## Noch zu tun (kein stillschweigender Done-Status)
 
 - Vorregistrierung im Issue nach Abschluss der v5.1-Entwicklungsdiagnose.
 - Daten-/Ausführungspfad für exakt vier Profile der gewählten Version
   in 2024, ohne die 2020–2023-Ergebnisse zu ändern.
-- Technisch atomare GitHub-Repository-Sperre, Stage-2-Pipeline-Prüfung,
+- Verdrahtung der vorbereiteten atomaren GitHub-Repository-Sperre, Stage-2-Pipeline-Prüfung,
   Eingabe `run_validation_2024`, unveränderliche Berichtserzeugung
   und Kommentar in #44 und #3.
 - Erst dann darf der Repo-Besitzer den einen Validierungslauf explizit starten.
