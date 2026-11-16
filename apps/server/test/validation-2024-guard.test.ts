@@ -51,7 +51,7 @@ test('remote 2024 reservation creates only, never updates, and refuses second at
   return new Response('',{status:calls.length===1?201:422});
  };
  const setup={owner:'example',repo:'repository',token:'fixture-token',
-  commitSha:'a'.repeat(40),plan:validateValidation2024Plan(plan(),split),
+  commitSha:'a'.repeat(40),plan:validateValidation2024Plan(plan(),split),split,
   now:new Date('2026-11-16T12:00:00Z'),request:request as typeof fetch};
  const record=await reserveValidation2024InRepository(setup);
  expect(record).toMatchObject({status:'consumed',candidate:'v5.1'});
