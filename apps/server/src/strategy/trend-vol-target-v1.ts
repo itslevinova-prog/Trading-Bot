@@ -61,6 +61,13 @@ export function closedBtc200Regime(rows:readonly Candle[],asOf:number):'risk-on'
  const closes=bars.map(c=>c.close);
  return closes.at(-1)!>ema(closes,200)?'risk-on':'risk-off';
 }
+/** Read-only BTC close and EMA200 of the same closed-day window, for reporting only. */
+export function closedBtc200Detail(rows:readonly Candle[],asOf:number):{close:number;ema200:number}|null{
+ const bars=closedDaily(rows,asOf);
+ if(!bars)return null;
+ const closes=bars.map(c=>c.close);
+ return {close:closes.at(-1)!,ema200:ema(closes,200)};
+}
 function annualVol(closes:readonly number[]):number|null {
  const subset=closes.slice(-(VOL_DAYS+1)),r:number[]=[];
  for(let i=1;i<subset.length;i++)r.push(Math.log(subset[i]!/subset[i-1]!));

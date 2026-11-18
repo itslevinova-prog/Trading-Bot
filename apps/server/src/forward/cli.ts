@@ -3,7 +3,8 @@ import {resolve,join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {digest} from '../provenance/build.js';
 import type {Candle} from '../backtest/candle-source.js';
-import {advance,initialState,seriesId,DAY,LABEL,summary,type State} from './engine-v2.js';
+import {advance,initialState,seriesId,DAY,LABEL,summary,ACCOUNTS,type State} from './engine-v2.js';
+import {dayReport,overviewReport} from './report.js';
 import {exchangeLots,type ExchangeInfo,type LotRules} from './lots.js';
 const root=fileURLToPath(new URL('../../../../',import.meta.url));
 export async function request(path:string):Promise<unknown>{
@@ -69,17 +70,12 @@ export async function main(){
  writeFileSync(join(staged,'state.json'),JSON.stringify(result,null,2)+'\n');
  const csv=(items:object[],fields:string[])=>[fields.join(','),...items.map(x=>fields.map(k=>JSON.stringify((x as Record<string,unknown>)[k]??'')).join(','))].join('\n')+'\n';
  writeFileSync(join(staged,'ledger.csv'),csv(result.fills,['day','account','symbol','side','qty','price','fee','spread','slippage','reason']));
- writeFileSync(join(staged,'equity.csv'),csv(result.points,['day','strategy','hold','dca','reason']));
- for(const point of result.points){const date=new Date(point.day).toISOString().slice(0,10);writeFileSync(join(staged,'days',date+'.md'),`# ${date}\n\n${LABEL}\n\n${point.reason}\n\nStrategie: ${point.strategy??'unbekannt'}; BTC: ${point.hold??'unbekannt'}; Sparplan: ${point.dca??'unbekannt'} USDT.\n`);}
- writeFileSync(join(staged,'README.md'),`# ${LABEL}\n\nSerie ${id}; seit ${new Date(start).toISOString().slice(0,10)}.\n\n${result.points.length} Tage; ${result.fills.length} simulierte Fills. Sparplan mit zusätzlichen monatlichen Einzahlungen; Endvermögen nicht direkt vergleichbar.\n`);
+ writeFileSync(join(staged,'equity.csv'),csv(result.points,['day',...ACCOUNTS,'reason']));
+ for(const point of result.points)writeFileSync(join(staged,'days',new Date(point.day).toISOString().slice(0,10)+'.md'),dayReport(result,point));
+ const metrics=Object.fromEntries(ACCOUNTS.map(account=>[account,summary(result,account)])) as Record<typeof ACCOUNTS[number],ReturnType<typeof summary>>;
+ for(const account of ACCOUNTS)writeFileSync(join(staged,account+'-metrics.json'),JSON.stringify({label:LABEL,metrics:metrics[account]},null,2)+'\n');
+ writeFileSync(join(staged,'README.md'),overviewReport(result,id,metrics));
  // The workflow commits only after successful completion. Failed local writes do not replace the prior state.
- for(const account of ['strategy','hold','dca'] as const){
-  const metrics=summary(result,account);
-  const report=metrics===null?'Keine belastbaren Kennzahlen (fehlende Bewertungen).':JSON.stringify(metrics);
-  writeFileSync(join(staged,account+'-metrics.json'),JSON.stringify({label:LABEL,metrics},null,2)+'\n');
-  const overview=join(staged,'README.md');
-  writeFileSync(overview,readFileSync(overview,'utf8')+'\n'+account+': '+report+'\n');
- }
  const backup=directory+'.previous';
  if(existsSync(backup))throw Error('Previous transaction needs inspection');
  if(existsSync(directory))renameSync(directory,backup);
