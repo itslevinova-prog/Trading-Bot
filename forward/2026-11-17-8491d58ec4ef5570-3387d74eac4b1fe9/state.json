@@ -1,7 +1,7 @@
 {
   "label": "Forschungs-Forward-Test, nicht freigegeben, keine Gewinnprognose",
   "start": 1794873600000,
-  "lastDay": null,
+  "lastDay": 1794873600000,
   "configHash": "8491d58ec4ef5570d1e6bece8346271576f7b0f504197f0f070df646457abca1",
   "codeHash": "3387d74eac4b1fe9aa851cb475b86f4812112ee1cb44330d30245114ecc169c6",
   "lotRules": {
@@ -2602,15 +2602,76 @@
       "positions": {}
     },
     "hold": {
-      "cash": 10000,
-      "positions": {}
+      "cash": 0.39497601862967713,
+      "positions": {
+        "BTCUSDT": {
+          "qty": 0.15381,
+          "highestCloseSinceEntry": 64947.35
+        }
+      }
     },
     "dca": {
-      "cash": 0,
-      "positions": {}
+      "cash": 0.16440677091941325,
+      "positions": {
+        "BTCUSDT": {
+          "qty": 0.10767,
+          "highestCloseSinceEntry": 64947.35
+        },
+        "ETHUSDT": {
+          "qty": 1.6444,
+          "highestCloseSinceEntry": 1824.88
+        }
+      }
     }
   },
-  "fills": [],
-  "points": [],
-  "dcaPeriods": []
+  "fills": [
+    {
+      "day": 1794873600000,
+      "account": "hold",
+      "symbol": "BTCUSDT",
+      "side": "buy",
+      "qty": 0.15381,
+      "price": 64947.76287999999,
+      "fee": 9.989615408572798,
+      "spread": 4.9898178864,
+      "slippage": 4.9898178864,
+      "reason": "BTC Buy & Hold ab S"
+    },
+    {
+      "day": 1794873600000,
+      "account": "dca",
+      "symbol": "BTCUSDT",
+      "side": "buy",
+      "qty": 0.10767,
+      "price": 64947.76287999999,
+      "fee": 6.992925629289599,
+      "spread": 3.4929698448,
+      "slippage": 3.4929698448,
+      "reason": "Monatlicher Sparplan 70/30"
+    },
+    {
+      "day": 1794873600000,
+      "account": "dca",
+      "symbol": "ETHUSDT",
+      "side": "buy",
+      "qty": 1.6444,
+      "price": 1822.5006799999999,
+      "fee": 2.996920118192,
+      "spread": 1.496963096,
+      "slippage": 1.496963096,
+      "reason": "Monatlicher Sparplan 70/30"
+    }
+  ],
+  "points": [
+    {
+      "day": 1794873600000,
+      "strategy": 10000,
+      "hold": 9989.94687951863,
+      "dca": 9993.87825327092,
+      "reason": "BTC unter 200d EMA; Cash-Regime"
+    }
+  ],
+  "dcaPeriods": [
+    "2026-11"
+  ]
 }
