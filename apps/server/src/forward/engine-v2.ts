@@ -1,7 +1,8 @@
 import {configLots,floorLot,lotDecimals,type LotRules} from './lots.js';
 import type {Candle} from '../backtest/candle-source.js';
 import {validateCandles} from '../backtest/candle-source.js';
-import {planTrendVolTargetV1} from '../strategy/trend-vol-target-v1.js';
+import {planTrendVolTargetV1,closedBtc200Detail} from '../strategy/trend-vol-target-v1.js';
+import {resolvePaperRiskProfile,type RiskProfileName} from '../risk-engine/profiles.js';
 import {TREND_RESEARCH_ASSUMPTIONS} from '../backtest/trend-research.js';
 import {ConservativeOhlcModel} from '../backtest/fill-models.js';
 import {excludedBase,median} from '../coin-quality/contracts.js';
@@ -12,18 +13,31 @@ export const DAY=86_400_000;
 export const LABEL='Forschungs-Forward-Test, nicht freigegeben, keine Gewinnprognose';
 export const CONFIG=Object.freeze({hypothesis:'H-025',strategy:'trend-vol-target-v1-binance-lots-v2',
  assumptions:{...TREND_RESEARCH_ASSUMPTIONS,version:'H-025-forward-binance-lots-v2',lotDecimals:null,minNotional:null},parameters:{targetAnnualVol:.20,topK:3,rebalanceTolerance:.20,atrMultiple:3},
- dca:{amount:10000,interval:'monthly',allocation:'70/30',variant:'classic'},schema:2});
+ dca:{amount:10000,interval:'monthly',allocation:'70/30',variant:'classic'},
+ profiles:['vorsichtig','normal','aggressiv'],schema:3});
+export const PROFILES=CONFIG.profiles as readonly RiskProfileName[];
+export const STRATEGY_ACCOUNTS=['strategy',...PROFILES] as const;
+export const ACCOUNTS=['strategy',...PROFILES,'hold','dca'] as const;
+export type Account=typeof ACCOUNTS[number];
+/** Capped paper profile -> planner knobs; same signal, regime and exit rules as the base strategy. */
+export function profileParameters(name:RiskProfileName){
+ const e=resolvePaperRiskProfile(name).effective;
+ return {...CONFIG.parameters,targetAnnualVol:e.targetAnnualVol,topK:Math.min(10,e.maxOpenPositions),
+  maxPositionPct:Math.min(.30,e.maxPositionPct),maxInvestedPct:e.maxInvestedPct};
+}
 export type Wallet={cash:number;positions:Record<string,{qty:number;highestCloseSinceEntry:number|null}>};
 export type Fill={day:number;account:string;symbol:string;side:'buy'|'sell';qty:number;price:number;fee:number;spread:number;slippage:number;reason:string};
-export type Point={day:number;strategy:number|null;hold:number|null;dca:number|null;reason:string};
+export type Point={day:number;strategy:number|null;vorsichtig:number|null;normal:number|null;aggressiv:number|null;hold:number|null;dca:number|null;reason:string;
+ /** Human-readable reasoning for reflection: regime distance, ranking and decisions per account. */
+ details:string[]};
 export type State={label:string;start:number;lastDay:number|null;configHash:string;codeHash:string;
- lotRules:LotRules;accounts:{strategy:Wallet;hold:Wallet;dca:Wallet};fills:Fill[];points:Point[];dcaPeriods:string[]};
+ lotRules:LotRules;accounts:Record<Account,Wallet>;fills:Fill[];points:Point[];dcaPeriods:string[]};
 export function initialState(start:number,codeHash:string,rules:LotRules):State {
  if(!Number.isSafeInteger(start)||start%DAY!==0||start< Date.UTC(2025,0,1))throw Error('Invalid forward start');
  const lotRules=configLots(rules);
  const wallet=():Wallet=>({cash:10000,positions:{}});
  return {label:LABEL,start,lastDay:null,configHash:digest(JSON.stringify({config:CONFIG,lotRules})),codeHash,lotRules,
- accounts:{strategy:wallet(),hold:wallet(),dca:{cash:0,positions:{}}},fills:[],points:[],dcaPeriods:[]};
+ accounts:{strategy:wallet(),vorsichtig:wallet(),normal:wallet(),aggressiv:wallet(),hold:wallet(),dca:{cash:0,positions:{}}},fills:[],points:[],dcaPeriods:[]};
 }
 export const seriesId=(s:State)=>`${new Date(s.start).toISOString().slice(0,10)}-${s.configHash.slice(0,16)}-${s.codeHash.slice(0,16)}`;
 const model=new ConservativeOhlcModel(TREND_RESEARCH_ASSUMPTIONS);
@@ -44,7 +58,7 @@ export function advance(input:State,data:Record<string,Candle[]>,until:number,no
   // Missing data blocks all accounts together; no invented marks, fills or zero-valued holdings.
   const bad=[...required].some(x=>!at(x,day)||!complete(x));
   const value=(w:Wallet,field:'open'|'close')=>w.cash+Object.entries(w.positions).reduce((n,[symbol,p])=>n+p.qty*at(symbol,day)![field],0);
-  const fill=(account:keyof State['accounts'],symbol:string,side:'buy'|'sell',amount:number,reason:string)=>{
+  const fill=(account:Account,symbol:string,side:'buy'|'sell',amount:number,reason:string)=>{
    const bar=at(symbol,day);if(!bar)return;
    const w=s.accounts[account],quote=model.entry(bar,side),p=w.positions[symbol];
    const rule=s.lotRules[symbol];if(!rule)throw Error('Missing frozen lot rule: '+symbol);
@@ -58,22 +72,43 @@ export function advance(input:State,data:Record<string,Candle[]>,until:number,no
    s.fills.push({day,account,symbol,side,qty,price:quote.price,fee,spread:qty*quote.spreadCost,slippage:qty*quote.slippageCost,reason});
   };
   let reason='Fehlende oder veraltete Tagesdaten: kein Handel; Bewertung unbekannt';
+  const details:string[]=[];
   if(!bad){
-   const w=s.accounts.strategy;
-   // Only yesterday's close and older candles enter the strategy. Today's candle is execution/valuation only.
-   const previousEquity=w.cash+Object.entries(w.positions).reduce((n,[symbol,p])=>n+p.qty*at(symbol,day-DAY)!.close,0);
    const markets=symbols.filter(pair=>complete(pair)&&s.lotRules[pair]).map(pair=>{
     const daily=history(pair),volumes=daily.slice(-30).map(c=>c.quoteVolume??NaN);
     return {pair,daily,quality:(daily[0]!.ts<=day-a.minAgeDays*DAY&&(median(volumes)??0)>=a.minMedianQuoteVolume30d?'allowed':'unknown') as 'allowed'|'unknown',
      assumedRoundtripBps:2*a.feeRate*10000+a.spreadBps+2*a.slippageBps,
      lot:{minQty:Number(s.lotRules[pair]!.minQty),minNotional:Number(s.lotRules[pair]!.minNotional),decimals:lotDecimals(s.lotRules[pair]!)}};
    });
-   const plan=planTrendVolTargetV1({asOf:day,quote:a.quote,equity:previousEquity,cash:w.cash,markets,
-    positions:Object.entries(w.positions).map(([pair,p])=>({pair,...p})),...CONFIG.parameters});
-   reason=plan.reason;
-   for(const action of plan.actions){
-    if(action.type==='buy')fill('strategy',action.pair,'buy',action.amountEur,action.reasoning);
-    if(action.type==='sell')fill('strategy',action.pair,'sell',(w.positions[action.pair]?.qty??0)*action.sellFraction,action.reasoning);
+   const btc=closedBtc200Detail(history('BTCUSDT'),day);
+   if(btc){
+    const gap=btc.close/btc.ema200-1;
+    details.push(`BTC-Schluss Vortag ${btc.close.toFixed(2)} USDT, 200-Tage-EMA ${btc.ema200.toFixed(2)} USDT, Abstand ${(gap*100).toFixed(2)} % `+
+     (gap>0?'(über EMA: Einstiege erlaubt).':`(unter EMA: nur Cash; Kaufsignal erst bei Schluss über ${btc.ema200.toFixed(2)} USDT, also +${((btc.ema200/btc.close-1)*100).toFixed(2)} %).`));
+   }
+   const pct=(x:number)=>(x*100).toFixed(1)+' %';
+   for(const account of STRATEGY_ACCOUNTS){
+    const w=s.accounts[account];
+    // Only yesterday's close and older candles enter the strategy. Today's candle is execution/valuation only.
+    const previousEquity=w.cash+Object.entries(w.positions).reduce((n,[symbol,p])=>n+p.qty*at(symbol,day-DAY)!.close,0);
+    // Base = planner defaults (30 % max position, 100 % max invested), unchanged behaviour.
+    const parameters=account==='strategy'?{...CONFIG.parameters,maxPositionPct:.30,maxInvestedPct:1}:profileParameters(account);
+    const plan=planTrendVolTargetV1({asOf:day,quote:a.quote,equity:previousEquity,cash:w.cash,markets,
+     positions:Object.entries(w.positions).map(([pair,p])=>({pair,...p})),...parameters});
+    if(account==='strategy'){
+     reason=plan.reason;
+     details.push(plan.ranked.length?'Rangliste (Momentum/Volatilität): '+plan.ranked.map(x=>`${x.pair} Trendstärke ${pct(x.strength)}, Vol ${pct(x.annualVol)}, Zielgewicht ${pct(x.weight)}`).join('; ')+'.':
+      'Rangliste: kein Coin erfüllt Trend-, Qualitäts- und Kostenfilter.');
+    }
+    const before=s.fills.length;
+    for(const action of plan.actions){
+     if(action.type==='buy')fill(account,action.pair,'buy',action.amountEur,action.reasoning);
+     if(action.type==='sell')fill(account,action.pair,'sell',(w.positions[action.pair]?.qty??0)*action.sellFraction,action.reasoning);
+    }
+    const done=s.fills.slice(before).map(f=>`${f.side==='buy'?'Kauf':'Verkauf'} ${f.qty} ${f.symbol} zu ${f.price.toFixed(2)} (${f.reason})`);
+    const holds=plan.actions.filter(x=>x.type==='hold').map(x=>x.reasoning);
+    details.push(`${account==='strategy'?'Basis':account} (Vol-Ziel ${pct(parameters.targetAnnualVol)}, max. ${parameters.topK} Positionen, max. investiert ${pct(parameters.maxInvestedPct)}): `+
+     (done.length?done.join('; '):'kein Trade – '+(holds[0]??'Signal unter Rebalancing-Toleranz oder unter Mindestmenge'))+'.');
    }
    if(!s.fills.some(f=>f.account==='hold'))fill('hold','BTCUSDT','buy',s.accounts.hold.cash,'BTC Buy & Hold ab S');
    const period=new Date(day).toISOString().slice(0,7);
@@ -86,14 +121,15 @@ export function advance(input:State,data:Record<string,Candle[]>,until:number,no
    for(const wallet of Object.values(s.accounts))for(const [symbol,p] of Object.entries(wallet.positions))
     p.highestCloseSinceEntry=Math.max(p.highestCloseSinceEntry??0,at(symbol,day)!.close);
   }
-  s.points.push({day,strategy:bad?null:value(s.accounts.strategy,'close'),hold:bad?null:value(s.accounts.hold,'close'),dca:bad?null:value(s.accounts.dca,'close'),reason});
+  const v=(x:Account)=>bad?null:value(s.accounts[x],'close');
+  s.points.push({day,strategy:v('strategy'),vorsichtig:v('vorsichtig'),normal:v('normal'),aggressiv:v('aggressiv'),hold:v('hold'),dca:v('dca'),reason,details});
   s.lastDay=day;
  }
  return s;
 }
 
 /** Cash-flow-neutral DCA returns; missing valuation days invalidate aggregate claims. */
-export function summary(s:State,account:keyof State['accounts']) {
+export function summary(s:State,account:Account) {
  const points=s.points;
  if(!points.length||points.some(p=>p[account]===null))return null;
  let previous=account==='dca'?0:CONFIG.assumptions.initialCash,index=1,peak=1,drawdown=0;
