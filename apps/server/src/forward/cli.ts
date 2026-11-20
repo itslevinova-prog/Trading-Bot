@@ -30,9 +30,15 @@ export async function main(){
   ...readdirSync(join(root,'apps/server/src/forward')).filter(x=>x.endsWith('.ts')).map(x=>'forward/'+x)].sort();
  const hash=digest(JSON.stringify(codeFiles.map(p=>[p,digest(readFileSync(join(root,'apps/server/src',p)))])));
  const fixtureData=fixture?JSON.parse(readFileSync(fixture,'utf8')):undefined;
- const exchange=fixture?undefined:await request('exchangeInfo') as ExchangeInfo;
- const lotRules:LotRules=fixture?fixtureData.lotRules:exchangeLots(exchange!);
- const fresh=initialState(start,hash,lotRules),id=seriesId(fresh),base=resolve(arg('--output')??join(root,'forward'));
+ const base=resolve(arg('--output')??join(root,'forward'));
+ // An existing series keeps its frozen lot snapshot. Live listings change daily and must not
+ // alter the series identity (which would orphan the series and reject its past start date).
+ const prefix=Number.isSafeInteger(start)?new Date(start).toISOString().slice(0,10)+'-':'',suffix='-'+hash.slice(0,16);
+ const existing=prefix&&existsSync(base)?readdirSync(base).filter(n=>n.startsWith(prefix)&&n.endsWith(suffix)&&existsSync(join(base,n,'state.json'))):[];
+ if(existing.length>1)throw Error('Ambiguous forward series for start and code');
+ const frozen=existing.length?(JSON.parse(readFileSync(join(base,existing[0]!,'state.json'),'utf8')) as State).lotRules:undefined;
+ const lotRules:LotRules=fixture?fixtureData.lotRules:frozen??exchangeLots(await request('exchangeInfo') as ExchangeInfo);
+ const fresh=initialState(start,hash,lotRules),id=seriesId(fresh);
  const directory=join(base,id),stateFile=join(directory,'state.json');
  if(!fixture&&!existsSync(stateFile)&&start<until)throw Error('New real-data series must start prospectively today or later');
  const input:State=existsSync(stateFile)?JSON.parse(readFileSync(stateFile,'utf8')):fresh;

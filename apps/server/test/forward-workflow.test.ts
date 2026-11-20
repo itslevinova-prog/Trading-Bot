@@ -11,7 +11,7 @@ describe('forward workflow modes',()=>{
   expect(workflow).toMatch(/dry_run:[\s\S]*?type: boolean\n\s+default: true/);
   expect(workflow).toContain("if: (github.event_name == 'workflow_dispatch' && inputs.dry_run) || vars.FORWARD_ENABLED != 'false'");
   expect(workflow).toContain("FORWARD_ENABLED: ${{ vars.FORWARD_ENABLED != 'false' && 'true' || 'false' }}");
-  expect(workflow).toContain("FORWARD_START: ${{ vars.FORWARD_START || '2026-11-19' }}");
+  expect(workflow).toContain("FORWARD_START: ${{ vars.FORWARD_START || '2026-11-20' }}");
   const storage=workflow.split('      - name: Datenschutz prüfen und Ergebnisse speichern')[1]!;
   expect(storage).toContain("if: env.FORWARD_DRY_RUN != 'true' && vars.FORWARD_ENABLED != 'false'");
   expect(storage).toContain('PRIVACY_BLOCKLIST: ${{ secrets.PRIVACY_BLOCKLIST }}');
