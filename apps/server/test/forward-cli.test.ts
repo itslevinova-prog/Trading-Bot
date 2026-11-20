@@ -44,3 +44,27 @@ describe('forward first run',()=>{
   }finally{process.argv=argv;rmSync(dir,{recursive:true});}
  });
 });
+
+describe('forward series resume',()=>{
+ it('resumes an existing series with its frozen lot rules when live listings change',async()=>{
+  const {readdirSync,readFileSync}=await import('node:fs');
+  const dir=mkdtempSync(join(tmpdir(),'forward-resume-')),output=join(dir,'output'),argv=process.argv;
+  vi.stubEnv('FORWARD_ENABLED','true');vi.stubEnv('LIVE_ENABLED','false');vi.stubEnv('AI_ALLOW_REMOTE','false');vi.stubEnv('LIVE_ACK','');
+  const today=Math.floor(Date.now()/86_400_000)*86_400_000,start=new Date(today).toISOString().slice(0,10);
+  const symbol=(s:string)=>({symbol:s,quoteAsset:'USDT',status:'TRADING',isSpotTradingAllowed:true,
+   filters:[{filterType:'LOT_SIZE',stepSize:'0.001',minQty:'0.001'},{filterType:'NOTIONAL',minNotional:'5'}]});
+  let listed=['BTCUSDT','ETHUSDT'];
+  const fetch=vi.fn(async(url:string)=>new Response(JSON.stringify(url.includes('exchangeInfo')?{symbols:listed.map(symbol)}:url.includes('klines')?[]:{})));
+  vi.stubGlobal('fetch',fetch);vi.spyOn(globalThis,'setTimeout').mockImplementation(((f:()=>void)=>{f();return 0;}) as never);
+  try{
+   process.argv=['node','forward-cli','--start',start,'--output',output];
+   await main();
+   const first=readdirSync(output).filter(n=>!n.startsWith('.'));expect(first).toHaveLength(1);
+   listed=[...listed,'NEWUSDT'];fetch.mockClear();
+   await main();
+   expect(readdirSync(output).filter(n=>!n.startsWith('.'))).toEqual(first);
+   expect(fetch.mock.calls.some(c=>String(c[0]).includes('exchangeInfo'))).toBe(false);
+   expect(Object.keys(JSON.parse(readFileSync(join(output,first[0]!,'state.json'),'utf8')).lotRules)).toEqual(['BTCUSDT','ETHUSDT']);
+  }finally{process.argv=argv;rmSync(dir,{recursive:true});}
+ });
+});
