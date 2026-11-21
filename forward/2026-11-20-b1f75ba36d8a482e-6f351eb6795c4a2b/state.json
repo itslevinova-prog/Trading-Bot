@@ -1,7 +1,7 @@
 {
   "label": "Forschungs-Forward-Test, nicht freigegeben, keine Gewinnprognose",
   "start": 1795132800000,
-  "lastDay": null,
+  "lastDay": 1795132800000,
   "configHash": "b1f75ba36d8a482ef7b1786b9773c548439c0b82363af1cae7faa9a22a92c380",
   "codeHash": "6f351eb6795c4a2b46dce00a27abbb99fef78a49e7ebbfa958c122d706885286",
   "lotRules": {
@@ -2649,15 +2649,87 @@
       "positions": {}
     },
     "hold": {
-      "cash": 10000,
-      "positions": {}
+      "cash": 0.16676307646957866,
+      "positions": {
+        "BTCUSDT": {
+          "qty": 0.161,
+          "highestCloseSinceEntry": 61986.73
+        }
+      }
     },
     "dca": {
-      "cash": 0,
-      "positions": {}
+      "cash": 0.19683513048403256,
+      "positions": {
+        "BTCUSDT": {
+          "qty": 0.1127,
+          "highestCloseSinceEntry": 61986.73
+        },
+        "ETHUSDT": {
+          "qty": 1.7037,
+          "highestCloseSinceEntry": 1757.31
+        }
+      }
     }
   },
-  "fills": [],
-  "points": [],
-  "dcaPeriods": []
+  "fills": [
+    {
+      "day": 1795132800000,
+      "account": "hold",
+      "symbol": "BTCUSDT",
+      "side": "buy",
+      "qty": 0.161,
+      "price": 62048.71672999999,
+      "fee": 9.98984339353,
+      "spread": 4.989931765000001,
+      "slippage": 4.989931765000001,
+      "reason": "BTC Buy & Hold ab S"
+    },
+    {
+      "day": 1795132800000,
+      "account": "dca",
+      "symbol": "BTCUSDT",
+      "side": "buy",
+      "qty": 0.1127,
+      "price": 62048.71672999999,
+      "fee": 6.992890375470999,
+      "spread": 3.4929522355,
+      "slippage": 3.4929522355,
+      "reason": "Monatlicher Sparplan 70/30"
+    },
+    {
+      "day": 1795132800000,
+      "account": "dca",
+      "symbol": "ETHUSDT",
+      "side": "buy",
+      "qty": 1.7037,
+      "price": 1759.0673099999997,
+      "fee": 2.9969229760469993,
+      "spread": 1.4969645235,
+      "slippage": 1.4969645235,
+      "reason": "Monatlicher Sparplan 70/30"
+    }
+  ],
+  "points": [
+    {
+      "day": 1795132800000,
+      "strategy": 10000,
+      "vorsichtig": 10000,
+      "normal": 10000,
+      "aggressiv": 10000,
+      "hold": 9491.35987307647,
+      "dca": 9409.290445130484,
+      "reason": "BTC unter 200d EMA; Cash-Regime",
+      "details": [
+        "BTC-Schluss Vortag 61986.73 USDT, 200-Tage-EMA 73307.54 USDT, Abstand -15.44 % (unter EMA: nur Cash; Kaufsignal erst bei Schluss über 73307.54 USDT, also +18.26 %).",
+        "Rangliste (Momentum/Volatilität): UUSDT Trendstärke 100.0 %, Vol 0.5 %, Zielgewicht 0.0 %; RLUSDUSDT Trendstärke 100.0 %, Vol 0.6 %, Zielgewicht 0.0 %; BMTUSDT Trendstärke 25.0 %, Vol 262.8 %, Zielgewicht 0.0 %.",
+        "Basis (Vol-Ziel 20.0 %, max. 3 Positionen, max. investiert 100.0 %): kein Trade – Kein täglicher Rebalancingbedarf oder Einstieg konservativ gesperrt.",
+        "vorsichtig (Vol-Ziel 15.0 %, max. 3 Positionen, max. investiert 50.0 %): kein Trade – Kein täglicher Rebalancingbedarf oder Einstieg konservativ gesperrt.",
+        "normal (Vol-Ziel 25.0 %, max. 4 Positionen, max. investiert 80.0 %): kein Trade – Kein täglicher Rebalancingbedarf oder Einstieg konservativ gesperrt.",
+        "aggressiv (Vol-Ziel 30.0 %, max. 4 Positionen, max. investiert 100.0 %): kein Trade – Kein täglicher Rebalancingbedarf oder Einstieg konservativ gesperrt."
+      ]
+    }
+  ],
+  "dcaPeriods": [
+    "2026-11"
+  ]
 }
