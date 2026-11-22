@@ -59,13 +59,13 @@ Entscheidung: Die Ganzcoin-Referenz wird aus Gründen der Nachvollziehbarkeit ni
 
 ## Aktivierung (13.11.2026)
 
-Der Repo-Besitzer hat den Forward-Test aktiviert. Statt Repository-Variablen stehen die Standardwerte im Workflow: Start `2026-11-20`, aktiv, solange `FORWARD_ENABLED` nicht auf `false` gesetzt ist. Zum Stoppen die Repository-Variable `FORWARD_ENABLED=false` anlegen. Eine gesetzte Variable `FORWARD_START` überschreibt den Standard und beginnt eine neue Serie.
+Der Repo-Besitzer hat den Forward-Test aktiviert. Statt Repository-Variablen stehen die Standardwerte im Workflow: Start `2026-11-22`, aktiv, solange `FORWARD_ENABLED` nicht auf `false` gesetzt ist. Zum Stoppen die Repository-Variable `FORWARD_ENABLED=false` anlegen. Eine gesetzte Variable `FORWARD_START` überschreibt den Standard und beginnt eine neue Serie.
 
 ## Fehlerbehebung (16.11.2026)
 
 Die Serie mit Start 14.11.2026 kam nie zustande: Im ersten Lauf gab es noch keinen abgeschlossenen Tag, daher wurde kein Startzustand geschrieben und der Speicher-Schritt brach beim Kopieren ab. Folgeläufe sahen keine Serie und lehnten das inzwischen vergangene Startdatum ab. Jetzt wird der Startzustand einer neuen Serie immer gespeichert, der Speicher-Schritt beendet sich ohne Ausgabe sauber, und der Standardstart ist der 17.11.2026.
 
-## Drei Risikoprofile und Begründung (ab Serie 20.11.2026)
+## Drei Risikoprofile und Begründung (ab Serie 22.11.2026)
 
 Neben der Basis-Strategie laufen die drei vorregistrierten, gedeckelten Papier-Risikoprofile `vorsichtig`, `normal` und `aggressiv` (`resolvePaperRiskProfile`) als eigene Konten mit je 10 000 USDT. Signale, BTC-200d-Regime, ATR-Ausstieg, Kosten und Lot-Regeln sind identisch. Es unterscheiden sich nur das Volatilitätsziel, die maximale Positionsanzahl, die maximale Positionsgrösse (höchstens 30 %) und die Investitionsgrenze. Das ist ein beschreibender Vergleich, keine Freigabe und kein Ersatz für Stage-Gates.
 
@@ -75,4 +75,8 @@ Hinweis: Weil sich Code und Konfiguration ändern, beginnt eine neue Serie. Die 
 
 ## Serienidentität und Lot-Regeln
 
-Eine bestehende Serie verwendet immer den beim Start eingefrorenen Lot-Snapshot aus ihrer `state.json`. Neue oder entfernte Binance-Listings ändern die Serie nicht mehr. Vorher führte jede Listing-Änderung zu einer neuen Serienkennung; der Lauf am 20.11.2026 brach deshalb ab („New real-data series must start prospectively“). Die Serie vom 19.11.2026 (ohne ausgewerteten Tag) bleibt im Branch `paper-forward` erhalten. Der neue Standardstart ist der 20.11.2026.
+Eine bestehende Serie verwendet immer den beim Start eingefrorenen Lot-Snapshot aus ihrer `state.json`. Neue oder entfernte Binance-Listings ändern die Serie nicht mehr. Vorher führte jede Listing-Änderung zu einer neuen Serienkennung; der Lauf am 20.11.2026 brach deshalb ab („New real-data series must start prospectively“). Die Serie vom 19.11.2026 (ohne ausgewerteten Tag) bleibt im Branch `paper-forward` erhalten. Danach startete die Serie am 20.11.2026.
+
+## Stablecoin-Filter (ab Serie 22.11.2026)
+
+Neue Stablecoins wie RLUSD, XUSD oder U fehlten in der gemeinsamen Ausschlussliste und standen wegen ihrer sehr geringen Volatilität oben in der Rangliste. Der Forward-Test schliesst deshalb zusätzlich jeden Coin aus, dessen Schlusskurs an den letzten 30 Tagen immer zwischen 0.90 und 1.10 USDT lag und dessen annualisierte Volatilität unter 5 % liegt. Die gemeinsame Liste `excludedBase` bleibt unverändert, damit historische Forschungsergebnisse reproduzierbar bleiben. Ausgeschlossene Coins werden in der Tagesbegründung genannt. Liegt BTC unter der 200-Tage-EMA, nennt die Begründung jetzt ausdrücklich das Cash-Regime als Grund für „kein Trade“. Die Serie vom 20.11.2026 (zwei Tage, nur Benchmark-Käufe) bleibt erhalten.

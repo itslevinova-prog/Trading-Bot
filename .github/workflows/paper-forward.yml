@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   forward:
-    # Aktiviert durch den Repo-Besitzer am 13.11.2026; neue Serie mit drei Risikoprofilen ab 20.11.2026 (nach Fix der Serienidentität).
+    # Aktiviert durch den Repo-Besitzer am 13.11.2026; neue Serie mit drei Risikoprofilen ab 22.11.2026 (nach Fix der Serienidentität).
     # Stoppen: Repository-Variable FORWARD_ENABLED=false setzen.
     if: (github.event_name == 'workflow_dispatch' && inputs.dry_run) || vars.FORWARD_ENABLED != 'false'
     runs-on: ubuntu-latest
@@ -26,7 +26,7 @@ jobs:
       LIVE_ENABLED: 'false'
       AI_ALLOW_REMOTE: 'false'
       FORWARD_ENABLED: ${{ vars.FORWARD_ENABLED != 'false' && 'true' || 'false' }}
-      FORWARD_START: ${{ vars.FORWARD_START || '2026-11-20' }}
+      FORWARD_START: ${{ vars.FORWARD_START || '2026-11-22' }}
       FORWARD_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
     steps:
       - uses: actions/checkout@v4

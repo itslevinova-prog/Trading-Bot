@@ -14,11 +14,20 @@ export const LABEL='Forschungs-Forward-Test, nicht freigegeben, keine Gewinnprog
 export const CONFIG=Object.freeze({hypothesis:'H-025',strategy:'trend-vol-target-v1-binance-lots-v2',
  assumptions:{...TREND_RESEARCH_ASSUMPTIONS,version:'H-025-forward-binance-lots-v2',lotDecimals:null,minNotional:null},parameters:{targetAnnualVol:.20,topK:3,rebalanceTolerance:.20,atrMultiple:3},
  dca:{amount:10000,interval:'monthly',allocation:'70/30',variant:'classic'},
- profiles:['vorsichtig','normal','aggressiv'],schema:3});
+ profiles:['vorsichtig','normal','aggressiv'],stableGuard:{days:30,low:.90,high:1.10,maxAnnualVol:.05},schema:4});
 export const PROFILES=CONFIG.profiles as readonly RiskProfileName[];
 export const STRATEGY_ACCOUNTS=['strategy',...PROFILES] as const;
 export const ACCOUNTS=['strategy',...PROFILES,'hold','dca'] as const;
 export type Account=typeof ACCOUNTS[number];
+/** Behavioural stablecoin guard for the forward test only (name lists go stale with new listings).
+ * The shared excludedBase list stays unchanged so historical research remains reproducible. */
+export const STABLE_GUARD=CONFIG.stableGuard;
+export function stableLike(daily:readonly Candle[]):boolean{
+ const closes=daily.slice(-(STABLE_GUARD.days+1)).map(c=>c.close);
+ if(closes.length<STABLE_GUARD.days+1||!closes.every(c=>c>=STABLE_GUARD.low&&c<=STABLE_GUARD.high))return false;
+ const r=closes.slice(1).map((c,i)=>Math.log(c/closes[i]!)),mean=r.reduce((n,x)=>n+x,0)/r.length;
+ return Math.sqrt(r.reduce((n,x)=>n+(x-mean)**2,0)/(r.length-1)*365)<STABLE_GUARD.maxAnnualVol;
+}
 /** Capped paper profile -> planner knobs; same signal, regime and exit rules as the base strategy. */
 export function profileParameters(name:RiskProfileName){
  const e=resolvePaperRiskProfile(name).effective;
@@ -74,7 +83,8 @@ export function advance(input:State,data:Record<string,Candle[]>,until:number,no
   let reason='Fehlende oder veraltete Tagesdaten: kein Handel; Bewertung unbekannt';
   const details:string[]=[];
   if(!bad){
-   const markets=symbols.filter(pair=>complete(pair)&&s.lotRules[pair]).map(pair=>{
+   const stable=symbols.filter(pair=>complete(pair)&&stableLike(history(pair)));
+   const markets=symbols.filter(pair=>complete(pair)&&s.lotRules[pair]&&!stable.includes(pair)).map(pair=>{
     const daily=history(pair),volumes=daily.slice(-30).map(c=>c.quoteVolume??NaN);
     return {pair,daily,quality:(daily[0]!.ts<=day-a.minAgeDays*DAY&&(median(volumes)??0)>=a.minMedianQuoteVolume30d?'allowed':'unknown') as 'allowed'|'unknown',
      assumedRoundtripBps:2*a.feeRate*10000+a.spreadBps+2*a.slippageBps,
@@ -87,6 +97,7 @@ export function advance(input:State,data:Record<string,Candle[]>,until:number,no
      (gap>0?'(über EMA: Einstiege erlaubt).':`(unter EMA: nur Cash; Kaufsignal erst bei Schluss über ${btc.ema200.toFixed(2)} USDT, also +${((btc.ema200/btc.close-1)*100).toFixed(2)} %).`));
    }
    const pct=(x:number)=>(x*100).toFixed(1)+' %';
+   if(stable.length)details.push(`Als Stablecoin erkannt und ausgeschlossen (30 Tage zwischen 0.90 und 1.10 USDT, kaum Schwankung): ${stable.join(', ')}.`);
    for(const account of STRATEGY_ACCOUNTS){
     const w=s.accounts[account];
     // Only yesterday's close and older candles enter the strategy. Today's candle is execution/valuation only.
@@ -106,7 +117,8 @@ export function advance(input:State,data:Record<string,Candle[]>,until:number,no
      if(action.type==='sell')fill(account,action.pair,'sell',(w.positions[action.pair]?.qty??0)*action.sellFraction,action.reasoning);
     }
     const done=s.fills.slice(before).map(f=>`${f.side==='buy'?'Kauf':'Verkauf'} ${f.qty} ${f.symbol} zu ${f.price.toFixed(2)} (${f.reason})`);
-    const holds=plan.actions.filter(x=>x.type==='hold').map(x=>x.reasoning);
+    const riskOff=plan.reason.includes('Cash-Regime');
+    const holds=riskOff?['BTC unter 200-Tage-EMA, deshalb kein Einstieg (Cash-Regime)']:plan.actions.filter(x=>x.type==='hold').map(x=>x.reasoning);
     details.push(`${account==='strategy'?'Basis':account} (Vol-Ziel ${pct(parameters.targetAnnualVol)}, max. ${parameters.topK} Positionen, max. investiert ${pct(parameters.maxInvestedPct)}): `+
      (done.length?done.join('; '):'kein Trade – '+(holds[0]??'Signal unter Rebalancing-Toleranz oder unter Mindestmenge'))+'.');
    }
