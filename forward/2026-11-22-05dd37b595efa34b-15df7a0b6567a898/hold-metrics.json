@@ -1,8 +1,8 @@
 {
   "label": "Forschungs-Forward-Test, nicht freigegeben, keine Gewinnprognose",
   "metrics": {
-    "return": 0.015492576699998262,
-    "maxDrawdown": 0,
+    "return": 0.015490090749998187,
+    "maxDrawdown": 0.0000024480238035584634,
     "sharpe": null,
     "turnover": 0.9989540780619398,
     "costs": 19.969102000019397
