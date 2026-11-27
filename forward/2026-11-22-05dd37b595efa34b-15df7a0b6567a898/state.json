@@ -1,7 +1,7 @@
 {
   "label": "Forschungs-Forward-Test, nicht freigegeben, keine Gewinnprognose",
   "start": 1795305600000,
-  "lastDay": 1795564800000,
+  "lastDay": 1795651200000,
   "configHash": "05dd37b595efa34b6d74180cb32791b1adbce4be05257a6dba2ea4b04f180a5c",
   "codeHash": "15df7a0b6567a89896ea6cfcc922dce76c9ce236040fa3cb1621c9afbf22ae0c",
   "lotRules": {
@@ -2783,6 +2783,25 @@
       "reason": "BTC unter 200d EMA; Cash-Regime",
       "details": [
         "BTC-Schluss Vortag 59832.00 USDT, 200-Tage-EMA 72575.12 USDT, Abstand -17.56 % (unter EMA: nur Cash; Kaufsignal erst bei Schluss über 72575.12 USDT, also +21.30 %).",
+        "Als Stablecoin erkannt und ausgeschlossen (30 Tage zwischen 0.90 und 1.10 USDT, kaum Schwankung): BFUSDUSDT, RLUSDUSDT, UUSDT, XUSDUSDT.",
+        "Rangliste: kein Coin erfüllt Trend-, Qualitäts- und Kostenfilter.",
+        "Basis (Vol-Ziel 20.0 %, max. 3 Positionen, max. investiert 100.0 %): kein Trade – BTC unter 200-Tage-EMA, deshalb kein Einstieg (Cash-Regime).",
+        "vorsichtig (Vol-Ziel 15.0 %, max. 3 Positionen, max. investiert 50.0 %): kein Trade – BTC unter 200-Tage-EMA, deshalb kein Einstieg (Cash-Regime).",
+        "normal (Vol-Ziel 25.0 %, max. 4 Positionen, max. investiert 80.0 %): kein Trade – BTC unter 200-Tage-EMA, deshalb kein Einstieg (Cash-Regime).",
+        "aggressiv (Vol-Ziel 30.0 %, max. 4 Positionen, max. investiert 100.0 %): kein Trade – BTC unter 200-Tage-EMA, deshalb kein Einstieg (Cash-Regime)."
+      ]
+    },
+    {
+      "day": 1795651200000,
+      "strategy": 10000,
+      "vorsichtig": 10000,
+      "normal": 10000,
+      "aggressiv": 10000,
+      "hold": 10039.925719999981,
+      "dca": 10029.470098605521,
+      "reason": "BTC unter 200d EMA; Cash-Regime",
+      "details": [
+        "BTC-Schluss Vortag 60458.01 USDT, 200-Tage-EMA 72442.24 USDT, Abstand -16.54 % (unter EMA: nur Cash; Kaufsignal erst bei Schluss über 72442.24 USDT, also +19.82 %).",
         "Als Stablecoin erkannt und ausgeschlossen (30 Tage zwischen 0.90 und 1.10 USDT, kaum Schwankung): BFUSDUSDT, RLUSDUSDT, UUSDT, XUSDUSDT.",
         "Rangliste: kein Coin erfüllt Trend-, Qualitäts- und Kostenfilter.",
         "Basis (Vol-Ziel 20.0 %, max. 3 Positionen, max. investiert 100.0 %): kein Trade – BTC unter 200-Tage-EMA, deshalb kein Einstieg (Cash-Regime).",
